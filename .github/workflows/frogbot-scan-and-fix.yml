@@ -1,0 +1,82 @@
+# .github/workflows/frogbot.yml
+# Scans PRs with JFrog Xray *before* merge and periodically opens fix PRs.
+# Docs / templates: https://github.com/jfrog/frogbot  (pinned below)
+
+name: "Frogbot Scan and Fix"
+
+on:
+  # Scan incoming changes early (recommended template uses pull_request_target)
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+  # Open fix PRs when code lands on default branch
+  push:
+    branches: [ "main" ]
+  # Nightly/weekly sweep for fixes (Mon 06:00 UTC)
+  schedule:
+    - cron: "0 6 * * 1"
+  # Manual run
+  workflow_dispatch:
+
+permissions:
+  contents: write          # needed to push branches / create PRs with fixes
+  pull-requests: write     # comment on / update PRs
+  security-events: write   # code scanning results
+  id-token: write          # enable OIDC (optional but recommended)
+
+jobs:
+  scan-pull-request:
+    if: github.event_name == 'pull_request_target'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR head
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Frogbot – scan PR
+        # Pin to v2.27.3 commit for supply-chain safety (released 2025-08-25)
+        uses: jfrog/frogbot@73285a2f3cd3a6b6b9b0e5ccf2a0a4a8e2a6acf5
+        # If you use OIDC on your JFrog server, uncomment the 'with' block and remove JF_ACCESS_TOKEN below.
+        # with:
+        #   oidc-provider-name: jfrog-github-oidc
+        env:
+          # [Mandatory] JFrog platform base URL (no trailing slash)
+          JF_URL: ${{ secrets.JF_URL }}
+
+          # [Choose one auth method]
+          # 1) Token auth (simple): provide access token with at least Xray 'read' and 'execute scans'
+          JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
+          # 2) OIDC (recommended): comment out JF_ACCESS_TOKEN above and enable 'with.oidc-provider-name'
+
+          # [Mandatory] GitHub token for commenting / statuses
+          JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+          # [Optional] If your deps install is NOT defined in frogbot-config.yml (installCommand)
+          # and your project uses yarn2 / NuGet / .NET, set the install cmd here:
+          # JF_INSTALL_DEPS_CMD: "nuget restore"
+          # JF_INSTALL_DEPS_CMD: "dotnet restore"
+          # JF_INSTALL_DEPS_CMD: "yarn install"
+
+          # [Optional] Bootstrap Frogbot via Artifactory if runners lack internet egress:
+          # JF_RELEASES_REPO: "releases-virtual"
+
+          # [Optional] Pull project dependencies from a virtual repo (if not set in frogbot-config.yml):
+          # JF_DEPS_REPO: "deps-virtual"
+
+  create-fix-pull-requests:
+    # Run on push to main (above) and on the weekly schedule / manual trigger
+    if: github.event_name != 'pull_request_target'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout default branch
+        uses: actions/checkout@v4
+
+      - name: Frogbot – scan repo & open fix PRs
+        uses: jfrog/frogbot@73285a2f3cd3a6b6b9b0e5ccf2a0a4a8e2a6acf5
+        env:
+          JF_URL: ${{ secrets.JF_URL }}
+          JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
+          JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # JF_RELEASES_REPO: "releases-virtual"
+          # JF_DEPS_REPO: "deps-virtual"
+          # JF_INSTALL_DEPS_CMD: ""
