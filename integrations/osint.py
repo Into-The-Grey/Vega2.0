@@ -91,6 +91,7 @@ def ssl_cert_info(
     host: str, port: int = 443, timeout: float = 5.0
 ) -> Optional[SSLCertInfo]:
     ctx = ssl.create_default_context()
+    ctx.minimum_version = ssl.TLSVersion.TLSv1_2
     try:
         with socket.create_connection((host, port), timeout=timeout) as sock:
             with ctx.wrap_socket(sock, server_hostname=host) as ssock:
