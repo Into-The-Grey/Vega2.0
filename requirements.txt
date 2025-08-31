@@ -1,0 +1,35 @@
+# Vega2.0 pinned dependencies
+# Python 3.12 compatible versions, tested as of 2025-08
+# Web API
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+
+# Config & HTTP
+python-dotenv==1.0.1
+requests==2.32.3
+httpx==0.27.2
+
+# Database & ORM
+SQLAlchemy==2.0.35
+
+# ML & datasets
+datasets==3.0.1
+transformers==4.44.2
+accelerate==0.34.2
+
+# CLI & UX
+rich==13.8.1
+typer==0.12.5
+click==8.1.7
+
+# Optional rate limiting
+slowapi==0.1.9
+
+# PEFT & LoRA (optional)
+peft==0.13.2
+bitsandbytes==0.43.1  # optional; only if GPU + CUDA wheels available
+
+# Web/Image Search
+duckduckgo-search==6.2.10
+beautifulsoup4==4.12.3
+lxml==5.3.0

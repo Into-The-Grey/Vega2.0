@@ -1,0 +1,17 @@
+# Training configuration template for Vega2.0
+# Adjust values to your hardware and model
+
+model_name: "mistral"          # base model to fine-tune (if using HF backend, set HF id)
+output_dir: "./training/output" # where to save checkpoints
+per_device_train_batch_size: 1
+learning_rate: 2e-5
+num_train_epochs: 1
+max_seq_length: 1024
+lora:
+  enabled: true
+  r: 8
+  alpha: 16
+  dropout: 0.05
+
+# Dataset path produced by datasets/prepare_dataset.py
+train_file: "./datasets/output.jsonl"

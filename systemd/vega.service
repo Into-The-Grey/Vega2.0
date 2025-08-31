@@ -1,0 +1,46 @@
+# systemd unit for Vega2.0 FastAPI service
+# Place this file at /etc/systemd/system/vega.service (root required)
+# Then: sudo systemctl daemon-reload && sudo systemctl enable vega && sudo systemctl start vega
+# View logs: journalctl -u vega -f
+
+[Unit]
+Description=Vega2.0 FastAPI Service
+After=network.target
+
+[Service]
+# Replace User if different
+User=ncacord
+# WorkingDirectory should be the project root
+WorkingDirectory=/home/ncacord/Vega2.0
+# Activate the virtual environment and run uvicorn
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=/home/ncacord/Vega2.0/.venv/bin/uvicorn app:app --host ${HOST} --port ${PORT}
+# Restart policy
+Restart=on-failure
+RestartSec=5s
+
+# Security hardening basics (local-only)
+# Note: Keep HOST=127.0.0.1 in .env to bind to localhost only
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+RestrictRealtime=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+CapabilityBoundingSet=
+AmbientCapabilities=
+SystemCallArchitectures=native
+SystemCallFilter=@system-service @basic-io @network-io ~@mount ~@raw-io ~@privileged
+LimitNOFILE=4096
+CPUQuota=200%
+MemoryMax=1G
+WatchdogSec=30s
+
+[Install]
+WantedBy=multi-user.target
