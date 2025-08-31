@@ -1,0 +1,22 @@
+[book]
+title = "Vega2.0"
+authors = ["Into-The-Grey"]
+language = "en"
+multilingual = false
+src = "src"
+
+[build]
+# mdBook output directory
+build-dir = "book"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/Into-The-Grey/Vega2.0"
+# Site URL for GitHub Pages project site
+site-url = "/Vega2.0/"
+favicon = "src/favicon.svg"
+
+[preprocessor.mermaid]
+# Render ```mermaid``` code blocks
+command = "mdbook-mermaid"

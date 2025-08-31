@@ -1,5 +1,7 @@
 # Vega2.0 — Local-only Personal LLM Twin
 
+[![Docs](https://img.shields.io/badge/docs-mdBook-blue)](https://into-the-grey.github.io/Vega2.0/) [![Pages](https://img.shields.io/badge/GitHub%20Pages-live-brightgreen)](https://into-the-grey.github.io/Vega2.0/) [![CI](https://github.com/Into-The-Grey/Vega2.0/actions/workflows/mdbook.yml/badge.svg)](https://github.com/Into-The-Grey/Vega2.0/actions/workflows/mdbook.yml)
+
 Vega2.0 is a local-first FastAPI service and CLI for chatting with a local LLM, logging conversations to SQLite, building datasets, and fine-tuning. It integrates with Ollama by default and can be extended with Slack/Discord.
 
 ## Features
@@ -76,6 +78,18 @@ python -m cli train --config training/config.yaml
 Optional: Serve the static UI
 
 - Open <http://127.0.0.1:8000/static/index.html> after you start the API.
+
+## Documentation
+
+- mdBook site: [into-the-grey.github.io/Vega2.0](https://into-the-grey.github.io/Vega2.0/)
+- Source docs: see `docs/` and the mdBook in `book/`.
+
+If the site doesn't load yet:
+
+- In GitHub, go to Settings → Pages.
+- Set Source to "Deploy from a branch".
+- Choose Branch: `gh-pages` and Folder: `/ (root)`.
+- Save; wait ~1–2 minutes for publish.
 
 ## API Usage
 
