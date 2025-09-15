@@ -1,0 +1,68 @@
+2025-09-15 01:48:29,750 - system_probe - INFO - SystemProbe initialized
+2025-09-15 01:48:37,545 - __main__ - INFO - SystemProbe initialized
+2025-09-15 01:48:37,548 - __main__ - INFO - Creating system snapshot...
+2025-09-15 01:48:38,820 - __main__ - WARNING - Error parsing GPU info: could not convert string to float: '[N/A]'
+2025-09-15 01:49:09,026 - __main__ - WARNING - Command timeout: sudo dmidecode -t memory
+2025-09-15 01:49:09,353 - __main__ - INFO - System snapshot completed in 31.80s - Health: 0.0% - Anomalies: 20
+2025-09-15 01:49:09,354 - __main__ - INFO - Snapshot saved: /home/ncacord/Vega2.0/sac/snapshots/2025-09-15-01.json
+2025-09-15 03:05:21,248 - system_probe - INFO - SystemProbe initialized
+2025-09-15 03:05:21,250 - system_watchdog - INFO - SystemWatchdog initialized
+2025-09-15 03:05:21,256 - sys_control - INFO - SystemController initialized with security validation enabled
+2025-09-15 03:05:21,259 - net_guard - INFO - NetworkGuard initialized with threat detection enabled
+2025-09-15 03:05:21,484 - system_interface - INFO - Created default admin user - Password: OiCN7B1zOw2GB25hhcT4YQ
+2025-09-15 03:05:21,487 - system_interface - INFO - System interface database initialized
+2025-09-15 03:05:21,487 - system_interface - INFO - SystemInterface initialized - unified SAC control ready
+2025-09-15 03:14:03,156 - system_probe - INFO - SystemProbe initialized
+2025-09-15 03:14:03,159 - system_watchdog - INFO - SystemWatchdog initialized
+2025-09-15 03:14:03,161 - sys_control - INFO - SystemController initialized with security validation enabled
+2025-09-15 03:14:03,170 - net_guard - INFO - NetworkGuard initialized with threat detection enabled
+2025-09-15 03:14:03,261 - economic_scanner - INFO - Economic intelligence database initialized
+2025-09-15 03:14:03,261 - economic_scanner - INFO - EconomicScanner initialized with market intelligence
+2025-09-15 03:14:03,277 - system_interface - INFO - System interface database initialized
+2025-09-15 03:14:03,277 - system_interface - INFO - SystemInterface initialized - unified SAC control ready
+2025-09-15 03:14:36,191 - system_probe - INFO - SystemProbe initialized
+2025-09-15 03:14:36,193 - system_watchdog - INFO - SystemWatchdog initialized
+2025-09-15 03:14:36,195 - sys_control - INFO - SystemController initialized with security validation enabled
+2025-09-15 03:14:36,198 - net_guard - INFO - NetworkGuard initialized with threat detection enabled
+2025-09-15 03:14:36,280 - economic_scanner - INFO - Economic intelligence database initialized
+2025-09-15 03:14:36,280 - economic_scanner - INFO - EconomicScanner initialized with market intelligence
+2025-09-15 03:14:36,294 - __main__ - INFO - System interface database initialized
+2025-09-15 03:14:36,295 - __main__ - INFO - SystemInterface initialized - unified SAC control ready
+2025-09-15 03:14:36,299 - __main__ - INFO - Starting System Interface API on 127.0.0.1:8080
+2025-09-15 03:14:36,321 - system_interface - INFO - System interface database initialized
+2025-09-15 03:14:36,321 - system_interface - INFO - SystemInterface initialized - unified SAC control ready
+2025-09-15 03:14:36,323 - system_interface - INFO - Starting System Interface API
+2025-09-15 03:14:36,323 - system_interface - INFO - Background tasks started
+2025-09-15 03:31:44,485 - system_probe - INFO - SystemProbe initialized
+2025-09-15 03:31:44,487 - system_watchdog - INFO - SystemWatchdog initialized
+2025-09-15 03:31:44,490 - sys_control - INFO - SystemController initialized with security validation enabled
+2025-09-15 03:31:44,492 - net_guard - INFO - NetworkGuard initialized with threat detection enabled
+2025-09-15 03:31:44,583 - economic_scanner - INFO - Economic intelligence database initialized
+2025-09-15 03:31:44,583 - economic_scanner - INFO - EconomicScanner initialized with market intelligence
+2025-09-15 03:31:44,762 - system_interface - INFO - System interface database initialized
+2025-09-15 03:31:44,762 - system_interface - INFO - SystemInterface initialized - unified SAC control ready
+2025-09-15 03:31:44,798 - self_govern - INFO - Self-governance database initialized
+2025-09-15 03:31:44,798 - self_govern - INFO - ML models initialized for autonomous decision making
+2025-09-15 03:31:44,798 - self_govern - INFO - SelfGoverningEngine initialized - autonomous decision-making active
+2025-09-15 03:31:53,883 - system_probe - INFO - SystemProbe initialized
+2025-09-15 03:31:53,885 - system_watchdog - INFO - SystemWatchdog initialized
+2025-09-15 03:31:53,888 - sys_control - INFO - SystemController initialized with security validation enabled
+2025-09-15 03:31:53,891 - net_guard - INFO - NetworkGuard initialized with threat detection enabled
+2025-09-15 03:31:53,979 - economic_scanner - INFO - Economic intelligence database initialized
+2025-09-15 03:31:53,980 - economic_scanner - INFO - EconomicScanner initialized with market intelligence
+2025-09-15 03:31:54,153 - system_interface - INFO - System interface database initialized
+2025-09-15 03:31:54,153 - system_interface - INFO - SystemInterface initialized - unified SAC control ready
+2025-09-15 03:31:54,158 - __main__ - INFO - Self-governance database initialized
+2025-09-15 03:31:54,158 - __main__ - INFO - ML models initialized for autonomous decision making
+2025-09-15 03:31:54,158 - __main__ - INFO - SelfGoverningEngine initialized - autonomous decision-making active
+2025-09-15 03:32:00,308 - system_probe - INFO - SystemProbe initialized
+2025-09-15 03:32:00,310 - system_watchdog - INFO - SystemWatchdog initialized
+2025-09-15 03:32:00,312 - sys_control - INFO - SystemController initialized with security validation enabled
+2025-09-15 03:32:00,315 - net_guard - INFO - NetworkGuard initialized with threat detection enabled
+2025-09-15 03:32:00,403 - economic_scanner - INFO - Economic intelligence database initialized
+2025-09-15 03:32:00,403 - economic_scanner - INFO - EconomicScanner initialized with market intelligence
+2025-09-15 03:32:00,576 - system_interface - INFO - System interface database initialized
+2025-09-15 03:32:00,576 - system_interface - INFO - SystemInterface initialized - unified SAC control ready
+2025-09-15 03:32:00,581 - __main__ - INFO - Self-governance database initialized
+2025-09-15 03:32:00,581 - __main__ - INFO - ML models initialized for autonomous decision making
+2025-09-15 03:32:00,581 - __main__ - INFO - SelfGoverningEngine initialized - autonomous decision-making active

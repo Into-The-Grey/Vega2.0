@@ -1,0 +1,53 @@
+{
+  "port_scan_signatures": [
+    {
+      "name": "nmap_tcp_scan",
+      "pattern": "SYN.*(?:RST|timeout)",
+      "severity": "medium"
+    },
+    {
+      "name": "stealth_scan",
+      "pattern": "FIN.*no_response",
+      "severity": "high"
+    },
+    {
+      "name": "xmas_scan",
+      "pattern": "FIN.*PSH.*URG",
+      "severity": "high"
+    }
+  ],
+  "dos_signatures": [
+    {
+      "name": "syn_flood",
+      "pattern": "SYN.*rate_exceeded",
+      "severity": "critical"
+    },
+    {
+      "name": "icmp_flood",
+      "pattern": "ICMP.*rate_exceeded",
+      "severity": "high"
+    },
+    {
+      "name": "udp_flood",
+      "pattern": "UDP.*rate_exceeded",
+      "severity": "high"
+    }
+  ],
+  "intrusion_signatures": [
+    {
+      "name": "bruteforce_ssh",
+      "pattern": "ssh.*failed_auth.*rate_exceeded",
+      "severity": "high"
+    },
+    {
+      "name": "web_exploit",
+      "pattern": "HTTP.*(union|select|drop|script)",
+      "severity": "critical"
+    },
+    {
+      "name": "malware_beacon",
+      "pattern": "DNS.*suspicious_tld",
+      "severity": "high"
+    }
+  ]
+}

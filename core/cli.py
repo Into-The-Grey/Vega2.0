@@ -17,6 +17,7 @@ Usage:
 from __future__ import annotations
 
 import asyncio
+import json
 from typing import Optional, Any
 
 try:
@@ -85,6 +86,207 @@ app.add_typer(db_app, name="db")
 app.add_typer(gen_app, name="gen")
 app.add_typer(osint_app, name="osint")
 app.add_typer(net_app, name="net")
+
+# Add memory commands if available
+try:
+    from memory import MemoryManager
+
+    memory_app = typer.Typer(help="Dynamic memory management")
+    app.add_typer(memory_app, name="memory")
+
+    # Define memory commands
+    @memory_app.command("store")
+    def memory_store(
+        topic: str = typer.Argument(..., help="Topic for the knowledge item"),
+        content: str = typer.Argument(..., help="Content to store"),
+        key: str = typer.Option(
+            None, help="Unique key (auto-generated if not provided)"
+        ),
+        metadata: str = typer.Option("{}", help="JSON metadata"),
+        tags: str = typer.Option("", help="Comma-separated tags"),
+    ):
+        """Store a knowledge item in dynamic memory."""
+        try:
+            from memory import MemoryManager, MemoryItem
+
+            manager = MemoryManager()
+
+            # Parse metadata
+            try:
+                meta_dict = json.loads(metadata) if metadata.strip() else {}
+            except json.JSONDecodeError:
+                console.print("✗ Invalid JSON metadata", style="red")
+                return
+
+            # Add tags to metadata
+            if tags:
+                tag_list = [tag.strip() for tag in tags.split(",") if tag.strip()]
+                meta_dict["tags"] = tag_list
+
+            # Generate key if not provided
+            if not key:
+                import hashlib
+
+                key = hashlib.md5(f"{topic}:{content[:100]}".encode()).hexdigest()[:8]
+
+            # Create MemoryItem
+            item = MemoryItem(
+                key=key, topic=topic, content=content, metadata=meta_dict, source="cli"
+            )
+
+            success = manager.store_knowledge(item)
+
+            if success:
+                console.print(
+                    f"✓ Stored knowledge item: {key} in topic '{topic}'", style="green"
+                )
+            else:
+                console.print(f"✗ Failed to store knowledge item", style="red")
+
+        except Exception as e:
+            console.print(f"✗ Error storing knowledge: {e}", style="red")
+
+    @memory_app.command("get")
+    def memory_get(
+        key: str = typer.Argument(..., help="Key of the knowledge item"),
+        topic: str = typer.Argument(..., help="Topic of the knowledge item"),
+    ):
+        """Get a specific knowledge item by key and topic."""
+        try:
+            from memory import MemoryManager
+
+            manager = MemoryManager()
+
+            item = manager.get_knowledge(key, topic, source="cli")
+
+            if item:
+                table = Table(title=f"Knowledge Item: {key}")
+                table.add_column("Field", style="cyan")
+                table.add_column("Value", style="white")
+
+                table.add_row("Key", item.key)
+                table.add_row("Topic", item.topic)
+                table.add_row("Source", item.source)
+                table.add_row("Version", str(item.version))
+                table.add_row("Usage Count", str(item.usage_count))
+                table.add_row(
+                    "Created", item.created_at.isoformat() if item.created_at else "N/A"
+                )
+                table.add_row(
+                    "Updated", item.updated_at.isoformat() if item.updated_at else "N/A"
+                )
+                table.add_row(
+                    "Last Used",
+                    item.last_used_at.isoformat() if item.last_used_at else "N/A",
+                )
+
+                console.print(table)
+                console.print(f"\n[bold]Content:[/bold]\n{item.content}")
+
+                if item.metadata:
+                    console.print(f"\n[bold]Metadata:[/bold]")
+                    console.print(json.dumps(item.metadata, indent=2))
+            else:
+                console.print(
+                    f"✗ Knowledge item not found: {key} in topic '{topic}'",
+                    style="yellow",
+                )
+
+        except Exception as e:
+            console.print(f"✗ Error getting knowledge: {e}", style="red")
+
+    @memory_app.command("search")
+    def memory_search(
+        query: str = typer.Argument(..., help="Search query"),
+        topic: str = typer.Option(None, help="Limit to specific topic"),
+        limit: int = typer.Option(10, help="Maximum results to return"),
+    ):
+        """Search knowledge items by content."""
+        try:
+            from memory import MemoryManager
+
+            manager = MemoryManager()
+
+            results = manager.search_knowledge(
+                query, topic=topic, limit=limit, source="cli"
+            )
+
+            if results:
+                table = Table(
+                    title=f"Search Results - '{query}'"
+                    + (f" in '{topic}'" if topic else "")
+                )
+                table.add_column("Key", style="cyan")
+                table.add_column("Topic", style="magenta")
+                table.add_column("Usage", style="green")
+                table.add_column("Last Used", style="yellow")
+                table.add_column("Content Preview", max_width=50)
+
+                for item in results:
+                    last_used = (
+                        item.last_used_at.strftime("%Y-%m-%d %H:%M")
+                        if item.last_used_at
+                        else "Never"
+                    )
+                    preview = (
+                        item.content[:80] + "..."
+                        if len(item.content) > 80
+                        else item.content
+                    )
+
+                    table.add_row(
+                        item.key, item.topic, str(item.usage_count), last_used, preview
+                    )
+
+                console.print(table)
+            else:
+                console.print(f"✗ No results found for: '{query}'", style="yellow")
+
+        except Exception as e:
+            console.print(f"✗ Error searching knowledge: {e}", style="red")
+
+    @memory_app.command("stats")
+    def memory_stats():
+        """Show memory system statistics."""
+        try:
+            manager = MemoryManager()
+
+            stats = manager.get_memory_stats()
+
+            # Overview table
+            overview_table = Table(title="Memory System Overview")
+            overview_table.add_column("Metric", style="cyan")
+            overview_table.add_column("Value", style="green")
+
+            overview_table.add_row("Total Items", str(stats.get("total_items", 0)))
+            overview_table.add_row("Total Topics", str(stats.get("total_topics", 0)))
+            overview_table.add_row(
+                "Total Favorites", str(stats.get("total_favorites", 0))
+            )
+            overview_table.add_row(
+                "Cache Hit Rate", f"{stats.get('cache_hit_rate', 0):.1%}"
+            )
+
+            console.print(overview_table)
+
+            # Topic distribution
+            topics = stats.get("topics", {})
+            if topics:
+                topic_table = Table(title="Topics")
+                topic_table.add_column("Topic", style="magenta")
+                topic_table.add_column("Items", style="green")
+
+                for topic, count in sorted(topics.items()):
+                    topic_table.add_row(topic, str(count))
+
+                console.print(topic_table)
+
+        except Exception as e:
+            console.print(f"✗ Error getting stats: {e}", style="red")
+
+except ImportError:
+    memory_app = None
+
 console = Console()
 
 

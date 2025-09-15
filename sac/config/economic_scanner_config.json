@@ -1,0 +1,58 @@
+{
+  "scanning": {
+    "price_check_interval_hours": 6,
+    "market_analysis_interval_hours": 24,
+    "enable_price_alerts": true,
+    "price_drop_threshold": 0.1,
+    "price_spike_threshold": 0.2,
+    "max_concurrent_requests": 10
+  },
+  "vendors": {
+    "enabled_vendors": [
+      "newegg",
+      "amazon",
+      "best_buy",
+      "micro_center",
+      "b_h_photo",
+      "adorama",
+      "tigerdirect"
+    ],
+    "preferred_vendors": [
+      "newegg",
+      "amazon",
+      "micro_center"
+    ],
+    "vendor_weights": {
+      "newegg": 1.0,
+      "amazon": 0.9,
+      "best_buy": 0.8,
+      "micro_center": 1.0,
+      "b_h_photo": 0.7,
+      "adorama": 0.6,
+      "tigerdirect": 0.5
+    }
+  },
+  "analysis": {
+    "price_history_days": 90,
+    "trend_analysis_days": 30,
+    "volatility_threshold": 0.15,
+    "prediction_days": [
+      7,
+      14,
+      30,
+      60
+    ],
+    "min_samples_for_analysis": 10
+  },
+  "budget": {
+    "default_budget": 5000.0,
+    "emergency_reserve_percent": 0.2,
+    "upgrade_frequency_months": 24,
+    "roi_target_months": 18
+  },
+  "notifications": {
+    "enable_price_alerts": true,
+    "enable_upgrade_recommendations": true,
+    "alert_frequency_hours": 12
+  }
+}

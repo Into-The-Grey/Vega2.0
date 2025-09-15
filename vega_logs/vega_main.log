@@ -1,0 +1,44 @@
+2025-09-15 10:48:22,836 |     INFO |         VegaBootCore | 🤖 Vega Boot Core initialized in quiet mode
+2025-09-15 10:48:22,836 |     INFO |         VegaBootCore | 🔍 Checking system dependencies...
+2025-09-15 10:48:22,836 |     INFO |         VegaBootCore |   ✅ rich_ui: Available
+2025-09-15 10:48:22,836 |     INFO |         VegaBootCore |   ❌ audio_system: Missing
+2025-09-15 10:48:22,836 |     INFO |         VegaBootCore |   ❌ network_tools: Missing
+2025-09-15 10:48:22,836 |     INFO |         VegaBootCore |   ✅ schedule: Available
+2025-09-15 10:48:22,836 |     INFO |         VegaBootCore |   ✅ sqlite: Available
+2025-09-15 10:48:22,836 |     INFO |         VegaBootCore |   ✅ vega_loop: Available
+2025-09-15 10:48:22,836 |     INFO |         VegaBootCore |   ✅ idle_personality_engine: Available
+2025-09-15 10:48:22,836 |     INFO |         VegaBootCore |   ✅ user_presence: Available
+2025-09-15 10:48:22,836 |     INFO |         VegaBootCore |   ✅ interaction_log: Available
+2025-09-15 10:48:22,836 |     INFO |         VegaBootCore |   ✅ spontaneous_thought_engine: Available
+2025-09-15 10:48:22,836 |     INFO |         VegaBootCore |   ✅ advanced_augmentations: Available
+2025-09-15 10:48:23,850 |     INFO |         VegaBootCore | 💚 System Health: optimal (Score: 100.0)
+2025-09-15 10:48:23,851 |     INFO |         VegaBootCore | 📊 CPU: 5.1% | Memory: 8.4% | Temp: 0.0°C
+2025-09-15 10:48:23,851 |     INFO |         VegaBootCore | 🔄 Starting core daemon processes...
+2025-09-15 10:48:23,851 |    ERROR |         VegaBootCore | ❌ Error loading daemon_vega_loop: Only one live display may be active at once
+2025-09-15 10:48:23,851 |    ERROR |         VegaBootCore | ❌ Error loading daemon_voice_visualizer: Only one live display may be active at once
+2025-09-15 10:48:23,851 |    ERROR |         VegaBootCore | ❌ Error loading daemon_network_scanner: Only one live display may be active at once
+2025-09-15 10:48:23,851 |    ERROR |         VegaBootCore | ❌ Error loading daemon_integration_engine: Only one live display may be active at once
+2025-09-15 10:48:23,851 |     INFO |         VegaBootCore | ✅ Started 0/4 core daemons
+2025-09-15 10:48:23,852 |  WARNING |         VegaBootCore | ⚠️ core_daemons failed to load (0.00s)
+2025-09-15 10:48:23,852 |     INFO |         VegaBootCore | 🔇 Skipping UI services in quiet mode
+2025-09-15 10:48:23,853 |     INFO |         VegaBootCore | ✅ ui_services loaded successfully (0.00s)
+2025-09-15 10:48:23,853 |    ERROR |         VegaBootCore | 💥 Fatal error during execution: Object of type VegaMode is not JSON serializable
+Traceback (most recent call last):
+  File "/home/ncacord/Vega2.0/vega_init.py", line 681, in run
+    self.save_boot_log()
+  File "/home/ncacord/Vega2.0/vega_init.py", line 466, in save_boot_log
+    f.write(json.dumps(log_entry) + '\n')
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type VegaMode is not JSON serializable
+2025-09-15 10:48:23,854 |     INFO |         VegaBootCore | 🛑 Beginning graceful shutdown...

@@ -1,12 +1,11 @@
+#!/usr/bin/env python3
 """
 app.py - FastAPI application for Vega2.0
 
 Endpoints:
 - GET /healthz -> {"ok": true}
-- GET /livez, /readyz -> process/live readiness
+- GET /livez, /readyz -> process/live readiness  
 - POST /chat (requires X-API-Key header)
-  Body: {"prompt": str, "stream": bool, "session_id": str|None}
-  Returns: JSON with response or text/plain streaming
 - GET /history?limit=N -> last N messages
 - GET /session/{session_id} -> recent messages for session
 - POST /feedback -> annotate a conversation
@@ -20,8 +19,18 @@ from typing import AsyncGenerator
 import asyncio
 import uuid
 import os
+import logging
+from datetime import datetime
+"""
 
-from fastapi import FastAPI, Header, HTTPException, Request, Body
+from typing import AsyncGenerator
+import asyncio
+import uuid
+import os
+import logging
+from datetime import datetime
+
+from fastapi import FastAPI, Header, HTTPException, Request, Body, Depends
 from fastapi.responses import (
     JSONResponse,
     StreamingResponse,
@@ -29,6 +38,7 @@ from fastapi.responses import (
     PlainTextResponse,
 )
 from pydantic import BaseModel
+from typing import Dict, Any
 
 from config import get_config
 from db import (
@@ -63,6 +73,27 @@ from llm import (
     reset_generation_settings,
 )
 
+# User Profiling Integration
+try:
+    from user_profiling.vega_integration import (
+        startup_user_profiling,
+        shutdown_user_profiling,
+        get_contextual_intelligence,
+        get_profile_manager,
+        enhanced_chat_response,
+        ContextualChatRequest,
+        ContextualChatResponse,
+        ProfileSummaryResponse,
+        UserProfileConfig,
+        ContextualIntelligenceEngine,
+        UserProfileManager
+    )
+    USER_PROFILING_AVAILABLE = True
+    logger.info("User profiling system available")
+except ImportError as e:
+    logger.warning(f"User profiling not available: {e}")
+    USER_PROFILING_AVAILABLE = False
+
 # Optional rate limiting
 try:
     from slowapi import Limiter
@@ -76,6 +107,7 @@ except Exception:
 
 cfg = get_config()
 app = FastAPI(title="Vega2.0", version="0.1.0")
+logger = logging.getLogger(__name__)
 
 if Limiter:
     limiter = Limiter(key_func=get_remote_address)  # type: ignore
@@ -138,11 +170,41 @@ async def _startup():
     except Exception:
         pass
 
+    # Initialize user profiling system
+    if USER_PROFILING_AVAILABLE:
+        try:
+            await startup_user_profiling()
+            logger.info("User profiling system initialized")
+        except Exception as e:
+            logger.error(f"Failed to initialize user profiling: {e}")
+
+    # Start dashboard streaming if available
+    try:
+        if dashboard_available:
+            asyncio.create_task(dashboard_stream.start_streaming())
+    except Exception:
+        pass
+
 
 @app.on_event("shutdown")
 async def _shutdown():
     try:
         await llm_shutdown()
+    except Exception:
+        pass
+
+    # Shutdown user profiling system
+    if USER_PROFILING_AVAILABLE:
+        try:
+            await shutdown_user_profiling()
+            logger.info("User profiling system shutdown")
+        except Exception as e:
+            logger.error(f"Error shutting down user profiling: {e}")
+
+    # Stop dashboard streaming if available
+    try:
+        if dashboard_available:
+            dashboard_stream.stop_streaming()
     except Exception:
         pass
 
@@ -173,6 +235,7 @@ class ChatRequest(BaseModel):
     prompt: str
     stream: bool = False
     session_id: str | None = None
+    include_analysis: bool = False  # Include conversation quality analysis
 
 
 class FeedbackRequest(BaseModel):
@@ -355,7 +418,89 @@ async def chat(
     if isinstance(reply, str):
         cid = log_conversation(req.prompt, reply, source="api", session_id=sid)
         app.state.metrics["responses_total"] += 1
-        return {"response": reply, "conversation_id": cid, "session_id": sid}
+
+        # Enhanced conversation integration
+        response_data = {"response": reply, "conversation_id": cid, "session_id": sid}
+
+        # Add conversation analysis if available
+        try:
+            from conversation_integration import (
+                analyze_chat_quality,
+                get_improvement_suggestions,
+            )
+
+            # Analyze conversation quality (convert cid to string)
+            quality = await analyze_chat_quality(str(cid), req.prompt, reply, sid)
+
+            # Get conversation history for suggestions
+            try:
+                recent = get_session_history(sid, limit=5)
+                conversation_history = [
+                    {"prompt": h["prompt"], "response": h["response"]}
+                    for h in reversed(recent)
+                ]
+
+                # Add current exchange
+                conversation_history.append({"prompt": req.prompt, "response": reply})
+
+                # Generate improvement suggestions (convert cid to string)
+                suggestions = await get_improvement_suggestions(
+                    str(cid), conversation_history
+                )
+
+                # Add analysis to response if enabled
+                if req.include_analysis:  # We'll need to add this to ChatRequest
+                    response_data.update(
+                        {
+                            "quality_analysis": {
+                                "overall_score": quality.overall_score,
+                                "relevance": quality.relevance_score,
+                                "clarity": quality.clarity_score,
+                                "helpfulness": quality.helpfulness_score,
+                                "completeness": quality.completeness_score,
+                                "improvement_areas": quality.improvement_areas,
+                            },
+                            "improvement_suggestions": [
+                                {
+                                    "type": s.improvement_type,
+                                    "suggestion": s.suggestion,
+                                    "confidence": s.confidence,
+                                    "impact": s.estimated_impact,
+                                }
+                                for s in suggestions
+                                if s.confidence > 0.7
+                            ],
+                        }
+                    )
+
+                # Broadcast quality update to dashboard if available
+                if dashboard_available:
+                    from dashboard import ImprovementEvent
+
+                    if quality.overall_score < 0.6:  # Poor quality threshold
+                        event = ImprovementEvent(
+                            timestamp=datetime.now().isoformat(),
+                            phase="Conversation",
+                            action="quality_analysis",
+                            impact=quality.overall_score,
+                            details={
+                                "conversation_id": cid,
+                                "quality_score": quality.overall_score,
+                                "improvement_areas": quality.improvement_areas,
+                            },
+                            status="analyzed",
+                        )
+                        await dashboard_stream.broadcast_improvement_event(event)
+
+            except Exception as e:
+                logger.warning(
+                    f"Failed to get conversation history for suggestions: {e}"
+                )
+
+        except Exception as e:
+            logger.warning(f"Failed to analyze conversation quality: {e}")
+
+        return response_data
     else:
         raise HTTPException(status_code=500, detail="Unexpected response type")
 
@@ -755,6 +900,143 @@ from fastapi.staticfiles import StaticFiles
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
+# Dashboard imports and setup
+try:
+    from dashboard import (
+        get_dashboard_data_collector,
+        get_dashboard_event_stream,
+        trigger_manual_improvement,
+        DashboardMetrics,
+        ImprovementEvent,
+    )
+    from fastapi import WebSocket, WebSocketDisconnect
+
+    dashboard_available = True
+except ImportError:
+    dashboard_available = False
+
+if dashboard_available:
+    dashboard_collector = get_dashboard_data_collector()
+    dashboard_stream = get_dashboard_event_stream()
+
+    @app.get("/dashboard")
+    async def dashboard_page():
+        """Serve the dashboard HTML page"""
+        try:
+            with open("static/dashboard.html", "r") as f:
+                html_content = f.read()
+            return HTMLResponse(content=html_content)
+        except FileNotFoundError:
+            return JSONResponse(
+                status_code=404,
+                content={
+                    "error": "Dashboard HTML not found. Please create static/dashboard.html"
+                },
+            )
+
+    @app.get("/dashboard/metrics")
+    async def dashboard_metrics(
+        x_api_key: str | None = Header(default=None, alias="X-API-Key")
+    ):
+        """Get current dashboard metrics"""
+        if not x_api_key or x_api_key not in {cfg.api_key, *cfg.api_keys_extra}:
+            raise HTTPException(status_code=401, detail="Invalid or missing API key")
+
+        try:
+            metrics = await dashboard_collector.get_real_time_metrics()
+            return JSONResponse(content=metrics.__dict__)
+        except Exception as e:
+            return JSONResponse(
+                status_code=500,
+                content={"error": "Failed to collect metrics", "detail": str(e)},
+            )
+
+    @app.get("/dashboard/timeline")
+    async def dashboard_timeline(
+        hours: int = 24, x_api_key: str | None = Header(default=None, alias="X-API-Key")
+    ):
+        """Get improvement timeline data"""
+        if not x_api_key or x_api_key not in {cfg.api_key, *cfg.api_keys_extra}:
+            raise HTTPException(status_code=401, detail="Invalid or missing API key")
+
+        try:
+            timeline = dashboard_collector.get_improvement_timeline(hours)
+            return JSONResponse(content={"timeline": timeline})
+        except Exception as e:
+            return JSONResponse(
+                status_code=500,
+                content={"error": "Failed to get timeline", "detail": str(e)},
+            )
+
+    @app.get("/dashboard/skills")
+    async def dashboard_skills(
+        x_api_key: str | None = Header(default=None, alias="X-API-Key")
+    ):
+        """Get skill evolution data"""
+        if not x_api_key or x_api_key not in {cfg.api_key, *cfg.api_keys_extra}:
+            raise HTTPException(status_code=401, detail="Invalid or missing API key")
+
+        try:
+            skills = dashboard_collector.get_skill_evolution()
+            return JSONResponse(content={"skills": skills})
+        except Exception as e:
+            return JSONResponse(
+                status_code=500,
+                content={"error": "Failed to get skills", "detail": str(e)},
+            )
+
+    @app.get("/dashboard/knowledge")
+    async def dashboard_knowledge(
+        x_api_key: str | None = Header(default=None, alias="X-API-Key")
+    ):
+        """Get knowledge graph statistics"""
+        if not x_api_key or x_api_key not in {cfg.api_key, *cfg.api_keys_extra}:
+            raise HTTPException(status_code=401, detail="Invalid or missing API key")
+
+        try:
+            knowledge_stats = dashboard_collector.get_knowledge_graph_stats()
+            return JSONResponse(content=knowledge_stats)
+        except Exception as e:
+            return JSONResponse(
+                status_code=500,
+                content={"error": "Failed to get knowledge stats", "detail": str(e)},
+            )
+
+    @app.post("/dashboard/trigger")
+    async def dashboard_trigger_improvement(
+        x_api_key: str | None = Header(default=None, alias="X-API-Key")
+    ):
+        """Manually trigger an improvement cycle"""
+        if not x_api_key or x_api_key not in {cfg.api_key, *cfg.api_keys_extra}:
+            raise HTTPException(status_code=401, detail="Invalid or missing API key")
+
+        try:
+            result = await trigger_manual_improvement()
+            return JSONResponse(content=result)
+        except Exception as e:
+            return JSONResponse(
+                status_code=500,
+                content={"error": "Failed to trigger improvement", "detail": str(e)},
+            )
+
+    @app.websocket("/dashboard/ws")
+    async def dashboard_websocket(websocket: WebSocket):
+        """WebSocket endpoint for real-time dashboard updates"""
+        await websocket.accept()
+        await dashboard_stream.subscribe(websocket)
+
+        try:
+            while True:
+                # Keep connection alive and handle client messages
+                data = await websocket.receive_text()
+                # Echo back for connection testing
+                await websocket.send_text(f"Echo: {data}")
+        except WebSocketDisconnect:
+            await dashboard_stream.unsubscribe(websocket)
+        except Exception as e:
+            await dashboard_stream.unsubscribe(websocket)
+            raise e
+
 
 @app.post("/feedback")
 @limiter.limit("120/minute") if Limiter else (lambda f: f)  # type: ignore
@@ -775,3 +1057,168 @@ async def feedback(
     if not ok:
         raise HTTPException(status_code=404, detail="Conversation not found")
     return {"ok": True}
+
+
+# User Profiling API Endpoints
+if USER_PROFILING_AVAILABLE:
+    
+    @app.get("/profile/summary")
+    @limiter.limit("30/minute") if Limiter else (lambda f: f)  # type: ignore
+    async def get_profile_summary(
+        request: Request,
+        x_api_key: str | None = Header(default=None, alias="X-API-Key"),
+        profile_manager: UserProfileManager = Depends(get_profile_manager)
+    ):
+        """Get comprehensive user profile summary"""
+        if not x_api_key or x_api_key not in {cfg.api_key, *cfg.api_keys_extra}:
+            raise HTTPException(status_code=401, detail="Invalid or missing API key")
+        
+        try:
+            summary = await profile_manager.get_profile_summary()
+            return summary
+        except Exception as e:
+            logger.error(f"Error getting profile summary: {e}")
+            raise HTTPException(status_code=500, detail=str(e))
+    
+    @app.post("/profile/scan")
+    @limiter.limit("5/minute") if Limiter else (lambda f: f)  # type: ignore
+    async def trigger_profile_scan(
+        request: Request,
+        scan_type: str = "mini",
+        x_api_key: str | None = Header(default=None, alias="X-API-Key"),
+        profile_manager: UserProfileManager = Depends(get_profile_manager)
+    ):
+        """Trigger manual profile scan"""
+        if not x_api_key or x_api_key not in {cfg.api_key, *cfg.api_keys_extra}:
+            raise HTTPException(status_code=401, detail="Invalid or missing API key")
+        
+        if scan_type not in ["mini", "full"]:
+            raise HTTPException(status_code=400, detail="Invalid scan type. Use 'mini' or 'full'")
+        
+        try:
+            result = await profile_manager.trigger_profile_scan(scan_type)
+            return result
+        except Exception as e:
+            logger.error(f"Error triggering profile scan: {e}")
+            raise HTTPException(status_code=500, detail=str(e))
+    
+    @app.get("/profile/briefing")
+    @limiter.limit("20/minute") if Limiter else (lambda f: f)  # type: ignore
+    async def get_daily_briefing(
+        request: Request,
+        date: str | None = None,
+        x_api_key: str | None = Header(default=None, alias="X-API-Key"),
+        profile_manager: UserProfileManager = Depends(get_profile_manager)
+    ):
+        """Get daily briefing for specified date"""
+        if not x_api_key or x_api_key not in {cfg.api_key, *cfg.api_keys_extra}:
+            raise HTTPException(status_code=401, detail="Invalid or missing API key")
+        
+        try:
+            briefing = await profile_manager.get_daily_briefing(date)
+            return briefing
+        except Exception as e:
+            logger.error(f"Error getting daily briefing: {e}")
+            raise HTTPException(status_code=500, detail=str(e))
+    
+    @app.post("/profile/settings")
+    @limiter.limit("10/minute") if Limiter else (lambda f: f)  # type: ignore
+    async def update_profile_settings(
+        request: Request,
+        settings: Dict[str, Any] = Body(...),
+        x_api_key: str | None = Header(default=None, alias="X-API-Key"),
+        profile_manager: UserProfileManager = Depends(get_profile_manager)
+    ):
+        """Update profile settings"""
+        if not x_api_key or x_api_key not in {cfg.api_key, *cfg.api_keys_extra}:
+            raise HTTPException(status_code=401, detail="Invalid or missing API key")
+        
+        try:
+            result = await profile_manager.update_profile_settings(settings)
+            return result
+        except Exception as e:
+            logger.error(f"Error updating profile settings: {e}")
+            raise HTTPException(status_code=500, detail=str(e))
+    
+    @app.post("/chat/enhanced")
+    @limiter.limit("60/minute") if Limiter else (lambda f: f)  # type: ignore
+    async def enhanced_chat(
+        request: Request,
+        req: ContextualChatRequest = Body(...),
+        x_api_key: str | None = Header(default=None, alias="X-API-Key"),
+        intelligence_engine: ContextualIntelligenceEngine = Depends(get_contextual_intelligence)
+    ):
+        """Enhanced chat with contextual intelligence"""
+        app.state.metrics["requests_total"] += 1
+        if not x_api_key or x_api_key not in {cfg.api_key, *cfg.api_keys_extra}:
+            raise HTTPException(status_code=401, detail="Invalid or missing API key")
+        
+        if len(req.prompt) > cfg.max_prompt_chars:
+            raise HTTPException(status_code=413, detail="Prompt too large")
+        
+        sid = req.session_id or uuid.uuid4().hex[:16]
+        
+        try:
+            # Get traditional LLM response first
+            augmented = req.prompt
+            try:
+                recent = get_session_history(sid, limit=6)
+                if recent:
+                    history_txt = "\n\n".join([
+                        f"User: {h['prompt']}\nAssistant: {h['response']}"
+                        for h in reversed(recent)
+                    ])
+                    augmented = f"Conversation so far:\n{history_txt}\n\nUser: {req.prompt}"
+                    if len(augmented) > cfg.max_prompt_chars:
+                        augmented = augmented[-cfg.max_prompt_chars:]
+            except Exception:
+                augmented = req.prompt
+            
+            # Get LLM response
+            try:
+                original_response = await asyncio.wait_for(
+                    query_llm(augmented, stream=False), timeout=cfg.llm_timeout_sec
+                )
+            except LLMBackendError as exc:
+                app.state.metrics["errors_total"] += 1
+                raise HTTPException(status_code=503, detail=str(exc)) from exc
+            except asyncio.TimeoutError:
+                app.state.metrics["timeouts_total"] += 1
+                original_response = "[timeout: LLM did not respond in time]"
+            
+            if not isinstance(original_response, str):
+                raise HTTPException(status_code=500, detail="Unexpected response type")
+            
+            # Enhance with contextual intelligence
+            enhanced_response = await intelligence_engine.enhance_chat_response(
+                original_response, req.prompt, sid
+            )
+            
+            # Log conversation
+            cid = log_conversation(req.prompt, enhanced_response[0], source="enhanced_api", session_id=sid)
+            app.state.metrics["responses_total"] += 1
+            
+            return ContextualChatResponse(
+                response=enhanced_response[0],
+                persona_mode=enhanced_response[1].get('persona_mode', 'default'),
+                context_applied=enhanced_response[1],
+                understanding_score=0.75,  # Would be calculated
+                suggestions=[]  # Simplified for now
+            )
+            
+        except HTTPException:
+            raise
+        except Exception as e:
+            app.state.metrics["errors_total"] += 1
+            logger.error(f"Enhanced chat error: {e}")
+            raise HTTPException(status_code=500, detail=str(e))
+
+else:
+    # Fallback endpoints when user profiling is not available
+    @app.get("/profile/summary")
+    async def get_profile_summary_fallback(request: Request):
+        return {"error": "User profiling system not available", "available": False}
+    
+    @app.post("/chat/enhanced")
+    async def enhanced_chat_fallback(request: Request):
+        return {"error": "Enhanced chat requires user profiling system", "available": False}

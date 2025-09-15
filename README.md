@@ -2,7 +2,77 @@
 
 [![Docs](https://img.shields.io/badge/docs-mdBook-blue)](https://into-the-grey.github.io/Vega2.0/) [![Pages](https://img.shields.io/badge/GitHub%20Pages-live-brightgreen)](https://into-the-grey.github.io/Vega2.0/) [![CI](https://github.com/Into-The-Grey/Vega2.0/actions/workflows/mdbook.yml/badge.svg)](https://github.com/Into-The-Grey/Vega2.0/actions/workflows/mdbook.yml)
 
-Vega2.0 is a local-first FastAPI service and CLI for chatting with a local LLM, logging conversations to SQLite, building datasets, and fine-tuning. It integrates with Ollama by default and can be extended with Slack/Discord.
+# Vega2.0 - Autonomous AI System
+
+Vega2.0 is a comprehensive autonomous AI system featuring a complete System Autonomy Core (SAC) with 7 integrated phases for full system self-management. The system combines local-first FastAPI services, CLI interfaces, autonomous decision-making, and complete hardware control capabilities.
+
+## 🤖 System Autonomy Core (SAC)
+
+The SAC provides complete autonomous system management through 7 integrated phases:
+
+1. **🔍 System Introspection** - Hardware enumeration and health monitoring
+2. **👁️ Active Monitoring** - Real-time system watchdog with automated responses  
+3. **⚙️ System Control** - Secure command execution with audit trails
+4. **🛡️ Network Security** - Automated firewall and threat detection
+5. **💰 Economic Intelligence** - Market analysis and upgrade recommendations
+6. **🎛️ System Interface** - Unified API with web dashboard and real-time monitoring
+7. **🤖 Self-Governing Operations** - ML-driven autonomous decision engine
+
+## 📁 Project Structure
+
+```
+Vega2.0/
+├── 🧠 core/              # Core application components
+│   ├── app.py           # Main FastAPI application  
+│   ├── cli.py           # Command-line interface
+│   ├── config.py        # Configuration management
+│   ├── db.py            # Database operations
+│   ├── llm.py           # LLM integration layer
+│   ├── memory.py        # Conversation memory
+│   ├── resilience.py    # Circuit breakers and caching
+│   └── security.py      # Security utilities
+│
+├── 🤖 sac/              # System Autonomy Core
+│   ├── system_probe.py      # Phase 1: Hardware introspection
+│   ├── system_watchdog.py   # Phase 2: Active monitoring
+│   ├── sys_control.py       # Phase 3: System control
+│   ├── net_guard.py         # Phase 4: Network security
+│   ├── economic_scanner.py  # Phase 5: Economic intelligence
+│   ├── system_interface.py  # Phase 6: Unified interface
+│   ├── self_govern.py       # Phase 7: Autonomous operations
+│   ├── config/              # SAC configuration files
+│   ├── data/                # SAC databases and state
+│   ├── logs/                # SAC operation logs
+│   └── models/              # ML models for decision making
+│
+├── 🧠 intelligence/     # AI intelligence engines
+│   ├── autonomous_analyzer.py
+│   ├── evaluation_engine.py
+│   ├── performance_engine.py
+│   ├── global_self_improvement.py
+│   ├── knowledge_harvesting.py
+│   ├── skill_versioning.py
+│   └── telemetry_system.py
+│
+├── 📊 analysis/         # Analysis and conversation tools
+│   └── conversation_integration.py
+│
+├── 🎛️ ui/               # User interface components
+│   ├── dashboard.py     # System dashboard
+│   └── static/          # Web assets
+│
+├── 💾 data/             # Data storage
+│   ├── *.db             # SQLite databases
+│   ├── *.json           # Configuration and data files
+│   └── app.env          # Environment configuration
+│
+├── 🔗 integrations/     # External service integrations
+├── 📚 datasets/         # Dataset preparation and training data
+├── 🎓 training/         # Model training and fine-tuning
+├── 📖 learning/         # Learning and evaluation systems
+├── 📝 docs/             # Documentation and guides
+└── 📖 book/             # mdBook documentation
+```
 
 ## Features
 

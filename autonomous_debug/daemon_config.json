@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "hourly_enabled": true,
+  "daily_reports": true,
+  "max_fixes_per_hour": 3,
+  "max_fixes_per_day": 15,
+  "confidence_threshold": 0.75,
+  "safety_threshold": 0.8,
+  "auto_apply_enabled": false,
+  "notification_enabled": true,
+  "email_recipients": [],
+  "webhook_url": null,
+  "working_hours_only": true,
+  "working_hours_start": 9,
+  "working_hours_end": 17
+}

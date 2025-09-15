@@ -1,0 +1,162 @@
+{
+	"project": {
+		"name": "Vega2.0",
+		"version": "2.0.0",
+		"type": "AI_LLM_Service",
+		"language": "Python",
+		"architecture": "FastAPI + SQLite + Ollama",
+		"purpose": "Local-first conversational AI with memory, training, and self-improvement capabilities"
+	},
+	"scan_timestamp": "2024-12-26T00:00:00Z",
+	"core_modules": {
+		"app.py": {
+			"type": "main_api",
+			"size_lines": "estimated_300",
+			"functions": ["chat_endpoint", "history_endpoint", "healthz"],
+			"dependencies": ["fastapi", "uvicorn", "db", "llm", "config"],
+			"purpose": "Main FastAPI service with chat, history, and health endpoints"
+		},
+		"cli.py": {
+			"type": "command_interface",
+			"size_lines": "estimated_400",
+			"functions": ["chat", "repl", "history", "memory_commands", "dataset_commands"],
+			"dependencies": ["typer", "rich", "app", "memory"],
+			"purpose": "Command-line interface mirroring API functionality"
+		},
+		"memory.py": {
+			"type": "memory_system",
+			"size_lines": "900+",
+			"functions": ["MemoryManager", "knowledge_storage", "favorites_system"],
+			"dependencies": ["sqlalchemy", "threading", "json"],
+			"purpose": "Comprehensive memory system with dynamic caching and topic isolation"
+		},
+		"llm.py": {
+			"type": "llm_integration",
+			"size_lines": "estimated_200",
+			"functions": ["chat_completion", "stream_response", "circuit_breaker"],
+			"dependencies": ["httpx", "resilience", "config"],
+			"purpose": "LLM integration layer with resilience patterns"
+		},
+		"db.py": {
+			"type": "database_layer",
+			"size_lines": "estimated_150",
+			"functions": ["conversation_logging", "session_management"],
+			"dependencies": ["sqlalchemy", "sqlite"],
+			"purpose": "SQLAlchemy database layer for conversation persistence"
+		},
+		"config.py": {
+			"type": "configuration",
+			"size_lines": "estimated_100",
+			"functions": ["get_config", "env_loading"],
+			"dependencies": ["python-dotenv", "dataclasses"],
+			"purpose": "Environment configuration management"
+		},
+		"resilience.py": {
+			"type": "reliability",
+			"size_lines": "estimated_150",
+			"functions": ["CircuitBreaker", "TTLCache", "retry_logic"],
+			"dependencies": ["asyncio", "time"],
+			"purpose": "Circuit breaker and caching for external service reliability"
+		},
+		"security.py": {
+			"type": "security",
+			"size_lines": "estimated_100",
+			"functions": ["pii_masking", "data_sanitization"],
+			"dependencies": ["re", "typing"],
+			"purpose": "Security utilities for data protection"
+		}
+	},
+	"subsystems": {
+		"datasets/": {
+			"purpose": "Dataset preparation and training data management",
+			"key_files": ["prepare_dataset.py", "loaders/", "samples/"],
+			"data_formats": ["txt", "md", "json", "jsonl"]
+		},
+		"training/": {
+			"purpose": "Model training and fine-tuning infrastructure",
+			"key_files": ["train.py", "config.yaml"],
+			"frameworks": ["huggingface", "transformers", "accelerate"]
+		},
+		"integrations/": {
+			"purpose": "External service connectors",
+			"key_files": ["search.py", "fetch.py", "osint.py", "slack_connector.py"],
+			"services": ["web_search", "content_fetch", "osint", "slack"]
+		},
+		"learning/": {
+			"purpose": "Conversation evaluation and curation",
+			"key_files": ["learn.py"],
+			"capabilities": ["conversation_analysis", "quality_assessment"]
+		},
+		"docs/": {
+			"purpose": "Comprehensive documentation",
+			"formats": ["markdown", "mdbook"],
+			"coverage": ["architecture", "usage", "deployment", "troubleshooting"]
+		}
+	},
+	"dependencies": {
+		"core": ["fastapi", "uvicorn", "sqlalchemy", "httpx", "typer", "rich"],
+		"ai_ml": ["transformers", "accelerate", "torch", "datasets"],
+		"database": ["sqlite3", "alembic"],
+		"web": ["requests", "beautifulsoup4"],
+		"utilities": ["python-dotenv", "pydantic", "click", "pyyaml"]
+	},
+	"data_stores": {
+		"vega.db": {
+			"type": "sqlite",
+			"tables": ["conversations", "knowledge_items", "favorite_items", "access_logs", "memory_index"],
+			"wal_enabled": true,
+			"purpose": "Primary conversation and memory storage"
+		},
+		"datasets/output.jsonl": {
+			"type": "training_data",
+			"format": "jsonl",
+			"purpose": "Prepared training datasets"
+		}
+	},
+	"configuration_files": {
+		"app.env": "Environment configuration",
+		"training/config.yaml": "Training parameters",
+		"book/book.toml": "Documentation configuration",
+		"systemd/vega.service": "System service definition"
+	},
+	"entry_points": {
+		"api_server": "uvicorn app:app",
+		"cli": "python -m cli",
+		"training": "python -m training.train",
+		"dataset_prep": "python -m datasets.prepare_dataset"
+	},
+	"improvement_targets": {
+		"performance_bottlenecks": [
+			"Database query optimization",
+			"Memory system caching efficiency",
+			"LLM response streaming",
+			"Large dataset processing"
+		],
+		"reliability_issues": [
+			"Circuit breaker tuning",
+			"Error handling completeness",
+			"Resource cleanup",
+			"Connection pooling"
+		],
+		"feature_gaps": [
+			"Advanced conversation threading",
+			"Multi-modal support",
+			"Real-time collaboration",
+			"Advanced analytics"
+		],
+		"code_quality": [
+			"Type hint coverage",
+			"Test coverage expansion",
+			"Documentation completeness",
+			"Code duplication reduction"
+		]
+	},
+	"self_improvement_metadata": {
+		"telemetry_hooks": [],
+		"performance_baselines": {},
+		"variant_experiments": [],
+		"knowledge_harvest_points": [],
+		"automated_test_coverage": "pending",
+		"continuous_learning_loops": "not_implemented"
+	}
+}
