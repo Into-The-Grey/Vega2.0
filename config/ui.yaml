@@ -1,0 +1,83 @@
+# Vega UI Configuration
+# Web interface and dashboard settings
+
+# Theme & Appearance
+theme: "dark"                         # dark, light, auto
+primary_color: "#2563eb"              # Primary theme color
+accent_color: "#3b82f6"               # Accent color
+font_family: "system-ui, sans-serif"  # Font family
+font_size: "14px"                     # Base font size
+
+# Layout & Behavior
+layout:
+  sidebar_width: "300px"              # Sidebar width
+  header_height: "60px"               # Header height
+  max_content_width: "1200px"         # Maximum content width
+  responsive_breakpoint: "768px"      # Mobile breakpoint
+
+# Features
+features:
+  auto_refresh: true                  # Auto-refresh status
+  refresh_interval: 5                 # Refresh interval (seconds)
+  show_debug: false                   # Show debug information
+  enable_syntax_highlighting: true    # Code syntax highlighting
+  enable_animations: true             # UI animations
+  enable_notifications: true          # Browser notifications
+
+# Log Viewer
+logs:
+  tail_lines: 100                     # Number of log lines to show
+  auto_scroll: true                   # Auto-scroll to latest logs
+  word_wrap: true                     # Wrap long lines
+  show_timestamps: true               # Show log timestamps
+  show_levels: true                   # Show log levels
+  filter_levels:                      # Enabled log levels
+    - "ERROR"
+    - "WARNING" 
+    - "INFO"
+    - "DEBUG"
+
+# Config Editor
+config_editor:
+  syntax_highlighting: true           # Enable syntax highlighting
+  line_numbers: true                  # Show line numbers
+  auto_save: false                    # Auto-save on change
+  confirm_changes: true               # Confirm before saving
+  backup_on_save: true               # Create backup before saving
+
+# Status Dashboard
+dashboard:
+  update_interval: 3                  # Status update interval (seconds)
+  show_system_metrics: true          # Show CPU/memory usage
+  show_process_info: true             # Show process details
+  compact_view: false                 # Use compact layout
+  group_by_type: true                # Group components by type
+
+# Advanced Features
+advanced:
+  enable_websockets: true             # WebSocket support
+  websocket_heartbeat: 30             # WebSocket ping interval
+  cache_static_assets: true          # Cache CSS/JS files
+  compression: true                   # Enable gzip compression
+  
+# Development
+development:
+  show_debug_panel: false             # Show debug panel
+  log_api_calls: false               # Log API requests
+  mock_data: false                   # Use mock data for testing
+  hot_reload: false                  # Hot reload in development
+
+# Accessibility
+accessibility:
+  high_contrast: false               # High contrast mode
+  reduce_motion: false               # Reduce animations
+  large_text: false                  # Larger font sizes
+  keyboard_navigation: true          # Full keyboard support
+  screen_reader_support: true        # Screen reader compatibility
+
+# Security
+security:
+  csrf_protection: true              # CSRF token validation
+  content_security_policy: true     # CSP headers
+  session_timeout: 3600              # Session timeout (seconds)
+  remember_preferences: true         # Save user preferences
