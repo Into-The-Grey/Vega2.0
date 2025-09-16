@@ -1,7 +1,148 @@
+# Python
 **/__pycache__/**
-.venv/**
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+.env/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment & secrets
 .env
-.vscode/**
+.env.local
+.env.production
+*.key
+*.pem
+secrets.yaml
+config/secrets.yaml
+
+# Development
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+vega_logs/
+*.log.*
+
+# Database
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# State & cache
+vega_state/
+.cache/
+*.cache
+
+# Models & artifacts
+models/
+artifacts/
+checkpoints/
+*.bin
+*.safetensors
+*.model
+*.onnx
+
+# Training outputs
+training/output/
+training/checkpoints/
+training/logs/
+wandb/
+
+# Dataset processing
+datasets/processed/
+datasets/cache/
+datasets/temp/
+
+# Voice models & data
+voice/models/
+voice/temp/
+*.wav
+*.mp3
+*.flac
+audio_temp/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
 *.bak
-vega.db-shm
-vega.db-wal
+*.backup
+
+# OS generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+*.code-workspace
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# Test coverage
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Documentation builds
+docs/_build/
+book/book/
+site/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# Package managers
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
