@@ -151,15 +151,32 @@ Optional: Serve the static UI
 
 ## Documentation
 
-- mdBook site: [into-the-grey.github.io/Vega2.0](https://into-the-grey.github.io/Vega2.0/)
-- Source docs: see `docs/` and the mdBook in `book/`.
+- **User & System Guides:**
+  - [Architecture](docs/ARCHITECTURE.md)
+  - [Deployment](docs/DEPLOYMENT.md)
+  - [Setup](docs/SETUP.md)
+  - [Usage](docs/USAGE.md)
+  - [Troubleshooting](docs/TROUBLESHOOTING.md)
+  - [Files Overview](docs/FILES_OVERVIEW.md)
+  - [Datasets](docs/DATASETS.md)
+  - [Training](docs/TRAINING.md)
+  - [Integrations](docs/INTEGRATIONS.md)
+  - [Dependencies](docs/DEPENDENCIES.md)
+  - [Maintenance](docs/MAINTENANCE.md)
+  - [TTY UI Features](docs/TTY_UI_FEATURES.md)
+  - [Dashboard](docs/DASHBOARD.md)
+  - [Autonomous AI System Complete](docs/AUTONOMOUS_AI_SYSTEM_COMPLETE.md)
 
-If the site doesn't load yet:
+- **Developer Notes & Advanced Topics:**
+  - [Ambient System Guide](docs/devnotes/AMBIENT_SYSTEM_GUIDE.md)
+  - [Autonomous Debug Readme](docs/devnotes/AUTONOMOUS_DEBUG_README.md)
+  - [UI Readme](docs/devnotes/UI_README.md)
+  - [Success Summary](docs/devnotes/SUCCESS_SUMMARY.md)
+  - [Project Completion Summary](docs/devnotes/PROJECT_COMPLETION_SUMMARY.md)
+  - [Quickstart](docs/devnotes/QUICKSTART.md)
 
-- In GitHub, go to Settings → Pages.
-- Set Source to "Deploy from a branch".
-- Choose Branch: `gh-pages` and Folder: `/ (root)`.
-- Save; wait ~1–2 minutes for publish.
+- **mdBook Site:**
+  - [Vega2.0 mdBook Documentation](https://into-the-grey.github.io/Vega2.0/)
 
 ## API Usage
 
