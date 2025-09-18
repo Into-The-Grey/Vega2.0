@@ -1,0 +1,25 @@
+{
+  "thresholds": {
+    "cpu_temp_warning": 70.0,
+    "cpu_temp_critical": 85.0,
+    "cpu_usage_warning": 80.0,
+    "cpu_usage_critical": 95.0,
+    "memory_usage_warning": 85.0,
+    "memory_usage_critical": 95.0,
+    "disk_usage_warning": 80.0,
+    "disk_usage_critical": 90.0,
+    "gpu_temp_warning": 75.0,
+    "gpu_temp_critical": 90.0
+  },
+  "monitoring": {
+    "enable_smart": true,
+    "enable_thermal": true,
+    "enable_network_stats": true,
+    "snapshot_retention_days": 30
+  },
+  "hardware": {
+    "expected_cpu_cores": 24,
+    "expected_memory_gb": 128,
+    "expected_gpu_count": 2
+  }
+}

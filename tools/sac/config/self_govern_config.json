@@ -1,0 +1,41 @@
+{
+  "decision_making": {
+    "confidence_threshold": 0.7,
+    "risk_tolerance": 0.3,
+    "decision_interval_minutes": 30,
+    "emergency_response_seconds": 60,
+    "max_concurrent_decisions": 5
+  },
+  "learning": {
+    "model_retrain_days": 7,
+    "success_rate_threshold": 0.8,
+    "adaptation_rate": 0.1,
+    "memory_retention_days": 90
+  },
+  "goals": {
+    "performance_target": 0.9,
+    "reliability_target": 0.99,
+    "efficiency_target": 0.85,
+    "cost_optimization_target": 0.2,
+    "security_score_target": 0.95
+  },
+  "autonomous_actions": {
+    "enable_hardware_changes": true,
+    "enable_software_updates": true,
+    "enable_configuration_changes": true,
+    "enable_budget_decisions": true,
+    "max_decision_cost": 1000.0
+  },
+  "monitoring": {
+    "health_check_interval": 300,
+    "prediction_horizon_days": 30,
+    "alert_escalation_minutes": 15,
+    "performance_sampling_interval": 60
+  },
+  "emergency": {
+    "auto_recovery_enabled": true,
+    "failsafe_mode_threshold": 0.5,
+    "emergency_contact_enabled": false,
+    "backup_creation_enabled": true
+  }
+}

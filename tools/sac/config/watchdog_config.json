@@ -1,0 +1,41 @@
+{
+  "monitoring": {
+    "interval_seconds": 60,
+    "enable_auto_mitigation": true,
+    "emergency_mode_threshold": 3,
+    "cooldown_minutes": 5,
+    "max_alerts_per_hour": 10
+  },
+  "thresholds": {
+    "cpu_usage_warning": 80.0,
+    "cpu_usage_critical": 95.0,
+    "cpu_temp_warning": 70.0,
+    "cpu_temp_critical": 85.0,
+    "memory_usage_warning": 85.0,
+    "memory_usage_critical": 95.0,
+    "disk_usage_warning": 80.0,
+    "disk_usage_critical": 90.0,
+    "gpu_temp_warning": 75.0,
+    "gpu_temp_critical": 90.0,
+    "gpu_usage_warning": 90.0,
+    "gpu_usage_critical": 98.0,
+    "load_average_warning": 20.0,
+    "load_average_critical": 30.0,
+    "process_count_warning": 1000,
+    "process_count_critical": 2000,
+    "network_errors_warning": 100,
+    "network_errors_critical": 1000
+  },
+  "mitigation": {
+    "enable_process_killing": false,
+    "enable_cache_clearing": true,
+    "enable_service_restart": false,
+    "enable_thermal_throttling": true,
+    "emergency_actions_enabled": false
+  },
+  "notifications": {
+    "enable_daily_digest": true,
+    "enable_immediate_alerts": true,
+    "alert_retention_days": 30
+  }
+}

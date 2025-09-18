@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vega2.0 - Advanced Control Panel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e1e2e 0%, #2d2d3a 100%);
+            color: #cdd6f4;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #313244;
+            padding: 1rem 2rem;
+            border-bottom: 2px solid #585b70;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h1 {
+            color: #cba6f7;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .header p {
+            color: #a6adc8;
+            margin-top: 0.5rem;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            min-height: calc(100vh - 90px);
+        }
+
+        .sidebar {
+            background: #313244;
+            border-right: 2px solid #585b70;
+            padding: 1.5rem;
+        }
+
+        .nav-section {
+            margin-bottom: 2rem;
+        }
+
+        .nav-section h3 {
+            color: #f38ba8;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #585b70;
+        }
+
+        .nav-item {
+            padding: 0.7rem 1rem;
+            margin: 0.3rem 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .nav-item:hover {
+            background: #45475a;
+            border-color: #7c7f93;
+        }
+
+        .nav-item.active {
+            background: #89b4fa;
+            color: #1e1e2e;
+            font-weight: 600;
+        }
+
+        .main-content {
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .card {
+            background: #313244;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #585b70;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            color: #cba6f7;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #f9e2af;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #585b70;
+            border-radius: 6px;
+            background: #1e1e2e;
+            color: #cdd6f4;
+            font-family: inherit;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #89b4fa;
+            box-shadow: 0 0 0 2px rgba(137, 180, 250, 0.2);
+        }
+
+        select.form-control {
+            cursor: pointer;
+        }
+
+        textarea.form-control {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            min-height: 300px;
+            resize: vertical;
+        }
+
+        .btn {
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-primary {
+            background: #89b4fa;
+            color: #1e1e2e;
+        }
+
+        .btn-primary:hover {
+            background: #74c7ec;
+        }
+
+        .btn-success {
+            background: #a6e3a1;
+            color: #1e1e2e;
+        }
+
+        .btn-success:hover {
+            background: #94e2d5;
+        }
+
+        .btn-warning {
+            background: #f9e2af;
+            color: #1e1e2e;
+        }
+
+        .btn-warning:hover {
+            background: #fab387;
+        }
+
+        .log-viewer {
+            background: #1e1e2e;
+            border: 1px solid #585b70;
+            border-radius: 6px;
+            padding: 1rem;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            max-height: 500px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+
+        .status-online {
+            background: #a6e3a1;
+        }
+
+        .status-offline {
+            background: #f38ba8;
+        }
+
+        .status-warning {
+            background: #f9e2af;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric-card {
+            background: #45475a;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid #89b4fa;
+        }
+
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #cba6f7;
+        }
+
+        .metric-label {
+            color: #a6adc8;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            border-left: 4px solid;
+        }
+
+        .alert-success {
+            background: rgba(166, 227, 161, 0.1);
+            border-color: #a6e3a1;
+            color: #a6e3a1;
+        }
+
+        .alert-error {
+            background: rgba(243, 139, 168, 0.1);
+            border-color: #f38ba8;
+            color: #f38ba8;
+        }
+
+        .alert-warning {
+            background: rgba(249, 226, 175, 0.1);
+            border-color: #f9e2af;
+            color: #f9e2af;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #a6adc8;
+        }
+
+        .spinner {
+            border: 3px solid #45475a;
+            border-top: 3px solid #89b4fa;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            border: 1px solid #585b70;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            background: #1e1e2e;
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            border-radius: 8px;
+        }
+
+        .message.user {
+            background: #45475a;
+            margin-left: 2rem;
+        }
+
+        .message.assistant {
+            background: #313244;
+            margin-right: 2rem;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 1rem;
+            background: #313244;
+            border-top: 1px solid #585b70;
+        }
+
+        .chat-input input {
+            flex: 1;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>🚀 Vega2.0 Advanced Control Panel</h1>
+        <p>Complete system management, monitoring, and configuration</p>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="nav-section">
+                <h3>Core Features</h3>
+                <div class="nav-item active" data-tab="chat">💬 Chat Interface</div>
+                <div class="nav-item" data-tab="status">📊 System Status</div>
+                <div class="nav-item" data-tab="logs">📋 Log Viewer</div>
+                <div class="nav-item" data-tab="config">⚙️ Configuration</div>
+                <a class="nav-item" href="/docs/commands" target="_blank">🧾 Commands (Auto)</a>
+                <div class="nav-item" data-tab="nudges" id="nudgesNav">🔔 Proactive Nudges <span id="nudgesBadge"
+                        style="display:none;background:#f38ba8;color:#fff;border-radius:50%;padding:0 7px;font-size:0.8em;vertical-align:middle;margin-left:4px;">0</span>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <h3>Advanced</h3>
+                <div class="nav-item" data-tab="llm-behavior">🧠 LLM Behavior</div>
+                <div class="nav-item" data-tab="voice">🎤 Voice Settings</div>
+                <div class="nav-item" data-tab="integrations">🔗 Integrations</div>
+            </div>
+
+            <div class="nav-section">
+                <h3>Monitoring</h3>
+                <div class="nav-item" data-tab="metrics">📈 Metrics</div>
+                <div class="nav-item" data-tab="health">🏥 Health Checks</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Chat Interface -->
+            <div id="chat" class="tab-content active">
+                <div class="card">
+                    <h3>💬 Chat with Vega</h3>
+                    <div class="chat-container">
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="message assistant">
+                                <strong>Vega:</strong> Hello! I'm your AI assistant. How can I help you today?
+                            </div>
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" id="chatInput" class="form-control" placeholder="Type your message..."
+                                onkeypress="handleChatKeypress(event)">
+                            <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Status -->
+            <div id="status" class="tab-content">
+                <div class="card">
+                    <h3>📊 System Status</h3>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-value" id="cpuUsage">--</div>
+                            <div class="metric-label">CPU Usage</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value" id="memoryUsage">--</div>
+                            <div class="metric-label">Memory Usage</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value" id="diskUsage">--</div>
+                            <div class="metric-label">Disk Usage</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value" id="requestCount">--</div>
+                            <div class="metric-label">Requests</div>
+                        </div>
+                    </div>
+                    <div id="statusDetails">Loading system status...</div>
+                </div>
+            </div>
+
+            <!-- Log Viewer -->
+            <div id="logs" class="tab-content">
+                <div class="card">
+                    <h3>📋 Log Viewer</h3>
+                    <div class="form-group">
+                        <label for="logModule">Select Module:</label>
+                        <select id="logModule" class="form-control" onchange="loadLogs()">
+                            <option value="">Select a module...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="logLines">Number of lines:</label>
+                        <select id="logLines" class="form-control" onchange="loadLogs()">
+                            <option value="50">50 lines</option>
+                            <option value="100">100 lines</option>
+                            <option value="200">200 lines</option>
+                            <option value="500">500 lines</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" onclick="loadLogs()">Refresh Logs</button>
+                        <button class="btn btn-warning" onclick="autoRefreshLogs()">Auto Refresh</button>
+                    </div>
+                    <div class="log-viewer" id="logContent">Select a module to view logs...</div>
+                </div>
+            </div>
+
+            <!-- Configuration -->
+            <div id="config" class="tab-content">
+                <div class="card">
+                    <h3>⚙️ Configuration Editor</h3>
+                    <div class="form-group">
+                        <label for="configModule">Select Module:</label>
+                        <select id="configModule" class="form-control" onchange="loadConfig()">
+                            <option value="">Select a module...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="configEditor">Configuration (YAML):</label>
+                        <textarea id="configEditor" class="form-control"
+                            placeholder="Select a module to edit configuration..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success" onclick="saveConfig()">Save Configuration</button>
+                        <button class="btn btn-warning" onclick="loadConfig()">Reload</button>
+                        <button class="btn btn-primary" onclick="validateConfig()">Validate</button>
+                    </div>
+                    <div id="configStatus"></div>
+                </div>
+            </div>
+
+            <!-- LLM Behavior -->
+            <div id="llm-behavior" class="tab-content">
+                <div class="card">
+                    <h3>🧠 LLM Behavior Settings</h3>
+                    <div id="llmBehaviorForm">
+                        <div class="loading">
+                            <div class="spinner"></div>
+                            Loading LLM behavior settings...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voice Settings -->
+            <div id="voice" class="tab-content">
+                <div class="card">
+                    <h3>🎤 Voice Processing Settings</h3>
+                    <div id="voiceSettings">
+                        <div class="loading">
+                            <div class="spinner"></div>
+                            Loading voice settings...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integrations -->
+            <div id="integrations" class="tab-content">
+                <div class="card">
+                    <h3>🔗 Integration Settings</h3>
+                    <div id="integrationSettings">
+                        <div class="loading">
+                            <div class="spinner"></div>
+                            Loading integration settings...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metrics -->
+            <div id="metrics" class="tab-content">
+                <div class="card">
+                    <h3>📈 System Metrics</h3>
+                    <div id="metricsContent">
+                        <div class="loading">
+                            <div class="spinner"></div>
+                            Loading metrics...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Health Checks -->
+            <div id="health" class="tab-content">
+                <div class="card">
+                    <h3>🏥 Health Checks</h3>
+                    <div id="healthContent">
+                        <div class="loading">
+                            <div class="spinner"></div>
+                            Loading health information...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proactive Nudges -->
+            <div id="nudges" class="tab-content">
+                <div class="card">
+                    <h3>🔔 Proactive Nudges</h3>
+                    <p>Vega can occasionally propose a short, purposeful conversation. Accept to start, or decline to
+                        skip.</p>
+                    <div class="form-group">
+                        <button class="btn btn-primary" onclick="checkForNudge()">Check for Nudge</button>
+                        <button class="btn" onclick="loadPendingNudges()">Refresh Pending</button>
+                    </div>
+                    <div id="pendingNudges"></div>
+                </div>
+
+                <div class="card" id="proactiveChatCard" style="display:none;">
+                    <h3>🗣️ Active Proactive Session</h3>
+                    <div class="chat-container">
+                        <div class="chat-messages" id="proactiveMessages"></div>
+                        <div class="chat-input">
+                            <input type="text" id="proactiveInput" class="form-control" placeholder="Type your reply..."
+                                onkeypress="handleProactiveKeypress(event)">
+                            <button class="btn btn-primary" onclick="sendProactiveMessage()">Send</button>
+                            <button class="btn btn-warning" onclick="endProactiveSession()">End</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global state
+        let autoRefreshInterval = null;
+        let currentLogModule = '';
+        let currentConfigModule = '';
+        let proactiveSessionId = '';
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function () {
+            initializeApp();
+        });
+
+        async function initializeApp() {
+            await loadModules();
+            await loadSystemStatus();
+            setupTabNavigation();
+            updateNudgesBadge();
+            setInterval(updateNudgesBadge, 60000); // update badge every minute
+        }
+        async function updateNudgesBadge() {
+            try {
+                const data = await apiCall('/proactive/pending');
+                const count = (data.pending || []).length;
+                const badge = document.getElementById('nudgesBadge');
+                if (count > 0) {
+                    badge.textContent = count;
+                    badge.style.display = 'inline-block';
+                } else {
+                    badge.style.display = 'none';
+                }
+            } catch (e) {
+                // hide badge on error
+                const badge = document.getElementById('nudgesBadge');
+                badge.style.display = 'none';
+            }
+        }
+
+        // Tab navigation
+        function setupTabNavigation() {
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const tab = item.dataset.tab;
+                    switchTab(tab);
+
+                    // Update active nav item
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    item.classList.add('active');
+                });
+            });
+        }
+
+        function switchTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(tab => tab.classList.remove('active'));
+
+            // Show selected tab
+            const selectedTab = document.getElementById(tabName);
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+
+                // Load tab-specific content
+                switch (tabName) {
+                    case 'logs':
+                        if (!currentLogModule) loadModules();
+                        break;
+                    case 'config':
+                        if (!currentConfigModule) loadModules();
+                        break;
+                    case 'llm-behavior':
+                        loadLLMBehavior();
+                        break;
+                    case 'nudges':
+                        loadPendingNudges();
+                        break;
+                    case 'voice':
+                        loadVoiceSettings();
+                        break;
+                    case 'integrations':
+                        loadIntegrationSettings();
+                        break;
+                    case 'metrics':
+                        loadMetrics();
+                        break;
+                    case 'health':
+                        loadHealthChecks();
+                        break;
+                }
+            }
+        }
+
+        // API utility functions
+        async function apiCall(endpoint, options = {}) {
+            const defaultOptions = {
+                headers: {
+                    'X-API-Key': 'vega-default-key',
+                    'Content-Type': 'application/json'
+                }
+            };
+
+            const finalOptions = { ...defaultOptions, ...options };
+            if (finalOptions.headers) {
+                finalOptions.headers = { ...defaultOptions.headers, ...finalOptions.headers };
+            }
+
+            try {
+                const response = await fetch(endpoint, finalOptions);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                return await response.json();
+            } catch (error) {
+                console.error('API call failed:', error);
+                showAlert('API call failed: ' + error.message, 'error');
+                throw error;
+            }
+        }
+
+        // Load available modules
+        async function loadModules() {
+            try {
+                // Load log modules
+                const logData = await apiCall('/admin/logs');
+                const logSelect = document.getElementById('logModule');
+                logSelect.innerHTML = '<option value="">Select a module...</option>';
+                logData.modules.forEach(module => {
+                    const option = document.createElement('option');
+                    option.value = module;
+                    option.textContent = module;
+                    logSelect.appendChild(option);
+                });
+
+                // Load config modules
+                const configData = await apiCall('/admin/config');
+                const configSelect = document.getElementById('configModule');
+                configSelect.innerHTML = '<option value="">Select a module...</option>';
+                configData.modules.forEach(module => {
+                    const option = document.createElement('option');
+                    option.value = module;
+                    option.textContent = module;
+                    configSelect.appendChild(option);
+                });
+
+            } catch (error) {
+                console.error('Failed to load modules:', error);
+            }
+        }
+
+        // Log viewer functions
+        async function loadLogs() {
+            const module = document.getElementById('logModule').value;
+            const lines = document.getElementById('logLines').value;
+
+            if (!module) {
+                document.getElementById('logContent').textContent = 'Select a module to view logs...';
+                return;
+            }
+
+            currentLogModule = module;
+
+            try {
+                const data = await apiCall(`/admin/logs/${module}?lines=${lines}`);
+                const logContent = document.getElementById('logContent');
+                logContent.textContent = data.lines.join('');
+
+                // Auto-scroll to bottom
+                logContent.scrollTop = logContent.scrollHeight;
+
+            } catch (error) {
+                document.getElementById('logContent').textContent = 'Error loading logs: ' + error.message;
+            }
+        }
+
+        function autoRefreshLogs() {
+            if (autoRefreshInterval) {
+                clearInterval(autoRefreshInterval);
+                autoRefreshInterval = null;
+                showAlert('Auto-refresh disabled', 'warning');
+            } else {
+                autoRefreshInterval = setInterval(loadLogs, 5000);
+                showAlert('Auto-refresh enabled (5s interval)', 'success');
+            }
+        }
+
+        // Configuration editor functions
+        async function loadConfig() {
+            const module = document.getElementById('configModule').value;
+
+            if (!module) {
+                document.getElementById('configEditor').value = '';
+                document.getElementById('configStatus').innerHTML = '';
+                return;
+            }
+
+            currentConfigModule = module;
+
+            try {
+                const data = await apiCall(`/admin/config/${module}`);
+                document.getElementById('configEditor').value = JSON.stringify(data.config, null, 2);
+                showAlert(`Configuration loaded for ${module}`, 'success');
+
+            } catch (error) {
+                document.getElementById('configEditor').value = 'Error loading configuration: ' + error.message;
+                showAlert('Failed to load configuration: ' + error.message, 'error');
+            }
+        }
+
+        async function saveConfig() {
+            const module = document.getElementById('configModule').value;
+            const configText = document.getElementById('configEditor').value;
+
+            if (!module) {
+                showAlert('Please select a module first', 'warning');
+                return;
+            }
+
+            try {
+                const configData = JSON.parse(configText);
+
+                await apiCall(`/admin/config/${module}`, {
+                    method: 'PUT',
+                    body: JSON.stringify(configData)
+                });
+
+                showAlert(`Configuration saved for ${module}`, 'success');
+
+            } catch (error) {
+                showAlert('Failed to save configuration: ' + error.message, 'error');
+            }
+        }
+
+        async function validateConfig() {
+            const configText = document.getElementById('configEditor').value;
+
+            try {
+                JSON.parse(configText);
+                showAlert('Configuration is valid JSON', 'success');
+            } catch (error) {
+                showAlert('Invalid JSON: ' + error.message, 'error');
+            }
+        }
+
+        // Chat functions
+        async function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+
+            if (!message) return;
+
+            // Add user message to chat
+            addChatMessage('user', 'You', message);
+            input.value = '';
+
+            try {
+                const response = await apiCall('/chat', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        prompt: message,
+                        stream: false
+                    })
+                });
+
+                addChatMessage('assistant', 'Vega', response.response);
+
+            } catch (error) {
+                addChatMessage('assistant', 'System', 'Error: ' + error.message);
+            }
+        }
+
+        function handleChatKeypress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function addChatMessage(type, sender, message) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        // Proactive nudge functions
+        async function checkForNudge() {
+            try {
+                const res = await apiCall('/proactive/propose', {
+                    method: 'POST',
+                    body: JSON.stringify({ max_per_day: 5 })
+                });
+                if (res && res.id) {
+                    showAlert('New nudge proposed', 'success');
+                    loadPendingNudges();
+                    updateNudgesBadge();
+                } else {
+                    showAlert('No nudges at this time', 'warning');
+                }
+            } catch (e) {
+                // handled by apiCall
+            }
+        }
+
+        async function loadPendingNudges() {
+            const container = document.getElementById('pendingNudges');
+            container.innerHTML = '<div class="loading"><div class="spinner"></div> Loading nudges...</div>';
+            try {
+                const data = await apiCall('/proactive/pending');
+                const list = data.pending || [];
+                if (list.length === 0) {
+                    container.innerHTML = '<div class="alert alert-warning">No pending nudges.</div>';
+                    updateNudgesBadge();
+                    return;
+                }
+                container.innerHTML = '';
+                list.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                        <h3>${item.topic}</h3>
+                        <p><em>${item.reason}</em></p>
+                        <p>${item.message}</p>
+                        <div>
+                            <button class="btn btn-success" onclick="acceptNudge('${item.id}')">Accept</button>
+                            <button class="btn btn-warning" onclick="declineNudge('${item.id}')">Decline</button>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+                updateNudgesBadge();
+            } catch (e) {
+                container.innerHTML = '<div class="alert alert-error">Failed to load nudges</div>';
+                updateNudgesBadge();
+            }
+        }
+
+        async function acceptNudge(id) {
+            try {
+                const res = await apiCall(`/proactive/accept?proposed_id=${encodeURIComponent(id)}`, { method: 'POST' });
+                proactiveSessionId = res.session_id;
+                showAlert('Proactive session started', 'success');
+                document.getElementById('proactiveChatCard').style.display = 'block';
+                // Load session to get the starter assistant message
+                const sess = await apiCall(`/proactive/session/${proactiveSessionId}`);
+                const msgs = document.getElementById('proactiveMessages');
+                msgs.innerHTML = '';
+                (sess.messages || []).forEach(m => addProactiveMessage(m.role, m.text));
+                updateNudgesBadge();
+            } catch (e) {
+                // handled by apiCall
+            }
+        }
+
+        async function declineNudge(id) {
+            try {
+                await apiCall(`/proactive/decline?proposed_id=${encodeURIComponent(id)}`, { method: 'POST' });
+                showAlert('Nudge declined', 'warning');
+                loadPendingNudges();
+                updateNudgesBadge();
+            } catch (e) {
+                // handled by apiCall
+            }
+        }
+
+        function addProactiveMessage(role, text) {
+            const messagesContainer = document.getElementById('proactiveMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${role}`;
+            const sender = role === 'user' ? 'You' : 'Vega';
+            messageDiv.innerHTML = `<strong>${sender}:</strong> ${text}`;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        async function sendProactiveMessage() {
+            const input = document.getElementById('proactiveInput');
+            const message = input.value.trim();
+            if (!message || !proactiveSessionId) return;
+            addProactiveMessage('user', message);
+            input.value = '';
+            try {
+                const res = await apiCall('/proactive/send', {
+                    method: 'POST',
+                    body: JSON.stringify({ session_id: proactiveSessionId, text: message })
+                });
+                addProactiveMessage('assistant', res.reply);
+                if (res.ended) {
+                    showAlert('Session ended', 'success');
+                    proactiveSessionId = '';
+                    document.getElementById('proactiveChatCard').style.display = 'none';
+                }
+            } catch (e) {
+                addProactiveMessage('assistant', 'Error: ' + e.message);
+            }
+        }
+
+        function handleProactiveKeypress(event) {
+            if (event.key === 'Enter') {
+                sendProactiveMessage();
+            }
+        }
+
+        async function endProactiveSession() {
+            if (!proactiveSessionId) return;
+            try {
+                await apiCall(`/proactive/end?session_id=${encodeURIComponent(proactiveSessionId)}`, { method: 'POST' });
+                showAlert('Session ended', 'warning');
+                proactiveSessionId = '';
+                document.getElementById('proactiveChatCard').style.display = 'none';
+            } catch (e) {
+                // handled by apiCall
+            }
+        }
+
+        // System status functions
+        async function loadSystemStatus() {
+            try {
+                const data = await apiCall('/metrics');
+
+                // Update metrics
+                document.getElementById('cpuUsage').textContent = 'N/A';
+                document.getElementById('memoryUsage').textContent = 'N/A';
+                document.getElementById('diskUsage').textContent = 'N/A';
+                document.getElementById('requestCount').textContent = data.requests_total || 0;
+
+                // Update status details
+                const statusDiv = document.getElementById('statusDetails');
+                statusDiv.innerHTML = `
+                    <div class="alert alert-${data.degraded ? 'warning' : 'success'}">
+                        <span class="status-indicator status-${data.degraded ? 'warning' : 'online'}"></span>
+                        System Status: ${data.degraded ? 'Degraded' : 'Healthy'}
+                    </div>
+                    <p>Total Requests: ${data.requests_total}</p>
+                    <p>Total Responses: ${data.responses_total}</p>
+                    <p>Total Errors: ${data.errors_total}</p>
+                `;
+
+            } catch (error) {
+                console.error('Failed to load system status:', error);
+            }
+        }
+
+        // LLM Behavior functions
+        async function loadLLMBehavior() {
+            try {
+                const data = await apiCall('/admin/llm/behavior');
+                const form = createLLMBehaviorForm(data.behavior);
+                document.getElementById('llmBehaviorForm').innerHTML = form;
+            } catch (error) {
+                document.getElementById('llmBehaviorForm').innerHTML =
+                    '<div class="alert alert-error">Failed to load LLM behavior settings: ' + error.message + '</div>';
+            }
+        }
+
+        function createLLMBehaviorForm(behavior) {
+            return `
+                <div class="form-group">
+                    <label>Censorship Level</label>
+                    <select class="form-control" id="censorship_level">
+                        <option value="none" ${behavior.content_moderation?.censorship_level === 'none' ? 'selected' : ''}>None</option>
+                        <option value="light" ${behavior.content_moderation?.censorship_level === 'light' ? 'selected' : ''}>Light</option>
+                        <option value="moderate" ${behavior.content_moderation?.censorship_level === 'moderate' ? 'selected' : ''}>Moderate</option>
+                        <option value="strict" ${behavior.content_moderation?.censorship_level === 'strict' ? 'selected' : ''}>Strict</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Personality</label>
+                    <select class="form-control" id="personality">
+                        <option value="professional" ${behavior.response_style?.personality === 'professional' ? 'selected' : ''}>Professional</option>
+                        <option value="helpful" ${behavior.response_style?.personality === 'helpful' ? 'selected' : ''}>Helpful</option>
+                        <option value="casual" ${behavior.response_style?.personality === 'casual' ? 'selected' : ''}>Casual</option>
+                        <option value="creative" ${behavior.response_style?.personality === 'creative' ? 'selected' : ''}>Creative</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Temperature (${behavior.model_parameters?.temperature || 0.7})</label>
+                    <input type="range" class="form-control" id="temperature" min="0" max="2" step="0.1" value="${behavior.model_parameters?.temperature || 0.7}">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="saveLLMBehavior()">Save LLM Behavior</button>
+                    <button class="btn btn-warning" onclick="loadLLMBehavior()">Reset</button>
+                </div>
+            `;
+        }
+
+        async function saveLLMBehavior() {
+            try {
+                const updates = {
+                    censorship_level: document.getElementById('censorship_level').value,
+                    personality: document.getElementById('personality').value,
+                    temperature: parseFloat(document.getElementById('temperature').value)
+                };
+
+                await apiCall('/admin/llm/behavior', {
+                    method: 'PUT',
+                    body: JSON.stringify(updates)
+                });
+
+                showAlert('LLM behavior updated successfully', 'success');
+
+            } catch (error) {
+                showAlert('Failed to update LLM behavior: ' + error.message, 'error');
+            }
+        }
+
+        // Placeholder functions for other tabs
+        async function loadVoiceSettings() {
+            document.getElementById('voiceSettings').innerHTML =
+                '<div class="alert alert-warning">Voice settings coming soon...</div>';
+        }
+
+        async function loadIntegrationSettings() {
+            document.getElementById('integrationSettings').innerHTML =
+                '<div class="alert alert-warning">Integration settings coming soon...</div>';
+        }
+
+        async function loadMetrics() {
+            document.getElementById('metricsContent').innerHTML =
+                '<div class="alert alert-warning">Advanced metrics coming soon...</div>';
+        }
+
+        async function loadHealthChecks() {
+            try {
+                const data = await apiCall('/healthz');
+                document.getElementById('healthContent').innerHTML = `
+                    <div class="alert alert-success">
+                        <span class="status-indicator status-online"></span>
+                        System is healthy
+                    </div>
+                    <pre>${JSON.stringify(data, null, 2)}</pre>
+                `;
+            } catch (error) {
+                document.getElementById('healthContent').innerHTML = `
+                    <div class="alert alert-error">
+                        <span class="status-indicator status-offline"></span>
+                        Health check failed: ${error.message}
+                    </div>
+                `;
+            }
+        }
+
+        // Utility functions
+        function showAlert(message, type = 'success') {
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type}`;
+            alertDiv.textContent = message;
+
+            // Find a good place to show the alert
+            const statusDiv = document.getElementById('configStatus') ||
+                document.querySelector('.tab-content.active .card');
+
+            if (statusDiv) {
+                statusDiv.appendChild(alertDiv);
+
+                // Remove alert after 5 seconds
+                setTimeout(() => {
+                    if (alertDiv.parentNode) {
+                        alertDiv.parentNode.removeChild(alertDiv);
+                    }
+                }, 5000);
+            }
+        }
+
+        // Refresh system status every 30 seconds
+        setInterval(loadSystemStatus, 30000);
+    </script>
+</body>
+
+</html>

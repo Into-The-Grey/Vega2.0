@@ -1,0 +1,46 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8080,
+    "workers": 1,
+    "reload": false
+  },
+  "security": {
+    "jwt_secret": "HufkKrd0OfDE1fJyt2yCrZ8GTpU4tqySPJcds6SRV80",
+    "jwt_expiry_hours": 24,
+    "require_auth": true,
+    "cors_origins": [
+      "http://localhost:3000",
+      "http://127.0.0.1:3000"
+    ],
+    "rate_limit_requests": 100,
+    "rate_limit_window": 60
+  },
+  "monitoring": {
+    "update_interval_seconds": 5,
+    "metrics_retention_days": 30,
+    "alert_threshold_cpu": 80.0,
+    "alert_threshold_memory": 85.0,
+    "alert_threshold_disk": 90.0
+  },
+  "modules": {
+    "auto_start": [
+      "system_probe",
+      "system_watchdog",
+      "net_guard"
+    ],
+    "health_check_interval": 30,
+    "restart_failed_modules": true,
+    "max_restart_attempts": 3
+  },
+  "websocket": {
+    "ping_interval": 30,
+    "ping_timeout": 10,
+    "max_connections": 100
+  },
+  "logging": {
+    "level": "INFO",
+    "max_file_size": "10MB",
+    "backup_count": 5
+  }
+}
