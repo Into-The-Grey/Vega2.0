@@ -423,5 +423,274 @@ def init_user_database(db_path: Optional[str] = None) -> UserProfileDatabase:
     return UserProfileDatabase(db_path)
 
 
+def create_tables(db_path: Optional[str] = None) -> bool:
+    """Create all database tables"""
+    try:
+        db = UserProfileDatabase(db_path)
+        db.create_tables()
+        print(f"Database tables created successfully at {db.db_path}")
+        return True
+    except Exception as e:
+        print(f"Error creating database tables: {e}")
+        return False
+
+
+def migrate_database(db_path: Optional[str] = None) -> bool:
+    """Perform database migrations and schema updates"""
+    try:
+        db = UserProfileDatabase(db_path)
+        session = db.get_session()
+
+        # Check for missing columns and add them
+        migrations_applied = []
+
+        try:
+            # Check if feedback columns exist in Calendar table
+            session.execute("SELECT stress_level FROM calendar LIMIT 1")
+        except Exception:
+            # Add stress_level column if missing
+            try:
+                session.execute("ALTER TABLE calendar ADD COLUMN stress_level REAL")
+                migrations_applied.append("Added stress_level column to calendar table")
+            except Exception as e:
+                print(f"Could not add stress_level column: {e}")
+
+        try:
+            # Check if external_id exists in Calendar table
+            session.execute("SELECT external_id FROM calendar LIMIT 1")
+        except Exception:
+            # Add external_id column if missing
+            try:
+                session.execute("ALTER TABLE calendar ADD COLUMN external_id TEXT")
+                migrations_applied.append("Added external_id column to calendar table")
+            except Exception as e:
+                print(f"Could not add external_id column: {e}")
+
+        try:
+            # Check if recurrence_pattern exists in Calendar table
+            session.execute("SELECT recurrence_pattern FROM calendar LIMIT 1")
+        except Exception:
+            # Add recurrence_pattern column if missing
+            try:
+                session.execute(
+                    "ALTER TABLE calendar ADD COLUMN recurrence_pattern TEXT"
+                )
+                migrations_applied.append(
+                    "Added recurrence_pattern column to calendar table"
+                )
+            except Exception as e:
+                print(f"Could not add recurrence_pattern column: {e}")
+
+        # Add indexes for better performance
+        try:
+            session.execute(
+                "CREATE INDEX IF NOT EXISTS idx_calendar_start_time ON calendar(start_time)"
+            )
+            session.execute(
+                "CREATE INDEX IF NOT EXISTS idx_calendar_is_active ON calendar(is_active)"
+            )
+            session.execute(
+                "CREATE INDEX IF NOT EXISTS idx_financial_created_at ON financial_status(created_at)"
+            )
+            session.execute(
+                "CREATE INDEX IF NOT EXISTS idx_search_history_created_at ON search_history(created_at)"
+            )
+            migrations_applied.append("Added performance indexes")
+        except Exception as e:
+            print(f"Could not add indexes: {e}")
+
+        session.commit()
+
+        if migrations_applied:
+            print("Database migrations applied:")
+            for migration in migrations_applied:
+                print(f"  - {migration}")
+        else:
+            print("No migrations needed - database is up to date")
+
+        return True
+
+    except Exception as e:
+        print(f"Error during database migration: {e}")
+        return False
+    finally:
+        session.close()
+
+
+def vacuum_database(db_path: Optional[str] = None) -> bool:
+    """Vacuum database to reclaim space and optimize performance"""
+    try:
+        db = UserProfileDatabase(db_path)
+        session = db.get_session()
+
+        # Run VACUUM to reclaim space
+        session.execute("VACUUM")
+
+        # Update statistics
+        session.execute("ANALYZE")
+
+        print(f"Database optimized successfully at {db.db_path}")
+        return True
+
+    except Exception as e:
+        print(f"Error optimizing database: {e}")
+        return False
+    finally:
+        session.close()
+
+
+def backup_database(
+    db_path: Optional[str] = None, backup_path: Optional[str] = None
+) -> bool:
+    """Create a backup of the database"""
+    try:
+        import shutil
+        from datetime import datetime
+
+        db = UserProfileDatabase(db_path)
+
+        if backup_path is None:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            backup_path = f"{db.db_path}.backup.{timestamp}"
+
+        shutil.copy2(db.db_path, backup_path)
+        print(f"Database backed up to {backup_path}")
+        return True
+
+    except Exception as e:
+        print(f"Error backing up database: {e}")
+        return False
+
+
+def get_database_stats(db_path: Optional[str] = None) -> Dict[str, Any]:
+    """Get database statistics and health information"""
+    try:
+        db = UserProfileDatabase(db_path)
+        session = db.get_session()
+
+        stats = {
+            "database_path": db.db_path,
+            "table_counts": {},
+            "database_size_mb": 0,
+            "last_updated": datetime.now().isoformat(),
+        }
+
+        # Get table counts
+        table_names = [
+            "identity_core",
+            "contact_info",
+            "medical_profile",
+            "financial_status",
+            "education_profile",
+            "calendar",
+            "search_history",
+            "web_presence",
+            "interests_hobbies",
+            "social_circle",
+        ]
+
+        for table_name in table_names:
+            try:
+                result = session.execute(f"SELECT COUNT(*) FROM {table_name}")
+                count = result.scalar()
+                stats["table_counts"][table_name] = count
+            except Exception as e:
+                stats["table_counts"][table_name] = f"Error: {e}"
+
+        # Get database file size
+        try:
+            import os
+
+            if os.path.exists(db.db_path):
+                size_bytes = os.path.getsize(db.db_path)
+                stats["database_size_mb"] = round(size_bytes / (1024 * 1024), 2)
+        except Exception:
+            stats["database_size_mb"] = "Unknown"
+
+        return stats
+
+    except Exception as e:
+        return {"error": f"Could not get database stats: {e}"}
+    finally:
+        session.close()
+
+
+def cleanup_old_data(db_path: Optional[str] = None, days_to_keep: int = 365) -> bool:
+    """Clean up old data based on retention policy"""
+    try:
+        from datetime import datetime, timedelta
+
+        db = UserProfileDatabase(db_path)
+        session = db.get_session()
+
+        cutoff_date = datetime.now() - timedelta(days=days_to_keep)
+
+        # Clean up old search history
+        old_searches = (
+            session.query(SearchHistory)
+            .filter(SearchHistory.created_at < cutoff_date)
+            .delete()
+        )
+
+        # Clean up old financial records (keep recent ones)
+        old_financial = (
+            session.query(FinancialStatus)
+            .filter(FinancialStatus.created_at < cutoff_date)
+            .delete()
+        )
+
+        session.commit()
+
+        print(
+            f"Cleaned up {old_searches} old search records and {old_financial} old financial records"
+        )
+        return True
+
+    except Exception as e:
+        print(f"Error cleaning up old data: {e}")
+        return False
+    finally:
+        session.close()
+
+
 if __name__ == "__main__":
-    pass  # Placeholder for future main execution logic
+    """Database management CLI"""
+    import sys
+
+    if len(sys.argv) < 2:
+        print("Usage: python user_profile_schema.py <command> [db_path]")
+        print("Commands:")
+        print("  create     - Create database tables")
+        print("  migrate    - Run database migrations")
+        print("  vacuum     - Optimize database")
+        print("  backup     - Create database backup")
+        print("  stats      - Show database statistics")
+        print("  cleanup    - Clean up old data (365 days retention)")
+        sys.exit(1)
+
+    command = sys.argv[1]
+    db_path = sys.argv[2] if len(sys.argv) > 2 else None
+
+    if command == "create":
+        create_tables(db_path)
+    elif command == "migrate":
+        migrate_database(db_path)
+    elif command == "vacuum":
+        vacuum_database(db_path)
+    elif command == "backup":
+        backup_database(db_path)
+    elif command == "stats":
+        stats = get_database_stats(db_path)
+        print("Database Statistics:")
+        for key, value in stats.items():
+            if key == "table_counts":
+                print(f"  {key}:")
+                for table, count in value.items():
+                    print(f"    {table}: {count}")
+            else:
+                print(f"  {key}: {value}")
+    elif command == "cleanup":
+        cleanup_old_data(db_path)
+    else:
+        print(f"Unknown command: {command}")
+        sys.exit(1)

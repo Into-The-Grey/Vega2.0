@@ -219,7 +219,7 @@ async def enhanced_chat(
             cid = None
 
         # Calculate understanding score
-        understanding_score = 0.75  # Placeholder
+        understanding_score = 0.5  # Default fallback
         if contextual_intelligence:
             try:
                 score = (
@@ -228,6 +228,14 @@ async def enhanced_chat(
                 understanding_score = score.overall_score
             except Exception as e:
                 logger.warning(f"Failed to calculate understanding score: {e}")
+                # Fallback calculation based on available data
+                try:
+                    # Simple calculation based on conversation history length
+                    if VEGA_CORE_AVAILABLE:
+                        history_count = len(get_session_history(sid, limit=50))
+                        understanding_score = min(0.9, 0.3 + (history_count * 0.02))
+                except Exception:
+                    understanding_score = 0.5
 
         # Generate suggestions
         suggestions = []

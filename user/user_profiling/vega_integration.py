@@ -599,9 +599,15 @@ class UserProfileManager:
             # These are protected methods; ideally, use public methods if available.
             # If not, this is intentional and safe for internal use.
             if scan_type == "full":
-                await self.daemon._run_full_scan()  # noqa: SLF001
+                if hasattr(self.daemon, "run_full_scan"):
+                    await self.daemon.run_full_scan()
+                else:
+                    await self.daemon._run_full_scan()  # Internal use
             else:
-                await self.daemon._run_mini_scan()  # noqa: SLF001
+                if hasattr(self.daemon, "run_mini_scan"):
+                    await self.daemon.run_mini_scan()
+                else:
+                    await self.daemon._run_mini_scan()  # Internal use
             return {
                 "status": "success",
                 "scan_type": scan_type,
@@ -644,7 +650,7 @@ class UserProfileManager:
 # FastAPI Integration Functions
 async def startup_user_profiling():
     """Initialize user profiling on app startup"""
-    global user_profile_daemon
+    user_profile_daemon = None
 
     try:
         # Initialize database

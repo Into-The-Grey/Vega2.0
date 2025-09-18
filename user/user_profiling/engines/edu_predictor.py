@@ -29,17 +29,19 @@ logger = logging.getLogger(__name__)
 
 
 @dataclass
+
 class EducationConfig:
     """Configuration for educational reasoning"""
 
-    syllabus_directory: str = "input_data/education"
-    auto_resource_harvesting: bool = True
-    deadline_prediction_days: int = 14
-    concept_mapping: bool = True
-    performance_tracking: bool = True
-    study_optimization: bool = True
-    exam_stress_monitoring: bool = True
-    academic_calendar_sync: bool = True
+    def __init__(self):
+        self.syllabus_directory = os.getenv("EDU_SYLLABUS_DIRECTORY", "input_data/education")
+        self.auto_resource_harvesting = os.getenv("EDU_AUTO_RESOURCE_HARVESTING", "True").lower() in ("true", "1", "yes")
+        self.deadline_prediction_days = int(os.getenv("EDU_DEADLINE_PREDICTION_DAYS", "14"))
+        self.concept_mapping = os.getenv("EDU_CONCEPT_MAPPING", "True").lower() in ("true", "1", "yes")
+        self.performance_tracking = os.getenv("EDU_PERFORMANCE_TRACKING", "True").lower() in ("true", "1", "yes")
+        self.study_optimization = os.getenv("EDU_STUDY_OPTIMIZATION", "True").lower() in ("true", "1", "yes")
+        self.exam_stress_monitoring = os.getenv("EDU_EXAM_STRESS_MONITORING", "True").lower() in ("true", "1", "yes")
+        self.academic_calendar_sync = os.getenv("EDU_ACADEMIC_CALENDAR_SYNC", "True").lower() in ("true", "1", "yes")
 
 
 @dataclass
@@ -690,10 +692,22 @@ class PerformancePredictor:
             "time_management": 0.05,
         }
 
+        # Enhanced prediction factors
+        self.advanced_factors = {
+            "sleep_quality": 0.1,
+            "stress_level": 0.15,
+            "study_consistency": 0.2,
+            "peer_collaboration": 0.05,
+            "resource_utilization": 0.1,
+            "deadline_proximity": 0.2,
+            "cognitive_load": 0.15,
+            "previous_semester_gpa": 0.05,
+        }
+
     def predict_exam_performance(
         self, course: Course, upcoming_exam: Dict, historical_performance: List[Dict]
     ) -> Dict[str, Any]:
-        """Predict performance on upcoming exam"""
+        """Predict performance on upcoming exam using advanced analytics"""
         prediction = {
             "expected_score": 0.0,
             "confidence": 0.0,
@@ -701,42 +715,360 @@ class PerformancePredictor:
             "recommendations": [],
             "study_time_needed": 0,
             "weak_areas": [],
+            "stress_indicators": [],
+            "optimal_study_schedule": [],
+            "prerequisite_gaps": [],
         }
 
         if not historical_performance:
             prediction["confidence"] = 0.1
             prediction["expected_score"] = 0.75  # Assume average
+            prediction["recommendations"].append(
+                "No historical data available - establish baseline performance"
+            )
             return prediction
 
-        # Calculate average historical performance
-        avg_score = sum(p.get("score", 0) for p in historical_performance) / len(
-            historical_performance
+        # Advanced performance analysis
+        base_score = self._calculate_base_performance(historical_performance)
+
+        # Factor in exam-specific elements
+        exam_difficulty = self._estimate_exam_difficulty(
+            upcoming_exam.get("topics", [])
+        )
+        time_pressure = self._calculate_deadline_pressure(upcoming_exam)
+        concept_readiness = self._assess_concept_readiness(course, upcoming_exam)
+
+        # Apply advanced prediction model
+        predicted_score = self._apply_prediction_model(
+            base_score, exam_difficulty, time_pressure, concept_readiness, upcoming_exam
         )
 
-        # Adjust based on exam difficulty (estimated from topics)
-        exam_topics = upcoming_exam.get("topics", [])
-        difficulty_adjustment = self._estimate_exam_difficulty(exam_topics)
-
-        predicted_score = avg_score * (1 - difficulty_adjustment * 0.2)
-
         prediction["expected_score"] = max(0.0, min(1.0, predicted_score))
-        prediction["confidence"] = min(0.8, len(historical_performance) * 0.2)
+        prediction["confidence"] = self._calculate_prediction_confidence(
+            historical_performance, upcoming_exam
+        )
 
-        # Determine risk level
-        if predicted_score < 0.6:
-            prediction["risk_level"] = "high"
-            prediction["recommendations"].append("Increase study time significantly")
-            prediction["recommendations"].append("Focus on fundamental concepts")
-            prediction["study_time_needed"] = 20
-        elif predicted_score < 0.75:
-            prediction["risk_level"] = "medium"
-            prediction["recommendations"].append("Review key concepts")
-            prediction["study_time_needed"] = 10
-        else:
-            prediction["risk_level"] = "low"
-            prediction["study_time_needed"] = 5
+        # Advanced risk assessment
+        prediction["risk_level"] = self._assess_risk_level(
+            predicted_score, time_pressure, concept_readiness
+        )
+
+        # Generate targeted recommendations
+        prediction["recommendations"] = self._generate_targeted_recommendations(
+            predicted_score, exam_difficulty, time_pressure, concept_readiness
+        )
+
+        # Calculate optimal study schedule
+        prediction["optimal_study_schedule"] = self._generate_study_schedule(
+            upcoming_exam, predicted_score, concept_readiness
+        )
+
+        # Identify stress indicators
+        prediction["stress_indicators"] = self._identify_stress_indicators(
+            time_pressure, exam_difficulty, predicted_score
+        )
 
         return prediction
+
+    def _calculate_base_performance(self, historical_performance: List[Dict]) -> float:
+        """Calculate weighted base performance from historical data"""
+        if not historical_performance:
+            return 0.75
+
+        # Weight recent performance more heavily
+        weighted_scores = []
+        total_weight = 0
+
+        for i, performance in enumerate(reversed(historical_performance)):
+            weight = 1.0 + (i * 0.2)  # More recent gets higher weight
+            score = performance.get("score", 0.75)
+            weighted_scores.append(score * weight)
+            total_weight += weight
+
+        return sum(weighted_scores) / total_weight if total_weight > 0 else 0.75
+
+    def _calculate_deadline_pressure(self, upcoming_exam: Dict) -> float:
+        """Calculate pressure based on time until exam"""
+        exam_date_str = upcoming_exam.get("date")
+        if not exam_date_str:
+            return 0.5
+
+        try:
+            exam_date = datetime.fromisoformat(exam_date_str)
+            days_until = (exam_date - datetime.now()).days
+
+            if days_until < 0:
+                return 1.0  # Past due
+            elif days_until < 3:
+                return 0.9  # High pressure
+            elif days_until < 7:
+                return 0.7  # Medium pressure
+            elif days_until < 14:
+                return 0.4  # Low pressure
+            else:
+                return 0.2  # Very low pressure
+        except:
+            return 0.5
+
+    def _assess_concept_readiness(self, course: Course, upcoming_exam: Dict) -> float:
+        """Assess readiness for exam concepts"""
+        exam_topics = upcoming_exam.get("topics", [])
+        course_topics = course.topics or []
+
+        if not exam_topics:
+            return 0.6  # Neutral if no topics specified
+
+        # Calculate coverage of exam topics in course materials
+        covered_topics = 0
+        for exam_topic in exam_topics:
+            for course_topic in course_topics:
+                if exam_topic.lower() in course_topic.lower():
+                    covered_topics += 1
+                    break
+
+        coverage_ratio = covered_topics / len(exam_topics) if exam_topics else 0
+
+        # Factor in assignment completion related to exam topics
+        related_assignments = 0
+        completed_assignments = 0
+
+        for assignment in course.assignments or []:
+            assignment_topics = assignment.get("topics", [])
+            if any(topic in exam_topics for topic in assignment_topics):
+                related_assignments += 1
+                if assignment.get("completed", False):
+                    completed_assignments += 1
+
+        assignment_factor = (
+            (completed_assignments / related_assignments)
+            if related_assignments > 0
+            else 0.7
+        )
+
+        return coverage_ratio * 0.6 + assignment_factor * 0.4
+
+    def _apply_prediction_model(
+        self,
+        base_score: float,
+        exam_difficulty: float,
+        time_pressure: float,
+        concept_readiness: float,
+        exam: Dict,
+    ) -> float:
+        """Apply advanced prediction model"""
+
+        # Base prediction from historical performance
+        prediction = base_score
+
+        # Adjust for exam difficulty
+        prediction *= 1.0 - exam_difficulty * 0.3
+
+        # Adjust for time pressure (both positive and negative effects)
+        if time_pressure > 0.8:
+            prediction *= 0.8  # High pressure reduces performance
+        elif time_pressure < 0.3:
+            prediction *= 0.9  # Too little pressure also reduces performance
+
+        # Adjust for concept readiness
+        prediction *= 0.7 + concept_readiness * 0.3
+
+        # Factor in exam weight/importance
+        exam_weight = exam.get("weight", 0.2)
+        stress_multiplier = 1.0 - (exam_weight * 0.1)  # High-weight exams add stress
+        prediction *= stress_multiplier
+
+        return prediction
+
+    def _calculate_prediction_confidence(
+        self, historical_performance: List[Dict], exam: Dict
+    ) -> float:
+        """Calculate confidence level for prediction"""
+        base_confidence = min(0.9, len(historical_performance) * 0.15)
+
+        # Reduce confidence for high-stakes exams
+        exam_weight = exam.get("weight", 0.2)
+        weight_factor = 1.0 - (exam_weight * 0.3)
+
+        # Reduce confidence if performance is highly variable
+        if len(historical_performance) > 1:
+            scores = [p.get("score", 0.75) for p in historical_performance]
+            variance = sum((s - sum(scores) / len(scores)) ** 2 for s in scores) / len(
+                scores
+            )
+            variance_factor = 1.0 - min(0.3, variance)
+        else:
+            variance_factor = 0.7
+
+        return base_confidence * weight_factor * variance_factor
+
+    def _assess_risk_level(
+        self, predicted_score: float, time_pressure: float, concept_readiness: float
+    ) -> str:
+        """Assess risk level using multiple factors"""
+        risk_score = 0
+
+        # Score factors
+        if predicted_score < 0.6:
+            risk_score += 3
+        elif predicted_score < 0.75:
+            risk_score += 1
+
+        if time_pressure > 0.8:
+            risk_score += 2
+        elif time_pressure > 0.6:
+            risk_score += 1
+
+        if concept_readiness < 0.4:
+            risk_score += 2
+        elif concept_readiness < 0.6:
+            risk_score += 1
+
+        if risk_score >= 4:
+            return "critical"
+        elif risk_score >= 2:
+            return "high"
+        elif risk_score >= 1:
+            return "medium"
+        else:
+            return "low"
+
+    def _generate_targeted_recommendations(
+        self,
+        predicted_score: float,
+        exam_difficulty: float,
+        time_pressure: float,
+        concept_readiness: float,
+    ) -> List[str]:
+        """Generate targeted study recommendations"""
+        recommendations = []
+
+        if predicted_score < 0.6:
+            recommendations.append(
+                "Critical: Schedule intensive review sessions immediately"
+            )
+            recommendations.append(
+                "Focus on fundamental concepts before advanced topics"
+            )
+            recommendations.append("Consider forming study groups or seeking tutoring")
+        elif predicted_score < 0.75:
+            recommendations.append("Schedule additional study time for weak areas")
+            recommendations.append("Practice with past exams or sample questions")
+
+        if exam_difficulty > 0.7:
+            recommendations.append(
+                "Break down complex topics into smaller, manageable parts"
+            )
+            recommendations.append(
+                "Use active learning techniques (teach-back, problem-solving)"
+            )
+
+        if time_pressure > 0.8:
+            recommendations.append("Create a detailed daily study schedule")
+            recommendations.append("Prioritize high-impact topics first")
+            recommendations.append("Consider stress management techniques")
+        elif time_pressure < 0.3:
+            recommendations.append("Start studying now to avoid last-minute cramming")
+            recommendations.append("Spread study sessions over multiple days")
+
+        if concept_readiness < 0.5:
+            recommendations.append("Review prerequisite concepts first")
+            recommendations.append("Complete practice problems for each topic")
+            recommendations.append("Create concept maps to visualize relationships")
+
+        return recommendations
+
+    def _generate_study_schedule(
+        self, exam: Dict, predicted_score: float, concept_readiness: float
+    ) -> List[Dict]:
+        """Generate optimal study schedule"""
+        schedule = []
+
+        exam_date_str = exam.get("date")
+        if not exam_date_str:
+            return schedule
+
+        try:
+            exam_date = datetime.fromisoformat(exam_date_str)
+            days_until = (exam_date - datetime.now()).days
+
+            if days_until <= 0:
+                return schedule
+
+            # Calculate total study hours needed
+            base_hours = 10  # Base study time
+            if predicted_score < 0.6:
+                base_hours = 20
+            elif predicted_score < 0.75:
+                base_hours = 15
+
+            if concept_readiness < 0.5:
+                base_hours += 5
+
+            # Distribute hours across available days
+            daily_hours = min(4, base_hours / max(1, days_until))
+
+            for day in range(days_until):
+                study_date = datetime.now() + timedelta(days=day)
+
+                # Vary focus based on timeline
+                if day < days_until * 0.5:
+                    focus = "concept_building"
+                    activities = [
+                        "Review fundamentals",
+                        "Read course materials",
+                        "Complete practice problems",
+                    ]
+                elif day < days_until * 0.8:
+                    focus = "application"
+                    activities = [
+                        "Solve complex problems",
+                        "Practice exams",
+                        "Group study",
+                    ]
+                else:
+                    focus = "review"
+                    activities = [
+                        "Final review",
+                        "Memorize key formulas",
+                        "Light practice",
+                    ]
+
+                schedule.append(
+                    {
+                        "date": study_date.strftime("%Y-%m-%d"),
+                        "hours": daily_hours,
+                        "focus": focus,
+                        "activities": activities,
+                    }
+                )
+
+        except Exception as e:
+            logger.error(f"Error generating study schedule: {e}")
+
+        return schedule
+
+    def _identify_stress_indicators(
+        self, time_pressure: float, exam_difficulty: float, predicted_score: float
+    ) -> List[str]:
+        """Identify potential stress indicators"""
+        indicators = []
+
+        if time_pressure > 0.8:
+            indicators.append("High time pressure detected")
+            indicators.append("Risk of cramming and poor retention")
+
+        if exam_difficulty > 0.7:
+            indicators.append("Complex exam material may cause anxiety")
+
+        if predicted_score < 0.6:
+            indicators.append("Low predicted performance may increase stress")
+            indicators.append("Consider stress management and self-care practices")
+
+        combined_risk = (time_pressure + exam_difficulty + (1 - predicted_score)) / 3
+        if combined_risk > 0.7:
+            indicators.append("Multiple risk factors present - seek support if needed")
+
+        return indicators
 
     def _estimate_exam_difficulty(self, topics: List[str]) -> float:
         """Estimate exam difficulty based on topics"""

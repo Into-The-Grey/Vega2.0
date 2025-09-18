@@ -21,7 +21,7 @@ from collections import defaultdict
 import pandas as pd
 import numpy as np
 
-from database.user_profile_schema import UserProfileDatabase, FinancialStatus
+from ..database.user_profile_schema import UserProfileDatabase, FinancialStatus
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -40,6 +40,31 @@ class FinancialConfig:
     stress_threshold: float = 0.8  # Spending threshold for stress calculation
     enable_plaid_integration: bool = False  # Requires API keys
     alert_on_unusual_spending: bool = True
+
+    def __post_init__(self):
+        # Load Plaid configuration from environment variables
+        plaid_client_id = os.getenv("PLAID_CLIENT_ID")
+        plaid_secret = os.getenv("PLAID_SECRET")
+
+        # Enable Plaid integration if credentials are available
+        if plaid_client_id and plaid_secret:
+            self.enable_plaid_integration = True
+
+        # Load other environment-based configurations
+        csv_dir = os.getenv("FINANCIAL_CSV_DIRECTORY")
+        if csv_dir:
+            self.csv_directory = csv_dir
+
+        privacy_mode = os.getenv("FINANCIAL_PRIVACY_MODE")
+        if privacy_mode:
+            self.privacy_mode = privacy_mode.lower() in ("true", "1", "yes")
+
+        trend_days = os.getenv("FINANCIAL_TREND_ANALYSIS_DAYS")
+        if trend_days:
+            try:
+                self.trend_analysis_days = int(trend_days)
+            except ValueError:
+                pass
 
 
 @dataclass
@@ -675,6 +700,175 @@ class CSVParser:
         return float(amount_str)
 
 
+class PlaidIntegration:
+    """Plaid API integration for real-time bank account data"""
+
+    def __init__(self, config: FinancialConfig):
+        self.config = config
+        self.client_id = os.getenv("PLAID_CLIENT_ID", "")
+        self.secret = os.getenv("PLAID_SECRET", "")
+        self.environment = os.getenv(
+            "PLAID_ENVIRONMENT", "sandbox"
+        )  # sandbox, development, production
+        self.access_tokens = []  # Store user access tokens
+
+    def initialize_client(self):
+        """Initialize Plaid client"""
+        try:
+            from plaid.api import plaid_api
+            from plaid.model.transactions_get_request import TransactionsGetRequest
+            from plaid.model.accounts_get_request import AccountsGetRequest
+            from plaid.configuration import Configuration
+            from plaid.api_client import ApiClient
+
+            # Map environment strings to Plaid configuration
+            env_map = {
+                "sandbox": Configuration.environment.sandbox,
+                "development": Configuration.environment.development,
+                "production": Configuration.environment.production,
+            }
+
+            configuration = Configuration(
+                host=env_map.get(self.environment, Configuration.environment.sandbox),
+                api_key={"clientId": self.client_id, "secret": self.secret},
+            )
+
+            api_client = ApiClient(configuration)
+            self.client = plaid_api.PlaidApi(api_client)
+            return True
+
+        except ImportError:
+            logger.error(
+                "Plaid SDK not available. Install with: pip install plaid-python"
+            )
+            return False
+        except Exception as e:
+            logger.error(f"Failed to initialize Plaid client: {e}")
+            return False
+
+    def fetch_transactions(
+        self, access_token: str, start_date: datetime = None, end_date: datetime = None
+    ) -> List[Transaction]:
+        """Fetch transactions from Plaid API"""
+        if not hasattr(self, "client"):
+            if not self.initialize_client():
+                return []
+
+        if start_date is None:
+            start_date = datetime.now() - timedelta(days=30)
+        if end_date is None:
+            end_date = datetime.now()
+
+        try:
+            from plaid.model.transactions_get_request import TransactionsGetRequest
+            from datetime import date
+
+            request = TransactionsGetRequest(
+                access_token=access_token,
+                start_date=start_date.date(),
+                end_date=end_date.date(),
+            )
+
+            response = self.client.transactions_get(request)
+            transactions = []
+
+            for plaid_transaction in response["transactions"]:
+                # Convert Plaid transaction to our Transaction format
+                transaction = Transaction(
+                    id=plaid_transaction["transaction_id"],
+                    date=datetime.strptime(plaid_transaction["date"], "%Y-%m-%d"),
+                    description=plaid_transaction["name"],
+                    amount=plaid_transaction[
+                        "amount"
+                    ],  # Plaid amounts are positive for outflows
+                    category=(
+                        plaid_transaction.get("category", [""])[0]
+                        if plaid_transaction.get("category")
+                        else ""
+                    ),
+                    subcategory=(
+                        plaid_transaction.get("category", ["", ""])[1]
+                        if len(plaid_transaction.get("category", [])) > 1
+                        else ""
+                    ),
+                    account=plaid_transaction["account_id"],
+                    transaction_type=(
+                        "debit" if plaid_transaction["amount"] > 0 else "credit"
+                    ),
+                    merchant=plaid_transaction.get("merchant_name", ""),
+                    confidence_score=1.0,  # Plaid data is authoritative
+                )
+
+                transactions.append(transaction)
+
+            logger.info(f"Fetched {len(transactions)} transactions from Plaid")
+            return transactions
+
+        except Exception as e:
+            logger.error(f"Error fetching Plaid transactions: {e}")
+            return []
+
+    def fetch_accounts(self, access_token: str) -> List[Dict[str, Any]]:
+        """Fetch account information from Plaid"""
+        if not hasattr(self, "client"):
+            if not self.initialize_client():
+                return []
+
+        try:
+            from plaid.model.accounts_get_request import AccountsGetRequest
+
+            request = AccountsGetRequest(access_token=access_token)
+            response = self.client.accounts_get(request)
+
+            accounts = []
+            for account in response["accounts"]:
+                account_info = {
+                    "account_id": account["account_id"],
+                    "name": account["name"],
+                    "type": account["type"],
+                    "subtype": account["subtype"],
+                    "balance": account["balances"]["current"],
+                    "available_balance": account["balances"].get("available"),
+                    "currency": account["balances"].get("iso_currency_code", "USD"),
+                }
+                accounts.append(account_info)
+
+            return accounts
+
+        except Exception as e:
+            logger.error(f"Error fetching Plaid accounts: {e}")
+            return []
+
+    def create_link_token(self, user_id: str) -> str:
+        """Create a link token for Plaid Link initialization"""
+        if not hasattr(self, "client"):
+            if not self.initialize_client():
+                return ""
+
+        try:
+            from plaid.model.link_token_create_request import LinkTokenCreateRequest
+            from plaid.model.link_token_create_request_user import (
+                LinkTokenCreateRequestUser,
+            )
+            from plaid.model.country_code import CountryCode
+            from plaid.model.products import Products
+
+            request = LinkTokenCreateRequest(
+                products=[Products("transactions")],
+                client_name="Vega2.0 Financial Monitor",
+                country_codes=[CountryCode("US")],
+                language="en",
+                user=LinkTokenCreateRequestUser(client_user_id=user_id),
+            )
+
+            response = self.client.link_token_create(request)
+            return response["link_token"]
+
+        except Exception as e:
+            logger.error(f"Error creating Plaid link token: {e}")
+            return ""
+
+
 class FinanceMonitor:
     """Main financial monitoring engine"""
 
@@ -684,6 +878,11 @@ class FinanceMonitor:
         self.categorizer = ExpenseCategorizer()
         self.analyzer = FinancialAnalyzer(self.config)
         self.csv_parser = CSVParser()
+
+        # Initialize Plaid integration if enabled
+        self.plaid_integration = None
+        if self.config.enable_plaid_integration:
+            self.plaid_integration = PlaidIntegration(self.config)
 
     async def process_csv_files(self, directory: str = None) -> Dict[str, Any]:
         """Process all CSV files in directory"""
@@ -728,6 +927,86 @@ class FinanceMonitor:
 
             except Exception as e:
                 error_msg = f"Error processing {csv_file}: {e}"
+                results["errors"].append(error_msg)
+                logger.error(error_msg)
+
+        results["total_transactions"] = len(all_transactions)
+        results["categorized_transactions"] = sum(
+            1 for t in all_transactions if t.category != "other"
+        )
+
+        # Store transactions
+        if all_transactions:
+            await self._store_transactions(all_transactions)
+
+        # Run analysis
+        if all_transactions:
+            results["analysis"] = self.analyzer.analyze_spending_patterns(
+                all_transactions
+            )
+            results["budget_predictions"] = self.analyzer.predict_budget(
+                all_transactions, self.config.budget_prediction_months
+            )
+
+        return results
+
+    async def process_plaid_accounts(
+        self, access_tokens: List[str] = None
+    ) -> Dict[str, Any]:
+        """Process transactions from connected Plaid accounts"""
+        if not self.plaid_integration:
+            return {"error": "Plaid integration not enabled"}
+
+        if not access_tokens:
+            access_tokens = getattr(self, "stored_access_tokens", [])
+
+        results = {
+            "processed_accounts": [],
+            "total_transactions": 0,
+            "categorized_transactions": 0,
+            "errors": [],
+            "analysis": {},
+            "budget_predictions": {},
+        }
+
+        all_transactions = []
+
+        for access_token in access_tokens:
+            try:
+                # Fetch account information
+                accounts = self.plaid_integration.fetch_accounts(access_token)
+
+                # Fetch transactions for the past 30 days
+                transactions = self.plaid_integration.fetch_transactions(
+                    access_token,
+                    start_date=datetime.now() - timedelta(days=30),
+                    end_date=datetime.now(),
+                )
+
+                # Categorize transactions
+                for transaction in transactions:
+                    category, confidence = self.categorizer.categorize_transaction(
+                        transaction
+                    )
+                    transaction.category = category
+                    transaction.confidence_score = confidence
+
+                all_transactions.extend(transactions)
+
+                results["processed_accounts"].append(
+                    {
+                        "access_token": access_token[:10]
+                        + "...",  # Partial token for logging
+                        "accounts": len(accounts),
+                        "transactions": len(transactions),
+                        "account_types": [acc["type"] for acc in accounts],
+                    }
+                )
+
+            except Exception as e:
+                error_msg = (
+                    f"Error processing Plaid account {access_token[:10]}...: {e}"
+                )
                 results["errors"].append(error_msg)
                 logger.error(error_msg)
 
@@ -857,7 +1136,7 @@ class FinanceMonitor:
 
 
 async def run_financial_monitoring(
-    db_path: str = None, config_dict: Dict = None
+    db_path: str = None, config_dict: Dict = None, access_tokens: List[str] = None
 ) -> Dict[str, Any]:
     """Main function to run financial monitoring"""
     db = UserProfileDatabase(db_path)
@@ -869,9 +1148,34 @@ async def run_financial_monitoring(
                 setattr(config, key, value)
 
     monitor = FinanceMonitor(db, config)
-    results = await monitor.process_csv_files()
 
-    return results
+    # Collect results from all data sources
+    all_results = {}
+
+    # Process CSV files
+    csv_results = await monitor.process_csv_files()
+    all_results["csv_processing"] = csv_results
+
+    # Process Plaid accounts if enabled and tokens provided
+    if config.enable_plaid_integration and access_tokens:
+        plaid_results = await monitor.process_plaid_accounts(access_tokens)
+        all_results["plaid_processing"] = plaid_results
+
+    # Calculate summary statistics
+    total_transactions = 0
+    total_transactions += csv_results.get("total_transactions", 0)
+    if "plaid_processing" in all_results:
+        total_transactions += all_results["plaid_processing"].get(
+            "total_transactions", 0
+        )
+
+    all_results["summary"] = {
+        "total_transactions_processed": total_transactions,
+        "data_sources": list(all_results.keys()),
+        "processing_timestamp": datetime.now().isoformat(),
+    }
+
+    return all_results
 
 
 if __name__ == "__main__":

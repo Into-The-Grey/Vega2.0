@@ -489,14 +489,194 @@ class ContextAnalyzer:
         return search_metrics
 
     def _analyze_conversation_patterns(self) -> Dict[str, Any]:
-        """Analyze recent conversation patterns (placeholder)"""
-        # This would analyze chat history if available
-        return {
+        """Analyze recent conversation patterns using available data"""
+        patterns = {
             "recent_conversations": 0,
             "conversation_tone": "neutral",
             "topics_discussed": [],
             "user_engagement": 0.5,
+            "conversation_frequency": 0.0,
+            "response_complexity": 0.5,
+            "emotional_indicators": [],
         }
+
+        try:
+            # Try to import and use conversation history if available
+            try:
+                from db import get_session_history
+
+                # Get recent conversation history
+                recent_conversations = get_session_history(session_id=None, limit=20)
+                patterns["recent_conversations"] = len(recent_conversations)
+
+                if recent_conversations:
+                    # Analyze conversation frequency (conversations per day)
+                    from datetime import datetime, timedelta
+
+                    recent_dates = []
+                    total_prompt_length = 0
+                    total_response_length = 0
+
+                    for conv in recent_conversations:
+                        if "ts" in conv:
+                            recent_dates.append(conv["ts"])
+
+                        prompt = conv.get("prompt", "")
+                        response = conv.get("response", "")
+                        total_prompt_length += len(prompt)
+                        total_response_length += len(response)
+
+                        # Analyze emotional indicators in prompts
+                        emotional_keywords = {
+                            "stress": [
+                                "stressed",
+                                "overwhelmed",
+                                "anxious",
+                                "pressure",
+                                "deadline",
+                            ],
+                            "happy": [
+                                "great",
+                                "awesome",
+                                "excited",
+                                "happy",
+                                "amazing",
+                            ],
+                            "frustrated": [
+                                "frustrated",
+                                "annoying",
+                                "difficult",
+                                "hard",
+                                "struggling",
+                            ],
+                            "curious": ["how", "why", "what", "learn", "understand"],
+                        }
+
+                        prompt_lower = prompt.lower()
+                        for emotion, keywords in emotional_keywords.items():
+                            if any(keyword in prompt_lower for keyword in keywords):
+                                if emotion not in patterns["emotional_indicators"]:
+                                    patterns["emotional_indicators"].append(emotion)
+
+                        # Extract topics (simple keyword analysis)
+                        academic_keywords = [
+                            "homework",
+                            "assignment",
+                            "exam",
+                            "study",
+                            "class",
+                            "course",
+                        ]
+                        work_keywords = [
+                            "work",
+                            "job",
+                            "project",
+                            "meeting",
+                            "deadline",
+                            "client",
+                        ]
+                        personal_keywords = [
+                            "friend",
+                            "family",
+                            "weekend",
+                            "plan",
+                            "schedule",
+                        ]
+
+                        if any(kw in prompt_lower for kw in academic_keywords):
+                            if "academic" not in patterns["topics_discussed"]:
+                                patterns["topics_discussed"].append("academic")
+                        if any(kw in prompt_lower for kw in work_keywords):
+                            if "work" not in patterns["topics_discussed"]:
+                                patterns["topics_discussed"].append("work")
+                        if any(kw in prompt_lower for kw in personal_keywords):
+                            if "personal" not in patterns["topics_discussed"]:
+                                patterns["topics_discussed"].append("personal")
+
+                    # Calculate engagement metrics
+                    if total_prompt_length > 0:
+                        avg_prompt_length = total_prompt_length / len(
+                            recent_conversations
+                        )
+                        # Longer prompts indicate higher engagement
+                        patterns["user_engagement"] = min(1.0, avg_prompt_length / 100)
+
+                    # Calculate response complexity preference
+                    if total_response_length > 0:
+                        avg_response_length = total_response_length / len(
+                            recent_conversations
+                        )
+                        patterns["response_complexity"] = min(
+                            1.0, avg_response_length / 200
+                        )
+
+                    # Determine conversation tone from emotional indicators
+                    if len(patterns["emotional_indicators"]) > 0:
+                        if (
+                            "stress" in patterns["emotional_indicators"]
+                            or "frustrated" in patterns["emotional_indicators"]
+                        ):
+                            patterns["conversation_tone"] = "stressed"
+                        elif "happy" in patterns["emotional_indicators"]:
+                            patterns["conversation_tone"] = "positive"
+                        elif "curious" in patterns["emotional_indicators"]:
+                            patterns["conversation_tone"] = "inquisitive"
+
+                    # Calculate frequency (conversations per day over last week)
+                    if recent_dates:
+                        date_range = max(recent_dates) - min(recent_dates)
+                        if date_range.total_seconds() > 0:
+                            days = date_range.total_seconds() / 86400  # Convert to days
+                            patterns["conversation_frequency"] = len(
+                                recent_conversations
+                            ) / max(1, days)
+
+            except ImportError:
+                logger.debug(
+                    "Conversation history not available - using fallback analysis"
+                )
+
+            # Use search history as alternative conversation pattern indicator
+            session = self.db.get_session()
+            try:
+                from database.user_profile_schema import SearchHistory
+
+                recent_searches = (
+                    session.query(SearchHistory)
+                    .filter(SearchHistory.is_active == True)
+                    .order_by(SearchHistory.created_at.desc())
+                    .limit(20)
+                    .all()
+                )
+
+                if recent_searches:
+                    patterns["recent_conversations"] += len(recent_searches)
+
+                    # Analyze search query complexity as engagement indicator
+                    total_query_length = sum(
+                        len(s.query or "") for s in recent_searches
+                    )
+                    if total_query_length > 0:
+                        avg_query_length = total_query_length / len(recent_searches)
+                        patterns["user_engagement"] = max(
+                            patterns["user_engagement"], min(1.0, avg_query_length / 50)
+                        )
+
+                    # Extract topics from search categories
+                    search_categories = [
+                        s.category for s in recent_searches if s.category
+                    ]
+                    for category in set(search_categories):
+                        if category not in patterns["topics_discussed"]:
+                            patterns["topics_discussed"].append(category)
+
+            finally:
+                session.close()
+
+        except Exception as e:
+            logger.warning(f"Error analyzing conversation patterns: {e}")
+
+        return patterns
 
     def determine_optimal_mode(
         self, context: Dict[str, Any]

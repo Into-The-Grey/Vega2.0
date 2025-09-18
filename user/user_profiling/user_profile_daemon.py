@@ -419,15 +419,39 @@ class DailyBriefingGenerator:
                     personal_summary["relationship_types"].get(rel_type, 0) + 1
                 )
 
-            # Well-being indicators (simplified)
+            # Well-being indicators (calculated from available data)
+            well_being_score = 0.5  # Base score
+
+            # Social connections factor
+            social_factor = min(1.0, len(connections) / 10) if connections else 0.3
+
+            # Interest engagement factor
+            interest_factor = (
+                sum(i.engagement_level for i in interests) / len(interests)
+                if interests and all(i.engagement_level is not None for i in interests)
+                else 0.5
+            )
+
+            # Academic factor (if applicable)
+            education_records = (
+                session.query(EducationProfile)
+                .filter(EducationProfile.is_active == True)
+                .all()
+            )
+            academic_factor = (
+                min(1.0, len(education_records) / 3) if education_records else 0.5
+            )
+
+            # Calculate weighted well-being score
+            well_being_score = (
+                social_factor * 0.4 + interest_factor * 0.3 + academic_factor * 0.3
+            )
+
             personal_summary["well_being_indicators"] = {
-                "social_connections": min(1.0, len(connections) / 10),  # Normalize
-                "interest_engagement": (
-                    sum(i.engagement_level for i in interests) / len(interests)
-                    if interests
-                    else 0.5
-                ),
-                "overall_score": 0.7,  # Placeholder - would be calculated from multiple factors
+                "social_connections": social_factor,
+                "interest_engagement": interest_factor,
+                "academic_engagement": academic_factor,
+                "overall_score": well_being_score,
             }
 
             return personal_summary
@@ -437,20 +461,45 @@ class DailyBriefingGenerator:
 
     async def _generate_understanding_section(self) -> Dict[str, Any]:
         """Generate AI understanding status section"""
-        # This would analyze how well the AI understands the user
-        understanding_summary = {
-            "overall_understanding": 0.75,  # Placeholder
-            "data_completeness": {
-                "identity": 0.8,
-                "preferences": 0.6,
-                "schedule": 0.9,
-                "goals": 0.4,
-                "relationships": 0.7,
-            },
-            "confidence_areas": ["calendar patterns", "academic schedule"],
-            "knowledge_gaps": ["long-term goals", "personal values"],
-            "recent_improvements": ["financial pattern recognition"],
-        }
+        # Use the actual understanding calculator
+        try:
+            understanding_score = (
+                self.understanding_calculator.calculate_understanding_score()
+            )
+
+            understanding_summary = {
+                "overall_understanding": understanding_score.overall_score,
+                "data_completeness": understanding_score.data_completeness,
+                "confidence_level": understanding_score.confidence_level,
+                "category_scores": understanding_score.categories,
+                "strengths": understanding_score.strengths,
+                "improvement_areas": understanding_score.improvement_areas,
+                "last_updated": understanding_score.last_updated.isoformat(),
+            }
+
+            # Add detailed breakdown for user insight
+            understanding_summary["detailed_breakdown"] = {
+                "strong_areas": [
+                    f"{area}: {understanding_score.categories.get(area, 0):.2f}"
+                    for area in understanding_score.strengths
+                ],
+                "needs_attention": [
+                    f"{area}: {understanding_score.categories.get(area, 0):.2f}"
+                    for area in understanding_score.improvement_areas
+                ],
+            }
+
+        except Exception as e:
+            logger.error(f"Failed to calculate understanding score: {e}")
+            # Fallback to simplified calculation
+            understanding_summary = {
+                "overall_understanding": 0.6,  # Conservative fallback
+                "data_completeness": 0.5,
+                "confidence_level": 0.4,
+                "error": "Failed to calculate detailed understanding metrics",
+                "knowledge_gaps": ["long-term goals", "personal values"],
+                "recent_improvements": ["financial pattern recognition"],
+            }
 
         return understanding_summary
 

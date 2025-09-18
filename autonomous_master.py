@@ -4,7 +4,7 @@ AUTONOMOUS ERROR RESOLUTION + SELF-DEBUGGING + CODE EVOLUTION SYSTEM
 ===================================================================
 
 Master integration script for the complete autonomous debugging system.
-Orchestrates all 8 phases of self-healing AI capabilities.
+Orchestrates all 8 phases of self-healing AI capabilities plus new autonomous features.
 
 🤖 AUTONOMOUS DEBUGGING SYSTEM PHASES:
 1. Error Tracking + Indexing System ✅
@@ -16,6 +16,13 @@ Orchestrates all 8 phases of self-healing AI capabilities.
 7. Code Evolution + Continuous Improvement ✅
 8. Plugin Generation + Custom Automation ✅
 
+🚀 NEW AUTONOMOUS FEATURES:
+9. Automated Backup & Restore System ✅
+10. Self-Building Voice Profile Management ✅
+11. Dynamic Web Knowledge Base ✅
+12. Financial Investment Learning Module ✅
+13. Background Task Scheduler ✅
+
 This system can autonomously:
 - Track and analyze errors across the codebase
 - Generate intelligent fixes using LLM analysis
@@ -25,6 +32,11 @@ This system can autonomously:
 - Run autonomous maintenance cycles
 - Evolve code quality and architecture
 - Generate custom debugging tools
+- Create and manage backups automatically
+- Build personalized voice profiles from user input
+- Maintain a categorized web knowledge base
+- Learn and track financial investments
+- Schedule and execute background tasks
 
 Usage:
     python autonomous_master.py --start-daemon     # Start autonomous daemon
@@ -34,6 +46,7 @@ Usage:
     python autonomous_master.py --generate-plugins # Generate custom plugins
     python autonomous_master.py --full-analysis    # Comprehensive analysis
     python autonomous_master.py --status           # System status
+    python autonomous_master.py --autonomous-ops   # Run autonomous operations
 """
 
 import os
@@ -48,31 +61,110 @@ from pathlib import Path
 
 # Add autonomous_debug to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "autonomous_debug"))
+# Add vega_state to path for new autonomous features
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "vega_state"))
 
-# Import all system components
-from error_tracker import ErrorDatabase, LogScanner
-from self_debugger import SelfDebugger
-from error_web_resolver import WebErrorResolver
-from code_sandbox import SandboxValidator
-from patch_manager import PatchManager
 
-# Try to import full daemon, fall back to simple version
+# Import all system components from autonomous_debug submodule
 try:
-    from self_maintenance_daemon import (
-        DaemonController,
-        AutomationEngine,
-        AutomationConfig,
-    )
-
-    FULL_DAEMON_AVAILABLE = True
+    from autonomous_debug.error_tracker import ErrorDatabase, LogScanner
 except ImportError:
-    from simple_daemon import DaemonController, AutomationEngine, AutomationConfig
+    ErrorDatabase = LogScanner = None
+    print("Warning: error_tracker module not found.")
+try:
+    from autonomous_debug.self_debugger import SelfDebugger
+except ImportError:
+    SelfDebugger = None
+    print("Warning: self_debugger module not found.")
+try:
+    from autonomous_debug.error_web_resolver import WebErrorResolver
+except ImportError:
+    WebErrorResolver = None
+    print("Warning: error_web_resolver module not found.")
+try:
+    from autonomous_debug.code_sandbox import SandboxValidator
+except ImportError:
+    SandboxValidator = None
+    print("Warning: code_sandbox module not found.")
+try:
+    from autonomous_debug.patch_manager import PatchManager
+except ImportError:
+    PatchManager = None
+    print("Warning: patch_manager module not found.")
 
-    FULL_DAEMON_AVAILABLE = False
-    print("Warning: Using simplified daemon - some features may be limited")
 
-from code_evolver import CodeEvolutionEngine
-from plugin_generator import PluginOrchestrator
+# Import both daemon implementations under unique names
+try:
+    from autonomous_debug.self_maintenance_daemon import (
+        DaemonController as DaemonControllerFull,
+        AutomationConfig as AutomationConfigFull,
+    )
+except ImportError:
+    DaemonControllerFull = None
+    AutomationConfigFull = None
+try:
+    from autonomous_debug.simple_daemon import (
+        DaemonController as DaemonControllerSimple,
+        AutomationConfig as AutomationConfigSimple,
+    )
+except ImportError:
+    DaemonControllerSimple = None
+    AutomationConfigSimple = None
+
+try:
+    from autonomous_debug.code_evolver import CodeEvolutionEngine
+except ImportError:
+    CodeEvolutionEngine = None
+    print("Warning: code_evolver module not found.")
+try:
+    from autonomous_debug.plugin_generator import PluginOrchestrator
+except ImportError:
+    PluginOrchestrator = None
+    print("Warning: plugin_generator module not found.")
+
+# Import new autonomous feature modules
+try:
+    from vega_state.backup_manager import (
+        create_backup,
+        list_backups,
+        restore_backup,
+        prune_backups,
+    )
+except ImportError:
+    create_backup = list_backups = restore_backup = prune_backups = None
+    print("Warning: backup_manager module not found.")
+
+try:
+    from vega_state.voice_profile_manager import (
+        update_voice_profile,
+        get_voice_profile,
+        list_voice_samples,
+    )
+except ImportError:
+    update_voice_profile = get_voice_profile = list_voice_samples = None
+    print("Warning: voice_profile_manager module not found.")
+
+try:
+    from vega_state.web_knowledge_base import add_site, list_sites
+except ImportError:
+    add_site = list_sites = None
+    print("Warning: web_knowledge_base module not found.")
+
+try:
+    from vega_state.finance_module import (
+        list_investments,
+        fetch_stock_price,
+        learn_investment_strategy,
+    )
+except ImportError:
+    list_investments = fetch_stock_price = learn_investment_strategy = None
+    print("Warning: finance_module module not found.")
+
+try:
+    from vega_state.scheduler import start_background_tasks, stop_background_tasks
+except ImportError:
+    start_background_tasks = stop_background_tasks = None
+    print("Warning: scheduler module not found.")
 
 # Configure logging
 logging.basicConfig(
@@ -192,46 +284,148 @@ class AutonomousDebuggingMaster:
         """Initialize all system components"""
         try:
             # Phase 1: Error Tracking
-            self.error_db = ErrorDatabase()
-            self.log_scanner = LogScanner(self.error_db)
+            if ErrorDatabase and LogScanner:
+                self.error_db = ErrorDatabase()
+                self.log_scanner = LogScanner(self.error_db)
+                error_tracking_status = "initialized"
+            else:
+                self.error_db = None
+                self.log_scanner = None
+                error_tracking_status = "missing"
+                logger.warning("Error tracking modules not available.")
 
             # Phase 2: LLM Self-Debugging
-            self.self_debugger = SelfDebugger()
+            if SelfDebugger:
+                self.self_debugger = SelfDebugger()
+                self_debugger_status = "initialized"
+            else:
+                self.self_debugger = None
+                self_debugger_status = "missing"
+                logger.warning("Self-debugger module not available.")
 
             # Phase 3: Web Solution Research
-            self.web_resolver = WebErrorResolver()
+            if WebErrorResolver:
+                self.web_resolver = WebErrorResolver()
+                web_resolver_status = "initialized"
+            else:
+                self.web_resolver = None
+                web_resolver_status = "missing"
+                logger.warning("Web resolver module not available.")
 
             # Phase 4: Sandbox Testing
-            self.sandbox_validator = SandboxValidator(self.project_path)
+            if SandboxValidator:
+                self.sandbox_validator = SandboxValidator(self.project_path)
+                sandbox_validator_status = "initialized"
+            else:
+                self.sandbox_validator = None
+                sandbox_validator_status = "missing"
+                logger.warning("Sandbox validator module not available.")
 
             # Phase 5: Patch Management
-            self.patch_manager = PatchManager()
+            if PatchManager:
+                self.patch_manager = PatchManager(self.project_path)
+                patch_manager_status = "initialized"
+            else:
+                self.patch_manager = None
+                patch_manager_status = "missing"
+                logger.warning("Patch manager module not available.")
 
             # Phase 6: Self-Maintenance Daemon
-            self.daemon_config = AutomationConfig()
-            self.automation_engine = AutomationEngine(self.daemon_config)
+            if DaemonControllerFull:
+                self.daemon_controller = DaemonControllerFull()
+                daemon_controller_status = "initialized"
+            elif DaemonControllerSimple:
+                self.daemon_controller = DaemonControllerSimple()
+                daemon_controller_status = "initialized (simple)"
+            else:
+                self.daemon_controller = None
+                daemon_controller_status = "missing"
+                logger.warning("Daemon controller modules not available.")
 
             # Phase 7: Code Evolution
-            self.code_evolver = CodeEvolutionEngine(self.project_path)
+            if CodeEvolutionEngine:
+                self.code_evolver = CodeEvolutionEngine(self.project_path)
+                code_evolver_status = "initialized"
+            else:
+                self.code_evolver = None
+                code_evolver_status = "missing"
+                logger.warning("Code evolution module not available.")
 
             # Phase 8: Plugin Generation
-            self.plugin_orchestrator = PluginOrchestrator()
+            if PluginOrchestrator:
+                self.plugin_orchestrator = PluginOrchestrator(self.project_path)
+                plugin_orchestrator_status = "initialized"
+            else:
+                self.plugin_orchestrator = None
+                plugin_orchestrator_status = "missing"
+                logger.warning("Plugin orchestrator module not available.")
 
+            # New Autonomous Features - Phase 9-13
+            # Backup management
+            if create_backup:
+                backup_status = "initialized"
+            else:
+                backup_status = "missing"
+                logger.warning("Backup manager module not available.")
+
+            # Voice profile management
+            if update_voice_profile:
+                voice_profile_status = "initialized"
+            else:
+                voice_profile_status = "missing"
+                logger.warning("Voice profile manager module not available.")
+
+            # Web knowledge base
+            if add_site:
+                web_kb_status = "initialized"
+            else:
+                web_kb_status = "missing"
+                logger.warning("Web knowledge base module not available.")
+
+            # Financial module
+            if list_investments:
+                finance_status = "initialized"
+            else:
+                finance_status = "missing"
+                logger.warning("Finance module not available.")
+
+            # Background scheduler
+            if start_background_tasks:
+                scheduler_status = "initialized"
+            else:
+                scheduler_status = "missing"
+                logger.warning("Scheduler module not available.")
+
+            # Store component status
             self.components_status = {
-                "error_tracking": "initialized",
-                "self_debugger": "initialized",
-                "web_resolver": "initialized",
-                "sandbox_validator": "initialized",
-                "patch_manager": "initialized",
-                "daemon": "initialized",
-                "code_evolver": "initialized",
-                "plugin_generator": "initialized",
+                "error_tracking": error_tracking_status,
+                "self_debugger": self_debugger_status,
+                "web_resolver": web_resolver_status,
+                "sandbox_validator": sandbox_validator_status,
+                "patch_manager": patch_manager_status,
+                "daemon_controller": daemon_controller_status,
+                "code_evolver": code_evolver_status,
+                "plugin_orchestrator": plugin_orchestrator_status,
+                "backup_manager": backup_status,
+                "voice_profile": voice_profile_status,
+                "web_knowledge_base": web_kb_status,
+                "finance_module": finance_status,
+                "scheduler": scheduler_status,
             }
 
-            logger.info("✅ All 8 phases initialized successfully")
+            initialized_count = sum(
+                1
+                for status in self.components_status.values()
+                if "initialized" in status
+            )
+            total_count = len(self.components_status)
+
+            logger.info(
+                f"✅ Autonomous system initialized: {initialized_count}/{total_count} components active"
+            )
 
         except Exception as e:
-            logger.error(f"Failed to initialize components: {e}")
+            logger.error(f"❌ Failed to initialize components: {e}")
             raise
 
     async def run_health_check(self) -> Dict[str, Any]:
@@ -292,12 +486,17 @@ class AutonomousDebuggingMaster:
 
             if component == "error_tracking":
                 # Check error database
-                stats = self.error_db.get_error_statistics()
-                health["details"] = {
-                    "total_errors": stats.get("total_errors", 0),
-                    "unresolved_errors": stats.get("unresolved_errors", 0),
-                    "database_size": self._get_db_size("autonomous_debug/errors.db"),
-                }
+                if self.error_db:
+                    stats = self.error_db.get_error_statistics()
+                    health["details"] = {
+                        "total_errors": stats.get("total_errors", 0),
+                        "unresolved_errors": stats.get("unresolved_errors", 0),
+                        "database_size": self._get_db_size(
+                            "autonomous_debug/errors.db"
+                        ),
+                    }
+                else:
+                    health["details"] = {}
 
             elif component == "self_debugger":
                 # Check LLM connectivity
@@ -415,13 +614,23 @@ class AutonomousDebuggingMaster:
             logger.info("🔧 Starting manual error fixing cycle")
 
             # Scan for errors
-            errors_found = self.log_scanner.scan_directory(
-                self.project_path, recursive=True
-            )
-            logger.info(f"Found {errors_found} new errors")
+            if self.log_scanner:
+                errors_found = self.log_scanner.scan_directory(
+                    self.project_path, recursive=True
+                )
+                logger.info(f"Found {errors_found} new errors")
+            else:
+                logger.warning("Log scanner not available; skipping error scan.")
+                errors_found = []
 
             # Get unresolved errors
-            unresolved = self.error_db.get_unresolved_errors(limit=5)
+            if self.error_db:
+                unresolved = self.error_db.get_unresolved_errors(limit=5)
+            else:
+                logger.warning(
+                    "Error database not available; skipping unresolved errors."
+                )
+                unresolved = []
 
             results = {
                 "timestamp": datetime.now().isoformat(),
@@ -437,27 +646,50 @@ class AutonomousDebuggingMaster:
                     results["errors_processed"] += 1
 
                     # Try to debug with LLM
-                    debug_result = await self.self_debugger.debug_error(error_id)
+                    if self.self_debugger:
+                        debug_result = await self.self_debugger.debug_error(error_id)
+                    else:
+                        logger.warning(
+                            "Self-debugger not available; skipping debug_error."
+                        )
+                        debug_result = None
 
-                    if debug_result.get("success") and debug_result.get("fixes"):
+                    if (
+                        debug_result
+                        and debug_result.get("success")
+                        and debug_result.get("fixes")
+                    ):
                         results["fixes_attempted"] += 1
 
                         best_fix = debug_result["best_fix"]["fix"]
 
                         # Test in sandbox
                         error_record = self._row_to_error_record(error_row)
-                        sandbox_result = await self.sandbox_validator.validate_fix(
-                            best_fix, error_record
-                        )
+                        if self.sandbox_validator and error_record:
+                            sandbox_result = await self.sandbox_validator.validate_fix(
+                                best_fix, error_record
+                            )
+                        else:
+                            logger.warning(
+                                "Sandbox validator or error_record not available; skipping validate_fix."
+                            )
+                            sandbox_result = None
 
-                        if sandbox_result.safety_score > 0.8:
+                        if (
+                            sandbox_result
+                            and getattr(sandbox_result, "safety_score", 0) > 0.8
+                        ):
                             results["fixes_successful"] += 1
                             results["details"].append(
                                 {
                                     "error_id": error_id[:8],
                                     "fix_applied": True,
-                                    "confidence": best_fix.confidence_score,
-                                    "safety_score": sandbox_result.safety_score,
+                                    "confidence": getattr(
+                                        best_fix, "confidence_score", None
+                                    ),
+                                    "safety_score": getattr(
+                                        sandbox_result, "safety_score", None
+                                    ),
                                 }
                             )
                         else:
@@ -465,8 +697,10 @@ class AutonomousDebuggingMaster:
                                 {
                                     "error_id": error_id[:8],
                                     "fix_applied": False,
-                                    "reason": "Low safety score",
-                                    "safety_score": sandbox_result.safety_score,
+                                    "reason": "Low safety score or sandbox unavailable",
+                                    "safety_score": getattr(
+                                        sandbox_result, "safety_score", None
+                                    ),
                                 }
                             )
                     else:
@@ -474,7 +708,7 @@ class AutonomousDebuggingMaster:
                             {
                                 "error_id": error_id[:8],
                                 "fix_applied": False,
-                                "reason": "No fixes generated",
+                                "reason": "No fixes generated or self-debugger unavailable",
                             }
                         )
 
@@ -495,10 +729,15 @@ class AutonomousDebuggingMaster:
         try:
             logger.info("🔄 Starting code evolution analysis")
 
-            results = await self.code_evolver.run_full_analysis()
-
-            logger.info("✅ Code evolution analysis complete")
-            return results
+            if self.code_evolver:
+                results = await self.code_evolver.run_full_analysis()
+                logger.info("✅ Code evolution analysis complete")
+                return results
+            else:
+                logger.warning(
+                    "Code evolver not available; skipping run_full_analysis."
+                )
+                return {"warning": "Code evolver not available"}
 
         except Exception as e:
             logger.error(f"Code evolution analysis failed: {e}")
@@ -509,10 +748,15 @@ class AutonomousDebuggingMaster:
         try:
             logger.info("🛠️ Starting plugin generation")
 
-            results = await self.plugin_orchestrator.run_full_plugin_generation()
-
-            logger.info("✅ Plugin generation complete")
-            return results
+            if self.plugin_orchestrator:
+                results = await self.plugin_orchestrator.run_full_plugin_generation()
+                logger.info("✅ Plugin generation complete")
+                return results
+            else:
+                logger.warning(
+                    "Plugin orchestrator not available; skipping run_full_plugin_generation."
+                )
+                return {"warning": "Plugin orchestrator not available"}
 
         except Exception as e:
             logger.error(f"Plugin generation failed: {e}")
@@ -692,29 +936,36 @@ python autonomous_debug/self_maintenance_daemon.py --start
 
     def _row_to_error_record(self, row):
         """Convert database row to ErrorRecord (helper method)"""
-        from error_tracker import ErrorRecord
+        try:
+            from autonomous_debug.error_tracker import ErrorRecord
+        except ImportError:
+            ErrorRecord = None
+            logger.warning("ErrorRecord not available from error_tracker.")
         import json
 
         context_data = json.loads(row["context_data"]) if row["context_data"] else {}
 
-        return ErrorRecord(
-            id=row["id"],
-            timestamp=datetime.fromisoformat(row["timestamp"]),
-            file_path=row["file_path"],
-            line_number=row["line_number"] or 0,
-            error_type=row["error_type"],
-            message=row["message"],
-            traceback_hash=row["traceback_hash"],
-            frequency=row["frequency"],
-            snippet=row["snippet"] or "",
-            first_seen=datetime.fromisoformat(row["first_seen"]),
-            last_seen=datetime.fromisoformat(row["last_seen"]),
-            severity=row["severity"],
-            resolved=bool(row["resolved"]),
-            resolution_attempts=row["resolution_attempts"],
-            full_traceback=row["full_traceback"] or "",
-            context_data=context_data,
-        )
+        if ErrorRecord:
+            return ErrorRecord(
+                id=row["id"],
+                timestamp=datetime.fromisoformat(row["timestamp"]),
+                file_path=row["file_path"],
+                line_number=row["line_number"] or 0,
+                error_type=row["error_type"],
+                message=row["message"],
+                traceback_hash=row["traceback_hash"],
+                frequency=row["frequency"],
+                snippet=row["snippet"] or "",
+                first_seen=datetime.fromisoformat(row["first_seen"]),
+                last_seen=datetime.fromisoformat(row["last_seen"]),
+                severity=row["severity"],
+                resolved=bool(row["resolved"]),
+                resolution_attempts=row["resolution_attempts"],
+                full_traceback=row["full_traceback"] or "",
+                context_data=context_data,
+            )
+        else:
+            return None
 
     def _get_db_size(self, db_path: str) -> float:
         """Get database size in MB"""
@@ -722,7 +973,7 @@ python autonomous_debug/self_maintenance_daemon.py --start
             if os.path.exists(db_path):
                 return os.path.getsize(db_path) / (1024 * 1024)
             return 0.0
-        except:
+        except Exception:
             return 0.0
 
     def _get_disk_space(self) -> str:
@@ -732,7 +983,7 @@ python autonomous_debug/self_maintenance_daemon.py --start
 
             total, used, free = shutil.disk_usage(".")
             return f"{free / (1024**3):.1f}GB free"
-        except:
+        except Exception:
             return "unknown"
 
 
@@ -779,6 +1030,11 @@ Examples:
         help="Start autonomous maintenance daemon",
     )
     parser.add_argument("--status", action="store_true", help="Show system status")
+    parser.add_argument(
+        "--autonomous-ops",
+        action="store_true",
+        help="Run autonomous operations (backup, voice, finance, scheduler)",
+    )
     parser.add_argument(
         "--project-path",
         default="/home/ncacord/Vega2.0",
@@ -832,7 +1088,7 @@ Examples:
             print("🔄 Running code evolution analysis...")
             results = await master.run_code_evolution_analysis()
 
-            print(f"📊 Analysis complete")
+            print("📊 Analysis complete")
 
             if args.output:
                 with open(args.output, "w") as f:
@@ -881,8 +1137,42 @@ Examples:
             print("🤖 Starting autonomous maintenance daemon...")
             print("This will run continuously. Press Ctrl+C to stop.")
 
-            daemon_controller = DaemonController()
-            await daemon_controller.run()
+            try:
+                if DaemonControllerFull is not None:
+                    # Full daemon: expects config_path (str)
+                    config_path = "autonomous_debug/daemon_config.json"
+                    daemon_controller = DaemonControllerFull(config_path)
+                    if hasattr(daemon_controller, "run") and callable(
+                        getattr(daemon_controller, "run")
+                    ):
+                        await daemon_controller.run()
+                    else:
+                        print("❌ DaemonControllerFull has no 'run' method.")
+                        logger.error("DaemonControllerFull has no 'run' method.")
+                elif (
+                    DaemonControllerSimple is not None
+                    and AutomationConfigSimple is not None
+                ):
+                    # Simple daemon: expects AutomationConfig
+                    daemon_config = AutomationConfigSimple()
+                    daemon_controller = DaemonControllerSimple(daemon_config)
+                    if hasattr(daemon_controller, "run_test_cycle") and callable(
+                        getattr(daemon_controller, "run_test_cycle")
+                    ):
+                        await daemon_controller.run_test_cycle()
+                    else:
+                        print("❌ DaemonControllerSimple has no runnable method.")
+                        logger.error("DaemonControllerSimple has no runnable method.")
+                else:
+                    print(
+                        "❌ No DaemonController implementation available. Cannot start daemon."
+                    )
+                    logger.error(
+                        "No DaemonController implementation available. Cannot start daemon."
+                    )
+            except Exception as e:
+                print(f"❌ Failed to start daemon: {e}")
+                logger.error(f"Failed to start daemon: {e}")
 
         elif args.status:
             print("📊 System Status:")
@@ -893,6 +1183,76 @@ Examples:
             for component, status in master.components_status.items():
                 status_icon = "✅" if status == "initialized" else "❌"
                 print(f"    {status_icon} {component}: {status}")
+
+        elif args.autonomous_ops:
+            print("🚀 Running autonomous operations...")
+
+            # Start background scheduler
+            if start_background_tasks:
+                start_background_tasks()
+                print("✅ Background scheduler started")
+            else:
+                print("❌ Background scheduler not available")
+
+            # Create a backup
+            if create_backup:
+                try:
+                    backup_path = create_backup("autonomous")
+                    print(f"✅ Backup created: {backup_path}")
+                except Exception as e:
+                    print(f"❌ Backup failed: {e}")
+            else:
+                print("❌ Backup manager not available")
+
+            # Update voice profile if samples exist
+            if update_voice_profile and list_voice_samples:
+                try:
+                    samples = list_voice_samples()
+                    if samples:
+                        profile = update_voice_profile()
+                        print(
+                            f"✅ Voice profile updated with {profile['samples']} samples"
+                        )
+                    else:
+                        print("ℹ️ No voice samples found to update profile")
+                except Exception as e:
+                    print(f"❌ Voice profile update failed: {e}")
+            else:
+                print("❌ Voice profile manager not available")
+
+            # Check financial investments
+            if list_investments and fetch_stock_price:
+                try:
+                    investments = list_investments()
+                    if investments:
+                        print(f"📈 Portfolio has {len(investments)} investments")
+                        for inv in investments[-3:]:  # Show last 3
+                            current_price = fetch_stock_price(inv["symbol"])
+                            change = current_price - inv["price"]
+                            print(
+                                f"  {inv['symbol']}: ${current_price:.2f} ({change:+.2f})"
+                            )
+                    else:
+                        print("ℹ️ No investments in portfolio")
+                except Exception as e:
+                    print(f"❌ Financial update failed: {e}")
+            else:
+                print("❌ Finance module not available")
+
+            # Show knowledge base stats
+            if list_sites:
+                try:
+                    sites = list_sites()
+                    total_sites = sum(len(urls) for urls in sites.values())
+                    print(
+                        f"🔍 Knowledge base has {total_sites} sites across {len(sites)} categories"
+                    )
+                except Exception as e:
+                    print(f"❌ Knowledge base check failed: {e}")
+            else:
+                print("❌ Web knowledge base not available")
+
+            print("✅ Autonomous operations completed")
 
         else:
             print(

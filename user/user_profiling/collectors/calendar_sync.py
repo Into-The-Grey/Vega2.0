@@ -42,7 +42,7 @@ except ImportError:
     CALDAV_AVAILABLE = False
     logging.warning("CalDAV not available. Install: pip install caldav")
 
-from database.user_profile_schema import UserProfileDatabase, Calendar
+from ..database.user_profile_schema import UserProfileDatabase, Calendar
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -53,7 +53,7 @@ logger = logging.getLogger(__name__)
 class CalendarConfig:
     """Configuration for calendar synchronization"""
 
-    google_credentials_file: str = "credentials.json"
+    google_credentials_file: str = ""
     google_token_file: str = "token.pickle"
     google_scopes: List[str] = None
     caldav_url: str = ""
@@ -67,6 +67,32 @@ class CalendarConfig:
     def __post_init__(self):
         if self.google_scopes is None:
             self.google_scopes = ["https://www.googleapis.com/auth/calendar.readonly"]
+
+        # Load configuration from environment variables if not provided
+        if not self.google_credentials_file:
+            self.google_credentials_file = os.getenv(
+                "GOOGLE_CALENDAR_CREDENTIALS", "credentials.json"
+            )
+
+        if not self.caldav_url:
+            self.caldav_url = os.getenv("CALDAV_URL", "")
+
+        if not self.caldav_username:
+            self.caldav_username = os.getenv("CALDAV_USERNAME", "")
+
+        if not self.caldav_password:
+            self.caldav_password = os.getenv("CALDAV_PASSWORD", "")
+
+        # Parse Google Calendar scopes from environment if available
+        scopes_env = os.getenv("GOOGLE_CALENDAR_SCOPES")
+        if scopes_env:
+            try:
+                import json
+
+                self.google_scopes = json.loads(scopes_env)
+            except (json.JSONDecodeError, TypeError):
+                # If parsing fails, keep default scopes
+                pass
 
 
 @dataclass
@@ -689,6 +715,169 @@ class CalendarSync:
             session.close()
 
 
+class Microsoft365CalendarSync:
+    """Microsoft 365/Outlook Calendar integration using Microsoft Graph API"""
+
+    def __init__(self, config: CalendarConfig):
+        self.config = config
+        self.access_token = None
+        self.app_id = os.getenv("MICROSOFT_365_APP_ID", "")
+        self.app_secret = os.getenv("MICROSOFT_365_APP_SECRET", "")
+        self.tenant_id = os.getenv("MICROSOFT_365_TENANT_ID", "")
+        self.redirect_uri = os.getenv(
+            "MICROSOFT_365_REDIRECT_URI", "http://localhost:8000/auth/callback"
+        )
+
+    def authenticate(self) -> bool:
+        """Authenticate with Microsoft Graph API"""
+        if not all([self.app_id, self.app_secret, self.tenant_id]):
+            logger.error("Microsoft 365 credentials not configured")
+            return False
+
+        try:
+            import requests
+
+            # Use client credentials flow for service authentication
+            auth_url = (
+                f"https://login.microsoftonline.com/{self.tenant_id}/oauth2/v2.0/token"
+            )
+
+            auth_data = {
+                "client_id": self.app_id,
+                "client_secret": self.app_secret,
+                "scope": "https://graph.microsoft.com/.default",
+                "grant_type": "client_credentials",
+            }
+
+            response = requests.post(auth_url, data=auth_data)
+
+            if response.status_code == 200:
+                token_data = response.json()
+                self.access_token = token_data.get("access_token")
+                logger.info("Microsoft 365 authentication successful")
+                return True
+            else:
+                logger.error(f"Microsoft 365 authentication failed: {response.text}")
+                return False
+
+        except ImportError:
+            logger.error("requests library required for Microsoft 365 integration")
+            return False
+        except Exception as e:
+            logger.error(f"Microsoft 365 authentication error: {e}")
+            return False
+
+    def fetch_events(
+        self,
+        user_email: str = None,
+        start_date: datetime = None,
+        end_date: datetime = None,
+    ) -> List[CalendarEvent]:
+        """Fetch events from Microsoft 365 Calendar"""
+        if not self.access_token:
+            logger.error("Not authenticated with Microsoft 365")
+            return []
+
+        if start_date is None:
+            start_date = datetime.now() - timedelta(days=self.config.sync_past_days)
+        if end_date is None:
+            end_date = datetime.now() + timedelta(days=self.config.sync_future_days)
+
+        try:
+            import requests
+
+            headers = {
+                "Authorization": f"Bearer {self.access_token}",
+                "Content-Type": "application/json",
+            }
+
+            # Default to the authenticated user's calendar if no email specified
+            calendar_endpoint = (
+                f"https://graph.microsoft.com/v1.0/me/events"
+                if not user_email
+                else f"https://graph.microsoft.com/v1.0/users/{user_email}/events"
+            )
+
+            params = {
+                "$filter": f"start/dateTime ge '{start_date.isoformat()}' and end/dateTime le '{end_date.isoformat()}'",
+                "$orderby": "start/dateTime",
+                "$select": "id,subject,body,start,end,location,isAllDay,recurrence,attendees,importance",
+            }
+
+            response = requests.get(calendar_endpoint, headers=headers, params=params)
+
+            if response.status_code != 200:
+                logger.error(f"Failed to fetch Microsoft 365 events: {response.text}")
+                return []
+
+            events_data = response.json()
+            calendar_events = []
+
+            for event in events_data.get("value", []):
+                try:
+                    # Parse start/end times
+                    start_info = event["start"]
+                    end_info = event["end"]
+
+                    start_time = datetime.fromisoformat(
+                        start_info["dateTime"].replace("Z", "+00:00")
+                    )
+                    end_time = datetime.fromisoformat(
+                        end_info["dateTime"].replace("Z", "+00:00")
+                    )
+
+                    # Extract attendees
+                    attendees = []
+                    for attendee in event.get("attendees", []):
+                        email = attendee.get("emailAddress", {}).get("address", "")
+                        if email:
+                            attendees.append(email)
+
+                    # Handle recurrence
+                    is_recurring = event.get("recurrence") is not None
+                    recurrence_pattern = {}
+                    if is_recurring:
+                        recurrence_pattern = {
+                            "pattern": event.get("recurrence", {}),
+                            "series_id": event.get("seriesMasterId", ""),
+                        }
+
+                    calendar_event = CalendarEvent(
+                        external_id=event["id"],
+                        title=event.get("subject", "No Title"),
+                        description=event.get("body", {}).get("content", ""),
+                        start_time=start_time,
+                        end_time=end_time,
+                        location=event.get("location", {}).get("displayName", ""),
+                        source="microsoft365",
+                        is_all_day=event.get("isAllDay", False),
+                        is_recurring=is_recurring,
+                        recurrence_pattern=recurrence_pattern,
+                        attendees=attendees,
+                        priority=self._map_importance(
+                            event.get("importance", "normal")
+                        ),
+                    )
+
+                    calendar_events.append(calendar_event)
+
+                except Exception as e:
+                    logger.warning(f"Error parsing Microsoft 365 event: {e}")
+                    continue
+
+            logger.info(f"Fetched {len(calendar_events)} events from Microsoft 365")
+            return calendar_events
+
+        except Exception as e:
+            logger.error(f"Error fetching Microsoft 365 events: {e}")
+            return []
+
+    def _map_importance(self, importance: str) -> str:
+        """Map Microsoft 365 importance to priority"""
+        mapping = {"low": "low", "normal": "medium", "high": "high"}
+        return mapping.get(importance.lower(), "medium")
+
+
 async def run_calendar_sync(
     db_path: str = None, config_dict: Dict = None
 ) -> Dict[str, Any]:
@@ -701,10 +890,76 @@ async def run_calendar_sync(
             if hasattr(config, key):
                 setattr(config, key, value)
 
+    # Initialize sync services
     sync = CalendarSync(db, config)
-    results = await sync.sync_all_calendars()
 
-    return results
+    # Collect results from all calendar providers
+    all_results = {}
+
+    # Google Calendar sync
+    if config.google_credentials_file and os.path.exists(
+        config.google_credentials_file
+    ):
+        try:
+            google_results = await sync.sync_all_calendars()
+            all_results["google"] = google_results
+        except Exception as e:
+            logger.error(f"Google Calendar sync failed: {e}")
+            all_results["google"] = {"error": str(e)}
+
+    # Microsoft 365 sync
+    ms365_sync = Microsoft365CalendarSync(config)
+    if ms365_sync.authenticate():
+        try:
+            ms365_events = ms365_sync.fetch_events()
+            ms365_stored = sync.store_events(ms365_events)
+            all_results["microsoft365"] = {
+                "events_fetched": len(ms365_events),
+                "events_stored": ms365_stored,
+                "status": "success",
+            }
+        except Exception as e:
+            logger.error(f"Microsoft 365 sync failed: {e}")
+            all_results["microsoft365"] = {"error": str(e)}
+
+    # CalDAV sync
+    if CALDAV_AVAILABLE and config.caldav_url:
+        try:
+            caldav_sync = CalDAVSync(config)
+            if caldav_sync.connect():
+                caldav_events = caldav_sync.fetch_events()
+                caldav_stored = sync.store_events(caldav_events)
+                all_results["caldav"] = {
+                    "events_fetched": len(caldav_events),
+                    "events_stored": caldav_stored,
+                    "status": "success",
+                }
+        except Exception as e:
+            logger.error(f"CalDAV sync failed: {e}")
+            all_results["caldav"] = {"error": str(e)}
+
+    # Calculate summary
+    total_events = sum(
+        r.get("events_fetched", 0) for r in all_results.values() if isinstance(r, dict)
+    )
+    total_stored = sum(
+        r.get("events_stored", 0) for r in all_results.values() if isinstance(r, dict)
+    )
+
+    all_results["summary"] = {
+        "total_events_fetched": total_events,
+        "total_events_stored": total_stored,
+        "providers_synced": len(
+            [
+                k
+                for k, v in all_results.items()
+                if k != "summary" and isinstance(v, dict) and "error" not in v
+            ]
+        ),
+        "sync_timestamp": datetime.now().isoformat(),
+    }
+
+    return all_results
 
 
 if __name__ == "__main__":
