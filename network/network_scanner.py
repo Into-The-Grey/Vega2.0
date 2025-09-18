@@ -64,8 +64,22 @@ try:
     import dns.resolver
     import ssl
     import OpenSSL
+    import netifaces
+    import pyshark
 
     ANALYSIS_AVAILABLE = True
+except ImportError:
+    pass
+
+# Security assessment imports
+SECURITY_AVAILABLE = False
+try:
+    import python_nmap
+    from xml.etree import ElementTree as ET
+    import shodan
+    import censys.search
+
+    SECURITY_AVAILABLE = True
 except ImportError:
     pass
 
@@ -122,8 +136,8 @@ class NetworkDevice:
     os_fingerprint: str = ""
     last_seen: str = ""
     response_time: float = 0.0
-    open_ports: List[int] = None
-    services: List[Dict[str, Any]] = None
+    open_ports: Optional[List[int]] = None
+    services: Optional[List[Dict[str, Any]]] = None
     integration_potential: IntegrationPotential = IntegrationPotential.NONE
 
     def __post_init__(self):
@@ -143,10 +157,10 @@ class DiscoveredService:
     service_name: str
     version: str = ""
     banner: str = ""
-    endpoints: List[str] = None
+    endpoints: Optional[List[str]] = None
     authentication: str = ""
-    capabilities: List[str] = None
-    integration_methods: List[str] = None
+    capabilities: Optional[List[str]] = None
+    integration_methods: Optional[List[str]] = None
 
     def __post_init__(self):
         if self.endpoints is None:
@@ -177,7 +191,7 @@ class ScanConfiguration:
     """Network scanning configuration"""
 
     target_network: str = "192.168.1.0/24"
-    port_ranges: List[str] = None
+    port_ranges: Optional[List[str]] = None
     scan_timeout: int = 5
     max_threads: int = 50
     deep_scan: bool = False
@@ -193,7 +207,7 @@ class ScanConfiguration:
 class NetworkScanner:
     """Intelligent network discovery and integration engine"""
 
-    def __init__(self, config: ScanConfiguration = None):
+    def __init__(self, config: Optional[ScanConfiguration] = None):
         self.config = config or ScanConfiguration()
         self.base_dir = Path(__file__).parent
         self.state_dir = self.base_dir / "vega_state"
@@ -637,8 +651,428 @@ class NetworkScanner:
         elif service.port == 5432:
             service.service_name = "PostgreSQL"
 
-        service.capabilities.extend(["data_storage", "queries"])
-        service.integration_methods.append("database")
+        if service.capabilities is not None:
+            service.capabilities.extend(["data_storage", "queries"])
+        if service.integration_methods is not None:
+            service.integration_methods.append("database")
+
+    async def advanced_port_scan_nmap(self, ip: str) -> Dict[str, Any]:
+        """Perform advanced port scanning using nmap"""
+        if not NETWORK_AVAILABLE:
+            return {}
+
+        try:
+            nm = nmap.PortScanner()
+
+            # Comprehensive scan with service detection and OS fingerprinting
+            scan_args = "-sS -sV -O -A --script=default,discovery,safe"
+
+            # Perform the scan
+            nm.scan(ip, arguments=scan_args)
+
+            if ip not in nm.all_hosts():
+                return {}
+
+            host_info = nm[ip]
+
+            result = {
+                "open_ports": [],
+                "services": [],
+                "os_fingerprint": "",
+                "device_type_hints": [],
+                "vulnerabilities": [],
+                "security_info": {},
+            }
+
+            # Extract open ports and services
+            for protocol in host_info.all_protocols():
+                ports = host_info[protocol].keys()
+                for port in sorted(ports):
+                    port_info = host_info[protocol][port]
+
+                    if port_info["state"] == "open":
+                        result["open_ports"].append(port)
+
+                        service_info = {
+                            "port": port,
+                            "protocol": protocol,
+                            "service": port_info.get("name", "unknown"),
+                            "version": port_info.get("version", ""),
+                            "product": port_info.get("product", ""),
+                            "extrainfo": port_info.get("extrainfo", ""),
+                            "state": port_info["state"],
+                        }
+                        result["services"].append(service_info)
+
+            # Extract OS information
+            if "osmatch" in host_info:
+                os_matches = host_info["osmatch"]
+                if os_matches:
+                    best_match = max(os_matches, key=lambda x: int(x["accuracy"]))
+                    result["os_fingerprint"] = (
+                        f"{best_match['name']} (accuracy: {best_match['accuracy']}%)"
+                    )
+
+            # Extract device type hints from OS detection
+            if "osclass" in host_info:
+                for osclass in host_info["osclass"]:
+                    device_type = osclass.get("type", "").lower()
+                    if device_type:
+                        result["device_type_hints"].append(device_type)
+
+            return result
+
+        except Exception as e:
+            self.logger.error(f"❌ Nmap scan failed for {ip}: {e}")
+            return {}
+
+    async def vulnerability_assessment(
+        self, ip: str, ports: List[int]
+    ) -> List[Dict[str, Any]]:
+        """Perform vulnerability assessment on discovered services"""
+        vulnerabilities = []
+
+        if not SECURITY_AVAILABLE:
+            return vulnerabilities
+
+        try:
+            nm = nmap.PortScanner()
+
+            # Run vulnerability scripts
+            port_list = ",".join(map(str, ports)) if ports else "1-65535"
+            vuln_scripts = "vuln,exploit,malware"
+
+            scan_args = f"--script={vuln_scripts} -p{port_list}"
+            nm.scan(ip, arguments=scan_args)
+
+            if ip in nm.all_hosts():
+                host = nm[ip]
+
+                # Extract vulnerability information from script results
+                if "hostscript" in host:
+                    for script in host["hostscript"]:
+                        vuln_info = {
+                            "script": script["id"],
+                            "output": script["output"],
+                            "severity": self._assess_vulnerability_severity(
+                                script["output"]
+                            ),
+                            "cve_refs": self._extract_cve_refs(script["output"]),
+                        }
+                        vulnerabilities.append(vuln_info)
+
+                # Check port-specific vulnerabilities
+                for protocol in host.all_protocols():
+                    ports_data = host[protocol]
+                    for port in ports_data:
+                        if "script" in ports_data[port]:
+                            for script_name, script_data in ports_data[port][
+                                "script"
+                            ].items():
+                                vuln_info = {
+                                    "port": port,
+                                    "protocol": protocol,
+                                    "script": script_name,
+                                    "output": script_data,
+                                    "severity": self._assess_vulnerability_severity(
+                                        script_data
+                                    ),
+                                    "cve_refs": self._extract_cve_refs(script_data),
+                                }
+                                vulnerabilities.append(vuln_info)
+
+        except Exception as e:
+            self.logger.error(f"❌ Vulnerability assessment failed for {ip}: {e}")
+
+        return vulnerabilities
+
+    def _assess_vulnerability_severity(self, script_output: str) -> str:
+        """Assess vulnerability severity from script output"""
+        output_lower = script_output.lower()
+
+        if any(
+            keyword in output_lower
+            for keyword in ["critical", "remote code execution", "rce"]
+        ):
+            return "CRITICAL"
+        elif any(
+            keyword in output_lower
+            for keyword in ["high", "privilege escalation", "sql injection"]
+        ):
+            return "HIGH"
+        elif any(
+            keyword in output_lower
+            for keyword in ["medium", "information disclosure", "xss"]
+        ):
+            return "MEDIUM"
+        elif any(
+            keyword in output_lower for keyword in ["low", "denial of service", "dos"]
+        ):
+            return "LOW"
+        else:
+            return "INFO"
+
+    def _extract_cve_refs(self, script_output: str) -> List[str]:
+        """Extract CVE references from script output"""
+        import re
+
+        cve_pattern = r"CVE-\d{4}-\d{4,7}"
+        return re.findall(cve_pattern, script_output, re.IGNORECASE)
+
+    async def network_topology_discovery(self) -> Dict[str, Any]:
+        """Discover network topology and routing information"""
+        topology = {
+            "gateways": [],
+            "subnets": [],
+            "routing_table": [],
+            "network_interfaces": [],
+        }
+
+        try:
+            # Get network interfaces
+            if ANALYSIS_AVAILABLE:
+                interfaces = netifaces.interfaces()
+                for interface in interfaces:
+                    addrs = netifaces.ifaddresses(interface)
+                    interface_info = {"name": interface, "addresses": addrs}
+                    topology["network_interfaces"].append(interface_info)
+
+            # Get routing information
+            try:
+                result = subprocess.run(["ip", "route"], capture_output=True, text=True)
+                if result.stdout:
+                    for line in result.stdout.split("\n"):
+                        if line.strip():
+                            topology["routing_table"].append(line.strip())
+            except:
+                pass
+
+            # Discover gateways
+            try:
+                result = subprocess.run(
+                    ["ip", "route", "show", "default"], capture_output=True, text=True
+                )
+                if result.stdout:
+                    for line in result.stdout.split("\n"):
+                        if "default via" in line:
+                            parts = line.split()
+                            if len(parts) >= 3:
+                                gateway_ip = parts[2]
+                                topology["gateways"].append(gateway_ip)
+            except:
+                pass
+
+        except Exception as e:
+            self.logger.error(f"❌ Network topology discovery failed: {e}")
+
+        return topology
+
+    async def traffic_analysis(self, duration: int = 60) -> Dict[str, Any]:
+        """Analyze network traffic for security insights"""
+        traffic_data = {
+            "protocols": {},
+            "suspicious_activity": [],
+            "top_talkers": [],
+            "duration": duration,
+        }
+
+        if not ANALYSIS_AVAILABLE:
+            return traffic_data
+
+        try:
+            # Note: This requires pyshark and appropriate permissions
+            # In production, this would need to be run with elevated privileges
+
+            # Placeholder for traffic analysis - would require root privileges
+            self.logger.info(
+                f"🔍 Traffic analysis placeholder - would monitor for {duration} seconds"
+            )
+
+            # Example of what this would do:
+            # - Capture packets using pyshark
+            # - Analyze protocols and identify anomalies
+            # - Detect suspicious traffic patterns
+            # - Identify top communicating hosts
+
+        except Exception as e:
+            self.logger.error(f"❌ Traffic analysis failed: {e}")
+
+        return traffic_data
+
+    async def security_assessment(self, device: NetworkDevice) -> Dict[str, Any]:
+        """Comprehensive security assessment of a device"""
+        assessment = {
+            "device_ip": device.ip_address,
+            "security_score": 10,  # Start with perfect score, deduct for issues
+            "findings": [],
+            "recommendations": [],
+            "risk_level": "LOW",
+        }
+
+        try:
+            # Check for common security issues
+
+            # 1. Open ports assessment
+            if device.open_ports:
+                high_risk_ports = [21, 23, 53, 135, 139, 445, 1433, 1521, 3389]
+                risky_ports = [
+                    port for port in device.open_ports if port in high_risk_ports
+                ]
+
+                if risky_ports:
+                    assessment["findings"].append(
+                        {
+                            "type": "risky_ports",
+                            "severity": "HIGH",
+                            "description": f"High-risk ports open: {risky_ports}",
+                            "ports": risky_ports,
+                        }
+                    )
+                    assessment["security_score"] -= len(risky_ports) * 2
+                    assessment["recommendations"].append(
+                        "Close unnecessary high-risk ports"
+                    )
+
+            # 2. Service version assessment
+            outdated_services = []
+            for service_data in device.services or []:
+                if isinstance(service_data, dict) and "version" in service_data:
+                    # Placeholder for version vulnerability checking
+                    # In practice, this would check against CVE databases
+                    if self._is_service_outdated(service_data):
+                        outdated_services.append(service_data)
+
+            if outdated_services:
+                assessment["findings"].append(
+                    {
+                        "type": "outdated_services",
+                        "severity": "MEDIUM",
+                        "description": f"Potentially outdated services detected: {len(outdated_services)}",
+                        "services": outdated_services,
+                    }
+                )
+                assessment["security_score"] -= len(outdated_services)
+                assessment["recommendations"].append(
+                    "Update services to latest versions"
+                )
+
+            # 3. Device type specific checks
+            if device.device_type == DeviceType.IOT:
+                assessment["findings"].append(
+                    {
+                        "type": "iot_device",
+                        "severity": "INFO",
+                        "description": "IoT device detected - ensure proper segmentation",
+                    }
+                )
+                assessment["recommendations"].append(
+                    "Place IoT devices on separate network segment"
+                )
+
+            # 4. Default credentials check (placeholder)
+            if self._check_default_credentials(device):
+                assessment["findings"].append(
+                    {
+                        "type": "default_credentials",
+                        "severity": "CRITICAL",
+                        "description": "Default credentials detected",
+                    }
+                )
+                assessment["security_score"] -= 5
+                assessment["recommendations"].append(
+                    "Change default passwords immediately"
+                )
+
+            # Determine overall risk level
+            if assessment["security_score"] <= 3:
+                assessment["risk_level"] = "CRITICAL"
+            elif assessment["security_score"] <= 5:
+                assessment["risk_level"] = "HIGH"
+            elif assessment["security_score"] <= 7:
+                assessment["risk_level"] = "MEDIUM"
+            else:
+                assessment["risk_level"] = "LOW"
+
+        except Exception as e:
+            self.logger.error(
+                f"❌ Security assessment failed for {device.ip_address}: {e}"
+            )
+
+        return assessment
+
+    def _is_service_outdated(self, service_data: Dict[str, Any]) -> bool:
+        """Check if a service version appears outdated (placeholder implementation)"""
+        # This would be implemented with a vulnerability database lookup
+        # For now, just return False as placeholder
+        return False
+
+    def _check_default_credentials(self, device: NetworkDevice) -> bool:
+        """Check for default credentials (placeholder implementation)"""
+        # This would attempt common default credentials
+        # For now, just return False as placeholder
+        return False
+
+    async def generate_security_report(self) -> Dict[str, Any]:
+        """Generate comprehensive security report for all discovered devices"""
+        report = {
+            "scan_timestamp": datetime.now().isoformat(),
+            "devices_assessed": len(self.discovered_devices),
+            "overall_risk_level": "LOW",
+            "security_summary": {
+                "critical_findings": 0,
+                "high_findings": 0,
+                "medium_findings": 0,
+                "low_findings": 0,
+            },
+            "device_assessments": [],
+            "network_topology": {},
+            "recommendations": [],
+        }
+
+        try:
+            # Assess each device
+            for device in self.discovered_devices.values():
+                assessment = await self.security_assessment(device)
+                report["device_assessments"].append(assessment)
+
+                # Count findings by severity
+                for finding in assessment["findings"]:
+                    severity = finding["severity"].lower()
+                    if severity in report["security_summary"]:
+                        report["security_summary"][f"{severity}_findings"] += 1
+
+            # Determine overall risk level
+            if report["security_summary"]["critical_findings"] > 0:
+                report["overall_risk_level"] = "CRITICAL"
+            elif report["security_summary"]["high_findings"] > 0:
+                report["overall_risk_level"] = "HIGH"
+            elif report["security_summary"]["medium_findings"] > 0:
+                report["overall_risk_level"] = "MEDIUM"
+
+            # Get network topology
+            report["network_topology"] = await self.network_topology_discovery()
+
+            # Generate overall recommendations
+            if report["security_summary"]["critical_findings"] > 0:
+                report["recommendations"].append(
+                    "Address critical security findings immediately"
+                )
+            if report["security_summary"]["high_findings"] > 0:
+                report["recommendations"].append("Prioritize high-risk vulnerabilities")
+
+            report["recommendations"].extend(
+                [
+                    "Implement network segmentation for IoT devices",
+                    "Regular security scanning and updates",
+                    "Monitor network traffic for anomalies",
+                    "Use strong, unique passwords for all devices",
+                ]
+            )
+
+        except Exception as e:
+            self.logger.error(f"❌ Security report generation failed: {e}")
+
+        return report
 
     def analyze_integration_opportunities(self) -> List[IntegrationOpportunity]:
         """Analyze discovered services for integration opportunities"""
@@ -646,7 +1080,7 @@ class NetworkScanner:
 
         for service in self.discovered_services:
             # High potential: Services with APIs
-            if "api" in service.integration_methods:
+            if service.integration_methods and "api" in service.integration_methods:
                 opportunity = IntegrationOpportunity(
                     device_ip=service.device_ip,
                     service=service,
@@ -664,7 +1098,7 @@ class NetworkScanner:
                 opportunities.append(opportunity)
 
             # Medium potential: Web interfaces
-            elif "web" in service.integration_methods:
+            elif service.integration_methods and "web" in service.integration_methods:
                 opportunity = IntegrationOpportunity(
                     device_ip=service.device_ip,
                     service=service,
@@ -905,7 +1339,7 @@ class PlexClient:
             self.scan_in_progress = False
 
     async def deep_scan(self) -> Dict[str, Any]:
-        """Perform comprehensive deep scan"""
+        """Perform comprehensive deep scan with security assessment"""
         self.logger.info("🔬 Starting deep network scan...")
         self.scan_in_progress = True
         scan_start = datetime.now()
@@ -914,16 +1348,57 @@ class PlexClient:
             # First do quick scan to find devices
             await self.quick_scan()
 
-            # Deep analysis of each device
+            # Enhanced analysis of each device
             for device in self.discovered_devices.values():
+                # Advanced nmap scanning if available
+                if NETWORK_AVAILABLE:
+                    nmap_results = await self.advanced_port_scan_nmap(device.ip_address)
+                    if nmap_results:
+                        # Update device information with nmap results
+                        if nmap_results.get("open_ports"):
+                            device.open_ports = nmap_results["open_ports"]
+                        if nmap_results.get("os_fingerprint"):
+                            device.os_fingerprint = nmap_results["os_fingerprint"]
+
+                        # Update device type based on OS detection
+                        for hint in nmap_results.get("device_type_hints", []):
+                            if hint in ["router", "switch"]:
+                                device.device_type = DeviceType.ROUTER
+                            elif hint in ["printer"]:
+                                device.device_type = DeviceType.PRINTER
+                            elif hint in ["media device", "tv"]:
+                                device.device_type = DeviceType.SMART_TV
+
                 # Service analysis for each open port
-                for port in device.open_ports:
-                    service = await self.analyze_service(device.ip_address, port)
-                    if service:
-                        self.discovered_services.append(service)
+                if device.open_ports:
+                    for port in device.open_ports:
+                        service = await self.analyze_service(device.ip_address, port)
+                        if service:
+                            self.discovered_services.append(service)
+
+                # Vulnerability assessment if enabled
+                if self.config.vulnerability_scan and device.open_ports:
+                    vulnerabilities = await self.vulnerability_assessment(
+                        device.ip_address, device.open_ports
+                    )
+                    if vulnerabilities:
+                        # Store vulnerabilities in device services data
+                        if not device.services:
+                            device.services = []
+                        device.services.extend(
+                            [
+                                {"type": "vulnerability", "data": vuln}
+                                for vuln in vulnerabilities
+                            ]
+                        )
 
             # Analyze integration opportunities
             self.integration_opportunities = self.analyze_integration_opportunities()
+
+            # Generate security report if security scanning was enabled
+            security_report = None
+            if self.config.vulnerability_scan:
+                security_report = await self.generate_security_report()
 
             scan_end = datetime.now()
 
@@ -935,6 +1410,7 @@ class PlexClient:
                 "integration_opportunities": len(self.integration_opportunities),
                 "target_network": self.config.target_network,
                 "timestamp": scan_end.isoformat(),
+                "security_assessment": security_report if security_report else None,
             }
 
             self.save_discovery_results()
@@ -1018,10 +1494,19 @@ class PlexClient:
 
 async def main():
     """Main entry point"""
-    parser = argparse.ArgumentParser(description="Vega Network Scanner")
+    parser = argparse.ArgumentParser(
+        description="Vega Network Scanner - Advanced Security Assessment"
+    )
     parser.add_argument("--scan", action="store_true", help="Perform network scan")
     parser.add_argument("--quick", action="store_true", help="Quick scan mode")
-    parser.add_argument("--deep", action="store_true", help="Deep scan mode")
+    parser.add_argument(
+        "--deep", action="store_true", help="Deep scan mode with service detection"
+    )
+    parser.add_argument(
+        "--security",
+        action="store_true",
+        help="Enable security assessment and vulnerability scanning",
+    )
     parser.add_argument("--monitor", action="store_true", help="Continuous monitoring")
     parser.add_argument(
         "--integration-analysis",
@@ -1030,7 +1515,29 @@ async def main():
     )
     parser.add_argument("--daemon", action="store_true", help="Run in daemon mode")
     parser.add_argument(
+        "--topology", action="store_true", help="Discover network topology"
+    )
+    parser.add_argument(
+        "--traffic",
+        action="store_true",
+        help="Analyze network traffic (requires elevated privileges)",
+    )
+    parser.add_argument(
+        "--security-report",
+        action="store_true",
+        help="Generate comprehensive security report",
+    )
+    parser.add_argument(
         "--network", type=str, help="Target network (e.g., 192.168.1.0/24)"
+    )
+    parser.add_argument(
+        "--ports", type=str, help="Port ranges to scan (e.g., 1-1000,8000-8100)"
+    )
+    parser.add_argument(
+        "--threads", type=int, default=50, help="Maximum number of concurrent threads"
+    )
+    parser.add_argument(
+        "--timeout", type=int, default=5, help="Scan timeout in seconds"
     )
 
     args = parser.parse_args()
@@ -1045,12 +1552,37 @@ async def main():
     config = ScanConfiguration()
     if args.network:
         config.target_network = args.network
+    if args.ports:
+        config.port_ranges = args.ports.split(",")
+    if args.security:
+        config.vulnerability_scan = True
+    config.max_threads = args.threads
+    config.scan_timeout = args.timeout
 
     scanner = NetworkScanner(config)
 
     try:
         if args.monitor or args.daemon:
             await scanner.continuous_monitoring()
+
+        elif args.topology:
+            topology = await scanner.network_topology_discovery()
+            print("🌐 Network Topology:")
+            print(json.dumps(topology, indent=2))
+
+        elif args.traffic:
+            print("🔍 Starting traffic analysis...")
+            traffic_data = await scanner.traffic_analysis(duration=60)
+            print(json.dumps(traffic_data, indent=2))
+
+        elif args.security_report:
+            # Load existing data or perform quick scan first
+            if not scanner.discovered_devices:
+                await scanner.quick_scan()
+            report = await scanner.generate_security_report()
+            print("🛡️ Security Assessment Report:")
+            print(json.dumps(report, indent=2, default=str))
+
         elif args.scan:
             if args.deep:
                 results = await scanner.deep_scan()
@@ -1062,6 +1594,7 @@ async def main():
         elif args.integration_analysis:
             # Load existing data and analyze
             opportunities = scanner.analyze_integration_opportunities()
+            print("🔗 Integration Opportunities:")
             print(
                 json.dumps(
                     [asdict(opp) for opp in opportunities], indent=2, default=str
@@ -1069,15 +1602,39 @@ async def main():
             )
 
         else:
-            print("🔍 Vega Network Scanner")
-            print("Use --scan --quick for quick discovery")
-            print("Use --scan --deep for comprehensive analysis")
-            print("Use --monitor for continuous monitoring")
+            print("🔍 Vega Network Scanner - Advanced Security Assessment")
+            print("")
+            print("Basic Usage:")
+            print("  --scan --quick              Quick network discovery")
+            print("  --scan --deep               Comprehensive service analysis")
+            print(
+                "  --scan --deep --security    Deep scan with vulnerability assessment"
+            )
+            print("")
+            print("Security Features:")
+            print("  --security-report           Generate security assessment report")
+            print("  --topology                  Discover network topology")
+            print(
+                "  --traffic                   Analyze network traffic (requires root)"
+            )
+            print("")
+            print("Monitoring:")
+            print("  --monitor                   Continuous monitoring mode")
+            print("  --integration-analysis      Analyze integration opportunities")
+            print("")
+            print("Options:")
+            print("  --network 192.168.1.0/24    Specify target network")
+            print("  --ports 1-1000,8000-8100    Specify port ranges")
+            print("  --threads 100               Set max concurrent threads")
+            print("  --security                  Enable vulnerability scanning")
 
     except KeyboardInterrupt:
         print("\n🛑 Scanner stopped by user")
     except Exception as e:
         print(f"❌ Scanner error: {e}")
+        import traceback
+
+        traceback.print_exc()
 
 
 if __name__ == "__main__":
