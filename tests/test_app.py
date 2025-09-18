@@ -125,7 +125,7 @@ class TestChatEndpoints:
     @patch("core.app.query_llm")
     def test_chat_llm_error(self, mock_llm, mock_cfg):
         """Test chat request when LLM fails"""
-        from llm import LLMBackendError
+        from core.llm import LLMBackendError
 
         mock_cfg.api_key = TEST_API_KEY
         mock_cfg.api_keys_extra = []
