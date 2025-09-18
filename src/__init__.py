@@ -27,6 +27,7 @@ try:
     from .vega import integrations
     from .vega import datasets
     from .vega import training
+
     CORE_MODULES_AVAILABLE = True
 except ImportError:
     CORE_MODULES_AVAILABLE = False
@@ -37,21 +38,22 @@ try:
     from .vega import intelligence
     from .vega import personality
     from .vega import user
+
     OPTIONAL_MODULES_AVAILABLE = True
 except ImportError:
     OPTIONAL_MODULES_AVAILABLE = False
 
 __all__ = [
-    '__version__',
-    '__author__',
-    '__email__',
-    '__license__',
-    'CORE_MODULES_AVAILABLE',
-    'OPTIONAL_MODULES_AVAILABLE',
+    "__version__",
+    "__author__",
+    "__email__",
+    "__license__",
+    "CORE_MODULES_AVAILABLE",
+    "OPTIONAL_MODULES_AVAILABLE",
 ]
 
 if CORE_MODULES_AVAILABLE:
-    __all__.extend(['core', 'integrations', 'datasets', 'training'])
+    __all__.extend(["core", "integrations", "datasets", "training"])
 
 if OPTIONAL_MODULES_AVAILABLE:
-    __all__.extend(['voice', 'intelligence', 'personality', 'user'])
+    __all__.extend(["voice", "intelligence", "personality", "user"])

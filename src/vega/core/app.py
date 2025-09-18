@@ -16,6 +16,7 @@ from pydantic import BaseModel
 try:
     import sys
     from pathlib import Path
+
     tools_path = Path(__file__).parent.parent.parent.parent / "tools"
     sys.path.insert(0, str(tools_path))
     from utils.commands_generator import (
@@ -68,6 +69,7 @@ app = FastAPI(title="Vega2.0", version="2.0.0")
 # Mount static files - use path relative to project root
 import os
 from pathlib import Path
+
 static_dir = Path(__file__).parent.parent.parent.parent / "tools" / "static"
 if static_dir.exists():
     app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")

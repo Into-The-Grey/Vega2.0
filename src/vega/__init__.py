@@ -10,7 +10,7 @@ Modules:
 --------
 - core: Core application logic, APIs, and services
 - integrations: External service integrations
-- datasets: Dataset management and preparation  
+- datasets: Dataset management and preparation
 - training: Model training and fine-tuning
 - learning: Learning and evaluation systems
 - voice: Voice processing capabilities
@@ -29,15 +29,17 @@ from . import core
 # Data and ML components
 try:
     from . import datasets
-    from . import training 
+    from . import training
     from . import learning
+
     DATA_ML_AVAILABLE = True
 except ImportError:
     DATA_ML_AVAILABLE = False
 
-# Integration components  
+# Integration components
 try:
     from . import integrations
+
     INTEGRATIONS_AVAILABLE = True
 except ImportError:
     INTEGRATIONS_AVAILABLE = False
@@ -48,22 +50,18 @@ try:
     from . import intelligence
     from . import personality
     from . import user
+
     ADVANCED_AVAILABLE = True
 except ImportError:
     ADVANCED_AVAILABLE = False
 
-__all__ = [
-    'core',
-    'DATA_ML_AVAILABLE',
-    'INTEGRATIONS_AVAILABLE', 
-    'ADVANCED_AVAILABLE'
-]
+__all__ = ["core", "DATA_ML_AVAILABLE", "INTEGRATIONS_AVAILABLE", "ADVANCED_AVAILABLE"]
 
 if DATA_ML_AVAILABLE:
-    __all__.extend(['datasets', 'training', 'learning'])
-    
+    __all__.extend(["datasets", "training", "learning"])
+
 if INTEGRATIONS_AVAILABLE:
-    __all__.append('integrations')
-    
+    __all__.append("integrations")
+
 if ADVANCED_AVAILABLE:
-    __all__.extend(['voice', 'intelligence', 'personality', 'user'])
+    __all__.extend(["voice", "intelligence", "personality", "user"])
