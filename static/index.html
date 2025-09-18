@@ -367,6 +367,10 @@
                 <div class="nav-item" data-tab="status">📊 System Status</div>
                 <div class="nav-item" data-tab="logs">📋 Log Viewer</div>
                 <div class="nav-item" data-tab="config">⚙️ Configuration</div>
+                <a class="nav-item" href="/docs/commands" target="_blank">🧾 Commands (Auto)</a>
+                <div class="nav-item" data-tab="nudges" id="nudgesNav">🔔 Proactive Nudges <span id="nudgesBadge"
+                        style="display:none;background:#f38ba8;color:#fff;border-radius:50%;padding:0 7px;font-size:0.8em;vertical-align:middle;margin-left:4px;">0</span>
+                </div>
             </div>
 
             <div class="nav-section">
@@ -544,6 +548,33 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Proactive Nudges -->
+            <div id="nudges" class="tab-content">
+                <div class="card">
+                    <h3>🔔 Proactive Nudges</h3>
+                    <p>Vega can occasionally propose a short, purposeful conversation. Accept to start, or decline to
+                        skip.</p>
+                    <div class="form-group">
+                        <button class="btn btn-primary" onclick="checkForNudge()">Check for Nudge</button>
+                        <button class="btn" onclick="loadPendingNudges()">Refresh Pending</button>
+                    </div>
+                    <div id="pendingNudges"></div>
+                </div>
+
+                <div class="card" id="proactiveChatCard" style="display:none;">
+                    <h3>🗣️ Active Proactive Session</h3>
+                    <div class="chat-container">
+                        <div class="chat-messages" id="proactiveMessages"></div>
+                        <div class="chat-input">
+                            <input type="text" id="proactiveInput" class="form-control" placeholder="Type your reply..."
+                                onkeypress="handleProactiveKeypress(event)">
+                            <button class="btn btn-primary" onclick="sendProactiveMessage()">Send</button>
+                            <button class="btn btn-warning" onclick="endProactiveSession()">End</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -552,6 +583,7 @@
         let autoRefreshInterval = null;
         let currentLogModule = '';
         let currentConfigModule = '';
+        let proactiveSessionId = '';
 
         // Initialize the application
         document.addEventListener('DOMContentLoaded', function () {
@@ -562,6 +594,25 @@
             await loadModules();
             await loadSystemStatus();
             setupTabNavigation();
+            updateNudgesBadge();
+            setInterval(updateNudgesBadge, 60000); // update badge every minute
+        }
+        async function updateNudgesBadge() {
+            try {
+                const data = await apiCall('/proactive/pending');
+                const count = (data.pending || []).length;
+                const badge = document.getElementById('nudgesBadge');
+                if (count > 0) {
+                    badge.textContent = count;
+                    badge.style.display = 'inline-block';
+                } else {
+                    badge.style.display = 'none';
+                }
+            } catch (e) {
+                // hide badge on error
+                const badge = document.getElementById('nudgesBadge');
+                badge.style.display = 'none';
+            }
         }
 
         // Tab navigation
@@ -599,6 +650,9 @@
                         break;
                     case 'llm-behavior':
                         loadLLMBehavior();
+                        break;
+                    case 'nudges':
+                        loadPendingNudges();
                         break;
                     case 'voice':
                         loadVoiceSettings();
@@ -807,6 +861,136 @@
             messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
             messagesContainer.appendChild(messageDiv);
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        // Proactive nudge functions
+        async function checkForNudge() {
+            try {
+                const res = await apiCall('/proactive/propose', {
+                    method: 'POST',
+                    body: JSON.stringify({ max_per_day: 5 })
+                });
+                if (res && res.id) {
+                    showAlert('New nudge proposed', 'success');
+                    loadPendingNudges();
+                    updateNudgesBadge();
+                } else {
+                    showAlert('No nudges at this time', 'warning');
+                }
+            } catch (e) {
+                // handled by apiCall
+            }
+        }
+
+        async function loadPendingNudges() {
+            const container = document.getElementById('pendingNudges');
+            container.innerHTML = '<div class="loading"><div class="spinner"></div> Loading nudges...</div>';
+            try {
+                const data = await apiCall('/proactive/pending');
+                const list = data.pending || [];
+                if (list.length === 0) {
+                    container.innerHTML = '<div class="alert alert-warning">No pending nudges.</div>';
+                    updateNudgesBadge();
+                    return;
+                }
+                container.innerHTML = '';
+                list.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                        <h3>${item.topic}</h3>
+                        <p><em>${item.reason}</em></p>
+                        <p>${item.message}</p>
+                        <div>
+                            <button class="btn btn-success" onclick="acceptNudge('${item.id}')">Accept</button>
+                            <button class="btn btn-warning" onclick="declineNudge('${item.id}')">Decline</button>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+                updateNudgesBadge();
+            } catch (e) {
+                container.innerHTML = '<div class="alert alert-error">Failed to load nudges</div>';
+                updateNudgesBadge();
+            }
+        }
+
+        async function acceptNudge(id) {
+            try {
+                const res = await apiCall(`/proactive/accept?proposed_id=${encodeURIComponent(id)}`, { method: 'POST' });
+                proactiveSessionId = res.session_id;
+                showAlert('Proactive session started', 'success');
+                document.getElementById('proactiveChatCard').style.display = 'block';
+                // Load session to get the starter assistant message
+                const sess = await apiCall(`/proactive/session/${proactiveSessionId}`);
+                const msgs = document.getElementById('proactiveMessages');
+                msgs.innerHTML = '';
+                (sess.messages || []).forEach(m => addProactiveMessage(m.role, m.text));
+                updateNudgesBadge();
+            } catch (e) {
+                // handled by apiCall
+            }
+        }
+
+        async function declineNudge(id) {
+            try {
+                await apiCall(`/proactive/decline?proposed_id=${encodeURIComponent(id)}`, { method: 'POST' });
+                showAlert('Nudge declined', 'warning');
+                loadPendingNudges();
+                updateNudgesBadge();
+            } catch (e) {
+                // handled by apiCall
+            }
+        }
+
+        function addProactiveMessage(role, text) {
+            const messagesContainer = document.getElementById('proactiveMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${role}`;
+            const sender = role === 'user' ? 'You' : 'Vega';
+            messageDiv.innerHTML = `<strong>${sender}:</strong> ${text}`;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        async function sendProactiveMessage() {
+            const input = document.getElementById('proactiveInput');
+            const message = input.value.trim();
+            if (!message || !proactiveSessionId) return;
+            addProactiveMessage('user', message);
+            input.value = '';
+            try {
+                const res = await apiCall('/proactive/send', {
+                    method: 'POST',
+                    body: JSON.stringify({ session_id: proactiveSessionId, text: message })
+                });
+                addProactiveMessage('assistant', res.reply);
+                if (res.ended) {
+                    showAlert('Session ended', 'success');
+                    proactiveSessionId = '';
+                    document.getElementById('proactiveChatCard').style.display = 'none';
+                }
+            } catch (e) {
+                addProactiveMessage('assistant', 'Error: ' + e.message);
+            }
+        }
+
+        function handleProactiveKeypress(event) {
+            if (event.key === 'Enter') {
+                sendProactiveMessage();
+            }
+        }
+
+        async function endProactiveSession() {
+            if (!proactiveSessionId) return;
+            try {
+                await apiCall(`/proactive/end?session_id=${encodeURIComponent(proactiveSessionId)}`, { method: 'POST' });
+                showAlert('Session ended', 'warning');
+                proactiveSessionId = '';
+                document.getElementById('proactiveChatCard').style.display = 'none';
+            } catch (e) {
+                // handled by apiCall
+            }
         }
 
         // System status functions
