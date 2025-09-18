@@ -87,6 +87,17 @@ app.add_typer(gen_app, name="gen")
 app.add_typer(osint_app, name="osint")
 app.add_typer(net_app, name="net")
 
+# Add autonomous feature commands
+backup_app = typer.Typer(help="Backup and restore operations")
+voice_app = typer.Typer(help="Voice profile management")
+kb_app = typer.Typer(help="Web knowledge base operations")
+finance_app = typer.Typer(help="Financial and investment operations")
+
+app.add_typer(backup_app, name="backup")
+app.add_typer(voice_app, name="voice")
+app.add_typer(kb_app, name="kb")
+app.add_typer(finance_app, name="finance")
+
 # Add memory commands if available
 try:
     from memory import MemoryManager
@@ -821,6 +832,257 @@ def net_scan(host: str = typer.Argument(...), ports: str = typer.Argument(...)):
     if not port_list:
         console.print("No valid ports", style="yellow")
         return
+
+
+# Backup Commands
+@backup_app.command("create")
+def backup_create(tag: str = typer.Option("manual", help="Tag for the backup")):
+    """Create a new backup of Vega system."""
+    try:
+        import sys
+
+        sys.path.append("/home/ncacord/Vega2.0")
+        from vega_state.backup_manager import create_backup
+
+        backup_path = create_backup(tag)
+        console.print(f"✓ Backup created: {backup_path}", style="green")
+    except Exception as e:
+        console.print(f"✗ Backup failed: {e}", style="red")
+
+
+@backup_app.command("list")
+def backup_list():
+    """List all available backups."""
+    try:
+        import sys
+
+        sys.path.append("/home/ncacord/Vega2.0")
+        from vega_state.backup_manager import list_backups
+
+        backups = list_backups()
+        if not backups:
+            console.print("No backups found", style="yellow")
+            return
+
+        table = Table(title="Available Backups")
+        table.add_column("Backup File", style="cyan")
+
+        for backup in backups:
+            table.add_row(backup)
+
+        console.print(table)
+    except Exception as e:
+        console.print(f"✗ Error listing backups: {e}", style="red")
+
+
+@backup_app.command("restore")
+def backup_restore(
+    backup_file: str = typer.Argument(..., help="Backup file to restore"),
+    restore_dir: str = typer.Option(None, help="Directory to restore to"),
+):
+    """Restore from a backup."""
+    try:
+        import sys
+
+        sys.path.append("/home/ncacord/Vega2.0")
+        from vega_state.backup_manager import restore_backup
+
+        restore_backup(backup_file, restore_dir)
+        console.print(f"✓ Restored from backup: {backup_file}", style="green")
+    except Exception as e:
+        console.print(f"✗ Restore failed: {e}", style="red")
+
+
+@backup_app.command("prune")
+def backup_prune(keep: int = typer.Option(5, help="Number of backups to keep")):
+    """Prune old backups, keeping only the most recent."""
+    try:
+        import sys
+
+        sys.path.append("/home/ncacord/Vega2.0")
+        from vega_state.backup_manager import prune_backups
+
+        prune_backups(keep)
+        console.print(f"✓ Pruned backups, kept {keep} most recent", style="green")
+    except Exception as e:
+        console.print(f"✗ Prune failed: {e}", style="red")
+
+
+# Voice Profile Commands
+@voice_app.command("add-sample")
+def voice_add_sample(
+    file_path: str = typer.Argument(..., help="Path to voice sample file")
+):
+    """Add a voice sample to the profile."""
+    try:
+        import sys
+
+        sys.path.append("/home/ncacord/Vega2.0")
+        from vega_state.voice_profile_manager import add_voice_sample
+
+        dest = add_voice_sample(file_path)
+        console.print(f"✓ Voice sample added: {dest}", style="green")
+    except Exception as e:
+        console.print(f"✗ Failed to add voice sample: {e}", style="red")
+
+
+@voice_app.command("update-profile")
+def voice_update_profile():
+    """Update voice profile from collected samples."""
+    try:
+        import sys
+
+        sys.path.append("/home/ncacord/Vega2.0")
+        from vega_state.voice_profile_manager import update_voice_profile
+
+        profile = update_voice_profile()
+        console.print(
+            f"✓ Voice profile updated with {profile['samples']} samples", style="green"
+        )
+    except Exception as e:
+        console.print(f"✗ Failed to update voice profile: {e}", style="red")
+
+
+@voice_app.command("status")
+def voice_status():
+    """Show voice profile status."""
+    try:
+        import sys
+
+        sys.path.append("/home/ncacord/Vega2.0")
+        from vega_state.voice_profile_manager import (
+            get_voice_profile,
+            list_voice_samples,
+        )
+
+        profile = get_voice_profile()
+        samples = list_voice_samples()
+
+        if profile:
+            console.print(f"Profile last updated: {profile['updated']}")
+            console.print(f"Total samples: {len(samples)}")
+        else:
+            console.print("No voice profile found", style="yellow")
+
+    except Exception as e:
+        console.print(f"✗ Error getting voice status: {e}", style="red")
+
+
+# Knowledge Base Commands
+@kb_app.command("add-site")
+def kb_add_site(
+    category: str = typer.Argument(..., help="Category for the site"),
+    url: str = typer.Argument(..., help="URL to add"),
+):
+    """Add a site to the knowledge base."""
+    try:
+        import sys
+
+        sys.path.append("/home/ncacord/Vega2.0")
+        from vega_state.web_knowledge_base import add_site
+
+        add_site(category, url)
+        console.print(f"✓ Added {url} to category '{category}'", style="green")
+    except Exception as e:
+        console.print(f"✗ Failed to add site: {e}", style="red")
+
+
+@kb_app.command("list")
+def kb_list(
+    category: str = typer.Option(None, help="Category to list (all if not specified)")
+):
+    """List sites in the knowledge base."""
+    try:
+        import sys
+
+        sys.path.append("/home/ncacord/Vega2.0")
+        from vega_state.web_knowledge_base import list_sites
+
+        sites = list_sites(category)
+
+        if not sites:
+            console.print("No sites found", style="yellow")
+            return
+
+        for cat, urls in sites.items():
+            console.print(f"\n[bold]{cat}:[/bold]")
+            for url in urls:
+                console.print(f"  • {url}")
+
+    except Exception as e:
+        console.print(f"✗ Error listing sites: {e}", style="red")
+
+
+# Financial Commands
+@finance_app.command("invest")
+def finance_invest(
+    symbol: str = typer.Argument(..., help="Stock symbol"),
+    shares: float = typer.Argument(..., help="Number of shares"),
+    price: float = typer.Argument(..., help="Price per share"),
+):
+    """Add an investment to the portfolio."""
+    try:
+        import sys
+
+        sys.path.append("/home/ncacord/Vega2.0")
+        from vega_state.finance_module import add_investment
+
+        add_investment(symbol, shares, price)
+        console.print(
+            f"✓ Added investment: {shares} shares of {symbol} at ${price}",
+            style="green",
+        )
+    except Exception as e:
+        console.print(f"✗ Failed to add investment: {e}", style="red")
+
+
+@finance_app.command("portfolio")
+def finance_portfolio():
+    """Show current investment portfolio."""
+    try:
+        import sys
+
+        sys.path.append("/home/ncacord/Vega2.0")
+        from vega_state.finance_module import list_investments
+
+        investments = list_investments()
+
+        if not investments:
+            console.print("No investments found", style="yellow")
+            return
+
+        table = Table(title="Investment Portfolio")
+        table.add_column("Symbol", style="cyan")
+        table.add_column("Shares", style="white")
+        table.add_column("Price", style="green")
+        table.add_column("Date", style="yellow")
+
+        for inv in investments:
+            table.add_row(
+                inv["symbol"],
+                str(inv["shares"]),
+                f"${inv['price']:.2f}",
+                inv["date"][:10],
+            )
+
+        console.print(table)
+    except Exception as e:
+        console.print(f"✗ Error showing portfolio: {e}", style="red")
+
+
+@finance_app.command("price")
+def finance_price(symbol: str = typer.Argument(..., help="Stock symbol to check")):
+    """Get current stock price."""
+    try:
+        import sys
+
+        sys.path.append("/home/ncacord/Vega2.0")
+        from vega_state.finance_module import fetch_stock_price
+
+        price = fetch_stock_price(symbol)
+        console.print(f"{symbol}: ${price:.2f}", style="green")
+    except Exception as e:
+        console.print(f"✗ Failed to fetch price: {e}", style="red")
 
     async def _run():
         res = await tcp_scan(host, port_list)

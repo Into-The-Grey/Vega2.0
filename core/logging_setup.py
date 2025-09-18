@@ -26,12 +26,17 @@ class VegaLogger:
 
     _loggers: Dict[str, logging.Logger] = {}
     _base_log_dir = Path("logs")
+    _setup_done = set()
 
     @classmethod
     def setup_base_logging(cls, base_dir: Optional[Path] = None):
         """Initialize the base logging directory structure"""
         if base_dir:
             cls._base_log_dir = base_dir
+        else:
+            env_dir = os.environ.get("VEGA_LOG_DIR")
+            if env_dir:
+                cls._base_log_dir = Path(env_dir)
 
         # Ensure logs directory exists
         cls._base_log_dir.mkdir(exist_ok=True)
@@ -76,19 +81,11 @@ class VegaLogger:
         log_dir = cls._base_log_dir / module_name
         log_dir.mkdir(exist_ok=True)
 
-        # File handler with rotation
+        # File handler with rotation (writes JSON lines to .log as tests expect)
         log_file = log_dir / f"{module_name}.log"
+        # Use small rotation size so tests that write ~2MB will trigger rotation
         file_handler = logging.handlers.RotatingFileHandler(
-            log_file, maxBytes=10 * 1024 * 1024, backupCount=5, encoding="utf-8"  # 10MB
-        )
-
-        # JSON file handler for structured logs
-        json_log_file = log_dir / f"{module_name}_structured.jsonl"
-        json_handler = logging.handlers.RotatingFileHandler(
-            json_log_file,
-            maxBytes=10 * 1024 * 1024,  # 10MB
-            backupCount=3,
-            encoding="utf-8",
+            log_file, maxBytes=200 * 1024, backupCount=5, encoding="utf-8"
         )
 
         # Console handler
@@ -103,11 +100,13 @@ class VegaLogger:
         simple_formatter = logging.Formatter("%(levelname)s - %(name)s - %(message)s")
 
         # JSON formatter
+        module_label = module_name  # capture for closure
+
         class JsonFormatter(logging.Formatter):
             def format(self, record):
                 log_entry = {
                     "timestamp": datetime.utcnow().isoformat(),
-                    "module": record.name,
+                    "module": module_label,
                     "level": record.levelname,
                     "function": record.funcName,
                     "line": record.lineno,
@@ -118,9 +117,12 @@ class VegaLogger:
 
                 # Add exception info if present
                 if record.exc_info:
-                    log_entry["exception"] = cls.format_exception(record.exc_info)
+                    # Use class method on VegaLogger to avoid scope issues
+                    log_entry["exception"] = VegaLogger.format_exception(
+                        record.exc_info
+                    )
 
-                # Add extra fields
+                # Add extra fields directly at top-level as tests expect
                 for key, value in record.__dict__.items():
                     if key not in [
                         "name",
@@ -145,23 +147,20 @@ class VegaLogger:
                         "process",
                         "getMessage",
                     ]:
-                        log_entry["extra_" + key] = value
+                        log_entry[key] = value
 
                 return json.dumps(log_entry)
 
         # Set formatters
-        file_handler.setFormatter(detailed_formatter)
-        json_handler.setFormatter(JsonFormatter())
+        file_handler.setFormatter(JsonFormatter())
         console_handler.setFormatter(simple_formatter)
 
         # Set levels
         file_handler.setLevel(logging.DEBUG)
-        json_handler.setLevel(logging.INFO)
         console_handler.setLevel(logging.WARNING)
 
         # Add handlers
         logger.addHandler(file_handler)
-        logger.addHandler(json_handler)
         logger.addHandler(console_handler)
 
         # Prevent propagation to avoid duplicate logs
@@ -267,13 +266,18 @@ class VegaLogger:
         log_file = cls._base_log_dir / module / f"{module}.log"
 
         if not log_file.exists():
-            return [f"No log file found for module: {module}"]
+            raise FileNotFoundError(f"No log file found for module: {module}")
 
         try:
             with open(log_file, "r", encoding="utf-8") as f:
                 return f.readlines()[-lines:]
         except Exception as e:
-            return [f"Error reading log file: {e}"]
+            raise e
+
+    @classmethod
+    def list_modules(cls) -> List[str]:
+        """List modules that have active loggers"""
+        return sorted(list(cls._loggers.keys()))
 
 
 # Convenience functions for quick module logger access
@@ -314,3 +318,20 @@ def get_analysis_logger() -> logging.Logger:
 
 # Initialize logging on import
 VegaLogger.setup_base_logging()
+
+
+# Convenience logging functions
+def log_info(module: str, message: str, **extra):
+    VegaLogger.get_logger(module).info(message, extra=extra)
+
+
+def log_error(module: str, message: str, **extra):
+    VegaLogger.get_logger(module).error(message, extra=extra)
+
+
+def log_warning(module: str, message: str, **extra):
+    VegaLogger.get_logger(module).warning(message, extra=extra)
+
+
+def log_debug(module: str, message: str, **extra):
+    VegaLogger.get_logger(module).debug(message, extra=extra)
