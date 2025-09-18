@@ -1,0 +1,42 @@
+api_key: null
+base_url: http://localhost:11434
+behavior:
+  content_moderation:
+    block_personal_info: true
+    censorship_level: strict
+    ethical_guidelines: balanced
+    filter_nsfw: true
+    profanity_filter: moderate
+    vulgarity_filter: moderate
+  model_parameters:
+    frequency_penalty: 0.0
+    max_tokens: 2048
+    presence_penalty: 0.0
+    temperature: 0.9
+    top_p: 0.9
+  response_style:
+    formality: moderate
+    humor_level: light
+    personality: creative
+    tone: professional
+    verbosity: balanced
+cache:
+  enabled: true
+  max_size: 1000
+  ttl: 60
+circuit_breaker:
+  failure_threshold: 5
+  half_open_max_calls: 3
+  reset_timeout: 30
+context_window: 4096
+max_retries: 3
+max_tokens: 2048
+model_name: llama3
+retry_backoff: 0.5
+safety:
+  content_filtering: true
+  max_prompt_length: 4000
+  max_response_length: 4000
+  rate_limit_per_user: 10
+streaming: true
+timeout: 60

@@ -1,0 +1,85 @@
+# Vega Voice Processing Configuration
+# Local TTS/STT settings for offline voice capabilities
+
+# Text-to-Speech (TTS) Configuration
+tts_engine: "piper"                    # piper, pyttsx3, espeak
+tts_voice: "en_US-lessac-medium"       # Voice model name
+tts_speed: 1.0                         # Speech rate multiplier (0.1-3.0)
+tts_pitch: 0                          # Pitch adjustment (-20 to +20)
+tts_volume: 0.8                       # Volume level (0.0-1.0)
+
+# Speech-to-Text (STT) Configuration  
+stt_engine: "vosk"                     # vosk, whisper
+stt_model: "vosk-model-en-us-0.22"     # Model name/path
+stt_language: "en-US"                  # Language code
+stt_confidence_threshold: 0.6          # Minimum confidence for results
+
+# Audio Configuration
+audio:
+  sample_rate: 16000                   # Audio sample rate (Hz)
+  channels: 1                          # Mono (1) or stereo (2)
+  format: "wav"                        # Audio format
+  chunk_size: 1024                     # Buffer size for streaming
+  device_index: null                   # Audio device (null = default)
+
+# Voice Activity Detection
+vad:
+  enabled: true                        # Enable voice activity detection
+  threshold: 0.5                       # Voice detection sensitivity
+  min_silence_duration: 0.5            # Seconds of silence to stop
+  max_recording_duration: 30           # Maximum recording length
+
+# Audio Processing
+processing:
+  noise_reduction: true                # Enable noise reduction
+  auto_gain_control: true              # Automatic gain control
+  echo_cancellation: false             # Echo cancellation
+  high_pass_filter: 80                 # High-pass filter frequency (Hz)
+  low_pass_filter: 8000               # Low-pass filter frequency (Hz)
+
+# Model Paths
+models:
+  piper_models_dir: "voice/models/piper"
+  vosk_models_dir: "voice/models/vosk" 
+  whisper_models_dir: "voice/models/whisper"
+  cache_dir: "voice/cache"
+
+# Streaming Configuration
+streaming:
+  enabled: true                        # Enable real-time processing
+  buffer_size: 4096                   # Stream buffer size
+  latency_target: 100                  # Target latency (ms)
+  quality_priority: "balanced"         # speed, balanced, quality
+
+# Fallback Options
+fallback:
+  tts_engine: "pyttsx3"               # Fallback TTS if primary fails
+  stt_engine: "vosk"                  # Fallback STT if primary fails
+  offline_only: true                  # Never use cloud services
+  
+# Voice Synthesis Options (Piper)
+piper:
+  speaker_id: 0                       # Speaker ID for multi-speaker models
+  length_scale: 1.0                   # Speech duration scale
+  noise_scale: 0.667                  # Noise level for naturalness
+  noise_scale_w: 0.8                  # Noise scale width
+
+# Recognition Options (Vosk)
+vosk:
+  enable_partial_results: true        # Return partial transcriptions
+  enable_word_timestamps: false       # Include word-level timing
+  alternatives: 1                     # Number of recognition alternatives
+  
+# Whisper Options (if enabled)
+whisper:
+  model_size: "base"                  # tiny, base, small, medium, large
+  device: "cpu"                       # cpu, cuda
+  compute_type: "int8"                # float16, int8, int8_float16
+  language: "english"                 # Force language (null = auto-detect)
+
+# Performance
+performance:
+  max_concurrent_requests: 5          # Maximum simultaneous voice operations
+  request_timeout: 30                 # Voice operation timeout (seconds)
+  model_cache_size: 2                 # Number of models to keep in memory
+  gpu_acceleration: false             # Use GPU if available

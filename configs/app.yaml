@@ -1,0 +1,43 @@
+# Vega Application Configuration
+# Core FastAPI service settings
+
+# Server Configuration
+host: "127.0.0.1"
+port: 8000
+debug: false
+reload: false
+
+# Security
+cors_origins:
+  - "http://localhost:3000"
+  - "http://127.0.0.1:3000"
+api_keys:
+  - "vega-default-key"
+  - "admin-key-change-me"
+
+# Request Handling
+request_timeout: 30
+max_request_size: 10485760  # 10MB
+max_concurrent_requests: 100
+rate_limit_requests_per_minute: 60
+
+# Database
+database_url: "sqlite:///./vega.db"
+connection_pool_size: 10
+echo_sql: false
+
+# Logging
+log_level: "INFO"
+access_log: true
+error_log: true
+
+# Features
+enable_admin_endpoints: true
+enable_health_checks: true
+enable_metrics: true
+enable_docs: true  # Swagger/OpenAPI docs
+
+# Performance
+worker_processes: 1
+worker_connections: 1000
+keepalive_timeout: 5
