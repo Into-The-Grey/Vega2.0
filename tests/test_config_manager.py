@@ -18,7 +18,7 @@ import yaml
 from pathlib import Path
 from unittest.mock import patch, MagicMock
 
-from core.config_manager import ConfigManager, LLMBehaviorConfig
+from .config_manager import ConfigManager, LLMBehaviorConfig
 
 
 class TestConfigManager:

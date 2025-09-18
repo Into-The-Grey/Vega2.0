@@ -3,7 +3,7 @@ import pytest
 import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from user.user_profiling.collectors import calendar_sync, finance_monitor
+from ..user.user_profiling.collectors import calendar_sync, finance_monitor
 
 @pytest.mark.asyncio
 def test_google_calendar_env_loading(monkeypatch):

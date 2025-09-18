@@ -20,7 +20,7 @@ import time
 from pathlib import Path
 from unittest.mock import patch, MagicMock
 
-from core.logging_setup import VegaLogger
+from .logging_setup import VegaLogger
 
 
 class TestVegaLogger:
@@ -207,7 +207,7 @@ class TestVegaLogger:
 
     def test_convenience_functions(self):
         """Test convenience logging functions"""
-        from core.logging_setup import log_info, log_error, log_warning, log_debug
+        from .logging_setup import log_info, log_error, log_warning, log_debug
 
         # These should not raise exceptions
         log_info("test_module", "Info message")

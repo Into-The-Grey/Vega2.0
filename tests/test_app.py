@@ -16,8 +16,8 @@ from unittest.mock import patch, MagicMock
 import json
 
 # Import the app under test
-from core.app import app
-from core.config_manager import ConfigManager
+from .app import app
+from .config_manager import ConfigManager
 
 # Test client
 client = TestClient(app)
@@ -125,7 +125,7 @@ class TestChatEndpoints:
     @patch("core.app.query_llm")
     def test_chat_llm_error(self, mock_llm, mock_cfg):
         """Test chat request when LLM fails"""
-        from core.llm import LLMBackendError
+        from .llm import LLMBackendError
 
         mock_cfg.api_key = TEST_API_KEY
         mock_cfg.api_keys_extra = []
