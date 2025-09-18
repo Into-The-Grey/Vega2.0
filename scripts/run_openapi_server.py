@@ -10,7 +10,8 @@ import os
 # Add the project root and src to Python path
 project_root = os.path.dirname(os.path.dirname(__file__))
 sys.path.insert(0, project_root)
-sys.path.insert(0, os.path.join(project_root, 'src'))
+sys.path.insert(0, os.path.join(project_root, "src"))
+
 
 def main():
     """Main function to start the OpenAPI server."""
@@ -22,13 +23,8 @@ def main():
 
     try:
         from src.vega.core.openapi_app import app
-        
-        uvicorn.run(
-            app,
-            host="127.0.0.1",
-            port=8001,
-            reload=False
-        )
+
+        uvicorn.run(app, host="127.0.0.1", port=8001, reload=False)
     except ImportError as e:
         print(f"❌ Failed to import OpenAPI app: {e}")
         print("Make sure the core modules are available in src/vega/core/")
@@ -36,6 +32,7 @@ def main():
     except Exception as e:
         print(f"❌ Error starting server: {e}")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
