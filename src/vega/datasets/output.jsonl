@@ -1,0 +1,6 @@
+{"prompt": "Greeting", "response": "This is a markdown example as a response body."}
+{"prompt": "Another Heading", "response": "More content for dataset generation."}
+{"prompt": "What is Vega?", "response": "Your local LLM twin."}
+{"prompt": "Say hi", "response": "Hello!"}
+{"prompt": "Hello Vega", "response": ""}
+{"prompt": "How are you?", "response": ""}
