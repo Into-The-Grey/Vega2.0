@@ -6,6 +6,7 @@ FastAPI application for Vega2.0 - Clean Implementation
 from typing import Optional, Dict, Any
 import uuid
 from datetime import datetime
+import asyncio
 
 from fastapi import FastAPI, Header, HTTPException, Query
 from fastapi.responses import HTMLResponse
@@ -22,9 +23,48 @@ except Exception:
     generate_commands_markdown = None  # type: ignore
     generate_commands_html = None  # type: ignore
 
+# Background process management
+try:
+    from .process_manager import (
+        get_process_manager,
+        start_background_processes,
+        stop_background_processes,
+    )
+
+    PROCESS_MANAGEMENT_AVAILABLE = True
+except ImportError:
+    PROCESS_MANAGEMENT_AVAILABLE = False
+
+# Error handling system
+try:
+    from .error_handler import get_error_handler, log_info, log_error
+    from .error_middleware import setup_error_middleware
+    from .exceptions import MissingAPIKeyError, InvalidAPIKeyError, ValidationError
+
+    ERROR_HANDLING_AVAILABLE = True
+except ImportError:
+    ERROR_HANDLING_AVAILABLE = False
+
+# ECC cryptography system
+try:
+    from .ecc_crypto import get_ecc_manager, ECCCurve
+    from .api_security import (
+        get_security_manager,
+        verify_ecc_api_key,
+        require_permission,
+    )
+
+    ECC_AVAILABLE = True
+except ImportError:
+    ECC_AVAILABLE = False
+
 # Initialize app
 app = FastAPI(title="Vega2.0", version="2.0.0")
 app.mount("/static", StaticFiles(directory="static"), name="static")
+
+# Setup error handling middleware
+if ERROR_HANDLING_AVAILABLE:
+    setup_error_middleware(app)
 
 # Metrics
 app.state.metrics = {
@@ -33,6 +73,30 @@ app.state.metrics = {
     "errors_total": 0,
     "degraded": False,
 }
+
+
+# Startup and shutdown events
+@app.on_event("startup")
+async def startup_event():
+    """Start background processes on app startup"""
+    if PROCESS_MANAGEMENT_AVAILABLE:
+        try:
+            # Start background processes (optional, can be managed separately)
+            # await start_background_processes()
+            print("Background process management available")
+        except Exception as e:
+            print(f"Warning: Could not start background processes: {e}")
+
+
+@app.on_event("shutdown")
+async def shutdown_event():
+    """Stop background processes on app shutdown"""
+    if PROCESS_MANAGEMENT_AVAILABLE:
+        try:
+            await stop_background_processes()
+            print("Background processes stopped")
+        except Exception as e:
+            print(f"Warning: Error stopping background processes: {e}")
 
 
 # Models
@@ -69,10 +133,16 @@ cfg = _Cfg()
 
 def require_api_key(x_api_key: str | None):
     if not x_api_key:
-        raise HTTPException(status_code=401, detail="Missing API key")
+        if ERROR_HANDLING_AVAILABLE:
+            raise MissingAPIKeyError()
+        else:
+            raise HTTPException(status_code=401, detail="Missing API key")
     allowed = {cfg.api_key, *getattr(cfg, "api_keys_extra", [])}
     if x_api_key not in allowed:
-        raise HTTPException(status_code=401, detail="Invalid API key")
+        if ERROR_HANDLING_AVAILABLE:
+            raise InvalidAPIKeyError()
+        else:
+            raise HTTPException(status_code=401, detail="Invalid API key")
 
 
 # Placeholders that tests patch
@@ -468,6 +538,392 @@ async def admin_llm_behavior_update(
     require_api_key(x_api_key)
     config_manager.update_llm_behavior(payload if isinstance(payload, dict) else {})
     return {"status": "success"}
+
+
+# Background Process Management endpoints
+@app.get("/admin/processes/status")
+async def admin_processes_status(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """Get status of all background processes"""
+    require_api_key(x_api_key)
+
+    if not PROCESS_MANAGEMENT_AVAILABLE:
+        return {"error": "Process management not available"}
+
+    try:
+        manager = get_process_manager()
+
+        if not manager.running:
+            return {
+                "status": "stopped",
+                "processes": [],
+                "metrics": {
+                    "total_processes": 0,
+                    "running_processes": 0,
+                    "failed_processes": 0,
+                    "health_percentage": 0.0,
+                },
+            }
+
+        processes = manager.list_processes()
+        metrics = manager.get_process_metrics()
+
+        process_list = []
+        for process in processes:
+            process_info = {
+                "id": process.id,
+                "name": process.name,
+                "type": process.type.value,
+                "state": process.state.value,
+                "pid": process.pid,
+                "cpu_usage": process.cpu_usage,
+                "memory_usage": process.memory_usage,
+                "restart_count": process.restart_count,
+                "start_time": (
+                    process.start_time.isoformat() if process.start_time else None
+                ),
+                "uptime": process.metrics.get("uptime", 0),
+            }
+            process_list.append(process_info)
+
+        return {"status": "running", "processes": process_list, "metrics": metrics}
+
+    except Exception as e:
+        return {"error": f"Failed to get process status: {str(e)}"}
+
+
+@app.post("/admin/processes/start")
+async def admin_processes_start(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """Start all background processes"""
+    require_api_key(x_api_key)
+
+    if not PROCESS_MANAGEMENT_AVAILABLE:
+        return {"error": "Process management not available"}
+
+    try:
+        await start_background_processes()
+        return {"status": "success", "message": "Background processes started"}
+    except Exception as e:
+        return {"error": f"Failed to start processes: {str(e)}"}
+
+
+@app.post("/admin/processes/stop")
+async def admin_processes_stop(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """Stop all background processes"""
+    require_api_key(x_api_key)
+
+    if not PROCESS_MANAGEMENT_AVAILABLE:
+        return {"error": "Process management not available"}
+
+    try:
+        await stop_background_processes()
+        return {"status": "success", "message": "Background processes stopped"}
+    except Exception as e:
+        return {"error": f"Failed to stop processes: {str(e)}"}
+
+
+@app.post("/admin/processes/{process_id}/restart")
+async def admin_process_restart(
+    process_id: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """Restart a specific background process"""
+    require_api_key(x_api_key)
+
+    if not PROCESS_MANAGEMENT_AVAILABLE:
+        return {"error": "Process management not available"}
+
+    try:
+        manager = get_process_manager()
+        await manager.restart_process(process_id)
+        return {"status": "success", "message": f"Process {process_id} restarted"}
+    except Exception as e:
+        return {"error": f"Failed to restart process: {str(e)}"}
+
+
+@app.get("/admin/errors/stats")
+async def admin_error_stats(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """Get error statistics"""
+    require_api_key(x_api_key)
+
+    if not ERROR_HANDLING_AVAILABLE:
+        return {"error": "Error handling not available"}
+
+    try:
+        handler = get_error_handler()
+        stats = handler.get_error_stats()
+        return {"status": "success", "stats": stats}
+    except Exception as e:
+        return {"error": f"Failed to get error stats: {str(e)}"}
+
+
+@app.get("/admin/recovery/stats")
+async def admin_recovery_stats(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """Get recovery statistics"""
+    require_api_key(x_api_key)
+
+    if not ERROR_HANDLING_AVAILABLE:
+        return {"error": "Error handling not available"}
+
+    try:
+        from .recovery_manager import get_recovery_manager
+
+        recovery_manager = get_recovery_manager()
+        stats = recovery_manager.get_recovery_stats()
+        return {"status": "success", "stats": stats}
+    except Exception as e:
+        return {"error": f"Failed to get recovery stats: {str(e)}"}
+
+
+@app.post("/admin/recovery/clear-history")
+async def admin_recovery_clear_history(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """Clear recovery history"""
+    require_api_key(x_api_key)
+
+    if not ERROR_HANDLING_AVAILABLE:
+        return {"error": "Error handling not available"}
+
+    try:
+        from .recovery_manager import get_recovery_manager
+
+        recovery_manager = get_recovery_manager()
+        recovery_manager.clear_history()
+        return {"status": "success", "message": "Recovery history cleared"}
+    except Exception as e:
+        return {"error": f"Failed to clear recovery history: {str(e)}"}
+
+
+# ECC Cryptography endpoints
+@app.post("/admin/ecc/generate-key")
+async def admin_ecc_generate_key(
+    curve: str = ECCCurve.SECP256R1,
+    expires_in_days: Optional[int] = None,
+    x_api_key: str | None = Header(default=None, alias="X-API-Key"),
+):
+    """Generate new ECC key pair"""
+    require_api_key(x_api_key)
+
+    if not ECC_AVAILABLE:
+        return {"error": "ECC not available"}
+
+    try:
+        ecc_manager = get_ecc_manager()
+        key_pair = ecc_manager.generate_key_pair(curve, expires_in_days=expires_in_days)
+
+        return {
+            "status": "success",
+            "key_id": key_pair.key_id,
+            "curve": key_pair.curve,
+            "public_key": key_pair.public_key_pem,
+            "created_at": key_pair.created_at.isoformat(),
+            "expires_at": (
+                key_pair.expires_at.isoformat() if key_pair.expires_at else None
+            ),
+        }
+    except Exception as e:
+        return {"error": f"Failed to generate key: {str(e)}"}
+
+
+@app.get("/admin/ecc/keys")
+async def admin_ecc_list_keys(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """List all ECC keys"""
+    require_api_key(x_api_key)
+
+    if not ECC_AVAILABLE:
+        return {"error": "ECC not available"}
+
+    try:
+        ecc_manager = get_ecc_manager()
+        keys = []
+
+        for key_id, key_pair in ecc_manager.list_keys().items():
+            key_info = ecc_manager.get_key_info(key_id)
+            if key_info:
+                keys.append(key_info)
+
+        return {"status": "success", "keys": keys}
+    except Exception as e:
+        return {"error": f"Failed to list keys: {str(e)}"}
+
+
+@app.get("/admin/ecc/keys/{key_id}")
+async def admin_ecc_get_key(
+    key_id: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """Get ECC key information"""
+    require_api_key(x_api_key)
+
+    if not ECC_AVAILABLE:
+        return {"error": "ECC not available"}
+
+    try:
+        ecc_manager = get_ecc_manager()
+        key_info = ecc_manager.get_key_info(key_id)
+
+        if not key_info:
+            return {"error": "Key not found"}
+
+        # Include public key
+        key_pair = ecc_manager.get_key_pair(key_id)
+        if key_pair:
+            key_info["public_key"] = key_pair.public_key_pem
+
+        return {"status": "success", "key": key_info}
+    except Exception as e:
+        return {"error": f"Failed to get key: {str(e)}"}
+
+
+@app.delete("/admin/ecc/keys/{key_id}")
+async def admin_ecc_delete_key(
+    key_id: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """Delete ECC key"""
+    require_api_key(x_api_key)
+
+    if not ECC_AVAILABLE:
+        return {"error": "ECC not available"}
+
+    try:
+        ecc_manager = get_ecc_manager()
+        success = ecc_manager.delete_key(key_id)
+
+        if success:
+            return {"status": "success", "message": f"Key {key_id} deleted"}
+        else:
+            return {"error": "Key not found"}
+    except Exception as e:
+        return {"error": f"Failed to delete key: {str(e)}"}
+
+
+@app.post("/admin/ecc/sign")
+async def admin_ecc_sign_data(
+    payload: Dict[str, Any],
+    x_api_key: str | None = Header(default=None, alias="X-API-Key"),
+):
+    """Sign data with ECC key"""
+    require_api_key(x_api_key)
+
+    if not ECC_AVAILABLE:
+        return {"error": "ECC not available"}
+
+    try:
+        data = payload.get("data")
+        key_id = payload.get("key_id")
+
+        if not data or not key_id:
+            return {"error": "data and key_id are required"}
+
+        ecc_manager = get_ecc_manager()
+        signature = ecc_manager.sign_data(data, key_id)
+
+        return {"status": "success", "signature": signature.to_dict()}
+    except Exception as e:
+        return {"error": f"Failed to sign data: {str(e)}"}
+
+
+@app.post("/admin/ecc/verify")
+async def admin_ecc_verify_signature(
+    payload: Dict[str, Any],
+    x_api_key: str | None = Header(default=None, alias="X-API-Key"),
+):
+    """Verify ECC signature"""
+    require_api_key(x_api_key)
+
+    if not ECC_AVAILABLE:
+        return {"error": "ECC not available"}
+
+    try:
+        data = payload.get("data")
+        signature_data = payload.get("signature")
+        public_key_pem = payload.get("public_key_pem")
+
+        if not data or not signature_data:
+            return {"error": "data and signature are required"}
+
+        from .ecc_crypto import ECCSignature
+        from datetime import datetime
+
+        signature = ECCSignature(
+            signature=signature_data["signature"],
+            algorithm=signature_data["algorithm"],
+            key_id=signature_data["key_id"],
+            timestamp=datetime.fromisoformat(signature_data["timestamp"]),
+        )
+
+        ecc_manager = get_ecc_manager()
+        valid = ecc_manager.verify_signature(data, signature, public_key_pem)
+
+        return {"status": "success", "valid": valid}
+    except Exception as e:
+        return {"error": f"Failed to verify signature: {str(e)}"}
+
+
+@app.post("/admin/security/generate-api-key")
+async def admin_security_generate_api_key(
+    payload: Dict[str, Any],
+    x_api_key: str | None = Header(default=None, alias="X-API-Key"),
+):
+    """Generate secure API key with ECC backing"""
+    require_api_key(x_api_key)
+
+    if not ECC_AVAILABLE:
+        return {"error": "ECC not available"}
+
+    try:
+        permissions = payload.get("permissions", ["read"])
+        expires_in_days = payload.get("expires_in_days")
+        rate_limit = payload.get("rate_limit")
+
+        security_manager = get_security_manager()
+        secure_key = security_manager.generate_secure_api_key(
+            permissions=permissions,
+            expires_in_days=expires_in_days,
+            rate_limit=rate_limit,
+        )
+
+        return {
+            "status": "success",
+            "api_key": secure_key.api_key,
+            "key_id": secure_key.key_id,
+            "ecc_key_id": secure_key.ecc_key_id,
+            "permissions": secure_key.permissions,
+            "expires_at": (
+                secure_key.expires_at.isoformat() if secure_key.expires_at else None
+            ),
+        }
+    except Exception as e:
+        return {"error": f"Failed to generate API key: {str(e)}"}
+
+
+@app.get("/admin/security/api-keys")
+async def admin_security_list_api_keys(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """List all secure API keys"""
+    require_api_key(x_api_key)
+
+    if not ECC_AVAILABLE:
+        return {"error": "ECC not available"}
+
+    try:
+        security_manager = get_security_manager()
+        api_keys = security_manager.list_api_keys()
+
+        return {"status": "success", "api_keys": api_keys}
+    except Exception as e:
+        return {"error": f"Failed to list API keys: {str(e)}"}
 
 
 # Backup API endpoints
