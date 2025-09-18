@@ -1,54 +1,99 @@
 #!/usr/bin/env python3
 """
-Vega2.0 - Main Application Entry Point
+Vega2.0 Main Entry Point
+========================
 
-This is the main entry point for the Vega2.0 autonomous AI system.
-All components have been organized into a clean modular structure.
+This script provides the main entry point for running Vega2.0 applications
+with the new organized structure.
 
-Directory Structure:
-- core/: Core application components (app.py, cli.py, db.py, etc.)
-- sac/: System Autonomy Core modules
-- intelligence/: AI intelligence and analysis engines
-- analysis/: Conversation and data analysis tools
-- ui/: User interface components and static files
-- data/: Databases, configurations, and data files
-- integrations/: External service integrations
-- datasets/: Dataset preparation and training data
-- training/: Model training and fine-tuning
-- learning/: Learning and evaluation systems
-- docs/: Documentation and guides
-- book/: mdBook documentation
+Usage:
+    python main.py [command] [options]
+    
+Commands:
+    server      Start the main API server
+    cli         Run CLI interface
+    openapi     Start OpenAPI server
+    processes   Start background processes
+    test        Run test suite
+    
+Examples:
+    python main.py server --host 127.0.0.1 --port 8000
+    python main.py cli chat "Hello!"
+    python main.py openapi --port 8001
+    python main.py processes start
+    python main.py test --suite core
 """
 
 import sys
 import os
 from pathlib import Path
 
-# Add core modules to path
-sys.path.insert(0, str(Path(__file__).parent / "core"))
-sys.path.insert(0, str(Path(__file__).parent / "sac"))
-sys.path.insert(0, str(Path(__file__).parent / "intelligence"))
-
+# Add src directory to Python path
+project_root = Path(__file__).parent
+src_path = project_root / "src"
+sys.path.insert(0, str(src_path))
 
 def main():
-    """Main application entry point"""
-    print("🚀 Vega2.0 - Autonomous AI System")
-    print("📁 Project structure has been reorganized for better maintainability")
-    print()
-    print("Available components:")
-    print("  🧠 Core System:          python -m core.app")
-    print("  💬 CLI Interface:        python -m core.cli")
-    print("  🤖 System Autonomy:      python -m sac.self_govern")
-    print("  🎛️  System Interface:     python -m sac.system_interface")
-    print("  🔍 System Probe:         python -m sac.system_probe")
-    print("  👁️  System Watchdog:      python -m sac.system_watchdog")
-    print("  ⚙️  System Control:       python -m sac.sys_control")
-    print("  🛡️  Network Guard:        python -m sac.net_guard")
-    print("  💰 Economic Scanner:     python -m sac.economic_scanner")
-    print("  📊 Dashboard:            python -m ui.dashboard")
-    print()
-    print("For detailed usage, see docs/ or run specific modules with --help")
-
+    """Main entry point for Vega2.0."""
+    
+    if len(sys.argv) < 2:
+        print(__doc__)
+        sys.exit(1)
+    
+    command = sys.argv[1]
+    args = sys.argv[2:]
+    
+    try:
+        if command == "server":
+            from src.vega.core.app import app
+            import uvicorn
+            
+            host = "127.0.0.1"
+            port = 8000
+            
+            # Parse basic args
+            if "--host" in args:
+                host = args[args.index("--host") + 1]
+            if "--port" in args:
+                port = int(args[args.index("--port") + 1])
+                
+            print(f"🚀 Starting Vega2.0 API server on {host}:{port}")
+            uvicorn.run(app, host=host, port=port)
+            
+        elif command == "cli":
+            from src.vega.core.cli import main as cli_main
+            # Pass remaining args to CLI
+            sys.argv = ["cli"] + args
+            cli_main()
+            
+        elif command == "openapi":
+            from scripts.run_openapi_server import main as openapi_main
+            openapi_main()
+            
+        elif command == "processes":
+            from scripts.run_processes import main as processes_main
+            processes_main()
+            
+        elif command == "test":
+            import subprocess
+            if args and args[0] == "--suite":
+                suite = args[1] if len(args) > 1 else "all"
+                subprocess.run([sys.executable, "-m", "pytest", f"tests/test_{suite}.py", "-v"])
+            else:
+                subprocess.run([sys.executable, "-m", "pytest", "tests/", "-v"])
+                
+        else:
+            print(f"Unknown command: {command}")
+            print(__doc__)
+            sys.exit(1)
+            
+    except ImportError as e:
+        print(f"❌ Import error: {e}")
+        print("Make sure all dependencies are installed: pip install -r requirements.txt")
+        sys.exit(1)
+    except Exception as e:
+        print(f"❌ Error: {e}")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()

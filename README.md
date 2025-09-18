@@ -1,268 +1,522 @@
-# Vega2.0 — Local-only Personal LLM Twin
+# Vega2.0 - Advanced Autonomous AI System
 
-[![Docs](https://img.shields.io/badge/docs-mdBook-blue)](https://into-the-grey.github.io/Vega2.0/) [![Pages](https://img.shields.io/badge/GitHub%20Pages-live-brightgreen)](https://into-the-grey.github.io/Vega2.0/) [![CI](https://github.com/Into-The-Grey/Vega2.0/actions/workflows/mdbook.yml/badge.svg)](https://github.com/Into-The-Grey/Vega2.0/actions/workflows/mdbook.yml)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-green.svg)](https://fastapi.tiangolo.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Vega2.0 - Autonomous AI System
+Vega2.0 is a comprehensive, production-ready autonomous AI system featuring advanced security, error handling, background process management, and elliptic curve cryptography. Built with FastAPI and designed for localhost-first operation with enterprise-grade security.
 
-Vega2.0 is a comprehensive autonomous AI system featuring a complete System Autonomy Core (SAC) with 7 integrated phases for full system self-management. The system combines local-first FastAPI services, CLI interfaces, autonomous decision-making, and complete hardware control capabilities.
+## 🚀 Key Features
 
-## 🤖 System Autonomy Core (SAC)
+### 🧠 AI & LLM Integration
 
-The SAC provides complete autonomous system management through 7 integrated phases:
+- **Multi-Provider Support**: Ollama, OpenAI, Anthropic with intelligent routing
+- **Circuit Breaker Protection**: Automatic failover and recovery
+- **Response Caching**: TTL-based caching for performance
+- **Cost Tracking**: Usage monitoring and cost calculation
 
-1. **🔍 System Introspection** - Hardware enumeration and health monitoring
-2. **👁️ Active Monitoring** - Real-time system watchdog with automated responses  
-3. **⚙️ System Control** - Secure command execution with audit trails
-4. **🛡️ Network Security** - Automated firewall and threat detection
-5. **💰 Economic Intelligence** - Market analysis and upgrade recommendations
-6. **🎛️ System Interface** - Unified API with web dashboard and real-time monitoring
-7. **🤖 Self-Governing Operations** - ML-driven autonomous decision engine
+### 🔐 Advanced Security
 
-## 📁 Project Structure
+- **Elliptic Curve Cryptography (ECC)**: Industry-standard encryption
+- **Digital Signatures**: ECDSA for data integrity
+- **Secure Key Management**: Hardware-backed key storage
+- **API Authentication**: ECC-backed secure API keys
+- **Message Encryption**: ECIES for end-to-end encryption
+
+### 🛡️ Error Handling & Recovery
+
+- **Structured Logging**: JSON-based logging with correlation IDs
+- **Error Classification**: Categorized error codes and severity levels
+- **Automatic Recovery**: Circuit breaker patterns and retry logic
+- **User-Friendly Messages**: Technical errors translated to user messages
+- **Comprehensive Monitoring**: Error statistics and health metrics
+
+### ⚙️ Background Process Management
+
+- **Process Lifecycle**: Start, stop, restart, monitor processes
+- **Health Monitoring**: CPU, memory, and status tracking
+- **Auto-Recovery**: Crashed process detection and restart
+- **Resource Management**: Memory and CPU usage monitoring
+- **System Integration**: Voice processing, integrations, monitoring
+
+### 📊 API & Documentation
+
+- **OpenAPI 3.0**: Comprehensive API documentation
+- **Type Safety**: Pydantic models for all requests/responses
+- **Versioning**: API version management
+- **Interactive Docs**: Swagger UI and ReDoc integration
+- **Request Validation**: Automatic input validation and sanitization
+
+### 🧪 Testing & Quality
+
+- **Dedicated Test Suite**: FastAPI-based testing interface
+- **Comprehensive Coverage**: Core, integration, performance, security tests
+- **Dummy Parameters**: Safe testing without real credentials
+- **Automated Validation**: Error handling and recovery testing
+
+## 📦 Installation
+
+### Prerequisites
+
+- Python 3.12 or higher
+- Ollama (for local LLM)
+- SQLite 3.35+ (included with Python)
+
+## 🏗️ Project Structure
 
 ```
 Vega2.0/
-├── 🧠 core/              # Core application components
-│   ├── app.py           # Main FastAPI application  
-│   ├── cli.py           # Command-line interface
-│   ├── config.py        # Configuration management
-│   ├── db.py            # Database operations
-│   ├── llm.py           # LLM integration layer
-│   ├── memory.py        # Conversation memory
-│   ├── resilience.py    # Circuit breakers and caching
-│   └── security.py      # Security utilities
-│
-├── 🤖 sac/              # System Autonomy Core
-│   ├── system_probe.py      # Phase 1: Hardware introspection
-│   ├── system_watchdog.py   # Phase 2: Active monitoring
-│   ├── sys_control.py       # Phase 3: System control
-│   ├── net_guard.py         # Phase 4: Network security
-│   ├── economic_scanner.py  # Phase 5: Economic intelligence
-│   ├── system_interface.py  # Phase 6: Unified interface
-│   ├── self_govern.py       # Phase 7: Autonomous operations
-│   ├── config/              # SAC configuration files
-│   ├── data/                # SAC databases and state
-│   ├── logs/                # SAC operation logs
-│   └── models/              # ML models for decision making
-│
-├── 🧠 intelligence/     # AI intelligence engines
-│   ├── autonomous_analyzer.py
-│   ├── evaluation_engine.py
-│   ├── performance_engine.py
-│   ├── global_self_improvement.py
-│   ├── knowledge_harvesting.py
-│   ├── skill_versioning.py
-│   └── telemetry_system.py
-│
-├── 📊 analysis/         # Analysis and conversation tools
-│   └── conversation_integration.py
-│
-├── 🎛️ ui/               # User interface components
-│   ├── dashboard.py     # System dashboard
-│   └── static/          # Web assets
-│
-├── 💾 data/             # Data storage
-│   ├── *.db             # SQLite databases
-│   ├── *.json           # Configuration and data files
-│   └── app.env          # Environment configuration
-│
-├── 🔗 integrations/     # External service integrations
-├── 📚 datasets/         # Dataset preparation and training data
-├── 🎓 training/         # Model training and fine-tuning
-├── 📖 learning/         # Learning and evaluation systems
-├── 📝 docs/             # Documentation and guides
-└── 📖 book/             # mdBook documentation
+├── src/vega/                   # Core application code
+│   ├── core/                   # Main application logic
+│   │   ├── app.py             # FastAPI application
+│   │   ├── cli.py             # Command-line interface
+│   │   ├── llm.py             # LLM integration
+│   │   ├── db.py              # Database operations
+│   │   ├── ecc_crypto.py      # ECC cryptography
+│   │   ├── process_manager.py # Background processes
+│   │   └── error_handler.py   # Error handling
+│   ├── integrations/          # External service integrations
+│   ├── voice/                 # Voice processing
+│   ├── intelligence/          # AI analysis systems
+│   ├── datasets/              # Dataset management
+│   ├── training/              # Model training
+│   └── user/                  # User profiling
+├── scripts/                   # Executable scripts
+│   ├── run_openapi_server.py # OpenAPI server
+│   └── run_processes.py      # Background processes
+├── tools/                     # Development tools and utilities
+│   ├── test_suite/           # Testing infrastructure
+│   ├── ui/                   # Web interfaces
+│   └── utils/                # Utility functions
+├── tests/                     # Test files
+├── docs/                      # Documentation
+├── configs/                   # Configuration files
+├── data/                      # Data files and logs
+└── examples/                  # Usage examples
 ```
 
-## Features
-
-- FastAPI service with `/chat`, `/history`, `/healthz`
-- Typer + Rich CLI with chat, REPL, history, dataset, train, integrations
-- SQLite logging of conversations
-- Dataset builder from txt/md/json -> JSONL
-- Training harness using Hugging Face + Accelerate + optional LoRA/PEFT
-- Minimal static chat UI
-- systemd unit for service management
-
-## Requirements
-
-- Ubuntu 24.04 LTS
-- Python 3.12
-- Optional: Ollama running locally (<http://127.0.0.1:11434>)
-
-## Setup
-
-Create virtual environment (Python 3.12) and activate
+### Quick Start
 
 ```bash
-cd /home/ncacord/Vega2.0
+# Clone the repository
+git clone https://github.com/your-org/vega2.0.git
+cd vega2.0
+
+# Create virtual environment
 python3.12 -m venv .venv
-source .venv/bin/activate
-```
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
-Install dependencies (pinned)
-
-```bash
-pip install --upgrade pip
+# Install dependencies
 pip install -r requirements.txt
+
+# Set up configuration
+cp configs/.env.example .env
+# Edit .env with your settings
+
+# Initialize the database
+python -c "from src.vega.core.db import create_tables; create_tables()"
+
+# Start the system
+python main.py server --host 127.0.0.1 --port 8000
 ```
 
-Configure environment
+### Production Deployment
 
 ```bash
-cp .env.example .env
-# Edit .env to set API_KEY, HOST, PORT, MODEL_NAME, LLM_BACKEND, SLACK_WEBHOOK_URL
-```
-
-- Keep HOST=127.0.0.1 for localhost-only
-- Use a strong API_KEY
-- MODEL_NAME should match your Ollama model name (e.g., "mistral")
-
-Run the API locally
-
-```bash
-uvicorn app:app --host $(grep ^HOST .env | cut -d= -f2) --port $(grep ^PORT .env | cut -d= -f2)
-```
-
-Or with the config’s values via systemd unit (below).
-
-Try the CLI
-
-```bash
-# Single shot
-python -m cli chat "Hello Vega"
-
-# REPL
-python -m cli repl
-
-# History
-python -m cli history-cmd --limit 10
-
-# Dataset build
-python -m cli dataset build ./datasets/samples
-
-# Training
-python -m cli train --config training/config.yaml
-```
-
-Optional: Serve the static UI
-
-- Open <http://127.0.0.1:8000/static/index.html> after you start the API.
-
-## Documentation
-
-- **User & System Guides:**
-  - [Architecture](docs/ARCHITECTURE.md)
-  - [Deployment](docs/DEPLOYMENT.md)
-  - [Setup](docs/SETUP.md)
-  - [Usage](docs/USAGE.md)
-  - [Troubleshooting](docs/TROUBLESHOOTING.md)
-  - [Files Overview](docs/FILES_OVERVIEW.md)
-  - [Datasets](docs/DATASETS.md)
-  - [Training](docs/TRAINING.md)
-  - [Integrations](docs/INTEGRATIONS.md)
-  - [Dependencies](docs/DEPENDENCIES.md)
-  - [Maintenance](docs/MAINTENANCE.md)
-  - [TTY UI Features](docs/TTY_UI_FEATURES.md)
-  - [Dashboard](docs/DASHBOARD.md)
-  - [Autonomous AI System Complete](docs/AUTONOMOUS_AI_SYSTEM_COMPLETE.md)
-
-- **Developer Notes & Advanced Topics:**
-  - [Ambient System Guide](docs/devnotes/AMBIENT_SYSTEM_GUIDE.md)
-  - [Autonomous Debug Readme](docs/devnotes/AUTONOMOUS_DEBUG_README.md)
-  - [UI Readme](docs/devnotes/UI_README.md)
-  - [Success Summary](docs/devnotes/SUCCESS_SUMMARY.md)
-  - [Project Completion Summary](docs/devnotes/PROJECT_COMPLETION_SUMMARY.md)
-  - [Quickstart](docs/devnotes/QUICKSTART.md)
-
-- **mdBook Site:**
-  - [Vega2.0 mdBook Documentation](https://into-the-grey.github.io/Vega2.0/)
-
-## API Usage
-
-- GET /healthz -> {"ok": true}
-- POST /chat (requires X-API-Key)
-  - Body: {"prompt": "...", "stream": false}
-  - Returns: {"response": "..."}
-- GET /history?limit=N (requires X-API-Key)
-
-Example curl:
-
-```bash
-curl -s \
-  -H "Content-Type: application/json" \
-  -H "X-API-Key: $(grep ^API_KEY .env | cut -d= -f2)" \
-  -d '{"prompt":"Hello Vega","stream":false}' \
-  http://127.0.0.1:8000/chat | jq .
-```
-
-## Systemd Service
-
-Edit `.env` and ensure HOST and PORT are set.
-Copy the unit file (as root):
-
-```bash
-sudo cp systemd/vega.service /etc/systemd/system/vega.service
-sudo systemctl daemon-reload
+# Install system service
+sudo cp systemd/vega.service /etc/systemd/system/
 sudo systemctl enable vega
 sudo systemctl start vega
+
+# Check status
+sudo systemctl status vega
 ```
 
-- Logs: `journalctl -u vega -f`
-- Stop: `sudo systemctl stop vega`
-- Status: `systemctl status vega`
+## 🔧 Configuration
 
-Note: The unit assumes the venv at `/home/ncacord/Vega2.0/.venv` and uses `${HOST}` and `${PORT}` from environment. If systemd doesn't inherit .env automatically, you can create a drop-in or edit ExecStart to hardcode --host/--port.
-
-## Security & Hardening
-
-- Keep HOST=127.0.0.1; do not expose remotely.
-- All non-health endpoints require `X-API-Key`.
-- Optional `slowapi` for rate-limiting is included; if installed, it's used automatically.
-- Consider `logrotate` for uvicorn/systemd journal (see below).
-
-### Logrotate stub
-
-This project uses systemd journal logs by default. If you run uvicorn directly and log to a file, add a logrotate rule:
+### Environment Variables
 
 ```bash
-/var/log/vega/*.log {
-  daily
-  rotate 14
-  compress
-  missingok
-  notifempty
-  create 0640 ncacord ncacord
-}
+# Core Configuration
+HOST=127.0.0.1                    # API host (localhost-only for security)
+PORT=8000                         # API port
+API_KEY=your-secure-api-key       # Primary API key
+API_KEYS_EXTRA=key1,key2,key3     # Additional API keys
+
+# LLM Configuration
+LLM_BACKEND=ollama                 # Primary LLM backend
+MODEL_NAME=llama3.2:3b            # Default model
+LLM_BASE_URL=http://127.0.0.1:11434  # Ollama base URL
+LLM_TIMEOUT=30                     # Request timeout
+
+# OpenAI Configuration (optional)
+OPENAI_API_KEY=sk-...             # OpenAI API key
+OPENAI_MODEL=gpt-4                # OpenAI model
+
+# Anthropic Configuration (optional)
+ANTHROPIC_API_KEY=sk-ant-...      # Anthropic API key
+ANTHROPIC_MODEL=claude-3-sonnet   # Anthropic model
+
+# Database Configuration
+DATABASE_URL=sqlite:///./vega.db  # SQLite database path
+DATABASE_POOL_SIZE=10             # Connection pool size
+
+# Security Configuration
+ECC_KEY_STORE=/secure/keys        # ECC key storage path
+CERT_STORE=/secure/certs          # Certificate storage path
+SESSION_SECRET=your-session-secret # Session encryption key
+
+# Logging Configuration
+LOG_LEVEL=INFO                     # Logging level
+LOG_DIR=/var/log/vega             # Log directory
+STRUCTURED_LOGS=true              # Enable structured logging
+
+# Process Management
+ENABLE_BACKGROUND_PROCESSES=true  # Enable background processes
+PROCESS_MONITORING=true           # Enable process monitoring
+AUTO_RESTART=true                 # Enable auto-restart
 ```
 
-## Extending Integrations
+## 🚀 Usage
 
-See `integrations/slack_connector.py`. Add more connectors (Discord, email) following the same interface shape (a `send_*` function returning bool). Update `cli.py integrations` to call them.
-
-## Development Notes
-
-- Code is type-annotated and documented inline.
-- SQLite WAL mode enabled for better read concurrency.
-- Training is a minimal example; adapt tokenization/formatting for your use case.
-
-## Deactivate venv
+### API Server
 
 ```bash
-deactivate
+# Start the main API server
+uvicorn core.app:app --host 127.0.0.1 --port 8000
+
+# Start with auto-reload (development)
+uvicorn core.app:app --reload --host 127.0.0.1 --port 8000
+
+# Start OpenAPI-compliant server
+python run_openapi_server.py
 ```
 
-## Troubleshooting
+### CLI Interface
 
-- Missing packages? Ensure you activated the venv before installing.
-- Ollama not running? Start it locally and pull your model, e.g., `ollama run mistral`.
-- GPU training? Install correct CUDA wheels for transformers/bitsandbytes or disable bnb.
+```bash
+# Chat with AI
+python -m core.cli chat "Hello, how are you?"
 
-## Sanity Checklist
+# Interactive REPL
+python -m core.cli repl
 
-- Folder tree matches spec ✓
-- Dependencies pinned in `requirements.txt` ✓
-- `.env.example` covers API_KEY, HOST, PORT, MODEL_NAME, LLM_BACKEND, SLACK_WEBHOOK_URL ✓
-- API endpoints and CLI command parity ✓
-- Training pipeline expects `datasets/output.jsonl` ✓
-- `systemd/vega.service` compatible with `systemctl` ✓
+# View conversation history
+python -m core.cli history --limit 10
+
+# Build dataset
+python -m core.cli dataset build ./datasets/samples
+
+# Train model
+python -m core.cli train --config training/config.yaml
+```
+
+### Background Processes
+
+```bash
+# Start background processes
+python run_processes.py start
+
+# Check process status
+python run_processes.py status
+
+# Stop background processes
+python run_processes.py stop
+
+# Restart specific process
+python run_processes.py restart --process voice_processor
+```
+
+### Test Suite
+
+```bash
+# Run test suite UI
+cd test_suite && uvicorn app:app --port 8001
+
+# Run individual tests
+python -m pytest tests/test_core.py
+python -m pytest tests/test_integration.py
+python -m pytest tests/test_security.py
+
+# Run all tests
+python -m pytest tests/
+```
+
+## 🔐 Security Features
+
+### ECC Cryptography
+
+```python
+from core.ecc_crypto import get_ecc_manager, ECCCurve
+
+# Generate key pair
+ecc_manager = get_ecc_manager()
+key_pair = ecc_manager.generate_key_pair(ECCCurve.SECP256R1)
+
+# Sign data
+signature = ecc_manager.sign_data("Hello World", key_pair.key_id)
+
+# Verify signature
+valid = ecc_manager.verify_signature("Hello World", signature)
+
+# Encrypt message
+encrypted = ecc_manager.encrypt_message("Secret", recipient_public_key)
+
+# Decrypt message
+decrypted = ecc_manager.decrypt_message(encrypted, recipient_key_id)
+```
+
+### Secure API Keys
+
+```python
+from core.api_security import get_security_manager
+
+# Generate secure API key
+security_manager = get_security_manager()
+secure_key = security_manager.generate_secure_api_key(
+    permissions=["read", "write"],
+    expires_in_days=30,
+    rate_limit=100
+)
+
+# Validate API key
+validated = security_manager.validate_api_key(api_key)
+```
+
+### Certificate Management
+
+```python
+# Generate certificate
+certificate = ecc_manager.generate_certificate(
+    key_id=key_pair.key_id,
+    subject_name="vega.local",
+    validity_days=365
+)
+
+# Verify certificate
+valid = ecc_manager.verify_certificate(certificate.certificate_pem)
+```
+
+## 🔍 Monitoring & Observability
+
+### Health Checks
+
+```bash
+# Basic health check
+curl http://localhost:8000/healthz
+
+# Readiness check
+curl http://localhost:8000/readyz
+
+# Liveness check
+curl http://localhost:8000/livez
+
+# Metrics
+curl http://localhost:8000/metrics
+```
+
+### Error Monitoring
+
+```bash
+# Get error statistics
+curl -H "X-API-Key: your-key" http://localhost:8000/admin/errors/stats
+
+# Get recovery statistics
+curl -H "X-API-Key: your-key" http://localhost:8000/admin/recovery/stats
+
+# Process status
+curl -H "X-API-Key: your-key" http://localhost:8000/admin/processes/status
+```
+
+### Logging
+
+```bash
+# View logs
+tail -f /var/log/vega/errors.log
+tail -f /var/log/vega/debug.log
+
+# System logs (if using systemd)
+journalctl -u vega -f
+```
+
+## 🛠️ Development
+
+### Project Structure
+
+```
+vega2.0/
+├── core/                    # Core system components
+│   ├── app.py              # Main FastAPI application
+│   ├── cli.py              # Command-line interface
+│   ├── llm.py              # LLM integration layer
+│   ├── db.py               # Database operations
+│   ├── ecc_crypto.py       # ECC cryptography
+│   ├── api_security.py     # API security layer
+│   ├── error_handler.py    # Error handling system
+│   ├── process_manager.py  # Background process management
+│   ├── recovery_manager.py # Automatic recovery
+│   └── openapi_app.py      # OpenAPI-compliant API
+├── test_suite/             # Dedicated testing interface
+├── integrations/           # External service integrations
+├── datasets/               # Dataset preparation
+├── training/               # Model training
+├── docs/                   # Documentation
+├── systemd/                # System service files
+└── static/                 # Static web assets
+```
+
+### Adding New Features
+
+1. **Create Feature Module**: Add new module in appropriate directory
+2. **Add Tests**: Create tests in `test_suite/` or `tests/`
+3. **Update Documentation**: Update relevant docs and API specs
+4. **Add Configuration**: Add environment variables if needed
+5. **Security Review**: Ensure security best practices
+
+### Testing
+
+```bash
+# Run ECC system tests
+python test_ecc_system.py
+
+# Run error handling tests
+python test_error_handling.py
+
+# Run process manager tests
+python test_process_manager.py
+
+# Run full test suite
+python -m pytest tests/ -v
+```
+
+## 📚 API Reference
+
+### Core Endpoints
+
+- `POST /chat` - Chat with AI
+- `GET /history` - Get conversation history
+- `POST /feedback` - Submit feedback
+- `GET /healthz` - Health check
+
+### Admin Endpoints
+
+- `GET /admin/processes/status` - Background process status
+- `POST /admin/processes/start` - Start background processes
+- `POST /admin/processes/stop` - Stop background processes
+- `GET /admin/errors/stats` - Error statistics
+- `GET /admin/recovery/stats` - Recovery statistics
+
+### ECC Endpoints
+
+- `POST /admin/ecc/generate-key` - Generate ECC key pair
+- `GET /admin/ecc/keys` - List ECC keys
+- `POST /admin/ecc/sign` - Sign data with ECC
+- `POST /admin/ecc/verify` - Verify ECC signature
+
+### Security Endpoints
+
+- `POST /admin/security/generate-api-key` - Generate secure API key
+- `GET /admin/security/api-keys` - List API keys
+
+Full API documentation available at `/docs` when server is running.
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**Ollama Connection Failed**
+
+```bash
+# Check if Ollama is running
+curl http://127.0.0.1:11434/api/tags
+
+# Start Ollama
+ollama serve
+
+# Check available models
+ollama list
+```
+
+**Database Errors**
+
+```bash
+# Check database file permissions
+ls -la vega.db*
+
+# Reset database (development only)
+rm vega.db* && python -c "from core.db import init_database; init_database()"
+```
+
+**Process Management Issues**
+
+```bash
+# Check process status
+python run_processes.py status
+
+# Restart all processes
+python run_processes.py stop && python run_processes.py start
+
+# Check logs
+tail -f /tmp/vega_processes.log
+```
+
+**ECC Key Issues**
+
+```bash
+# List ECC keys
+python test_ecc_system.py
+
+# Check key permissions
+ls -la /tmp/vega_keys/
+
+# Regenerate keys (development only)
+rm -rf /tmp/vega_keys/ && python test_ecc_system.py
+```
+
+### Performance Tuning
+
+- **Memory Usage**: Monitor with `/admin/processes/status`
+- **Database**: Use WAL mode for better concurrency
+- **Caching**: Configure TTL cache sizes
+- **Rate Limiting**: Adjust per-key rate limits
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Add tests for new functionality
+4. Ensure all tests pass (`python -m pytest`)
+5. Update documentation
+6. Commit changes (`git commit -m 'Add amazing feature'`)
+7. Push to branch (`git push origin feature/amazing-feature`)
+8. Open Pull Request
+
+### Code Standards
+
+- Python 3.12+ with type hints
+- FastAPI best practices
+- Comprehensive error handling
+- Security-first design
+- Full test coverage
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [FastAPI](https://fastapi.tiangolo.com/) - Modern web framework
+- [Ollama](https://ollama.ai/) - Local LLM runtime
+- [Cryptography](https://cryptography.io/) - Cryptographic library
+- [StructLog](https://www.structlog.org/) - Structured logging
+- [Pydantic](https://pydantic-docs.helpmanual.io/) - Data validation
+
+## 📞 Support
+
+- Documentation: [docs/](docs/)
+- Issues: [GitHub Issues](https://github.com/your-org/vega2.0/issues)
+- Discussions: [GitHub Discussions](https://github.com/your-org/vega2.0/discussions)
+
+---
+
+**Vega2.0** - Built with ❤️ for the future of autonomous AI systems.
