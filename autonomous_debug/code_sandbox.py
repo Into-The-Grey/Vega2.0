@@ -80,11 +80,14 @@ class SandboxResult:
 class CodeSandbox:
     """Isolated environment for safe code testing"""
 
-    def __init__(self, sandbox_dir: str = None):
+    def __init__(self, sandbox_dir: Optional[str] = None):
         self.sandbox_dir = sandbox_dir or tempfile.mkdtemp(prefix="code_sandbox_")
         self.original_cwd = os.getcwd()
         self.test_db = self._init_test_database()
         self.environment_vars = {}
+        self.python_exe = ""
+        self.pip_exe = ""
+        self.venv_path = ""
 
     def _init_test_database(self) -> sqlite3.Connection:
         """Initialize test results database"""
@@ -133,21 +136,25 @@ class CodeSandbox:
         return conn
 
     def setup_sandbox(
-        self, source_dir: str, excluded_patterns: List[str] = None
+        self, source_dir: str, excluded_patterns: Optional[List[str]] = None
     ) -> bool:
         """Set up isolated sandbox environment"""
         try:
-            excluded_patterns = excluded_patterns or [
-                "__pycache__",
-                "*.pyc",
-                ".git",
-                ".env",
-                "venv",
-                ".venv",
-                "node_modules",
-                ".DS_Store",
-                "*.log",
-            ]
+            excluded_patterns = (
+                excluded_patterns
+                if excluded_patterns is not None
+                else [
+                    "__pycache__",
+                    "*.pyc",
+                    ".git",
+                    ".env",
+                    "venv",
+                    ".venv",
+                    "node_modules",
+                    ".DS_Store",
+                    "*.log",
+                ]
+            )
 
             logger.info(f"Setting up sandbox: {self.sandbox_dir}")
 
@@ -156,6 +163,21 @@ class CodeSandbox:
 
             # Set up Python virtual environment
             self._setup_virtual_environment()
+            # Set python_exe and pip_exe for this sandbox
+            if os.name == "nt":
+                self.python_exe = os.path.join(
+                    self.sandbox_dir, ".sandbox_venv", "Scripts", "python.exe"
+                )
+                self.pip_exe = os.path.join(
+                    self.sandbox_dir, ".sandbox_venv", "Scripts", "pip.exe"
+                )
+            else:
+                self.python_exe = os.path.join(
+                    self.sandbox_dir, ".sandbox_venv", "bin", "python"
+                )
+                self.pip_exe = os.path.join(
+                    self.sandbox_dir, ".sandbox_venv", "bin", "pip"
+                )
 
             # Install dependencies
             self._install_dependencies()
@@ -195,7 +217,7 @@ class CodeSandbox:
                 # Copy file
                 shutil.copy2(src_path, dst_path)
 
-        logger.debug(f"Copied source code to sandbox")
+    logger.debug("Copied source code to sandbox")
 
     def _setup_virtual_environment(self):
         """Set up Python virtual environment in sandbox"""
@@ -208,6 +230,10 @@ class CodeSandbox:
 
         # Store virtual environment info
         self.venv_path = venv_path
+        if not hasattr(self, "python_exe"):
+            self.python_exe = None
+        if not hasattr(self, "pip_exe"):
+            self.pip_exe = None
         if os.name == "nt":  # Windows
             self.python_exe = os.path.join(venv_path, "Scripts", "python.exe")
             self.pip_exe = os.path.join(venv_path, "Scripts", "pip.exe")
@@ -215,7 +241,7 @@ class CodeSandbox:
             self.python_exe = os.path.join(venv_path, "bin", "python")
             self.pip_exe = os.path.join(venv_path, "bin", "pip")
 
-        logger.debug(f"Set up virtual environment: {venv_path}")
+        logger.debug("Set up virtual environment: %s", self.venv_path)
 
     def _install_dependencies(self):
         """Install project dependencies in sandbox"""
@@ -227,7 +253,7 @@ class CodeSandbox:
 
         for req_file in requirements_files:
             req_path = os.path.join(self.sandbox_dir, req_file)
-            if os.path.exists(req_path):
+            if os.path.exists(req_path) and self.pip_exe:
                 try:
                     subprocess.run(
                         [self.pip_exe, "install", "-r", req_path],
@@ -242,41 +268,42 @@ class CodeSandbox:
         # Install common testing packages
         test_packages = ["pytest", "unittest-xml-reporting", "coverage"]
         for package in test_packages:
-            try:
-                subprocess.run(
-                    [self.pip_exe, "install", package], check=True, capture_output=True
-                )
-            except subprocess.CalledProcessError:
-                logger.warning(f"Failed to install {package}")
+            if self.pip_exe:
+                try:
+                    subprocess.run(
+                        [self.pip_exe, "install", package],
+                        check=True,
+                        capture_output=True,
+                    )
+                except subprocess.CalledProcessError:
+                    logger.warning(f"Failed to install {package}")
 
     def _verify_sandbox(self) -> bool:
         """Verify sandbox setup is correct"""
         try:
             # Test Python interpreter
+            if not self.python_exe:
+                logger.error("Python executable not set for sandbox.")
+                return False
             result = subprocess.run(
                 [self.python_exe, "-c", "import sys; print(sys.version)"],
                 capture_output=True,
                 text=True,
             )
-
             if result.returncode != 0:
                 logger.error("Python interpreter verification failed")
                 return False
-
             # Check if main modules can be imported
             test_imports = ["os", "sys", "json"]
             for module in test_imports:
                 result = subprocess.run(
                     [self.python_exe, "-c", f"import {module}"], capture_output=True
                 )
-
                 if result.returncode != 0:
                     logger.error(f"Failed to import {module}")
                     return False
-
             logger.info("Sandbox verification successful")
             return True
-
         except Exception as e:
             logger.error(f"Sandbox verification failed: {e}")
             return False
@@ -299,7 +326,7 @@ class CodeSandbox:
                 if not self._apply_file_change(file_path, change):
                     return False
 
-            logger.info(f"Successfully applied fix to sandbox")
+            logger.info("Successfully applied fix to sandbox")
             return True
 
         except Exception as e:
@@ -342,12 +369,12 @@ class CodeSandbox:
             logger.error(f"Failed to apply file change: {e}")
             return False
 
-    def run_tests(self, test_patterns: List[str] = None) -> List[TestResult]:
+    def run_tests(self, test_patterns: Optional[List[str]] = None) -> List[TestResult]:
         """Run tests in the sandbox environment"""
         test_results = []
 
         # Default test patterns
-        if not test_patterns:
+        if test_patterns is None:
             test_patterns = ["test_*.py", "*_test.py", "tests/", "pytest", "unittest"]
 
         logger.info("Running tests in sandbox environment")
@@ -376,20 +403,28 @@ class CodeSandbox:
     def _command_exists(self, command: str) -> bool:
         """Check if a command exists in the sandbox"""
         try:
+            python_exe = self.python_exe or ""
+            if not python_exe:
+                logger.error("Python executable is not set.")
+                return False
             result = subprocess.run(
-                [self.python_exe, "-c", f"import {command}"], capture_output=True
+                [python_exe, "-c", f"import {command}"], capture_output=True
             )
             return result.returncode == 0
-        except:
+        except Exception:
             return False
 
     def _run_pytest(self) -> Optional[TestResult]:
         """Run pytest in sandbox"""
         try:
+            python_exe = self.python_exe or ""
+            if not python_exe:
+                logger.error("Python executable is not set.")
+                return None
             start_time = datetime.now()
 
             result = subprocess.run(
-                [self.python_exe, "-m", "pytest", "-v", "--tb=short"],
+                [python_exe, "-m", "pytest", "-v", "--tb=short"],
                 cwd=self.sandbox_dir,
                 capture_output=True,
                 text=True,
@@ -428,10 +463,14 @@ class CodeSandbox:
     def _run_unittest(self) -> Optional[TestResult]:
         """Run unittest discovery in sandbox"""
         try:
+            python_exe = self.python_exe or ""
+            if not python_exe:
+                logger.error("Python executable is not set.")
+                return None
             start_time = datetime.now()
 
             result = subprocess.run(
-                [self.python_exe, "-m", "unittest", "discover", "-v"],
+                [python_exe, "-m", "unittest", "discover", "-v"],
                 cwd=self.sandbox_dir,
                 capture_output=True,
                 text=True,
@@ -469,6 +508,10 @@ class CodeSandbox:
     def _run_python_test(self, test_file: str) -> Optional[TestResult]:
         """Run a specific Python test file"""
         try:
+            python_exe = self.python_exe or ""
+            if not python_exe:
+                logger.error("Python executable is not set.")
+                return None
             test_path = os.path.join(self.sandbox_dir, test_file)
             if not os.path.exists(test_path):
                 return None
@@ -476,7 +519,7 @@ class CodeSandbox:
             start_time = datetime.now()
 
             result = subprocess.run(
-                [self.python_exe, test_path],
+                [python_exe, test_path],
                 cwd=self.sandbox_dir,
                 capture_output=True,
                 text=True,
@@ -860,7 +903,7 @@ class SandboxValidator:
             logger.error(f"Failed to store validation result: {e}")
 
     def get_validation_history(
-        self, fix_id: str = None, error_id: str = None
+        self, fix_id: Optional[str] = None, error_id: Optional[str] = None
     ) -> List[Dict[str, Any]]:
         """Get validation history"""
         try:
@@ -969,7 +1012,7 @@ async def main():
             validator = SandboxValidator(args.workspace)
             result = await validator.validate_fix(mock_fix, mock_error)
 
-            print(f"✅ Validation completed")
+            print("✅ Validation completed")
             print(f"🛡️ Safety Score: {result.safety_score:.2f}")
             print(f"📋 Recommendation: {result.recommendation}")
             print(f"🔍 Regression Detected: {result.regression_detected}")

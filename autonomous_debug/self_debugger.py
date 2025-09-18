@@ -841,7 +841,7 @@ class FixValidator:
 
     def _load_validation_rules(self) -> Dict[str, Any]:
         """Load validation rules from configuration"""
-        # TODO: Load from config file
+        # TODO: Load from config file or environment. Not yet implemented.
         return {
             "max_confidence_threshold": 0.8,
             "min_confidence_threshold": 0.3,
@@ -1073,7 +1073,7 @@ async def main():
             result = await debugger.debug_error(args.error_id)
 
             if result["success"]:
-                print(f"✅ Analysis complete")
+                print("✅ Analysis complete")
                 print(f"📋 Generated {len(result['fixes'])} fix suggestions")
 
                 if result["best_fix"]:
