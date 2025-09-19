@@ -151,12 +151,12 @@ This roadmap outlines the complete implementation of advanced features for Vega 
 
 ### Phase 1: Image Processing Pipeline 📸
 
-- [ ] **1.1 Image Input Handling**
-  - [ ] Support common formats (JPEG, PNG, TIFF, WebP)
-  - [ ] Implement image validation and sanitization
-  - [ ] Add image resizing and preprocessing
-  - [ ] Create thumbnail generation
-  - [ ] Implement EXIF data extraction and privacy scrubbing
+- [x] **1.1 Image Input Handling**
+  - [x] Support common formats (JPEG, PNG, TIFF, WebP)
+  - [x] Implement image validation and sanitization
+  - [x] Add image resizing and preprocessing
+  - [x] Create thumbnail generation
+  - [x] Implement EXIF data extraction and privacy scrubbing
 
 - [ ] **1.2 Computer Vision Models**
   - [ ] Integrate pre-trained image classification models (ResNet, EfficientNet)
