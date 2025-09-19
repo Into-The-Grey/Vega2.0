@@ -16,7 +16,7 @@ import asyncio
 import time
 import logging
 from typing import Dict, Optional, Any, Callable
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from pathlib import Path
 
 from .model_serialization import ModelWeights, ModelSerializer
@@ -33,6 +33,7 @@ from .security import (
     create_model_signature,
     compute_model_hash,
 )
+from .data_utils import compute_data_statistics, DataStatistics
 
 logger = logging.getLogger(__name__)
 
@@ -346,6 +347,8 @@ class FederatedParticipant:
         self.local_model = None
         self.training_data = None
         self.training_config = LocalTrainingConfig()
+        self.training_data_statistics: Optional[DataStatistics] = None
+        self.local_model_architecture: Optional[Dict[str, Any]] = None
 
         # Session state
         self.active_session_id: Optional[str] = None
@@ -405,11 +408,40 @@ class FederatedParticipant:
                 logger.warning("Could not detect model type, defaulting to pytorch")
                 self.trainer.model_type = "pytorch"
 
+        # Capture architecture metadata for compatibility validation
+        if hasattr(ModelSerializer, "inspect_model_architecture"):
+            try:
+                self.local_model_architecture = ModelSerializer.inspect_model_architecture(
+                    model
+                )
+            except Exception as exc:  # pragma: no cover - defensive
+                logger.warning(f"Failed to inspect model architecture: {exc}")
+                self.local_model_architecture = None
+        else:  # pragma: no cover - compatibility with older test doubles
+            self.local_model_architecture = None
+
         logger.info(f"Set local model (type: {self.trainer.model_type})")
 
     def set_training_data(self, training_data: Any):
         """Set local training data."""
         self.training_data = training_data
+
+        self.training_data_statistics = None
+        try:
+            data_iterable = training_data
+            if hasattr(training_data, "__len__") and hasattr(training_data, "__getitem__") and not hasattr(training_data, "__iter__"):
+
+                def _dataset_iterator():
+                    for idx in range(len(training_data)):
+                        yield training_data[idx]
+
+                data_iterable = _dataset_iterator()
+
+            stats = compute_data_statistics(data_iterable, max_batches=5)
+            self.training_data_statistics = stats
+        except Exception as exc:
+            logger.debug(f"Unable to compute training data statistics: {exc}")
+
         logger.info("Set local training data")
 
     def set_training_config(self, config: LocalTrainingConfig):
@@ -477,6 +509,36 @@ class FederatedParticipant:
                     "message": f"Model type mismatch: expected {session_config['model_type']}, have {self.trainer.model_type}",
                 }
 
+            expected_architecture = (
+                session_config.get("expected_architecture")
+                or session_config.get("reference_architecture")
+                or session_config.get("architecture_info")
+            )
+            if expected_architecture:
+                if not self.local_model_architecture:
+                    return {
+                        "status": "error",
+                        "message": "Local model architecture metadata unavailable",
+                    }
+
+                compatible, diff_details = ModelSerializer.compare_architecture_info(
+                    self.local_model_architecture, expected_architecture
+                )
+                if not compatible:
+                    audit_log(
+                        "participant_architecture_mismatch",
+                        {
+                            "session_id": self.active_session_id,
+                            "differences": diff_details,
+                        },
+                        participant_id=self.participant_id,
+                    )
+                    return {
+                        "status": "error",
+                        "message": "Local model architecture is incompatible with session requirements",
+                        "details": diff_details,
+                    }
+
             logger.info(f"Initialized for session {self.active_session_id}")
             return {
                 "status": "ready",
@@ -487,6 +549,10 @@ class FederatedParticipant:
                         self.training_data, "__len__", lambda: 1000
                     )(),
                     "config": self.training_config.to_dict(),
+                    "data_statistics": asdict(self.training_data_statistics)
+                    if self.training_data_statistics
+                    else None,
+                    "model_architecture": self.local_model_architecture,
                 },
             }
 

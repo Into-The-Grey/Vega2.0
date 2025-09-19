@@ -16,7 +16,7 @@ import hashlib
 import pickle
 import gzip
 import json
-from typing import Dict, Any, Optional, Union, List
+from typing import Dict, Any, Optional, Union, List, Tuple
 from dataclasses import dataclass, asdict
 from pathlib import Path
 import logging
@@ -26,14 +26,14 @@ try:
     import torch.nn as nn
 
     HAS_PYTORCH = True
-except ImportError:
+except ImportError:  # pragma: no cover - optional dependency
     HAS_PYTORCH = False
 
 try:
     import tensorflow as tf
 
     HAS_TENSORFLOW = True
-except ImportError:
+except ImportError:  # pragma: no cover - optional dependency
     HAS_TENSORFLOW = False
 
 import numpy as np
@@ -493,6 +493,183 @@ class ModelSerializer:
 
         return model
 
+    # ------------------------------------------------------------------
+    # Model inspection & compatibility helpers
+    # ------------------------------------------------------------------
+
+    @staticmethod
+    def inspect_model_architecture(model: Any) -> Dict[str, Any]:
+        """Generate a lightweight description of a model architecture.
+
+        The resulting dictionary is fully JSON-serialisable, making it safe
+        to share across participants without exposing raw weights.
+        """
+
+        if HAS_PYTORCH and isinstance(model, nn.Module):
+            return ModelSerializer._inspect_pytorch_model(model)
+        if HAS_TENSORFLOW and isinstance(model, tf.keras.Model):
+            return ModelSerializer._inspect_tensorflow_model(model)
+
+        raise TypeError(
+            "Unsupported model type for inspection. Provide a PyTorch module "
+            "or a TensorFlow/Keras model."
+        )
+
+    @staticmethod
+    def compare_architecture_info(
+        local_info: Dict[str, Any], reference_info: Dict[str, Any]
+    ) -> Tuple[bool, Dict[str, Any]]:
+        """Compare two architecture descriptors.
+
+        Returns a tuple ``(is_compatible, details)`` where ``details`` contains
+        any mismatches that were detected. The comparison is intentionally
+        strict—if hashes differ we immediately surface a mismatch—yet the
+        method remains descriptive so callers can present helpful diagnostics
+        to users.
+        """
+
+        details: Dict[str, Any] = {"mismatches": []}
+
+        if not local_info or not reference_info:
+            details["mismatches"].append("missing_architecture_info")
+            return False, details
+
+        if local_info.get("model_type") != reference_info.get("model_type"):
+            details["mismatches"].append(
+                {
+                    "field": "model_type",
+                    "local": local_info.get("model_type"),
+                    "reference": reference_info.get("model_type"),
+                }
+            )
+
+        if local_info.get("architecture_hash") == reference_info.get(
+            "architecture_hash"
+        ):
+            is_compatible = len(details["mismatches"]) == 0
+            return is_compatible, details
+
+        comparable_fields = [
+            "model_class",
+            "module",
+            "layer_count",
+            "parameter_count",
+            "trainable_parameter_count",
+        ]
+        for field in comparable_fields:
+            if local_info.get(field) != reference_info.get(field):
+                details["mismatches"].append(
+                    {
+                        "field": field,
+                        "local": local_info.get(field),
+                        "reference": reference_info.get(field),
+                    }
+                )
+
+        # Compare parameter shapes
+        local_shapes = local_info.get("parameter_shapes", {})
+        reference_shapes = reference_info.get("parameter_shapes", {})
+        if set(local_shapes.keys()) != set(reference_shapes.keys()):
+            details["mismatches"].append(
+                {
+                    "field": "parameter_names",
+                    "local": sorted(local_shapes.keys()),
+                    "reference": sorted(reference_shapes.keys()),
+                }
+            )
+        else:
+            for name in local_shapes.keys():
+                if local_shapes[name] != reference_shapes[name]:
+                    details["mismatches"].append(
+                        {
+                            "field": f"parameter_shape::{name}",
+                            "local": local_shapes[name],
+                            "reference": reference_shapes[name],
+                        }
+                    )
+
+        is_compatible = len(details["mismatches"]) == 0
+        return is_compatible, details
+
+    # ----------------------------
+    # Internal helpers
+    # ----------------------------
+
+    @staticmethod
+    def _inspect_pytorch_model(model: "nn.Module") -> Dict[str, Any]:
+        import inspect
+
+        parameter_shapes = {
+            name: list(param.shape)
+            for name, param in model.named_parameters(recurse=True)
+        }
+
+        layer_types = []
+        for name, module in model.named_modules():
+            if name == "":
+                continue  # Skip the top-level container entry
+            layer_types.append({"name": name, "type": module.__class__.__name__})
+
+        trainable_params = sum(
+            p.numel() for p in model.parameters() if p.requires_grad
+        )
+        total_params = sum(p.numel() for p in model.parameters())
+
+        info = {
+            "model_type": "pytorch",
+            "model_class": model.__class__.__name__,
+            "module": model.__class__.__module__,
+            "layer_count": len(layer_types),
+            "layer_types": layer_types,
+            "parameter_count": int(total_params),
+            "trainable_parameter_count": int(trainable_params),
+            "parameter_shapes": parameter_shapes,
+        }
+
+        info["architecture_hash"] = _hash_architecture(info)
+        info["forward_signature"] = str(
+            inspect.signature(model.forward)  # type: ignore[attr-defined]
+        )
+        return info
+
+    @staticmethod
+    def _inspect_tensorflow_model(model: "tf.keras.Model") -> Dict[str, Any]:
+        config = model.get_config()
+        layer_types = [
+            {"name": layer.get("name"), "type": layer.get("class_name")}
+            for layer in config.get("layers", [])
+        ]
+
+        parameter_shapes = {}
+        for weight in model.weights:
+            parameter_shapes[weight.name] = list(weight.shape.as_list())
+
+        def _count_parameters(weights: List["tf.Variable"]) -> int:
+            total = 0
+            for tensor in weights:
+                shape = tensor.shape.as_list()
+                if None in shape:
+                    continue
+                total += int(np.prod(shape))
+            return total
+
+        trainable_params = _count_parameters(model.trainable_weights)
+        total_params = _count_parameters(model.weights)
+
+        info = {
+            "model_type": "tensorflow",
+            "model_class": model.__class__.__name__,
+            "module": model.__class__.__module__,
+            "layer_count": len(layer_types),
+            "layer_types": layer_types,
+            "parameter_count": total_params,
+            "trainable_parameter_count": trainable_params,
+            "parameter_shapes": parameter_shapes,
+        }
+
+        info["architecture_hash"] = _hash_architecture(info)
+        return info
+
 
 def create_test_pytorch_model() -> Optional["torch.nn.Module"]:
     """Create a simple PyTorch model for testing."""
@@ -526,6 +703,29 @@ def create_test_tensorflow_model() -> Optional["tf.keras.Model"]:
     )
 
     return model
+
+
+# ----------------------------------------------------------------------
+# Internal helpers
+# ----------------------------------------------------------------------
+
+
+def _hash_architecture(architecture_info: Dict[str, Any]) -> str:
+    """Create a reproducible hash for the architecture description."""
+
+    try:
+        serialisable = json.dumps(architecture_info, sort_keys=True, default=list)
+    except TypeError:
+        # Fallback: convert non-serialisable objects to string representations.
+        normalised = {}
+        for key, value in architecture_info.items():
+            try:
+                normalised[key] = json.loads(json.dumps(value, default=list))
+            except TypeError:
+                normalised[key] = str(value)
+        serialisable = json.dumps(normalised, sort_keys=True)
+
+    return hashlib.sha256(serialisable.encode("utf-8")).hexdigest()
 
 
 # Example usage and testing

@@ -25,6 +25,12 @@ from .encryption import DynamicEncryption
 from .fedavg import FedAvg, FedAvgConfig
 from .algorithms import FedProx, FedProxConfig, LAG, LAGConfig
 from .dp import DifferentialPrivacy
+from .data_utils import (
+    DataStatistics,
+    PartitionResult,
+    partition_dataset,
+    compute_data_statistics,
+)
 from .cross_silo import (
     Organization,
     Silo,
@@ -52,6 +58,11 @@ __all__ = [
     "LAGConfig",
     # Privacy and security
     "DifferentialPrivacy",
+    # Data utilities
+    "DataStatistics",
+    "PartitionResult",
+    "partition_dataset",
+    "compute_data_statistics",
     # Cross-silo federation
     "Organization",
     "Silo",
