@@ -231,11 +231,9 @@ class CrossSiloSession:
     # Hierarchical configuration
     participating_orgs: List[str]
     participating_silos: Dict[str, List[str]]  # org_id -> [silo_ids]
-    federation_topology: str = "star"  # "star", "tree", "mesh"
-
-    # Multi-level aggregation
     aggregation_levels: Dict[FederationLevel, AggregationStrategy]
     coordination_schedule: Dict[str, Any]  # Timing for each level
+    federation_topology: str = "star"  # "star", "tree", "mesh"
 
     # Cross-domain settings
     domain_adaptation: bool = False

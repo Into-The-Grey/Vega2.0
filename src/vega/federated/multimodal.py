@@ -23,6 +23,8 @@ import io
 from pathlib import Path
 import warnings
 
+from .image_input import process_image
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
@@ -129,30 +131,35 @@ class VisionDataHandler(ModalityDataHandler):
 
     def preprocess(self, data: Any) -> torch.Tensor:
         """Preprocess image data."""
-        if isinstance(data, np.ndarray):
-            tensor = torch.from_numpy(data).float()
-        elif isinstance(data, torch.Tensor):
+        if isinstance(data, torch.Tensor):
             tensor = data.float()
+            if tensor.dim() == 3:
+                tensor = tensor.unsqueeze(0)
         else:
-            raise ValueError(f"Unsupported data type: {type(data)}")
+            if isinstance(data, np.ndarray):
+                array = data.astype(np.float32)
+                if array.max() > 1.0:
+                    array /= 255.0
+            elif isinstance(data, (bytes, bytearray, str, Path)) or hasattr(data, "read"):
+                processed = process_image(data)
+                array = processed.array.astype(np.float32)
+            else:
+                raise ValueError(f"Unsupported data type: {type(data)}")
 
-        # Ensure correct shape: (C, H, W) or (B, C, H, W)
-        if tensor.dim() == 3:
-            tensor = tensor.unsqueeze(0)  # Add batch dimension
+            if array.ndim == 3:
+                array = array.transpose(2, 0, 1)  # C, H, W
+            elif array.ndim == 2:
+                array = np.expand_dims(array, axis=0)
+            tensor = torch.from_numpy(array).unsqueeze(0)
 
-        # Resize if needed
         if tensor.shape[-2:] != self.resize_dims:
             tensor = F.interpolate(
                 tensor, size=self.resize_dims, mode="bilinear", align_corners=False
             )
 
-        # Normalize
-        if len(self.normalize_mean) == tensor.shape[1]:  # Check channel dimension
-            mean = torch.tensor(self.normalize_mean).view(1, -1, 1, 1)
-            std = torch.tensor(self.normalize_std).view(1, -1, 1, 1)
-            tensor = (tensor - mean) / std
-
-        return tensor
+        mean = torch.tensor(self.normalize_mean).view(1, -1, 1, 1)
+        std = torch.tensor(self.normalize_std).view(1, -1, 1, 1)
+        return (tensor - mean) / std
 
     def encode(self, data: torch.Tensor) -> torch.Tensor:
         """Encode image data into feature representation."""

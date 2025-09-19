@@ -25,6 +25,7 @@ from .encryption import DynamicEncryption
 from .fedavg import FedAvg, FedAvgConfig
 from .algorithms import FedProx, FedProxConfig, LAG, LAGConfig
 from .dp import DifferentialPrivacy
+from .image_input import ImageInputConfig, ImageInputHandler, ProcessedImage, process_image
 from .data_utils import (
     DataStatistics,
     PartitionResult,
@@ -58,6 +59,10 @@ __all__ = [
     "LAGConfig",
     # Privacy and security
     "DifferentialPrivacy",
+    "ImageInputConfig",
+    "ImageInputHandler",
+    "ProcessedImage",
+    "process_image",
     # Data utilities
     "DataStatistics",
     "PartitionResult",
