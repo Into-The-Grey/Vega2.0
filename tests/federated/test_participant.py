@@ -62,30 +62,32 @@ class TestParticipantMetrics:
 
     def test_metrics_initialization(self):
         """Test metrics initialization with default values."""
-        metrics = ParticipantMetrics()
+        metrics = ParticipantMetrics(training_loss=0.0, validation_loss=0.0)
 
-        assert metrics.total_training_time == 0.0
-        assert metrics.total_rounds_participated == 0
-        assert metrics.average_loss == 0.0
-        assert metrics.best_accuracy == 0.0
-        assert metrics.data_points_count == 0
-        assert metrics.training_errors == 0
-        assert metrics.communication_failures == 0
+        # Test that the training metrics are properly initialized
+        assert metrics.training_loss == 0.0
+        assert metrics.validation_loss == 0.0
 
     def test_metrics_update(self):
         """Test metrics updates."""
-        metrics = ParticipantMetrics()
+        metrics = ParticipantMetrics(training_loss=0.5, validation_loss=0.6)
 
-        # Update some metrics
-        metrics.total_training_time = 120.5
-        metrics.total_rounds_participated = 5
-        metrics.average_loss = 0.25
-        metrics.best_accuracy = 0.95
+        # Update some metrics (using actual fields from TrainingMetrics)
+        metrics.training_accuracy = 0.95
+        metrics.validation_accuracy = 0.92
+        metrics.training_samples = 1000
+        metrics.validation_samples = 200
+        metrics.epochs_completed = 5
+        metrics.training_time = 120.5
 
-        assert metrics.total_training_time == 120.5
-        assert metrics.total_rounds_participated == 5
-        assert metrics.average_loss == 0.25
-        assert metrics.best_accuracy == 0.95
+        assert metrics.training_loss == 0.5
+        assert metrics.validation_loss == 0.6
+        assert metrics.training_accuracy == 0.95
+        assert metrics.validation_accuracy == 0.92
+        assert metrics.training_samples == 1000
+        assert metrics.validation_samples == 200
+        assert metrics.epochs_completed == 5
+        assert metrics.training_time == 120.5
 
 
 class TestTrainingState:
@@ -131,38 +133,41 @@ class TestFederatedParticipant:
     ):
         """Create FederatedParticipant instance with mocks."""
         with patch(
-            "vega.federated.participant.CommunicationManager",
+            "src.vega.federated.participant.CommunicationManager",
             return_value=mock_communication_manager,
         ), patch(
-            "vega.federated.participant.ModelSerializer",
+            "src.vega.federated.participant.ModelSerializer",
             return_value=mock_model_serializer,
         ):
             participant = FederatedParticipant(
                 participant_id="test_participant",
-                coordinator_endpoint="http://localhost:8000",
-                api_key="test_api_key",
-                config=sample_config,
+                participant_name="Test Participant",
+                host="127.0.0.1",
+                port=8000,
+                api_key="test-key-123",  # Use allowed key
             )
-            participant.communication_manager = mock_communication_manager
-            participant.model_serializer = mock_model_serializer
+            # Mock the communication manager since it's created internally
+            participant.comm_manager = mock_communication_manager
             return participant
 
     def test_participant_initialization(self, sample_config):
         """Test participant initialization."""
-        with patch("vega.federated.participant.CommunicationManager"), patch(
-            "vega.federated.participant.ModelSerializer"
+        with patch("src.vega.federated.participant.CommunicationManager"), patch(
+            "src.vega.federated.participant.ModelSerializer"
         ):
             participant = FederatedParticipant(
                 participant_id="test_participant",
-                coordinator_endpoint="http://localhost:8000",
-                api_key="test_api_key",
-                config=sample_config,
+                participant_name="Test Participant",
+                host="127.0.0.1",
+                port=8000,
+                api_key="test-key-123",  # Use allowed key
             )
 
         assert participant.participant_id == "test_participant"
-        assert participant.coordinator_endpoint == "http://localhost:8000"
-        assert participant.api_key == "test_api_key"
-        assert participant.config == sample_config
+        assert participant.participant_name == "Test Participant"
+        assert participant.host == "127.0.0.1"
+        assert participant.port == 8000
+        assert participant.api_key == "test-key-123"
         assert participant.state == TrainingState.IDLE
         assert participant.current_session_id is None
         assert participant.current_round == 0

@@ -18,6 +18,7 @@ import logging
 from typing import Dict, Optional, Any, Callable
 from dataclasses import dataclass, asdict
 from pathlib import Path
+from enum import Enum
 
 from .model_serialization import ModelWeights, ModelSerializer
 from .communication import CommunicationManager, FederatedMessage
@@ -96,26 +97,14 @@ class TrainingMetrics:
 ParticipantMetrics = TrainingMetrics
 
 
-@dataclass
-class TrainingState:
-    """State information for training progress."""
+class TrainingState(Enum):
+    """Enumeration of training states for federated participants."""
 
-    current_epoch: int
-    total_epochs: int
-    current_batch: int
-    total_batches: int
-    phase: str  # 'training', 'validation', 'complete'
-    is_converged: bool = False
-
-    def to_dict(self) -> Dict[str, Any]:
-        return {
-            "current_epoch": self.current_epoch,
-            "total_epochs": self.total_epochs,
-            "current_batch": self.current_batch,
-            "total_batches": self.total_batches,
-            "phase": self.phase,
-            "is_converged": self.is_converged,
-        }
+    IDLE = "idle"
+    TRAINING = "training"
+    UPLOADING = "uploading"
+    WAITING = "waiting"
+    ERROR = "error"
 
 
 # Type alias for training progress callbacks
@@ -385,6 +374,11 @@ class FederatedParticipant:
         self.session_config: Optional[Dict[str, Any]] = None
         self.current_round: int = 0
         self.local_weights: Optional[ModelWeights] = None
+
+        # Training state and metrics
+        self.state = TrainingState.IDLE
+        self.metrics = ParticipantMetrics(training_loss=0.0, validation_loss=0.0)
+        self.current_session_id: Optional[str] = None
 
         # Security state
         self.model_history: list = []  # Track previous models for consistency checking
