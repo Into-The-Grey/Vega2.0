@@ -1,0 +1,1 @@
+{"timestamp": "2025-09-16T09:56:27.384712", "module": "vega.test", "level": "INFO", "function": "<module>", "line": 1, "message": "test message", "thread": 133860019663168, "process": 3372052, "extra_taskName": null, "extra_message": "test message", "extra_asctime": "2025-09-16 04:56:27"}

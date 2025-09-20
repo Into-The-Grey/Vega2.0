@@ -52,8 +52,8 @@ config/secrets.yaml
 .DS_Store
 Thumbs.db
 
-# Logs
-logs/
+# Logging
+# logs/
 *.log
 vega_logs/
 *.log.*

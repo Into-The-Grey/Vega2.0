@@ -2,35 +2,30 @@
 Document processing utilities for Vega 2.0 multi-modal learning.
 
 This module provides:
-- Document format support (PDF, DOCX, TXT, RTF, HTML)
-- Text extraction with formatting preservation
-- Document validation and sanitization
-- Metadata extraction and analysis
-- Document structure analysis
+- Document format detection and validation
+- Text extraction from multiple document formats (PDF, DOCX, TXT, RTF, HTML)
+- Document sanitization and security checks
+- Metadata extraction and preservation
 """
 
 import os
-import tempfile
-import shutil
-from typing import List, Dict, Optional, Tuple, Any, Union
+import mimetypes
+from typing import Dict, List, Optional, Tuple, Any, Union
 from pathlib import Path
 import logging
 from dataclasses import dataclass, asdict
-import json
-import mimetypes
 from datetime import datetime
+import tempfile
+import shutil
 
 # Document processing imports
 try:
     import PyPDF2
-    import pypdf
 
     PDF_AVAILABLE = True
 except ImportError:
     PDF_AVAILABLE = False
-    logging.warning(
-        "PDF libraries not available. Install with: pip install PyPDF2 pypdf"
-    )
+    logging.warning("PyPDF2 not available. Install with: pip install PyPDF2")
 
 try:
     from docx import Document as DocxDocument
@@ -47,16 +42,16 @@ try:
 except ImportError:
     HTML_AVAILABLE = False
     logging.warning(
-        "BeautifulSoup not available. Install with: pip install beautifulsoup4"
+        "BeautifulSoup4 not available. Install with: pip install beautifulsoup4"
     )
 
 try:
-    import chardet
+    from striprtf.striprtf import rtf_to_text
 
-    CHARDET_AVAILABLE = True
+    RTF_AVAILABLE = True
 except ImportError:
-    CHARDET_AVAILABLE = False
-    logging.warning("chardet not available. Install with: pip install chardet")
+    RTF_AVAILABLE = False
+    logging.warning("striprtf not available. Install with: pip install striprtf")
 
 try:
     import magic
@@ -71,449 +66,577 @@ except ImportError:
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-SUPPORTED_FORMATS = {".pdf", ".docx", ".txt", ".rtf", ".html", ".htm", ".md"}
+SUPPORTED_FORMATS = {
+    ".pdf": "PDF",
+    ".docx": "Word Document",
+    ".doc": "Word Document (Legacy)",
+    ".txt": "Text",
+    ".rtf": "Rich Text Format",
+    ".html": "HTML",
+    ".htm": "HTML",
+    ".md": "Markdown",
+}
 
 
 @dataclass
 class DocumentMetadata:
-    """Document metadata and properties."""
+    """Document metadata container."""
 
     file_path: str
     file_size: int
-    format: str
-    encoding: Optional[str] = None
-    title: Optional[str] = None
-    author: Optional[str] = None
+    format_type: str
+    mime_type: str
     created_date: Optional[str] = None
     modified_date: Optional[str] = None
+    author: Optional[str] = None
+    title: Optional[str] = None
     page_count: Optional[int] = None
     word_count: Optional[int] = None
     character_count: Optional[int] = None
     language: Optional[str] = None
-    mime_type: Optional[str] = None
+    encoding: Optional[str] = None
 
 
 @dataclass
 class DocumentContent:
-    """Extracted document content with structure."""
+    """Container for extracted document content."""
 
     text: str
     metadata: DocumentMetadata
-    paragraphs: List[str]
-    headers: List[Dict[str, Any]]
-    tables: List[List[List[str]]]
-    images: List[Dict[str, Any]]
-    links: List[Dict[str, str]]
-    structure: Dict[str, Any]
-    extraction_time: float
-    extraction_method: str
+    formatting: Optional[Dict[str, Any]] = None
+    structure: Optional[Dict[str, Any]] = None
+    extracted_data: Optional[Dict[str, Any]] = None
+    processing_errors: Optional[List[str]] = None
 
 
 class DocumentValidator:
     """Validate and sanitize document files."""
 
-    def __init__(self):
-        self.max_file_size = 100 * 1024 * 1024  # 100MB
-        self.allowed_extensions = SUPPORTED_FORMATS
+    MAX_FILE_SIZE = 100 * 1024 * 1024  # 100MB
 
-    def validate_document(self, file_path: str) -> Dict[str, Any]:
-        """Validate document file and return validation results."""
-        result = {"is_valid": False, "errors": [], "warnings": [], "file_info": {}}
+    def __init__(self):
+        self.temp_dir = tempfile.mkdtemp()
+
+    def __del__(self):
+        if hasattr(self, "temp_dir") and os.path.exists(self.temp_dir):
+            shutil.rmtree(self.temp_dir, ignore_errors=True)
+
+    def validate_document(self, file_path: str) -> Tuple[bool, List[str]]:
+        """Validate document file for security and format compliance."""
+        errors = []
 
         try:
+            # Check file existence
             if not os.path.exists(file_path):
-                result["errors"].append("File does not exist")
-                return result
+                errors.append("File does not exist")
+                return False, errors
 
             # Check file size
             file_size = os.path.getsize(file_path)
-            if file_size > self.max_file_size:
-                result["errors"].append(
-                    f"File too large: {file_size} bytes (max: {self.max_file_size})"
+            if file_size > self.MAX_FILE_SIZE:
+                errors.append(
+                    f"File size ({file_size} bytes) exceeds maximum ({self.MAX_FILE_SIZE} bytes)"
                 )
-                return result
+                return False, errors
 
-            # Check extension
-            file_ext = Path(file_path).suffix.lower()
-            if file_ext not in self.allowed_extensions:
-                result["errors"].append(f"Unsupported file format: {file_ext}")
-                return result
+            if file_size == 0:
+                errors.append("File is empty")
+                return False, errors
 
-            # Check mime type if magic is available
-            if MAGIC_AVAILABLE:
-                try:
-                    mime_type = magic.from_file(file_path, mime=True)
-                    result["file_info"]["mime_type"] = mime_type
+            # Check file extension
+            ext = Path(file_path).suffix.lower()
+            if ext not in SUPPORTED_FORMATS:
+                errors.append(f"Unsupported file format: {ext}")
+                return False, errors
 
-                    # Validate mime type matches extension
-                    expected_mimes = {
-                        ".pdf": "application/pdf",
-                        ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                        ".txt": "text/plain",
-                        ".html": "text/html",
-                        ".htm": "text/html",
-                    }
+            # MIME type validation
+            mime_type = self._get_mime_type(file_path)
+            if not self._validate_mime_type(ext, mime_type):
+                errors.append(
+                    f"MIME type {mime_type} doesn't match file extension {ext}"
+                )
 
-                    if file_ext in expected_mimes:
-                        if mime_type != expected_mimes[file_ext]:
-                            result["warnings"].append(
-                                f"Mime type mismatch: {mime_type} (expected: {expected_mimes[file_ext]})"
-                            )
+            # Basic content validation
+            if not self._validate_file_content(file_path, ext):
+                errors.append("File content validation failed")
+                return False, errors
 
-                except Exception as e:
-                    result["warnings"].append(f"Could not determine mime type: {e}")
-
-            # Basic file info
-            result["file_info"]["size"] = file_size
-            result["file_info"]["extension"] = file_ext
-            result["file_info"]["path"] = file_path
-
-            result["is_valid"] = len(result["errors"]) == 0
+            return len(errors) == 0, errors
 
         except Exception as e:
-            result["errors"].append(f"Validation error: {e}")
+            errors.append(f"Validation error: {e}")
+            return False, errors
 
-        return result
+    def _get_mime_type(self, file_path: str) -> str:
+        """Get MIME type of file."""
+        if MAGIC_AVAILABLE:
+            try:
+                return magic.from_file(file_path, mime=True)
+            except Exception:
+                pass
+
+        # Fallback to mimetypes
+        mime_type, _ = mimetypes.guess_type(file_path)
+        return mime_type or "application/octet-stream"
+
+    def _validate_mime_type(self, extension: str, mime_type: str) -> bool:
+        """Validate MIME type matches file extension."""
+        expected_mimes = {
+            ".pdf": ["application/pdf"],
+            ".docx": [
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+            ],
+            ".doc": ["application/msword"],
+            ".txt": ["text/plain"],
+            ".rtf": ["application/rtf", "text/rtf"],
+            ".html": ["text/html"],
+            ".htm": ["text/html"],
+            ".md": ["text/markdown", "text/x-markdown", "text/plain"],
+        }
+
+        expected = expected_mimes.get(extension, [])
+        return mime_type in expected if expected else True
+
+    def _validate_file_content(self, file_path: str, extension: str) -> bool:
+        """Basic file content validation."""
+        try:
+            if extension == ".pdf":
+                return self._validate_pdf_content(file_path)
+            elif extension == ".docx":
+                return self._validate_docx_content(file_path)
+            elif extension in [".txt", ".md"]:
+                return self._validate_text_content(file_path)
+            elif extension in [".html", ".htm"]:
+                return self._validate_html_content(file_path)
+            elif extension == ".rtf":
+                return self._validate_rtf_content(file_path)
+            return True
+        except Exception as e:
+            logger.warning(f"Content validation failed: {e}")
+            return False
+
+    def _validate_pdf_content(self, file_path: str) -> bool:
+        """Validate PDF file content."""
+        if not PDF_AVAILABLE:
+            return True
+
+        try:
+            with open(file_path, "rb") as file:
+                reader = PyPDF2.PdfReader(file)
+                return len(reader.pages) > 0
+        except Exception:
+            return False
+
+    def _validate_docx_content(self, file_path: str) -> bool:
+        """Validate DOCX file content."""
+        if not DOCX_AVAILABLE:
+            return True
+
+        try:
+            doc = DocxDocument(file_path)
+            return len(doc.paragraphs) >= 0  # Can be empty but should be readable
+        except Exception:
+            return False
+
+    def _validate_text_content(self, file_path: str) -> bool:
+        """Validate text file content."""
+        try:
+            with open(file_path, "r", encoding="utf-8", errors="ignore") as file:
+                content = file.read(1024)  # Read first 1KB
+                return isinstance(content, str)
+        except Exception:
+            return False
+
+    def _validate_html_content(self, file_path: str) -> bool:
+        """Validate HTML file content."""
+        if not HTML_AVAILABLE:
+            return True
+
+        try:
+            with open(file_path, "r", encoding="utf-8", errors="ignore") as file:
+                content = file.read(1024)
+                soup = BeautifulSoup(content, "html.parser")
+                return soup is not None
+        except Exception:
+            return False
+
+    def _validate_rtf_content(self, file_path: str) -> bool:
+        """Validate RTF file content."""
+        try:
+            with open(file_path, "r", encoding="utf-8", errors="ignore") as file:
+                content = file.read(100)
+                return content.startswith("{\\rtf")
+        except Exception:
+            return False
 
 
-class PDFProcessor:
-    """Process PDF documents."""
+class DocumentProcessor:
+    """Main document processing engine."""
 
     def __init__(self):
-        if not PDF_AVAILABLE:
-            raise ImportError("PDF processing libraries not available")
+        self.validator = DocumentValidator()
+        self.temp_dir = tempfile.mkdtemp()
 
-    def extract_text(self, file_path: str) -> Tuple[str, DocumentMetadata]:
-        """Extract text and metadata from PDF."""
-        try:
-            text_content = ""
-            metadata_dict = {}
+    def __del__(self):
+        if hasattr(self, "temp_dir") and os.path.exists(self.temp_dir):
+            shutil.rmtree(self.temp_dir, ignore_errors=True)
 
-            # Try pypdf first (newer), then PyPDF2
-            try:
-                with open(file_path, "rb") as file:
-                    reader = pypdf.PdfReader(file)
+    def process_document(
+        self,
+        file_path: str,
+        extract_structure: bool = True,
+        extract_metadata: bool = True,
+    ) -> DocumentContent:
+        """Process a document and extract all relevant information."""
 
-                    # Extract text
-                    for page in reader.pages:
-                        text_content += page.extract_text() + "\n\n"
-
-                    # Extract metadata
-                    if reader.metadata:
-                        metadata_dict = {
-                            "title": reader.metadata.get("/Title"),
-                            "author": reader.metadata.get("/Author"),
-                            "created_date": reader.metadata.get("/CreationDate"),
-                            "modified_date": reader.metadata.get("/ModDate"),
-                        }
-
-                    page_count = len(reader.pages)
-
-            except Exception:
-                # Fallback to PyPDF2
-                with open(file_path, "rb") as file:
-                    reader = PyPDF2.PdfReader(file)
-
-                    for page in reader.pages:
-                        text_content += page.extract_text() + "\n\n"
-
-                    if reader.metadata:
-                        metadata_dict = {
-                            "title": reader.metadata.get("/Title"),
-                            "author": reader.metadata.get("/Author"),
-                            "created_date": reader.metadata.get("/CreationDate"),
-                            "modified_date": reader.metadata.get("/ModDate"),
-                        }
-
-                    page_count = len(reader.pages)
-
-            # Create metadata
-            file_size = os.path.getsize(file_path)
-            metadata = DocumentMetadata(
-                file_path=file_path,
-                file_size=file_size,
-                format="pdf",
-                title=metadata_dict.get("title"),
-                author=metadata_dict.get("author"),
-                created_date=metadata_dict.get("created_date"),
-                modified_date=metadata_dict.get("modified_date"),
-                page_count=page_count,
-                word_count=len(text_content.split()) if text_content else 0,
-                character_count=len(text_content) if text_content else 0,
+        # Validate document
+        is_valid, errors = self.validator.validate_document(file_path)
+        if not is_valid:
+            return DocumentContent(
+                text="",
+                metadata=DocumentMetadata(
+                    file_path=file_path,
+                    file_size=0,
+                    format_type="unknown",
+                    mime_type="unknown",
+                ),
+                processing_errors=errors,
             )
 
-            return text_content.strip(), metadata
+        # Extract content based on format
+        ext = Path(file_path).suffix.lower()
+
+        try:
+            if ext == ".pdf":
+                return self._process_pdf(file_path, extract_structure, extract_metadata)
+            elif ext == ".docx":
+                return self._process_docx(
+                    file_path, extract_structure, extract_metadata
+                )
+            elif ext in [".txt", ".md"]:
+                return self._process_text(
+                    file_path, extract_structure, extract_metadata
+                )
+            elif ext in [".html", ".htm"]:
+                return self._process_html(
+                    file_path, extract_structure, extract_metadata
+                )
+            elif ext == ".rtf":
+                return self._process_rtf(file_path, extract_structure, extract_metadata)
+            else:
+                return DocumentContent(
+                    text="",
+                    metadata=DocumentMetadata(
+                        file_path=file_path,
+                        file_size=os.path.getsize(file_path),
+                        format_type=SUPPORTED_FORMATS.get(ext, "unknown"),
+                        mime_type=self.validator._get_mime_type(file_path),
+                    ),
+                    processing_errors=[f"Unsupported format: {ext}"],
+                )
 
         except Exception as e:
-            logger.error(f"PDF extraction failed: {e}")
-            raise
+            logger.error(f"Document processing failed: {e}")
+            return DocumentContent(
+                text="",
+                metadata=DocumentMetadata(
+                    file_path=file_path,
+                    file_size=(
+                        os.path.getsize(file_path) if os.path.exists(file_path) else 0
+                    ),
+                    format_type=SUPPORTED_FORMATS.get(ext, "unknown"),
+                    mime_type=self.validator._get_mime_type(file_path),
+                ),
+                processing_errors=[f"Processing error: {e}"],
+            )
 
+    def _create_base_metadata(
+        self, file_path: str, format_type: str
+    ) -> DocumentMetadata:
+        """Create base metadata for a document."""
+        stat = os.stat(file_path)
 
-class DOCXProcessor:
-    """Process DOCX documents."""
+        return DocumentMetadata(
+            file_path=file_path,
+            file_size=stat.st_size,
+            format_type=format_type,
+            mime_type=self.validator._get_mime_type(file_path),
+            created_date=datetime.fromtimestamp(stat.st_ctime).isoformat(),
+            modified_date=datetime.fromtimestamp(stat.st_mtime).isoformat(),
+        )
 
-    def __init__(self):
+    def _process_pdf(
+        self, file_path: str, extract_structure: bool, extract_metadata: bool
+    ) -> DocumentContent:
+        """Process PDF document."""
+        if not PDF_AVAILABLE:
+            return DocumentContent(
+                text="",
+                metadata=self._create_base_metadata(file_path, "PDF"),
+                processing_errors=["PyPDF2 not available"],
+            )
+
+        try:
+            with open(file_path, "rb") as file:
+                reader = PyPDF2.PdfReader(file)
+
+                # Extract text
+                text = ""
+                for page in reader.pages:
+                    text += page.extract_text() + "\n"
+
+                # Create metadata
+                metadata = self._create_base_metadata(file_path, "PDF")
+                metadata.page_count = len(reader.pages)
+                metadata.word_count = len(text.split())
+                metadata.character_count = len(text)
+
+                # Extract PDF metadata if available
+                if extract_metadata and reader.metadata:
+                    metadata.title = reader.metadata.get("/Title")
+                    metadata.author = reader.metadata.get("/Author")
+
+                return DocumentContent(
+                    text=text.strip(),
+                    metadata=metadata,
+                    structure=(
+                        {"page_count": len(reader.pages)} if extract_structure else None
+                    ),
+                )
+
+        except Exception as e:
+            return DocumentContent(
+                text="",
+                metadata=self._create_base_metadata(file_path, "PDF"),
+                processing_errors=[f"PDF processing error: {e}"],
+            )
+
+    def _process_docx(
+        self, file_path: str, extract_structure: bool, extract_metadata: bool
+    ) -> DocumentContent:
+        """Process DOCX document."""
         if not DOCX_AVAILABLE:
-            raise ImportError("python-docx not available")
+            return DocumentContent(
+                text="",
+                metadata=self._create_base_metadata(file_path, "Word Document"),
+                processing_errors=["python-docx not available"],
+            )
 
-    def extract_text(self, file_path: str) -> Tuple[str, DocumentMetadata]:
-        """Extract text and metadata from DOCX."""
         try:
             doc = DocxDocument(file_path)
 
             # Extract text
-            paragraphs = []
-            for paragraph in doc.paragraphs:
-                if paragraph.text.strip():
-                    paragraphs.append(paragraph.text)
+            text = "\n".join([paragraph.text for paragraph in doc.paragraphs])
 
-            text_content = "\n\n".join(paragraphs)
+            # Create metadata
+            metadata = self._create_base_metadata(file_path, "Word Document")
+            metadata.word_count = len(text.split())
+            metadata.character_count = len(text)
 
-            # Extract metadata
-            props = doc.core_properties
+            # Extract document properties if available
+            if extract_metadata and hasattr(doc, "core_properties"):
+                props = doc.core_properties
+                metadata.title = props.title
+                metadata.author = props.author
+                if props.created:
+                    metadata.created_date = props.created.isoformat()
+                if props.modified:
+                    metadata.modified_date = props.modified.isoformat()
 
-            file_size = os.path.getsize(file_path)
-            metadata = DocumentMetadata(
-                file_path=file_path,
-                file_size=file_size,
-                format="docx",
-                title=props.title,
-                author=props.author,
-                created_date=props.created.isoformat() if props.created else None,
-                modified_date=props.modified.isoformat() if props.modified else None,
-                word_count=len(text_content.split()) if text_content else 0,
-                character_count=len(text_content) if text_content else 0,
-            )
-
-            return text_content, metadata
-
-        except Exception as e:
-            logger.error(f"DOCX extraction failed: {e}")
-            raise
-
-
-class TextProcessor:
-    """Process plain text documents."""
-
-    def detect_encoding(self, file_path: str) -> str:
-        """Detect file encoding."""
-        if CHARDET_AVAILABLE:
-            try:
-                with open(file_path, "rb") as file:
-                    raw_data = file.read()
-                    result = chardet.detect(raw_data)
-                    return result.get("encoding", "utf-8")
-            except Exception:
-                pass
-        return "utf-8"
-
-    def extract_text(self, file_path: str) -> Tuple[str, DocumentMetadata]:
-        """Extract text from plain text files."""
-        try:
-            encoding = self.detect_encoding(file_path)
-
-            with open(file_path, "r", encoding=encoding) as file:
-                text_content = file.read()
-
-            file_size = os.path.getsize(file_path)
-            file_ext = Path(file_path).suffix.lower()
-
-            metadata = DocumentMetadata(
-                file_path=file_path,
-                file_size=file_size,
-                format=file_ext[1:] if file_ext else "txt",
-                encoding=encoding,
-                word_count=len(text_content.split()) if text_content else 0,
-                character_count=len(text_content) if text_content else 0,
-            )
-
-            return text_content, metadata
-
-        except Exception as e:
-            logger.error(f"Text extraction failed: {e}")
-            raise
-
-
-class HTMLProcessor:
-    """Process HTML documents."""
-
-    def __init__(self):
-        if not HTML_AVAILABLE:
-            raise ImportError("BeautifulSoup not available")
-
-    def extract_text(self, file_path: str) -> Tuple[str, DocumentMetadata]:
-        """Extract text from HTML files."""
-        try:
-            # Detect encoding
-            encoding = "utf-8"
-            if CHARDET_AVAILABLE:
-                try:
-                    with open(file_path, "rb") as file:
-                        raw_data = file.read()
-                        result = chardet.detect(raw_data)
-                        encoding = result.get("encoding", "utf-8")
-                except Exception:
-                    pass
-
-            with open(file_path, "r", encoding=encoding) as file:
-                html_content = file.read()
-
-            soup = BeautifulSoup(html_content, "html.parser")
-
-            # Extract title
-            title = soup.title.string if soup.title else None
-
-            # Extract text (remove scripts and styles)
-            for script in soup(["script", "style"]):
-                script.decompose()
-
-            text_content = soup.get_text()
-
-            # Clean up whitespace
-            lines = (line.strip() for line in text_content.splitlines())
-            chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
-            text_content = "\n".join(chunk for chunk in chunks if chunk)
-
-            file_size = os.path.getsize(file_path)
-
-            metadata = DocumentMetadata(
-                file_path=file_path,
-                file_size=file_size,
-                format="html",
-                encoding=encoding,
-                title=title,
-                word_count=len(text_content.split()) if text_content else 0,
-                character_count=len(text_content) if text_content else 0,
-            )
-
-            return text_content, metadata
-
-        except Exception as e:
-            logger.error(f"HTML extraction failed: {e}")
-            raise
-
-
-class DocumentProcessor:
-    """Main document processing pipeline."""
-
-    def __init__(self):
-        self.validator = DocumentValidator()
-        self.processors = {}
-
-        # Initialize available processors
-        if PDF_AVAILABLE:
-            self.processors["pdf"] = PDFProcessor()
-        if DOCX_AVAILABLE:
-            self.processors["docx"] = DOCXProcessor()
-
-        self.processors["txt"] = TextProcessor()
-        self.processors["md"] = TextProcessor()
-        self.processors["rtf"] = TextProcessor()
-
-        if HTML_AVAILABLE:
-            self.processors["html"] = HTMLProcessor()
-            self.processors["htm"] = HTMLProcessor()
-
-    def process_document(self, file_path: str) -> DocumentContent:
-        """Process a document and extract content."""
-        import time
-
-        start_time = time.time()
-
-        try:
-            # Validate document
-            validation = self.validator.validate_document(file_path)
-            if not validation["is_valid"]:
-                raise ValueError(f"Document validation failed: {validation['errors']}")
-
-            # Determine format
-            file_ext = Path(file_path).suffix.lower()[1:]  # Remove the dot
-
-            if file_ext not in self.processors:
-                raise ValueError(f"No processor available for format: {file_ext}")
-
-            # Extract content
-            processor = self.processors[file_ext]
-            text_content, metadata = processor.extract_text(file_path)
-
-            # Basic structure analysis
-            paragraphs = [p.strip() for p in text_content.split("\n\n") if p.strip()]
-
-            # Simple header detection (lines that are short and followed by longer content)
-            headers = []
-            lines = text_content.split("\n")
-            for i, line in enumerate(lines):
-                line = line.strip()
-                if (
-                    len(line) < 100
-                    and len(line) > 5
-                    and i < len(lines) - 1
-                    and len(lines[i + 1].strip()) > len(line)
-                ):
-                    headers.append(
-                        {
-                            "text": line,
-                            "level": 1,  # Simple implementation
-                            "line_number": i + 1,
-                        }
-                    )
-
-            processing_time = time.time() - start_time
+            # Extract structure
+            structure = None
+            if extract_structure:
+                structure = {
+                    "paragraph_count": len(doc.paragraphs),
+                    "table_count": len(doc.tables),
+                }
 
             return DocumentContent(
-                text=text_content,
-                metadata=metadata,
-                paragraphs=paragraphs,
-                headers=headers,
-                tables=[],  # TODO: Implement table extraction
-                images=[],  # TODO: Implement image extraction
-                links=[],  # TODO: Implement link extraction
-                structure={},  # TODO: Implement detailed structure analysis
-                extraction_time=processing_time,
-                extraction_method=f"{file_ext}_processor",
+                text=text.strip(), metadata=metadata, structure=structure
             )
 
         except Exception as e:
-            logger.error(f"Document processing failed: {e}")
-            raise
+            return DocumentContent(
+                text="",
+                metadata=self._create_base_metadata(file_path, "Word Document"),
+                processing_errors=[f"DOCX processing error: {e}"],
+            )
+
+    def _process_text(
+        self, file_path: str, extract_structure: bool, extract_metadata: bool
+    ) -> DocumentContent:
+        """Process plain text document."""
+        try:
+            # Try different encodings
+            encodings = ["utf-8", "latin-1", "cp1252", "iso-8859-1"]
+            text = ""
+            encoding_used = "utf-8"
+
+            for encoding in encodings:
+                try:
+                    with open(file_path, "r", encoding=encoding) as file:
+                        text = file.read()
+                        encoding_used = encoding
+                        break
+                except UnicodeDecodeError:
+                    continue
+
+            if not text:
+                raise ValueError("Could not decode file with any supported encoding")
+
+            # Create metadata
+            metadata = self._create_base_metadata(file_path, "Text")
+            metadata.word_count = len(text.split())
+            metadata.character_count = len(text)
+            metadata.encoding = encoding_used
+
+            # Extract structure
+            structure = None
+            if extract_structure:
+                lines = text.split("\n")
+                structure = {
+                    "line_count": len(lines),
+                    "paragraph_count": len([line for line in lines if line.strip()]),
+                }
+
+            return DocumentContent(
+                text=text.strip(), metadata=metadata, structure=structure
+            )
+
+        except Exception as e:
+            return DocumentContent(
+                text="",
+                metadata=self._create_base_metadata(file_path, "Text"),
+                processing_errors=[f"Text processing error: {e}"],
+            )
+
+    def _process_html(
+        self, file_path: str, extract_structure: bool, extract_metadata: bool
+    ) -> DocumentContent:
+        """Process HTML document."""
+        if not HTML_AVAILABLE:
+            return DocumentContent(
+                text="",
+                metadata=self._create_base_metadata(file_path, "HTML"),
+                processing_errors=["BeautifulSoup4 not available"],
+            )
+
+        try:
+            with open(file_path, "r", encoding="utf-8", errors="ignore") as file:
+                content = file.read()
+
+            soup = BeautifulSoup(content, "html.parser")
+
+            # Extract text content
+            text = soup.get_text(separator="\n", strip=True)
+
+            # Create metadata
+            metadata = self._create_base_metadata(file_path, "HTML")
+            metadata.word_count = len(text.split()) if text else 0
+            metadata.character_count = len(text) if text else 0
+
+            # Extract HTML metadata
+            if extract_metadata:
+                title_tag = soup.find("title")
+                if title_tag and hasattr(title_tag, "get_text"):
+                    metadata.title = title_tag.get_text(strip=True)
+
+                author_meta = soup.find("meta", {"name": "author"})
+                if author_meta and hasattr(author_meta, "get"):
+                    metadata.author = author_meta.get("content")
+
+            # Extract structure
+            structure = None
+            if extract_structure:
+                try:
+                    headings = soup.find_all(["h1", "h2", "h3", "h4", "h5", "h6"])
+                    paragraphs = soup.find_all("p")
+                    links = soup.find_all("a")
+                    images = soup.find_all("img")
+
+                    structure = {
+                        "heading_count": len(headings) if headings else 0,
+                        "paragraph_count": len(paragraphs) if paragraphs else 0,
+                        "link_count": len(links) if links else 0,
+                        "image_count": len(images) if images else 0,
+                    }
+                except Exception as struct_e:
+                    logger.warning(f"HTML structure extraction failed: {struct_e}")
+                    structure = {"extraction_error": str(struct_e)}
+
+            return DocumentContent(
+                text=text.strip() if text else "",
+                metadata=metadata,
+                structure=structure,
+                formatting={"html_content": content} if extract_structure else None,
+            )
+
+        except Exception as e:
+            return DocumentContent(
+                text="",
+                metadata=self._create_base_metadata(file_path, "HTML"),
+                processing_errors=[f"HTML processing error: {e}"],
+            )
+
+    def _process_rtf(
+        self, file_path: str, extract_structure: bool, extract_metadata: bool
+    ) -> DocumentContent:
+        """Process RTF document."""
+        if not RTF_AVAILABLE:
+            return DocumentContent(
+                text="",
+                metadata=self._create_base_metadata(file_path, "Rich Text Format"),
+                processing_errors=["striprtf not available"],
+            )
+
+        try:
+            with open(file_path, "r", encoding="utf-8", errors="ignore") as file:
+                rtf_content = file.read()
+
+            # Convert RTF to plain text
+            text = rtf_to_text(rtf_content)
+
+            # Create metadata
+            metadata = self._create_base_metadata(file_path, "Rich Text Format")
+            metadata.word_count = len(text.split())
+            metadata.character_count = len(text)
+
+            return DocumentContent(text=text.strip(), metadata=metadata)
+
+        except Exception as e:
+            return DocumentContent(
+                text="",
+                metadata=self._create_base_metadata(file_path, "Rich Text Format"),
+                processing_errors=[f"RTF processing error: {e}"],
+            )
 
 
 # Convenience functions
-def process_document_file(file_path: str) -> DocumentContent:
-    """Process a single document file."""
+def process_document(
+    file_path: str, extract_structure: bool = True, extract_metadata: bool = True
+) -> DocumentContent:
+    """Process a single document."""
     processor = DocumentProcessor()
-    return processor.process_document(file_path)
+    return processor.process_document(file_path, extract_structure, extract_metadata)
 
 
-def validate_document_file(file_path: str) -> Dict[str, Any]:
+def validate_document(file_path: str) -> Tuple[bool, List[str]]:
     """Validate a document file."""
     validator = DocumentValidator()
     return validator.validate_document(file_path)
 
 
-def extract_text_from_document(file_path: str) -> str:
-    """Simple text extraction from document."""
-    content = process_document_file(file_path)
-    return content.text
-
-
-def get_document_metadata(file_path: str) -> DocumentMetadata:
-    """Get metadata from document."""
-    content = process_document_file(file_path)
-    return content.metadata
+def get_supported_formats() -> Dict[str, str]:
+    """Get dictionary of supported file formats."""
+    return SUPPORTED_FORMATS.copy()
 
 
 if __name__ == "__main__":
     # Example usage
     test_file = "sample_document.pdf"
     if os.path.exists(test_file):
-        try:
-            content = process_document_file(test_file)
-            print(f"Extracted {len(content.text)} characters")
-            print(f"Found {len(content.paragraphs)} paragraphs")
-            print(f"Found {len(content.headers)} headers")
-            print(f"Processing time: {content.extraction_time:.2f}s")
-        except Exception as e:
-            print(f"Processing failed: {e}")
-    else:
-        print("No test file found")
+        result = process_document(test_file)
+        print(f"Text: {result.text[:200]}...")
+        print(f"Metadata: {result.metadata}")
+        if result.processing_errors:
+            print(f"Errors: {result.processing_errors}")
