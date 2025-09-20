@@ -82,6 +82,30 @@ else:
 if ERROR_HANDLING_AVAILABLE:
     setup_error_middleware(app)
 
+# Collaboration system integration
+try:
+    from ..collaboration.integration import integrate_with_main_app
+
+    integrate_with_main_app(app)
+    print("✅ Collaboration features integrated")
+except ImportError as e:
+    print(f"⚠️ Collaboration features not available: {e}")
+
+# Analytics system integration
+try:
+    from ..analytics.collector import analytics_collector
+    from ..analytics.engine import analytics_engine
+    from ..analytics.visualization import create_visualization_router
+
+    # Add analytics router
+    analytics_router = create_visualization_router(
+        analytics_collector, analytics_engine
+    )
+    app.include_router(analytics_router)
+    print("✅ Analytics system integrated")
+except ImportError as e:
+    print(f"⚠️ Analytics system not available: {e}")
+
 # Metrics
 app.state.metrics = {
     "requests_total": 0,

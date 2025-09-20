@@ -1,0 +1,173 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: vega-system
+  labels:
+    name: vega-system
+    app.kubernetes.io/name: vega
+    app.kubernetes.io/part-of: vega-platform
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vega-config
+  namespace: vega-system
+data:
+  HOST: "0.0.0.0"
+  PORT: "8000"
+  LLM_BACKEND: "ollama"
+  LLM_BASE_URL: "http://ollama:11434"
+  ENVIRONMENT: "production"
+  LOG_LEVEL: "INFO"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: vega-secrets
+  namespace: vega-system
+type: Opaque
+data:
+  # Base64 encoded values - update these with actual secrets
+  API_KEY: eW91ci1hcGkta2V5LWhlcmU=  # your-api-key-here
+  DATABASE_URL: c3FsaXRlOi8vL2RhdGEvdmVnYS5kYg==  # sqlite:///data/vega.db
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: vega-data
+  namespace: vega-system
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: standard
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vega-api
+  namespace: vega-system
+  labels:
+    app: vega-api
+    component: api-server
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: vega-api
+  template:
+    metadata:
+      labels:
+        app: vega-api
+        component: api-server
+    spec:
+      containers:
+      - name: vega-api
+        image: vega:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+          name: http
+        env:
+        - name: HOST
+          valueFrom:
+            configMapKeyRef:
+              name: vega-config
+              key: HOST
+        - name: PORT
+          valueFrom:
+            configMapKeyRef:
+              name: vega-config
+              key: PORT
+        - name: API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: vega-secrets
+              key: API_KEY
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: vega-secrets
+              key: DATABASE_URL
+        - name: LLM_BACKEND
+          valueFrom:
+            configMapKeyRef:
+              name: vega-config
+              key: LLM_BACKEND
+        - name: LLM_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: vega-config
+              key: LLM_BASE_URL
+        volumeMounts:
+        - name: data
+          mountPath: /app/data
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /readyz
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          timeoutSeconds: 3
+          failureThreshold: 3
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsNonRoot: true
+          runAsUser: 1000
+          capabilities:
+            drop:
+            - ALL
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: vega-data
+      securityContext:
+        fsGroup: 1000
+      serviceAccountName: vega-api
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vega-api-service
+  namespace: vega-system
+  labels:
+    app: vega-api
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8000
+    targetPort: 8000
+    protocol: TCP
+    name: http
+  selector:
+    app: vega-api
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: vega-api
+  namespace: vega-system
+  labels:
+    app: vega-api

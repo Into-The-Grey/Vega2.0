@@ -1,0 +1,99 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: deployment-scripts
+  namespace: vega-system
+data:
+  deploy.sh: |
+    #!/bin/bash
+    set -e
+    
+    echo "Deploying Vega 2.0 to Kubernetes..."
+    
+    # Apply namespace first
+    kubectl apply -f vega-api.yaml
+    
+    # Wait for namespace to be ready
+    kubectl wait --for=condition=Ready namespace/vega-system --timeout=60s
+    
+    # Apply core components
+    kubectl apply -f vega-api.yaml
+    kubectl apply -f vega-federated.yaml
+    kubectl apply -f monitoring.yaml
+    
+    # Wait for deployments to be ready
+    echo "Waiting for deployments to be ready..."
+    kubectl wait --for=condition=Available deployment/vega-api -n vega-system --timeout=300s
+    kubectl wait --for=condition=Available deployment/redis -n vega-system --timeout=300s
+    kubectl wait --for=condition=Available deployment/prometheus -n vega-system --timeout=300s
+    
+    # Apply ingress last
+    kubectl apply -f ingress.yaml
+    
+    echo "Deployment complete!"
+    echo "Check status with:"
+    echo "  kubectl get pods -n vega-system"
+    echo "  kubectl get services -n vega-system"
+    echo "  kubectl get ingress -n vega-system"
+  
+  rollback.sh: |
+    #!/bin/bash
+    set -e
+    
+    echo "Rolling back Vega 2.0 deployment..."
+    
+    # Delete in reverse order
+    kubectl delete -f ingress.yaml --ignore-not-found
+    kubectl delete -f monitoring.yaml --ignore-not-found
+    kubectl delete -f vega-federated.yaml --ignore-not-found
+    kubectl delete -f vega-api.yaml --ignore-not-found
+    
+    echo "Rollback complete!"
+  
+  scale.sh: |
+    #!/bin/bash
+    
+    REPLICAS=${1:-2}
+    
+    echo "Scaling Vega API to $REPLICAS replicas..."
+    kubectl scale deployment/vega-api -n vega-system --replicas=$REPLICAS
+    
+    echo "Waiting for scaling to complete..."
+    kubectl wait --for=condition=Available deployment/vega-api -n vega-system --timeout=300s
+    
+    echo "Scaling complete!"
+    kubectl get pods -n vega-system -l app=vega-api
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: vega-operator
+rules:
+- apiGroups: [""]
+  resources: ["pods", "services", "configmaps", "secrets", "persistentvolumeclaims"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+- apiGroups: ["apps"]
+  resources: ["deployments", "replicasets"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+- apiGroups: ["networking.k8s.io"]
+  resources: ["ingresses", "networkpolicies"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+- apiGroups: ["monitoring.coreos.com"]
+  resources: ["servicemonitors"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: vega-operator-binding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: vega-operator
+subjects:
+- kind: ServiceAccount
+  name: vega-api
+  namespace: vega-system
+- kind: ServiceAccount
+  name: vega-federated
+  namespace: vega-system

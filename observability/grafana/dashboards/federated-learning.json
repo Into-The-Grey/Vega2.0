@@ -1,0 +1,142 @@
+{
+	"dashboard": {
+		"id": null,
+		"title": "Vega 2.0 - Federated Learning",
+		"tags": ["vega", "federated-learning"],
+		"style": "dark",
+		"timezone": "browser",
+		"panels": [
+			{
+				"id": 1,
+				"title": "Training Rounds",
+				"type": "timeseries",
+				"targets": [
+					{
+						"expr": "federated_round_current",
+						"legendFormat": "Current Round - {{instance}}"
+					},
+					{
+						"expr": "federated_round_total",
+						"legendFormat": "Total Rounds - {{instance}}"
+					}
+				],
+				"gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 }
+			},
+			{
+				"id": 2,
+				"title": "Participant Status",
+				"type": "stat",
+				"targets": [
+					{
+						"expr": "federated_participants_active",
+						"legendFormat": "Active"
+					},
+					{
+						"expr": "federated_participants_total",
+						"legendFormat": "Total"
+					},
+					{
+						"expr": "federated_participants_failed",
+						"legendFormat": "Failed"
+					}
+				],
+				"gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 }
+			},
+			{
+				"id": 3,
+				"title": "Model Accuracy",
+				"type": "timeseries",
+				"targets": [
+					{
+						"expr": "federated_model_accuracy",
+						"legendFormat": "Global Model Accuracy"
+					},
+					{
+						"expr": "federated_participant_accuracy",
+						"legendFormat": "Participant {{participant_id}}"
+					}
+				],
+				"fieldConfig": {
+					"defaults": {
+						"unit": "percent",
+						"min": 0,
+						"max": 100
+					}
+				},
+				"gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 }
+			},
+			{
+				"id": 4,
+				"title": "Communication Overhead",
+				"type": "timeseries",
+				"targets": [
+					{
+						"expr": "rate(federated_bytes_sent_total[5m])",
+						"legendFormat": "Bytes Sent/sec"
+					},
+					{
+						"expr": "rate(federated_bytes_received_total[5m])",
+						"legendFormat": "Bytes Received/sec"
+					}
+				],
+				"fieldConfig": {
+					"defaults": {
+						"unit": "bytes"
+					}
+				},
+				"gridPos": { "h": 8, "w": 12, "x": 12, "y": 8 }
+			},
+			{
+				"id": 5,
+				"title": "Aggregation Time",
+				"type": "timeseries",
+				"targets": [
+					{
+						"expr": "histogram_quantile(0.95, sum(rate(federated_aggregation_duration_seconds_bucket[5m])) by (le))",
+						"legendFormat": "95th percentile"
+					},
+					{
+						"expr": "histogram_quantile(0.50, sum(rate(federated_aggregation_duration_seconds_bucket[5m])) by (le))",
+						"legendFormat": "50th percentile"
+					}
+				],
+				"fieldConfig": {
+					"defaults": {
+						"unit": "s"
+					}
+				},
+				"gridPos": { "h": 8, "w": 12, "x": 0, "y": 16 }
+			},
+			{
+				"id": 6,
+				"title": "Cross-Silo Federation",
+				"type": "table",
+				"targets": [
+					{
+						"expr": "federated_silo_participants",
+						"legendFormat": "{{silo_id}}"
+					}
+				],
+				"transformations": [
+					{
+						"id": "organize",
+						"options": {
+							"excludeByName": {},
+							"indexByName": {},
+							"renameByName": {
+								"silo_id": "Silo ID",
+								"Value": "Participants"
+							}
+						}
+					}
+				],
+				"gridPos": { "h": 8, "w": 12, "x": 12, "y": 16 }
+			}
+		],
+		"time": {
+			"from": "now-4h",
+			"to": "now"
+		},
+		"refresh": "10s"
+	}
+}

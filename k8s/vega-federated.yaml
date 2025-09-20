@@ -1,0 +1,117 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vega-federated-coordinator
+  namespace: vega-system
+  labels:
+    app: vega-federated-coordinator
+    component: federated-learning
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vega-federated-coordinator
+  template:
+    metadata:
+      labels:
+        app: vega-federated-coordinator
+        component: federated-learning
+    spec:
+      containers:
+      - name: coordinator
+        image: vega:latest
+        imagePullPolicy: IfNotPresent
+        command: ["python", "-m", "src.vega.federated.coordinator"]
+        ports:
+        - containerPort: 8001
+          name: coordinator
+        env:
+        - name: COORDINATOR_HOST
+          value: "0.0.0.0"
+        - name: COORDINATOR_PORT
+          value: "8001"
+        - name: FEDERATION_MODE
+          value: "cross_silo"
+        - name: MAX_PARTICIPANTS
+          value: "10"
+        - name: AGGREGATION_STRATEGY
+          value: "fedavg"
+        volumeMounts:
+        - name: data
+          mountPath: /app/data
+        - name: models
+          mountPath: /app/models
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "4Gi"
+            cpu: "2000m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8001
+          initialDelaySeconds: 30
+          periodSeconds: 15
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 8001
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsNonRoot: true
+          runAsUser: 1000
+          capabilities:
+            drop:
+            - ALL
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: vega-data
+      - name: models
+        persistentVolumeClaim:
+          claimName: vega-models
+      securityContext:
+        fsGroup: 1000
+      serviceAccountName: vega-federated
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: vega-models
+  namespace: vega-system
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 50Gi
+  storageClassName: standard
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vega-federated-coordinator-service
+  namespace: vega-system
+  labels:
+    app: vega-federated-coordinator
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8001
+    targetPort: 8001
+    protocol: TCP
+    name: coordinator
+  selector:
+    app: vega-federated-coordinator
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: vega-federated
+  namespace: vega-system
+  labels:
+    app: vega-federated-coordinator

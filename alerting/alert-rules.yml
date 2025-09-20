@@ -1,0 +1,166 @@
+groups:
+  - name: vega-api.rules
+    rules:
+      - alert: VegaAPIHighErrorRate
+        expr: (rate(http_requests_total{job="vega-api",status=~"5.."}[5m]) / rate(http_requests_total{job="vega-api"}[5m])) * 100 > 5
+        for: 2m
+        labels:
+          severity: critical
+          service: vega-api
+        annotations:
+          summary: "Vega API has high error rate"
+          description: "Error rate is {{ $value }}% for instance {{ $labels.instance }}"
+
+      - alert: VegaAPIHighLatency
+        expr: histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket{job="vega-api"}[5m])) by (le)) > 2
+        for: 5m
+        labels:
+          severity: warning
+          service: vega-api
+        annotations:
+          summary: "Vega API has high latency"
+          description: "95th percentile latency is {{ $value }}s for instance {{ $labels.instance }}"
+
+      - alert: VegaAPIDown
+        expr: up{job="vega-api"} == 0
+        for: 1m
+        labels:
+          severity: critical
+          service: vega-api
+        annotations:
+          summary: "Vega API is down"
+          description: "Vega API instance {{ $labels.instance }} is not responding"
+
+      - alert: VegaAPIHighMemoryUsage
+        expr: (process_resident_memory_bytes{job="vega-api"} / 1024 / 1024 / 1024) > 2
+        for: 5m
+        labels:
+          severity: warning
+          service: vega-api
+        annotations:
+          summary: "Vega API high memory usage"
+          description: "Memory usage is {{ $value }}GB for instance {{ $labels.instance }}"
+
+  - name: vega-federated.rules
+    rules:
+      - alert: FederatedCoordinatorDown
+        expr: up{job="vega-federated"} == 0
+        for: 1m
+        labels:
+          severity: critical
+          service: federated-coordinator
+        annotations:
+          summary: "Federated coordinator is down"
+          description: "Federated coordinator instance {{ $labels.instance }} is not responding"
+
+      - alert: FederatedLowParticipants
+        expr: federated_participants_active < 2
+        for: 2m
+        labels:
+          severity: warning
+          service: federated-coordinator
+        annotations:
+          summary: "Low number of federated participants"
+          description: "Only {{ $value }} participants are active, minimum recommended is 2"
+
+      - alert: FederatedNoParticipants
+        expr: federated_participants_active == 0
+        for: 1m
+        labels:
+          severity: critical
+          service: federated-coordinator
+        annotations:
+          summary: "No federated participants active"
+          description: "No participants are currently active in the federated learning system"
+
+      - alert: FederatedHighFailureRate
+        expr: (federated_participants_failed / federated_participants_total) * 100 > 20
+        for: 5m
+        labels:
+          severity: warning
+          service: federated-coordinator
+        annotations:
+          summary: "High participant failure rate"
+          description: "{{ $value }}% of participants have failed"
+
+      - alert: FederatedSlowAggregation
+        expr: histogram_quantile(0.95, sum(rate(federated_aggregation_duration_seconds_bucket[5m])) by (le)) > 300
+        for: 3m
+        labels:
+          severity: warning
+          service: federated-coordinator
+        annotations:
+          summary: "Slow federated aggregation"
+          description: "95th percentile aggregation time is {{ $value }}s"
+
+      - alert: FederatedModelAccuracyDrop
+        expr: federated_model_accuracy < 0.7
+        for: 2m
+        labels:
+          severity: warning
+          service: federated-coordinator
+        annotations:
+          summary: "Federated model accuracy dropped"
+          description: "Global model accuracy is {{ $value }}, below threshold of 0.7"
+
+  - name: system.rules
+    rules:
+      - alert: HighCPUUsage
+        expr: (rate(process_cpu_seconds_total[5m]) * 100) > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage detected"
+          description: "CPU usage is {{ $value }}% for {{ $labels.job }} on {{ $labels.instance }}"
+
+      - alert: DatabaseConnectionErrors
+        expr: increase(database_errors_total[5m]) > 5
+        for: 2m
+        labels:
+          severity: warning
+          service: database
+        annotations:
+          summary: "Database connection errors"
+          description: "{{ $value }} database errors in the last 5 minutes"
+
+      - alert: DiskSpaceLow
+        expr: (disk_free_bytes / disk_total_bytes) * 100 < 10
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Low disk space"
+          description: "Disk space is {{ $value }}% full on {{ $labels.instance }}"
+
+  - name: redis.rules
+    rules:
+      - alert: RedisDown
+        expr: up{job="redis"} == 0
+        for: 1m
+        labels:
+          severity: critical
+          service: redis
+        annotations:
+          summary: "Redis is down"
+          description: "Redis instance {{ $labels.instance }} is not responding"
+
+      - alert: RedisHighMemoryUsage
+        expr: (redis_memory_used_bytes / redis_memory_max_bytes) * 100 > 90
+        for: 5m
+        labels:
+          severity: warning
+          service: redis
+        annotations:
+          summary: "Redis high memory usage"
+          description: "Redis memory usage is {{ $value }}% on {{ $labels.instance }}"
+
+      - alert: RedisHighConnections
+        expr: redis_connected_clients > 100
+        for: 5m
+        labels:
+          severity: warning
+          service: redis
+        annotations:
+          summary: "Redis high connection count"
+          description: "Redis has {{ $value }} active connections on {{ $labels.instance }}"
