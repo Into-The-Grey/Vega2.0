@@ -283,8 +283,9 @@ class TestCommunicationManager:
         mock_context_manager.__aenter__ = AsyncMock(return_value=mock_response)
         mock_context_manager.__aexit__ = AsyncMock(return_value=None)
 
-        session.post = AsyncMock(return_value=mock_context_manager)
-        session.get = AsyncMock(return_value=mock_context_manager)
+        # Important: Set return_value instead of side_effect to avoid coroutine issues
+        session.post.return_value = mock_context_manager
+        session.get.return_value = mock_context_manager
         session.close = AsyncMock()
         return session
 

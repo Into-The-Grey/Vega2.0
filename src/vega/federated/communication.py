@@ -55,16 +55,21 @@ class MessageType(Enum):
 
 
 @dataclass
+@dataclass
 class NetworkMetrics:
     """Network performance and connection metrics."""
 
-    latency_ms: float
-    bandwidth_mbps: float
-    packet_loss_percent: float
-    connection_count: int
-    bytes_sent: int
-    bytes_received: int
-    last_updated: float
+    latency_ms: float = 0.0
+    bandwidth_mbps: float = 0.0
+    packet_loss_percent: float = 0.0
+    connection_count: int = 0
+    bytes_sent: int = 0
+    bytes_received: int = 0
+    last_updated: float = 0.0
+    total_messages_sent: int = 0
+    total_messages_received: int = 0
+    connection_errors: int = 0
+    successful_connections: int = 0
 
 
 @dataclass
@@ -674,6 +679,7 @@ class CommunicationManager:
         self.encryption = DynamicEncryption()
         self.client = NetworkClient(participant_id, self.encryption)
         self.registry = ParticipantRegistry()
+        self._metrics = NetworkMetrics()
 
         # Register self
         self.registry.register_participant(
@@ -1117,14 +1123,12 @@ class CommunicationManager:
             return False
 
     @property
-    def metrics(self) -> Dict[str, Any]:
+    def metrics(self) -> NetworkMetrics:
         """Get communication metrics."""
-        return {
-            "total_participants": len(self.registry.participants),
-            "active_participants": len(self.registry.get_active_participants()),
-            "encryption_enabled": True,
-            "client_status": "connected" if self.client else "disconnected",
-        }
+        # Update dynamic values
+        self._metrics.connection_count = len(self.registry.participants)
+        self._metrics.last_updated = time.time()
+        return self._metrics
 
     async def close(self):
         """Close connections (alias for cleanup)."""
