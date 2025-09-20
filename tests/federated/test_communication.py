@@ -275,6 +275,9 @@ class TestCommunicationManager:
         """Create mock aiohttp session."""
         session = AsyncMock()
 
+        # Add the 'closed' attribute that NetworkClient.close() checks
+        session.closed = False
+
         # Create a proper mock response object
         mock_response = AsyncMock()
         mock_response.status = 200
@@ -291,9 +294,30 @@ class TestCommunicationManager:
             async def __aexit__(self, exc_type, exc_val, exc_tb):
                 return None
 
-        # Set up the mocks to return the context manager directly
-        session.post = Mock(return_value=MockContextManager(mock_response))
-        session.get = Mock(return_value=MockContextManager(mock_response))
+        # Create a callable that checks for side_effect
+        def post_call(*args, **kwargs):
+            if hasattr(session.post, "side_effect") and session.post.side_effect:
+                if isinstance(session.post.side_effect, Exception):
+                    raise session.post.side_effect
+                elif isinstance(session.post.side_effect, type) and issubclass(
+                    session.post.side_effect, Exception
+                ):
+                    raise session.post.side_effect()
+            return MockContextManager(mock_response)
+
+        def get_call(*args, **kwargs):
+            if hasattr(session.get, "side_effect") and session.get.side_effect:
+                if isinstance(session.get.side_effect, Exception):
+                    raise session.get.side_effect
+                elif isinstance(session.get.side_effect, type) and issubclass(
+                    session.get.side_effect, Exception
+                ):
+                    raise session.get.side_effect()
+            return MockContextManager(mock_response)
+
+        # Set up the mocks with side_effect support
+        session.post = Mock(side_effect=post_call)
+        session.get = Mock(side_effect=get_call)
         session.close = AsyncMock()
         return session
 
@@ -484,6 +508,15 @@ class TestCommunicationManager:
     @pytest.mark.asyncio
     async def test_connection_error_handling(self, communication_manager, mock_session):
         """Test connection error handling."""
+        # Register coordinator participant for the test
+        communication_manager.registry.register_participant(
+            participant_id="coordinator",
+            host="localhost",
+            port=8000,
+            name="Coordinator",
+            api_key="test-key",
+        )
+
         # Setup mock to raise connection error
         mock_session.post.side_effect = aiohttp.ClientConnectionError()
 
@@ -555,18 +588,24 @@ class TestCommunicationManager:
         import uuid
 
         with patch(
-            "vega.federated.communication.check_api_key"
+            "src.vega.federated.communication.check_api_key"
         ) as mock_check_api, patch(
-            "vega.federated.communication.audit_log"
+            "src.vega.federated.communication.audit_log"
         ) as mock_audit:
 
             mock_check_api.return_value = True
 
-            # Setup mock response
-            mock_response = AsyncMock()
-            mock_response.status = 200
-            mock_response.json = AsyncMock(return_value={"status": "success"})
-            mock_session.post.return_value.__aenter__.return_value = mock_response
+            # Register coordinator participant for the test
+            communication_manager.registry.register_participant(
+                participant_id="coordinator",
+                host="localhost",
+                port=8000,
+                name="Coordinator",
+                api_key="test-key",
+            )
+
+            # The mock_session fixture already sets up proper responses
+            # Setup is not needed here as the fixture provides what we need
 
             message = FederatedMessage(
                 message_type=MessageType.PARTICIPANT_JOIN.value,

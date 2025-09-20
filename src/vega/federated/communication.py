@@ -1086,6 +1086,7 @@ class CommunicationManager:
             )
             return response is not None
         except Exception:
+            self._metrics.connection_errors += 1
             return False
 
     async def receive_message(self) -> Optional[Dict[str, Any]]:
@@ -1133,6 +1134,10 @@ class CommunicationManager:
         self._metrics.connection_count = len(self.registry.participants)
         self._metrics.last_updated = time.time()
         return self._metrics
+
+    def get_metrics(self) -> NetworkMetrics:
+        """Get communication metrics (method version for compatibility)."""
+        return self.metrics
 
     async def close(self):
         """Close connections (alias for cleanup)."""

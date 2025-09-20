@@ -107,7 +107,7 @@ jobs:
         fi
     
     - name: Upload security scan results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: security-scan-results
@@ -170,7 +170,7 @@ jobs:
         trivy image --format table --output security/results/trivy-container-report.txt vega2.0:security-test
     
     - name: Upload container scan results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: container-security-results
         path: security/results/trivy-container-*
@@ -201,7 +201,7 @@ jobs:
         python -m src.vega.security.compliance generate-report --framework all
     
     - name: Upload compliance reports
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: compliance-reports
         path: security/results/compliance/
@@ -305,7 +305,7 @@ jobs:
         "
     
     - name: Upload consolidated report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: consolidated-security-report
         path: consolidated-report/
