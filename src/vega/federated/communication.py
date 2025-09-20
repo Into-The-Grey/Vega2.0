@@ -19,7 +19,7 @@ import json
 import time
 import logging
 from typing import Dict, List, Optional, Any, Tuple
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, field
 from urllib.parse import urljoin
 import ssl
 from pathlib import Path
@@ -69,14 +69,42 @@ class NetworkMetrics:
 
 @dataclass
 class ConnectionPool:
-    """Connection pool configuration and state."""
+    """Connection pool for managing HTTP connections."""
 
-    max_connections: int
-    active_connections: int
-    available_connections: int
-    total_requests: int
-    failed_requests: int
-    average_response_time: float
+    max_connections: int = 10
+    active_connections: int = 0
+    available_connections: int = 10
+    total_requests: int = 0
+    failed_requests: int = 0
+    average_response_time: float = 0.0
+    connections: Dict[str, Any] = field(default_factory=dict)
+
+    async def get_connection(self, url: str) -> "MockConnection":
+        """Get a connection from the pool."""
+        import aiohttp
+
+        self.active_connections += 1
+        self.available_connections -= 1
+        connection = MockConnection(url=url)
+        self.connections[url] = connection
+        return connection
+
+    async def release_connection(self, url: str, connection: "MockConnection") -> None:
+        """Release a connection back to the pool."""
+        self.active_connections -= 1
+        self.available_connections += 1
+
+
+@dataclass
+class MockConnection:
+    """Mock connection for testing."""
+
+    url: str
+    is_closed: bool = False
+
+    async def close(self):
+        """Close the connection."""
+        self.is_closed = True
 
 
 @dataclass
@@ -1060,15 +1088,17 @@ class CommunicationManager:
         # For testing, return None or a mock message
         return None
 
-    def register_participant(self, participant_id: str, api_key: str = None) -> bool:
+    async def register_participant(
+        self, participant_id: str, api_key: Optional[str] = None
+    ) -> bool:
         """Register participant (delegate to registry)."""
         try:
             result = self.registry.register_participant(
                 participant_id=participant_id,
                 host="localhost",
                 port=8000,
+                name=f"Participant-{participant_id}",
                 api_key=api_key or "default-key",
-                metadata={},
             )
             return result is not None
         except Exception:

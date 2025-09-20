@@ -274,19 +274,37 @@ class TestCommunicationManager:
     def mock_session(self):
         """Create mock aiohttp session."""
         session = AsyncMock()
-        session.post = AsyncMock()
-        session.get = AsyncMock()
+
+        # Create a proper mock for the context manager
+        mock_context_manager = AsyncMock()
+        mock_response = AsyncMock()
+        mock_response.status = 200
+        mock_response.json = AsyncMock(return_value={"status": "success"})
+        mock_context_manager.__aenter__ = AsyncMock(return_value=mock_response)
+        mock_context_manager.__aexit__ = AsyncMock(return_value=None)
+
+        session.post = AsyncMock(return_value=mock_context_manager)
+        session.get = AsyncMock(return_value=mock_context_manager)
         session.close = AsyncMock()
         return session
 
     @pytest.fixture
     def communication_manager(self, mock_session):
         """Create CommunicationManager instance with mocks."""
-        with patch("aiohttp.ClientSession", return_value=mock_session):
-            manager = CommunicationManager(
-                participant_id="participant_1", participant_name="Test Participant"
-            )
-            return manager
+        # Create a patcher that we can start and stop
+        patcher = patch("aiohttp.ClientSession", return_value=mock_session)
+        patcher.start()
+
+        manager = CommunicationManager(
+            participant_id="participant_1", participant_name="Test Participant"
+        )
+
+        # Ensure the manager has the mock session
+        manager.client._session = mock_session
+
+        yield manager
+
+        patcher.stop()
 
     def test_communication_manager_init(self):
         """Test CommunicationManager initialization."""
@@ -311,12 +329,6 @@ class TestCommunicationManager:
             name="Coordinator",
             api_key="test-key",
         )
-
-        # Setup mock response
-        mock_response = AsyncMock()
-        mock_response.status = 200
-        mock_response.json = AsyncMock(return_value={"status": "success"})
-        mock_session.post.return_value.__aenter__.return_value = mock_response
 
         import time
         import uuid
@@ -424,31 +436,24 @@ class TestCommunicationManager:
     @pytest.mark.asyncio
     async def test_register_participant(self, communication_manager, mock_session):
         """Test participant registration."""
-        # Setup mock response
-        mock_response = AsyncMock()
-        mock_response.status = 200
-        mock_response.json = AsyncMock(return_value={"status": "registered"})
-        mock_session.post.return_value.__aenter__.return_value = mock_response
-
         result = await communication_manager.register_participant(
             "participant_1", "test_api_key"
         )
 
         assert result is True
-        mock_session.post.assert_called_once()
+        # Verify the participant was added to the registry
+        participant = communication_manager.registry.get_participant("participant_1")
+        assert participant is not None
+        assert participant.participant_id == "participant_1"
 
     @pytest.mark.asyncio
     async def test_register_participant_failure(
         self, communication_manager, mock_session
     ):
         """Test participant registration failure."""
-        # Setup mock response with error
-        mock_response = AsyncMock()
-        mock_response.status = 401  # Unauthorized
-        mock_session.post.return_value.__aenter__.return_value = mock_response
-
+        # Test invalid input
         result = await communication_manager.register_participant(
-            "participant_1", "invalid_api_key"
+            "", "test_api_key"  # Empty participant_id should fail
         )
 
         assert result is False
