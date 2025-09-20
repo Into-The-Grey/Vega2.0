@@ -5,9 +5,9 @@ Unit tests for SMPC secure sum using Shamir's Secret Sharing.
 import numpy as np
 
 try:
-    from vega.federated.smpc import SMPCSecureSum, SMPCConfig
+    from src.vega.federated.smpc import SMPCSecureSum, SMPCConfig
 except ImportError:
-    from smpc import SMPCSecureSum, SMPCConfig
+    from src.vega.federated.smpc import SMPCSecureSum, SMPCConfig
 
 
 def test_smpc_secure_sum_basic():

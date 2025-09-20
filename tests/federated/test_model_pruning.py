@@ -5,9 +5,9 @@ Unit tests for model pruning utilities.
 import numpy as np
 
 try:
-    from vega.federated import model_pruning
+    from src.vega.federated import model_pruning
 except ImportError:
-    import model_pruning
+    import src.vega.federated.model_pruning as model_pruning
 
 
 def test_magnitude_prune():

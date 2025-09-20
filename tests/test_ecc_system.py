@@ -15,7 +15,7 @@ from pathlib import Path
 project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
 
-from .ecc_crypto import (
+from tests.ecc_crypto import (
     get_ecc_manager,
     ECCCurve,
     generate_key_pair,
@@ -24,7 +24,7 @@ from .ecc_crypto import (
     encrypt_message,
     decrypt_message,
 )
-from .api_security import get_security_manager
+from tests.api_security import get_security_manager
 
 
 def test_key_generation():

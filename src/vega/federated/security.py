@@ -89,6 +89,17 @@ import numpy as np
 from typing import Dict, List, Union, Any
 
 
+# Alias for backward compatibility
+def detect_anomalies(
+    update: Dict[str, Any],
+    threshold: float = 10.0,
+    participant_id: Optional[str] = None,
+    session_id: Optional[str] = None,
+) -> Dict[str, Any]:
+    """Alias for is_anomalous_update for backward compatibility."""
+    return is_anomalous_update(update, threshold, participant_id, session_id)
+
+
 def is_anomalous_update(
     update: Dict[str, Any],
     threshold: float = 10.0,
@@ -528,3 +539,33 @@ def validate_model_update_pipeline(
     )
 
     return validation_results
+
+
+class AuditLogger:
+    """Class-based audit logger for federated learning security."""
+    
+    def __init__(self, log_file: str):
+        """Initialize audit logger with log file path."""
+        self.log_file = log_file
+        
+    def log(self, event: str, data: Dict[str, Any], participant_id: Optional[str] = None, session_id: Optional[str] = None):
+        """Log an audit event."""
+        audit_log(event, data, participant_id=participant_id, session_id=session_id)
+
+
+def validate_participant_data(data: Dict[str, Any], participant_id: str) -> bool:
+    """Validate participant data format and content."""
+    if not isinstance(data, dict):
+        return False
+    
+    # Basic validation - check for required fields
+    required_fields = ["participant_id", "timestamp"]
+    for field in required_fields:
+        if field not in data:
+            return False
+    
+    # Validate participant ID matches
+    if data.get("participant_id") != participant_id:
+        return False
+        
+    return True

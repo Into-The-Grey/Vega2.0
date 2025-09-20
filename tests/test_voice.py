@@ -18,7 +18,7 @@ from pathlib import Path
 from unittest.mock import patch, MagicMock, call
 import io
 
-from voice import VoiceManager, TTSProviderBase, STTProviderBase
+from src.vega.voice.voice_engine import VoiceManager, TTSProviderBase, STTProviderBase
 
 
 class MockTTSProvider(TTSProviderBase):

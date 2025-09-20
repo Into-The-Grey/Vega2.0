@@ -1,7 +1,7 @@
 import math
 import itertools
 
-from homomorphic_encryption import (
+from src.vega.federated.homomorphic_encryption import (
     PaillierKeypair,
     homomorphic_sum_float_vectors,
     encode_fixed_point,

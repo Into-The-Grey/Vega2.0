@@ -2,7 +2,7 @@
 Unit tests for Diffie-Hellman key exchange.
 """
 
-from key_exchange import DiffieHellmanParticipant
+from src.vega.federated.key_exchange import DiffieHellmanParticipant
 
 
 def test_dh_basic():

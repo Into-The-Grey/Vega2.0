@@ -92,6 +92,36 @@ class TrainingMetrics:
         }
 
 
+# Alias for backward compatibility
+ParticipantMetrics = TrainingMetrics
+
+
+@dataclass
+class TrainingState:
+    """State information for training progress."""
+
+    current_epoch: int
+    total_epochs: int
+    current_batch: int
+    total_batches: int
+    phase: str  # 'training', 'validation', 'complete'
+    is_converged: bool = False
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "current_epoch": self.current_epoch,
+            "total_epochs": self.total_epochs,
+            "current_batch": self.current_batch,
+            "total_batches": self.total_batches,
+            "phase": self.phase,
+            "is_converged": self.is_converged,
+        }
+
+
+# Type alias for training progress callbacks
+TrainingProgressCallback = callable
+
+
 class LocalModelTrainer:
     """
     Local model training utilities for federated participants.
@@ -411,8 +441,8 @@ class FederatedParticipant:
         # Capture architecture metadata for compatibility validation
         if hasattr(ModelSerializer, "inspect_model_architecture"):
             try:
-                self.local_model_architecture = ModelSerializer.inspect_model_architecture(
-                    model
+                self.local_model_architecture = (
+                    ModelSerializer.inspect_model_architecture(model)
                 )
             except Exception as exc:  # pragma: no cover - defensive
                 logger.warning(f"Failed to inspect model architecture: {exc}")
@@ -429,7 +459,11 @@ class FederatedParticipant:
         self.training_data_statistics = None
         try:
             data_iterable = training_data
-            if hasattr(training_data, "__len__") and hasattr(training_data, "__getitem__") and not hasattr(training_data, "__iter__"):
+            if (
+                hasattr(training_data, "__len__")
+                and hasattr(training_data, "__getitem__")
+                and not hasattr(training_data, "__iter__")
+            ):
 
                 def _dataset_iterator():
                     for idx in range(len(training_data)):
@@ -549,9 +583,11 @@ class FederatedParticipant:
                         self.training_data, "__len__", lambda: 1000
                     )(),
                     "config": self.training_config.to_dict(),
-                    "data_statistics": asdict(self.training_data_statistics)
-                    if self.training_data_statistics
-                    else None,
+                    "data_statistics": (
+                        asdict(self.training_data_statistics)
+                        if self.training_data_statistics
+                        else None
+                    ),
                     "model_architecture": self.local_model_architecture,
                 },
             }

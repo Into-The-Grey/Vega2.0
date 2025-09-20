@@ -5,13 +5,13 @@ Unit tests for GradientCompression module.
 import numpy as np
 
 try:
-    from vega.federated.gradient_compression import (
+    from src.vega.federated.gradient_compression import (
         GradientCompression,
         GradientCompressionConfig,
     )
 except ImportError:
     # Allow running as a script from this directory
-    from gradient_compression import GradientCompression, GradientCompressionConfig
+    from src.vega.federated.gradient_compression import GradientCompression, GradientCompressionConfig
 
 
 def test_topk():

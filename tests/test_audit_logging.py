@@ -11,8 +11,8 @@ import time
 # Add src to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
 
-from vega.federated.security import audit_log
-from vega.federated.communication import CommunicationManager, FederatedMessage
+from src.vega.federated.security import audit_log
+from src.vega.federated.communication import CommunicationManager, FederatedMessage
 
 
 def test_audit_logging():

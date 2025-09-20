@@ -2,7 +2,7 @@
 Unit tests for Shamir's Secret Sharing threshold scheme.
 """
 
-from threshold_secret_sharing import ShamirSecretSharing
+from src.vega.federated.threshold_secret_sharing import ShamirSecretSharing
 import random
 
 

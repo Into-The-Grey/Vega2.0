@@ -5,9 +5,9 @@ Unit tests for adaptive noise scaling in DifferentialPrivacy.
 import numpy as np
 
 try:
-    from vega.federated.dp import DifferentialPrivacy, DifferentialPrivacyConfig
+    from src.vega.federated.dp import DifferentialPrivacy, DifferentialPrivacyConfig
 except ImportError:
-    from dp import DifferentialPrivacy, DifferentialPrivacyConfig
+    from src.vega.federated.dp import DifferentialPrivacy, DifferentialPrivacyConfig
 
 
 def test_adaptive_noise_scaling():

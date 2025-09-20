@@ -14,7 +14,7 @@ from pathlib import Path
 project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
 
-from .error_handler import (
+from tests.error_handler import (
     get_error_handler,
     ErrorCode,
     ErrorSeverity,
@@ -24,7 +24,7 @@ from .error_handler import (
     log_warning,
     error_context,
 )
-from .exceptions import *
+from tests.exceptions import *
 
 
 async def test_basic_error_handling():

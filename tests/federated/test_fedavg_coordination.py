@@ -1,6 +1,6 @@
 import numpy as np
 
-from fedavg import FedAvg, FedAvgConfig, AsyncAggregator
+from src.vega.federated.fedavg import FedAvg, FedAvgConfig, AsyncAggregator
 
 
 def test_async_aggregator_simple():

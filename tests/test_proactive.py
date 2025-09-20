@@ -1,6 +1,6 @@
 import pytest
 from fastapi.testclient import TestClient
-from .app import app
+from tests.app import app
 
 client = TestClient(app)
 API_KEY = "vega-default-key"

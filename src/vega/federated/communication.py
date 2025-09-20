@@ -23,6 +23,7 @@ from dataclasses import dataclass, asdict
 from urllib.parse import urljoin
 import ssl
 from pathlib import Path
+from enum import Enum
 
 
 from .encryption import DynamicEncryption, SecureChannel
@@ -37,6 +38,56 @@ try:
     _API_KEYS = set([_CONFIG.api_key] + list(_CONFIG.api_keys_extra))
 except Exception:
     _API_KEYS = set()
+
+
+class MessageType(Enum):
+    """Enumeration of federated message types."""
+
+    MODEL_UPDATE = "model_update"
+    GRADIENT_UPDATE = "gradient_update"
+    AGGREGATION_REQUEST = "aggregation_request"
+    AGGREGATION_RESPONSE = "aggregation_response"
+    PARTICIPANT_JOIN = "participant_join"
+    PARTICIPANT_LEAVE = "participant_leave"
+    HEARTBEAT = "heartbeat"
+    ERROR = "error"
+    CONTROL = "control"
+
+
+@dataclass
+class NetworkMetrics:
+    """Network performance and connection metrics."""
+
+    latency_ms: float
+    bandwidth_mbps: float
+    packet_loss_percent: float
+    connection_count: int
+    bytes_sent: int
+    bytes_received: int
+    last_updated: float
+
+
+@dataclass
+class ConnectionPool:
+    """Connection pool configuration and state."""
+
+    max_connections: int
+    active_connections: int
+    available_connections: int
+    total_requests: int
+    failed_requests: int
+    average_response_time: float
+
+
+@dataclass
+class RetryStrategy:
+    """Configuration for retry logic."""
+
+    max_attempts: int
+    initial_delay: float
+    max_delay: float
+    backoff_factor: float
+    jitter: bool
 
 
 @dataclass

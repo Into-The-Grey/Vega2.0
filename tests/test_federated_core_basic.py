@@ -15,7 +15,7 @@ sys.path.insert(0, src_path)
 def test_security_module_import():
     """Test that security module can be imported."""
     try:
-        from vega.federated.security import check_api_key, audit_log
+        from src.vega.federated.security import check_api_key, audit_log
 
         assert True
     except ImportError as e:
@@ -24,7 +24,7 @@ def test_security_module_import():
 
 def test_api_key_validation():
     """Test basic API key validation."""
-    from vega.federated.security import check_api_key
+    from src.vega.federated.security import check_api_key
 
     allowed_keys = {"valid_key_1", "valid_key_2"}
 
@@ -40,7 +40,7 @@ def test_api_key_validation():
 
 def test_anomaly_detection():
     """Test basic anomaly detection."""
-    from vega.federated.security import is_anomalous_update
+    from src.vega.federated.security import is_anomalous_update
 
     # Test normal data (flattened format)
     normal_data = {
@@ -77,7 +77,7 @@ def test_anomaly_detection():
 
 def test_model_signature():
     """Test model signature creation and verification."""
-    from vega.federated.security import create_model_signature, verify_model_signature
+    from src.vega.federated.security import create_model_signature, verify_model_signature
     import json
 
     model_data = {"weights": [1.0, 2.0, 3.0]}

@@ -20,10 +20,10 @@ from copy import deepcopy
 import asyncio
 from concurrent.futures import ThreadPoolExecutor
 
-from ..core.participant import FederatedParticipant
-from ..core.fedavg import FedAvg
-from ..core.communication import SecureCommunication
-from ..core.security import SecurityManager
+from .participant import FederatedParticipant
+from .fedavg import FedAvg
+from .communication import CommunicationManager as SecureCommunication
+from .security import SecurityManager
 
 
 logger = logging.getLogger(__name__)
