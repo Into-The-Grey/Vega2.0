@@ -7,7 +7,7 @@ import pytest
 import asyncio
 import json
 import aiohttp
-from unittest.mock import AsyncMock, MagicMock, patch, PropertyMock
+from unittest.mock import AsyncMock, MagicMock, patch, PropertyMock, Mock
 from typing import Dict, Any, List
 
 # Import the communication module
@@ -275,17 +275,25 @@ class TestCommunicationManager:
         """Create mock aiohttp session."""
         session = AsyncMock()
 
-        # Create a proper mock for the context manager
-        mock_context_manager = AsyncMock()
+        # Create a proper mock response object
         mock_response = AsyncMock()
         mock_response.status = 200
         mock_response.json = AsyncMock(return_value={"status": "success"})
-        mock_context_manager.__aenter__ = AsyncMock(return_value=mock_response)
-        mock_context_manager.__aexit__ = AsyncMock(return_value=None)
 
-        # Important: Set return_value instead of side_effect to avoid coroutine issues
-        session.post.return_value = mock_context_manager
-        session.get.return_value = mock_context_manager
+        # Create a context manager mock that doesn't return a coroutine
+        class MockContextManager:
+            def __init__(self, response):
+                self.response = response
+
+            async def __aenter__(self):
+                return self.response
+
+            async def __aexit__(self, exc_type, exc_val, exc_tb):
+                return None
+
+        # Set up the mocks to return the context manager directly
+        session.post = Mock(return_value=MockContextManager(mock_response))
+        session.get = Mock(return_value=MockContextManager(mock_response))
         session.close = AsyncMock()
         return session
 

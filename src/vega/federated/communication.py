@@ -1098,6 +1098,10 @@ class CommunicationManager:
         self, participant_id: str, api_key: Optional[str] = None
     ) -> bool:
         """Register participant (delegate to registry)."""
+        # Validate input
+        if not participant_id or not participant_id.strip():
+            return False
+
         try:
             result = self.registry.register_participant(
                 participant_id=participant_id,

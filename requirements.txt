@@ -16,7 +16,7 @@ aiofiles==24.1.0
 structlog==24.1.0
 
 # Cryptography
-cryptography==41.0.8
+cryptography>=41.0.0,<43.0.0
 
 # Database & ORM
 SQLAlchemy==2.0.35
