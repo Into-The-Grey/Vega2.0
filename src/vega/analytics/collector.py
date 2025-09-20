@@ -275,13 +275,27 @@ class AnalyticsCollector:
 
         # Background tasks
         self._background_tasks: List[asyncio.Task] = []
-        self._start_background_tasks()
+        self._background_tasks_started = False
 
     def _start_background_tasks(self):
         """Start background collection tasks"""
-        # Collect system metrics every 30 seconds
-        task = asyncio.create_task(self._collect_system_metrics())
-        self._background_tasks.append(task)
+        if self._background_tasks_started:
+            return
+
+        try:
+            # Only start tasks if we have a running event loop
+            loop = asyncio.get_running_loop()
+            task = asyncio.create_task(self._collect_system_metrics())
+            self._background_tasks.append(task)
+            self._background_tasks_started = True
+        except RuntimeError:
+            # No event loop running, defer task creation
+            pass
+
+    def ensure_background_tasks(self):
+        """Ensure background tasks are started (call this from async context)"""
+        if not self._background_tasks_started:
+            self._start_background_tasks()
 
     async def track_event(
         self,
@@ -294,6 +308,9 @@ class AnalyticsCollector:
         """Track an analytics event"""
         if not self.enabled or not self._should_sample():
             return
+
+        # Ensure background tasks are started in async context
+        self.ensure_background_tasks()
 
         event = Event(
             id=str(uuid.uuid4()),

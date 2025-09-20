@@ -6,7 +6,7 @@ This module provides advanced analytics processing including
 statistical analysis, anomaly detection, and trend analysis.
 """
 
-from typing import Dict, List, Optional, Any, Tuple
+from typing import Dict, List, Optional, Any, Tuple, Callable
 from datetime import datetime, timedelta
 from dataclasses import dataclass
 from enum import Enum
@@ -399,22 +399,42 @@ class AnalyticsEngine:
 
         # Background processing
         self._processing_tasks: List[asyncio.Task] = []
-        self._start_background_processing()
+        self._background_tasks_started = False
 
     def _start_background_processing(self):
         """Start background analysis tasks"""
-        # Anomaly detection task - runs every 5 minutes
-        task = asyncio.create_task(self._periodic_anomaly_detection())
-        self._processing_tasks.append(task)
+        if self._background_tasks_started:
+            return
 
-        # Performance analysis task - runs every 10 minutes
-        task = asyncio.create_task(self._periodic_performance_analysis())
-        self._processing_tasks.append(task)
+        try:
+            # Only start tasks if we have a running event loop
+            loop = asyncio.get_running_loop()
+
+            # Anomaly detection task - runs every 5 minutes
+            task = asyncio.create_task(self._periodic_anomaly_detection())
+            self._processing_tasks.append(task)
+
+            # Performance analysis task - runs every 10 minutes
+            task = asyncio.create_task(self._periodic_performance_analysis())
+            self._processing_tasks.append(task)
+
+            self._background_tasks_started = True
+        except RuntimeError:
+            # No event loop running, defer task creation
+            pass
+
+    def ensure_background_tasks(self):
+        """Ensure background tasks are started (call this from async context)"""
+        if not self._background_tasks_started:
+            self._start_background_processing()
 
     async def process_metric_update(
         self, metric_name: str, value: float, timestamp: datetime
     ):
         """Process a metric update and check for anomalies"""
+        # Ensure background tasks are started in async context
+        self.ensure_background_tasks()
+        
         # Add to time series data
         self.time_series_analyzer.add_data_point(metric_name, timestamp, value)
 
@@ -625,7 +645,7 @@ class AnalyticsEngine:
 
         return recommendations
 
-    def subscribe_to_alerts(self, callback: callable):
+    def subscribe_to_alerts(self, callback: Callable[[Any], None]):
         """Subscribe to anomaly alerts"""
         self.alert_subscribers.append(callback)
 
