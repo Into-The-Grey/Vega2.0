@@ -1,18 +1,23 @@
 # Copilot Instructions for Vega2.0
 
-Vega2.0 is a local-first FastAPI service and CLI for chatting with a local LLM (primarily Ollama), logging conversations to SQLite, building datasets, and fine-tuning. All components are designed for localhost-only operation with strong security defaults.
+Vega2.0 is an advanced AI platform featuring federated learning, multi-modal processing, intelligent analysis, and real-time collaboration capabilities. The system is designed with modular architecture supporting local deployment, enterprise federation, and distributed learning scenarios.
 
 ## Core Architecture
 
 **Main Components:**
 
-- `app.py`: FastAPI service with `/chat`, `/history`, `/healthz` endpoints
-- `cli.py`: Typer CLI mirroring API functionality (`python -m cli chat "Hello"`)
-- `llm.py`: LLM integration layer with circuit breaker and TTL cache
-- `db.py`: SQLAlchemy 2.0 + SQLite for conversation logging
-- `config.py`: Environment config loader using python-dotenv
+- `main.py`: Multi-command entry point for server, CLI, OpenAPI, processes, and testing
+- `src/vega/core/app.py`: FastAPI application with comprehensive API endpoints
+- `src/vega/core/cli.py`: Advanced CLI interface for system management
+- `src/vega/federated/`: Complete federated learning implementation (106 files)
+- `src/vega/intelligence/`: AI intelligence and analysis engines
+- `datasets/`: Multi-modal processing modules (audio, video, image, document)
+- `src/vega/integrations/`: External service connectors and APIs
 
-**Key Data Flow:** Client → FastAPI → LLM Backend (Ollama) → SQLite logging
+**Key Data Flow:** 
+
+- Multi-modal Input → Processing Pipeline → Federated Learning → Intelligence Analysis → Collaborative Output
+- Client → FastAPI → Federated Coordinator → Participant Network → Aggregated Results
 
 ## Critical Development Patterns
 
@@ -22,12 +27,14 @@ Vega2.0 is a local-first FastAPI service and CLI for chatting with a local LLM (
 - Use `get_config()` function throughout codebase
 - Never hardcode secrets; use `.env.example` as template
 - Keep `HOST=127.0.0.1` for localhost-only security
+- YAML-based modular configuration for components (`configs/` directory)
 
 ### Error Handling & Resilience
 
 - Use `CircuitBreaker` and `TTLCache` from `resilience.py` for external calls
 - LLM calls wrapped with retry logic and timeouts in `llm.py`
 - All async functions should handle httpx exceptions gracefully
+- Advanced error handling with ECC cryptography support
 
 ### Database Patterns
 
@@ -35,6 +42,7 @@ Vega2.0 is a local-first FastAPI service and CLI for chatting with a local LLM (
 - Session management via context managers
 - All conversation logging goes through `db.log_conversation()`
 - SQLite WAL mode enabled for concurrent access
+- Multi-modal data storage with specialized handlers
 
 ### API Security
 
@@ -42,6 +50,15 @@ Vega2.0 is a local-first FastAPI service and CLI for chatting with a local LLM (
 - Multiple API keys supported via `api_keys_extra` config
 - Input validation with Pydantic models
 - Rate limiting available via slowapi integration
+- ECC cryptography for advanced security features
+
+### Federated Learning Patterns
+
+- Model serialization framework (PyTorch/TensorFlow)
+- REST-based communication layer with encryption
+- Dynamic participant management and coordination
+- Differential privacy and secure aggregation
+- Cross-silo hierarchical federation support
 
 ## Essential Commands
 
@@ -56,15 +73,23 @@ cp .env.example .env  # Edit API_KEY and MODEL_NAME
 **Running Services:**
 
 ```bash
-# API server
-uvicorn app:app --host $(grep ^HOST .env | cut -d= -f2) --port $(grep ^PORT .env | cut -d= -f2)
+# Main API server
+python main.py server --host 127.0.0.1 --port 8000
 
 # CLI commands
-python -m cli chat "Hello"          # Single prompt
-python -m cli repl                  # Interactive REPL
-python -m cli history --limit 10    # View conversation history
-python -m cli dataset build ./datasets/samples  # Build training dataset
-python -m cli train --config training/config.yaml  # Fine-tune model
+python main.py cli chat "Hello"          # Single prompt
+python main.py cli repl                  # Interactive REPL
+python main.py cli history --limit 10    # View conversation history
+
+# OpenAPI server
+python main.py openapi --port 8001
+
+# Background processes
+python main.py processes start
+
+# Test suite
+python main.py test --suite core
+python main.py test  # Run all tests
 ```
 
 **Production Deployment:**
@@ -79,26 +104,33 @@ sudo systemctl enable vega && sudo systemctl start vega
 **Dataset Pipeline:**
 
 1. Place source files (.txt, .md, .json) in `datasets/samples/`
-2. Run `python -m cli dataset build ./datasets/samples`
+2. Run `python main.py cli dataset build ./datasets/samples`
 3. Outputs to `datasets/output.jsonl` with `{"prompt", "response"}` format
 
 **Training Pipeline:**
 
 1. Configure `training/config.yaml` with model/LoRA settings
-2. Run `python -m cli train --config training/config.yaml`
+2. Run `python main.py cli train --config training/config.yaml`
 3. Uses HuggingFace Transformers + Accelerate + optional PEFT/LoRA
+
+**Federated Learning Pipeline:**
+
+1. Configure participants in federated learning network
+2. Start coordinator: `python -m src.vega.federated.coordinator`
+3. Deploy participants across nodes
+4. Monitor training through federated dashboard
 
 ## Integration Patterns
 
 **Adding New Endpoints:**
 
-- Follow FastAPI patterns in `app.py`
-- Add corresponding CLI command in `cli.py`
+- Follow FastAPI patterns in `src/vega/core/app.py`
+- Add corresponding CLI command in `src/vega/core/cli.py`
 - Use `@require_api_key` decorator for protected endpoints
 
 **External Service Integration:**
 
-- See `integrations/` modules for patterns (search, fetch, osint, slack)
+- See `src/vega/integrations/` modules for patterns (search, fetch, osint, slack)
 - Use httpx for async HTTP calls with timeouts
 - Implement graceful fallbacks for optional services
 
@@ -108,14 +140,47 @@ sudo systemctl enable vega && sudo systemctl start vega
 - Handle missing columns gracefully (see feedback fields pattern)
 - Use SQLAlchemy migrations for schema changes
 
+**Federated Learning Extensions:**
+
+- Implement new algorithms in `src/vega/federated/algorithms/`
+- Follow model serialization patterns for new architectures
+- Add security protocols for new encryption methods
+
 ## File Organization
 
-- `/integrations/`: External service connectors (web search, OSINT, Slack)
-- `/datasets/`: Dataset preparation and loaders for different file types
-- `/training/`: HuggingFace training harness with LoRA support
-- `/learning/`: Conversation evaluation and curation tools
+- `/src/vega/integrations/`: External service connectors (web search, OSINT, Slack)
+- `/datasets/`: Multi-modal processing modules (audio, video, image, document)
+- `/src/vega/training/`: HuggingFace training harness with LoRA support
+- `/src/vega/learning/`: Conversation evaluation and curation tools
 - `/docs/`: Comprehensive documentation (mirrored in `/book/` for mdBook)
-- `/static/`: Simple HTML chat UI for browser testing
+- `/tools/static/`: Simple HTML chat UI for browser testing
+- `/src/vega/federated/`: Complete federated learning implementation
+- `/src/vega/intelligence/`: AI intelligence engines and analysis systems
+- `/configs/`: YAML-based configuration files for all modules
+- `/logs/`: Structured logging organized by functional component
+
+## 🚨 Critical Documentation Requirements
+
+### Mandatory: Roadmap & Mind-Map Updates
+
+⚠️ **EVERY TIME** progress or changes are made to any current or future roadmap items, **BOTH** files MUST be updated:
+
+1. **`roadmap.md`** - Update implementation status, add new TODOs, mark completed items
+2. **`MINDMAP_STRUCTURE.md`** - Update the `markmap` visualization to reflect current project state
+
+This ensures:
+
+- Project documentation stays synchronized with actual implementation
+- Visual representation (mind-map) accurately reflects current architecture
+- Progress tracking is consistent across all documentation formats
+- Team members can quickly understand current project status
+
+**Process:**
+
+1. Make code changes
+2. Update `roadmap.md` with status changes (✅ → ⚠️ → 🔄)
+3. Update `MINDMAP_STRUCTURE.md` to reflect new structure/status
+4. Commit all three types of changes together
 
 ## Testing & Debugging
 
@@ -180,9 +245,11 @@ sudo systemctl enable vega && sudo systemctl start vega
 ### Testing Patterns
 
 - Test async functions with `pytest-asyncio`
-- Mock external services (Ollama, web search) in tests
+- Mock external services (LLM providers, web search) in tests
 - Use temporary databases for integration tests
 - Test error conditions and edge cases
+- Coverage should include resilience patterns
+- Test federated learning algorithms with mock participants
 - Coverage should include resilience patterns
 
 ### Performance Considerations
@@ -235,11 +302,17 @@ journalctl -u vega -f --since "1 hour ago"
 
 ### Common Issues
 
-**Ollama Connection Failures:**
+**LLM Backend Connection Failures:**
 
-- Check if Ollama is running: `curl http://127.0.0.1:11434/api/tags`
-- Verify model availability: `ollama list`
+- Check if LLM service is running (Ollama: `curl http://127.0.0.1:11434/api/tags`)
+- Verify model availability and configuration
 - Check circuit breaker status in logs
+
+**Federated Learning Issues:**
+
+- Verify participant connectivity and authentication
+- Check encryption key synchronization
+- Monitor coordinator logs for aggregation failures
 
 **Database Lock Errors:**
 
@@ -253,11 +326,18 @@ journalctl -u vega -f --since "1 hour ago"
 - Check `api_keys_extra` configuration
 - Test with curl: `curl -H "X-API-Key: YOUR_KEY" http://localhost:8000/healthz`
 
+**Multi-modal Processing Issues:**
+
+- Check file format support and codec availability
+- Verify sufficient memory for large media files
+- Monitor processing pipeline logs for bottlenecks
+
 **Memory Issues:**
 
 - Monitor conversation history size
 - Implement retention policies
 - Check for memory leaks in long-running processes
+- Profile federated learning memory usage
 
 ### Debugging Techniques
 
@@ -291,6 +371,22 @@ journalctl -u vega --since "1 hour ago" | grep ERROR
 3. Register file extension in `prepare_dataset.py`
 4. Add tests for new format
 5. Update documentation
+
+### Federated Learning Algorithm Development
+
+1. Implement new algorithms in `src/vega/federated/algorithms/`
+2. Follow model serialization patterns for new architectures
+3. Add security protocols for new encryption methods
+4. Test with multi-participant scenarios
+5. Document algorithm parameters and use cases
+
+### Multi-modal Processing Extensions
+
+1. Add new format handlers in `datasets/` modules
+2. Implement format-specific feature extraction
+3. Integrate with existing processing pipelines
+4. Add comprehensive format validation
+5. Update supported format documentation
 
 ### Integration Development
 
