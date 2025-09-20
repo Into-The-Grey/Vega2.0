@@ -543,12 +543,18 @@ def validate_model_update_pipeline(
 
 class AuditLogger:
     """Class-based audit logger for federated learning security."""
-    
+
     def __init__(self, log_file: str):
         """Initialize audit logger with log file path."""
         self.log_file = log_file
-        
-    def log(self, event: str, data: Dict[str, Any], participant_id: Optional[str] = None, session_id: Optional[str] = None):
+
+    def log(
+        self,
+        event: str,
+        data: Dict[str, Any],
+        participant_id: Optional[str] = None,
+        session_id: Optional[str] = None,
+    ):
         """Log an audit event."""
         audit_log(event, data, participant_id=participant_id, session_id=session_id)
 
@@ -557,15 +563,83 @@ def validate_participant_data(data: Dict[str, Any], participant_id: str) -> bool
     """Validate participant data format and content."""
     if not isinstance(data, dict):
         return False
-    
+
     # Basic validation - check for required fields
     required_fields = ["participant_id", "timestamp"]
     for field in required_fields:
         if field not in data:
             return False
-    
+
     # Validate participant ID matches
     if data.get("participant_id") != participant_id:
         return False
-        
+
     return True
+
+
+class SecurityManager:
+    """
+    Centralized security management for federated learning operations.
+
+    Provides a unified interface for security operations including:
+    - Authentication and authorization
+    - Audit logging
+    - Anomaly detection
+    - Model verification
+    - Participant validation
+    """
+
+    def __init__(self, api_keys: Optional[set] = None):
+        """Initialize SecurityManager with optional API keys."""
+        self.api_keys = api_keys or set()
+        self.audit_logger = AuditLogger()
+        self.logger = logging.getLogger(__name__)
+
+    def authenticate(self, api_key: str) -> bool:
+        """Authenticate using API key."""
+        return check_api_key(api_key, self.api_keys)
+
+    def detect_anomalies(self, data: Dict[str, Any]) -> bool:
+        """Detect anomalies in provided data."""
+        return detect_anomalies(data)
+
+    def create_ssl_context(
+        self,
+        certfile: Optional[str] = None,
+        keyfile: Optional[str] = None,
+        cafile: Optional[str] = None,
+    ) -> ssl.SSLContext:
+        """Create SSL context for secure communications."""
+        return create_ssl_context(certfile, keyfile, cafile)
+
+    def verify_model_signature(
+        self, model_data: bytes, signature: str, public_key: str
+    ) -> bool:
+        """Verify model signature for integrity checking."""
+        return verify_model_signature(model_data, signature, public_key)
+
+    def validate_participant(self, data: Dict[str, Any], participant_id: str) -> bool:
+        """Validate participant data."""
+        return validate_participant_data(data, participant_id)
+
+    def log_security_event(
+        self,
+        event: str,
+        data: Dict[str, Any],
+        participant_id: Optional[str] = None,
+        session_id: Optional[str] = None,
+    ):
+        """Log security-related events."""
+        self.audit_logger.log(
+            f"security_{event}",
+            data,
+            participant_id=participant_id,
+            session_id=session_id,
+        )
+        self.logger.info(f"Security event: {event} for participant {participant_id}")
+
+    def get_audit_report(
+        self, start_time: Optional[float] = None, end_time: Optional[float] = None
+    ) -> Dict[str, Any]:
+        """Generate security audit report."""
+        return self.audit_logger.generate_report(start_time, end_time)

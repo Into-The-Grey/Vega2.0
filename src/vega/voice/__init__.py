@@ -34,7 +34,7 @@ except ImportError as e:
     logging.warning(f"Enhanced voice system not available: {e}")
 
 # Import provider classes for backward compatibility and testing
-import voice.providers as providers
+from . import providers
 
 logger = logging.getLogger(__name__)
 
