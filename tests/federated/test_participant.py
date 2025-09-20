@@ -7,6 +7,7 @@ import pytest
 import asyncio
 import json
 import tempfile
+import numpy as np
 from unittest.mock import AsyncMock, MagicMock, patch, mock_open
 from typing import Dict, Any, List
 
@@ -178,13 +179,25 @@ class TestFederatedParticipant:
         self, participant, mock_communication_manager
     ):
         """Test participant registration with coordinator."""
-        mock_communication_manager.register_participant.return_value = True
+        mock_communication_manager.send_to_participant.return_value = {
+            "status": "success"
+        }
 
         result = await participant.register_with_coordinator()
 
         assert result is True
-        mock_communication_manager.register_participant.assert_called_once_with(
-            participant.participant_id, participant.api_key
+        mock_communication_manager.send_to_participant.assert_called_once_with(
+            recipient_id="coordinator",
+            message_type="register",
+            data={
+                "participant_id": participant.participant_id,
+                "participant_name": participant.participant_name,
+                "capabilities": {
+                    "model_type": participant.trainer.model_type,
+                    "can_train": True,
+                    "can_aggregate": False,
+                },
+            },
         )
 
     @pytest.mark.asyncio
@@ -221,7 +234,13 @@ class TestFederatedParticipant:
         self, participant, mock_communication_manager, mock_model_serializer
     ):
         """Test receiving global model from coordinator."""
-        global_weights = ModelWeights({"layer1": [1.0, 2.0, 3.0]})
+        global_weights = ModelWeights(
+            weights={"layer1": np.array([1.0, 2.0, 3.0])},
+            model_type="pytorch",
+            architecture_info={"layers": ["layer1"]},
+            metadata={"version": "1.0"},
+            checksum="test_checksum",
+        )
 
         mock_communication_manager.receive_message.return_value = {
             "type": "global_model",
@@ -263,7 +282,13 @@ class TestFederatedParticipant:
         self, participant, mock_communication_manager, mock_model_serializer
     ):
         """Test sending model updates to coordinator."""
-        local_weights = ModelWeights({"layer1": [1.1, 2.1, 3.1]})
+        local_weights = ModelWeights(
+            weights={"layer1": np.array([1.1, 2.1, 3.1])},
+            model_type="pytorch",
+            architecture_info={"layers": ["layer1"]},
+            metadata={"version": "1.0"},
+            checksum="test_checksum",
+        )
 
         mock_model_serializer.serialize_weights.return_value = local_weights
         mock_communication_manager.send_message.return_value = True
@@ -284,10 +309,14 @@ class TestFederatedParticipant:
         """Test security validation during model updates."""
         # Test with anomalous data
         anomalous_weights = ModelWeights(
-            {
-                "layer1": [float("inf"), 2.0, 3.0],  # Infinite value
-                "layer2": [1.0, float("nan"), 3.0],  # NaN value
-            }
+            weights={
+                "layer1": np.array([float("inf"), 2.0, 3.0]),  # Infinite value
+                "layer2": np.array([1.0, float("nan"), 3.0]),  # NaN value
+            },
+            model_type="pytorch",
+            architecture_info={"layers": ["layer1", "layer2"]},
+            metadata={"version": "1.0"},
+            checksum="test_checksum",
         )
 
         with patch(
@@ -346,7 +375,13 @@ class TestFederatedParticipant:
         """Test error handling during communication failures."""
         mock_communication_manager.send_message.side_effect = Exception("Network error")
 
-        local_weights = ModelWeights({"layer1": [1.0, 2.0, 3.0]})
+        local_weights = ModelWeights(
+            weights={"layer1": np.array([1.0, 2.0, 3.0])},
+            model_type="pytorch",
+            architecture_info={"layers": ["layer1"]},
+            metadata={"version": "1.0"},
+            checksum="test_checksum",
+        )
 
         result = await participant.send_model_updates(local_weights)
 
@@ -402,7 +437,13 @@ class TestFederatedParticipant:
 
             training_result = await participant.train_local_model()
 
-            local_weights = ModelWeights({"layer1": [1.1, 2.1, 3.1]})
+            local_weights = ModelWeights(
+                weights={"layer1": np.array([1.1, 2.1, 3.1])},
+                model_type="pytorch",
+                architecture_info={"layers": ["layer1"]},
+                metadata={"version": "1.0"},
+                checksum="test_checksum",
+            )
             with patch("vega.federated.participant.create_model_signature"):
                 with patch(
                     "vega.federated.participant.validate_model_update_pipeline"

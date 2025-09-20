@@ -18,7 +18,7 @@ def test_async_aggregator_simple():
     agg.submit_update({"w": np.array([3.0, 3.0])}, 30)
     assert agg.is_ready()
     out = agg.aggregate(fa)
-    assert np.allclose(out["w"], np.array([2.5, 2.5]))
+    assert np.allclose(out[0]["w"], np.array([2.5, 2.5]))
 
 
 def test_byr_robust_median():

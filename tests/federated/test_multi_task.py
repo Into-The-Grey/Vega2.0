@@ -435,6 +435,7 @@ class TestMultiTaskParticipant:
         """Test creating multi-task participant."""
         participant = MultiTaskParticipant(
             participant_id="test_participant",
+            participant_name="Test Participant",
             tasks=sample_tasks,
             model_config=sample_config,
             data_loaders=sample_data_loaders,
@@ -449,6 +450,7 @@ class TestMultiTaskParticipant:
         """Test setting and getting model parameters."""
         participant = MultiTaskParticipant(
             participant_id="test_participant",
+            participant_name="Test Participant",
             tasks=sample_tasks,
             model_config=sample_config,
         )
@@ -459,7 +461,12 @@ class TestMultiTaskParticipant:
         # Create new parameters
         new_params = {}
         for key, param in initial_params.items():
-            new_params[key] = torch.randn_like(param)
+            if param.dtype in [torch.float, torch.float32, torch.float64]:
+                new_params[key] = torch.randn_like(param)
+            elif param.dtype in [torch.long, torch.int, torch.int32, torch.int64]:
+                new_params[key] = torch.randint_like(param, low=0, high=10)
+            else:
+                new_params[key] = torch.zeros_like(param)
 
         # Set new parameters
         participant.set_model_parameters(new_params)
@@ -473,6 +480,7 @@ class TestMultiTaskParticipant:
         """Test local model training."""
         participant = MultiTaskParticipant(
             participant_id="test_participant",
+            participant_name="Test Participant",
             tasks=sample_tasks,
             model_config=sample_config,
             data_loaders=sample_data_loaders,
@@ -491,6 +499,7 @@ class TestMultiTaskParticipant:
         """Test model evaluation."""
         participant = MultiTaskParticipant(
             participant_id="test_participant",
+            participant_name="Test Participant",
             tasks=sample_tasks,
             model_config=sample_config,
             data_loaders=sample_data_loaders,
@@ -547,6 +556,7 @@ class TestMultiTaskCoordinator:
 
             participant = MultiTaskParticipant(
                 participant_id=f"participant_{i}",
+                participant_name=f"Participant {i}",
                 tasks=sample_tasks,
                 model_config=sample_config,
                 data_loaders=data_loaders,

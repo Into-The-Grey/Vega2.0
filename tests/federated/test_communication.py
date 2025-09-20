@@ -303,6 +303,15 @@ class TestCommunicationManager:
     @pytest.mark.asyncio
     async def test_send_message_success(self, communication_manager, mock_session):
         """Test successful message sending."""
+        # Register coordinator participant to make communication possible
+        communication_manager.registry.register_participant(
+            participant_id="coordinator",
+            host="localhost",
+            port=8000,
+            name="Coordinator",
+            api_key="test-key",
+        )
+
         # Setup mock response
         mock_response = AsyncMock()
         mock_response.status = 200

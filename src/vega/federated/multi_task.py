@@ -340,11 +340,12 @@ class MultiTaskParticipant(FederatedParticipant):
     def __init__(
         self,
         participant_id: str,
+        participant_name: str,
         tasks: List[TaskDefinition],
         model_config: MultiTaskModelConfig,
         data_loaders: Dict[str, Any] = None,
     ):
-        super().__init__(participant_id)
+        super().__init__(participant_id, participant_name)
 
         self.tasks = {task.task_id: task for task in tasks}
         self.model_config = model_config

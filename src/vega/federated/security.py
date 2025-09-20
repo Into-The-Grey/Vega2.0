@@ -592,7 +592,7 @@ class SecurityManager:
     def __init__(self, api_keys: Optional[set] = None):
         """Initialize SecurityManager with optional API keys."""
         self.api_keys = api_keys or set()
-        self.audit_logger = AuditLogger()
+        self.audit_logger = AuditLogger("federated_audit.log")
         self.logger = logging.getLogger(__name__)
 
     def authenticate(self, api_key: str) -> bool:
