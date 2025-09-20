@@ -1,0 +1,109 @@
+# Pre-commit hook configuration for Vega 2.0 security scanning
+# Install: pre-commit install
+# Run manually: pre-commit run --all-files
+
+repos:
+  # Security scanning with Bandit
+  - repo: https://github.com/PyCQA/bandit
+    rev: '1.7.5'
+    hooks:
+      - id: bandit
+        args: ['-r', 'src/', '-f', 'json', '-o', 'security/results/bandit-precommit.json']
+        files: \.py$
+        exclude: ^(tests/|__pycache__/)
+        pass_filenames: false
+
+  # Dependency vulnerability scanning with Safety
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-safety
+    rev: v1.3.2
+    hooks:
+      - id: python-safety-dependencies-check
+        args: ['--json', '--output', 'security/results/safety-precommit.json']
+
+  # Secret detection
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.4.0
+    hooks:
+      - id: detect-secrets
+        args: ['--baseline', '.secrets.baseline']
+        exclude: \.lock$|package-lock\.json$
+
+  # YAML security linting
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.32.0
+    hooks:
+      - id: yamllint
+        args: ['-d', '{extends: relaxed, rules: {line-length: {max: 120}}}']
+
+  # Dockerfile security scanning
+  - repo: https://github.com/hadolint/hadolint
+    rev: v2.12.0
+    hooks:
+      - id: hadolint-docker
+        args: ['--ignore', 'DL3008', '--ignore', 'DL3009']
+
+  # Python code quality and security
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-added-large-files
+        args: ['--maxkb=1000']
+      - id: check-merge-conflict
+      - id: debug-statements
+      - id: requirements-txt-fixer
+
+  # Semgrep security scanning
+  - repo: https://github.com/returntocorp/semgrep
+    rev: 'v1.45.0'
+    hooks:
+      - id: semgrep
+        args: ['--config=auto', '--error', '--json', '--output=security/results/semgrep-precommit.json']
+        files: \.(py|js|ts|jsx|tsx|java|go|php|rb|c|cpp|cs)$
+
+  # Custom security validation hook
+  - repo: local
+    hooks:
+      - id: vega-security-check
+        name: Vega Security Check
+        entry: python -m src.vega.security.integration ci-check
+        language: system
+        pass_filenames: false
+        stages: [commit]
+
+      - id: security-config-validation
+        name: Security Config Validation
+        entry: python -c "import yaml, sys; config = yaml.safe_load(open('configs/security.yaml')); sys.exit(0 if all(s in config for s in ['scanner', 'vulnerability', 'compliance']) else 1)"
+        language: system
+        files: ^configs/security\.yaml$
+
+      - id: security-results-dir
+        name: Ensure Security Results Directory
+        entry: python -c "import os; os.makedirs('security/results', exist_ok=True)"
+        language: system
+        pass_filenames: false
+
+# Global configuration
+default_stages: [commit]
+fail_fast: false
+minimum_pre_commit_version: '2.20.0'
+
+# Environment variables for security tools
+default_language_version:
+  python: python3.12
+
+# CI configuration
+ci:
+  autofix_prs: false
+  autofix_commit_msg: |
+    [pre-commit.ci] auto fixes from pre-commit hooks
+
+    for more information, see https://pre-commit.ci
+  autoupdate_branch: ''
+  autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
+  autoupdate_schedule: monthly
+  skip: [bandit, python-safety-dependencies-check, semgrep, vega-security-check]
+  submodules: false

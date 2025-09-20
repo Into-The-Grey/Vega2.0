@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vega 2.0 Security Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-excellent {
+            background: #48bb78;
+            color: white;
+        }
+
+        .status-good {
+            background: #68d391;
+            color: white;
+        }
+
+        .status-fair {
+            background: #f6e05e;
+            color: #2d3748;
+        }
+
+        .status-poor {
+            background: #fc8181;
+            color: white;
+        }
+
+        .status-critical {
+            background: #f56565;
+            color: white;
+        }
+
+        .status-unknown {
+            background: #a0aec0;
+            color: white;
+        }
+
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .metric:last-child {
+            border-bottom: none;
+        }
+
+        .metric-label {
+            font-weight: 500;
+            color: #4a5568;
+        }
+
+        .metric-value {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .metric-critical {
+            color: #e53e3e;
+        }
+
+        .metric-high {
+            color: #dd6b20;
+        }
+
+        .metric-medium {
+            color: #d69e2e;
+        }
+
+        .metric-low {
+            color: #38a169;
+        }
+
+        .metric-info {
+            color: #3182ce;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: #4299e1;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #3182ce;
+        }
+
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+
+        .btn-secondary:hover {
+            background: #cbd5e0;
+        }
+
+        .btn-danger {
+            background: #f56565;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #e53e3e;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        .recent-scans {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .scan-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .scan-item:last-child {
+            border-bottom: none;
+        }
+
+        .scan-timestamp {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        .refresh-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #4299e1;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(66, 153, 225, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .refresh-btn:hover {
+            background: #3182ce;
+            transform: scale(1.1);
+        }
+
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spinning {
+            animation: spin 1s linear infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔒 Vega 2.0 Security Dashboard</h1>
+            <p>Real-time security monitoring and compliance tracking</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- Overall Health Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🛡️</div>
+                    <div class="card-title">Security Health</div>
+                </div>
+                <div class="status-indicator status-unknown" id="overall-status">Loading...</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="health-progress" style="width: 0%; background: #a0aec0;"></div>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-primary" onclick="runFullAudit()">Run Full Audit</button>
+                    <button class="btn btn-secondary" onclick="refreshStatus()">Refresh</button>
+                </div>
+            </div>
+
+            <!-- Vulnerabilities Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🚨</div>
+                    <div class="card-title">Vulnerabilities</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Critical</span>
+                    <span class="metric-value metric-critical" id="vuln-critical">-</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">High</span>
+                    <span class="metric-value metric-high" id="vuln-high">-</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Medium</span>
+                    <span class="metric-value metric-medium" id="vuln-medium">-</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Low</span>
+                    <span class="metric-value metric-low" id="vuln-low">-</span>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-danger" onclick="runVulnScan()">Scan Now</button>
+                </div>
+            </div>
+
+            <!-- Compliance Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">📋</div>
+                    <div class="card-title">Compliance</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">SOC2</span>
+                    <span class="metric-value" id="compliance-soc2">-</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">ISO27001</span>
+                    <span class="metric-value" id="compliance-iso">-</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">GDPR</span>
+                    <span class="metric-value" id="compliance-gdpr">-</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Overall Score</span>
+                    <span class="metric-value" id="compliance-overall">-</span>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-primary" onclick="generateComplianceReport()">Generate Report</button>
+                </div>
+            </div>
+
+            <!-- Recent Scans Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🔍</div>
+                    <div class="card-title">Recent Scans</div>
+                </div>
+                <div id="recent-scans">
+                    <div class="scan-item">
+                        <span>Loading recent scans...</span>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-secondary" onclick="viewFullHistory()">View Full History</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Security Events -->
+        <div class="recent-scans">
+            <div class="card-header">
+                <div class="card-icon">📊</div>
+                <div class="card-title">Security Analytics</div>
+            </div>
+            <div id="security-analytics">
+                <p>Security analytics and trends will be displayed here...</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="refresh-btn" onclick="refreshAll()" id="refresh-btn">🔄</button>
+
+    <script>
+        // Mock data for demonstration
+        let mockData = {
+            overall_health: 'good',
+            vulnerabilities: {
+                critical: 0,
+                high: 2,
+                medium: 5,
+                low: 8
+            },
+            compliance: {
+                soc2: 95,
+                iso27001: 88,
+                gdpr: 92,
+                overall: 92
+            },
+            recent_scans: [
+                { timestamp: '2024-01-15T10:30:00Z', status: 'completed', issues: 15 },
+                { timestamp: '2024-01-14T10:30:00Z', status: 'completed', issues: 18 },
+                { timestamp: '2024-01-13T10:30:00Z', status: 'completed', issues: 12 }
+            ]
+        };
+
+        function updateDashboard(data = mockData) {
+            // Update overall health
+            const healthStatus = document.getElementById('overall-status');
+            const healthProgress = document.getElementById('health-progress');
+
+            healthStatus.className = `status-indicator status-${data.overall_health}`;
+            healthStatus.textContent = data.overall_health.toUpperCase();
+
+            const healthPercentage = {
+                'excellent': 100,
+                'good': 80,
+                'fair': 60,
+                'poor': 40,
+                'critical': 20
+            };
+
+            const percentage = healthPercentage[data.overall_health] || 0;
+            healthProgress.style.width = `${percentage}%`;
+            healthProgress.style.background = {
+                'excellent': '#48bb78',
+                'good': '#68d391',
+                'fair': '#f6e05e',
+                'poor': '#fc8181',
+                'critical': '#f56565'
+            }[data.overall_health] || '#a0aec0';
+
+            // Update vulnerabilities
+            document.getElementById('vuln-critical').textContent = data.vulnerabilities.critical;
+            document.getElementById('vuln-high').textContent = data.vulnerabilities.high;
+            document.getElementById('vuln-medium').textContent = data.vulnerabilities.medium;
+            document.getElementById('vuln-low').textContent = data.vulnerabilities.low;
+
+            // Update compliance
+            document.getElementById('compliance-soc2').textContent = `${data.compliance.soc2}%`;
+            document.getElementById('compliance-iso').textContent = `${data.compliance.iso27001}%`;
+            document.getElementById('compliance-gdpr').textContent = `${data.compliance.gdpr}%`;
+            document.getElementById('compliance-overall').textContent = `${data.compliance.overall}%`;
+
+            // Update recent scans
+            const recentScansContainer = document.getElementById('recent-scans');
+            recentScansContainer.innerHTML = '';
+
+            data.recent_scans.forEach(scan => {
+                const scanItem = document.createElement('div');
+                scanItem.className = 'scan-item';
+
+                const date = new Date(scan.timestamp);
+                const timeString = date.toLocaleString();
+
+                scanItem.innerHTML = `
+                    <div>
+                        <div>${scan.status.toUpperCase()}</div>
+                        <div class="scan-timestamp">${timeString}</div>
+                    </div>
+                    <div class="metric-value">${scan.issues} issues</div>
+                `;
+
+                recentScansContainer.appendChild(scanItem);
+            });
+        }
+
+        async function fetchSecurityStatus() {
+            try {
+                // In a real implementation, this would make an API call
+                // const response = await fetch('/api/security/status');
+                // const data = await response.json();
+
+                // For demo, use mock data with slight variations
+                const variation = Math.random() * 0.1 - 0.05; // ±5% variation
+                const data = {
+                    ...mockData,
+                    vulnerabilities: {
+                        critical: Math.max(0, Math.floor(mockData.vulnerabilities.critical + variation * 2)),
+                        high: Math.max(0, Math.floor(mockData.vulnerabilities.high + variation * 4)),
+                        medium: Math.max(0, Math.floor(mockData.vulnerabilities.medium + variation * 8)),
+                        low: Math.max(0, Math.floor(mockData.vulnerabilities.low + variation * 16))
+                    }
+                };
+
+                updateDashboard(data);
+            } catch (error) {
+                console.error('Failed to fetch security status:', error);
+            }
+        }
+
+        function refreshStatus() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => card.classList.add('loading'));
+
+            setTimeout(() => {
+                fetchSecurityStatus();
+                cards.forEach(card => card.classList.remove('loading'));
+            }, 1000);
+        }
+
+        function refreshAll() {
+            const refreshBtn = document.getElementById('refresh-btn');
+            refreshBtn.classList.add('spinning');
+
+            setTimeout(() => {
+                fetchSecurityStatus();
+                refreshBtn.classList.remove('spinning');
+            }, 1500);
+        }
+
+        function runFullAudit() {
+            alert('Running full security audit... This would typically trigger a comprehensive security scan.');
+        }
+
+        function runVulnScan() {
+            alert('Running vulnerability scan... This would scan for security vulnerabilities.');
+        }
+
+        function generateComplianceReport() {
+            alert('Generating compliance report... This would create detailed compliance documentation.');
+        }
+
+        function viewFullHistory() {
+            alert('Viewing full history... This would show complete scan history and details.');
+        }
+
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function () {
+            fetchSecurityStatus();
+
+            // Auto-refresh every 5 minutes
+            setInterval(fetchSecurityStatus, 5 * 60 * 1000);
+        });
+
+        // Add keyboard shortcuts
+        document.addEventListener('keydown', function (e) {
+            if (e.ctrlKey || e.metaKey) {
+                switch (e.key) {
+                    case 'r':
+                        e.preventDefault();
+                        refreshAll();
+                        break;
+                    case 's':
+                        e.preventDefault();
+                        runVulnScan();
+                        break;
+                    case 'a':
+                        e.preventDefault();
+                        runFullAudit();
+                        break;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

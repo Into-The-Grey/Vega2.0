@@ -51,15 +51,55 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Run security scan
-      uses: securecodewarrior/github-action-add-sarif@v1
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v4
       with:
-        sarif-file: 'security-scan-results.sarif'
+        python-version: 3.12
     
-    - name: Run Bandit security linter
+    - name: Install security scanning tools
       run: |
-        pip install bandit
-        bandit -r src/ -f json -o bandit-report.json || true
+        python -m pip install --upgrade pip
+        pip install bandit safety semgrep
+        pip install -r requirements.txt
+    
+    - name: Run Bandit SAST security linter
+      run: |
+        bandit -r src/ -f json -o bandit-report.json -ll
+        bandit -r src/ -f txt || true
+    
+    - name: Run Safety dependency vulnerability scanner
+      run: |
+        safety check --json --output safety-report.json || true
+        safety check || true
+    
+    - name: Run Semgrep SAST analysis
+      run: |
+        semgrep --config=auto src/ --json --output=semgrep-report.json || true
+        semgrep --config=auto src/ || true
+    
+    - name: Scan for secrets with TruffleHog
+      uses: trufflesecurity/trufflehog@main
+      with:
+        path: ./
+        base: main
+        head: HEAD
+        extra_args: --debug --only-verified
+    
+    - name: Upload security scan results
+      uses: github/codeql-action/upload-sarif@v2
+      if: always()
+      with:
+        sarif_file: semgrep-report.json
+    
+    - name: Archive security reports
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: security-reports
+        path: |
+          bandit-report.json
+          safety-report.json
+          semgrep-report.json
 
   build-docker:
     needs: [test, security-scan]
@@ -89,6 +129,33 @@ jobs:
           ghcr.io/${{ github.repository }}:${{ github.sha }}
         cache-from: type=gha
         cache-to: type=gha,mode=max
+    
+    - name: Run Trivy container security scan
+      uses: aquasecurity/trivy-action@master
+      with:
+        image-ref: ghcr.io/${{ github.repository }}:${{ github.sha }}
+        format: 'sarif'
+        output: 'trivy-results.sarif'
+    
+    - name: Upload Trivy scan results to GitHub Security tab
+      uses: github/codeql-action/upload-sarif@v2
+      if: always()
+      with:
+        sarif_file: 'trivy-results.sarif'
+    
+    - name: Run Hadolint Dockerfile linter
+      uses: hadolint/hadolint-action@v3.1.0
+      with:
+        dockerfile: Dockerfile
+        format: sarif
+        output-file: hadolint-results.sarif
+        no-fail: true
+    
+    - name: Upload Hadolint results
+      uses: github/codeql-action/upload-sarif@v2
+      if: always()
+      with:
+        sarif_file: hadolint-results.sarif
 
   deploy:
     needs: [build-docker]

@@ -91,11 +91,13 @@ backup_app = typer.Typer(help="Backup and restore operations")
 voice_app = typer.Typer(help="Voice profile management")
 kb_app = typer.Typer(help="Web knowledge base operations")
 finance_app = typer.Typer(help="Financial and investment operations")
+security_app = typer.Typer(help="Security scanning and compliance management")
 
 app.add_typer(backup_app, name="backup")
 app.add_typer(voice_app, name="voice")
 app.add_typer(kb_app, name="kb")
 app.add_typer(finance_app, name="finance")
+app.add_typer(security_app, name="security")
 
 # Add memory commands if available
 try:
@@ -1083,13 +1085,216 @@ def finance_price(symbol: str = typer.Argument(..., help="Stock symbol to check"
     except Exception as e:
         console.print(f"✗ Failed to fetch price: {e}", style="red")
 
-    async def _run():
-        res = await tcp_scan(host, port_list)
-        table = Table(title=f"Scan {host}")
-        table.add_column("port")
-        table.add_column("state")
-        for p, s in res:
-            table.add_row(str(p), s)
-        console.print(table)
+
+# Security Commands
+@security_app.command("audit")
+def security_audit(
+    config: Optional[str] = typer.Option(
+        None, "--config", "-c", help="Security configuration file"
+    ),
+    output: Optional[str] = typer.Option(
+        None, "--output", "-o", help="Output file for results"
+    ),
+    format: str = typer.Option(
+        "json", "--format", help="Output format (json, html, text)"
+    ),
+):
+    """Run comprehensive security audit."""
+    try:
+        import sys
+
+        sys.path.append("/home/ncacord/Vega2.0")
+        from src.vega.security.integration import SecurityOrchestrator
+
+        async def run_audit():
+            orchestrator = SecurityOrchestrator(config)
+            results = await orchestrator.run_full_security_audit()
+
+            summary = results.get("summary", {})
+
+            if format == "json":
+                output_data = json.dumps(results, indent=2, default=str)
+            else:
+                # Simple text format for CLI
+                output_data = f"""Security Audit Results
+========================
+Audit ID: {results.get('audit_id', 'Unknown')}
+Status: {results.get('status', 'Unknown')}
+Overall Status: {summary.get('overall_status', 'Unknown')}
+
+Issue Summary:
+  Critical: {summary.get('critical_issues', 0)}
+  High: {summary.get('high_issues', 0)}
+  Medium: {summary.get('medium_issues', 0)}
+  Low: {summary.get('low_issues', 0)}
+"""
+
+            if output:
+                with open(output, "w") as f:
+                    f.write(output_data)
+                console.print(f"✓ Results saved to {output}", style="green")
+            else:
+                console.print(output_data)
+
+            # Show status
+            status = summary.get("overall_status", "unknown").lower()
+            if status == "pass":
+                console.print("✓ Security audit passed", style="green")
+            elif status == "warning":
+                console.print(
+                    "⚠ Security audit completed with warnings", style="yellow"
+                )
+            else:
+                console.print("✗ Security audit found critical issues", style="red")
+
+        asyncio.run(run_audit())
+
+    except Exception as e:
+        console.print(f"✗ Security audit failed: {e}", style="red")
+
+
+@security_app.command("scan")
+def security_scan(
+    config: Optional[str] = typer.Option(
+        None, "--config", "-c", help="Security configuration file"
+    )
+):
+    """Run security vulnerability scan."""
+    try:
+        import sys
+
+        sys.path.append("/home/ncacord/Vega2.0")
+        from src.vega.security.scanner import SecurityScanner
+
+        async def run_scan():
+            scanner = SecurityScanner(config)
+            results = await scanner.run_comprehensive_scan()
+
+            console.print("🔍 Security Scan Results", style="bold")
+            console.print("=" * 50)
+
+            summary = results.get("summary", {})
+            console.print(
+                f"Critical: {summary.get('critical', 0)}",
+                style="red" if summary.get("critical", 0) > 0 else "white",
+            )
+            console.print(
+                f"High: {summary.get('high', 0)}",
+                style="yellow" if summary.get("high", 0) > 0 else "white",
+            )
+            console.print(f"Medium: {summary.get('medium', 0)}", style="white")
+            console.print(f"Low: {summary.get('low', 0)}", style="green")
+
+            # Show some details for critical/high issues
+            tools = results.get("tools", {})
+            for tool_name, tool_results in tools.items():
+                issues = tool_results.get("issues", [])
+                critical_high = [
+                    i for i in issues if i.get("severity") in ["CRITICAL", "HIGH"]
+                ]
+
+                if critical_high:
+                    console.print(
+                        f"\n🚨 {tool_name.upper()} - Critical/High Issues:",
+                        style="bold red",
+                    )
+                    for issue in critical_high[:3]:  # Show first 3
+                        console.print(
+                            f"  • {issue.get('title', 'Unknown issue')} [{issue.get('severity')}]"
+                        )
+                    if len(critical_high) > 3:
+                        console.print(f"  ... and {len(critical_high) - 3} more issues")
+
+        asyncio.run(run_scan())
+
+    except Exception as e:
+        console.print(f"✗ Security scan failed: {e}", style="red")
+
+
+@security_app.command("monitor")
+def security_monitor(
+    config: Optional[str] = typer.Option(
+        None, "--config", "-c", help="Security configuration file"
+    )
+):
+    """Monitor security status."""
+    try:
+        import sys
+
+        sys.path.append("/home/ncacord/Vega2.0")
+        from src.vega.security.integration import SecurityOrchestrator
+
+        async def run_monitor():
+            orchestrator = SecurityOrchestrator(config)
+            status = await orchestrator.monitor_security_status()
+
+            console.print("📊 Security Status Monitor", style="bold")
+            console.print("=" * 50)
+
+            health = status.get("overall_health", "unknown")
+            health_colors = {
+                "excellent": "green",
+                "good": "green",
+                "fair": "yellow",
+                "poor": "red",
+                "critical": "red",
+            }
+
+            console.print(
+                f"Overall Health: {health.upper()}",
+                style=health_colors.get(health, "white"),
+            )
+
+            # Show vulnerability status
+            vuln_status = status.get("vulnerabilities", {})
+            if vuln_status:
+                console.print(f"\n🔍 Vulnerabilities:")
+                console.print(f"  Critical: {vuln_status.get('critical', 0)}")
+                console.print(f"  High: {vuln_status.get('high', 0)}")
+                console.print(f"  Medium: {vuln_status.get('medium', 0)}")
+
+        asyncio.run(run_monitor())
+
+    except Exception as e:
+        console.print(f"✗ Security monitoring failed: {e}", style="red")
+
+
+@security_app.command("ci-check")
+def security_ci_check(
+    config: Optional[str] = typer.Option(
+        None, "--config", "-c", help="Security configuration file"
+    )
+):
+    """Run security checks for CI/CD pipeline."""
+    try:
+        import sys
+
+        sys.path.append("/home/ncacord/Vega2.0")
+        from src.vega.security.integration import SecurityOrchestrator
+
+        async def run_ci_check():
+            orchestrator = SecurityOrchestrator(config)
+            success = await orchestrator.run_ci_security_check()
+
+            if success:
+                console.print("✅ CI security checks passed", style="green")
+                return True
+            else:
+                console.print("❌ CI security checks failed", style="red")
+                return False
+
+        success = asyncio.run(run_ci_check())
+        if not success:
+            raise typer.Exit(1)
+
+    except Exception as e:
+        console.print(f"✗ CI security check failed: {e}", style="red")
+        raise typer.Exit(1)
+
+
+# Keep the original incomplete function at the end
+async def _run():
+    """Legacy function - to be cleaned up"""
+    pass
 
     asyncio.run(_run())

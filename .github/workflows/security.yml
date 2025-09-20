@@ -1,0 +1,318 @@
+name: Security Scanning and Compliance
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run security scans daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      scan_type:
+        description: 'Type of security scan to run'
+        required: true
+        default: 'full'
+        type: choice
+        options:
+          - quick
+          - full
+          - compliance-only
+
+env:
+  PYTHON_VERSION: '3.12'
+  SECURITY_CONFIG: 'configs/security.yaml'
+
+jobs:
+  security-scan:
+    name: Security Vulnerability Scan
+    runs-on: ubuntu-latest
+    
+    outputs:
+      security-status: ${{ steps.security-check.outputs.status }}
+      critical-issues: ${{ steps.security-check.outputs.critical }}
+      high-issues: ${{ steps.security-check.outputs.high }}
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Full history for better analysis
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        # Install security tools
+        pip install bandit safety semgrep
+    
+    - name: Install Trivy
+      run: |
+        sudo apt-get update
+        sudo apt-get install wget apt-transport-https gnupg lsb-release
+        wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+        echo "deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main" | sudo tee -a /etc/apt/sources.list.d/trivy.list
+        sudo apt-get update
+        sudo apt-get install trivy
+    
+    - name: Create security results directory
+      run: mkdir -p security/results
+    
+    - name: Run Bandit security scan
+      continue-on-error: true
+      run: |
+        bandit -r src/ -f json -o security/results/bandit-report.json
+        bandit -r src/ -f txt -o security/results/bandit-report.txt
+    
+    - name: Run Safety dependency scan
+      continue-on-error: true
+      run: |
+        safety check --json --output security/results/safety-report.json
+        safety check --output security/results/safety-report.txt
+    
+    - name: Run Semgrep security scan
+      continue-on-error: true
+      run: |
+        semgrep --config=auto --json --output=security/results/semgrep-report.json src/
+        semgrep --config=auto --output=security/results/semgrep-report.txt src/
+    
+    - name: Run Trivy filesystem scan
+      continue-on-error: true
+      run: |
+        trivy fs --format json --output security/results/trivy-fs-report.json .
+        trivy fs --format table --output security/results/trivy-fs-report.txt .
+    
+    - name: Run comprehensive security check
+      id: security-check
+      run: |
+        python -m src.vega.security.integration ci-check
+        echo "status=success" >> $GITHUB_OUTPUT
+        
+        # Extract issue counts for reporting
+        if [ -f security/results/latest_audit.json ]; then
+          critical=$(jq -r '.summary.critical_issues // 0' security/results/latest_audit.json)
+          high=$(jq -r '.summary.high_issues // 0' security/results/latest_audit.json)
+          echo "critical=$critical" >> $GITHUB_OUTPUT
+          echo "high=$high" >> $GITHUB_OUTPUT
+        else
+          echo "critical=0" >> $GITHUB_OUTPUT
+          echo "high=0" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Upload security scan results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: security-scan-results
+        path: security/results/
+        retention-days: 30
+    
+    - name: Comment PR with security results
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          let comment = '## 🔒 Security Scan Results\n\n';
+          
+          const critical = '${{ steps.security-check.outputs.critical }}';
+          const high = '${{ steps.security-check.outputs.high }}';
+          
+          if (critical > 0) {
+            comment += `⚠️ **${critical} Critical** security issues found\n`;
+          }
+          if (high > 0) {
+            comment += `⚠️ **${high} High** severity issues found\n`;
+          }
+          if (critical == 0 && high == 0) {
+            comment += '✅ No critical or high-severity security issues found\n';
+          }
+          
+          comment += '\n📊 **Scan Summary:**\n';
+          comment += '- Bandit: Python security linting\n';
+          comment += '- Safety: Dependency vulnerability scanning\n';
+          comment += '- Semgrep: Static analysis security patterns\n';
+          comment += '- Trivy: Filesystem vulnerability scanning\n';
+          
+          comment += '\n📁 Detailed results available in workflow artifacts';
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: comment
+          });
+
+  container-security:
+    name: Container Security Scan
+    runs-on: ubuntu-latest
+    if: github.event_name != 'schedule'  # Skip for scheduled runs
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Build Docker image
+      run: |
+        docker build -t vega2.0:security-test .
+    
+    - name: Run Trivy container scan
+      run: |
+        mkdir -p security/results
+        trivy image --format json --output security/results/trivy-container-report.json vega2.0:security-test
+        trivy image --format table --output security/results/trivy-container-report.txt vega2.0:security-test
+    
+    - name: Upload container scan results
+      uses: actions/upload-artifact@v3
+      with:
+        name: container-security-results
+        path: security/results/trivy-container-*
+        retention-days: 30
+
+  compliance-check:
+    name: Compliance Assessment
+    runs-on: ubuntu-latest
+    needs: security-scan
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Run compliance assessment
+      run: |
+        python -m src.vega.security.compliance generate-report --framework all
+    
+    - name: Upload compliance reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: compliance-reports
+        path: security/results/compliance/
+        retention-days: 90
+
+  security-monitoring:
+    name: Security Monitoring Setup
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: [security-scan, compliance-check]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Update security monitoring
+      run: |
+        python -m src.vega.security.integration monitor > security/results/security-status.json
+    
+    - name: Deploy security dashboard
+      run: |
+        echo "Security dashboard deployment would happen here"
+        # This would typically deploy to monitoring infrastructure
+
+  notify-security-team:
+    name: Notify Security Team
+    runs-on: ubuntu-latest
+    needs: [security-scan, compliance-check]
+    if: failure() || (needs.security-scan.outputs.critical-issues > 0)
+    
+    steps:
+    - name: Send security alert
+      run: |
+        echo "Security alert would be sent here"
+        echo "Critical issues: ${{ needs.security-scan.outputs.critical-issues }}"
+        echo "High issues: ${{ needs.security-scan.outputs.high-issues }}"
+        # This would typically integrate with notification systems
+
+  generate-security-report:
+    name: Generate Security Report
+    runs-on: ubuntu-latest
+    needs: [security-scan, container-security, compliance-check]
+    if: always()
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Download all artifacts
+      uses: actions/download-artifact@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install jinja2 weasyprint  # For HTML and PDF report generation
+    
+    - name: Generate consolidated security report
+      run: |
+        python -c "
+        import json
+        import os
+        from datetime import datetime
+        
+        # Consolidate all security scan results
+        report = {
+            'timestamp': datetime.now().isoformat(),
+            'workflow_run': '${{ github.run_id }}',
+            'commit': '${{ github.sha }}',
+            'branch': '${{ github.ref_name }}',
+            'security_scan': '${{ needs.security-scan.outputs.security-status }}',
+            'critical_issues': '${{ needs.security-scan.outputs.critical-issues }}',
+            'high_issues': '${{ needs.security-scan.outputs.high-issues }}'
+        }
+        
+        os.makedirs('consolidated-report', exist_ok=True)
+        with open('consolidated-report/security-summary.json', 'w') as f:
+            json.dump(report, f, indent=2)
+        
+        print('📊 Security Report Summary')
+        print(f'Critical Issues: {report[\"critical_issues\"]}')
+        print(f'High Issues: {report[\"high_issues\"]}')
+        print(f'Overall Status: {report[\"security_scan\"]}')
+        "
+    
+    - name: Upload consolidated report
+      uses: actions/upload-artifact@v3
+      with:
+        name: consolidated-security-report
+        path: consolidated-report/
+        retention-days: 90
+    
+    - name: Update security badge
+      if: github.ref == 'refs/heads/main'
+      run: |
+        # This would update README badges or status indicators
+        echo "Security status badge update would happen here"

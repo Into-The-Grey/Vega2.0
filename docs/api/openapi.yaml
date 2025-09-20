@@ -1,0 +1,683 @@
+openapi: 3.0.3
+info:
+  title: Vega 2.0 API
+  description: |
+    ## Vega 2.0 Advanced AI Platform API
+    
+    Vega 2.0 is a comprehensive AI platform featuring:
+    - **Federated Learning** - Distributed machine learning across multiple nodes
+    - **Real-time Collaboration** - WebSocket-based collaborative workspaces
+    - **Multi-modal Processing** - Support for text, image, video, and document processing
+    - **Analytics & Monitoring** - Comprehensive platform analytics and performance monitoring
+    - **Security & Compliance** - Enterprise-grade security with compliance reporting
+    
+    ### Authentication
+    
+    All API endpoints (except health checks and documentation) require authentication via the `X-API-Key` header.
+    
+    ```bash
+    curl -H "X-API-Key: your-api-key" https://api.vega2.example.com/chat
+    ```
+    
+    ### Base URL
+    
+    - **Production**: `https://api.vega2.example.com`
+    - **Development**: `http://localhost:8000`
+    
+    ### Rate Limiting
+    
+    API requests are rate limited per API key:
+    - **Standard**: 1000 requests/hour
+    - **Premium**: 10000 requests/hour
+    - **Enterprise**: Unlimited
+    
+    ### WebSocket Endpoints
+    
+    Real-time features are available via WebSocket connections:
+    - **Collaboration**: `ws://localhost:8000/ws/collaboration/{workspace_id}`
+    - **Analytics**: `ws://localhost:8000/ws/analytics/live`
+    
+  version: 2.0.0
+  contact:
+    name: Vega 2.0 API Support
+    url: https://github.com/Into-The-Grey/Vega2.0
+    email: support@vega2.example.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: http://localhost:8000
+    description: Development server
+  - url: https://api.vega2.example.com
+    description: Production server
+
+security:
+  - ApiKeyAuth: []
+
+tags:
+  - name: Health & Monitoring
+    description: System health checks and monitoring endpoints
+  - name: Chat & AI
+    description: Core AI chat and conversation endpoints
+  - name: Proactive AI
+    description: Proactive conversation and session management
+  - name: History & Sessions
+    description: Conversation history and session management
+  - name: Admin & Configuration
+    description: Administrative endpoints and configuration management
+  - name: Security & Crypto
+    description: Security, cryptography, and API key management
+  - name: Backup & Recovery
+    description: Data backup and recovery operations
+  - name: Voice Processing
+    description: Voice profile and audio processing
+  - name: Knowledge Base
+    description: Web knowledge base and site management
+  - name: Finance & Investment
+    description: Financial data and investment tracking
+  - name: Collaboration
+    description: Real-time collaboration and workspace management
+  - name: Analytics
+    description: Platform analytics and performance monitoring
+  - name: Federated Learning
+    description: Distributed machine learning operations
+  - name: Multi-modal
+    description: Multi-modal content processing (image, video, document)
+
+paths:
+  # Health & Monitoring Endpoints
+  /healthz:
+    get:
+      tags: [Health & Monitoring]
+      summary: Health Check
+      description: Basic health check endpoint for load balancers and monitoring systems
+      operationId: health_check
+      security: []
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "healthy"
+                  timestamp:
+                    type: string
+                    format: date-time
+                    example: "2025-09-20T10:30:00Z"
+        '503':
+          description: Service is unhealthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /livez:
+    get:
+      tags: [Health & Monitoring]
+      summary: Liveness Probe
+      description: Kubernetes liveness probe endpoint
+      operationId: liveness_check
+      security: []
+      responses:
+        '200':
+          description: Service is alive
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "alive"
+
+  /readyz:
+    get:
+      tags: [Health & Monitoring]
+      summary: Readiness Probe
+      description: Kubernetes readiness probe endpoint
+      operationId: readiness_check
+      security: []
+      responses:
+        '200':
+          description: Service is ready to handle requests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "ready"
+
+  /metrics:
+    get:
+      tags: [Health & Monitoring]
+      summary: Prometheus Metrics
+      description: Prometheus-compatible metrics endpoint
+      operationId: get_metrics
+      security: []
+      responses:
+        '200':
+          description: Prometheus metrics
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: |
+                  # HELP vega_requests_total Total number of requests
+                  # TYPE vega_requests_total counter
+                  vega_requests_total{method="GET",endpoint="/healthz"} 42
+
+  # Chat & AI Endpoints
+  /chat:
+    post:
+      tags: [Chat & AI]
+      summary: Chat with AI
+      description: |
+        Send a message to the AI and receive a response. Supports both streaming and non-streaming responses.
+        
+        ### Features:
+        - **Streaming**: Real-time response streaming
+        - **Session Management**: Maintains conversation context
+        - **Multi-modal**: Supports text, image, and document inputs
+        - **Memory**: Persistent conversation memory across sessions
+      operationId: chat
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatRequest'
+            examples:
+              simple_chat:
+                summary: Simple chat message
+                value:
+                  prompt: "Hello, how are you today?"
+                  stream: false
+              streaming_chat:
+                summary: Streaming chat with session
+                value:
+                  prompt: "Explain quantum computing"
+                  stream: true
+                  session_id: "session_123"
+              multimodal_chat:
+                summary: Chat with image
+                value:
+                  prompt: "What do you see in this image?"
+                  image_data: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQ..."
+                  stream: false
+      responses:
+        '200':
+          description: AI response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatResponse'
+            text/plain:
+              schema:
+                type: string
+                description: Streaming response (when stream=true)
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Unauthorized - Invalid or missing API key
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate limit exceeded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  # History & Sessions
+  /history:
+    get:
+      tags: [History & Sessions]
+      summary: Get Conversation History
+      description: Retrieve conversation history with pagination and filtering options
+      operationId: get_history
+      parameters:
+        - name: limit
+          in: query
+          description: Maximum number of conversations to return
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 20
+        - name: offset
+          in: query
+          description: Number of conversations to skip
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+        - name: session_id
+          in: query
+          description: Filter by specific session ID
+          schema:
+            type: string
+        - name: date_from
+          in: query
+          description: Filter conversations from this date
+          schema:
+            type: string
+            format: date-time
+        - name: date_to
+          in: query
+          description: Filter conversations until this date
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: Conversation history
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  conversations:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Conversation'
+                  total:
+                    type: integer
+                    description: Total number of conversations
+                  limit:
+                    type: integer
+                  offset:
+                    type: integer
+
+  /session/{session_id}:
+    get:
+      tags: [History & Sessions]
+      summary: Get Session Details
+      description: Retrieve detailed information about a specific session
+      operationId: get_session
+      parameters:
+        - name: session_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Session details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionDetail'
+        '404':
+          description: Session not found
+
+  # Proactive AI Endpoints
+  /proactive/propose:
+    post:
+      tags: [Proactive AI]
+      summary: Propose Proactive Conversation
+      description: AI proposes a proactive conversation topic based on context
+      operationId: propose_proactive
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProposeRequest'
+      responses:
+        '200':
+          description: Proactive conversation proposal
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProposeResponse'
+
+  /proactive/pending:
+    get:
+      tags: [Proactive AI]
+      summary: Get Pending Proactive Sessions
+      description: Retrieve all pending proactive conversation sessions
+      operationId: get_pending_proactive
+      responses:
+        '200':
+          description: List of pending proactive sessions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProactiveSession'
+
+  /proactive/accept:
+    post:
+      tags: [Proactive AI]
+      summary: Accept Proactive Session
+      description: Accept a pending proactive conversation session
+      operationId: accept_proactive
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                session_id:
+                  type: string
+              required: [session_id]
+      responses:
+        '200':
+          description: Session accepted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "accepted"
+                  session_id:
+                    type: string
+
+  # Feedback
+  /feedback:
+    post:
+      tags: [Chat & AI]
+      summary: Submit Feedback
+      description: Submit feedback on AI responses for improvement
+      operationId: submit_feedback
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackRequest'
+      responses:
+        '200':
+          description: Feedback submitted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "received"
+                  feedback_id:
+                    type: string
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: |
+        API key for authentication. Contact support to obtain an API key.
+        
+        Example: `X-API-Key: vega_live_1234567890abcdef`
+
+  schemas:
+    ChatRequest:
+      type: object
+      required: [prompt]
+      properties:
+        prompt:
+          type: string
+          description: The user's message or question
+          example: "Explain the concept of federated learning"
+          maxLength: 10000
+        stream:
+          type: boolean
+          description: Whether to stream the response
+          default: false
+        session_id:
+          type: string
+          description: Optional session ID for conversation continuity
+          example: "session_abc123"
+        model:
+          type: string
+          description: Optional model to use for this request
+          example: "gpt-4"
+        max_tokens:
+          type: integer
+          description: Maximum tokens in response
+          minimum: 1
+          maximum: 4000
+          default: 1000
+        temperature:
+          type: number
+          description: Sampling temperature (0-1)
+          minimum: 0
+          maximum: 1
+          default: 0.7
+        image_data:
+          type: string
+          description: Base64 encoded image data for multi-modal input
+          format: byte
+        document_data:
+          type: string
+          description: Base64 encoded document data
+          format: byte
+        metadata:
+          type: object
+          description: Additional metadata for the request
+          additionalProperties: true
+
+    ChatResponse:
+      type: object
+      properties:
+        response:
+          type: string
+          description: The AI's response
+          example: "Federated learning is a machine learning technique..."
+        session_id:
+          type: string
+          description: Session ID for this conversation
+          example: "session_abc123"
+        model:
+          type: string
+          description: Model used for the response
+          example: "gpt-4"
+        usage:
+          type: object
+          properties:
+            prompt_tokens:
+              type: integer
+            completion_tokens:
+              type: integer
+            total_tokens:
+              type: integer
+        metadata:
+          type: object
+          additionalProperties: true
+
+    Conversation:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Unique conversation ID
+        prompt:
+          type: string
+          description: User's original prompt
+        response:
+          type: string
+          description: AI's response
+        timestamp:
+          type: string
+          format: date-time
+          description: When the conversation occurred
+        session_id:
+          type: string
+          description: Session ID
+        model:
+          type: string
+          description: Model used
+        tokens_used:
+          type: integer
+          description: Total tokens consumed
+        feedback_rating:
+          type: integer
+          minimum: 1
+          maximum: 5
+          description: User feedback rating (if provided)
+
+    SessionDetail:
+      type: object
+      properties:
+        session_id:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        last_activity:
+          type: string
+          format: date-time
+        conversation_count:
+          type: integer
+        total_tokens:
+          type: integer
+        conversations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Conversation'
+
+    ProposeRequest:
+      type: object
+      required: [context]
+      properties:
+        context:
+          type: string
+          description: Context for proactive conversation
+        user_preferences:
+          type: object
+          additionalProperties: true
+
+    ProposeResponse:
+      type: object
+      properties:
+        session_id:
+          type: string
+        topic:
+          type: string
+        suggested_prompt:
+          type: string
+        relevance_score:
+          type: number
+          minimum: 0
+          maximum: 1
+
+    ProactiveSession:
+      type: object
+      properties:
+        session_id:
+          type: string
+        topic:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        status:
+          type: string
+          enum: [pending, accepted, declined, expired]
+
+    FeedbackRequest:
+      type: object
+      required: [session_id, rating]
+      properties:
+        session_id:
+          type: string
+        rating:
+          type: integer
+          minimum: 1
+          maximum: 5
+          description: Rating from 1 (poor) to 5 (excellent)
+        comment:
+          type: string
+          description: Optional feedback comment
+          maxLength: 1000
+        category:
+          type: string
+          enum: [accuracy, helpfulness, clarity, speed, other]
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          description: Error message
+        code:
+          type: integer
+          description: Error code
+        details:
+          type: string
+          description: Additional error details
+        timestamp:
+          type: string
+          format: date-time
+
+  responses:
+    Unauthorized:
+      description: Authentication required
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            error: "Authentication required"
+            code: 401
+            details: "Missing or invalid X-API-Key header"
+
+    RateLimited:
+      description: Rate limit exceeded
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            error: "Rate limit exceeded"
+            code: 429
+            details: "Maximum 1000 requests per hour exceeded"
+
+    InternalError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            error: "Internal server error"
+            code: 500
+            details: "An unexpected error occurred"
+
+  examples:
+    SimpleChat:
+      summary: Simple chat example
+      value:
+        prompt: "What is machine learning?"
+        stream: false
+
+    StreamingChat:
+      summary: Streaming chat example
+      value:
+        prompt: "Explain neural networks in detail"
+        stream: true
+        session_id: "session_123"
+
+    MultimodalChat:
+      summary: Chat with image
+      value:
+        prompt: "Describe this image"
+        image_data: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQ..."

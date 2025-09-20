@@ -1,0 +1,231 @@
+# Security Configuration for Vega2.0
+# This file configures all security scanning, vulnerability management, and compliance settings
+
+# Security Scanner Configuration
+scanner:
+  enabled_tools:
+    - bandit        # Python security linter
+    - safety        # Python dependency vulnerability scanner
+    - semgrep       # Static analysis for security patterns
+    - trivy         # Container vulnerability scanner
+  
+  severity_threshold: "medium"  # Minimum severity to report
+  fail_on_high: true           # Fail CI on high-severity issues
+  fail_on_critical: true       # Fail CI on critical issues
+  
+  # Tool-specific configurations
+  bandit:
+    config_file: ".bandit"
+    exclude_dirs: ["tests", "__pycache__", ".venv"]
+    skip_tests: ["B101"]  # Skip assert_used test
+  
+  safety:
+    json_report: true
+    full_report: true
+    ignore_ids: []  # CVE IDs to ignore
+  
+  semgrep:
+    config: "auto"  # Use semgrep's default rulesets
+    severity: ["ERROR", "WARNING"]
+    exclude_rules: []
+  
+  trivy:
+    severity: ["CRITICAL", "HIGH", "MEDIUM"]
+    ignore_unfixed: false
+    format: "json"
+
+# Vulnerability Management Configuration
+vulnerability:
+  auto_fix: false              # Automatically apply fixes
+  notify_on_critical: true     # Send notifications for critical vulnerabilities
+  max_age_days: 30            # Maximum age before vulnerability is considered stale
+  
+  # Notification settings
+  notifications:
+    email:
+      enabled: false
+      recipients: []
+    slack:
+      enabled: false
+      webhook_url: ""
+    teams:
+      enabled: false
+      webhook_url: ""
+  
+  # Auto-fix settings
+  auto_fix_settings:
+    dependency_updates: true   # Auto-update vulnerable dependencies
+    security_patches: true    # Auto-apply security patches
+    max_version_jump: "minor" # major, minor, patch
+  
+  # Risk scoring
+  risk_matrix:
+    critical: 10.0
+    high: 7.5
+    medium: 5.0
+    low: 2.5
+    info: 1.0
+
+# Compliance Configuration
+compliance:
+  frameworks:
+    - SOC2      # SOC 2 Type II
+    - ISO27001  # ISO 27001
+    - GDPR      # General Data Protection Regulation
+    - NIST      # NIST Cybersecurity Framework
+  
+  generate_reports: true
+  schedule: "weekly"  # daily, weekly, monthly
+  
+  # Framework-specific settings
+  soc2:
+    control_families: ["CC", "A", "PI", "P", "C"]
+    evidence_collection: true
+    automated_testing: true
+  
+  iso27001:
+    annex_a_controls: true
+    risk_assessment: true
+    asset_inventory: true
+  
+  gdpr:
+    data_mapping: true
+    consent_tracking: true
+    breach_notification: true
+  
+  nist:
+    functions: ["Identify", "Protect", "Detect", "Respond", "Recover"]
+    maturity_target: "level_3"
+
+# Results and Reporting Configuration
+results:
+  dir: "security/results"
+  retention_days: 90
+  format: ["json", "html", "pdf"]
+  
+  # Report distribution
+  distribution:
+    email: false
+    slack: false
+    dashboard: true
+    file_system: true
+
+# CI/CD Integration
+ci_cd:
+  enabled: true
+  
+  # Pre-commit hooks
+  pre_commit:
+    security_scan: true
+    dependency_check: true
+    secret_detection: true
+  
+  # Pipeline stages
+  pipeline:
+    security_gate: true
+    vulnerability_scan: true
+    compliance_check: true
+    container_scan: true
+  
+  # Failure thresholds
+  thresholds:
+    critical_vulnerabilities: 0
+    high_vulnerabilities: 2
+    medium_vulnerabilities: 10
+    compliance_score: 80  # Minimum compliance percentage
+
+# Monitoring and Alerting
+monitoring:
+  enabled: true
+  interval_minutes: 60
+  
+  # Health checks
+  health_checks:
+    dependency_freshness: true
+    certificate_expiry: true
+    security_tool_updates: true
+  
+  # Alerting thresholds
+  alerts:
+    new_critical_vulnerability: true
+    compliance_drift: true
+    security_tool_failure: true
+    certificate_expiry_days: 30
+
+# Integration Settings
+integrations:
+  # Security tools
+  tools:
+    bandit:
+      enabled: true
+      path: "bandit"
+    safety:
+      enabled: true
+      path: "safety"
+    semgrep:
+      enabled: true
+      path: "semgrep"
+    trivy:
+      enabled: true
+      path: "trivy"
+  
+  # External services
+  external:
+    nvd_api:
+      enabled: true
+      api_key: ""  # Optional NVD API key
+    github_security:
+      enabled: true
+      token: ""    # GitHub token for security advisories
+    
+# Encryption and Data Protection
+encryption:
+  at_rest:
+    enabled: true
+    algorithm: "AES-256-GCM"
+  in_transit:
+    enabled: true
+    min_tls_version: "1.2"
+  
+  key_management:
+    rotation_days: 90
+    backup_keys: 3
+    hardware_security: false
+
+# Logging and Audit
+logging:
+  security_events: true
+  audit_trail: true
+  retention_days: 365
+  
+  log_levels:
+    security: "INFO"
+    compliance: "INFO"
+    vulnerability: "WARNING"
+  
+  outputs:
+    - file
+    - syslog
+    - elasticsearch  # If available
+
+# Environment-specific overrides
+environments:
+  development:
+    scanner:
+      fail_on_high: false
+    vulnerability:
+      auto_fix: true
+  
+  staging:
+    scanner:
+      fail_on_high: true
+    compliance:
+      generate_reports: false
+  
+  production:
+    scanner:
+      fail_on_critical: true
+    monitoring:
+      interval_minutes: 30
+    alerts:
+      all: true
