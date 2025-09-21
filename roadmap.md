@@ -39,6 +39,7 @@
 
 ### Phase 1: Image Processing ✅
 
+
 - [x] Format support (JPEG, PNG, TIFF, WebP)
 - [x] Computer vision models (ResNet, YOLO, OCR)
 - [x] Content analysis & feature extraction

@@ -6,12 +6,15 @@ Provides API security management classes and utilities used by test modules.
 """
 from __future__ import annotations
 from dataclasses import dataclass
-from typing import Dict, Any, Optional, List, Set
+from typing import Dict, Any, Optional, List, Set, TYPE_CHECKING
 from enum import Enum
 import secrets
 import hashlib
 import time
 import jwt
+
+if TYPE_CHECKING:
+    from tests.ecc_crypto import SecureAPIKey
 
 
 class SecurityLevel(Enum):
@@ -34,6 +37,10 @@ class ApiKey:
     expires_at: Optional[float] = None
     is_active: bool = True
 
+    def has_permission(self, permission: str) -> bool:
+        """Check if the API key has a specific permission"""
+        return permission in self.permissions
+
 
 @dataclass
 class SecurityPolicy:
@@ -44,8 +51,8 @@ class SecurityPolicy:
     allow_anonymous: bool = False
     rate_limit_per_minute: int = 60
     max_request_size: int = 1024 * 1024  # 1MB
-    allowed_origins: List[str] = None
-    required_headers: List[str] = None
+    allowed_origins: Optional[List[str]] = None
+    required_headers: Optional[List[str]] = None
 
 
 class SecurityManager:
@@ -110,12 +117,77 @@ class SecurityManager:
         self.api_keys[key_value] = key
         return key
 
+    def generate_secure_api_key(
+        self,
+        permissions: Optional[List[str]] = None,
+        expires_in_days: Optional[int] = None,
+        rate_limit: Optional[int] = None,
+    ) -> "SecureAPIKey":
+        """Generate a secure API key with ECC integration"""
+        from tests.ecc_crypto import get_ecc_manager, SecureAPIKey
+
+        # Generate an ECC key for the API key
+        ecc_manager = get_ecc_manager()
+        ecc_key = ecc_manager.generate_key_pair()
+
+        # Mock secure API key generation
+        perms = permissions or []
+        key_id = f"api_key_{secrets.token_hex(8)}"
+        api_key = hashlib.sha256(f"{key_id}:{','.join(perms)}".encode()).hexdigest()[
+            :32
+        ]
+
+        # Store API key for validation
+        expires_at = None
+        if expires_in_days:
+            expires_at = time.time() + (expires_in_days * 24 * 60 * 60)
+
+        api_key_obj = ApiKey(
+            key_id=key_id,
+            key_value=api_key,
+            permissions=set(perms),
+            created_at=time.time(),
+            expires_at=expires_at,
+            is_active=True,
+        )
+        self.api_keys[api_key] = api_key_obj
+
+        return SecureAPIKey(
+            key_id=key_id,
+            api_key=api_key,
+            ecc_key_id=ecc_key.key_id or "unknown",
+            permissions=perms,
+            expires_in_days=expires_in_days,
+            rate_limit=rate_limit,
+        )
+
     def revoke_api_key(self, api_key: str) -> bool:
         """Revoke API key"""
         if api_key in self.api_keys:
             self.api_keys[api_key].is_active = False
             return True
         return False
+
+    def generate_secure_token(
+        self, payload: Dict[str, Any], ecc_key_id: str, expires_in_minutes: int = 30
+    ) -> str:
+        """Generate a secure JWT token"""
+        expiry = time.time() + (expires_in_minutes * 60)
+        token_payload = {
+            **payload,
+            "exp": expiry,
+            "iat": time.time(),
+            "ecc_key_id": ecc_key_id,
+        }
+        return jwt.encode(token_payload, self.jwt_secret, algorithm="HS256")
+
+    def verify_secure_token(self, token: str) -> Optional[Dict[str, Any]]:
+        """Verify and decode a secure JWT token"""
+        try:
+            payload = jwt.decode(token, self.jwt_secret, algorithms=["HS256"])
+            return payload
+        except (jwt.ExpiredSignatureError, jwt.InvalidTokenError):
+            return None
 
     def create_jwt_token(self, user_id: str, permissions: List[str]) -> str:
         """Create JWT token for user"""
