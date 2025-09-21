@@ -872,6 +872,9 @@ class CommunicationManager:
             return response
 
         except Exception as e:
+            # Track connection errors in metrics
+            self._metrics.connection_errors += 1
+
             # Audit log - communication failure
             audit_log(
                 "participant_communication_failure",

@@ -498,6 +498,19 @@ class ModelSerializer:
     # ------------------------------------------------------------------
 
     @staticmethod
+    def deserialize_weights(weights_data: Dict[str, Any]) -> ModelWeights:
+        """
+        Deserialize weights data dictionary back to ModelWeights object.
+
+        Args:
+            weights_data: Dictionary containing serialized weight data
+
+        Returns:
+            ModelWeights object reconstructed from the data
+        """
+        return ModelWeights.from_dict(weights_data)
+
+    @staticmethod
     def inspect_model_architecture(model: Any) -> Dict[str, Any]:
         """Generate a lightweight description of a model architecture.
 
@@ -610,9 +623,7 @@ class ModelSerializer:
                 continue  # Skip the top-level container entry
             layer_types.append({"name": name, "type": module.__class__.__name__})
 
-        trainable_params = sum(
-            p.numel() for p in model.parameters() if p.requires_grad
-        )
+        trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
         total_params = sum(p.numel() for p in model.parameters())
 
         info = {

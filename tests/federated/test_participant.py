@@ -221,13 +221,15 @@ class TestFederatedParticipant:
             "round_number": 1,
         }
 
-        mock_communication_manager.send_message.return_value = True
+        mock_communication_manager.send_to_participant.return_value = {
+            "status": "success"
+        }
 
         result = await participant.join_session("session_123")
 
         assert result is True
         assert participant.current_session_id == "session_123"
-        mock_communication_manager.send_message.assert_called()
+        mock_communication_manager.send_to_participant.assert_called()
 
     @pytest.mark.asyncio
     async def test_receive_global_model(
@@ -248,11 +250,17 @@ class TestFederatedParticipant:
             "round_number": 2,
         }
 
-        result = await participant.receive_global_model()
+        # Patch the static method
+        with patch(
+            "src.vega.federated.participant.ModelSerializer.deserialize_weights"
+        ) as mock_deserialize:
+            mock_deserialize.return_value = global_weights
 
-        assert result is not None
-        assert participant.current_round == 2
-        mock_model_serializer.deserialize_weights.assert_called()
+            result = await participant.receive_global_model()
+
+            assert result is not None
+            assert participant.current_round == 2
+            mock_deserialize.assert_called_once()
 
     @pytest.mark.asyncio
     async def test_local_training(self, participant):
@@ -291,18 +299,28 @@ class TestFederatedParticipant:
         )
 
         mock_model_serializer.serialize_weights.return_value = local_weights
-        mock_communication_manager.send_message.return_value = True
+        mock_communication_manager.send_to_participant.return_value = {
+            "status": "success"
+        }
 
         with patch(
-            "vega.federated.participant.create_model_signature"
+            "src.vega.federated.participant.create_model_signature"
         ) as mock_signature:
             mock_signature.return_value = "test_signature"
 
-            result = await participant.send_model_updates(local_weights)
+            with patch(
+                "src.vega.federated.participant.validate_model_update_pipeline"
+            ) as mock_validate:
+                mock_validate.return_value = {
+                    "is_valid": True,
+                    "validation_errors": [],
+                }
 
-            assert result is True
-            assert participant.state == TrainingState.IDLE
-            mock_communication_manager.send_message.assert_called()
+                result = await participant.send_model_updates(local_weights)
+
+                assert result is True
+                assert participant.state == TrainingState.IDLE
+                mock_communication_manager.send_to_participant.assert_called_once()
 
     @pytest.mark.asyncio
     async def test_security_validation(self, participant):
@@ -320,7 +338,7 @@ class TestFederatedParticipant:
         )
 
         with patch(
-            "vega.federated.participant.validate_model_update_pipeline"
+            "src.vega.federated.participant.validate_model_update_pipeline"
         ) as mock_validate:
             mock_validate.return_value = {
                 "is_valid": False,
@@ -373,7 +391,10 @@ class TestFederatedParticipant:
     @pytest.mark.asyncio
     async def test_error_handling(self, participant, mock_communication_manager):
         """Test error handling during communication failures."""
-        mock_communication_manager.send_message.side_effect = Exception("Network error")
+        # Mock send_to_participant to raise an exception, not send_message
+        mock_communication_manager.send_to_participant.side_effect = Exception(
+            "Network error"
+        )
 
         local_weights = ModelWeights(
             weights={"layer1": np.array([1.0, 2.0, 3.0])},
@@ -412,8 +433,9 @@ class TestFederatedParticipant:
     ):
         """Test complete training cycle from registration to model update."""
         # Setup mocks
-        mock_communication_manager.register_participant.return_value = True
-        mock_communication_manager.send_message.return_value = True
+        mock_communication_manager.send_to_participant.return_value = {
+            "status": "success"
+        }
         mock_communication_manager.receive_message.return_value = {
             "type": "global_model",
             "weights": {"layer1": [1.0, 2.0, 3.0]},
@@ -444,9 +466,9 @@ class TestFederatedParticipant:
                 metadata={"version": "1.0"},
                 checksum="test_checksum",
             )
-            with patch("vega.federated.participant.create_model_signature"):
+            with patch("src.vega.federated.participant.create_model_signature"):
                 with patch(
-                    "vega.federated.participant.validate_model_update_pipeline"
+                    "src.vega.federated.participant.validate_model_update_pipeline"
                 ) as mock_validate:
                     mock_validate.return_value = {
                         "is_valid": True,
