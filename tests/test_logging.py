@@ -207,7 +207,12 @@ class TestVegaLogger:
 
     def test_convenience_functions(self):
         """Test convenience logging functions"""
-        from tests.logging_setup import log_info, log_error, log_warning, log_debug
+        from src.vega.core.logging_setup import (
+            log_info,
+            log_error,
+            log_warning,
+            log_debug,
+        )
 
         # These should not raise exceptions
         log_info("test_module", "Info message")

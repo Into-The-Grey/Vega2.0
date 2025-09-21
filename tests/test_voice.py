@@ -292,7 +292,7 @@ class TestSTTProviderBase:
 class TestPiperTTSProvider:
     """Test Piper TTS provider"""
 
-    @patch("voice.providers.PiperTTSProvider")
+    @patch("src.vega.voice.providers.PiperTTSProvider")
     def test_piper_initialization(self, mock_piper):
         """Test Piper TTS provider initialization"""
         mock_instance = MagicMock()
@@ -304,7 +304,7 @@ class TestPiperTTSProvider:
         # Test that Piper was initialized
         assert mock_piper.called
 
-    @patch("voice.providers.PiperTTSProvider")
+    @patch("src.vega.voice.providers.PiperTTSProvider")
     def test_piper_synthesis(self, mock_piper):
         """Test Piper TTS synthesis"""
         mock_instance = MagicMock()
@@ -322,7 +322,7 @@ class TestPiperTTSProvider:
 class TestVoskSTTProvider:
     """Test Vosk STT provider"""
 
-    @patch("voice.providers.VoskSTTProvider")
+    @patch("src.vega.voice.providers.VoskSTTProvider")
     def test_vosk_initialization(self, mock_vosk):
         """Test Vosk STT provider initialization"""
         mock_instance = MagicMock()
@@ -334,7 +334,7 @@ class TestVoskSTTProvider:
         # Test that Vosk was initialized
         assert mock_vosk.called
 
-    @patch("voice.providers.VoskSTTProvider")
+    @patch("src.vega.voice.providers.VoskSTTProvider")
     def test_vosk_transcription(self, mock_vosk):
         """Test Vosk STT transcription"""
         mock_instance = MagicMock()
@@ -360,7 +360,7 @@ class TestVoiceIntegration:
         """Cleanup integration test environment"""
         shutil.rmtree(self.test_dir, ignore_errors=True)
 
-    @patch("voice.VoiceManager")
+    @patch("src.vega.voice.VoiceManager")
     def test_voice_chat_integration(self, mock_voice_manager):
         """Test integration with chat system"""
         mock_instance = MagicMock()

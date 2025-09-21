@@ -19,6 +19,7 @@ from .error_handler import (
     log_info,
     log_error,
 )
+from .exceptions import VegaException
 
 
 class ErrorHandlingMiddleware(BaseHTTPMiddleware):
@@ -86,22 +87,9 @@ class ErrorHandlingMiddleware(BaseHTTPMiddleware):
             # Handle error with structured logging
             handler = get_error_handler()
 
-            # Determine error code based on exception type
-            if isinstance(e, ValueError):
-                code = ErrorCode.INVALID_INPUT
-            elif isinstance(e, KeyError):
-                code = ErrorCode.MISSING_PARAMETER
-            elif isinstance(e, ConnectionError):
-                code = ErrorCode.NETWORK_TIMEOUT
-            else:
-                code = ErrorCode.INTERNAL_ERROR
-
-            # Create and handle error
-            vega_error = handler.create_error(
-                code=code, message=str(e), context=context, severity=ErrorSeverity.HIGH
-            )
-
-            handled_error = handler.handle_error(vega_error)
+            # All exceptions go through the same error handling path
+            # The error handler will properly detect VegaException and preserve error codes
+            handled_error = handler.handle_error(e, context)
 
             # Log error
             log_error(
@@ -114,8 +102,17 @@ class ErrorHandlingMiddleware(BaseHTTPMiddleware):
                 error_message=str(e),
             )
 
-            # Convert to HTTP exception and raise
-            raise handled_error.to_http_exception()
+            # Convert to HTTP response instead of raising exception
+            http_exception = handled_error.to_http_exception()
+
+            # Create a proper JSON response
+            from fastapi.responses import JSONResponse
+
+            return JSONResponse(
+                status_code=http_exception.status_code,
+                content=http_exception.detail,
+                headers={"X-Request-ID": request_id},
+            )
 
 
 class RequestTrackingMiddleware(BaseHTTPMiddleware):

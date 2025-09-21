@@ -125,7 +125,7 @@ class TestChatEndpoints:
     @patch("src.vega.core.app.query_llm")
     def test_chat_llm_error(self, mock_llm, mock_cfg):
         """Test chat request when LLM fails"""
-        from tests.llm import LLMBackendError
+        from src.vega.core.llm import LLMBackendError
 
         mock_cfg.api_key = TEST_API_KEY
         mock_cfg.api_keys_extra = []

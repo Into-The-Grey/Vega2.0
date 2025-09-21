@@ -11,10 +11,10 @@ import asyncio
 from pathlib import Path
 
 # Add project root to path
-project_root = Path(__file__).parent
+project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
-from tests.error_handler import (
+from src.vega.core.error_handler import (
     get_error_handler,
     ErrorCode,
     ErrorSeverity,
@@ -24,9 +24,17 @@ from tests.error_handler import (
     log_warning,
     error_context,
 )
+from src.vega.core.vega_exceptions import (
+    VegaException,
+    InvalidInputError,
+    LLMRateLimitError,
+    ProcessCrashError,
+)
 from tests.exceptions import *
+import pytest
 
 
+@pytest.mark.asyncio
 async def test_basic_error_handling():
     """Test basic error creation and handling"""
     print("🧪 Testing basic error handling...")
@@ -58,30 +66,34 @@ def test_custom_exceptions():
 
     try:
         raise InvalidInputError("test_field", "invalid_value")
-    except VegaException as e:
+    except InvalidInputError as e:
         print(f"✅ Caught InvalidInputError: {e.code.value}")
         print(f"   Message: {e.message}")
-        print(f"   Context: {e.context}")
+        print(f"   Field: {e.field}")
+        print(f"   Value: {e.value}")
 
     try:
         raise LLMRateLimitError("openai", retry_after=30)
-    except VegaException as e:
+    except LLMRateLimitError as e:
         print(f"✅ Caught LLMRateLimitError: {e.code.value}")
+        print(f"   Provider: {e.provider}")
         print(f"   Retry after: {e.retry_after}s")
 
     try:
         raise ProcessCrashError("test_process", exit_code=1)
-    except VegaException as e:
+    except ProcessCrashError as e:
         print(f"✅ Caught ProcessCrashError: {e.code.value}")
-        print(f"   Context: {e.context}")
+        print(f"   Process: {e.process_name}")
+        print(f"   Exit code: {e.exit_code}")
 
 
+@pytest.mark.asyncio
 async def test_error_context():
     """Test error context manager"""
     print("\n🧪 Testing error context manager...")
 
     try:
-        async with error_context(
+        with error_context(
             component="test_component",
             operation="test_operation",
             user_id="test_user",

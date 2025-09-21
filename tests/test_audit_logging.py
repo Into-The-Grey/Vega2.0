@@ -7,6 +7,7 @@ import asyncio
 import sys
 import os
 import time
+import pytest
 
 # Add src to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
@@ -33,6 +34,7 @@ def test_audit_logging():
     print("✓ Basic audit logging test completed")
 
 
+@pytest.mark.asyncio
 async def test_communication_audit():
     """Test audit logging in communication operations."""
     print("Testing communication audit logging...")

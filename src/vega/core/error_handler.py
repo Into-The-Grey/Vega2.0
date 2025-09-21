@@ -389,6 +389,19 @@ class VegaErrorHandler:
     ) -> VegaError:
         """Convert a generic exception to VegaError"""
 
+        # Handle VegaException instances specially to preserve their error codes
+        from .exceptions import VegaException
+
+        if isinstance(exception, VegaException):
+            return self.create_error(
+                code=exception.code,
+                message=exception.message,
+                context=context or ErrorContext(),
+                severity=exception.severity,
+                recoverable=exception.recoverable,
+                retry_after=exception.retry_after,
+            )
+
         # Map common exception types to error codes
         exception_mapping = {
             ValueError: ErrorCode.INVALID_INPUT,
