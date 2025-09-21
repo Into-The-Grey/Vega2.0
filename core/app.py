@@ -171,10 +171,10 @@ def set_feedback(
 
 
 from fastapi import Response
-from core.logging_setup import VegaLogger  # exposed for patching in tests
+from vega.core.logging_setup import VegaLogger  # exposed for patching in tests
 
 # VegaLogger already defined above, no need to re-assign
-from core.config_manager import config_manager  # exposed for patching in tests
+from vega.core.config_manager import config_manager  # exposed for patching in tests
 
 
 @app.get("/docs/commands.md")
@@ -228,7 +228,7 @@ async def chat(
     # Generate/propagate session id
     session_id = request.session_id or str(uuid.uuid4())
     try:
-        from core.llm import LLMBackendError  # type: ignore
+        from vega.core.llm import LLMBackendError  # type: ignore
     except Exception:
 
         class LLMBackendError(Exception):
@@ -461,7 +461,7 @@ async def admin_logs_list(
     x_api_key: str | None = Header(default=None, alias="X-API-Key")
 ):
     require_api_key(x_api_key)
-    from core.logging_setup import VegaLogger
+    from vega.core.logging_setup import VegaLogger
 
     return {
         "modules": (
@@ -477,7 +477,7 @@ async def admin_logs_tail(
     x_api_key: str | None = Header(default=None, alias="X-API-Key"),
 ):
     require_api_key(x_api_key)
-    from core.logging_setup import VegaLogger
+    from vega.core.logging_setup import VegaLogger
 
     lines_list = VegaLogger.tail_log(module, lines)
     return {"module": module, "lines": lines_list, "total_lines": len(lines_list)}
@@ -488,7 +488,7 @@ async def admin_config_list(
     x_api_key: str | None = Header(default=None, alias="X-API-Key")
 ):
     require_api_key(x_api_key)
-    from core.config_manager import config_manager as config_manager
+    from vega.core.config_manager import config_manager as config_manager
 
     return {
         "modules": (
