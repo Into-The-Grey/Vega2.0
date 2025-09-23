@@ -25,7 +25,7 @@ class EventType(Enum):
     USER_LOGOUT = "user_logout"
     USER_ACTIVITY = "user_activity"
 
-    # Collaboration events
+    # Personal workspace events
     WORKSPACE_CREATED = "workspace_created"
     WORKSPACE_JOINED = "workspace_joined"
     WORKSPACE_LEFT = "workspace_left"

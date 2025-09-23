@@ -155,7 +155,7 @@ class VisualizationManager:
 
         self.dashboards["system_overview"] = system_dashboard
 
-        # Collaboration Analytics Dashboard
+        # Personal Workspace Analytics Dashboard
         collab_charts = [
             ChartConfig(
                 chart_id="workspace_activity",
@@ -176,10 +176,10 @@ class VisualizationManager:
                 filters={"event_type": "document_edited"},
             ),
             ChartConfig(
-                chart_id="user_collaboration",
-                title="User Collaboration Network",
+                chart_id="personal_workspace",
+                title="Personal Workspace Activity",
                 chart_type=ChartType.SCATTER,
-                data_source="collaboration_matrix",
+                data_source="personal_workspace_matrix",
                 x_axis="user1",
                 y_axis="user2",
                 filters={},
@@ -196,8 +196,8 @@ class VisualizationManager:
         ]
 
         collab_dashboard = Dashboard(
-            id="collaboration_analytics",
-            name="Collaboration Analytics",
+            id="personal_workspace_analytics",
+            name="Personal Workspace Analytics",
             description="Team collaboration and workspace activity metrics",
             charts=collab_charts,
             layout={

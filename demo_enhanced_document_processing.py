@@ -796,7 +796,7 @@ async def demo_document_similarity():
 
 
 async def demo_integration_capabilities():
-    """Demonstrate integration with vector database and collaboration features"""
+    """Demonstrate integration with vector database and personal workspace features"""
     print("\n🔄 Integration Capabilities Demo")
     print("=" * 35)
 
@@ -811,8 +811,8 @@ async def demo_integration_capabilities():
         embedding_dim = len(analysis.semantic.semantic_embedding)
         print(f"      • {analysis.document_id}: {embedding_dim}D embedding stored")
 
-    # Simulate real-time collaboration features
-    print("\n   🤝 Real-time collaboration simulation:")
+    # Simulate personal workspace features
+    print("\n   🏠 Personal workspace simulation:")
     print("      • Document analysis shared with team members")
     print("      • Entity annotations synced across sessions")
     print("      • Sentiment insights available in dashboard")

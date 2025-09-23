@@ -43,4 +43,4 @@ MemoryMax=1G
 WatchdogSec=30s
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target

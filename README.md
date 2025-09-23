@@ -4,7 +4,7 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-green.svg)](https://fastapi.tiangolo.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Vega2.0 is a comprehensive, production-ready autonomous AI system featuring advanced security, error handling, background process management, and elliptic curve cryptography. Built with FastAPI and designed for localhost-first operation with enterprise-grade security.
+Vega2.0 is a comprehensive, production-ready autonomous AI system featuring advanced security, error handling, background process management, and elliptic curve cryptography. Built with FastAPI and designed for localhost-first operation with personal-grade security.
 
 ## 🚀 Key Features
 
