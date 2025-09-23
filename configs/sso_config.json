@@ -1,0 +1,39 @@
+{
+	"providers": {
+		"azure_ad": {
+			"client_id": "your_azure_client_id",
+			"client_secret": "your_azure_client_secret",
+			"tenant_id": "your_tenant_id_or_common",
+			"redirect_uri": "http://localhost:8000/auth/callback",
+			"scopes": ["openid", "profile", "email", "User.Read"],
+			"enabled": false
+		},
+		"google": {
+			"client_id": "your_google_client_id.apps.googleusercontent.com",
+			"client_secret": "your_google_client_secret",
+			"redirect_uri": "http://localhost:8000/auth/callback",
+			"scopes": ["openid", "profile", "email"],
+			"enabled": false
+		},
+		"github": {
+			"client_id": "your_github_client_id",
+			"client_secret": "your_github_client_secret",
+			"redirect_uri": "http://localhost:8000/auth/callback",
+			"scopes": ["user:email", "read:user"],
+			"enabled": false
+		},
+		"microsoft": {
+			"client_id": "your_microsoft_client_id",
+			"client_secret": "your_microsoft_client_secret",
+			"redirect_uri": "http://localhost:8000/auth/callback",
+			"scopes": ["openid", "profile", "email", "User.Read"],
+			"enabled": false
+		}
+	},
+	"settings": {
+		"session_timeout_hours": 24,
+		"refresh_threshold_minutes": 15,
+		"cleanup_interval_hours": 6,
+		"max_concurrent_sessions": 5
+	}
+}
