@@ -49,6 +49,13 @@ class Config:
     presence_penalty: float = 0.0
     frequency_penalty: float = 0.0
     dynamic_generation: bool = False
+    # Redis cluster/distributed cache support
+    redis_mode: str = "standalone"  # "standalone", "cluster", "sentinel"
+    redis_cluster_nodes: tuple[str, ...] = ()  # host:port,host:port,...
+    redis_username: str | None = None
+    redis_password: str | None = None
+    redis_db: int = 0
+    redis_ssl: bool = False
 
 
 class ConfigError(RuntimeError):
@@ -63,17 +70,17 @@ def _require_env(name: str) -> str:
 
 
 def get_config() -> Config:
-    """Load and validate configuration from env.
-
-    Required:
-      - API_KEY: shared secret for API and CLI
-      - HOST: bind host (e.g., 127.0.0.1)
-      - PORT: bind port (e.g., 8000)
-      - MODEL_NAME: default model identifier
-      - LLM_BACKEND: 'ollama' or 'hf'
-    Optional:
-      - SLACK_WEBHOOK_URL: for integrations testing
-    """
+    # Redis cluster/distributed cache settings
+    redis_mode = os.getenv(
+        "REDIS_MODE", "standalone"
+    ).lower()  # standalone, cluster, sentinel
+    redis_cluster_nodes = tuple(
+        [s for s in os.getenv("REDIS_CLUSTER_NODES", "").split(",") if s.strip()]
+    )
+    redis_username = os.getenv("REDIS_USERNAME")
+    redis_password = os.getenv("REDIS_PASSWORD")
+    redis_db = int(os.getenv("REDIS_DB", "0"))
+    redis_ssl = os.getenv("REDIS_SSL", "false").lower() in {"1", "true", "yes"}
     api_key = _require_env("API_KEY")
     host = _require_env("HOST")
     port_str = _require_env("PORT")
@@ -125,4 +132,10 @@ def get_config() -> Config:
         frequency_penalty=float(os.getenv("GEN_FREQUENCY_PENALTY", "0.0")),
         dynamic_generation=os.getenv("GEN_DYNAMIC", "false").lower()
         in {"1", "true", "yes"},
+        redis_mode=redis_mode,
+        redis_cluster_nodes=redis_cluster_nodes,
+        redis_username=redis_username,
+        redis_password=redis_password,
+        redis_db=redis_db,
+        redis_ssl=redis_ssl,
     )
