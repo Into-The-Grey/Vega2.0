@@ -1,0 +1,1946 @@
+{
+  "metadata_store": {
+    "text_001": {
+      "metadata": {
+        "category": "nature",
+        "source": "description"
+      },
+      "modality": "text",
+      "source": "beautiful mountain landscape with snow-capped peaks",
+      "timestamp": 1758575185.588366
+    },
+    "text_002": {
+      "metadata": {
+        "category": "technology",
+        "source": "description"
+      },
+      "modality": "text",
+      "source": "artificial intelligence and machine learning research",
+      "timestamp": 1758575185.5884218
+    },
+    "text_003": {
+      "metadata": {
+        "category": "music",
+        "source": "description"
+      },
+      "modality": "text",
+      "source": "classical music symphony orchestra performance",
+      "timestamp": 1758575185.5884626
+    },
+    "img_001": {
+      "metadata": {
+        "category": "nature",
+        "source": "image",
+        "format": "jpg"
+      },
+      "modality": "image",
+      "source": "mountain_landscape.jpg",
+      "timestamp": 1758575185.5885293
+    },
+    "img_002": {
+      "metadata": {
+        "category": "technology",
+        "source": "image",
+        "format": "jpg"
+      },
+      "modality": "image",
+      "source": "technology_conference.jpg",
+      "timestamp": 1758575185.5885713
+    },
+    "img_003": {
+      "metadata": {
+        "category": "music",
+        "source": "image",
+        "format": "jpg"
+      },
+      "modality": "image",
+      "source": "music_concert.jpg",
+      "timestamp": 1758575185.588607
+    },
+    "doc_001": {
+      "metadata": {
+        "category": "technology",
+        "source": "document",
+        "type": "research"
+      },
+      "modality": "document",
+      "source": "Research paper on computer vision applications in autonomous vehicles",
+      "timestamp": 1758575185.5886497
+    },
+    "doc_002": {
+      "metadata": {
+        "category": "nature",
+        "source": "document",
+        "type": "guide"
+      },
+      "modality": "document",
+      "source": "Travel guide for mountain hiking and outdoor adventures",
+      "timestamp": 1758575185.5886896
+    },
+    "audio_001": {
+      "metadata": {
+        "category": "music",
+        "source": "audio",
+        "format": "mp3"
+      },
+      "modality": "audio",
+      "source": "classical_symphony.mp3",
+      "timestamp": 1758575185.5887258
+    },
+    "video_001": {
+      "metadata": {
+        "category": "nature",
+        "source": "video",
+        "format": "mp4"
+      },
+      "modality": "video",
+      "source": "nature_documentary.mp4",
+      "timestamp": 1758575185.5887656
+    },
+    "text_000": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 0
+      },
+      "modality": "text",
+      "source": "nature text content example 000",
+      "timestamp": 1758575185.6117713
+    },
+    "image_001": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 1
+      },
+      "modality": "image",
+      "source": "technology image content example 001",
+      "timestamp": 1758575185.611795
+    },
+    "document_002": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 2
+      },
+      "modality": "document",
+      "source": "music document content example 002",
+      "timestamp": 1758575185.6118147
+    },
+    "audio_003": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 3
+      },
+      "modality": "audio",
+      "source": "art audio content example 003",
+      "timestamp": 1758575185.6118333
+    },
+    "video_004": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 4
+      },
+      "modality": "video",
+      "source": "sports video content example 004",
+      "timestamp": 1758575185.6118522
+    },
+    "text_005": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 5
+      },
+      "modality": "text",
+      "source": "nature text content example 005",
+      "timestamp": 1758575185.611871
+    },
+    "image_006": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 6
+      },
+      "modality": "image",
+      "source": "technology image content example 006",
+      "timestamp": 1758575185.6118894
+    },
+    "document_007": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 7
+      },
+      "modality": "document",
+      "source": "music document content example 007",
+      "timestamp": 1758575185.611908
+    },
+    "audio_008": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 8
+      },
+      "modality": "audio",
+      "source": "art audio content example 008",
+      "timestamp": 1758575185.6119258
+    },
+    "video_009": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 9
+      },
+      "modality": "video",
+      "source": "sports video content example 009",
+      "timestamp": 1758575185.6119437
+    },
+    "text_010": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 10
+      },
+      "modality": "text",
+      "source": "nature text content example 010",
+      "timestamp": 1758575185.6119618
+    },
+    "image_011": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 11
+      },
+      "modality": "image",
+      "source": "technology image content example 011",
+      "timestamp": 1758575185.611981
+    },
+    "document_012": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 12
+      },
+      "modality": "document",
+      "source": "music document content example 012",
+      "timestamp": 1758575185.6120012
+    },
+    "audio_013": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 13
+      },
+      "modality": "audio",
+      "source": "art audio content example 013",
+      "timestamp": 1758575185.6120212
+    },
+    "video_014": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 14
+      },
+      "modality": "video",
+      "source": "sports video content example 014",
+      "timestamp": 1758575185.6120439
+    },
+    "text_015": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 15
+      },
+      "modality": "text",
+      "source": "nature text content example 015",
+      "timestamp": 1758575185.612062
+    },
+    "image_016": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 16
+      },
+      "modality": "image",
+      "source": "technology image content example 016",
+      "timestamp": 1758575185.6120799
+    },
+    "document_017": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 17
+      },
+      "modality": "document",
+      "source": "music document content example 017",
+      "timestamp": 1758575185.6120982
+    },
+    "audio_018": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 18
+      },
+      "modality": "audio",
+      "source": "art audio content example 018",
+      "timestamp": 1758575185.6121166
+    },
+    "video_019": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 19
+      },
+      "modality": "video",
+      "source": "sports video content example 019",
+      "timestamp": 1758575185.6121347
+    },
+    "text_020": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 20
+      },
+      "modality": "text",
+      "source": "nature text content example 020",
+      "timestamp": 1758575185.6121528
+    },
+    "image_021": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 21
+      },
+      "modality": "image",
+      "source": "technology image content example 021",
+      "timestamp": 1758575185.612172
+    },
+    "document_022": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 22
+      },
+      "modality": "document",
+      "source": "music document content example 022",
+      "timestamp": 1758575185.61219
+    },
+    "audio_023": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 23
+      },
+      "modality": "audio",
+      "source": "art audio content example 023",
+      "timestamp": 1758575185.612208
+    },
+    "video_024": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 24
+      },
+      "modality": "video",
+      "source": "sports video content example 024",
+      "timestamp": 1758575185.612226
+    },
+    "text_025": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 25
+      },
+      "modality": "text",
+      "source": "nature text content example 025",
+      "timestamp": 1758575185.6122441
+    },
+    "image_026": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 26
+      },
+      "modality": "image",
+      "source": "technology image content example 026",
+      "timestamp": 1758575185.6122625
+    },
+    "document_027": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 27
+      },
+      "modality": "document",
+      "source": "music document content example 027",
+      "timestamp": 1758575185.6122804
+    },
+    "audio_028": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 28
+      },
+      "modality": "audio",
+      "source": "art audio content example 028",
+      "timestamp": 1758575185.6122978
+    },
+    "video_029": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 29
+      },
+      "modality": "video",
+      "source": "sports video content example 029",
+      "timestamp": 1758575185.6123166
+    },
+    "text_030": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 30
+      },
+      "modality": "text",
+      "source": "nature text content example 030",
+      "timestamp": 1758575185.6123343
+    },
+    "image_031": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 31
+      },
+      "modality": "image",
+      "source": "technology image content example 031",
+      "timestamp": 1758575185.6123517
+    },
+    "document_032": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 32
+      },
+      "modality": "document",
+      "source": "music document content example 032",
+      "timestamp": 1758575185.6123698
+    },
+    "audio_033": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 33
+      },
+      "modality": "audio",
+      "source": "art audio content example 033",
+      "timestamp": 1758575185.612388
+    },
+    "video_034": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 34
+      },
+      "modality": "video",
+      "source": "sports video content example 034",
+      "timestamp": 1758575185.6124058
+    },
+    "text_035": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 35
+      },
+      "modality": "text",
+      "source": "nature text content example 035",
+      "timestamp": 1758575185.6124241
+    },
+    "image_036": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 36
+      },
+      "modality": "image",
+      "source": "technology image content example 036",
+      "timestamp": 1758575185.6124423
+    },
+    "document_037": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 37
+      },
+      "modality": "document",
+      "source": "music document content example 037",
+      "timestamp": 1758575185.6124618
+    },
+    "audio_038": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 38
+      },
+      "modality": "audio",
+      "source": "art audio content example 038",
+      "timestamp": 1758575185.61248
+    },
+    "video_039": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 39
+      },
+      "modality": "video",
+      "source": "sports video content example 039",
+      "timestamp": 1758575185.612501
+    },
+    "text_040": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 40
+      },
+      "modality": "text",
+      "source": "nature text content example 040",
+      "timestamp": 1758575185.612519
+    },
+    "image_041": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 41
+      },
+      "modality": "image",
+      "source": "technology image content example 041",
+      "timestamp": 1758575185.6125371
+    },
+    "document_042": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 42
+      },
+      "modality": "document",
+      "source": "music document content example 042",
+      "timestamp": 1758575185.612555
+    },
+    "audio_043": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 43
+      },
+      "modality": "audio",
+      "source": "art audio content example 043",
+      "timestamp": 1758575185.612573
+    },
+    "video_044": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 44
+      },
+      "modality": "video",
+      "source": "sports video content example 044",
+      "timestamp": 1758575185.61259
+    },
+    "text_045": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 45
+      },
+      "modality": "text",
+      "source": "nature text content example 045",
+      "timestamp": 1758575185.6126094
+    },
+    "image_046": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 46
+      },
+      "modality": "image",
+      "source": "technology image content example 046",
+      "timestamp": 1758575185.612627
+    },
+    "document_047": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 47
+      },
+      "modality": "document",
+      "source": "music document content example 047",
+      "timestamp": 1758575185.6126447
+    },
+    "audio_048": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 48
+      },
+      "modality": "audio",
+      "source": "art audio content example 048",
+      "timestamp": 1758575185.6126623
+    },
+    "video_049": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 49
+      },
+      "modality": "video",
+      "source": "sports video content example 049",
+      "timestamp": 1758575185.6126797
+    },
+    "text_050": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 50
+      },
+      "modality": "text",
+      "source": "nature text content example 050",
+      "timestamp": 1758575185.6126978
+    },
+    "image_051": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 51
+      },
+      "modality": "image",
+      "source": "technology image content example 051",
+      "timestamp": 1758575185.612716
+    },
+    "document_052": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 52
+      },
+      "modality": "document",
+      "source": "music document content example 052",
+      "timestamp": 1758575185.6127336
+    },
+    "audio_053": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 53
+      },
+      "modality": "audio",
+      "source": "art audio content example 053",
+      "timestamp": 1758575185.6127627
+    },
+    "video_054": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 54
+      },
+      "modality": "video",
+      "source": "sports video content example 054",
+      "timestamp": 1758575185.612791
+    },
+    "text_055": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 55
+      },
+      "modality": "text",
+      "source": "nature text content example 055",
+      "timestamp": 1758575185.6128185
+    },
+    "image_056": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 56
+      },
+      "modality": "image",
+      "source": "technology image content example 056",
+      "timestamp": 1758575185.612846
+    },
+    "document_057": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 57
+      },
+      "modality": "document",
+      "source": "music document content example 057",
+      "timestamp": 1758575185.6128738
+    },
+    "audio_058": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 58
+      },
+      "modality": "audio",
+      "source": "art audio content example 058",
+      "timestamp": 1758575185.612901
+    },
+    "video_059": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 59
+      },
+      "modality": "video",
+      "source": "sports video content example 059",
+      "timestamp": 1758575185.6129286
+    },
+    "text_060": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 60
+      },
+      "modality": "text",
+      "source": "nature text content example 060",
+      "timestamp": 1758575185.6129546
+    },
+    "image_061": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 61
+      },
+      "modality": "image",
+      "source": "technology image content example 061",
+      "timestamp": 1758575185.6129816
+    },
+    "document_062": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 62
+      },
+      "modality": "document",
+      "source": "music document content example 062",
+      "timestamp": 1758575185.6130085
+    },
+    "audio_063": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 63
+      },
+      "modality": "audio",
+      "source": "art audio content example 063",
+      "timestamp": 1758575185.6130383
+    },
+    "video_064": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 64
+      },
+      "modality": "video",
+      "source": "sports video content example 064",
+      "timestamp": 1758575185.613067
+    },
+    "text_065": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 65
+      },
+      "modality": "text",
+      "source": "nature text content example 065",
+      "timestamp": 1758575185.6130946
+    },
+    "image_066": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 66
+      },
+      "modality": "image",
+      "source": "technology image content example 066",
+      "timestamp": 1758575185.6131217
+    },
+    "document_067": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 67
+      },
+      "modality": "document",
+      "source": "music document content example 067",
+      "timestamp": 1758575185.61315
+    },
+    "audio_068": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 68
+      },
+      "modality": "audio",
+      "source": "art audio content example 068",
+      "timestamp": 1758575185.6131778
+    },
+    "video_069": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 69
+      },
+      "modality": "video",
+      "source": "sports video content example 069",
+      "timestamp": 1758575185.6132069
+    },
+    "text_070": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 70
+      },
+      "modality": "text",
+      "source": "nature text content example 070",
+      "timestamp": 1758575185.6132336
+    },
+    "image_071": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 71
+      },
+      "modality": "image",
+      "source": "technology image content example 071",
+      "timestamp": 1758575185.6132605
+    },
+    "document_072": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 72
+      },
+      "modality": "document",
+      "source": "music document content example 072",
+      "timestamp": 1758575185.613287
+    },
+    "audio_073": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 73
+      },
+      "modality": "audio",
+      "source": "art audio content example 073",
+      "timestamp": 1758575185.6133142
+    },
+    "video_074": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 74
+      },
+      "modality": "video",
+      "source": "sports video content example 074",
+      "timestamp": 1758575185.6133397
+    },
+    "text_075": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 75
+      },
+      "modality": "text",
+      "source": "nature text content example 075",
+      "timestamp": 1758575185.6133583
+    },
+    "image_076": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 76
+      },
+      "modality": "image",
+      "source": "technology image content example 076",
+      "timestamp": 1758575185.6133769
+    },
+    "document_077": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 77
+      },
+      "modality": "document",
+      "source": "music document content example 077",
+      "timestamp": 1758575185.613397
+    },
+    "audio_078": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 78
+      },
+      "modality": "audio",
+      "source": "art audio content example 078",
+      "timestamp": 1758575185.6134152
+    },
+    "video_079": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 79
+      },
+      "modality": "video",
+      "source": "sports video content example 079",
+      "timestamp": 1758575185.6134331
+    },
+    "text_080": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 80
+      },
+      "modality": "text",
+      "source": "nature text content example 080",
+      "timestamp": 1758575185.6134512
+    },
+    "image_081": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 81
+      },
+      "modality": "image",
+      "source": "technology image content example 081",
+      "timestamp": 1758575185.6134696
+    },
+    "document_082": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 82
+      },
+      "modality": "document",
+      "source": "music document content example 082",
+      "timestamp": 1758575185.6134877
+    },
+    "audio_083": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 83
+      },
+      "modality": "audio",
+      "source": "art audio content example 083",
+      "timestamp": 1758575185.6135051
+    },
+    "video_084": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 84
+      },
+      "modality": "video",
+      "source": "sports video content example 084",
+      "timestamp": 1758575185.6135228
+    },
+    "text_085": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 85
+      },
+      "modality": "text",
+      "source": "nature text content example 085",
+      "timestamp": 1758575185.6135418
+    },
+    "image_086": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 86
+      },
+      "modality": "image",
+      "source": "technology image content example 086",
+      "timestamp": 1758575185.6135597
+    },
+    "document_087": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 87
+      },
+      "modality": "document",
+      "source": "music document content example 087",
+      "timestamp": 1758575185.6135783
+    },
+    "audio_088": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 88
+      },
+      "modality": "audio",
+      "source": "art audio content example 088",
+      "timestamp": 1758575185.6135967
+    },
+    "video_089": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 89
+      },
+      "modality": "video",
+      "source": "sports video content example 089",
+      "timestamp": 1758575185.6136148
+    },
+    "text_090": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 90
+      },
+      "modality": "text",
+      "source": "nature text content example 090",
+      "timestamp": 1758575185.6136327
+    },
+    "image_091": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 91
+      },
+      "modality": "image",
+      "source": "technology image content example 091",
+      "timestamp": 1758575185.613651
+    },
+    "document_092": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 92
+      },
+      "modality": "document",
+      "source": "music document content example 092",
+      "timestamp": 1758575185.6136684
+    },
+    "audio_093": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 93
+      },
+      "modality": "audio",
+      "source": "art audio content example 093",
+      "timestamp": 1758575185.613687
+    },
+    "video_094": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 94
+      },
+      "modality": "video",
+      "source": "sports video content example 094",
+      "timestamp": 1758575185.6137047
+    },
+    "text_095": {
+      "metadata": {
+        "category": "nature",
+        "modality": "text",
+        "index": 95
+      },
+      "modality": "text",
+      "source": "nature text content example 095",
+      "timestamp": 1758575185.613723
+    },
+    "image_096": {
+      "metadata": {
+        "category": "technology",
+        "modality": "image",
+        "index": 96
+      },
+      "modality": "image",
+      "source": "technology image content example 096",
+      "timestamp": 1758575185.6137412
+    },
+    "document_097": {
+      "metadata": {
+        "category": "music",
+        "modality": "document",
+        "index": 97
+      },
+      "modality": "document",
+      "source": "music document content example 097",
+      "timestamp": 1758575185.6137724
+    },
+    "audio_098": {
+      "metadata": {
+        "category": "art",
+        "modality": "audio",
+        "index": 98
+      },
+      "modality": "audio",
+      "source": "art audio content example 098",
+      "timestamp": 1758575185.6137903
+    },
+    "video_099": {
+      "metadata": {
+        "category": "sports",
+        "modality": "video",
+        "index": 99
+      },
+      "modality": "video",
+      "source": "sports video content example 099",
+      "timestamp": 1758575185.6138086
+    },
+    "test_vector_000": {
+      "metadata": {
+        "index": 0,
+        "category": "cat_0"
+      },
+      "modality": "test",
+      "source": "test_content_0",
+      "timestamp": 1758575185.617293
+    },
+    "test_vector_001": {
+      "metadata": {
+        "index": 1,
+        "category": "cat_1"
+      },
+      "modality": "test",
+      "source": "test_content_1",
+      "timestamp": 1758575185.617317
+    },
+    "test_vector_002": {
+      "metadata": {
+        "index": 2,
+        "category": "cat_2"
+      },
+      "modality": "test",
+      "source": "test_content_2",
+      "timestamp": 1758575185.6173356
+    },
+    "test_vector_003": {
+      "metadata": {
+        "index": 3,
+        "category": "cat_3"
+      },
+      "modality": "test",
+      "source": "test_content_3",
+      "timestamp": 1758575185.6173537
+    },
+    "test_vector_004": {
+      "metadata": {
+        "index": 4,
+        "category": "cat_4"
+      },
+      "modality": "test",
+      "source": "test_content_4",
+      "timestamp": 1758575185.6173716
+    },
+    "test_vector_005": {
+      "metadata": {
+        "index": 5,
+        "category": "cat_0"
+      },
+      "modality": "test",
+      "source": "test_content_5",
+      "timestamp": 1758575185.6173897
+    },
+    "test_vector_006": {
+      "metadata": {
+        "index": 6,
+        "category": "cat_1"
+      },
+      "modality": "test",
+      "source": "test_content_6",
+      "timestamp": 1758575185.6174073
+    },
+    "test_vector_007": {
+      "metadata": {
+        "index": 7,
+        "category": "cat_2"
+      },
+      "modality": "test",
+      "source": "test_content_7",
+      "timestamp": 1758575185.6174252
+    },
+    "test_vector_008": {
+      "metadata": {
+        "index": 8,
+        "category": "cat_3"
+      },
+      "modality": "test",
+      "source": "test_content_8",
+      "timestamp": 1758575185.6174426
+    },
+    "test_vector_009": {
+      "metadata": {
+        "index": 9,
+        "category": "cat_4"
+      },
+      "modality": "test",
+      "source": "test_content_9",
+      "timestamp": 1758575185.6174603
+    },
+    "test_vector_010": {
+      "metadata": {
+        "index": 10,
+        "category": "cat_0"
+      },
+      "modality": "test",
+      "source": "test_content_10",
+      "timestamp": 1758575185.617478
+    },
+    "test_vector_011": {
+      "metadata": {
+        "index": 11,
+        "category": "cat_1"
+      },
+      "modality": "test",
+      "source": "test_content_11",
+      "timestamp": 1758575185.6174958
+    },
+    "test_vector_012": {
+      "metadata": {
+        "index": 12,
+        "category": "cat_2"
+      },
+      "modality": "test",
+      "source": "test_content_12",
+      "timestamp": 1758575185.6175134
+    },
+    "test_vector_013": {
+      "metadata": {
+        "index": 13,
+        "category": "cat_3"
+      },
+      "modality": "test",
+      "source": "test_content_13",
+      "timestamp": 1758575185.6175327
+    },
+    "test_vector_014": {
+      "metadata": {
+        "index": 14,
+        "category": "cat_4"
+      },
+      "modality": "test",
+      "source": "test_content_14",
+      "timestamp": 1758575185.6175504
+    },
+    "test_vector_015": {
+      "metadata": {
+        "index": 15,
+        "category": "cat_0"
+      },
+      "modality": "test",
+      "source": "test_content_15",
+      "timestamp": 1758575185.6175687
+    },
+    "test_vector_016": {
+      "metadata": {
+        "index": 16,
+        "category": "cat_1"
+      },
+      "modality": "test",
+      "source": "test_content_16",
+      "timestamp": 1758575185.6175864
+    },
+    "test_vector_017": {
+      "metadata": {
+        "index": 17,
+        "category": "cat_2"
+      },
+      "modality": "test",
+      "source": "test_content_17",
+      "timestamp": 1758575185.6176033
+    },
+    "test_vector_018": {
+      "metadata": {
+        "index": 18,
+        "category": "cat_3"
+      },
+      "modality": "test",
+      "source": "test_content_18",
+      "timestamp": 1758575185.6176207
+    },
+    "test_vector_019": {
+      "metadata": {
+        "index": 19,
+        "category": "cat_4"
+      },
+      "modality": "test",
+      "source": "test_content_19",
+      "timestamp": 1758575185.617638
+    },
+    "test_vector_020": {
+      "metadata": {
+        "index": 20,
+        "category": "cat_0"
+      },
+      "modality": "test",
+      "source": "test_content_20",
+      "timestamp": 1758575185.6176558
+    },
+    "test_vector_021": {
+      "metadata": {
+        "index": 21,
+        "category": "cat_1"
+      },
+      "modality": "test",
+      "source": "test_content_21",
+      "timestamp": 1758575185.6176746
+    },
+    "test_vector_022": {
+      "metadata": {
+        "index": 22,
+        "category": "cat_2"
+      },
+      "modality": "test",
+      "source": "test_content_22",
+      "timestamp": 1758575185.617692
+    },
+    "test_vector_023": {
+      "metadata": {
+        "index": 23,
+        "category": "cat_3"
+      },
+      "modality": "test",
+      "source": "test_content_23",
+      "timestamp": 1758575185.6177094
+    },
+    "test_vector_024": {
+      "metadata": {
+        "index": 24,
+        "category": "cat_4"
+      },
+      "modality": "test",
+      "source": "test_content_24",
+      "timestamp": 1758575185.6177266
+    },
+    "test_vector_025": {
+      "metadata": {
+        "index": 25,
+        "category": "cat_0"
+      },
+      "modality": "test",
+      "source": "test_content_25",
+      "timestamp": 1758575185.6177444
+    },
+    "test_vector_026": {
+      "metadata": {
+        "index": 26,
+        "category": "cat_1"
+      },
+      "modality": "test",
+      "source": "test_content_26",
+      "timestamp": 1758575185.6177745
+    },
+    "test_vector_027": {
+      "metadata": {
+        "index": 27,
+        "category": "cat_2"
+      },
+      "modality": "test",
+      "source": "test_content_27",
+      "timestamp": 1758575185.617792
+    },
+    "test_vector_028": {
+      "metadata": {
+        "index": 28,
+        "category": "cat_3"
+      },
+      "modality": "test",
+      "source": "test_content_28",
+      "timestamp": 1758575185.6178093
+    },
+    "test_vector_029": {
+      "metadata": {
+        "index": 29,
+        "category": "cat_4"
+      },
+      "modality": "test",
+      "source": "test_content_29",
+      "timestamp": 1758575185.6178284
+    },
+    "test_vector_030": {
+      "metadata": {
+        "index": 30,
+        "category": "cat_0"
+      },
+      "modality": "test",
+      "source": "test_content_30",
+      "timestamp": 1758575185.6178458
+    },
+    "test_vector_031": {
+      "metadata": {
+        "index": 31,
+        "category": "cat_1"
+      },
+      "modality": "test",
+      "source": "test_content_31",
+      "timestamp": 1758575185.617863
+    },
+    "test_vector_032": {
+      "metadata": {
+        "index": 32,
+        "category": "cat_2"
+      },
+      "modality": "test",
+      "source": "test_content_32",
+      "timestamp": 1758575185.6178806
+    },
+    "test_vector_033": {
+      "metadata": {
+        "index": 33,
+        "category": "cat_3"
+      },
+      "modality": "test",
+      "source": "test_content_33",
+      "timestamp": 1758575185.6178982
+    },
+    "test_vector_034": {
+      "metadata": {
+        "index": 34,
+        "category": "cat_4"
+      },
+      "modality": "test",
+      "source": "test_content_34",
+      "timestamp": 1758575185.6179156
+    },
+    "test_vector_035": {
+      "metadata": {
+        "index": 35,
+        "category": "cat_0"
+      },
+      "modality": "test",
+      "source": "test_content_35",
+      "timestamp": 1758575185.617933
+    },
+    "test_vector_036": {
+      "metadata": {
+        "index": 36,
+        "category": "cat_1"
+      },
+      "modality": "test",
+      "source": "test_content_36",
+      "timestamp": 1758575185.6179504
+    },
+    "test_vector_037": {
+      "metadata": {
+        "index": 37,
+        "category": "cat_2"
+      },
+      "modality": "test",
+      "source": "test_content_37",
+      "timestamp": 1758575185.6179688
+    },
+    "test_vector_038": {
+      "metadata": {
+        "index": 38,
+        "category": "cat_3"
+      },
+      "modality": "test",
+      "source": "test_content_38",
+      "timestamp": 1758575185.6179857
+    },
+    "test_vector_039": {
+      "metadata": {
+        "index": 39,
+        "category": "cat_4"
+      },
+      "modality": "test",
+      "source": "test_content_39",
+      "timestamp": 1758575185.6180034
+    },
+    "test_vector_040": {
+      "metadata": {
+        "index": 40,
+        "category": "cat_0"
+      },
+      "modality": "test",
+      "source": "test_content_40",
+      "timestamp": 1758575185.618021
+    },
+    "test_vector_041": {
+      "metadata": {
+        "index": 41,
+        "category": "cat_1"
+      },
+      "modality": "test",
+      "source": "test_content_41",
+      "timestamp": 1758575185.6180382
+    },
+    "test_vector_042": {
+      "metadata": {
+        "index": 42,
+        "category": "cat_2"
+      },
+      "modality": "test",
+      "source": "test_content_42",
+      "timestamp": 1758575185.6180558
+    },
+    "test_vector_043": {
+      "metadata": {
+        "index": 43,
+        "category": "cat_3"
+      },
+      "modality": "test",
+      "source": "test_content_43",
+      "timestamp": 1758575185.6180732
+    },
+    "test_vector_044": {
+      "metadata": {
+        "index": 44,
+        "category": "cat_4"
+      },
+      "modality": "test",
+      "source": "test_content_44",
+      "timestamp": 1758575185.6180909
+    },
+    "test_vector_045": {
+      "metadata": {
+        "index": 45,
+        "category": "cat_0"
+      },
+      "modality": "test",
+      "source": "test_content_45",
+      "timestamp": 1758575185.6181095
+    },
+    "test_vector_046": {
+      "metadata": {
+        "index": 46,
+        "category": "cat_1"
+      },
+      "modality": "test",
+      "source": "test_content_46",
+      "timestamp": 1758575185.6181269
+    },
+    "test_vector_047": {
+      "metadata": {
+        "index": 47,
+        "category": "cat_2"
+      },
+      "modality": "test",
+      "source": "test_content_47",
+      "timestamp": 1758575185.6181443
+    },
+    "test_vector_048": {
+      "metadata": {
+        "index": 48,
+        "category": "cat_3"
+      },
+      "modality": "test",
+      "source": "test_content_48",
+      "timestamp": 1758575185.6181614
+    },
+    "test_vector_049": {
+      "metadata": {
+        "index": 49,
+        "category": "cat_4"
+      },
+      "modality": "test",
+      "source": "test_content_49",
+      "timestamp": 1758575185.6181786
+    }
+  },
+  "id_to_index": {
+    "text_001": 20,
+    "text_002": 21,
+    "text_003": 22,
+    "img_001": 23,
+    "img_002": 24,
+    "img_003": 25,
+    "doc_001": 26,
+    "doc_002": 27,
+    "audio_001": 28,
+    "video_001": 29,
+    "text_000": 30,
+    "image_001": 31,
+    "document_002": 32,
+    "audio_003": 33,
+    "video_004": 34,
+    "text_005": 35,
+    "image_006": 36,
+    "document_007": 37,
+    "audio_008": 38,
+    "video_009": 39,
+    "text_010": 40,
+    "image_011": 41,
+    "document_012": 42,
+    "audio_013": 43,
+    "video_014": 44,
+    "text_015": 45,
+    "image_016": 46,
+    "document_017": 47,
+    "audio_018": 48,
+    "video_019": 49,
+    "text_020": 50,
+    "image_021": 51,
+    "document_022": 52,
+    "audio_023": 53,
+    "video_024": 54,
+    "text_025": 55,
+    "image_026": 56,
+    "document_027": 57,
+    "audio_028": 58,
+    "video_029": 59,
+    "text_030": 60,
+    "image_031": 61,
+    "document_032": 62,
+    "audio_033": 63,
+    "video_034": 64,
+    "text_035": 65,
+    "image_036": 66,
+    "document_037": 67,
+    "audio_038": 68,
+    "video_039": 69,
+    "text_040": 70,
+    "image_041": 71,
+    "document_042": 72,
+    "audio_043": 73,
+    "video_044": 74,
+    "text_045": 75,
+    "image_046": 76,
+    "document_047": 77,
+    "audio_048": 78,
+    "video_049": 79,
+    "text_050": 80,
+    "image_051": 81,
+    "document_052": 82,
+    "audio_053": 83,
+    "video_054": 84,
+    "text_055": 85,
+    "image_056": 86,
+    "document_057": 87,
+    "audio_058": 88,
+    "video_059": 89,
+    "text_060": 90,
+    "image_061": 91,
+    "document_062": 92,
+    "audio_063": 93,
+    "video_064": 94,
+    "text_065": 95,
+    "image_066": 96,
+    "document_067": 97,
+    "audio_068": 98,
+    "video_069": 99,
+    "text_070": 100,
+    "image_071": 101,
+    "document_072": 102,
+    "audio_073": 103,
+    "video_074": 104,
+    "text_075": 105,
+    "image_076": 106,
+    "document_077": 107,
+    "audio_078": 108,
+    "video_079": 109,
+    "text_080": 110,
+    "image_081": 111,
+    "document_082": 112,
+    "audio_083": 113,
+    "video_084": 114,
+    "text_085": 115,
+    "image_086": 116,
+    "document_087": 117,
+    "audio_088": 118,
+    "video_089": 119,
+    "text_090": 120,
+    "image_091": 121,
+    "document_092": 122,
+    "audio_093": 123,
+    "video_094": 124,
+    "text_095": 125,
+    "image_096": 126,
+    "document_097": 127,
+    "audio_098": 128,
+    "video_099": 129,
+    "test_vector_000": 180,
+    "test_vector_001": 181,
+    "test_vector_002": 182,
+    "test_vector_003": 183,
+    "test_vector_004": 184,
+    "test_vector_005": 185,
+    "test_vector_006": 186,
+    "test_vector_007": 187,
+    "test_vector_008": 188,
+    "test_vector_009": 189,
+    "test_vector_010": 190,
+    "test_vector_011": 191,
+    "test_vector_012": 192,
+    "test_vector_013": 193,
+    "test_vector_014": 194,
+    "test_vector_015": 195,
+    "test_vector_016": 196,
+    "test_vector_017": 197,
+    "test_vector_018": 198,
+    "test_vector_019": 199,
+    "test_vector_020": 200,
+    "test_vector_021": 201,
+    "test_vector_022": 202,
+    "test_vector_023": 203,
+    "test_vector_024": 204,
+    "test_vector_025": 205,
+    "test_vector_026": 206,
+    "test_vector_027": 207,
+    "test_vector_028": 208,
+    "test_vector_029": 209,
+    "test_vector_030": 210,
+    "test_vector_031": 211,
+    "test_vector_032": 212,
+    "test_vector_033": 213,
+    "test_vector_034": 214,
+    "test_vector_035": 215,
+    "test_vector_036": 216,
+    "test_vector_037": 217,
+    "test_vector_038": 218,
+    "test_vector_039": 219,
+    "test_vector_040": 220,
+    "test_vector_041": 221,
+    "test_vector_042": 222,
+    "test_vector_043": 223,
+    "test_vector_044": 224,
+    "test_vector_045": 225,
+    "test_vector_046": 226,
+    "test_vector_047": 227,
+    "test_vector_048": 228,
+    "test_vector_049": 229
+  },
+  "index_to_id": {
+    "0": "text_001",
+    "1": "text_002",
+    "2": "text_003",
+    "3": "img_001",
+    "4": "img_002",
+    "5": "img_003",
+    "6": "doc_001",
+    "7": "doc_002",
+    "8": "audio_001",
+    "9": "video_001",
+    "10": "text_001",
+    "11": "text_002",
+    "12": "text_003",
+    "13": "img_001",
+    "14": "img_002",
+    "15": "img_003",
+    "16": "doc_001",
+    "17": "doc_002",
+    "18": "audio_001",
+    "19": "video_001",
+    "20": "text_001",
+    "21": "text_002",
+    "22": "text_003",
+    "23": "img_001",
+    "24": "img_002",
+    "25": "img_003",
+    "26": "doc_001",
+    "27": "doc_002",
+    "28": "audio_001",
+    "29": "video_001",
+    "30": "text_000",
+    "31": "image_001",
+    "32": "document_002",
+    "33": "audio_003",
+    "34": "video_004",
+    "35": "text_005",
+    "36": "image_006",
+    "37": "document_007",
+    "38": "audio_008",
+    "39": "video_009",
+    "40": "text_010",
+    "41": "image_011",
+    "42": "document_012",
+    "43": "audio_013",
+    "44": "video_014",
+    "45": "text_015",
+    "46": "image_016",
+    "47": "document_017",
+    "48": "audio_018",
+    "49": "video_019",
+    "50": "text_020",
+    "51": "image_021",
+    "52": "document_022",
+    "53": "audio_023",
+    "54": "video_024",
+    "55": "text_025",
+    "56": "image_026",
+    "57": "document_027",
+    "58": "audio_028",
+    "59": "video_029",
+    "60": "text_030",
+    "61": "image_031",
+    "62": "document_032",
+    "63": "audio_033",
+    "64": "video_034",
+    "65": "text_035",
+    "66": "image_036",
+    "67": "document_037",
+    "68": "audio_038",
+    "69": "video_039",
+    "70": "text_040",
+    "71": "image_041",
+    "72": "document_042",
+    "73": "audio_043",
+    "74": "video_044",
+    "75": "text_045",
+    "76": "image_046",
+    "77": "document_047",
+    "78": "audio_048",
+    "79": "video_049",
+    "80": "text_050",
+    "81": "image_051",
+    "82": "document_052",
+    "83": "audio_053",
+    "84": "video_054",
+    "85": "text_055",
+    "86": "image_056",
+    "87": "document_057",
+    "88": "audio_058",
+    "89": "video_059",
+    "90": "text_060",
+    "91": "image_061",
+    "92": "document_062",
+    "93": "audio_063",
+    "94": "video_064",
+    "95": "text_065",
+    "96": "image_066",
+    "97": "document_067",
+    "98": "audio_068",
+    "99": "video_069",
+    "100": "text_070",
+    "101": "image_071",
+    "102": "document_072",
+    "103": "audio_073",
+    "104": "video_074",
+    "105": "text_075",
+    "106": "image_076",
+    "107": "document_077",
+    "108": "audio_078",
+    "109": "video_079",
+    "110": "text_080",
+    "111": "image_081",
+    "112": "document_082",
+    "113": "audio_083",
+    "114": "video_084",
+    "115": "text_085",
+    "116": "image_086",
+    "117": "document_087",
+    "118": "audio_088",
+    "119": "video_089",
+    "120": "text_090",
+    "121": "image_091",
+    "122": "document_092",
+    "123": "audio_093",
+    "124": "video_094",
+    "125": "text_095",
+    "126": "image_096",
+    "127": "document_097",
+    "128": "audio_098",
+    "129": "video_099",
+    "130": "test_vector_000",
+    "131": "test_vector_001",
+    "132": "test_vector_002",
+    "133": "test_vector_003",
+    "134": "test_vector_004",
+    "135": "test_vector_005",
+    "136": "test_vector_006",
+    "137": "test_vector_007",
+    "138": "test_vector_008",
+    "139": "test_vector_009",
+    "140": "test_vector_010",
+    "141": "test_vector_011",
+    "142": "test_vector_012",
+    "143": "test_vector_013",
+    "144": "test_vector_014",
+    "145": "test_vector_015",
+    "146": "test_vector_016",
+    "147": "test_vector_017",
+    "148": "test_vector_018",
+    "149": "test_vector_019",
+    "150": "test_vector_020",
+    "151": "test_vector_021",
+    "152": "test_vector_022",
+    "153": "test_vector_023",
+    "154": "test_vector_024",
+    "155": "test_vector_025",
+    "156": "test_vector_026",
+    "157": "test_vector_027",
+    "158": "test_vector_028",
+    "159": "test_vector_029",
+    "160": "test_vector_030",
+    "161": "test_vector_031",
+    "162": "test_vector_032",
+    "163": "test_vector_033",
+    "164": "test_vector_034",
+    "165": "test_vector_035",
+    "166": "test_vector_036",
+    "167": "test_vector_037",
+    "168": "test_vector_038",
+    "169": "test_vector_039",
+    "170": "test_vector_040",
+    "171": "test_vector_041",
+    "172": "test_vector_042",
+    "173": "test_vector_043",
+    "174": "test_vector_044",
+    "175": "test_vector_045",
+    "176": "test_vector_046",
+    "177": "test_vector_047",
+    "178": "test_vector_048",
+    "179": "test_vector_049",
+    "180": "test_vector_000",
+    "181": "test_vector_001",
+    "182": "test_vector_002",
+    "183": "test_vector_003",
+    "184": "test_vector_004",
+    "185": "test_vector_005",
+    "186": "test_vector_006",
+    "187": "test_vector_007",
+    "188": "test_vector_008",
+    "189": "test_vector_009",
+    "190": "test_vector_010",
+    "191": "test_vector_011",
+    "192": "test_vector_012",
+    "193": "test_vector_013",
+    "194": "test_vector_014",
+    "195": "test_vector_015",
+    "196": "test_vector_016",
+    "197": "test_vector_017",
+    "198": "test_vector_018",
+    "199": "test_vector_019",
+    "200": "test_vector_020",
+    "201": "test_vector_021",
+    "202": "test_vector_022",
+    "203": "test_vector_023",
+    "204": "test_vector_024",
+    "205": "test_vector_025",
+    "206": "test_vector_026",
+    "207": "test_vector_027",
+    "208": "test_vector_028",
+    "209": "test_vector_029",
+    "210": "test_vector_030",
+    "211": "test_vector_031",
+    "212": "test_vector_032",
+    "213": "test_vector_033",
+    "214": "test_vector_034",
+    "215": "test_vector_035",
+    "216": "test_vector_036",
+    "217": "test_vector_037",
+    "218": "test_vector_038",
+    "219": "test_vector_039",
+    "220": "test_vector_040",
+    "221": "test_vector_041",
+    "222": "test_vector_042",
+    "223": "test_vector_043",
+    "224": "test_vector_044",
+    "225": "test_vector_045",
+    "226": "test_vector_046",
+    "227": "test_vector_047",
+    "228": "test_vector_048",
+    "229": "test_vector_049"
+  },
+  "next_index": 230
+}
