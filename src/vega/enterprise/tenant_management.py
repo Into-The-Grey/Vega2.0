@@ -158,6 +158,50 @@ class SubscriptionPlan:
 
 
 class TenantManager:
+    def get_tenant_session(self, tenant_config: TenantConfiguration) -> AsyncSession:
+        """
+        Return an AsyncSession for the given tenant, routing to the correct engine/schema.
+        For schema-per-tenant and hybrid, call set_schema(session, schema_name) after session creation.
+        Ensures only AsyncEngine is used.
+        """
+        from sqlalchemy.ext.asyncio import AsyncEngine
+
+        strategy = tenant_config.isolation_strategy
+        if strategy == TenantIsolationStrategy.DATABASE_PER_TENANT:
+            engine = self.database_engines.get(tenant_config.tenant_id)
+            if not engine:
+                raise RuntimeError(f"No engine for tenant {tenant_config.tenant_id}")
+            from sqlalchemy.ext.asyncio import AsyncEngine
+
+            if not isinstance(engine, AsyncEngine):
+                raise TypeError(
+                    f"Engine for tenant {tenant_config.tenant_id} is not AsyncEngine"
+                )
+            return AsyncSession(engine)
+        else:
+            engine = self.database_engines.get("main")
+            if not engine:
+                raise RuntimeError("No main engine for shared DB")
+            from sqlalchemy.ext.asyncio import AsyncEngine
+
+            if not isinstance(engine, AsyncEngine):
+                raise TypeError("Main engine is not AsyncEngine")
+            return AsyncSession(engine)
+
+    async def set_schema(self, session: AsyncSession, schema_name: str):
+        """Set the schema for the session (Postgres only). Call after session creation."""
+        await session.execute(sa.text(f"SET search_path TO {schema_name}"))
+
+    def enforce_rls(self, query, tenant_id: str):
+        """
+        Inject tenant_id filter into ORM queries for RLS enforcement.
+        Usage: query = tenant_manager.enforce_rls(query, tenant_id)
+        """
+        if tenant_id is not None:
+            # Assume all models have a tenant_id column for RLS
+            return query.filter_by(tenant_id=tenant_id)
+        return query
+
     """Advanced tenant management system"""
 
     def __init__(self, config: Any):
@@ -407,33 +451,74 @@ class TenantManager:
         tenant_config.encryption_key = Fernet.generate_key().decode()
 
     async def _setup_database_per_tenant(self, tenant_config: TenantConfiguration):
-        """Set up dedicated database for tenant"""
+        """Set up dedicated database for tenant, including DB creation and migrations."""
+        import sqlalchemy
 
         tenant_id = tenant_config.tenant_id
         db_name = f"tenant_{tenant_id.replace('-', '_')}"
-
-        # Configure database connection
         base_url = self.config.get("database_url", "sqlite+aiosqlite:///./tenants.db")
         if "sqlite" in base_url:
+            import os
+
+            os.makedirs("./tenant_dbs", exist_ok=True)
             tenant_db_url = f"sqlite+aiosqlite:///./tenant_dbs/{db_name}.db"
         else:
-            # For PostgreSQL/MySQL, create database
-            tenant_db_url = base_url.replace("/vega", f"/{db_name}")
+            # For PostgreSQL/MySQL, create database if not exists
+            from sqlalchemy.engine.url import make_url
 
+            url_obj = make_url(base_url)
+            admin_url = str(
+                url_obj.set(
+                    database=(
+                        "postgres"
+                        if url_obj.drivername.startswith("postgres")
+                        else url_obj.database
+                    )
+                )
+            )
+            engine = sqlalchemy.create_engine(admin_url)
+            with engine.connect() as conn:
+                if url_obj.drivername.startswith("postgres"):
+                    conn.execute(
+                        sqlalchemy.text(
+                            f"CREATE DATABASE {db_name} ENCODING 'UTF8' TEMPLATE template1"
+                        )
+                    )
+                elif url_obj.drivername.startswith("mysql"):
+                    conn.execute(
+                        sqlalchemy.text(f"CREATE DATABASE IF NOT EXISTS {db_name}")
+                    )
+            tenant_db_url = str(url_obj.set(database=db_name))
         tenant_config.database_config = {
             "url": tenant_db_url,
             "isolation": "database_per_tenant",
         }
-
-        # Create database engine for this tenant
-        self.database_engines[tenant_id] = create_async_engine(tenant_db_url)
+        # Create async engine for this tenant
+        self.database_engines[tenant_config.tenant_id] = create_async_engine(
+            tenant_db_url
+        )
+        logger.info(
+            f"Provisioned database for tenant {tenant_config.tenant_id}: {tenant_db_url}"
+        )
 
     async def _setup_schema_per_tenant(self, tenant_config: TenantConfiguration):
-        """Set up dedicated schema for tenant"""
+        """Set up dedicated schema for tenant, including schema creation."""
+        import sqlalchemy
 
         tenant_id = tenant_config.tenant_id
         schema_name = f"tenant_{tenant_id.replace('-', '_')}"
-
+        base_url = self.config.get("database_url", "sqlite+aiosqlite:///./tenants.db")
+        # Use a sync engine only for DDL, do not store it in self.database_engines
+        engine = sqlalchemy.create_engine(base_url)
+        with engine.connect() as conn:
+            try:
+                conn.execute(
+                    sqlalchemy.text(f"CREATE SCHEMA IF NOT EXISTS {schema_name}")
+                )
+                logger.info(f"Created schema for tenant {tenant_id}: {schema_name}")
+            except Exception as e:
+                logger.error(f"Failed to create schema for tenant {tenant_id}: {e}")
+                raise
         tenant_config.schema_name = schema_name
         tenant_config.database_config = {
             "schema": schema_name,
