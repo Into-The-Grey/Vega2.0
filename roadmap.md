@@ -53,7 +53,7 @@
 ### Phase 5: Federated Learning Research & Experimental Features 🔄 TODO
 
 - [x] **Personalized Federated Learning** - Individual model adaptation using FedPer, pFedMe algorithms with local fine-tuning (`src/vega/federated/personalized.py`)
-- [ ] **Federated Reinforcement Learning** - Multi-agent RL with federated policy optimization and experience sharing (`src/vega/federated/reinforcement.py`)
+- [x] **Federated Reinforcement Learning** - Multi-agent RL with federated policy optimization for multi-armed bandits using REINFORCE and FedAvg (`src/vega/federated/reinforcement.py`)
 - [ ] **Continual Federated Learning** - Lifelong learning with catastrophic forgetting prevention and knowledge retention (`src/vega/federated/continual.py`)
 - [ ] **Asynchronous Federated Learning** - Non-blocking aggregation with staleness tolerance and dynamic participant scheduling (`src/vega/federated/async.py`)
 - [ ] **Federated Meta-Learning** - Model-agnostic meta-learning (MAML) for quick adaptation to new tasks (`src/vega/federated/meta_learning.py`)

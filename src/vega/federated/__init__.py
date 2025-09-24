@@ -25,7 +25,12 @@ from .encryption import DynamicEncryption
 from .fedavg import FedAvg, FedAvgConfig
 from .algorithms import FedProx, FedProxConfig, LAG, LAGConfig
 from .dp import DifferentialPrivacy
-from .image_input import ImageInputConfig, ImageInputHandler, ProcessedImage, process_image
+from .image_input import (
+    ImageInputConfig,
+    ImageInputHandler,
+    ProcessedImage,
+    process_image,
+)
 from .data_utils import (
     DataStatistics,
     PartitionResult,
@@ -42,6 +47,14 @@ from .cross_silo import (
 )
 from .cross_silo_coordinator import CrossSiloCoordinator, CrossSiloCoordinationConfig
 from .hierarchical_aggregation import HierarchicalAggregator, LevelAggregationConfig
+from .reinforcement import (
+    BanditEnv,
+    SoftmaxPolicy,
+    LocalFRLConfig,
+    local_train_bandit,
+    fedavg_thetas,
+    run_federated_bandit,
+)
 
 __all__ = [
     # Core components
@@ -79,6 +92,13 @@ __all__ = [
     "CrossSiloCoordinationConfig",
     "HierarchicalAggregator",
     "LevelAggregationConfig",
+    # Federated Reinforcement Learning (Bandit)
+    "BanditEnv",
+    "SoftmaxPolicy",
+    "LocalFRLConfig",
+    "local_train_bandit",
+    "fedavg_thetas",
+    "run_federated_bandit",
 ]
 
 __version__ = "1.0.0"

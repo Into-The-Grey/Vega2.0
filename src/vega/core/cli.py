@@ -86,6 +86,51 @@ app.add_typer(gen_app, name="gen")
 app.add_typer(osint_app, name="osint")
 app.add_typer(net_app, name="net")
 
+# Federated Reinforcement Learning commands
+frl_app = typer.Typer(help="Federated Reinforcement Learning utilities")
+app.add_typer(frl_app, name="frl")
+
+
+@frl_app.command("bandit")
+def frl_bandit_demo(
+    participants: int = typer.Option(3, help="Number of clients/participants"),
+    arms: int = typer.Option(3, help="Number of bandit arms"),
+    rounds: int = typer.Option(8, help="Federated rounds to run"),
+    steps: int = typer.Option(100, help="Local steps per round per client"),
+    lr: float = typer.Option(0.1, help="Local learning rate"),
+    seed: int = typer.Option(123, help="Random seed for determinism"),
+):
+    """Run a simple Federated RL (multi-armed bandit) demo."""
+    try:
+        from ..federated.reinforcement import BanditEnv, run_federated_bandit
+    except Exception as e:  # pragma: no cover - import error path
+        console.print(f"✗ Failed to import FRL module: {e}", style="red")
+        return
+
+    # Generate heterogeneous client environments with varying best arms
+    random = __import__("random")
+    random.seed(seed)
+    client_envs = []
+    for _ in range(participants):
+        # Create a random probability distribution with one clearly best arm
+        base = [random.uniform(0.05, 0.5) for _ in range(arms)]
+        best_idx = random.randrange(arms)
+        base[best_idx] = random.uniform(0.6, 0.9)
+        client_envs.append(BanditEnv(base))
+
+    result = run_federated_bandit(
+        client_envs, rounds=rounds, local_steps_per_round=steps, lr=lr, seed=seed
+    )
+
+    table = Table(title="Federated RL (Bandit) Training History")
+    table.add_column("Round", style="cyan")
+    table.add_column("Avg Reward", style="green")
+    for r in result["history"]:
+        table.add_row(str(r["round"]), f"{r['avg_reward']:.3f}")
+    console.print(table)
+    console.print("Final theta:", result["final_theta"])
+
+
 # Add autonomous feature commands
 backup_app = typer.Typer(help="Backup and restore operations")
 voice_app = typer.Typer(help="Voice profile management")
