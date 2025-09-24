@@ -54,7 +54,7 @@
 
 - [x] **Personalized Federated Learning** - Individual model adaptation using FedPer, pFedMe algorithms with local fine-tuning (`src/vega/federated/personalized.py`)
 - [x] **Federated Reinforcement Learning** - Multi-agent RL with federated policy optimization for multi-armed bandits using REINFORCE and FedAvg (`src/vega/federated/reinforcement.py`)
-- [ ] **Continual Federated Learning** - Lifelong learning with catastrophic forgetting prevention and knowledge retention (`src/vega/federated/continual.py`)
+- [x] **Continual Federated Learning** - Lifelong learning with Elastic Weight Consolidation (EWC) preventing catastrophic forgetting across sequential tasks (`src/vega/federated/continual.py`)
 - [ ] **Asynchronous Federated Learning** - Non-blocking aggregation with staleness tolerance and dynamic participant scheduling (`src/vega/federated/async.py`)
 - [ ] **Federated Meta-Learning** - Model-agnostic meta-learning (MAML) for quick adaptation to new tasks (`src/vega/federated/meta_learning.py`)
 - [ ] **Byzantine-Robust Federated Learning** - Defense against malicious participants using robust aggregation (Krum, Trimmed Mean) (`src/vega/federated/byzantine_robust.py`)

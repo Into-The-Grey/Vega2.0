@@ -131,6 +131,75 @@ def frl_bandit_demo(
     console.print("Final theta:", result["final_theta"])
 
 
+@frl_app.command("continual")
+def frl_continual_demo(
+    participants: int = typer.Option(3, help="Number of federated participants"),
+    tasks: int = typer.Option(3, help="Number of sequential tasks"),
+    steps_per_task: int = typer.Option(150, help="Training steps per task"),
+    fed_rounds: int = typer.Option(3, help="Federated rounds per task"),
+    lr: float = typer.Option(0.02, help="Learning rate"),
+    ewc_lambda: float = typer.Option(500.0, help="EWC regularization strength"),
+    seed: int = typer.Option(123, help="Random seed for determinism"),
+):
+    """Run Continual Federated Learning with Elastic Weight Consolidation."""
+    try:
+        from ..federated.continual import (
+            run_continual_federated_learning,
+            create_synthetic_task_sequence,
+        )
+    except Exception as e:  # pragma: no cover - import error path
+        console.print(f"✗ Failed to import Continual FL module: {e}", style="red")
+        return
+
+    # Create synthetic task sequence
+    task_sequence = create_synthetic_task_sequence()[:tasks]
+
+    console.print(
+        f"Running Continual FL with {participants} participants on {tasks} sequential tasks"
+    )
+    console.print(f"EWC lambda: {ewc_lambda}, Learning rate: {lr}")
+
+    results = run_continual_federated_learning(
+        num_participants=participants,
+        tasks=task_sequence,
+        steps_per_task=steps_per_task,
+        fed_rounds_per_task=fed_rounds,
+        lr=lr,
+        ewc_lambda=ewc_lambda,
+        seed=seed,
+    )
+
+    # Display results
+    table = Table(title="Continual Federated Learning Results")
+    table.add_column("Task", style="cyan")
+    table.add_column("Final Avg Loss", style="green")
+    table.add_column("Forgetting?", style="yellow")
+
+    final_performance = results["performance_matrix"][-1]
+    for task_idx, task_name in enumerate(results["tasks"]):
+        avg_loss = sum(final_performance[task_idx]) / len(final_performance[task_idx])
+
+        # Check for catastrophic forgetting (compare to when task was first learned)
+        if task_idx > 0:
+            initial_performance = results["performance_matrix"][task_idx][task_idx]
+            initial_avg = sum(initial_performance) / len(initial_performance)
+            forgetting_ratio = avg_loss / initial_avg if initial_avg > 0 else 1.0
+            forgetting_status = (
+                "HIGH"
+                if forgetting_ratio > 2.0
+                else "LOW" if forgetting_ratio > 1.3 else "MINIMAL"
+            )
+        else:
+            forgetting_status = "N/A"
+
+        table.add_row(task_name, f"{avg_loss:.3f}", forgetting_status)
+
+    console.print(table)
+    console.print(
+        f"Total federated rounds completed: {len(results['federated_history'])}"
+    )
+
+
 # Add autonomous feature commands
 backup_app = typer.Typer(help="Backup and restore operations")
 voice_app = typer.Typer(help="Voice profile management")

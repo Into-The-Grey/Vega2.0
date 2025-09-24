@@ -55,6 +55,15 @@ from .reinforcement import (
     fedavg_thetas,
     run_federated_bandit,
 )
+from .continual import (
+    Task,
+    LinearModel,
+    EWCConfig,
+    EWCParticipant,
+    federated_continual_aggregate,
+    run_continual_federated_learning,
+    create_synthetic_task_sequence,
+)
 
 __all__ = [
     # Core components
@@ -99,6 +108,14 @@ __all__ = [
     "local_train_bandit",
     "fedavg_thetas",
     "run_federated_bandit",
+    # Continual Federated Learning (EWC)
+    "Task",
+    "LinearModel",
+    "EWCConfig",
+    "EWCParticipant",
+    "federated_continual_aggregate",
+    "run_continual_federated_learning",
+    "create_synthetic_task_sequence",
 ]
 
 __version__ = "1.0.0"
