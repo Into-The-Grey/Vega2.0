@@ -90,6 +90,10 @@ app.add_typer(net_app, name="net")
 frl_app = typer.Typer(help="Federated Reinforcement Learning utilities")
 app.add_typer(frl_app, name="frl")
 
+# Federated Pruning commands
+pruning_app = typer.Typer(help="Federated Model Pruning utilities")
+app.add_typer(pruning_app, name="pruning")
+
 
 @frl_app.command("bandit")
 def frl_bandit_demo(
@@ -733,6 +737,393 @@ try:
 
 except ImportError:
     memory_app = None
+
+
+# ========== Federated Pruning Commands ==========
+
+
+@pruning_app.command("demo")
+def pruning_demo(
+    participants: int = typer.Option(3, help="Number of federated participants"),
+    rounds: int = typer.Option(8, help="Number of pruning rounds"),
+    target_sparsity: float = typer.Option(0.7, help="Target sparsity ratio (0.0-0.95)"),
+    pruning_type: str = typer.Option(
+        "magnitude", help="Pruning type: magnitude, gradient, or structured"
+    ),
+    seed: int = typer.Option(42, help="Random seed for reproducibility"),
+):
+    """Run a federated model pruning demonstration."""
+    try:
+        import torch
+        import asyncio
+        from ..federated.pruning import PruningCoordinator, PruningConfig, PruningType
+
+        console.print("🔥 Running Federated Model Pruning Demo", style="bold blue")
+
+        # Configure pruning
+        pruning_config = PruningConfig(
+            target_sparsity=target_sparsity,
+            pruning_type=(
+                PruningType.MAGNITUDE
+                if pruning_type == "magnitude"
+                else (
+                    PruningType.GRADIENT
+                    if pruning_type == "gradient"
+                    else PruningType.STRUCTURED
+                )
+            ),
+            distillation_temperature=4.0,
+            distillation_alpha=0.7,
+        )
+
+        async def run_demo():
+            coordinator = PruningCoordinator(pruning_config)
+
+            # Create simple test models
+            class SimpleModel(torch.nn.Module):
+                def __init__(self):
+                    super().__init__()
+                    self.fc1 = torch.nn.Linear(100, 50)
+                    self.fc2 = torch.nn.Linear(50, 10)
+
+                def forward(self, x):
+                    return self.fc2(torch.relu(self.fc1(x)))
+
+            participant_models = {
+                f"participant_{i}": SimpleModel() for i in range(participants)
+            }
+
+            console.print(f"Created {participants} participant models")
+
+            for round_num in range(1, rounds + 1):
+                console.print(f"\n🔄 Round {round_num}/{rounds}")
+
+                results = await coordinator.coordinate_pruning_round(
+                    round_num=round_num, participant_models=participant_models
+                )
+
+                avg_sparsity = sum(results["sparsity_achieved"].values()) / len(
+                    results["sparsity_achieved"]
+                )
+                console.print(f"  Average sparsity achieved: {avg_sparsity:.3f}")
+
+                if results.get("distillation_applied"):
+                    console.print("  🎓 Knowledge distillation applied")
+
+        asyncio.run(run_demo())
+        console.print("✅ Federated pruning demo completed!", style="green")
+
+    except Exception as e:
+        console.print(f"❌ Error running pruning demo: {e}", style="red")
+
+
+@pruning_app.command("orchestrate")
+def orchestration_demo(
+    participants: int = typer.Option(4, help="Number of federated participants"),
+    rounds: int = typer.Option(10, help="Number of orchestration rounds"),
+    initial_sparsity: float = typer.Option(0.1, help="Initial sparsity ratio"),
+    final_sparsity: float = typer.Option(0.8, help="Final sparsity ratio"),
+    warmup_rounds: int = typer.Option(3, help="Number of warmup rounds"),
+    save_history: bool = typer.Option(False, help="Save orchestration history to file"),
+):
+    """Run adaptive pruning orchestration demonstration."""
+    try:
+        import torch
+        import asyncio
+        from ..federated.pruning_orchestrator import (
+            AdaptivePruningOrchestrator,
+            SparsityScheduleConfig,
+            ParticipantCapability,
+            PruningStrategy,
+        )
+
+        console.print(
+            "🎯 Running Adaptive Pruning Orchestration Demo", style="bold blue"
+        )
+
+        # Create orchestrator
+        config = SparsityScheduleConfig(
+            initial_sparsity=initial_sparsity,
+            final_sparsity=final_sparsity,
+            warmup_rounds=warmup_rounds,
+            adaptation_rate=0.15,
+        )
+
+        orchestrator = AdaptivePruningOrchestrator(config)
+
+        # Register diverse participants
+        participant_configs = [
+            ("mobile_device", ParticipantCapability.LOW, PruningStrategy.CONSERVATIVE),
+            ("edge_server", ParticipantCapability.MEDIUM, PruningStrategy.BALANCED),
+            ("cloud_instance", ParticipantCapability.HIGH, PruningStrategy.AGGRESSIVE),
+            (
+                "variable_device",
+                ParticipantCapability.VARIABLE,
+                PruningStrategy.ADAPTIVE,
+            ),
+        ]
+
+        for i, (name, capability, strategy) in enumerate(
+            participant_configs[:participants]
+        ):
+            orchestrator.register_participant(f"{name}_{i}", capability, strategy)
+
+        console.print(
+            f"Registered {participants} participants with diverse capabilities"
+        )
+
+        async def run_orchestration():
+            # Create test models
+            class TestModel(torch.nn.Module):
+                def __init__(self):
+                    super().__init__()
+                    self.fc = torch.nn.Linear(100, 10)
+
+                def forward(self, x):
+                    return self.fc(x)
+
+            participant_models = {
+                pid: TestModel() for pid in orchestrator.participant_profiles.keys()
+            }
+            global_model = TestModel()
+
+            console.print(f"\n🚀 Starting {rounds} orchestration rounds...\n")
+
+            for round_num in range(1, rounds + 1):
+                results = await orchestrator.orchestrate_pruning_round(
+                    round_num=round_num,
+                    total_rounds=rounds,
+                    participant_models=participant_models,
+                    global_model=global_model,
+                )
+
+                summary = results["performance_summary"]
+                console.print(
+                    f"Round {round_num:2d}: "
+                    f"acc={summary['average_accuracy']:.3f}, "
+                    f"sparsity={summary['average_sparsity']:.3f}, "
+                    f"struggling={summary['struggling_participants']}"
+                )
+
+                if results["distillation_results"]:
+                    console.print(
+                        f"    🎓 Applied distillation to {len(results['distillation_results']['results'])} participants"
+                    )
+
+                if results["monitoring_results"]["alerts"]:
+                    console.print(
+                        f"    ⚠️ {len(results['monitoring_results']['alerts'])} alerts generated"
+                    )
+
+            # Show final summary
+            final_summary = orchestrator.get_orchestration_summary()
+
+            console.print("\n📊 Orchestration Summary:", style="bold")
+            console.print(
+                f"  Final accuracy: {final_summary['final_average_accuracy']:.3f}"
+            )
+            console.print(
+                f"  Final sparsity: {final_summary['final_average_sparsity']:.3f}"
+            )
+            console.print(
+                f"  Accuracy change: {final_summary['accuracy_improvement']:+.3f}"
+            )
+            console.print(
+                f"  Distillation interventions: {final_summary['distillation_interventions']}"
+            )
+            console.print(f"  Total adaptations: {final_summary['adaptations_made']}")
+            console.print(f"  Total alerts: {final_summary['alerts_generated']}")
+
+            if save_history:
+                history_file = "orchestration_history.json"
+                await orchestrator.save_orchestration_history(history_file)
+                console.print(f"  💾 History saved to {history_file}")
+
+        asyncio.run(run_orchestration())
+        console.print("✅ Adaptive orchestration demo completed!", style="green")
+
+    except Exception as e:
+        console.print(f"❌ Error running orchestration demo: {e}", style="red")
+
+
+@pruning_app.command("benchmark")
+def pruning_benchmark(
+    model_sizes: str = typer.Option(
+        "small,medium", help="Comma-separated model sizes: small,medium,large"
+    ),
+    sparsity_levels: str = typer.Option(
+        "0.3,0.5,0.7,0.9", help="Comma-separated sparsity levels"
+    ),
+    pruning_methods: str = typer.Option(
+        "magnitude,gradient,structured", help="Comma-separated pruning methods"
+    ),
+    participants: int = typer.Option(3, help="Number of participants"),
+    trials: int = typer.Option(3, help="Number of trials per configuration"),
+):
+    """Run comprehensive pruning benchmark across configurations."""
+    try:
+        import torch
+        import asyncio
+        import numpy as np
+        from ..federated.pruning import PruningCoordinator, PruningConfig, PruningType
+
+        console.print("🏁 Running Federated Pruning Benchmark", style="bold blue")
+
+        # Parse configuration
+        sizes = model_sizes.split(",")
+        sparsities = [float(s) for s in sparsity_levels.split(",")]
+        methods = pruning_methods.split(",")
+
+        console.print(
+            f"Configuration: {len(sizes)} sizes × {len(sparsities)} sparsity levels × {len(methods)} methods × {trials} trials"
+        )
+
+        results = []
+
+        async def run_benchmark():
+            for size in sizes:
+                for sparsity in sparsities:
+                    for method in methods:
+                        console.print(
+                            f"\n🧪 Testing {size} model, {sparsity} sparsity, {method} pruning"
+                        )
+
+                        trial_results = []
+
+                        for trial in range(trials):
+                            # Create model based on size
+                            if size == "small":
+                                model_class = lambda: torch.nn.Sequential(
+                                    torch.nn.Linear(50, 10)
+                                )
+                            elif size == "medium":
+                                model_class = lambda: torch.nn.Sequential(
+                                    torch.nn.Linear(100, 50),
+                                    torch.nn.ReLU(),
+                                    torch.nn.Linear(50, 10),
+                                )
+                            else:  # large
+                                model_class = lambda: torch.nn.Sequential(
+                                    torch.nn.Linear(200, 100),
+                                    torch.nn.ReLU(),
+                                    torch.nn.Linear(100, 50),
+                                    torch.nn.ReLU(),
+                                    torch.nn.Linear(50, 10),
+                                )
+
+                            # Configure pruning
+                            pruning_type = (
+                                PruningType.MAGNITUDE
+                                if method == "magnitude"
+                                else (
+                                    PruningType.GRADIENT
+                                    if method == "gradient"
+                                    else PruningType.STRUCTURED
+                                )
+                            )
+
+                            config = PruningConfig(
+                                target_sparsity=sparsity, pruning_type=pruning_type
+                            )
+                            coordinator = PruningCoordinator(config)
+
+                            # Create participant models
+                            participant_models = {
+                                f"p_{i}": model_class() for i in range(participants)
+                            }
+
+                            # Run single round
+                            start_time = time.time()
+                            results_dict = await coordinator.coordinate_pruning_round(
+                                1, participant_models
+                            )
+                            end_time = time.time()
+
+                            # Collect metrics
+                            avg_sparsity = np.mean(
+                                list(results_dict["sparsity_achieved"].values())
+                            )
+                            execution_time = end_time - start_time
+
+                            trial_results.append(
+                                {
+                                    "sparsity_achieved": avg_sparsity,
+                                    "execution_time": execution_time,
+                                    "distillation_applied": results_dict.get(
+                                        "distillation_applied", False
+                                    ),
+                                }
+                            )
+
+                        # Aggregate trial results
+                        avg_sparsity = np.mean(
+                            [r["sparsity_achieved"] for r in trial_results]
+                        )
+                        avg_time = np.mean([r["execution_time"] for r in trial_results])
+                        distillation_rate = np.mean(
+                            [r["distillation_applied"] for r in trial_results]
+                        )
+
+                        result = {
+                            "size": size,
+                            "target_sparsity": sparsity,
+                            "method": method,
+                            "achieved_sparsity": avg_sparsity,
+                            "execution_time": avg_time,
+                            "distillation_rate": distillation_rate,
+                            "sparsity_error": abs(sparsity - avg_sparsity),
+                        }
+
+                        results.append(result)
+
+                        console.print(
+                            f"  ✓ Achieved: {avg_sparsity:.3f} (target: {sparsity:.3f}), "
+                            f"Time: {avg_time:.2f}s, Error: {result['sparsity_error']:.3f}"
+                        )
+
+            # Display summary table
+            table = Table(title="Pruning Benchmark Results")
+            table.add_column("Size", style="cyan")
+            table.add_column("Method", style="magenta")
+            table.add_column("Target", style="yellow")
+            table.add_column("Achieved", style="green")
+            table.add_column("Error", style="red")
+            table.add_column("Time (s)", style="blue")
+
+            for result in results:
+                table.add_row(
+                    result["size"],
+                    result["method"],
+                    f"{result['target_sparsity']:.2f}",
+                    f"{result['achieved_sparsity']:.3f}",
+                    f"{result['sparsity_error']:.3f}",
+                    f"{result['execution_time']:.2f}",
+                )
+
+            console.print(table)
+
+            # Best configurations
+            console.print("\n🏆 Best Configurations:", style="bold")
+            best_accuracy = min(results, key=lambda x: x["sparsity_error"])
+            fastest = min(results, key=lambda x: x["execution_time"])
+
+            console.print(
+                f"  Most accurate: {best_accuracy['size']} {best_accuracy['method']} "
+                f"(error: {best_accuracy['sparsity_error']:.3f})"
+            )
+            console.print(
+                f"  Fastest: {fastest['size']} {fastest['method']} "
+                f"({fastest['execution_time']:.2f}s)"
+            )
+
+        import time
+
+        asyncio.run(run_benchmark())
+        console.print("✅ Pruning benchmark completed!", style="green")
+
+    except Exception as e:
+        console.print(f"❌ Error running benchmark: {e}", style="red")
+
 
 console = Console()
 

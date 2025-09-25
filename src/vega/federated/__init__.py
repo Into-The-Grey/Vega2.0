@@ -114,6 +114,26 @@ from .hyperopt import (
     create_federated_learning_space,
     create_xgboost_space,
 )
+from .pruning import (
+    PruningType,
+    PruningConfig,
+    PruningCoordinator,
+    StructuredPruning,
+    UnstructuredPruning,
+    FederatedDistillation,
+    SparsityAggregator,
+)
+from .pruning_orchestrator import (
+    ParticipantCapability,
+    PruningStrategy,
+    ParticipantProfile,
+    SparsityScheduleConfig,
+    PerformanceMetrics,
+    SparsityScheduler,
+    PerformanceMonitor,
+    DistillationCoordinator,
+    AdaptivePruningOrchestrator,
+)
 
 __all__ = [
     # Core components
@@ -194,6 +214,24 @@ __all__ = [
     "create_neural_network_space",
     "create_federated_learning_space",
     "create_xgboost_space",
+    # Federated Model Pruning
+    "PruningType",
+    "PruningConfig",
+    "PruningCoordinator",
+    "StructuredPruning",
+    "UnstructuredPruning",
+    "FederatedDistillation",
+    "SparsityAggregator",
+    # Adaptive Pruning Orchestrator
+    "ParticipantCapability",
+    "PruningStrategy",
+    "ParticipantProfile",
+    "SparsityScheduleConfig",
+    "PerformanceMetrics",
+    "SparsityScheduler",
+    "PerformanceMonitor",
+    "DistillationCoordinator",
+    "AdaptivePruningOrchestrator",
 ]
 
 __version__ = "1.0.0"

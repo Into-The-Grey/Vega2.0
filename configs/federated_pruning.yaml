@@ -1,0 +1,35 @@
+# Federated Model Pruning Configuration
+# =====================================
+
+# Basic pruning settings
+target_sparsity: 0.7                    # Target sparsity ratio (0.0 - 0.95)
+pruning_method: "magnitude"             # Pruning method: magnitude, gradient, structured
+pruning_frequency: 2                    # Apply pruning every N rounds
+
+# Knowledge distillation settings
+enable_distillation: true               # Enable knowledge distillation for recovery
+distillation_temperature: 4.0           # Temperature for soft targets
+distillation_alpha: 0.7                 # Balance between hard and soft targets
+distillation_epochs: 5                  # Epochs for distillation training
+
+# Sparsity scheduling
+initial_sparsity: 0.1                   # Starting sparsity ratio
+final_sparsity: 0.8                     # Final sparsity ratio
+warmup_rounds: 3                        # Rounds for gradual sparsity increase
+cooldown_rounds: 5                      # Rounds for sparsity stabilization
+adaptation_rate: 0.1                    # Rate of adaptation to performance changes
+
+# Performance monitoring
+accuracy_threshold: 0.05                # Maximum acceptable accuracy drop
+training_time_threshold: 300.0          # Maximum training time in seconds
+memory_threshold: 0.8                   # Maximum memory usage ratio
+
+# Recovery mechanisms
+enable_recovery: true                   # Enable automatic recovery mechanisms
+recovery_threshold: 0.08                # Accuracy drop threshold for recovery
+max_recovery_attempts: 3                # Maximum recovery attempts per participant
+
+# Orchestration settings
+enable_adaptive_orchestration: true     # Enable intelligent orchestration
+participant_diversity: true             # Allow different strategies per participant
+dynamic_sparsity: true                  # Adapt sparsity based on real-time performance

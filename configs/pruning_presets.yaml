@@ -1,0 +1,83 @@
+# Federated Pruning Preset Configurations
+# ======================================
+
+# Aggressive Pruning Preset (Maximum Efficiency)
+# -----------------------------------------------
+# Use when: Need maximum model compression and speed
+# Trade-offs: May sacrifice some accuracy for efficiency
+aggressive:
+  target_sparsity: 0.9
+  pruning_method: "magnitude"
+  pruning_frequency: 1
+  initial_sparsity: 0.3
+  final_sparsity: 0.9
+  warmup_rounds: 2
+  cooldown_rounds: 3
+  enable_distillation: true
+  distillation_temperature: 6.0
+  distillation_alpha: 0.8
+  accuracy_threshold: 0.08
+  enable_recovery: true
+  recovery_threshold: 0.10
+
+# Balanced Pruning Preset (Default/Recommended)
+# --------------------------------------------
+# Use when: Need good balance of efficiency and accuracy
+# Trade-offs: Moderate compression with stable performance
+balanced:
+  target_sparsity: 0.7
+  pruning_method: "magnitude"
+  pruning_frequency: 2
+  initial_sparsity: 0.1
+  final_sparsity: 0.7
+  warmup_rounds: 3
+  cooldown_rounds: 5
+  enable_distillation: true
+  distillation_temperature: 4.0
+  distillation_alpha: 0.7
+  accuracy_threshold: 0.05
+  enable_recovery: true
+  recovery_threshold: 0.08
+
+# Conservative Pruning Preset (Maximum Quality)
+# --------------------------------------------
+# Use when: Accuracy is critical, efficiency is secondary
+# Trade-offs: Minimal compression with maximum quality preservation
+conservative:
+  target_sparsity: 0.5
+  pruning_method: "gradient"
+  pruning_frequency: 3
+  initial_sparsity: 0.05
+  final_sparsity: 0.5
+  warmup_rounds: 5
+  cooldown_rounds: 8
+  enable_distillation: true
+  distillation_temperature: 3.0
+  distillation_alpha: 0.6
+  accuracy_threshold: 0.03
+  enable_recovery: true
+  recovery_threshold: 0.05
+
+# Research Preset (Experimental Features)
+# --------------------------------------
+# Use when: Testing new techniques or research scenarios
+# Trade-offs: May be unstable, includes experimental features
+research:
+  target_sparsity: 0.8
+  pruning_method: "structured"
+  pruning_frequency: 2
+  initial_sparsity: 0.2
+  final_sparsity: 0.85
+  warmup_rounds: 4
+  cooldown_rounds: 6
+  enable_distillation: true
+  distillation_temperature: 5.0
+  distillation_alpha: 0.75
+  accuracy_threshold: 0.06
+  enable_recovery: true
+  recovery_threshold: 0.09
+  # Research-specific features
+  enable_adaptive_orchestration: true
+  participant_diversity: true
+  dynamic_sparsity: true
+  adaptation_rate: 0.15
