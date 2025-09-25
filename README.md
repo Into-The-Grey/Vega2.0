@@ -64,7 +64,7 @@ Vega2.0 is a comprehensive, production-ready autonomous AI system featuring adva
 
 ## 🏗️ Project Structure
 
-```
+```bash
 Vega2.0/
 ├── src/vega/                   # Core application code
 │   ├── core/                   # Main application logic
@@ -343,7 +343,7 @@ journalctl -u vega -f
 
 ### Project Structure
 
-```
+```bash
 vega2.0/
 ├── core/                    # Core system components
 │   ├── app.py              # Main FastAPI application
@@ -424,7 +424,7 @@ Full API documentation available at `/docs` when server is running.
 
 ### Common Issues
 
-**Ollama Connection Failed**
+#### **Ollama Connection Failed**
 
 ```bash
 # Check if Ollama is running
@@ -437,7 +437,7 @@ ollama serve
 ollama list
 ```
 
-**Database Errors**
+#### **Database Errors**
 
 ```bash
 # Check database file permissions
@@ -447,7 +447,7 @@ ls -la vega.db*
 rm vega.db* && python -c "from core.db import init_database; init_database()"
 ```
 
-**Process Management Issues**
+#### **Process Management Issues**
 
 ```bash
 # Check process status
@@ -460,7 +460,7 @@ python run_processes.py stop && python run_processes.py start
 tail -f /tmp/vega_processes.log
 ```
 
-**ECC Key Issues**
+#### **ECC Key Issues**
 
 ```bash
 # List ECC keys
