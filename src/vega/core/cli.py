@@ -200,6 +200,327 @@ def frl_continual_demo(
     )
 
 
+@frl_app.command("async")
+def frl_async_demo(
+    participants: int = typer.Option(4, help="Number of async participants"),
+    updates_per_participant: int = typer.Option(10, help="Updates per participant"),
+    max_staleness: int = typer.Option(3, help="Maximum allowed staleness"),
+    update_threshold: int = typer.Option(2, help="Updates before aggregation"),
+    staleness_decay: float = typer.Option(0.8, help="Decay factor for stale updates"),
+    seed: int = typer.Option(123, help="Random seed for determinism"),
+):
+    """Run Asynchronous Federated Learning demo with staleness tolerance."""
+    try:
+        from ..federated.async_fl import (
+            run_async_federated_learning,
+            AsyncFLConfig,
+        )
+    except Exception as e:  # pragma: no cover - import error path
+        console.print(f"✗ Failed to import Async FL module: {e}", style="red")
+        return
+
+    import asyncio
+
+    config = AsyncFLConfig(
+        max_staleness=max_staleness,
+        staleness_decay=staleness_decay,
+        update_threshold=update_threshold,
+        min_participants=min(2, participants),
+    )
+
+    console.print(f"Running Async FL with {participants} participants")
+    console.print(
+        f"Max staleness: {max_staleness}, Update threshold: {update_threshold}"
+    )
+
+    async def run_demo():
+        results = await run_async_federated_learning(
+            num_participants=participants,
+            input_dim=2,
+            output_dim=1,
+            num_updates_per_participant=updates_per_participant,
+            config=config,
+            seed=seed,
+        )
+
+        # Display results
+        table = Table(title="Asynchronous Federated Learning Results")
+        table.add_column("Participant", style="cyan")
+        table.add_column("Total Updates", style="green")
+        table.add_column("Final Staleness", style="yellow")
+
+        for pid, stats in results["participant_states"].items():
+            table.add_row(
+                pid, str(stats["total_updates"]), str(stats["current_staleness"])
+            )
+
+        console.print(table)
+        console.print(f"Global model version: {results['global_version']}")
+        console.print(f"Total updates processed: {results['total_updates_processed']}")
+        console.print(f"Number of aggregations: {len(results['aggregation_history'])}")
+
+        if results["aggregation_history"]:
+            agg_table = Table(title="Recent Aggregation History")
+            agg_table.add_column("Version", style="cyan")
+            agg_table.add_column("Updates", style="green")
+            agg_table.add_column("Avg Staleness", style="yellow")
+
+            for agg in results["aggregation_history"][-3:]:
+                agg_table.add_row(
+                    str(agg["global_version"]),
+                    str(agg["updates_aggregated"]),
+                    f"{agg['avg_staleness']:.2f}",
+                )
+            console.print(agg_table)
+
+    # Run the async demo
+    asyncio.run(run_demo())
+
+
+@frl_app.command("meta")
+def frl_meta_demo(
+    participants: int = typer.Option(3, help="Number of federated participants"),
+    tasks_per_participant: int = typer.Option(
+        6, help="Number of tasks per participant"
+    ),
+    meta_rounds: int = typer.Option(10, help="Number of meta-learning rounds"),
+    inner_lr: float = typer.Option(0.01, help="Inner loop learning rate"),
+    outer_lr: float = typer.Option(0.001, help="Outer loop meta-learning rate"),
+    inner_steps: int = typer.Option(3, help="Inner loop adaptation steps"),
+    k_shot: int = typer.Option(5, help="Number of support examples per task"),
+    seed: int = typer.Option(123, help="Random seed for determinism"),
+):
+    """Run Federated Meta-Learning (MAML) demo for fast task adaptation."""
+    try:
+        from ..federated.meta_learning import (
+            run_federated_maml,
+            MAMLConfig,
+        )
+    except Exception as e:  # pragma: no cover - import error path
+        console.print(f"✗ Failed to import Meta-Learning module: {e}", style="red")
+        return
+
+    config = MAMLConfig(
+        inner_lr=inner_lr,
+        outer_lr=outer_lr,
+        inner_steps=inner_steps,
+        k_shot=k_shot,
+        q_query=10,
+    )
+
+    console.print(f"Running Federated MAML with {participants} participants")
+    console.print(
+        f"Tasks per participant: {tasks_per_participant}, Meta rounds: {meta_rounds}"
+    )
+    console.print(
+        f"Inner LR: {inner_lr}, Outer LR: {outer_lr}, Inner steps: {inner_steps}"
+    )
+
+    results = run_federated_maml(
+        num_participants=participants,
+        tasks_per_participant=tasks_per_participant,
+        meta_rounds=meta_rounds,
+        config=config,
+        seed=seed,
+    )
+
+    # Display training results
+    training = results["training_results"]
+
+    table = Table(title="Meta-Learning Training Results")
+    table.add_column("Metric", style="cyan")
+    table.add_column("Value", style="green")
+
+    table.add_row("Meta-learning rounds", str(training["num_rounds"]))
+    table.add_row("Participants", str(training["num_participants"]))
+
+    if training["meta_train_losses"]:
+        initial_loss = training["meta_train_losses"][0]
+        final_loss = training["meta_train_losses"][-1]
+        improvement = (
+            ((initial_loss - final_loss) / initial_loss * 100)
+            if initial_loss > 0
+            else 0
+        )
+
+        table.add_row("Initial meta-loss", f"{initial_loss:.4f}")
+        table.add_row("Final meta-loss", f"{final_loss:.4f}")
+        table.add_row("Loss improvement", f"{improvement:.1f}%")
+
+    console.print(table)
+
+    # Display adaptation evaluation
+    evaluation = results["evaluation_results"]
+
+    adapt_table = Table(title="Task Adaptation Evaluation")
+    adapt_table.add_column("Metric", style="cyan")
+    adapt_table.add_column("Value", style="green")
+
+    adapt_table.add_row("Test tasks", str(len(evaluation["adaptation_results"])))
+    adapt_table.add_row("Pre-adaptation loss", f"{evaluation['avg_pre_loss']:.4f}")
+    adapt_table.add_row("Post-adaptation loss", f"{evaluation['avg_post_loss']:.4f}")
+    adapt_table.add_row("Average improvement", f"{evaluation['avg_improvement']:.4f}")
+
+    if evaluation["avg_pre_loss"] > 0:
+        efficiency = evaluation["avg_improvement"] / evaluation["avg_pre_loss"] * 100
+        adapt_table.add_row("Adaptation efficiency", f"{efficiency:.1f}%")
+
+    console.print(adapt_table)
+
+    # Show per-task adaptation details
+    if evaluation["adaptation_results"]:
+        detail_table = Table(title="Per-Task Adaptation Details")
+        detail_table.add_column("Task", style="cyan")
+        detail_table.add_column("Pre-Loss", style="red")
+        detail_table.add_column("Post-Loss", style="green")
+        detail_table.add_column("Improvement", style="yellow")
+
+        for i, result in enumerate(
+            evaluation["adaptation_results"][:5]
+        ):  # Show first 5 tasks
+            detail_table.add_row(
+                f"Task {i+1}",
+                f"{result['pre_adaptation_loss']:.4f}",
+                f"{result['post_adaptation_loss']:.4f}",
+                f"{result['improvement']:.4f}",
+            )
+
+        console.print(detail_table)
+
+
+@frl_app.command("byzantine")
+def frl_byzantine_demo(
+    participants: int = typer.Option(8, help="Number of participants"),
+    byzantine_ratio: float = typer.Option(
+        0.25, help="Fraction of Byzantine participants"
+    ),
+    aggregation_method: str = typer.Option(
+        "krum",
+        help="Aggregation method",
+        click_type=typer.Choice(["krum", "multi_krum", "trimmed_mean", "median"]),
+    ),
+    rounds: int = typer.Option(10, help="Number of training rounds"),
+    local_steps: int = typer.Option(5, help="Local training steps per round"),
+    attack_intensity: float = typer.Option(2.0, help="Attack intensity multiplier"),
+    seed: int = typer.Option(42, help="Random seed"),
+) -> None:
+    """Run Byzantine-robust federated learning demonstration."""
+
+    try:
+        from ..federated.byzantine_robust import (
+            ByzantineConfig,
+            run_byzantine_robust_fl,
+        )
+    except ImportError as e:
+        console.print(f"✗ Failed to import Byzantine-robust module: {e}", style="red")
+        return
+
+    config = ByzantineConfig(
+        aggregation_method=aggregation_method,
+        byzantine_ratio=byzantine_ratio,
+        attack_intensity=attack_intensity,
+        selection_size=3,  # For Multi-Krum
+        trimmed_mean_beta=0.1,
+    )
+
+    console.print(
+        f"Running Byzantine-robust Federated Learning with {participants} participants"
+    )
+    console.print(
+        f"Byzantine ratio: {byzantine_ratio:.1%} ({int(participants * byzantine_ratio)} malicious)"
+    )
+    console.print(f"Aggregation method: {aggregation_method}")
+    console.print(f"Training rounds: {rounds}, Attack intensity: {attack_intensity}")
+
+    results = run_byzantine_robust_fl(
+        num_participants=participants,
+        byzantine_ratio=byzantine_ratio,
+        num_rounds=rounds,
+        local_steps=local_steps,
+        config=config,
+        seed=seed,
+    )
+
+    # Display training results
+    history = results["training_history"]
+
+    table = Table(title="Byzantine-Robust FL Training Results")
+    table.add_column("Metric", style="cyan")
+    table.add_column("Value", style="green")
+
+    table.add_row("Training rounds", str(results["total_rounds"]))
+    table.add_row("Total participants", str(participants))
+    table.add_row("Byzantine participants", str(len(results["byzantine_participants"])))
+    table.add_row("Aggregation method", results["aggregation_method"])
+
+    if history:
+        initial_loss = history[0]["global_loss"]
+        final_loss = history[-1]["global_loss"]
+        loss_reduction = (
+            (initial_loss - final_loss) / initial_loss * 100 if initial_loss > 0 else 0
+        )
+
+        table.add_row("Initial global loss", f"{initial_loss:.4f}")
+        table.add_row("Final global loss", f"{final_loss:.4f}")
+        table.add_row("Loss reduction", f"{loss_reduction:.1f}%")
+
+    console.print(table)
+
+    # Display round-by-round progress
+    if history:
+        progress_table = Table(title="Training Progress (First 5 rounds)")
+        progress_table.add_column("Round", style="cyan")
+        progress_table.add_column("Global Loss", style="red")
+        progress_table.add_column("Byzantine Updates", style="yellow")
+        progress_table.add_column("Attacks Seen", style="magenta")
+
+        for round_data in history[:5]:
+            attacks = ", ".join(round_data.get("attack_types_seen", []))
+            progress_table.add_row(
+                str(round_data["round"]),
+                f"{round_data['global_loss']:.4f}",
+                f"{round_data['byzantine_updates']}/{round_data['total_updates']}",
+                attacks if attacks else "None",
+            )
+
+        console.print(progress_table)
+
+    # Show attack resilience analysis
+    if history:
+        resilience_table = Table(title="Attack Resilience Analysis")
+        resilience_table.add_column("Property", style="cyan")
+        resilience_table.add_column("Value", style="green")
+
+        all_attacks = set()
+        total_byzantine = sum(r["byzantine_updates"] for r in history)
+        total_updates = sum(r["total_updates"] for r in history)
+
+        for round_data in history:
+            all_attacks.update(round_data.get("attack_types_seen", []))
+
+        resilience_table.add_row("Total attack types seen", str(len(all_attacks)))
+        resilience_table.add_row("Attack types", ", ".join(sorted(all_attacks)))
+        resilience_table.add_row(
+            "Byzantine update ratio",
+            f"{total_byzantine/total_updates:.1%}" if total_updates > 0 else "0%",
+        )
+
+        # Convergence assessment
+        if len(history) >= 3:
+            recent_losses = [r["global_loss"] for r in history[-3:]]
+            convergence = (
+                "Converging"
+                if all(
+                    recent_losses[i] >= recent_losses[i + 1]
+                    for i in range(len(recent_losses) - 1)
+                )
+                else "Stable"
+            )
+            resilience_table.add_row("Convergence status", convergence)
+
+        console.print(resilience_table)
+
+
 # Add autonomous feature commands
 backup_app = typer.Typer(help="Backup and restore operations")
 voice_app = typer.Typer(help="Voice profile management")

@@ -1,22 +1,40 @@
 """
-Vega 2.0 Federated Learning Module
+Federated learning algorithms and implementations for Vega2.0.
 
-A comprehensive federated learning system with support for:
-- Personal/family use (2-3 participants)
-- Cross-silo enterprise federation
-- Hierarchical multi-organization learning
-- Advanced privacy and security features
-
-Core Components:
-- Model serialization framework (PyTorch/TensorFlow)
-- REST-based communication layer
-- Central coordinator service
-- Dynamic rotating encryption baseline
-- Participant management
-- Cross-silo hierarchical federation
-- Advanced aggregation algorithms
-- Differential privacy and secure aggregation
+This module provides advanced federated learning capabilities including
+meta-learning and Byzantine-robust approaches.
 """
+
+from .meta_learning import (
+    FederatedMAML,
+    MAMLConfig,
+    Task,
+    SimpleMetaModel,
+)
+
+from .byzantine_robust import (
+    ByzantineConfig,
+    ParticipantUpdate,
+    SimpleByzantineModel,
+    ByzantineRobustAggregator,
+    ByzantineAttackSimulator,
+    run_byzantine_robust_fl,
+)
+
+__all__ = [
+    # Meta-learning
+    "FederatedMAML",
+    "MAMLConfig",
+    "Task",
+    "SimpleMetaModel",
+    # Byzantine-robust FL
+    "ByzantineConfig",
+    "ParticipantUpdate",
+    "SimpleByzantineModel",
+    "ByzantineRobustAggregator",
+    "ByzantineAttackSimulator",
+    "run_byzantine_robust_fl",
+]
 
 from .model_serialization import ModelWeights, ModelSerializer
 from .coordinator import FederatedCoordinator
@@ -63,6 +81,38 @@ from .continual import (
     federated_continual_aggregate,
     run_continual_federated_learning,
     create_synthetic_task_sequence,
+)
+from .async_fl import (
+    AsyncUpdate,
+    ParticipantState,
+    AsyncFLConfig,
+    SimpleAsyncModel,
+    AsyncParticipant,
+    AsyncFLCoordinator,
+    run_async_federated_learning,
+    generate_heterogeneous_async_data,
+)
+from .meta_learning import (
+    Task,
+    MAMLConfig,
+    SimpleMetaModel,
+    FederatedMAML,
+    generate_sine_wave_tasks,
+    run_federated_maml,
+)
+from .hyperopt import (
+    HyperparameterType,
+    AcquisitionFunction,
+    HyperparameterDimension,
+    HyperparameterSpace,
+    OptimizationResult,
+    GaussianProcess,
+    BayesianOptimizer,
+    FederatedHyperoptConfig,
+    FederatedHyperparameterOptimization,
+    create_neural_network_space,
+    create_federated_learning_space,
+    create_xgboost_space,
 )
 
 __all__ = [
@@ -116,6 +166,34 @@ __all__ = [
     "federated_continual_aggregate",
     "run_continual_federated_learning",
     "create_synthetic_task_sequence",
+    # Asynchronous Federated Learning
+    "AsyncUpdate",
+    "ParticipantState",
+    "AsyncFLConfig",
+    "SimpleAsyncModel",
+    "AsyncParticipant",
+    "AsyncFLCoordinator",
+    "run_async_federated_learning",
+    "generate_heterogeneous_async_data",
+    # Federated Meta-Learning (MAML)
+    "MAMLConfig",
+    "SimpleMetaModel",
+    "FederatedMAML",
+    "generate_sine_wave_tasks",
+    "run_federated_maml",
+    # Federated Hyperparameter Optimization
+    "HyperparameterType",
+    "AcquisitionFunction",
+    "HyperparameterDimension",
+    "HyperparameterSpace",
+    "OptimizationResult",
+    "GaussianProcess",
+    "BayesianOptimizer",
+    "FederatedHyperoptConfig",
+    "FederatedHyperparameterOptimization",
+    "create_neural_network_space",
+    "create_federated_learning_space",
+    "create_xgboost_space",
 ]
 
 __version__ = "1.0.0"
