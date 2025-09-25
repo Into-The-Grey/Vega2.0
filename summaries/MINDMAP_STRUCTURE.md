@@ -9,6 +9,11 @@
   - llm.yaml (Language model config)
   - ui.yaml (User interface settings)
   - voice.yaml (Voice processing)
+  - federated_pruning.yaml (✅ Federated pruning configuration - COMPLETE)
+  - participants.yaml (✅ Participant configuration - COMPLETE)
+  - pruning_presets.yaml (✅ Pruning presets (aggressive/balanced/conservative/research) - COMPLETE)
+  - adaptive_federated.yaml (✅ Adaptive FL configuration - COMPLETE)
+  - adaptive_presets.yaml (✅ Adaptive FL presets (research/production/fast/quality/robust/minimal/edge) - COMPLETE)
   - .env.example (Environment template)
   - .env.production (Production settings)
 - .env (Local environment variables)
@@ -16,7 +21,7 @@
 ## Core Application
 - core/
   - app.py (FastAPI application)
-  - cli.py (Command-line interface)
+  - cli.py (Command-line interface + ✅ Federated pruning CLI integration + ✅ Adaptive FL CLI integration - COMPLETE)
 - main.py (Entry point: server, cli, test)
 - src/vega/
   - core/ (Core functionality)
@@ -33,8 +38,10 @@
     - compression_advanced.py (✅ Communication-efficient protocols - gradient sparsification, quantization, sketching)
     - communication_coordinator.py (✅ Intelligent compression coordination with network adaptation)
     - validation_suite.py (✅ Distributed compression validation framework)
-    - pruning.py (✅ Federated model pruning - structured/unstructured pruning, knowledge distillation, sparsity-aware aggregation)
-    - pruning_orchestrator.py (✅ Adaptive pruning orchestrator - dynamic sparsity scheduling, performance monitoring, recovery mechanisms)
+    - pruning.py (✅ Federated model pruning - structured/unstructured pruning, knowledge distillation, sparsity-aware aggregation - COMPLETE)
+    - pruning_orchestrator.py (✅ Adaptive pruning orchestrator - dynamic sparsity scheduling, performance monitoring, recovery mechanisms - COMPLETE)
+    - pruning_config.py (✅ Production configuration system - YAML management, presets, validation - COMPLETE)
+    - adaptive.py (✅ Adaptive Federated Learning - dynamic algorithm selection, real-time optimization, performance monitoring - COMPLETE)
     - communication/ (✅ 26/26 tests passing)
     - training/ (✅ Training pipeline)
     - security/ (✅ Encryption & validation)

@@ -1,0 +1,109 @@
+# Adaptive Federated Learning Configuration
+# =========================================
+
+# Core system settings
+initial_algorithm: "fedavg"               # Initial FL algorithm: fedavg, fedprox, scaffold
+adaptation_enabled: true                  # Enable adaptive behavior
+min_participants: 3                       # Minimum participants per round
+max_participants: 20                      # Maximum participants per round
+
+# Performance monitoring settings
+monitoring:
+  history_size: 100                       # Number of metrics to keep in history
+  performance_window: 10                  # Window size for trend analysis
+  anomaly_detection_enabled: true         # Enable anomaly detection
+  
+  # Thresholds for adaptation triggers
+  thresholds:
+    performance_degradation: 0.10         # Accuracy drop threshold (10%)
+    convergence_stagnation_variance: 0.001 # Loss variance threshold
+    high_latency_ms: 500                  # Network latency threshold
+    low_bandwidth_mbps: 10                # Bandwidth threshold
+    high_packet_loss: 0.05                # Packet loss threshold
+
+# Hyperparameter optimization settings
+hyperparameter_optimization:
+  enabled: true                           # Enable hyperparameter optimization
+  exploration_factor: 0.3                 # Exploration vs exploitation balance (early stages)
+  stable_exploration_factor: 0.1          # Exploration factor after sufficient data
+  learning_rate_bounds: [0.001, 0.1]     # Learning rate optimization bounds
+  local_epochs_options: [1, 3, 5, 10]    # Local epochs options
+  mu_bounds: [0.001, 1.0]                # FedProx mu parameter bounds
+
+# Communication adaptation settings
+communication:
+  adaptive_protocols: true                # Enable adaptive communication protocols
+  compression_enabled: true               # Allow compression when needed
+  quantization_levels: [4, 8, 16, 32]    # Available quantization bit levels
+  sparsification_ratios: [0.0, 0.5, 0.9, 0.95] # Available sparsification levels
+  
+  # Network condition thresholds
+  poor_network_thresholds:
+    latency_ms: 1000                      # Very high latency threshold
+    bandwidth_mbps: 5                     # Very low bandwidth threshold
+    packet_loss_rate: 0.1                # Very high packet loss threshold
+
+# Participant selection settings
+participant_selection:
+  selection_strategy: "performance_based" # Selection strategy: performance_based, random, round_robin
+  scoring_weights:
+    accuracy: 0.3                         # Accuracy weight in participant scoring
+    reliability: 0.25                     # Reliability weight
+    contribution: 0.25                    # Contribution weight
+    efficiency: 0.2                       # Efficiency weight (inverse of training time)
+  
+  # Participant filtering
+  min_reliability_score: 0.5              # Minimum reliability to participate
+  min_accuracy_threshold: 0.6             # Minimum accuracy threshold
+  max_training_time: 600                  # Maximum training time (seconds)
+
+# Algorithm-specific adaptation rules
+adaptation_rules:
+  fedavg_to_fedprox:
+    trigger: "performance_degradation"     # When to switch
+    condition: "accuracy_drop > 0.05"     # Specific condition
+    revert_after_rounds: 10               # Rounds to try before reverting
+  
+  fedprox_to_scaffold:
+    trigger: "convergence_stagnation"     # When to switch
+    condition: "loss_variance < 0.001"    # Specific condition
+    revert_after_rounds: 15               # Rounds to try before reverting
+  
+  scaffold_to_fedprox:
+    trigger: "communication_issues"        # When to switch
+    condition: "latency > 800"            # Specific condition
+    revert_after_rounds: 5                # Rounds to try before reverting
+
+# Logging and monitoring
+logging:
+  level: "INFO"                           # Logging level
+  adaptation_events: true                 # Log adaptation events
+  performance_metrics: true               # Log detailed performance metrics
+  hyperparameter_changes: true           # Log hyperparameter adjustments
+  network_conditions: true               # Log network condition measurements
+  
+  # Output files
+  log_file: "adaptive_fl_training.log"   # Main log file
+  metrics_file: "adaptive_fl_metrics.json" # Metrics output file
+  events_file: "adaptive_fl_events.json" # Adaptation events file
+
+# Experimental features
+experimental:
+  enable_predictive_adaptation: false     # Use ML to predict optimal adaptations
+  enable_multi_objective_optimization: false # Optimize multiple objectives
+  enable_federated_hyperopt: false       # Use federated hyperparameter optimization
+  enable_participant_clustering: false   # Group similar participants
+
+# Resource constraints
+resource_limits:
+  max_memory_usage_gb: 8                  # Maximum memory usage
+  max_gpu_memory_gb: 6                    # Maximum GPU memory
+  max_training_time_per_round: 300        # Maximum training time per round (seconds)
+  max_communication_time: 60              # Maximum communication time (seconds)
+
+# Simulation settings (for testing/demo)
+simulation:
+  enabled: false                          # Enable simulation mode
+  network_variability: true               # Simulate network condition changes
+  participant_reliability_variation: true # Simulate participant reliability changes
+  hardware_heterogeneity: true           # Simulate different hardware capabilities

@@ -134,6 +134,18 @@ from .pruning_orchestrator import (
     DistillationCoordinator,
     AdaptivePruningOrchestrator,
 )
+from .adaptive import (
+    AdaptiveFederatedLearning,
+    LearningAlgorithm,
+    AdaptationTrigger,
+    NetworkCondition,
+    ParticipantPerformance,
+    AdaptationEvent,
+    PerformanceMonitor as AdaptivePerformanceMonitor,
+    HyperparameterOptimizer,
+    AdaptiveCommunicationManager,
+    ParticipantSelector,
+)
 
 __all__ = [
     # Core components
@@ -232,6 +244,17 @@ __all__ = [
     "PerformanceMonitor",
     "DistillationCoordinator",
     "AdaptivePruningOrchestrator",
+    # Adaptive Federated Learning
+    "AdaptiveFederatedLearning",
+    "LearningAlgorithm",
+    "AdaptationTrigger",
+    "NetworkCondition",
+    "ParticipantPerformance",
+    "AdaptationEvent",
+    "AdaptivePerformanceMonitor",
+    "HyperparameterOptimizer",
+    "AdaptiveCommunicationManager",
+    "ParticipantSelector",
 ]
 
 __version__ = "1.0.0"
