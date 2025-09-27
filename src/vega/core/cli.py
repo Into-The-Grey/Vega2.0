@@ -19,6 +19,7 @@ from __future__ import annotations
 import asyncio
 import json
 from typing import Optional, Any
+from datetime import datetime
 
 try:
     import typer  # type: ignore[import-not-found]
@@ -85,6 +86,10 @@ app.add_typer(db_app, name="db")
 app.add_typer(gen_app, name="gen")
 app.add_typer(osint_app, name="osint")
 app.add_typer(net_app, name="net")
+
+# Document Intelligence commands
+doc_app = typer.Typer(help="Document Intelligence utilities")
+app.add_typer(doc_app, name="document")
 
 # Federated Reinforcement Learning commands
 frl_app = typer.Typer(help="Federated Reinforcement Learning utilities")
@@ -404,8 +409,7 @@ def frl_byzantine_demo(
     ),
     aggregation_method: str = typer.Option(
         "krum",
-        help="Aggregation method",
-        click_type=typer.Choice(["krum", "multi_krum", "trimmed_mean", "median"]),
+        help="Aggregation method (krum, multi_krum, trimmed_mean, median)",
     ),
     rounds: int = typer.Option(10, help="Number of training rounds"),
     local_steps: int = typer.Option(5, help="Local training steps per round"),
@@ -2528,6 +2532,474 @@ def security_ci_check(
     except Exception as e:
         console.print(f"✗ CI security check failed: {e}", style="red")
         raise typer.Exit(1)
+
+
+# =============================================================================
+# Document Intelligence Commands
+# =============================================================================
+
+
+@doc_app.command("analyze")
+def document_analyze(
+    file_path: str = typer.Argument(..., help="Path to document file"),
+    doc_type: str = typer.Option(
+        "general", help="Document type (legal, technical, general)"
+    ),
+    mode: str = typer.Option(
+        "analysis",
+        help="Processing mode (analysis, classification, understanding, workflow, full)",
+    ),
+    output: Optional[str] = typer.Option(None, help="Output file path (JSON format)"),
+    session_id: Optional[str] = typer.Option(None, help="Session identifier"),
+):
+    """Analyze a document file using AI-powered document intelligence."""
+    try:
+        from pathlib import Path
+        import json
+        from ..document.understanding import DocumentUnderstandingAI
+        from ..document.classification import DocumentClassificationAI
+        from ..document.legal import LegalDocumentAI
+        from ..document.technical import TechnicalDocumentationAI
+        from ..document.base import ProcessingContext
+
+        # Validate file exists
+        file_path_obj = Path(file_path)
+        if not file_path_obj.exists():
+            console.print(f"✗ File not found: {file_path}", style="red")
+            raise typer.Exit(1)
+
+        # Read file content
+        try:
+            content = file_path_obj.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            console.print(f"✗ Unable to read file as UTF-8: {file_path}", style="red")
+            raise typer.Exit(1)
+
+        if not content.strip():
+            console.print("✗ File is empty", style="red")
+            raise typer.Exit(1)
+
+        console.print(f"📄 Analyzing document: {file_path}", style="cyan")
+        console.print(f"📊 Document type: {doc_type}, Mode: {mode}")
+
+        async def analyze_document():
+            # Select appropriate module
+            if doc_type in ["legal", "contract", "policy"]:
+                module = LegalDocumentAI()
+            elif doc_type in ["technical", "api_doc", "code_doc"]:
+                module = TechnicalDocumentationAI()
+            elif mode == "classification":
+                module = DocumentClassificationAI()
+            else:
+                module = DocumentUnderstandingAI()
+
+            # Initialize module
+            await module.initialize()
+
+            # Create processing context
+            context = ProcessingContext(
+                document_content=content,
+                document_type=doc_type,
+                processing_mode=mode,
+                session_id=session_id or f"cli_{int(datetime.now().timestamp())}",
+                metadata={
+                    "file_path": str(file_path),
+                    "file_size": len(content),
+                    "cli_mode": True,
+                },
+            )
+
+            # Process document
+            result = await module.process_document(context)
+            return result
+
+        # Run analysis
+        result = asyncio.run(analyze_document())
+
+        # Display results
+        console.print("\n🔍 Analysis Results:", style="bold green")
+
+        # Pretty print the results
+        if result.results:
+            for key, value in result.results.items():
+                if isinstance(value, dict):
+                    console.print(f"\n{key.title()}:", style="bold yellow")
+                    for sub_key, sub_value in value.items():
+                        console.print(f"  {sub_key}: {sub_value}")
+                elif isinstance(value, list):
+                    console.print(f"\n{key.title()}:", style="bold yellow")
+                    for item in value:
+                        console.print(f"  • {item}")
+                else:
+                    console.print(f"{key.title()}: {value}", style="yellow")
+
+        # Save to output file if specified
+        if output:
+            output_data = {
+                "file_path": str(file_path),
+                "document_type": doc_type,
+                "processing_mode": mode,
+                "session_id": result.session_id,
+                "timestamp": result.timestamp.isoformat(),
+                "results": result.results,
+                "metadata": result.metadata,
+                "processing_time": result.processing_time_ms / 1000.0,
+            }
+
+            Path(output).write_text(json.dumps(output_data, indent=2, default=str))
+            console.print(f"\n💾 Results saved to: {output}", style="green")
+
+        console.print(
+            f"\n⏱️  Processing time: {result.processing_time_ms/1000:.2f}s", style="dim"
+        )
+
+    except Exception as e:
+        console.print(f"✗ Document analysis failed: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@doc_app.command("batch")
+def document_batch_analyze(
+    directory: str = typer.Argument(..., help="Directory containing documents"),
+    pattern: str = typer.Option(
+        "*.txt", help="File pattern to match (e.g., '*.txt', '*.md')"
+    ),
+    doc_type: str = typer.Option("general", help="Document type for all files"),
+    mode: str = typer.Option("analysis", help="Processing mode"),
+    output_dir: Optional[str] = typer.Option(None, help="Output directory for results"),
+    parallel: bool = typer.Option(True, help="Process files in parallel"),
+    max_concurrent: int = typer.Option(5, help="Maximum concurrent processes"),
+):
+    """Batch analyze multiple documents in a directory."""
+    try:
+        from pathlib import Path
+        import glob
+        import json
+
+        # Validate directory
+        dir_path = Path(directory)
+        if not dir_path.exists():
+            console.print(f"✗ Directory not found: {directory}", style="red")
+            raise typer.Exit(1)
+
+        # Find matching files
+        files = list(dir_path.glob(pattern))
+        if not files:
+            console.print(f"✗ No files found matching pattern: {pattern}", style="red")
+            raise typer.Exit(1)
+
+        console.print(f"📁 Found {len(files)} files to process", style="cyan")
+
+        # Create output directory if specified
+        if output_dir:
+            Path(output_dir).mkdir(parents=True, exist_ok=True)
+
+        async def process_batch():
+            from ..document.understanding import DocumentUnderstandingAI
+            from ..document.classification import DocumentClassificationAI
+            from ..document.legal import LegalDocumentAI
+            from ..document.technical import TechnicalDocumentationAI
+            from ..document.base import ProcessingContext
+            import asyncio
+
+            # Select appropriate module
+            if doc_type in ["legal", "contract", "policy"]:
+                module = LegalDocumentAI()
+            elif doc_type in ["technical", "api_doc", "code_doc"]:
+                module = TechnicalDocumentationAI()
+            elif mode == "classification":
+                module = DocumentClassificationAI()
+            else:
+                module = DocumentUnderstandingAI()
+
+            # Initialize module
+            await module.initialize()
+
+            results = []
+            errors = []
+
+            async def process_file(file_path):
+                try:
+                    content = file_path.read_text(encoding="utf-8")
+
+                    context = ProcessingContext(
+                        document_content=content,
+                        document_type=doc_type,
+                        processing_mode=mode,
+                        session_id=f"batch_{int(datetime.now().timestamp())}_{file_path.stem}",
+                        metadata={
+                            "file_path": str(file_path),
+                            "file_size": len(content),
+                            "batch_mode": True,
+                        },
+                    )
+
+                    result = await module.process_document(context)
+                    return file_path, result, None
+
+                except Exception as e:
+                    return file_path, None, str(e)
+
+            if parallel:
+                semaphore = asyncio.Semaphore(max_concurrent)
+
+                async def process_with_semaphore(file_path):
+                    async with semaphore:
+                        return await process_file(file_path)
+
+                tasks = [process_with_semaphore(f) for f in files]
+                task_results = await asyncio.gather(*tasks)
+            else:
+                task_results = []
+                for file_path in files:
+                    task_results.append(await process_file(file_path))
+
+            # Collect results
+            for file_path, result, error in task_results:
+                if error:
+                    errors.append({"file": str(file_path), "error": error})
+                    console.print(
+                        f"✗ Error processing {file_path.name}: {error}", style="red"
+                    )
+                else:
+                    results.append({"file": str(file_path), "result": result})
+                    console.print(f"✅ Processed {file_path.name}", style="green")
+
+            return results, errors
+
+        # Run batch processing
+        results, errors = asyncio.run(process_batch())
+
+        # Display summary
+        console.print(f"\n📊 Batch Processing Summary:", style="bold green")
+        console.print(f"  Total files: {len(files)}")
+        console.print(f"  Successful: {len(results)}", style="green")
+        console.print(f"  Failed: {len(errors)}", style="red")
+
+        # Save results if output directory specified
+        if output_dir and results:
+            summary = {
+                "timestamp": datetime.now().isoformat(),
+                "directory": directory,
+                "pattern": pattern,
+                "document_type": doc_type,
+                "processing_mode": mode,
+                "total_files": len(files),
+                "successful": len(results),
+                "failed": len(errors),
+                "results": [
+                    (
+                        r["result"].__dict__
+                        if hasattr(r["result"], "__dict__")
+                        else str(r["result"])
+                    )
+                    for r in results
+                ],
+                "errors": errors,
+            }
+
+            summary_file = Path(output_dir) / "batch_summary.json"
+            summary_file.write_text(json.dumps(summary, indent=2, default=str))
+            console.print(f"\n💾 Summary saved to: {summary_file}", style="green")
+
+    except Exception as e:
+        console.print(f"✗ Batch processing failed: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@doc_app.command("classify")
+def document_classify(
+    file_path: str = typer.Argument(..., help="Path to document file"),
+    confidence: float = typer.Option(0.7, help="Minimum confidence threshold"),
+    output: Optional[str] = typer.Option(None, help="Output file path"),
+):
+    """Classify a document using AI-powered classification."""
+    try:
+        from pathlib import Path
+        import json
+        from ..document.classification import DocumentClassificationAI
+        from ..document.base import ProcessingContext
+
+        # Validate and read file
+        file_path_obj = Path(file_path)
+        if not file_path_obj.exists():
+            console.print(f"✗ File not found: {file_path}", style="red")
+            raise typer.Exit(1)
+
+        content = file_path_obj.read_text(encoding="utf-8")
+
+        console.print(f"🔍 Classifying document: {file_path}", style="cyan")
+
+        async def classify_document():
+            module = DocumentClassificationAI()
+            await module.initialize()
+
+            context = ProcessingContext(
+                document_content=content,
+                document_type="general",
+                processing_mode="classification",
+                session_id=f"classify_{int(datetime.now().timestamp())}",
+                metadata={
+                    "confidence_threshold": confidence,
+                    "file_path": str(file_path),
+                },
+            )
+
+            return await module.process_document(context)
+
+        result = asyncio.run(classify_document())
+
+        # Display classification results
+        console.print("\n📋 Classification Results:", style="bold green")
+
+        if "classification" in result.results:
+            classification = result.results["classification"]
+            console.print(
+                f"Document Type: {classification.get('type', 'Unknown')}",
+                style="yellow",
+            )
+            console.print(
+                f"Confidence: {classification.get('confidence', 0):.2%}", style="yellow"
+            )
+
+            if "categories" in classification:
+                console.print("\nCategories:", style="bold yellow")
+                for category in classification["categories"]:
+                    console.print(f"  • {category}")
+
+        # Save results if requested
+        if output:
+            output_data = {
+                "file_path": str(file_path),
+                "classification_results": result.results,
+                "confidence_threshold": confidence,
+                "timestamp": result.timestamp.isoformat(),
+            }
+
+            Path(output).write_text(json.dumps(output_data, indent=2, default=str))
+            console.print(f"\n💾 Results saved to: {output}", style="green")
+
+    except Exception as e:
+        console.print(f"✗ Document classification failed: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@doc_app.command("health")
+def document_health():
+    """Check health of document intelligence modules."""
+    try:
+
+        async def check_health():
+            from ..document.understanding import DocumentUnderstandingAI
+            from ..document.classification import DocumentClassificationAI
+            from ..document.workflow import DocumentWorkflowAI
+            from ..document.legal import LegalDocumentAI
+            from ..document.technical import TechnicalDocumentationAI
+
+            modules = [
+                ("Understanding", DocumentUnderstandingAI()),
+                ("Classification", DocumentClassificationAI()),
+                ("Workflow", DocumentWorkflowAI()),
+                ("Legal", LegalDocumentAI()),
+                ("Technical", TechnicalDocumentationAI()),
+            ]
+
+            results = {}
+            for name, module in modules:
+                try:
+                    await module.initialize()
+                    health = await module.health_check()
+                    results[name] = health
+                except Exception as e:
+                    results[name] = {"healthy": False, "error": str(e)}
+
+            return results
+
+        health_results = asyncio.run(check_health())
+
+        # Display health status
+        console.print("🏥 Document Intelligence Health Check", style="bold cyan")
+        console.print()
+
+        table = Table()
+        table.add_column("Module", style="cyan")
+        table.add_column("Status", style="green")
+        table.add_column("Details")
+
+        for module_name, health in health_results.items():
+            status = "✅ Healthy" if health.get("healthy", False) else "❌ Unhealthy"
+            details = health.get("error", health.get("details", "OK"))
+            if isinstance(details, dict):
+                details = ", ".join(f"{k}={v}" for k, v in details.items())
+
+            table.add_row(module_name, status, str(details))
+
+        console.print(table)
+
+        # Overall status
+        healthy_count = sum(
+            1 for h in health_results.values() if h.get("healthy", False)
+        )
+        total_count = len(health_results)
+
+        if healthy_count == total_count:
+            console.print(
+                f"\n🎉 All {total_count} modules are healthy!", style="bold green"
+            )
+        else:
+            console.print(
+                f"\n⚠️  {healthy_count}/{total_count} modules healthy", style="yellow"
+            )
+
+    except Exception as e:
+        console.print(f"✗ Health check failed: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@doc_app.command("config")
+def document_config():
+    """Show document intelligence configuration."""
+    console.print("⚙️  Document Intelligence Configuration", style="bold cyan")
+    console.print()
+
+    config_info = {
+        "Supported Document Types": [
+            "general",
+            "legal",
+            "technical",
+            "contract",
+            "policy",
+            "api_doc",
+            "code_doc",
+        ],
+        "Processing Modes": [
+            "analysis",
+            "classification",
+            "understanding",
+            "workflow",
+            "full",
+        ],
+        "Supported File Types": [
+            "text/plain (.txt)",
+            "text/markdown (.md)",
+            "Future: PDF, DOC, DOCX",
+        ],
+        "Batch Processing": "✅ Supported with parallel execution",
+        "API Integration": "✅ FastAPI endpoints available",
+        "Session Management": "⚠️  Basic support (enhanced storage coming)",
+    }
+
+    for key, value in config_info.items():
+        if isinstance(value, list):
+            console.print(f"{key}:", style="yellow")
+            for item in value:
+                console.print(f"  • {item}")
+        else:
+            console.print(f"{key}: {value}", style="yellow")
+        console.print()
+
+
+# =============================================================================
 
 
 # Keep the original incomplete function at the end

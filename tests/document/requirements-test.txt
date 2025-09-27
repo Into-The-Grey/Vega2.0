@@ -1,0 +1,31 @@
+# Testing requirements for Document Intelligence Test Suite
+
+# Core testing framework
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.0.0
+pytest-html>=3.1.0
+pytest-xdist>=3.0.0
+pytest-mock>=3.10.0
+
+# Performance testing
+pytest-benchmark>=4.0.0
+memory-profiler>=0.60.0
+
+# Test utilities
+factory-boy>=3.2.0
+faker>=18.0.0
+responses>=0.23.0
+
+# Async testing support
+aiofiles>=23.0.0
+aiohttp>=3.8.0
+
+# Monitoring and profiling
+psutil>=5.9.0
+py-spy>=0.3.14
+
+# Development utilities
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.0.0

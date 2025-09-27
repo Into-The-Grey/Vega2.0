@@ -106,6 +106,15 @@ try:
 except ImportError as e:
     print(f"⚠️ Analytics system not available: {e}")
 
+# Document intelligence integration
+try:
+    from ..document.api import router as document_router
+
+    app.include_router(document_router)
+    print("✅ Document intelligence system integrated")
+except ImportError as e:
+    print(f"⚠️ Document intelligence system not available: {e}")
+
 # Metrics
 app.state.metrics = {
     "requests_total": 0,

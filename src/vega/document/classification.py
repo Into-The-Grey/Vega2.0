@@ -27,178 +27,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from pathlib import Path
 import hashlib
 
-import numpy as np
 
-try:
-    from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
-    from sklearn.naive_bayes import MultinomialNB
-    from sklearn.svm import SVC
-    from sklearn.ensemble import RandomForestClassifier
-    from sklearn.linear_model import LogisticRegression
-    from sklearn.cluster import KMeans, DBSCAN
-    from sklearn.decomposition import LatentDirichletAllocation, NMF
-    from sklearn.metrics.pairwise import cosine_similarity
-    from sklearn.preprocessing import LabelEncoder
-    from sklearn.model_selection import train_test_split, cross_val_score
-    from sklearn.pipeline import Pipeline
-    from sklearn.metrics import classification_report, confusion_matrix
-
-    HAS_SKLEARN = True
-except ImportError:
-    HAS_SKLEARN = False
-
-try:
-    from sentence_transformers import SentenceTransformer
-
-    HAS_SENTENCE_TRANSFORMERS = True
-except ImportError:
-    SentenceTransformer = None
-    HAS_SENTENCE_TRANSFORMERS = False
-
-try:
-    from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassification
-    import torch
-
-    HAS_TRANSFORMERS = True
-except ImportError:
-    pipeline = AutoTokenizer = AutoModelForSequenceClassification = torch = None
-    HAS_TRANSFORMERS = False
-
-try:
-    import pandas as pd
-
-    HAS_PANDAS = True
-except ImportError:
-    pd = None
-    HAS_PANDAS = False
-
-try:
-    import nltk
-    from nltk.corpus import stopwords
-    from nltk.tokenize import word_tokenize
-    from nltk.stem import PorterStemmer
-
-    HAS_NLTK = True
-except ImportError:
-    nltk = stopwords = word_tokenize = PorterStemmer = None
-    HAS_NLTK = False
-
-logger = logging.getLogger(__name__)
-
-
-class ClassificationError(Exception):
-    """Custom exception for classification errors"""
-
-    pass
-
-
-class DocumentCategory(Enum):
-    """Primary document categories"""
-
-    LEGAL = "legal"
-    FINANCIAL = "financial"
-    TECHNICAL = "technical"
-    ACADEMIC = "academic"
-    BUSINESS = "business"
-    MEDICAL = "medical"
-    GOVERNMENT = "government"
-    PERSONAL = "personal"
-    MARKETING = "marketing"
-    CORRESPONDENCE = "correspondence"
-    FORMS = "forms"
-    REPORTS = "reports"
-    MANUALS = "manuals"
-    CONTRACTS = "contracts"
-    INVOICES = "invoices"
-    UNKNOWN = "unknown"
-
-
-class ClassificationMethod(Enum):
-    """Classification methods"""
-
-    NAIVE_BAYES = "naive_bayes"
-    SVM = "svm"
-    RANDOM_FOREST = "random_forest"
-    LOGISTIC_REGRESSION = "logistic_regression"
-    NEURAL_NETWORK = "neural_network"
-    SENTENCE_TRANSFORMERS = "sentence_transformers"
-    HYBRID = "hybrid"
-
-
-class FeatureType(Enum):
-    """Feature extraction types"""
-
-    TFIDF = "tfidf"
-    BOW = "bow"
-    NGRAMS = "ngrams"
-    EMBEDDINGS = "embeddings"
-    COMBINED = "combined"
-
-
-class ClusteringMethod(Enum):
-    """Clustering algorithms"""
-
-    KMEANS = "kmeans"
-    DBSCAN = "dbscan"
-    HIERARCHICAL = "hierarchical"
-
-
-@dataclass
-class ClassificationConfig:
-    """Configuration for document classification"""
-
-    method: ClassificationMethod = ClassificationMethod.HYBRID
-    feature_type: FeatureType = FeatureType.COMBINED
-    max_features: int = 10000
-    ngram_range: Tuple[int, int] = (1, 2)
-    min_confidence: float = 0.7
-    use_pretrained_models: bool = True
-    model_cache_dir: str = "./models/classification"
-    enable_topic_modeling: bool = True
-    enable_clustering: bool = True
-    num_topics: int = 20
-    num_clusters: int = 10
-
-
-@dataclass
-class TopicModelingConfig:
-    """Configuration for topic modeling"""
-
-    method: str = "lda"  # lda, nmf
-    num_topics: int = 20
-    max_iter: int = 100
-    alpha: float = 0.1
-    beta: float = 0.01
-    min_df: int = 2
-    max_df: float = 0.95
-
-
-@dataclass
-class ClusteringConfig:
-    """Configuration for clustering"""
-
-    method: ClusteringMethod = ClusteringMethod.KMEANS
-    num_clusters: int = 10
-    min_samples: int = 5
-    eps: float = 0.5
-    distance_metric: str = "cosine"
-
-
-@dataclass
-class ClassificationResult:
-    """Result from document classification"""
-
-    predicted_category: DocumentCategory
-    confidence: float
-    probabilities: Dict[str, float]
-    features_used: List[str]
-    model_info: Dict[str, Any]
-    topics: Optional[List[Tuple[str, float]]] = None
-    cluster_id: Optional[int] = None
-    similar_documents: Optional[List[Dict[str, Any]]] = None
-
-
-@dataclass
 class TopicResult:
     """Result from topic modeling"""
 
@@ -213,9 +42,9 @@ class ClusterResult:
     """Result from document clustering"""
 
     cluster_labels: List[int]
-    cluster_centers: Optional[np.ndarray] = None
     silhouette_score: float
     num_clusters: int
+    cluster_centers: Optional[np.ndarray] = None
     cluster_info: List[Dict[str, Any]] = field(default_factory=list)
 
 
@@ -1418,6 +1247,380 @@ class DocumentClassifier:
         except Exception as e:
             logger.error(f"Demo creation error: {e}")
             return {}
+
+    class CategoryPredictor:
+        """
+        Dedicated category prediction component for document classification
+        """
+
+        def __init__(self, config: Optional[ClassificationConfig] = None):
+            self.config = config or ClassificationConfig()
+            self.model = None
+            self.label_encoder = LabelEncoder() if HAS_SKLEARN else None
+            self.vectorizer = None
+
+        async def initialize(self) -> None:
+            """Initialize the category predictor"""
+            try:
+                if HAS_SKLEARN:
+                    from sklearn.ensemble import RandomForestClassifier
+
+                    self.model = RandomForestClassifier(
+                        n_estimators=100, random_state=42
+                    )
+
+                    if self.config.feature_type == FeatureType.TFIDF:
+                        from sklearn.feature_extraction.text import TfidfVectorizer
+
+                        self.vectorizer = TfidfVectorizer(
+                            max_features=5000, stop_words="english"
+                        )
+
+                logger.info("CategoryPredictor initialized successfully")
+
+            except Exception as e:
+                logger.error(f"CategoryPredictor initialization error: {e}")
+
+        async def predict_category(self, text: str) -> DocumentCategory:
+            """Predict document category from text"""
+            try:
+                if not self.model or not self.vectorizer:
+                    return DocumentCategory.UNKNOWN
+
+                # Transform text to features
+                features = self.vectorizer.transform([text])
+
+                # Predict category
+                prediction = self.model.predict(features)
+
+                # Convert to DocumentCategory
+                if self.label_encoder:
+                    category_name = self.label_encoder.inverse_transform(prediction)[0]
+                    return self._map_to_document_category(category_name)
+
+                return DocumentCategory.UNKNOWN
+
+            except Exception as e:
+                logger.error(f"Category prediction error: {e}")
+                return DocumentCategory.UNKNOWN
+
+        def _map_to_document_category(self, category_name: str) -> DocumentCategory:
+            """Map category name to DocumentCategory enum"""
+            try:
+                mapping = {
+                    "legal": DocumentCategory.LEGAL,
+                    "contract": DocumentCategory.CONTRACTS,
+                    "technical": DocumentCategory.TECHNICAL,
+                    "business": DocumentCategory.BUSINESS,
+                    "financial": DocumentCategory.FINANCIAL,
+                    "medical": DocumentCategory.MEDICAL,
+                    "academic": DocumentCategory.ACADEMIC,
+                    "government": DocumentCategory.GOVERNMENT,
+                    "personal": DocumentCategory.PERSONAL,
+                    "marketing": DocumentCategory.MARKETING,
+                }
+
+                return mapping.get(category_name.lower(), DocumentCategory.UNKNOWN)
+
+            except Exception:
+                return DocumentCategory.UNKNOWN
+
+    class ContentAnalyzer:
+        """
+        Content analysis component for document processing
+        """
+
+        def __init__(self, config: Optional[ClassificationConfig] = None):
+            self.config = config or ClassificationConfig()
+
+        async def initialize(self) -> None:
+            """Initialize the content analyzer"""
+            logger.info("ContentAnalyzer initialized successfully")
+
+        async def analyze_content(self, text: str) -> Dict[str, Any]:
+            """Analyze document content and extract insights"""
+            try:
+                analysis = {
+                    "word_count": len(text.split()),
+                    "char_count": len(text),
+                    "sentence_count": len([s for s in text.split(".") if s.strip()]),
+                    "readability_score": self._calculate_readability(text),
+                    "complexity_level": self._assess_complexity(text),
+                    "language": self._detect_language(text),
+                    "sentiment": self._analyze_sentiment(text),
+                }
+
+                return analysis
+
+            except Exception as e:
+                logger.error(f"Content analysis error: {e}")
+                return {}
+
+        def _calculate_readability(self, text: str) -> float:
+            """Calculate basic readability score"""
+            try:
+                words = text.split()
+                sentences = [s for s in text.split(".") if s.strip()]
+
+                if len(sentences) == 0:
+                    return 0.0
+
+                avg_words_per_sentence = len(words) / len(sentences)
+
+                # Simple readability approximation
+                readability = max(0, min(100, 100 - (avg_words_per_sentence * 2)))
+                return readability
+
+            except Exception:
+                return 50.0  # Default medium readability
+
+        def _assess_complexity(self, text: str) -> str:
+            """Assess document complexity level"""
+            try:
+                word_count = len(text.split())
+
+                if word_count < 100:
+                    return "simple"
+                elif word_count < 500:
+                    return "moderate"
+                else:
+                    return "complex"
+
+            except Exception:
+                return "moderate"
+
+        def _detect_language(self, text: str) -> str:
+            """Basic language detection"""
+            # Simple heuristic - in production use proper language detection
+            return "english"
+
+        def _analyze_sentiment(self, text: str) -> str:
+            """Basic sentiment analysis"""
+            # Simple heuristic - in production use proper sentiment analysis
+            positive_words = ["good", "great", "excellent", "positive", "benefit"]
+            negative_words = ["bad", "poor", "terrible", "negative", "problem"]
+
+            text_lower = text.lower()
+
+            pos_count = sum(1 for word in positive_words if word in text_lower)
+            neg_count = sum(1 for word in negative_words if word in text_lower)
+
+            if pos_count > neg_count:
+                return "positive"
+            elif neg_count > pos_count:
+                return "negative"
+            else:
+                return "neutral"
+
+    class CategoryPredictor:
+        """
+        Dedicated category prediction component for document classification
+        """
+
+        def __init__(self, config: Optional[ClassificationConfig] = None):
+            self.config = config or ClassificationConfig()
+            self.model = None
+            self.label_encoder = LabelEncoder() if HAS_SKLEARN else None
+            self.vectorizer = None
+
+        async def initialize(self) -> None:
+            """Initialize the category predictor"""
+            try:
+                if HAS_SKLEARN:
+                    from sklearn.ensemble import RandomForestClassifier
+
+                    self.model = RandomForestClassifier(
+                        n_estimators=100, random_state=42
+                    )
+
+                    if self.config.feature_type == FeatureType.TFIDF:
+                        from sklearn.feature_extraction.text import TfidfVectorizer
+
+                        self.vectorizer = TfidfVectorizer(
+                            max_features=5000, stop_words="english"
+                        )
+
+                logger.info("CategoryPredictor initialized successfully")
+
+            except Exception as e:
+                logger.error(f"CategoryPredictor initialization error: {e}")
+
+        async def predict_category(self, text: str) -> DocumentCategory:
+            """Predict document category from text"""
+            try:
+                if not self.model or not self.vectorizer:
+                    return DocumentCategory.UNKNOWN
+
+                # Transform text to features
+                features = self.vectorizer.transform([text])
+
+                # Predict category
+                prediction = self.model.predict(features)
+
+                # Convert to DocumentCategory
+                if self.label_encoder:
+                    category_name = self.label_encoder.inverse_transform(prediction)[0]
+                    return self._map_to_document_category(category_name)
+
+                return DocumentCategory.UNKNOWN
+
+            except Exception as e:
+                logger.error(f"Category prediction error: {e}")
+                return DocumentCategory.UNKNOWN
+
+        def _map_to_document_category(self, category_name: str) -> DocumentCategory:
+            """Map category name to DocumentCategory enum"""
+            try:
+                mapping = {
+                    "legal": DocumentCategory.LEGAL,
+                    "contract": DocumentCategory.CONTRACTS,
+                    "technical": DocumentCategory.TECHNICAL,
+                    "business": DocumentCategory.BUSINESS,
+                    "financial": DocumentCategory.FINANCIAL,
+                    "medical": DocumentCategory.MEDICAL,
+                    "academic": DocumentCategory.ACADEMIC,
+                    "government": DocumentCategory.GOVERNMENT,
+                    "personal": DocumentCategory.PERSONAL,
+                    "marketing": DocumentCategory.MARKETING,
+                }
+
+                return mapping.get(category_name.lower(), DocumentCategory.UNKNOWN)
+
+            except Exception:
+                return DocumentCategory.UNKNOWN
+
+        def _count_syllables(self, word: str) -> int:
+            """Count syllables in a word (simple approximation)"""
+            vowels = "aeiouyAEIOUY"
+            syllable_count = 0
+            prev_was_vowel = False
+
+            for char in word:
+                is_vowel = char in vowels
+                if is_vowel and not prev_was_vowel:
+                    syllable_count += 1
+                prev_was_vowel = is_vowel
+
+            # Adjust for silent e
+            if word.endswith("e"):
+                syllable_count -= 1
+
+            return max(1, syllable_count)
+
+    class ContentAnalyzer:
+        """
+        Content analysis component for document processing
+        """
+
+        def __init__(self, config: Optional[ClassificationConfig] = None):
+            self.config = config or ClassificationConfig()
+
+        async def initialize(self) -> None:
+            """Initialize the content analyzer"""
+            logger.info("ContentAnalyzer initialized successfully")
+
+        async def analyze_content(self, text: str) -> Dict[str, Any]:
+            """Analyze document content and extract insights"""
+            try:
+                analysis = {
+                    "word_count": len(text.split()),
+                    "char_count": len(text),
+                    "sentence_count": len([s for s in text.split(".") if s.strip()]),
+                    "readability_score": self._calculate_readability(text),
+                    "complexity_level": self._assess_complexity(text),
+                    "language": self._detect_language(text),
+                    "sentiment": self._analyze_sentiment(text),
+                }
+
+                return analysis
+
+            except Exception as e:
+                logger.error(f"Content analysis error: {e}")
+                return {}
+
+        def _calculate_readability(self, text: str) -> float:
+            """Calculate readability score (Flesch Reading Ease approximation)"""
+            try:
+                words = text.split()
+                sentences = text.split(".")
+                syllables = sum(self._count_syllables(word) for word in words)
+
+                if len(sentences) == 0 or len(words) == 0:
+                    return 0.0
+
+                avg_sentence_length = len(words) / len(sentences)
+                avg_syllables_per_word = syllables / len(words)
+
+                # Simplified Flesch Reading Ease formula
+                score = (
+                    206.835
+                    - (1.015 * avg_sentence_length)
+                    - (84.6 * avg_syllables_per_word)
+                )
+
+                return max(0.0, min(100.0, score))
+
+            except Exception:
+                return 0.0
+
+        def _count_syllables(self, word: str) -> int:
+            """Count syllables in a word (simple approximation)"""
+            vowels = "aeiouyAEIOUY"
+            syllable_count = 0
+            prev_was_vowel = False
+
+            for char in word:
+                is_vowel = char in vowels
+                if is_vowel and not prev_was_vowel:
+                    syllable_count += 1
+                prev_was_vowel = is_vowel
+
+            # Adjust for silent e
+            if word.endswith("e"):
+                syllable_count -= 1
+
+            return max(1, syllable_count)
+
+        def _assess_complexity(self, text: str) -> str:
+            """Assess document complexity level"""
+            try:
+                readability = self._calculate_readability(text)
+
+                if readability >= 70:
+                    return "easy"
+                elif readability >= 50:
+                    return "moderate"
+                else:
+                    return "difficult"
+
+            except Exception:
+                return "unknown"
+
+        def _detect_language(self, text: str) -> str:
+            """Simple language detection (placeholder)"""
+            return "en"  # Placeholder - in production use proper language detection
+
+        def _analyze_sentiment(self, text: str) -> str:
+            """Analyze sentiment (basic implementation)"""
+            try:
+                # Simple heuristic - in production use proper sentiment analysis
+                positive_words = ["good", "great", "excellent", "positive", "benefit"]
+                negative_words = ["bad", "poor", "terrible", "negative", "problem"]
+
+                text_lower = text.lower()
+
+                pos_count = sum(1 for word in positive_words if word in text_lower)
+                neg_count = sum(1 for word in negative_words if word in text_lower)
+
+                if pos_count > neg_count:
+                    return "positive"
+                elif neg_count > pos_count:
+                    return "negative"
+                else:
+                    return "neutral"
+
+            except Exception:
+                return "neutral"
 
 
 # Example usage and testing
