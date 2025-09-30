@@ -22,19 +22,25 @@ from .understanding import (
 )
 
 from .classification import (
-    DocumentClassifier,
-    TopicModeler,
-    DocumentClusterer,
-    CategoryPredictor,
-    ContentAnalyzer,
+    DocumentClassificationAI,
+    ContentClassifier,
+    TopicClassifier,
+    HierarchicalClassifier,
+    IntentClassifier,
+    ClassificationConfig,
+    ClassificationCategory,
+    ClassificationResult,
+    ClassificationProcessingResult,
+    HierarchicalCategory,
 )
 
-from .automation import (
-    DocumentWorkflowManager,
-    SmartRouter,
-    ApprovalWorkflow,
-    ProcessingPipeline,
-    WorkflowOrchestrator,
+from .workflow import (
+    WorkflowManager,
+    DocumentRouter,
+    ApprovalManager,
+    WorkflowScheduler,
+    WorkflowDefinition,
+    WorkflowContext,
 )
 
 from .legal import (
@@ -51,14 +57,14 @@ from .technical import (
     APIDocumentationAnalyzer,
     TechnicalWritingAssistant,
     DocumentationQualityAnalyzer,
+    TechnicalConfig,
+    DocumentationConfig,
 )
+
+from .legal_config import LegalConfig, ContractConfig
 
 # Configuration and utilities
 from .understanding import DocumentConfig, LayoutConfig
-from .classification import ClassificationConfig, TopicConfig
-from .automation import WorkflowConfig, ProcessingConfig
-from .legal import LegalConfig, ContractConfig
-from .technical import TechnicalConfig, DocumentationConfig
 
 __all__ = [
     # Document Understanding AI
@@ -68,17 +74,18 @@ __all__ = [
     "FormRecognizer",
     "DocumentStructureAnalyzer",
     # Document Classification
-    "DocumentClassifier",
-    "TopicModeler",
-    "DocumentClusterer",
-    "CategoryPredictor",
-    "ContentAnalyzer",
+    "DocumentClassificationAI",
+    "ContentClassifier",
+    "TopicClassifier",
+    "HierarchicalClassifier",
+    "IntentClassifier",
     # Document Workflow Automation
-    "DocumentWorkflowManager",
-    "SmartRouter",
-    "ApprovalWorkflow",
-    "ProcessingPipeline",
-    "WorkflowOrchestrator",
+    "WorkflowManager",
+    "DocumentRouter",
+    "ApprovalManager",
+    "WorkflowScheduler",
+    "WorkflowDefinition",
+    "WorkflowContext",
     # Legal Document Analysis
     "LegalDocumentAnalyzer",
     "ContractAnalyzer",
@@ -95,9 +102,10 @@ __all__ = [
     "DocumentConfig",
     "LayoutConfig",
     "ClassificationConfig",
-    "TopicConfig",
-    "WorkflowConfig",
-    "ProcessingConfig",
+    "ClassificationCategory",
+    "ClassificationResult",
+    "ClassificationProcessingResult",
+    "HierarchicalCategory",
     "LegalConfig",
     "ContractConfig",
     "TechnicalConfig",

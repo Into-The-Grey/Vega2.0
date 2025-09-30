@@ -1,1702 +1,1187 @@
-"""
-Vega 2.0 Document Classification Module
+"""Rule-based document classification utilities for Vega 2.0."""
 
-This module provides intelligent document classification capabilities including:
-- ML-based document categorization and type detection
-- Topic modeling and semantic clustering
-- Content-based document routing and organization
-- Multi-modal classification (text, layout, structure)
-- Confidence-based classification with uncertainty handling
-- Custom classification models and fine-tuning support
-
-Dependencies:
-- scikit-learn: Machine learning algorithms for classification
-- transformers: Pre-trained language models for document understanding
-- sentence-transformers: Semantic embeddings for document similarity
-- numpy, pandas: Data manipulation and numerical processing
-- nltk/spacy: Natural language processing utilities
-"""
+from __future__ import annotations
 
 import asyncio
 import logging
-import json
-import pickle
+import re
 from dataclasses import dataclass, field
-from enum import Enum
-from typing import Any, Dict, List, Optional, Tuple, Union
-from pathlib import Path
-import hashlib
+from typing import Any, Dict, List, Optional, Sequence, Tuple, Union, cast
+
+from .base import (
+    BaseDocumentProcessor,
+    ConfigurableComponent,
+    ConfigurationError,
+    DocumentIntelligenceError,
+    ProcessingContext,
+    ProcessingResult,
+    ValidationError,
+)
+
+logger = logging.getLogger(__name__)
+
+_WORD_REGEX = re.compile(r"[A-Za-z0-9']+")
 
 
-class TopicResult:
-    """Result from topic modeling"""
+def _normalize_text(text: str) -> str:
+    """Normalize text for keyword matching."""
+    return " ".join(text.lower().split())
 
-    topics: List[Dict[str, Any]]
-    document_topics: List[List[Tuple[int, float]]]
-    coherence_score: float
-    perplexity: Optional[float] = None
+
+def _derive_keywords_from_name(name: str) -> List[str]:
+    """Derive simple keyword list from a category/topic name."""
+    tokens = re.split(r"[\s_\-/]+", name.lower())
+    keywords = [token for token in tokens if token]
+
+    # Extend with common synonyms for well known domains
+    synonyms = {
+        "ai": ["artificial intelligence", "machine learning", "neural"],
+        "ml": ["machine learning", "deep learning"],
+        "legal": ["contract", "agreement", "compliance"],
+        "tech": ["technical", "technology"],
+        "business": ["enterprise", "corporate", "operations"],
+    }
+
+    for token in list(keywords):
+        keywords.extend(synonyms.get(token, []))
+
+    # Remove duplicates while preserving order
+    seen: set[str] = set()
+    deduped: List[str] = []
+    for keyword in keywords:
+        key = keyword.lower()
+        if key not in seen:
+            seen.add(key)
+            deduped.append(keyword)
+    return deduped or [name.lower()]
+
+
+def _keyword_score(text: str, keywords: Sequence[str]) -> Tuple[float, List[str]]:
+    """Return a score between 0 and 1 together with matched keywords."""
+    if not keywords:
+        return 0.0, []
+
+    normalized = _normalize_text(text)
+    tokens = set(_WORD_REGEX.findall(normalized))
+    matches: List[str] = []
+
+    for keyword in keywords:
+        key = keyword.lower().strip()
+        if not key:
+            continue
+        if " " in key or "-" in key:
+            if key in normalized:
+                matches.append(keyword)
+        else:
+            if key in tokens:
+                matches.append(keyword)
+
+    if not matches:
+        return 0.0, []
+
+    match_ratio = len(matches) / len(keywords)
+    unique_matches = len(set(match.lower() for match in matches))
+    diversity_bonus = min(0.25, unique_matches * 0.08)
+    density_bonus = min(0.3, len(matches) * 0.05)
+    multi_word_bonus = 0.05 * sum(1 for match in matches if " " in match)
+    score = min(1.0, match_ratio + diversity_bonus + density_bonus + multi_word_bonus)
+    return score, matches
+
+
+def _resolve_text_payload(
+    input_data: Union[str, Dict[str, Any]],
+) -> Tuple[str, Dict[str, Any]]:
+    """Extract text and options from supported input types."""
+    if isinstance(input_data, str):
+        text = input_data
+        payload: Dict[str, Any] = {}
+    elif isinstance(input_data, dict):
+        payload = dict(input_data)
+        text = payload.get("text")
+    else:
+        raise ValidationError(
+            "Input must be a string or a dictionary containing 'text'."
+        )
+
+    if not isinstance(text, str):
+        raise ValidationError(
+            "Invalid input type: input text must be provided as a string."
+        )
+
+    if not text.strip():
+        raise ValidationError("Input text cannot be empty.")
+
+    return text, payload
+
+
+class ClassificationError(DocumentIntelligenceError):
+    """Domain specific classification error."""
 
 
 @dataclass
-class ClusterResult:
-    """Result from document clustering"""
+class ClassificationCategory:
+    """Definition of a document classification category."""
 
-    cluster_labels: List[int]
-    silhouette_score: float
-    num_clusters: int
-    cluster_centers: Optional[np.ndarray] = None
-    cluster_info: List[Dict[str, Any]] = field(default_factory=list)
+    name: str
+    description: str = ""
+    keywords: List[str] = field(default_factory=list)
+    confidence_threshold: Optional[float] = None
+
+    def matches_keywords(self, text: str) -> bool:
+        normalized = _normalize_text(text)
+        for keyword in self.keywords:
+            if keyword.lower() in normalized:
+                return True
+        return False
+
+    def calculate_score(self, text: str) -> float:
+        score, _ = _keyword_score(text, self.keywords)
+        return score
 
 
-class FeatureExtractor:
-    """
-    Feature extraction for document classification
-    """
+@dataclass
+class HierarchicalCategory:
+    """Simple hierarchical category node."""
+
+    name: str
+    level: int
+    parent: Optional["HierarchicalCategory"] = None
+    subcategories: List["HierarchicalCategory"] = field(default_factory=list)
+
+    def add_subcategory(self, category: "HierarchicalCategory") -> None:
+        category.parent = self
+        self.subcategories.append(category)
+
+    def get_full_path(self) -> List[str]:
+        path: List[str] = []
+        node: Optional[HierarchicalCategory] = self
+        while node is not None:
+            path.append(node.name)
+            node = node.parent
+        return list(reversed(path))
+
+    def find_by_path(self, path: Sequence[str]) -> Optional["HierarchicalCategory"]:
+        if not path:
+            return self
+
+        normalized_path = [segment.lower() for segment in path if segment]
+        if not normalized_path:
+            return self
+
+        node: Optional[HierarchicalCategory] = self
+        start_index = 0
+
+        if node.name.lower() == normalized_path[0]:
+            if len(normalized_path) == 1:
+                return node
+            start_index = 1
+
+        for segment in normalized_path[start_index:]:
+            if node is None:
+                return None
+            match = next(
+                (
+                    child
+                    for child in node.subcategories
+                    if child.name.lower() == segment
+                ),
+                None,
+            )
+            if match is None:
+                return None
+            node = match
+
+        return node
+
+
+def _build_default_categories() -> List[ClassificationCategory]:
+    """Construct default categories covering common enterprise domains."""
+    return [
+        ClassificationCategory(
+            name="legal",
+            description="Contracts, agreements, and legal policy documents",
+            keywords=[
+                "legal",
+                "contract",
+                "agreement",
+                "liability",
+                "compliance",
+                "law",
+                "clause",
+                "terms",
+            ],
+            confidence_threshold=0.6,
+        ),
+        ClassificationCategory(
+            name="technical",
+            description="Technical documentation, APIs, and engineering notes",
+            keywords=[
+                "api",
+                "technical",
+                "developer",
+                "code",
+                "software",
+                "documentation",
+                "endpoint",
+                "integration",
+            ],
+            confidence_threshold=0.55,
+        ),
+        ClassificationCategory(
+            name="business",
+            description="Business strategy, operations, and corporate documents",
+            keywords=[
+                "business",
+                "enterprise",
+                "strategy",
+                "operations",
+                "market",
+                "management",
+                "stakeholder",
+            ],
+            confidence_threshold=0.55,
+        ),
+        ClassificationCategory(
+            name="financial",
+            description="Invoices, budgets, and financial reports",
+            keywords=[
+                "invoice",
+                "budget",
+                "financial",
+                "revenue",
+                "expense",
+                "payment",
+                "balance",
+            ],
+            confidence_threshold=0.55,
+        ),
+        ClassificationCategory(
+            name="research",
+            description="Research papers, studies, and academic material",
+            keywords=[
+                "research",
+                "study",
+                "paper",
+                "experiment",
+                "methodology",
+                "results",
+                "conclusion",
+            ],
+            confidence_threshold=0.55,
+        ),
+        ClassificationCategory(
+            name="workflow",
+            description="Process documentation and procedural instructions",
+            keywords=[
+                "workflow",
+                "procedure",
+                "step",
+                "process",
+                "instructions",
+                "review",
+                "quality",
+            ],
+            confidence_threshold=0.5,
+        ),
+    ]
+
+
+@dataclass
+class ClassificationConfig(ConfigurableComponent):
+    """Runtime configuration for document classification."""
+
+    enable_topic_classification: bool = True
+    enable_content_classification: bool = True
+    enable_hierarchical: bool = True
+    enable_intent_classification: bool = True
+    min_confidence: float = 0.7
+    max_categories: int = 5
+    default_categories: List[ClassificationCategory] = field(
+        default_factory=_build_default_categories
+    )
+    fallback_category: str = "general"
+    allow_multi_label: bool = True
+
+    def validate_config(self) -> List[str]:
+        errors: List[str] = []
+        if not (0.0 <= self.min_confidence <= 1.0):
+            errors.append("min_confidence must be between 0 and 1")
+        if self.max_categories <= 0:
+            errors.append("max_categories must be greater than 0")
+        if not self.default_categories:
+            errors.append("default_categories cannot be empty")
+        return errors
+
+
+class ClassificationProcessingResult(ProcessingResult):
+    """Processing result with convenience accessors used in tests."""
+
+    @property
+    def error(self) -> str:
+        return self.errors[0] if self.errors else ""
+
+
+@dataclass
+class ClassificationResult:
+    """Aggregate result returned by DocumentClassificationAI."""
+
+    success: bool
+    data: Dict[str, Any] = field(default_factory=dict)
+    context: Optional[ProcessingContext] = None
+    errors: List[str] = field(default_factory=list)
+    warnings: List[str] = field(default_factory=list)
+    processing_time_ms: Optional[float] = None
+    error: str = ""
+
+    def add_error(self, message: str) -> None:
+        if message:
+            self.errors.append(message)
+            if not self.error:
+                self.error = message
+        self.success = False
+
+    def add_warning(self, message: str) -> None:
+        if message:
+            self.warnings.append(message)
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "success": self.success,
+            "data": self.data,
+            "errors": self.errors,
+            "warnings": self.warnings,
+            "processing_time_ms": self.processing_time_ms,
+        }
+
+
+class _BaseKeywordClassifier(BaseDocumentProcessor[ClassificationConfig]):
+    """Shared helpers for keyword based classifiers."""
+
+    async def process(
+        self, input_data: Any, context: Optional[ProcessingContext] = None
+    ) -> ClassificationProcessingResult:
+        base_result = await super().process(input_data, context)
+        return ClassificationProcessingResult(
+            success=base_result.success,
+            context=base_result.context,
+            data=base_result.data,
+            errors=list(base_result.errors),
+            warnings=list(base_result.warnings),
+            processing_time_ms=base_result.processing_time_ms,
+        )
+
+    def _validate_input(self, input_data: Any) -> None:
+        _resolve_text_payload(input_data)
+
+
+class ContentClassifier(_BaseKeywordClassifier):
+    """Classify documents into coarse content categories."""
+
+    async def _async_initialize(self) -> None:
+        # No heavy initialization required for keyword heuristics
+        return None
+
+    async def _process_internal(
+        self, input_data: Any, context: ProcessingContext
+    ) -> Dict[str, Any]:
+        text, options = _resolve_text_payload(input_data)
+        normalized = _normalize_text(text)
+        categories = options.get("categories", self.config.default_categories)
+
+        multi_label = bool(options.get("multi_label")) or (
+            self.config.allow_multi_label and options.get("multi_category")
+        )
+        max_categories = int(options.get("max_categories", self.config.max_categories))
+
+        scored_categories: List[Dict[str, Any]] = []
+        top_score = 0.0
+        top_category = self.config.fallback_category
+
+        for category in categories:
+            score, matches = _keyword_score(normalized, category.keywords)
+            threshold = (
+                category.confidence_threshold
+                if category.confidence_threshold is not None
+                else self.config.min_confidence
+            )
+
+            category_entry = {
+                "name": category.name,
+                "description": category.description,
+                "score": round(score, 3),
+                "matched_keywords": matches,
+                "threshold": threshold,
+            }
+            scored_categories.append(category_entry)
+
+            if score > top_score:
+                top_score = score
+                top_category = category.name
+
+        scored_categories.sort(key=lambda item: item["score"], reverse=True)
+
+        selected_categories: List[Dict[str, Any]] = []
+        if multi_label:
+            for entry in scored_categories:
+                if entry["score"] <= 0:
+                    continue
+                if entry["score"] >= entry["threshold"] or entry["score"] >= 0.2:
+                    selected_categories.append(entry)
+                if len(selected_categories) >= max_categories:
+                    break
+
+        result_data: Dict[str, Any] = {
+            "classification": top_category,
+            "confidence": round(top_score, 3),
+            "top_categories": scored_categories[: max_categories or 1],
+            "text_length": len(text),
+        }
+
+        if selected_categories:
+            result_data["categories"] = selected_categories
+
+        matched_keywords = (
+            scored_categories[0]["matched_keywords"] if scored_categories else []
+        )
+        if matched_keywords:
+            result_data["matched_keywords"] = matched_keywords
+
+        return result_data
+
+
+class TopicClassifier(_BaseKeywordClassifier):
+    """Identify thematic topics discussed in a document."""
 
     def __init__(self, config: ClassificationConfig):
-        self.config = config
-        self.vectorizers = {}
-        self.sentence_transformer = None
+        super().__init__(config)
+        self.topic_definitions: List[Dict[str, Any]] = [
+            {
+                "name": "Artificial Intelligence",
+                "keywords": [
+                    "artificial intelligence",
+                    "machine learning",
+                    "ai",
+                    "neural",
+                    "automation",
+                    "deep learning",
+                ],
+                "description": "Discussions around AI, ML, and automation.",
+            },
+            {
+                "name": "Business Operations",
+                "keywords": [
+                    "business",
+                    "operations",
+                    "workflow",
+                    "strategy",
+                    "organization",
+                    "governance",
+                ],
+                "description": "Operational processes and strategic planning.",
+            },
+            {
+                "name": "Software Development",
+                "keywords": [
+                    "software",
+                    "development",
+                    "code",
+                    "api",
+                    "deployment",
+                    "testing",
+                ],
+                "description": "Engineering and development related topics.",
+            },
+            {
+                "name": "Legal & Compliance",
+                "keywords": [
+                    "legal",
+                    "contract",
+                    "agreement",
+                    "compliance",
+                    "policy",
+                    "regulation",
+                ],
+                "description": "Legal, contractual, and regulatory matters.",
+            },
+            {
+                "name": "Research & Academic",
+                "keywords": [
+                    "research",
+                    "study",
+                    "paper",
+                    "methodology",
+                    "experiment",
+                    "results",
+                ],
+                "description": "Academic or scientific research content.",
+            },
+        ]
 
-        # Initialize sentence transformer if available
-        if HAS_SENTENCE_TRANSFORMERS and config.use_pretrained_models:
-            try:
-                self.sentence_transformer = SentenceTransformer("all-MiniLM-L6-v2")
-                logger.info("Sentence transformer loaded")
-            except Exception as e:
-                logger.warning(f"Failed to load sentence transformer: {e}")
+    async def _async_initialize(self) -> None:
+        return None
 
-    async def extract_features(
-        self, documents: List[str], feature_type: Optional[FeatureType] = None
-    ) -> np.ndarray:
-        """
-        Extract features from documents
+    async def _process_internal(
+        self, input_data: Any, context: ProcessingContext
+    ) -> Dict[str, Any]:
+        text, options = _resolve_text_payload(input_data)
+        max_topics = int(options.get("max_topics", min(5, self.config.max_categories)))
+        cluster_topics = bool(options.get("cluster_topics"))
 
-        Args:
-            documents: List of document texts
-            feature_type: Type of features to extract
-
-        Returns:
-            Feature matrix
-        """
-        try:
-            feature_type = feature_type or self.config.feature_type
-
-            if feature_type == FeatureType.TFIDF:
-                return await self._extract_tfidf_features(documents)
-            elif feature_type == FeatureType.BOW:
-                return await self._extract_bow_features(documents)
-            elif feature_type == FeatureType.NGRAMS:
-                return await self._extract_ngram_features(documents)
-            elif feature_type == FeatureType.EMBEDDINGS:
-                return await self._extract_embedding_features(documents)
-            elif feature_type == FeatureType.COMBINED:
-                return await self._extract_combined_features(documents)
-            else:
-                raise ClassificationError(f"Unknown feature type: {feature_type}")
-
-        except Exception as e:
-            logger.error(f"Feature extraction error: {e}")
-            return np.array([])
-
-    async def _extract_tfidf_features(self, documents: List[str]) -> np.ndarray:
-        """Extract TF-IDF features"""
-        try:
-            if not HAS_SKLEARN:
-                logger.warning("Scikit-learn not available for TF-IDF")
-                return np.array([])
-
-            vectorizer_key = "tfidf"
-            if vectorizer_key not in self.vectorizers:
-                self.vectorizers[vectorizer_key] = TfidfVectorizer(
-                    max_features=self.config.max_features,
-                    ngram_range=self.config.ngram_range,
-                    stop_words="english",
-                    lowercase=True,
-                    strip_accents="unicode",
-                )
-
-            vectorizer = self.vectorizers[vectorizer_key]
-            features = vectorizer.fit_transform(documents)
-
-            return features.toarray()
-
-        except Exception as e:
-            logger.error(f"TF-IDF extraction error: {e}")
-            return np.array([])
-
-    async def _extract_bow_features(self, documents: List[str]) -> np.ndarray:
-        """Extract Bag of Words features"""
-        try:
-            if not HAS_SKLEARN:
-                return np.array([])
-
-            vectorizer_key = "bow"
-            if vectorizer_key not in self.vectorizers:
-                self.vectorizers[vectorizer_key] = CountVectorizer(
-                    max_features=self.config.max_features,
-                    stop_words="english",
-                    lowercase=True,
-                    strip_accents="unicode",
-                )
-
-            vectorizer = self.vectorizers[vectorizer_key]
-            features = vectorizer.fit_transform(documents)
-
-            return features.toarray()
-
-        except Exception as e:
-            logger.error(f"BoW extraction error: {e}")
-            return np.array([])
-
-    async def _extract_ngram_features(self, documents: List[str]) -> np.ndarray:
-        """Extract n-gram features"""
-        try:
-            if not HAS_SKLEARN:
-                return np.array([])
-
-            vectorizer_key = f"ngram_{self.config.ngram_range}"
-            if vectorizer_key not in self.vectorizers:
-                self.vectorizers[vectorizer_key] = TfidfVectorizer(
-                    max_features=self.config.max_features,
-                    ngram_range=self.config.ngram_range,
-                    stop_words="english",
-                    analyzer="word",
-                )
-
-            vectorizer = self.vectorizers[vectorizer_key]
-            features = vectorizer.fit_transform(documents)
-
-            return features.toarray()
-
-        except Exception as e:
-            logger.error(f"N-gram extraction error: {e}")
-            return np.array([])
-
-    async def _extract_embedding_features(self, documents: List[str]) -> np.ndarray:
-        """Extract semantic embedding features"""
-        try:
-            if not self.sentence_transformer:
-                logger.warning("Sentence transformer not available")
-                return np.array([])
-
-            # Generate embeddings
-            embeddings = self.sentence_transformer.encode(
-                documents, show_progress_bar=False
+        topic_scores: List[Dict[str, Any]] = []
+        for topic in self.topic_definitions:
+            score, matches = _keyword_score(text, topic["keywords"])
+            if score <= 0:
+                continue
+            topic_scores.append(
+                {
+                    "name": topic["name"],
+                    "relevance": round(score, 3),
+                    "keywords": topic["keywords"],
+                    "matched_keywords": matches,
+                    "description": topic["description"],
+                }
             )
 
-            return embeddings
+        topic_scores.sort(key=lambda entry: entry["relevance"], reverse=True)
+        primary_topic = topic_scores[0] if topic_scores else None
 
-        except Exception as e:
-            logger.error(f"Embedding extraction error: {e}")
-            return np.array([])
+        result: Dict[str, Any] = {
+            "topics": topic_scores[:max_topics],
+            "confidence": primary_topic["relevance"] if primary_topic else 0.0,
+        }
 
-    async def _extract_combined_features(self, documents: List[str]) -> np.ndarray:
-        """Extract combined features from multiple methods"""
-        try:
-            features_list = []
+        if primary_topic:
+            result["primary_topic"] = primary_topic["name"]
 
-            # TF-IDF features
-            if HAS_SKLEARN:
-                tfidf_features = await self._extract_tfidf_features(documents)
-                if tfidf_features.size > 0:
-                    features_list.append(tfidf_features)
-
-            # Embedding features
-            if self.sentence_transformer:
-                embedding_features = await self._extract_embedding_features(documents)
-                if embedding_features.size > 0:
-                    features_list.append(embedding_features)
-
-            # Combine features
-            if features_list:
-                combined_features = np.concatenate(features_list, axis=1)
-                return combined_features
-            else:
-                logger.warning("No features extracted")
-                return np.array([])
-
-        except Exception as e:
-            logger.error(f"Combined feature extraction error: {e}")
-            return np.array([])
-
-    def get_feature_names(self, feature_type: FeatureType) -> List[str]:
-        """Get feature names for interpretability"""
-        try:
-            if feature_type in [FeatureType.TFIDF, FeatureType.BOW, FeatureType.NGRAMS]:
-                vectorizer_key = {
-                    FeatureType.TFIDF: "tfidf",
-                    FeatureType.BOW: "bow",
-                    FeatureType.NGRAMS: f"ngram_{self.config.ngram_range}",
-                }[feature_type]
-
-                if vectorizer_key in self.vectorizers:
-                    return (
-                        self.vectorizers[vectorizer_key]
-                        .get_feature_names_out()
-                        .tolist()
-                    )
-
-            return []
-
-        except Exception as e:
-            logger.debug(f"Feature names error: {e}")
-            return []
-
-
-class TopicModeler:
-    """
-    Topic modeling for document analysis
-    """
-
-    def __init__(self, config: TopicModelingConfig):
-        self.config = config
-        self.model = None
-        self.vectorizer = None
-
-    async def fit_topic_model(self, documents: List[str]) -> TopicResult:
-        """
-        Fit topic model on documents
-
-        Args:
-            documents: List of document texts
-
-        Returns:
-            Topic modeling results
-        """
-        try:
-            if not HAS_SKLEARN:
-                logger.warning("Scikit-learn not available for topic modeling")
-                return TopicResult(topics=[], document_topics=[], coherence_score=0.0)
-
-            # Preprocess documents
-            processed_docs = [self._preprocess_text(doc) for doc in documents]
-
-            # Vectorize documents
-            self.vectorizer = TfidfVectorizer(
-                max_features=5000,
-                min_df=self.config.min_df,
-                max_df=self.config.max_df,
-                stop_words="english",
-                ngram_range=(1, 2),
-            )
-
-            doc_term_matrix = self.vectorizer.fit_transform(processed_docs)
-
-            # Fit topic model
-            if self.config.method.lower() == "lda":
-                self.model = LatentDirichletAllocation(
-                    n_components=self.config.num_topics,
-                    max_iter=self.config.max_iter,
-                    doc_topic_prior=self.config.alpha,
-                    topic_word_prior=self.config.beta,
-                    random_state=42,
-                )
-            elif self.config.method.lower() == "nmf":
-                self.model = NMF(
-                    n_components=self.config.num_topics,
-                    max_iter=self.config.max_iter,
-                    random_state=42,
-                )
-            else:
-                raise ClassificationError(
-                    f"Unknown topic modeling method: {self.config.method}"
-                )
-
-            # Fit model
-            self.model.fit(doc_term_matrix)
-
-            # Extract topics
-            topics = self._extract_topics()
-
-            # Get document-topic distributions
-            doc_topic_dist = self.model.transform(doc_term_matrix)
-            document_topics = []
-
-            for doc_dist in doc_topic_dist:
-                doc_topics = [
-                    (i, prob) for i, prob in enumerate(doc_dist) if prob > 0.1
-                ]
-                doc_topics.sort(key=lambda x: x[1], reverse=True)
-                document_topics.append(doc_topics[:5])  # Top 5 topics per document
-
-            # Calculate coherence (simplified)
-            coherence_score = self._calculate_coherence(topics)
-
-            # Calculate perplexity for LDA
-            perplexity = None
-            if hasattr(self.model, "perplexity"):
-                perplexity = self.model.perplexity(doc_term_matrix)
-
-            return TopicResult(
-                topics=topics,
-                document_topics=document_topics,
-                coherence_score=coherence_score,
-                perplexity=perplexity,
-            )
-
-        except Exception as e:
-            logger.error(f"Topic modeling error: {e}")
-            return TopicResult(topics=[], document_topics=[], coherence_score=0.0)
-
-    def _preprocess_text(self, text: str) -> str:
-        """Preprocess text for topic modeling"""
-        try:
-            # Basic preprocessing
-            text = text.lower()
-
-            # Remove special characters but keep spaces
-            import re
-
-            text = re.sub(r"[^a-zA-Z\s]", "", text)
-
-            # Remove extra whitespace
-            text = " ".join(text.split())
-
-            return text
-
-        except Exception as e:
-            logger.debug(f"Text preprocessing error: {e}")
-            return text
-
-    def _extract_topics(self) -> List[Dict[str, Any]]:
-        """Extract topic information from fitted model"""
-        try:
-            if not self.model or not self.vectorizer:
-                return []
-
-            feature_names = self.vectorizer.get_feature_names_out()
-            topics = []
-
-            for topic_idx, topic in enumerate(self.model.components_):
-                # Get top words for topic
-                top_word_indices = topic.argsort()[-20:][::-1]  # Top 20 words
-                top_words = [(feature_names[i], topic[i]) for i in top_word_indices]
-
-                # Create topic summary
-                topic_words = [word for word, _ in top_words[:5]]
-                topic_name = f"Topic_{topic_idx}: {', '.join(topic_words[:3])}"
-
-                topics.append(
+        if cluster_topics and topic_scores:
+            high_relevance = [
+                topic for topic in topic_scores if topic["relevance"] >= 0.5
+            ]
+            medium_relevance = [
+                topic for topic in topic_scores if 0.2 <= topic["relevance"] < 0.5
+            ]
+            clusters = []
+            if high_relevance:
+                clusters.append(
                     {
-                        "id": topic_idx,
-                        "name": topic_name,
-                        "top_words": top_words,
-                        "weight": float(np.sum(topic)),
+                        "name": "high_relevance",
+                        "topics": [t["name"] for t in high_relevance],
                     }
                 )
-
-            return topics
-
-        except Exception as e:
-            logger.error(f"Topic extraction error: {e}")
-            return []
-
-    def _calculate_coherence(self, topics: List[Dict[str, Any]]) -> float:
-        """Calculate topic coherence (simplified implementation)"""
-        try:
-            # Simplified coherence calculation
-            # In production, would use more sophisticated metrics like C_v coherence
-
-            if not topics:
-                return 0.0
-
-            # Calculate average word probability variance within topics
-            coherence_scores = []
-
-            for topic in topics:
-                if "top_words" in topic:
-                    word_probs = [prob for _, prob in topic["top_words"][:10]]
-                    if word_probs:
-                        # Use coefficient of variation as coherence measure
-                        mean_prob = np.mean(word_probs)
-                        std_prob = np.std(word_probs)
-                        cov = std_prob / mean_prob if mean_prob > 0 else 0
-                        coherence_scores.append(1.0 - min(cov, 1.0))
-
-            return float(np.mean(coherence_scores)) if coherence_scores else 0.0
-
-        except Exception as e:
-            logger.debug(f"Coherence calculation error: {e}")
-            return 0.0
-
-
-class DocumentClusterer:
-    """
-    Document clustering for unsupervised grouping
-    """
-
-    def __init__(self, config: ClusteringConfig):
-        self.config = config
-        self.model = None
-        self.feature_extractor = None
-
-    async def cluster_documents(
-        self, documents: List[str], features: Optional[np.ndarray] = None
-    ) -> ClusterResult:
-        """
-        Cluster documents based on content similarity
-
-        Args:
-            documents: List of document texts
-            features: Pre-computed features (optional)
-
-        Returns:
-            Clustering results
-        """
-        try:
-            if not HAS_SKLEARN:
-                logger.warning("Scikit-learn not available for clustering")
-                return ClusterResult(
-                    cluster_labels=[], silhouette_score=0.0, num_clusters=0
-                )
-
-            # Extract features if not provided
-            if features is None:
-                if not self.feature_extractor:
-                    from . import ClassificationConfig  # Avoid circular import
-
-                    config = ClassificationConfig()
-                    self.feature_extractor = FeatureExtractor(config)
-
-                features = await self.feature_extractor.extract_features(documents)
-
-            if features.size == 0:
-                logger.warning("No features available for clustering")
-                return ClusterResult(
-                    cluster_labels=[], silhouette_score=0.0, num_clusters=0
-                )
-
-            # Initialize clustering model
-            if self.config.method == ClusteringMethod.KMEANS:
-                self.model = KMeans(
-                    n_clusters=self.config.num_clusters, random_state=42, n_init=10
-                )
-            elif self.config.method == ClusteringMethod.DBSCAN:
-                self.model = DBSCAN(
-                    eps=self.config.eps,
-                    min_samples=self.config.min_samples,
-                    metric=self.config.distance_metric,
-                )
-            else:
-                raise ClassificationError(
-                    f"Unknown clustering method: {self.config.method}"
-                )
-
-            # Fit clustering model
-            cluster_labels = self.model.fit_predict(features)
-
-            # Calculate silhouette score
-            silhouette_score = 0.0
-            try:
-                from sklearn.metrics import silhouette_score as calc_silhouette
-
-                if len(set(cluster_labels)) > 1:  # Need at least 2 clusters
-                    silhouette_score = calc_silhouette(features, cluster_labels)
-            except Exception as e:
-                logger.debug(f"Silhouette score calculation error: {e}")
-
-            # Get cluster information
-            cluster_info = self._analyze_clusters(documents, cluster_labels, features)
-
-            # Get cluster centers if available
-            cluster_centers = None
-            if hasattr(self.model, "cluster_centers_"):
-                cluster_centers = self.model.cluster_centers_
-
-            return ClusterResult(
-                cluster_labels=cluster_labels.tolist(),
-                cluster_centers=cluster_centers,
-                silhouette_score=float(silhouette_score),
-                num_clusters=len(set(cluster_labels)),
-                cluster_info=cluster_info,
-            )
-
-        except Exception as e:
-            logger.error(f"Clustering error: {e}")
-            return ClusterResult(
-                cluster_labels=[], silhouette_score=0.0, num_clusters=0
-            )
-
-    def _analyze_clusters(
-        self, documents: List[str], cluster_labels: np.ndarray, features: np.ndarray
-    ) -> List[Dict[str, Any]]:
-        """Analyze cluster characteristics"""
-        try:
-            cluster_info = []
-            unique_labels = set(cluster_labels)
-
-            for cluster_id in unique_labels:
-                if cluster_id == -1:  # Noise cluster in DBSCAN
-                    continue
-
-                # Get documents in this cluster
-                cluster_mask = cluster_labels == cluster_id
-                cluster_docs = [
-                    doc for i, doc in enumerate(documents) if cluster_mask[i]
-                ]
-                cluster_features = features[cluster_mask]
-
-                # Calculate cluster statistics
-                cluster_size = len(cluster_docs)
-
-                # Find representative documents (closest to centroid)
-                if cluster_features.shape[0] > 0:
-                    centroid = np.mean(cluster_features, axis=0)
-                    distances = np.linalg.norm(cluster_features - centroid, axis=1)
-                    representative_idx = np.argmin(distances)
-                    representative_doc = cluster_docs[representative_idx]
-                else:
-                    representative_doc = ""
-
-                # Extract key terms (simplified)
-                key_terms = self._extract_cluster_terms(cluster_docs)
-
-                cluster_info.append(
+            if medium_relevance:
+                clusters.append(
                     {
-                        "cluster_id": int(cluster_id),
-                        "size": cluster_size,
-                        "percentage": cluster_size / len(documents) * 100,
-                        "representative_document": representative_doc[:200],
-                        "key_terms": key_terms,
-                        "centroid_available": hasattr(self.model, "cluster_centers_"),
+                        "name": "supporting",
+                        "topics": [t["name"] for t in medium_relevance],
                     }
                 )
+            if clusters:
+                result["clusters"] = clusters
 
-            return cluster_info
+        return result
 
-        except Exception as e:
-            logger.error(f"Cluster analysis error: {e}")
-            return []
 
-    def _extract_cluster_terms(
-        self, cluster_docs: List[str], top_k: int = 10
-    ) -> List[str]:
-        """Extract key terms for a cluster"""
-        try:
-            if not HAS_SKLEARN or not cluster_docs:
-                return []
+class HierarchicalClassifier(_BaseKeywordClassifier):
+    """Produce hierarchical labels for a document."""
 
-            # Use TF-IDF to find important terms
-            vectorizer = TfidfVectorizer(
-                max_features=1000, stop_words="english", ngram_range=(1, 2)
+    def __init__(self, config: ClassificationConfig):
+        super().__init__(config)
+        self.hierarchy: Dict[str, Any] = self._build_default_hierarchy()
+
+    async def _async_initialize(self) -> None:
+        return None
+
+    def _build_default_hierarchy(self) -> Dict[str, Any]:
+        return {
+            "legal_documents": {
+                "keywords": [
+                    "legal",
+                    "contract",
+                    "agreement",
+                    "liability",
+                    "policy",
+                    "compliance",
+                    "document",
+                ],
+                "children": {
+                    "contracts": {
+                        "keywords": [
+                            "contract",
+                            "agreement",
+                            "service",
+                            "terms",
+                        ],
+                        "children": {},
+                    },
+                    "compliance": {
+                        "keywords": ["compliance", "regulation", "policy"],
+                        "children": {},
+                    },
+                },
+            },
+            "business_operations": {
+                "keywords": ["business", "enterprise", "operations", "strategy"],
+                "children": {
+                    "finance": {
+                        "keywords": ["invoice", "budget", "financial", "payment"],
+                        "children": {},
+                    },
+                    "governance": {
+                        "keywords": ["governance", "oversight", "policy", "compliance"],
+                        "children": {},
+                    },
+                },
+            },
+            "technology_documents": {
+                "keywords": ["technology", "technical", "software", "api", "system"],
+                "children": {
+                    "software": {
+                        "keywords": ["software", "code", "development", "deployment"],
+                        "children": {
+                            "documentation": {
+                                "keywords": ["documentation", "api", "guide", "manual"],
+                                "children": {},
+                            }
+                        },
+                    },
+                    "operations": {
+                        "keywords": ["workflow", "process", "automation", "devops"],
+                        "children": {},
+                    },
+                },
+            },
+            "research_publications": {
+                "keywords": ["research", "study", "paper", "methodology"],
+                "children": {
+                    "academic": {
+                        "keywords": [
+                            "abstract",
+                            "introduction",
+                            "results",
+                            "conclusion",
+                        ],
+                        "children": {},
+                    }
+                },
+            },
+        }
+
+    def _normalize_hierarchy(
+        self, hierarchy: Dict[str, Any]
+    ) -> Dict[str, Dict[str, Any]]:
+        normalized: Dict[str, Dict[str, Any]] = {}
+        for name, payload in hierarchy.items():
+            if isinstance(payload, dict) and "keywords" in payload:
+                children = payload.get("children", {})
+                normalized[name] = {
+                    "keywords": payload.get(
+                        "keywords", _derive_keywords_from_name(name)
+                    ),
+                    "children": (
+                        self._normalize_hierarchy(children)
+                        if isinstance(children, dict)
+                        else {}
+                    ),
+                }
+            elif isinstance(payload, dict):
+                normalized[name] = {
+                    "keywords": _derive_keywords_from_name(name),
+                    "children": self._normalize_hierarchy(payload),
+                }
+            elif isinstance(payload, list):
+                child_dict = {item: {} for item in payload}
+                normalized[name] = {
+                    "keywords": _derive_keywords_from_name(name),
+                    "children": self._normalize_hierarchy(child_dict),
+                }
+            else:
+                normalized[name] = {
+                    "keywords": _derive_keywords_from_name(name),
+                    "children": {},
+                }
+        return normalized
+
+    def _resolve_hierarchy_levels(
+        self, text: str
+    ) -> Tuple[Dict[str, str], float, List[str]]:
+        normalized_hierarchy = self._normalize_hierarchy(self.hierarchy)
+        normalized_text = _normalize_text(text)
+        levels: Dict[str, str] = {}
+        matched_keywords: List[str] = []
+        scores: List[float] = []
+
+        current_level = normalized_hierarchy
+        level_number = 1
+
+        while current_level:
+            best_name = None
+            best_score = -1.0
+            best_matches: List[str] = []
+
+            for name, node in current_level.items():
+                score, matches = _keyword_score(
+                    normalized_text, node.get("keywords", [])
+                )
+                if score > best_score:
+                    best_score = score
+                    best_name = name
+                    best_matches = matches
+
+            if best_name is None:
+                break
+
+            levels[f"level_{level_number}"] = best_name
+            scores.append(max(best_score, 0.0))
+            matched_keywords.extend(best_matches)
+
+            current_level = current_level[best_name].get("children", {})
+            level_number += 1
+
+        confidence = sum(scores) / len(scores) if scores else 0.0
+        return levels, confidence, matched_keywords
+
+    async def _process_internal(
+        self, input_data: Any, context: ProcessingContext
+    ) -> Dict[str, Any]:
+        text, _ = _resolve_text_payload(input_data)
+        hierarchy, confidence, matches = self._resolve_hierarchy_levels(text)
+
+        return {
+            "hierarchy": hierarchy,
+            "confidence": round(confidence, 3),
+            "matched_keywords": matches,
+            "path": [hierarchy[key] for key in sorted(hierarchy.keys())],
+        }
+
+
+class IntentClassifier(_BaseKeywordClassifier):
+    """Detect the author intent of a document."""
+
+    def __init__(self, config: ClassificationConfig):
+        super().__init__(config)
+        self.intent_definitions: List[Dict[str, Any]] = [
+            {
+                "name": "request",
+                "keywords": [
+                    "please",
+                    "can you",
+                    "could you",
+                    "request",
+                    "need",
+                    "ask",
+                    "help",
+                    "require",
+                ],
+                "description": "User is requesting assistance or action.",
+            },
+            {
+                "name": "informational",
+                "keywords": [
+                    "introduction",
+                    "overview",
+                    "explains",
+                    "describes",
+                    "provides",
+                    "details",
+                    "report",
+                ],
+                "description": "Document is providing information or context.",
+            },
+            {
+                "name": "action",
+                "keywords": [
+                    "step",
+                    "follow",
+                    "complete",
+                    "workflow",
+                    "process",
+                    "review",
+                    "execute",
+                ],
+                "description": "Document contains instructions or actions to perform.",
+            },
+            {
+                "name": "decision",
+                "keywords": [
+                    "approve",
+                    "decision",
+                    "select",
+                    "choose",
+                    "determine",
+                ],
+                "description": "Document is guiding a decision or approval.",
+            },
+        ]
+
+    async def _async_initialize(self) -> None:
+        return None
+
+    async def _process_internal(
+        self, input_data: Any, context: ProcessingContext
+    ) -> Dict[str, Any]:
+        text, options = _resolve_text_payload(input_data)
+        detect_multiple = bool(options.get("detect_multiple"))
+
+        scored_intents: List[Dict[str, Any]] = []
+        for intent in self.intent_definitions:
+            score, matches = _keyword_score(text, intent["keywords"])
+            if score <= 0.0:
+                continue
+            scored_intents.append(
+                {
+                    "name": intent["name"],
+                    "score": round(score, 3),
+                    "matched_keywords": matches,
+                    "description": intent["description"],
+                }
             )
 
-            tfidf_matrix = vectorizer.fit_transform(cluster_docs)
+        scored_intents.sort(key=lambda intent: intent["score"], reverse=True)
+        primary_intent = (
+            scored_intents[0]
+            if scored_intents
+            else {
+                "name": "informational",
+                "score": 0.0,
+                "matched_keywords": [],
+                "description": "Default informational intent",
+            }
+        )
 
-            # Get mean TF-IDF scores
-            mean_scores = np.mean(tfidf_matrix.toarray(), axis=0)
+        result: Dict[str, Any] = {
+            "intent": primary_intent["name"],
+            "confidence": primary_intent["score"],
+            "matched_keywords": primary_intent["matched_keywords"],
+        }
 
-            # Get feature names
-            feature_names = vectorizer.get_feature_names_out()
+        if detect_multiple and scored_intents:
+            threshold = max(0.2, primary_intent["score"] * 0.5)
+            result["intents"] = [
+                intent for intent in scored_intents if intent["score"] >= threshold
+            ]
 
-            # Get top terms
-            top_indices = np.argsort(mean_scores)[-top_k:][::-1]
-            top_terms = [feature_names[i] for i in top_indices if mean_scores[i] > 0]
-
-            return top_terms
-
-        except Exception as e:
-            logger.debug(f"Term extraction error: {e}")
-            return []
+        return result
 
 
-class DocumentClassifier:
-    """
-    Main document classification system
-    """
+class DocumentClassificationAI:
+    """High level orchestration for document classification."""
 
     def __init__(self, config: Optional[ClassificationConfig] = None):
         self.config = config or ClassificationConfig()
+        self.content_classifier: Optional[ContentClassifier] = None
+        self.topic_classifier: Optional[TopicClassifier] = None
+        self.hierarchical_classifier: Optional[HierarchicalClassifier] = None
+        self.intent_classifier: Optional[IntentClassifier] = None
+        self._initialized = False
 
-        # Initialize components
-        self.feature_extractor = FeatureExtractor(self.config)
-        self.topic_modeler = None
-        self.clusterer = None
+    async def initialize(self) -> None:
+        if self._initialized:
+            return
 
-        # ML models
-        self.models = {}
-        self.label_encoder = LabelEncoder() if HAS_SKLEARN else None
+        validation_errors = self.config.validate_config()
+        if validation_errors:
+            raise ConfigurationError(
+                f"Invalid classification configuration: {', '.join(validation_errors)}"
+            )
 
-        # Pre-trained models
-        self.transformer_classifier = None
+        self.content_classifier = ContentClassifier(self.config)
+        self.topic_classifier = TopicClassifier(self.config)
+        self.hierarchical_classifier = HierarchicalClassifier(self.config)
+        self.intent_classifier = IntentClassifier(self.config)
 
-        # Model cache
-        self.model_cache_dir = Path(self.config.model_cache_dir)
-        self.model_cache_dir.mkdir(parents=True, exist_ok=True)
+        init_tasks = []
+        if self.content_classifier:
+            init_tasks.append(self.content_classifier.initialize())
+        if self.config.enable_topic_classification and self.topic_classifier:
+            init_tasks.append(self.topic_classifier.initialize())
+        if self.config.enable_hierarchical and self.hierarchical_classifier:
+            init_tasks.append(self.hierarchical_classifier.initialize())
+        if self.config.enable_intent_classification and self.intent_classifier:
+            init_tasks.append(self.intent_classifier.initialize())
 
-        if self.config.enable_topic_modeling:
-            topic_config = TopicModelingConfig(num_topics=self.config.num_topics)
-            self.topic_modeler = TopicModeler(topic_config)
+        if init_tasks:
+            await asyncio.gather(*init_tasks)
 
-        if self.config.enable_clustering:
-            cluster_config = ClusteringConfig(num_clusters=self.config.num_clusters)
-            self.clusterer = DocumentClusterer(cluster_config)
+        self._initialized = True
 
-        # Load pre-trained transformer if available
-        if HAS_TRANSFORMERS and self.config.use_pretrained_models:
-            try:
-                self.transformer_classifier = pipeline(
-                    "text-classification",
-                    model="microsoft/DialoGPT-medium",  # Fallback model
-                    device=0 if torch.cuda.is_available() else -1,
-                )
-                logger.info("Transformer classifier loaded")
-            except Exception as e:
-                logger.warning(f"Failed to load transformer classifier: {e}")
+    async def _ensure_initialized(self) -> None:
+        if not self._initialized:
+            await self.initialize()
 
     async def classify_document(
-        self, text: str, document_id: Optional[str] = None
+        self,
+        document: Union[str, Dict[str, Any]],
+        context: Optional[ProcessingContext] = None,
     ) -> ClassificationResult:
-        """
-        Classify a single document
+        await self._ensure_initialized()
 
-        Args:
-            text: Document text
-            document_id: Optional document identifier
+        context = context or ProcessingContext()
+        result = ClassificationResult(success=True, context=context)
+        start_time = asyncio.get_event_loop().time()
 
-        Returns:
-            Classification results
-        """
         try:
-            # Extract features
-            features = await self.feature_extractor.extract_features([text])
+            text, _ = _resolve_text_payload(document)
+        except ValidationError as exc:
+            result.add_error(str(exc))
+            result.processing_time_ms = (
+                asyncio.get_event_loop().time() - start_time
+            ) * 1000
+            return result
 
-            if features.size == 0:
-                logger.warning("No features extracted from document")
-                return self._create_empty_result()
+        classification_tasks: List[
+            Tuple[str, asyncio.Task[ClassificationProcessingResult]]
+        ] = []
 
-            # Classify using different methods
-            results = {}
-
-            if self.config.method == ClassificationMethod.HYBRID:
-                # Use multiple methods and combine results
-                if HAS_SKLEARN:
-                    sklearn_result = await self._classify_with_sklearn([text], features)
-                    results["sklearn"] = sklearn_result
-
-                if self.transformer_classifier:
-                    transformer_result = await self._classify_with_transformer([text])
-                    results["transformer"] = transformer_result
-
-                # Combine results
-                final_result = self._combine_classification_results(
-                    results, text, features
+        if self.config.enable_content_classification and self.content_classifier:
+            classification_tasks.append(
+                (
+                    "content_classification",
+                    asyncio.create_task(
+                        self.content_classifier.process(document, context)
+                    ),
                 )
-
-            else:
-                # Use single method
-                if (
-                    self.config.method
-                    in [
-                        ClassificationMethod.NAIVE_BAYES,
-                        ClassificationMethod.SVM,
-                        ClassificationMethod.RANDOM_FOREST,
-                        ClassificationMethod.LOGISTIC_REGRESSION,
-                    ]
-                    and HAS_SKLEARN
-                ):
-                    final_result = await self._classify_with_sklearn([text], features)
-                elif (
-                    self.config.method == ClassificationMethod.NEURAL_NETWORK
-                    and self.transformer_classifier
-                ):
-                    final_result = await self._classify_with_transformer([text])
-                else:
-                    logger.warning(
-                        f"Classification method not available: {self.config.method}"
-                    )
-                    final_result = self._create_empty_result()
-
-            # Add topic information if available
-            if self.topic_modeler:
-                try:
-                    topic_result = await self.topic_modeler.fit_topic_model([text])
-                    if topic_result.document_topics:
-                        final_result.topics = topic_result.document_topics[0]
-                except Exception as e:
-                    logger.debug(f"Topic modeling error: {e}")
-
-            # Add clustering information if available
-            if self.clusterer:
-                try:
-                    cluster_result = await self.clusterer.cluster_documents(
-                        [text], features
-                    )
-                    if cluster_result.cluster_labels:
-                        final_result.cluster_id = cluster_result.cluster_labels[0]
-                except Exception as e:
-                    logger.debug(f"Clustering error: {e}")
-
-            return final_result
-
-        except Exception as e:
-            logger.error(f"Document classification error: {e}")
-            return self._create_empty_result()
-
-    async def train_classifier(
-        self, documents: List[str], labels: List[str]
-    ) -> Dict[str, Any]:
-        """
-        Train classification models on labeled data
-
-        Args:
-            documents: Training documents
-            labels: Document labels
-
-        Returns:
-            Training results and metrics
-        """
-        try:
-            if not HAS_SKLEARN:
-                logger.error("Scikit-learn not available for training")
-                return {}
-
-            if len(documents) != len(labels):
-                raise ClassificationError("Number of documents and labels must match")
-
-            # Extract features
-            features = await self.feature_extractor.extract_features(documents)
-
-            if features.size == 0:
-                logger.error("No features extracted for training")
-                return {}
-
-            # Encode labels
-            encoded_labels = self.label_encoder.fit_transform(labels)
-
-            # Split data
-            X_train, X_test, y_train, y_test = train_test_split(
-                features,
-                encoded_labels,
-                test_size=0.2,
-                random_state=42,
-                stratify=encoded_labels,
             )
 
-            # Train models
-            model_results = {}
-
-            models_to_train = {
-                "naive_bayes": MultinomialNB(),
-                "svm": SVC(probability=True, random_state=42),
-                "random_forest": RandomForestClassifier(
-                    n_estimators=100, random_state=42
-                ),
-                "logistic_regression": LogisticRegression(
-                    random_state=42, max_iter=1000
-                ),
-            }
-
-            for model_name, model in models_to_train.items():
-                try:
-                    # Train model
-                    model.fit(X_train, y_train)
-
-                    # Evaluate
-                    train_score = model.score(X_train, y_train)
-                    test_score = model.score(X_test, y_test)
-
-                    # Cross-validation
-                    cv_scores = cross_val_score(model, features, encoded_labels, cv=5)
-
-                    # Predictions
-                    y_pred = model.predict(X_test)
-
-                    # Store model
-                    self.models[model_name] = model
-
-                    model_results[model_name] = {
-                        "train_accuracy": float(train_score),
-                        "test_accuracy": float(test_score),
-                        "cv_mean": float(cv_scores.mean()),
-                        "cv_std": float(cv_scores.std()),
-                        "classification_report": classification_report(
-                            y_test,
-                            y_pred,
-                            target_names=self.label_encoder.classes_,
-                            output_dict=True,
-                        ),
-                    }
-
-                    logger.info(
-                        f"Trained {model_name}: test accuracy = {test_score:.3f}"
-                    )
-
-                except Exception as e:
-                    logger.error(f"Error training {model_name}: {e}")
-                    continue
-
-            # Save models
-            await self._save_models()
-
-            return {
-                "training_completed": True,
-                "num_documents": len(documents),
-                "num_classes": len(set(labels)),
-                "feature_dimensions": features.shape[1],
-                "model_results": model_results,
-                "best_model": (
-                    max(
-                        model_results.keys(),
-                        key=lambda k: model_results[k]["test_accuracy"],
-                    )
-                    if model_results
-                    else None
-                ),
-            }
-
-        except Exception as e:
-            logger.error(f"Training error: {e}")
-            return {"training_completed": False, "error": str(e)}
-
-    async def _classify_with_sklearn(
-        self, documents: List[str], features: np.ndarray
-    ) -> ClassificationResult:
-        """Classify using scikit-learn models"""
-        try:
-            if not self.models or not self.label_encoder:
-                # Use default model if no trained models
-                logger.info("Using default Naive Bayes classifier")
-
-                # Create simple default classification
-                return ClassificationResult(
-                    predicted_category=DocumentCategory.UNKNOWN,
-                    confidence=0.5,
-                    probabilities={"unknown": 0.5, "other": 0.5},
-                    features_used=["default"],
-                    model_info={"model": "default", "method": "rule_based"},
+        if self.config.enable_topic_classification and self.topic_classifier:
+            classification_tasks.append(
+                (
+                    "topic_classification",
+                    asyncio.create_task(
+                        self.topic_classifier.process(document, context)
+                    ),
                 )
-
-            # Use best available model
-            best_model_name = list(self.models.keys())[0]  # Simplified selection
-            model = self.models[best_model_name]
-
-            # Predict
-            if features.shape[0] == 0:
-                return self._create_empty_result()
-
-            predictions = model.predict(features)
-            probabilities = (
-                model.predict_proba(features)
-                if hasattr(model, "predict_proba")
-                else None
             )
 
-            # Convert back to original labels
-            predicted_label = self.label_encoder.inverse_transform([predictions[0]])[0]
-
-            # Create probability dictionary
-            prob_dict = {}
-            if probabilities is not None:
-                class_names = self.label_encoder.classes_
-                prob_dict = {
-                    name: float(prob)
-                    for name, prob in zip(class_names, probabilities[0])
-                }
-
-            # Map to DocumentCategory
-            predicted_category = self._map_to_document_category(predicted_label)
-
-            return ClassificationResult(
-                predicted_category=predicted_category,
-                confidence=float(
-                    max(probabilities[0]) if probabilities is not None else 0.5
-                ),
-                probabilities=prob_dict,
-                features_used=self.feature_extractor.get_feature_names(
-                    self.config.feature_type
-                ),
-                model_info={"model": best_model_name, "method": "sklearn"},
+        if self.config.enable_hierarchical and self.hierarchical_classifier:
+            classification_tasks.append(
+                (
+                    "hierarchical_classification",
+                    asyncio.create_task(
+                        self.hierarchical_classifier.process(text, context)
+                    ),
+                )
             )
 
-        except Exception as e:
-            logger.error(f"Scikit-learn classification error: {e}")
-            return self._create_empty_result()
-
-    async def _classify_with_transformer(
-        self, documents: List[str]
-    ) -> ClassificationResult:
-        """Classify using transformer models"""
-        try:
-            if not self.transformer_classifier:
-                return self._create_empty_result()
-
-            # Classify with transformer
-            result = self.transformer_classifier(documents[0])
-
-            # Process result
-            if isinstance(result, list) and len(result) > 0:
-                top_result = result[0]
-                label = top_result.get("label", "UNKNOWN")
-                score = top_result.get("score", 0.0)
-
-                predicted_category = self._map_to_document_category(label)
-
-                return ClassificationResult(
-                    predicted_category=predicted_category,
-                    confidence=float(score),
-                    probabilities={label: float(score)},
-                    features_used=["transformer_embeddings"],
-                    model_info={"model": "transformer", "method": "neural_network"},
+        if self.config.enable_intent_classification and self.intent_classifier:
+            classification_tasks.append(
+                (
+                    "intent_classification",
+                    asyncio.create_task(
+                        self.intent_classifier.process(document, context)
+                    ),
                 )
-
-            return self._create_empty_result()
-
-        except Exception as e:
-            logger.error(f"Transformer classification error: {e}")
-            return self._create_empty_result()
-
-    def _combine_classification_results(
-        self, results: Dict[str, ClassificationResult], text: str, features: np.ndarray
-    ) -> ClassificationResult:
-        """Combine results from multiple classification methods"""
-        try:
-            if not results:
-                return self._create_empty_result()
-
-            # Weighted combination of results
-            weights = {"sklearn": 0.6, "transformer": 0.4}
-
-            category_votes = {}
-            confidence_sum = 0.0
-            all_probabilities = {}
-
-            for method, result in results.items():
-                weight = weights.get(method, 0.5)
-
-                # Vote for category
-                category = result.predicted_category.value
-                category_votes[category] = (
-                    category_votes.get(category, 0) + weight * result.confidence
-                )
-
-                # Accumulate confidence
-                confidence_sum += weight * result.confidence
-
-                # Merge probabilities
-                for label, prob in result.probabilities.items():
-                    all_probabilities[label] = (
-                        all_probabilities.get(label, 0) + weight * prob
-                    )
-
-            # Determine final category
-            if category_votes:
-                final_category_str = max(category_votes.keys(), key=category_votes.get)
-                final_category = DocumentCategory(final_category_str)
-                final_confidence = category_votes[final_category_str]
-            else:
-                final_category = DocumentCategory.UNKNOWN
-                final_confidence = 0.5
-
-            # Normalize probabilities
-            total_prob = sum(all_probabilities.values())
-            if total_prob > 0:
-                normalized_probs = {
-                    k: v / total_prob for k, v in all_probabilities.items()
-                }
-            else:
-                normalized_probs = all_probabilities
-
-            return ClassificationResult(
-                predicted_category=final_category,
-                confidence=min(final_confidence, 1.0),
-                probabilities=normalized_probs,
-                features_used=["combined"],
-                model_info={
-                    "model": "hybrid",
-                    "method": "ensemble",
-                    "components": list(results.keys()),
-                },
             )
 
-        except Exception as e:
-            logger.error(f"Result combination error: {e}")
-            return self._create_empty_result()
+        if not classification_tasks:
+            result.add_error("No classification components are enabled.")
+            result.processing_time_ms = (
+                asyncio.get_event_loop().time() - start_time
+            ) * 1000
+            return result
 
-    def _map_to_document_category(self, label: str) -> DocumentCategory:
-        """Map classification label to DocumentCategory"""
-        try:
-            label_lower = label.lower()
-
-            # Direct mapping
-            for category in DocumentCategory:
-                if category.value.lower() == label_lower:
-                    return category
-
-            # Fuzzy matching
-            mapping = {
-                "legal": DocumentCategory.LEGAL,
-                "contract": DocumentCategory.CONTRACTS,
-                "agreement": DocumentCategory.LEGAL,
-                "invoice": DocumentCategory.INVOICES,
-                "bill": DocumentCategory.INVOICES,
-                "receipt": DocumentCategory.INVOICES,
-                "financial": DocumentCategory.FINANCIAL,
-                "finance": DocumentCategory.FINANCIAL,
-                "money": DocumentCategory.FINANCIAL,
-                "technical": DocumentCategory.TECHNICAL,
-                "manual": DocumentCategory.MANUALS,
-                "guide": DocumentCategory.MANUALS,
-                "instruction": DocumentCategory.MANUALS,
-                "report": DocumentCategory.REPORTS,
-                "analysis": DocumentCategory.REPORTS,
-                "form": DocumentCategory.FORMS,
-                "application": DocumentCategory.FORMS,
-                "academic": DocumentCategory.ACADEMIC,
-                "research": DocumentCategory.ACADEMIC,
-                "paper": DocumentCategory.ACADEMIC,
-                "business": DocumentCategory.BUSINESS,
-                "corporate": DocumentCategory.BUSINESS,
-                "medical": DocumentCategory.MEDICAL,
-                "health": DocumentCategory.MEDICAL,
-                "government": DocumentCategory.GOVERNMENT,
-                "official": DocumentCategory.GOVERNMENT,
-                "personal": DocumentCategory.PERSONAL,
-                "private": DocumentCategory.PERSONAL,
-                "marketing": DocumentCategory.MARKETING,
-                "advertisement": DocumentCategory.MARKETING,
-                "correspondence": DocumentCategory.CORRESPONDENCE,
-                "email": DocumentCategory.CORRESPONDENCE,
-                "letter": DocumentCategory.CORRESPONDENCE,
-            }
-
-            for key, category in mapping.items():
-                if key in label_lower:
-                    return category
-
-            return DocumentCategory.UNKNOWN
-
-        except Exception:
-            return DocumentCategory.UNKNOWN
-
-    def _create_empty_result(self) -> ClassificationResult:
-        """Create empty classification result"""
-        return ClassificationResult(
-            predicted_category=DocumentCategory.UNKNOWN,
-            confidence=0.0,
-            probabilities={},
-            features_used=[],
-            model_info={"error": "classification_failed"},
+        gathered = await asyncio.gather(
+            *(task for _, task in classification_tasks),
+            return_exceptions=True,
         )
 
-    async def _save_models(self) -> None:
-        """Save trained models to disk"""
-        try:
-            if not self.models:
-                return
+        successful_components = 0
 
-            # Save sklearn models
-            for model_name, model in self.models.items():
-                model_path = self.model_cache_dir / f"{model_name}_model.pkl"
-                with open(model_path, "wb") as f:
-                    pickle.dump(model, f)
+        for (name, _task), outcome in zip(classification_tasks, gathered):
+            if isinstance(outcome, Exception):
+                logger.exception("%s failed during classification", name)
+                result.add_error(f"{name.replace('_', ' ')} failed: {outcome}")
+                continue
 
-            # Save label encoder
-            if self.label_encoder:
-                encoder_path = self.model_cache_dir / "label_encoder.pkl"
-                with open(encoder_path, "wb") as f:
-                    pickle.dump(self.label_encoder, f)
-
-            # Save vectorizers
-            vectorizers_path = self.model_cache_dir / "vectorizers.pkl"
-            with open(vectorizers_path, "wb") as f:
-                pickle.dump(self.feature_extractor.vectorizers, f)
-
-            logger.info(f"Models saved to {self.model_cache_dir}")
-
-        except Exception as e:
-            logger.error(f"Model saving error: {e}")
-
-    async def load_models(self) -> bool:
-        """Load trained models from disk"""
-        try:
-            # Load sklearn models
-            model_files = list(self.model_cache_dir.glob("*_model.pkl"))
-            for model_file in model_files:
-                model_name = model_file.stem.replace("_model", "")
-                with open(model_file, "rb") as f:
-                    self.models[model_name] = pickle.load(f)
-
-            # Load label encoder
-            encoder_path = self.model_cache_dir / "label_encoder.pkl"
-            if encoder_path.exists():
-                with open(encoder_path, "rb") as f:
-                    self.label_encoder = pickle.load(f)
-
-            # Load vectorizers
-            vectorizers_path = self.model_cache_dir / "vectorizers.pkl"
-            if vectorizers_path.exists():
-                with open(vectorizers_path, "rb") as f:
-                    self.feature_extractor.vectorizers = pickle.load(f)
-
-            logger.info(f"Models loaded from {self.model_cache_dir}")
-            return len(self.models) > 0
-
-        except Exception as e:
-            logger.error(f"Model loading error: {e}")
-            return False
-
-    def create_demo_classification(self) -> Dict[str, Any]:
-        """Create demo classification results"""
-        try:
-            return {
-                "document_text": "This is a software development contract between Company A and Company B for the development of a web application...",
-                "classification_result": {
-                    "predicted_category": DocumentCategory.CONTRACTS.value,
-                    "confidence": 0.92,
-                    "probabilities": {
-                        "contracts": 0.92,
-                        "legal": 0.85,
-                        "business": 0.78,
-                        "technical": 0.45,
-                        "financial": 0.23,
-                    },
-                    "features_used": [
-                        "contract",
-                        "agreement",
-                        "development",
-                        "software",
-                        "terms",
-                    ],
-                    "model_info": {
-                        "model": "hybrid",
-                        "method": "ensemble",
-                        "components": ["sklearn", "transformer"],
-                    },
-                    "topics": [
-                        (0, 0.65, "software development"),
-                        (1, 0.25, "legal terms"),
-                        (2, 0.10, "payment conditions"),
-                    ],
-                    "cluster_id": 2,
-                    "similar_documents": [
-                        {
-                            "id": "doc_123",
-                            "similarity": 0.89,
-                            "title": "Mobile App Development Agreement",
-                        },
-                        {
-                            "id": "doc_456",
-                            "similarity": 0.76,
-                            "title": "Web Services Contract",
-                        },
-                    ],
-                },
-                "topic_modeling_result": {
-                    "topics": [
-                        {
-                            "id": 0,
-                            "name": "Topic_0: software, development, application",
-                            "top_words": [
-                                ("software", 0.15),
-                                ("development", 0.12),
-                                ("application", 0.10),
-                                ("web", 0.08),
-                                ("system", 0.07),
-                            ],
-                            "weight": 45.2,
-                        },
-                        {
-                            "id": 1,
-                            "name": "Topic_1: contract, agreement, terms",
-                            "top_words": [
-                                ("contract", 0.18),
-                                ("agreement", 0.14),
-                                ("terms", 0.11),
-                                ("conditions", 0.09),
-                                ("legal", 0.08),
-                            ],
-                            "weight": 32.8,
-                        },
-                    ],
-                    "document_topics": [[(0, 0.65), (1, 0.25), (2, 0.10)]],
-                    "coherence_score": 0.78,
-                    "perplexity": 145.2,
-                },
-                "clustering_result": {
-                    "cluster_labels": [2],
-                    "silhouette_score": 0.67,
-                    "num_clusters": 5,
-                    "cluster_info": [
-                        {
-                            "cluster_id": 2,
-                            "size": 23,
-                            "percentage": 15.3,
-                            "representative_document": "This is a software development contract...",
-                            "key_terms": [
-                                "contract",
-                                "software",
-                                "development",
-                                "agreement",
-                                "terms",
-                            ],
-                            "centroid_available": True,
-                        }
-                    ],
-                },
-                "processing_config": {
-                    "method": "hybrid",
-                    "feature_type": "combined",
-                    "use_pretrained_models": True,
-                    "enable_topic_modeling": True,
-                    "enable_clustering": True,
-                },
-            }
-
-        except Exception as e:
-            logger.error(f"Demo creation error: {e}")
-            return {}
-
-    class CategoryPredictor:
-        """
-        Dedicated category prediction component for document classification
-        """
-
-        def __init__(self, config: Optional[ClassificationConfig] = None):
-            self.config = config or ClassificationConfig()
-            self.model = None
-            self.label_encoder = LabelEncoder() if HAS_SKLEARN else None
-            self.vectorizer = None
-
-        async def initialize(self) -> None:
-            """Initialize the category predictor"""
-            try:
-                if HAS_SKLEARN:
-                    from sklearn.ensemble import RandomForestClassifier
-
-                    self.model = RandomForestClassifier(
-                        n_estimators=100, random_state=42
-                    )
-
-                    if self.config.feature_type == FeatureType.TFIDF:
-                        from sklearn.feature_extraction.text import TfidfVectorizer
-
-                        self.vectorizer = TfidfVectorizer(
-                            max_features=5000, stop_words="english"
-                        )
-
-                logger.info("CategoryPredictor initialized successfully")
-
-            except Exception as e:
-                logger.error(f"CategoryPredictor initialization error: {e}")
-
-        async def predict_category(self, text: str) -> DocumentCategory:
-            """Predict document category from text"""
-            try:
-                if not self.model or not self.vectorizer:
-                    return DocumentCategory.UNKNOWN
-
-                # Transform text to features
-                features = self.vectorizer.transform([text])
-
-                # Predict category
-                prediction = self.model.predict(features)
-
-                # Convert to DocumentCategory
-                if self.label_encoder:
-                    category_name = self.label_encoder.inverse_transform(prediction)[0]
-                    return self._map_to_document_category(category_name)
-
-                return DocumentCategory.UNKNOWN
-
-            except Exception as e:
-                logger.error(f"Category prediction error: {e}")
-                return DocumentCategory.UNKNOWN
-
-        def _map_to_document_category(self, category_name: str) -> DocumentCategory:
-            """Map category name to DocumentCategory enum"""
-            try:
-                mapping = {
-                    "legal": DocumentCategory.LEGAL,
-                    "contract": DocumentCategory.CONTRACTS,
-                    "technical": DocumentCategory.TECHNICAL,
-                    "business": DocumentCategory.BUSINESS,
-                    "financial": DocumentCategory.FINANCIAL,
-                    "medical": DocumentCategory.MEDICAL,
-                    "academic": DocumentCategory.ACADEMIC,
-                    "government": DocumentCategory.GOVERNMENT,
-                    "personal": DocumentCategory.PERSONAL,
-                    "marketing": DocumentCategory.MARKETING,
-                }
-
-                return mapping.get(category_name.lower(), DocumentCategory.UNKNOWN)
-
-            except Exception:
-                return DocumentCategory.UNKNOWN
-
-    class ContentAnalyzer:
-        """
-        Content analysis component for document processing
-        """
-
-        def __init__(self, config: Optional[ClassificationConfig] = None):
-            self.config = config or ClassificationConfig()
-
-        async def initialize(self) -> None:
-            """Initialize the content analyzer"""
-            logger.info("ContentAnalyzer initialized successfully")
-
-        async def analyze_content(self, text: str) -> Dict[str, Any]:
-            """Analyze document content and extract insights"""
-            try:
-                analysis = {
-                    "word_count": len(text.split()),
-                    "char_count": len(text),
-                    "sentence_count": len([s for s in text.split(".") if s.strip()]),
-                    "readability_score": self._calculate_readability(text),
-                    "complexity_level": self._assess_complexity(text),
-                    "language": self._detect_language(text),
-                    "sentiment": self._analyze_sentiment(text),
-                }
-
-                return analysis
-
-            except Exception as e:
-                logger.error(f"Content analysis error: {e}")
-                return {}
-
-        def _calculate_readability(self, text: str) -> float:
-            """Calculate basic readability score"""
-            try:
-                words = text.split()
-                sentences = [s for s in text.split(".") if s.strip()]
-
-                if len(sentences) == 0:
-                    return 0.0
-
-                avg_words_per_sentence = len(words) / len(sentences)
-
-                # Simple readability approximation
-                readability = max(0, min(100, 100 - (avg_words_per_sentence * 2)))
-                return readability
-
-            except Exception:
-                return 50.0  # Default medium readability
-
-        def _assess_complexity(self, text: str) -> str:
-            """Assess document complexity level"""
-            try:
-                word_count = len(text.split())
-
-                if word_count < 100:
-                    return "simple"
-                elif word_count < 500:
-                    return "moderate"
-                else:
-                    return "complex"
-
-            except Exception:
-                return "moderate"
-
-        def _detect_language(self, text: str) -> str:
-            """Basic language detection"""
-            # Simple heuristic - in production use proper language detection
-            return "english"
-
-        def _analyze_sentiment(self, text: str) -> str:
-            """Basic sentiment analysis"""
-            # Simple heuristic - in production use proper sentiment analysis
-            positive_words = ["good", "great", "excellent", "positive", "benefit"]
-            negative_words = ["bad", "poor", "terrible", "negative", "problem"]
-
-            text_lower = text.lower()
-
-            pos_count = sum(1 for word in positive_words if word in text_lower)
-            neg_count = sum(1 for word in negative_words if word in text_lower)
-
-            if pos_count > neg_count:
-                return "positive"
-            elif neg_count > pos_count:
-                return "negative"
+            component_result = cast(ClassificationProcessingResult, outcome)
+            if component_result.success:
+                successful_components += 1
             else:
-                return "neutral"
-
-    class CategoryPredictor:
-        """
-        Dedicated category prediction component for document classification
-        """
-
-        def __init__(self, config: Optional[ClassificationConfig] = None):
-            self.config = config or ClassificationConfig()
-            self.model = None
-            self.label_encoder = LabelEncoder() if HAS_SKLEARN else None
-            self.vectorizer = None
-
-        async def initialize(self) -> None:
-            """Initialize the category predictor"""
-            try:
-                if HAS_SKLEARN:
-                    from sklearn.ensemble import RandomForestClassifier
-
-                    self.model = RandomForestClassifier(
-                        n_estimators=100, random_state=42
-                    )
-
-                    if self.config.feature_type == FeatureType.TFIDF:
-                        from sklearn.feature_extraction.text import TfidfVectorizer
-
-                        self.vectorizer = TfidfVectorizer(
-                            max_features=5000, stop_words="english"
-                        )
-
-                logger.info("CategoryPredictor initialized successfully")
-
-            except Exception as e:
-                logger.error(f"CategoryPredictor initialization error: {e}")
-
-        async def predict_category(self, text: str) -> DocumentCategory:
-            """Predict document category from text"""
-            try:
-                if not self.model or not self.vectorizer:
-                    return DocumentCategory.UNKNOWN
-
-                # Transform text to features
-                features = self.vectorizer.transform([text])
-
-                # Predict category
-                prediction = self.model.predict(features)
-
-                # Convert to DocumentCategory
-                if self.label_encoder:
-                    category_name = self.label_encoder.inverse_transform(prediction)[0]
-                    return self._map_to_document_category(category_name)
-
-                return DocumentCategory.UNKNOWN
-
-            except Exception as e:
-                logger.error(f"Category prediction error: {e}")
-                return DocumentCategory.UNKNOWN
-
-        def _map_to_document_category(self, category_name: str) -> DocumentCategory:
-            """Map category name to DocumentCategory enum"""
-            try:
-                mapping = {
-                    "legal": DocumentCategory.LEGAL,
-                    "contract": DocumentCategory.CONTRACTS,
-                    "technical": DocumentCategory.TECHNICAL,
-                    "business": DocumentCategory.BUSINESS,
-                    "financial": DocumentCategory.FINANCIAL,
-                    "medical": DocumentCategory.MEDICAL,
-                    "academic": DocumentCategory.ACADEMIC,
-                    "government": DocumentCategory.GOVERNMENT,
-                    "personal": DocumentCategory.PERSONAL,
-                    "marketing": DocumentCategory.MARKETING,
-                }
-
-                return mapping.get(category_name.lower(), DocumentCategory.UNKNOWN)
-
-            except Exception:
-                return DocumentCategory.UNKNOWN
-
-        def _count_syllables(self, word: str) -> int:
-            """Count syllables in a word (simple approximation)"""
-            vowels = "aeiouyAEIOUY"
-            syllable_count = 0
-            prev_was_vowel = False
-
-            for char in word:
-                is_vowel = char in vowels
-                if is_vowel and not prev_was_vowel:
-                    syllable_count += 1
-                prev_was_vowel = is_vowel
-
-            # Adjust for silent e
-            if word.endswith("e"):
-                syllable_count -= 1
-
-            return max(1, syllable_count)
-
-    class ContentAnalyzer:
-        """
-        Content analysis component for document processing
-        """
-
-        def __init__(self, config: Optional[ClassificationConfig] = None):
-            self.config = config or ClassificationConfig()
-
-        async def initialize(self) -> None:
-            """Initialize the content analyzer"""
-            logger.info("ContentAnalyzer initialized successfully")
-
-        async def analyze_content(self, text: str) -> Dict[str, Any]:
-            """Analyze document content and extract insights"""
-            try:
-                analysis = {
-                    "word_count": len(text.split()),
-                    "char_count": len(text),
-                    "sentence_count": len([s for s in text.split(".") if s.strip()]),
-                    "readability_score": self._calculate_readability(text),
-                    "complexity_level": self._assess_complexity(text),
-                    "language": self._detect_language(text),
-                    "sentiment": self._analyze_sentiment(text),
-                }
-
-                return analysis
-
-            except Exception as e:
-                logger.error(f"Content analysis error: {e}")
-                return {}
-
-        def _calculate_readability(self, text: str) -> float:
-            """Calculate readability score (Flesch Reading Ease approximation)"""
-            try:
-                words = text.split()
-                sentences = text.split(".")
-                syllables = sum(self._count_syllables(word) for word in words)
-
-                if len(sentences) == 0 or len(words) == 0:
-                    return 0.0
-
-                avg_sentence_length = len(words) / len(sentences)
-                avg_syllables_per_word = syllables / len(words)
-
-                # Simplified Flesch Reading Ease formula
-                score = (
-                    206.835
-                    - (1.015 * avg_sentence_length)
-                    - (84.6 * avg_syllables_per_word)
-                )
-
-                return max(0.0, min(100.0, score))
-
-            except Exception:
-                return 0.0
-
-        def _count_syllables(self, word: str) -> int:
-            """Count syllables in a word (simple approximation)"""
-            vowels = "aeiouyAEIOUY"
-            syllable_count = 0
-            prev_was_vowel = False
-
-            for char in word:
-                is_vowel = char in vowels
-                if is_vowel and not prev_was_vowel:
-                    syllable_count += 1
-                prev_was_vowel = is_vowel
-
-            # Adjust for silent e
-            if word.endswith("e"):
-                syllable_count -= 1
-
-            return max(1, syllable_count)
-
-        def _assess_complexity(self, text: str) -> str:
-            """Assess document complexity level"""
-            try:
-                readability = self._calculate_readability(text)
-
-                if readability >= 70:
-                    return "easy"
-                elif readability >= 50:
-                    return "moderate"
+                if component_result.error:
+                    result.add_error(component_result.error)
                 else:
-                    return "difficult"
+                    result.add_error(f"{name.replace('_', ' ')} failed")
 
-            except Exception:
-                return "unknown"
+            if name == "content_classification":
+                result.data["content_classification_details"] = component_result.data
+                if isinstance(component_result.data, dict):
+                    result.data[name] = component_result.data.get("classification")
+                else:  # pragma: no cover - defensive
+                    result.data[name] = component_result.data
+            else:
+                result.data[name] = component_result.data
+            if component_result.warnings:
+                result.warnings.extend(component_result.warnings)
 
-        def _detect_language(self, text: str) -> str:
-            """Simple language detection (placeholder)"""
-            return "en"  # Placeholder - in production use proper language detection
+        if successful_components == 0 and not result.errors:
+            result.add_error("All classification components failed to produce results")
 
-        def _analyze_sentiment(self, text: str) -> str:
-            """Analyze sentiment (basic implementation)"""
-            try:
-                # Simple heuristic - in production use proper sentiment analysis
-                positive_words = ["good", "great", "excellent", "positive", "benefit"]
-                negative_words = ["bad", "poor", "terrible", "negative", "problem"]
+        content_details = result.data.get("content_classification_details", {})
+        if isinstance(content_details, dict):
+            result.data.setdefault("confidence", content_details.get("confidence", 0.0))
+            result.data.setdefault(
+                "classification", content_details.get("classification")
+            )
 
-                text_lower = text.lower()
+        result.processing_time_ms = (
+            asyncio.get_event_loop().time() - start_time
+        ) * 1000
+        return result
 
-                pos_count = sum(1 for word in positive_words if word in text_lower)
-                neg_count = sum(1 for word in negative_words if word in text_lower)
+    async def classify_topics(
+        self,
+        document: Union[str, Dict[str, Any]],
+        context: Optional[ProcessingContext] = None,
+    ) -> ClassificationResult:
+        await self._ensure_initialized()
+        context = context or ProcessingContext()
+        result = ClassificationResult(success=True, context=context)
 
-                if pos_count > neg_count:
-                    return "positive"
-                elif neg_count > pos_count:
-                    return "negative"
-                else:
-                    return "neutral"
+        if not self.config.enable_topic_classification or not self.topic_classifier:
+            result.add_error("Topic classification is disabled")
+            return result
 
-            except Exception:
-                return "neutral"
-
-
-# Example usage and testing
-if __name__ == "__main__":
-
-    async def demo():
-        """Demo document classification"""
         try:
-            # Create document classifier
-            config = ClassificationConfig(
-                method=ClassificationMethod.HYBRID,
-                feature_type=FeatureType.COMBINED,
-                use_pretrained_models=HAS_TRANSFORMERS,
-                enable_topic_modeling=True,
-                enable_clustering=True,
+            classifier_result = await self.topic_classifier.process(document, context)
+        except Exception as exc:  # pragma: no cover - defensive
+            logger.exception("Topic classification failed")
+            result.add_error(f"Topic classification failed: {exc}")
+            return result
+
+        if classifier_result.success:
+            if isinstance(classifier_result.data, dict):
+                result.data.update(classifier_result.data)
+        else:
+            result.add_error(classifier_result.error or "Topic classification failed")
+            if isinstance(classifier_result.data, dict):
+                result.data.update(classifier_result.data)
+
+        result.processing_time_ms = classifier_result.processing_time_ms
+        return result
+
+    async def classify_hierarchical(
+        self,
+        document: Union[str, Dict[str, Any]],
+        context: Optional[ProcessingContext] = None,
+    ) -> ClassificationResult:
+        await self._ensure_initialized()
+        context = context or ProcessingContext()
+        result = ClassificationResult(success=True, context=context)
+
+        if not self.config.enable_hierarchical or not self.hierarchical_classifier:
+            result.add_error("Hierarchical classification is disabled")
+            return result
+
+        try:
+            text, _ = _resolve_text_payload(document)
+            classifier_result = await self.hierarchical_classifier.process(
+                text, context
             )
+        except ValidationError as exc:
+            result.add_error(str(exc))
+            return result
+        except Exception as exc:  # pragma: no cover - defensive
+            logger.exception("Hierarchical classification failed")
+            result.add_error(f"Hierarchical classification failed: {exc}")
+            return result
 
-            classifier = DocumentClassifier(config)
-
-            print("Document Classification Demo")
-            print("=" * 50)
-            print(f"Scikit-learn available: {HAS_SKLEARN}")
-            print(f"Transformers available: {HAS_TRANSFORMERS}")
-            print(f"Sentence Transformers available: {HAS_SENTENCE_TRANSFORMERS}")
-            print()
-
-            # Demo documents
-            demo_docs = [
-                "This software development agreement outlines the terms and conditions for building a web application.",
-                "Please find attached the medical records for patient John Doe, including lab results and treatment history.",
-                "The quarterly financial report shows revenue growth of 15% compared to last year.",
-                "Research paper: Machine Learning Applications in Natural Language Processing",
-                "Invoice #12345 - Amount due: $1,500.00 for consulting services rendered in March 2024.",
-            ]
-
-            print("Classifying demo documents...")
-
-            for i, doc in enumerate(demo_docs):
-                print(f"\nDocument {i+1}: {doc[:60]}...")
-
-                result = await classifier.classify_document(doc)
-
-                print(f"  Category: {result.predicted_category.value}")
-                print(f"  Confidence: {result.confidence:.2f}")
-
-                if result.probabilities:
-                    top_probs = sorted(
-                        result.probabilities.items(), key=lambda x: x[1], reverse=True
-                    )[:3]
-                    print(
-                        f"  Top probabilities: {', '.join([f'{k}({v:.2f})' for k, v in top_probs])}"
-                    )
-
-            # Create comprehensive demo results
-            print("\nCreating comprehensive demo results...")
-            demo_results = classifier.create_demo_classification()
-
-            print(f"Demo Classification:")
-            print(
-                f"  Category: {demo_results['classification_result']['predicted_category']}"
+        if classifier_result.success:
+            if isinstance(classifier_result.data, dict):
+                result.data.update(classifier_result.data)
+        else:
+            result.add_error(
+                classifier_result.error or "Hierarchical classification failed"
             )
-            print(
-                f"  Confidence: {demo_results['classification_result']['confidence']}"
+            if isinstance(classifier_result.data, dict):
+                result.data.update(classifier_result.data)
+
+        result.processing_time_ms = classifier_result.processing_time_ms
+        return result
+
+    async def classify_intent(
+        self,
+        document: Union[str, Dict[str, Any]],
+        context: Optional[ProcessingContext] = None,
+    ) -> ClassificationResult:
+        await self._ensure_initialized()
+        context = context or ProcessingContext()
+        result = ClassificationResult(success=True, context=context)
+
+        if not self.config.enable_intent_classification or not self.intent_classifier:
+            result.add_error("Intent classification is disabled")
+            return result
+
+        try:
+            classifier_result = await self.intent_classifier.process(document, context)
+        except Exception as exc:  # pragma: no cover - defensive
+            logger.exception("Intent classification failed")
+            result.add_error(f"Intent classification failed: {exc}")
+            return result
+
+        if classifier_result.success:
+            if isinstance(classifier_result.data, dict):
+                result.data.update(classifier_result.data)
+        else:
+            result.add_error(classifier_result.error or "Intent classification failed")
+            if isinstance(classifier_result.data, dict):
+                result.data.update(classifier_result.data)
+
+        result.processing_time_ms = classifier_result.processing_time_ms
+        return result
+
+    async def health_check(self) -> Dict[str, Any]:
+        await self._ensure_initialized()
+        checks: Dict[str, Any] = {}
+
+        async def _component_health(
+            name: str, component: Optional[_BaseKeywordClassifier]
+        ):
+            if component is None:
+                return None
+            try:
+                return await component.health_check()
+            except Exception as exc:  # pragma: no cover - defensive
+                logger.exception("Health check failed for %s", name)
+                return {"status": "error", "detail": str(exc)}
+
+        checks["content_classifier"] = await _component_health(
+            "content_classifier", self.content_classifier
+        )
+        checks["topic_classifier"] = (
+            await _component_health("topic_classifier", self.topic_classifier)
+            if self.config.enable_topic_classification
+            else None
+        )
+        checks["hierarchical_classifier"] = (
+            await _component_health(
+                "hierarchical_classifier", self.hierarchical_classifier
             )
-            print(
-                f"  Topics found: {len(demo_results['topic_modeling_result']['topics'])}"
-            )
-            print(f"  Clusters: {demo_results['clustering_result']['num_clusters']}")
+            if self.config.enable_hierarchical
+            else None
+        )
+        checks["intent_classifier"] = (
+            await _component_health("intent_classifier", self.intent_classifier)
+            if self.config.enable_intent_classification
+            else None
+        )
 
-            print("\nDocument Classification demo completed successfully!")
+        overall_status = "healthy"
+        for component in checks.values():
+            if component and component.get("status") != "healthy":
+                overall_status = "degraded"
+                break
 
-        except Exception as e:
-            print(f"Demo error: {e}")
+        return {"overall_status": overall_status, "components": checks}
 
-    # Run demo
-    try:
-        asyncio.run(demo())
-    except KeyboardInterrupt:
-        print("\nDemo stopped by user")
+
+__all__ = [
+    "ClassificationConfig",
+    "ClassificationCategory",
+    "ClassificationResult",
+    "ClassificationProcessingResult",
+    "HierarchicalCategory",
+    "ContentClassifier",
+    "TopicClassifier",
+    "HierarchicalClassifier",
+    "IntentClassifier",
+    "DocumentClassificationAI",
+]

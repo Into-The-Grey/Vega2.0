@@ -16,6 +16,7 @@
   - adaptive_presets.yaml (✅ Adaptive FL presets (research/production/fast/quality/robust/minimal/edge) - COMPLETE)
   - .env.example (Environment template)
   - .env.production (Production settings)
+- pytest.ini (Pytest defaults with asyncio auto mode & strict markers)
 - .env (Local environment variables)
 
 ## Core Application
@@ -50,7 +51,7 @@
     - vector_database.py (✅ FAISS & Pinecone integration)
   - document/ (✅ Advanced Document Intelligence)
   - understanding.py (✅ Document Understanding AI)
-  - classification.py (✅ Intelligent Document Classification)
+  - classification.py (✅ Intelligent Document Classification – enhanced keyword scoring, refined hierarchy, upgraded processing context utilities, 44/44 tests passing)
   - workflow.py (✅ Document Workflow Automation)
   - legal.py (✅ Legal Document Analysis)
   - legal_config.py (✅ LegalConfig, ContractConfig)
@@ -154,11 +155,13 @@
 
 ## Testing & Quality
 - tests/
-  - federated/ (✅ ALL tests passing - 45/45)
-    - test_participant.py (19/19 ✅)
-    - test_communication.py (26/26 ✅)
+  - federated/
+    - unit (✅ 45/45 – `test_participant.py`, `test_communication.py`, supporting algorithm suites)
+    - integration/ (`tests/federated/integration/` – 🔄 pruning/orchestrator/communication coordinator suites relocated; FedAvg export restoration pending)
+    - validation/ (`tests/federated/validation/` – ✅ distributed compression, cross-silo, and hyperparameter optimization suites)
   - test_*.py (Module tests)
-  - **Status**: 100% Federated Learning test coverage ✅
+  - document/test_classification.py (✅ 44/44 document intelligence tests passing)
+- **Status**: Federated unit coverage remains 100%; integration suites consolidated with follow-up dependency work; validation suites passing ✅
 
 ## Documentation
 - docs/
@@ -215,7 +218,7 @@
     - Enhanced Document Processing (500+ lines)
     - Real-time Collaboration (800+ lines)
   - Federated Learning Core  
-  - Federated Learning Test Suite (45/45 tests)
+  - Federated Learning Unit Test Suite (45/45 tests) + integration/validation suites relocated under `tests/federated/`
   - Security Framework
   - Configuration Management
   - API Documentation (OpenAPI 3.0.3)

@@ -63,4 +63,4 @@ lxml==5.3.0
 
 # Development & Testing
 pytest==8.3.3
-pytest-asyncio==0.24.0
+pytest-asyncio==0.23.7  # 0.24+ requires pytest_asyncio.fixture for async fixtures used in tests

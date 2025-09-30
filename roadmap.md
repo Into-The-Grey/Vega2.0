@@ -55,14 +55,17 @@
 - [x] **Asynchronous Federated Learning** - Non-blocking aggregation with staleness tolerance and dynamic participant scheduling (`src/vega/federated/async_fl.py`)
 - [x] **Federated Meta-Learning** - Model-agnostic meta-learning (MAML) for quick adaptation to new tasks (`src/vega/federated/meta_learning.py`)
 - [x] **Byzantine-Robust Federated Learning** - Defense against malicious participants using robust aggregation (Krum, Trimmed Mean, Median) (`src/vega/federated/byzantine_robust.py`)
-- [x] **Cross-Silo Hierarchical Federated Learning** - Multi-organizational federation with organizational privacy controls, hierarchical aggregation, and differential privacy integration (`validate_cross_silo_simple.py` validated)
+- [x] **Cross-Silo Hierarchical Federated Learning** - Multi-organizational federation with organizational privacy controls, hierarchical aggregation, and differential privacy integration (`tests/federated/validation/validate_cross_silo_simple.py` + `tests/federated/validation/validate_cross_silo_hierarchical.py` validated)
 
 ### Phase 6: Advanced Federated Analytics & Optimization ✅ COMPLETE
 
-- [x] **Federated Hyperparameter Optimization** - Distributed Bayesian optimization for hyperparameter tuning across participants with Gaussian Process surrogate models, multiple acquisition functions (EI, UCB, PI), and convergence detection (`src/vega/federated/hyperopt.py` + `validate_federated_hyperopt.py` validated)
-- [x] **Communication-Efficient Protocols** - Advanced compression techniques (gradient sparsification, quantization, sketching) with intelligent coordination and comprehensive validation suite (`src/vega/federated/compression_advanced.py`, `communication_coordinator.py`, `validation_suite.py` + comprehensive testing validated)
-- [x] **Federated Model Pruning** - Structured and unstructured pruning with federated knowledge distillation and sparsity-aware aggregation (`src/vega/federated/pruning.py` + comprehensive testing validated)
-- [x] **Adaptive Pruning Orchestrator** - Intelligent orchestration system with dynamic sparsity scheduling, participant-specific strategies, performance monitoring, and recovery mechanisms (`src/vega/federated/pruning_orchestrator.py` + comprehensive testing validated)
+- [x] **Federated Hyperparameter Optimization** - Distributed Bayesian optimization for hyperparameter tuning across participants with Gaussian Process surrogate models, multiple acquisition functions (EI, UCB, PI), and convergence detection (`src/vega/federated/hyperopt.py` + `tests/federated/validation/validate_federated_hyperopt.py` validated)
+- [x] **Communication-Efficient Protocols** - Advanced compression techniques (gradient sparsification, quantization, sketching) with intelligent coordination and comprehensive validation suite (`src/vega/federated/compression_advanced.py`, `communication_coordinator.py`, `tests/federated/validation/test_validation_suite.py` + comprehensive testing validated)
+- [x] **Federated Model Pruning** - Structured and unstructured pruning with federated knowledge distillation and sparsity-aware aggregation (`src/vega/federated/pruning.py` + `tests/federated/integration/test_pruning.py` validated)
+- [x] **Adaptive Pruning Orchestrator** - Intelligent orchestration system with dynamic sparsity scheduling, participant-specific strategies, performance monitoring, and recovery mechanisms (`src/vega/federated/pruning_orchestrator.py` + `tests/federated/integration/test_orchestrator_standalone.py` validated)
+- [x] **Integration Test Consolidation** - Relocated federated pruning, communication coordinator, and orchestrator suites under `tests/federated/integration/` with root-level shims for backward compatibility
+- [x] **Direct Orchestrator Integration Migration** - Consolidated comprehensive direct orchestrator validation into `tests/federated/integration/test_orchestrator_direct.py` with a lightweight root wrapper for legacy runners
+- [ ] **Integration Optional Dependency Fix** - Restore optional algorithm exports so `tests/federated/integration/test_communication_coordinator.py` can execute without manual stubs (FedAvg module pending)
 - [x] **Production Integration Complete** - Full CLI integration with demo/orchestrate/benchmark commands, YAML configuration system with presets (aggressive/balanced/conservative/research), and production-ready deployment features (`src/vega/core/cli.py`, `src/vega/federated/pruning_config.py`, `configs/` directory)
 - [x] **Adaptive Federated Learning** - Dynamic algorithm selection, real-time optimization, performance-based switching, and adaptive communication protocols (`src/vega/federated/adaptive.py` + CLI integration with demo/benchmark/analyze commands + comprehensive configuration management with presets)
 
@@ -111,6 +114,7 @@
 
 - [x] **Document Understanding AI** - Layout analysis, table extraction, form recognition using LayoutLM and DocFormer (`src/vega/document/understanding.py`) ✅
 - [x] **Intelligent Document Classification** - Automated categorization, topic modeling, and document clustering (`src/vega/document/classification.py`) ✅
+  - ✅ September 28, 2025: Rule-based scoring refinements, enhanced processing context utilities, hierarchical taxonomy update, and document classification suite stabilized (44/44 tests passing)
 - [x] **Document Workflow Automation** - Smart routing, approval workflows, and processing pipelines (`src/vega/document/automation.py`) ✅
 - [x] **Legal Document Analysis** - Contract analysis, clause extraction, and legal entity recognition (`src/vega/document/legal.py`) ✅
 - [x] **Technical Documentation AI** - Code documentation generation, API doc analysis, and technical writing assistance (`src/vega/document/technical.py`) ✅
@@ -513,6 +517,17 @@
 4. **Advanced Data Science & Research Tools (Task 7)** - Automated analysis, literature mining, experimental design
 5. **Edge Computing & IoT Integration** - Local processing, smart home integration, personal network management
 6. **Extended Reality (XR) Integration** - VR/AR/MR capabilities for immersive productivity
+
+## 🧪 Testing & Quality
+
+- tests/
+  - federated/
+    - unit coverage (✅ 45/45: `test_participant.py`, `test_communication.py`, and supporting algorithm suites)
+    - integration/ (`tests/federated/integration/` – 🔄 pruning/orchestrator/communication coordinator suites relocated with compatibility shims; FedAvg export restoration tracked above)
+    - validation/ (`tests/federated/validation/` – ✅ distributed compression, cross-silo, and hyperparameter optimization validation suites)
+  - test_*.py (Module tests across core domains)
+  - document/test_classification.py (✅ 44/44 document intelligence tests passing)
+- **Quality Status**: Federated unit coverage remains 100%; integration suites consolidated with follow-up dependency work; validation and document intelligence suites currently passing ✅
 
 ## 📊 Implementation Summary
 

@@ -7,13 +7,13 @@ It establishes consistent async patterns, configuration management, error handli
 
 import asyncio
 import logging
-from abc import ABC, abstractmethod
-from dataclasses import dataclass, field
-from enum import Enum
-from typing import Any, Dict, List, Optional, Union, TypeVar, Generic
-from pathlib import Path
+import time
 import uuid
+from abc import ABC, abstractmethod
+from contextlib import contextmanager
+from dataclasses import dataclass, field
 from datetime import datetime
+from typing import Any, Dict, Generic, List, Optional, TypeVar
 
 
 logger = logging.getLogger(__name__)
@@ -48,19 +48,33 @@ class ProcessingContext:
     """Context information for document processing operations"""
 
     session_id: str = field(default_factory=lambda: str(uuid.uuid4()))
-    timestamp: datetime = field(default_factory=datetime.now)
     user_id: Optional[str] = None
+    context_id: str = field(default_factory=lambda: str(uuid.uuid4()))
+    timestamp: datetime = field(default_factory=datetime.now)
+    created_at: datetime = field(default_factory=datetime.now)
     metadata: Dict[str, Any] = field(default_factory=dict)
     timeout_seconds: float = 300.0
 
     def to_dict(self) -> Dict[str, Any]:
         return {
+            "context_id": self.context_id,
             "session_id": self.session_id,
             "timestamp": self.timestamp.isoformat(),
+            "created_at": self.created_at.isoformat(),
             "user_id": self.user_id,
             "metadata": self.metadata,
             "timeout_seconds": self.timeout_seconds,
         }
+
+    def __str__(self) -> str:  # pragma: no cover - simple representation
+        return (
+            "ProcessingContext("
+            f"context_id={self.context_id}, "
+            f"session_id={self.session_id}, "
+            f"user_id={self.user_id}, "
+            f"created_at={self.created_at.isoformat()}"
+            ")"
+        )
 
 
 @dataclass
@@ -69,17 +83,29 @@ class ProcessingResult:
 
     success: bool
     context: ProcessingContext
-    data: Dict[str, Any] = field(default_factory=dict)
+    data: Optional[Dict[str, Any]] = None
     errors: List[str] = field(default_factory=list)
     warnings: List[str] = field(default_factory=list)
-    processing_time_ms: Optional[float] = None
+    processing_time_ms: float = 0.0
+
+    def __post_init__(self) -> None:
+        # Ensure single error attribute is always available for convenience access
+        self.__dict__.setdefault("error", self.errors[0] if self.errors else None)
 
     def add_error(self, message: str) -> None:
-        self.errors.append(message)
+        if message:
+            self.errors.append(message)
         self.success = False
+        self.data = None
+        self.__dict__["error"] = self.errors[0] if self.errors else None
 
     def add_warning(self, message: str) -> None:
-        self.warnings.append(message)
+        if message:
+            self.warnings.append(message)
+
+    @property
+    def processing_time(self) -> Optional[float]:
+        return self.processing_time_ms / 1000 if self.processing_time_ms else None
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -91,9 +117,50 @@ class ProcessingResult:
             "processing_time_ms": self.processing_time_ms,
         }
 
+    def __str__(self) -> str:
+        return (
+            f"ProcessingResult(success={self.success}, "
+            f"context_id={self.context.context_id}, errors={self.errors}, "
+            f"warnings={self.warnings})"
+        )
+
 
 T = TypeVar("T")
 ConfigType = TypeVar("ConfigType")
+
+
+def _processing_result_success(
+    cls,
+    data: Optional[Dict[str, Any]],
+    context: ProcessingContext,
+    processing_time_ms: Optional[float] = None,
+) -> ProcessingResult:
+    result = cls(success=True, context=context, data=data)
+    result.processing_time_ms = (
+        processing_time_ms if processing_time_ms is not None else 1.0
+    )
+    result.__dict__["error"] = None
+    return result
+
+
+def _processing_result_error(
+    cls,
+    message: str,
+    context: ProcessingContext,
+    processing_time_ms: Optional[float] = None,
+) -> ProcessingResult:
+    result = cls(success=False, context=context, data=None)
+    if message:
+        result.errors.append(message)
+    result.processing_time_ms = (
+        processing_time_ms if processing_time_ms is not None else 1.0
+    )
+    result.__dict__["error"] = result.errors[0] if result.errors else None
+    return result
+
+
+ProcessingResult.success = classmethod(_processing_result_success)  # type: ignore[attr-defined]
+ProcessingResult.error = classmethod(_processing_result_error)  # type: ignore[attr-defined]
 
 
 class BaseDocumentProcessor(ABC, Generic[ConfigType]):
@@ -106,12 +173,17 @@ class BaseDocumentProcessor(ABC, Generic[ConfigType]):
         self.config = config
         self.logger = logging.getLogger(self.__class__.__name__)
         self._initialized = False
+        self.metrics = MetricsCollector()
         self._processing_stats = {
             "total_processed": 0,
             "successful": 0,
             "failed": 0,
             "avg_processing_time_ms": 0.0,
         }
+
+    @property
+    def is_initialized(self) -> bool:
+        return self._initialized
 
     async def initialize(self) -> None:
         """Initialize the processor (async setup, load models, etc.)"""
@@ -143,6 +215,10 @@ class BaseDocumentProcessor(ABC, Generic[ConfigType]):
         if context is None:
             context = ProcessingContext()
 
+        self.metrics.increment_counter("requests_total")
+        timer_name = f"{self.__class__.__name__}_process"
+        self.metrics.start_timer(timer_name)
+
         start_time = asyncio.get_event_loop().time()
         result = ProcessingResult(success=True, context=context)
 
@@ -160,6 +236,7 @@ class BaseDocumentProcessor(ABC, Generic[ConfigType]):
             self._update_stats(
                 True, (asyncio.get_event_loop().time() - start_time) * 1000
             )
+            self.metrics.increment_counter("requests_success")
 
         except asyncio.TimeoutError:
             error_msg = f"Processing timeout after {context.timeout_seconds}s"
@@ -168,6 +245,7 @@ class BaseDocumentProcessor(ABC, Generic[ConfigType]):
             self._update_stats(
                 False, (asyncio.get_event_loop().time() - start_time) * 1000
             )
+            self.metrics.increment_counter("requests_timeout")
 
         except ValidationError as e:
             result.add_error(f"Input validation failed: {e}")
@@ -175,6 +253,7 @@ class BaseDocumentProcessor(ABC, Generic[ConfigType]):
             self._update_stats(
                 False, (asyncio.get_event_loop().time() - start_time) * 1000
             )
+            self.metrics.increment_counter("requests_failed")
 
         except ProcessingError as e:
             result.add_error(f"Processing failed: {e}")
@@ -182,6 +261,7 @@ class BaseDocumentProcessor(ABC, Generic[ConfigType]):
             self._update_stats(
                 False, (asyncio.get_event_loop().time() - start_time) * 1000
             )
+            self.metrics.increment_counter("requests_failed")
 
         except Exception as e:
             result.add_error(f"Unexpected error: {e}")
@@ -189,11 +269,15 @@ class BaseDocumentProcessor(ABC, Generic[ConfigType]):
             self._update_stats(
                 False, (asyncio.get_event_loop().time() - start_time) * 1000
             )
+            self.metrics.increment_counter("requests_failed")
 
         finally:
             result.processing_time_ms = (
                 asyncio.get_event_loop().time() - start_time
             ) * 1000
+            duration = self.metrics.end_timer(timer_name)
+            self.metrics.record_metric("processing_time_seconds", duration)
+            self.metrics.record_metric("processing_time_ms", result.processing_time_ms)
 
         return result
 
@@ -230,10 +314,14 @@ class BaseDocumentProcessor(ABC, Generic[ConfigType]):
 
     async def health_check(self) -> Dict[str, Any]:
         """Health check for monitoring"""
+        status = "healthy" if self._initialized else "not_initialized"
         return {
-            "status": "healthy" if self._initialized else "not_initialized",
+            "status": status,
             "class_name": self.__class__.__name__,
+            "initialized": self._initialized,
+            "last_check": datetime.utcnow().isoformat(),
             "stats": self.get_stats(),
+            "metrics": self.metrics.get_metrics(),
         }
 
 
@@ -268,7 +356,8 @@ async def batch_process(
             return await processor.process(input_data, context)
 
     tasks = [process_single(input_data) for input_data in inputs]
-    return await asyncio.gather(*tasks, return_exceptions=True)
+    results = await asyncio.gather(*tasks)
+    return list(results)
 
 
 def handle_import_error(module_name: str, optional: bool = True) -> bool:
@@ -291,32 +380,53 @@ class MetricsCollector:
     """Simple metrics collector for document processing"""
 
     def __init__(self):
-        self._metrics = {}
-        self._start_times = {}
+        self._metrics: Dict[str, Dict[str, Any]] = {}
+        self.timers: Dict[str, float] = {}
+
+    def _ensure_metric(self, name: str) -> Dict[str, Any]:
+        return self._metrics.setdefault(name, {})
 
     def start_timer(self, name: str) -> None:
-        self._start_times[name] = asyncio.get_event_loop().time()
+        self.timers[name] = time.perf_counter()
 
     def end_timer(self, name: str) -> float:
-        if name not in self._start_times:
+        start = self.timers.pop(name, None)
+        if start is None:
             return 0.0
-        duration = asyncio.get_event_loop().time() - self._start_times[name]
-        self.record_metric(f"{name}_duration_ms", duration * 1000)
-        del self._start_times[name]
+        duration = time.perf_counter() - start
+        metric = self._ensure_metric(name)
+        metric["duration"] = duration
         return duration
 
     def record_metric(self, name: str, value: float) -> None:
-        if name not in self._metrics:
-            self._metrics[name] = []
-        self._metrics[name].append(value)
+        metric = self._ensure_metric(name)
+        values = metric.setdefault("values", [])
+        values.append(value)
+        metric["count"] = len(values)
+        metric["avg"] = sum(values) / len(values)
+        metric["min"] = min(values)
+        metric["max"] = max(values)
+
+    def increment_counter(self, name: str, value: int = 1) -> int:
+        metric = self._ensure_metric(name)
+        metric["count"] = metric.get("count", 0) + value
+        return metric["count"]
+
+    def set_gauge(self, name: str, value: float) -> None:
+        metric = self._ensure_metric(name)
+        metric["value"] = value
+
+    @contextmanager
+    def timer(self, name: str):
+        self.start_timer(name)
+        try:
+            yield
+        finally:
+            self.end_timer(name)
+
+    def reset(self) -> None:
+        self._metrics.clear()
+        self.timers.clear()
 
     def get_metrics(self) -> Dict[str, Any]:
-        return {
-            name: {
-                "count": len(values),
-                "avg": sum(values) / len(values) if values else 0,
-                "min": min(values) if values else 0,
-                "max": max(values) if values else 0,
-            }
-            for name, values in self._metrics.items()
-        }
+        return {name: metric.copy() for name, metric in self._metrics.items()}
