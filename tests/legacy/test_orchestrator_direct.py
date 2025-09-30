@@ -8,12 +8,12 @@ from pathlib import Path
 
 
 def _ensure_tests_on_path() -> None:
-    repo_root = Path(__file__).resolve().parent
+    repo_root = Path(__file__).resolve().parents[2]
     tests_dir = repo_root / "tests"
-    if str(repo_root) not in sys.path:
-        sys.path.insert(0, str(repo_root))
-    if str(tests_dir) not in sys.path:
-        sys.path.insert(0, str(tests_dir))
+    for candidate in (repo_root, tests_dir):
+        candidate_str = str(candidate)
+        if candidate_str not in sys.path:
+            sys.path.insert(0, candidate_str)
 
 
 async def main() -> bool:

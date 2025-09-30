@@ -3,7 +3,13 @@
 
 from __future__ import annotations
 
+import sys
 from importlib import import_module
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parents[2]
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
 
 _impl = import_module("tests.federated.integration.test_pruning")
 
