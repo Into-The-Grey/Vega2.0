@@ -165,6 +165,7 @@
 - [ ] **Automated Meeting Intelligence** - Meeting transcription, action item extraction, and follow-up automation (`src/vega/productivity/meeting_ai.py`)
 - [ ] **Personal Research Assistant** - Literature review automation, citation management, and research synthesis (`src/vega/productivity/research_assistant.py`)
 - [ ] **Habit & Routine Optimization** - Behavioral pattern analysis, habit formation tracking, and routine optimization (`src/vega/productivity/habits.py`)
+- [x] **Self-Optimization Pipeline** - Added autonomous performance monitoring, parameter tuning, and IDE live-view streaming (`src/vega/self_optimization/`)
 
 ### Phase 5: Personal Health & Wellness Integration 🔄 TODO
 

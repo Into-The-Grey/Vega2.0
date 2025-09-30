@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import time
 from typing import Optional, Any
 from datetime import datetime
 
@@ -66,6 +67,7 @@ from rich.table import Table
 from .config import get_config
 from .db import get_history, log_conversation, set_feedback
 from .llm import query_llm, LLMBackendError
+from ..self_optimization import PerformanceMonitor
 from ..integrations.slack_connector import send_slack_message
 
 app = typer.Typer(help="Vega2.0 CLI")
@@ -1542,12 +1544,14 @@ def adaptive_analyze(
 
 
 console = Console()
+cli_monitor = PerformanceMonitor()
 
 
 @app.command()
 def chat(message: str):
     """Send a single prompt to the model and print the reply."""
     cfg = get_config()
+    start = time.perf_counter()
 
     async def _run():
         try:
@@ -1570,6 +1574,10 @@ def chat(message: str):
             console.print("Unexpected response type", style="red")
 
     asyncio.run(_run())
+    duration = time.perf_counter() - start
+    cli_monitor.observe_sync(
+        "cli_chat", "wall_time_sec", duration, message_len=len(message)
+    )
 
 
 @app.command()
