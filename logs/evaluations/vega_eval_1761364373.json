@@ -1,0 +1,77 @@
+{
+  "summary": {
+    "total": 5,
+    "passed": 0,
+    "pass_rate": 0.0,
+    "avg_coherence": 0.0,
+    "avg_appropriateness": 0.0,
+    "avg_style": 0.0
+  },
+  "results": [
+    {
+      "id": "fact_1",
+      "prompt": "What is the capital of France?",
+      "response": "<HTTP 503> {\"message\":\"LLM backend unavailable\",\"request_id\":\"156d90ae-61de-4091-b8f6-7f06efa616e1\"}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 1097
+    },
+    {
+      "id": "fact_2",
+      "prompt": "Who wrote 1984?",
+      "response": "<HTTP 503> {\"message\":\"LLM backend unavailable\",\"request_id\":\"7daef8c5-1f20-44e6-bcf8-733a8bd770a8\"}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 1190
+    },
+    {
+      "id": "fact_3",
+      "prompt": "How many continents are there?",
+      "response": "<HTTP 503> {\"message\":\"LLM backend unavailable\",\"request_id\":\"c81002c1-b556-4f33-bf60-f338adb09c4b\"}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 1204
+    },
+    {
+      "id": "reason_1",
+      "prompt": "If all Bloops are Razzies and all Razzies are Lazzies, are all Bloops Lazzies? Explain briefly.",
+      "response": "<HTTP 503> {\"message\":\"LLM backend unavailable\",\"request_id\":\"a76224e0-5aa1-4500-ba12-6cf3b97fca60\"}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 3
+    },
+    {
+      "id": "reason_2",
+      "prompt": "A train leaves City A at 3pm at 60 mph; another leaves City B at 4pm at 80 mph, cities are 280 miles apart, when do they meet? Show steps briefly.",
+      "response": "<HTTP 503> {\"message\":\"LLM backend unavailable\",\"request_id\":\"64d6e9e3-68d4-4f75-9b29-3fe073248b2e\"}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 3
+    }
+  ]
+}

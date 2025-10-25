@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "total": 1,
+    "passed": 1,
+    "pass_rate": 100.0,
+    "avg_coherence": 1.0,
+    "avg_appropriateness": 1.0,
+    "avg_style": 1.0
+  },
+  "results": [
+    {
+      "id": "fact_1",
+      "prompt": "What is the capital of France?",
+      "response": " The capital of France is Paris.",
+      "coherence": 1.0,
+      "appropriateness": 1.0,
+      "style": 1.0,
+      "passed": true,
+      "notes": [],
+      "latency_ms": 1387
+    }
+  ]
+}

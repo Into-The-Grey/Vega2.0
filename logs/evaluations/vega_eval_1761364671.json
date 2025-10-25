@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "total": 3,
+    "passed": 0,
+    "pass_rate": 0.0,
+    "avg_coherence": 0.0,
+    "avg_appropriateness": 0.0,
+    "avg_style": 0.0
+  },
+  "results": [
+    {
+      "id": "fact_1",
+      "prompt": "What is the capital of France?",
+      "response": "<HTTP 503> {\"message\":\"LLM backend unavailable\",\"request_id\":\"a1096a2e-f2c8-4b29-b598-19436ecdaec2\"}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 308
+    },
+    {
+      "id": "fact_2",
+      "prompt": "Who wrote 1984?",
+      "response": "<HTTP 503> {\"message\":\"LLM backend unavailable\",\"request_id\":\"1b0d59f6-1a5b-4dd6-a1fe-e1d0a8cf29bd\"}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 668
+    },
+    {
+      "id": "fact_3",
+      "prompt": "How many continents are there?",
+      "response": "<HTTP 503> {\"message\":\"LLM backend unavailable\",\"request_id\":\"7ae01997-4474-4c74-bb8b-0db4cf553bbe\"}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 585
+    }
+  ]
+}

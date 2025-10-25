@@ -113,6 +113,16 @@
 - Vulnerability management ❌
 - Compliance reporting ❌
 
+## 🧪 Quality & Evaluation
+
+- Automated evaluation harness ✅
+  - `tools/evaluation/response_eval.py` (JSON + Markdown reports)
+  - `tools/evaluation/prompts.yaml` (diverse prompt set)
+- Dry-run pipeline validation ✅ (mock LLM)
+- Live evaluation ⚠️ (LLM backend/model setup required)
+  - Start Ollama and pull model from `.env` (e.g., `mistral`)
+  - Or provide external provider API key(s) for automatic fallback
+
 ## 🚨 Critical Issues
 
 ### Immediate Fixes

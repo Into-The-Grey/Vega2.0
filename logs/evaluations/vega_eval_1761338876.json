@@ -1,0 +1,116 @@
+{
+  "summary": {
+    "total": 8,
+    "passed": 0,
+    "pass_rate": 0.0,
+    "avg_coherence": 0.0,
+    "avg_appropriateness": 0.0,
+    "avg_style": 0.0
+  },
+  "results": [
+    {
+      "id": "fact_1",
+      "prompt": "What is the capital of France?",
+      "response": "<HTTP 401> {\"error_id\":\"e5eb5bd4-0fc4-4c31-b3e5-499769875c35\",\"code\":\"VEGA-1001\",\"message\":\"Invalid API key provided. Please check your credentials.\",\"recoverable\":false}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 17
+    },
+    {
+      "id": "fact_2",
+      "prompt": "Who wrote 1984?",
+      "response": "<HTTP 401> {\"error_id\":\"249631ff-249f-463b-a096-3ef652ff0d6f\",\"code\":\"VEGA-1001\",\"message\":\"Invalid API key provided. Please check your credentials.\",\"recoverable\":false}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 4
+    },
+    {
+      "id": "fact_3",
+      "prompt": "How many continents are there?",
+      "response": "<HTTP 401> {\"error_id\":\"5252d76c-e313-4865-aee2-2330822bb1e3\",\"code\":\"VEGA-1001\",\"message\":\"Invalid API key provided. Please check your credentials.\",\"recoverable\":false}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 3
+    },
+    {
+      "id": "reason_1",
+      "prompt": "If all Bloops are Razzies and all Razzies are Lazzies, are all Bloops Lazzies? Explain briefly.",
+      "response": "<HTTP 401> {\"error_id\":\"9ecf5177-00c8-4ef9-b7db-05348c67a152\",\"code\":\"VEGA-1001\",\"message\":\"Invalid API key provided. Please check your credentials.\",\"recoverable\":false}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 3
+    },
+    {
+      "id": "reason_2",
+      "prompt": "A train leaves City A at 3pm at 60 mph; another leaves City B at 4pm at 80 mph, cities are 280 miles apart, when do they meet? Show steps briefly.",
+      "response": "<HTTP 401> {\"error_id\":\"60eaea89-bc85-46fe-89a7-8b52355b3092\",\"code\":\"VEGA-1001\",\"message\":\"Invalid API key provided. Please check your credentials.\",\"recoverable\":false}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 3
+    },
+    {
+      "id": "code_1",
+      "prompt": "Write a Python function to check if a string is a palindrome. Keep it short.",
+      "response": "<HTTP 401> {\"error_id\":\"22626efb-44f4-4053-9816-f391de57eecd\",\"code\":\"VEGA-1001\",\"message\":\"Invalid API key provided. Please check your credentials.\",\"recoverable\":false}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 3
+    },
+    {
+      "id": "code_2",
+      "prompt": "In JavaScript, how do you debounce a function? Show a simple example.",
+      "response": "<HTTP 401> {\"error_id\":\"c5efff4b-2168-4b8c-be1b-a9b8318abf4e\",\"code\":\"VEGA-1001\",\"message\":\"Invalid API key provided. Please check your credentials.\",\"recoverable\":false}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 4
+    },
+    {
+      "id": "ambig_1",
+      "prompt": "Can you do it by tomorrow?",
+      "response": "<HTTP 401> {\"error_id\":\"2939f6b1-4a87-4043-bbfa-550430e4a4c0\",\"code\":\"VEGA-1001\",\"message\":\"Invalid API key provided. Please check your credentials.\",\"recoverable\":false}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 3
+    }
+  ]
+}

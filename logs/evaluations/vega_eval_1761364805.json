@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "total": 1,
+    "passed": 0,
+    "pass_rate": 0.0,
+    "avg_coherence": 0.0,
+    "avg_appropriateness": 0.0,
+    "avg_style": 0.0
+  },
+  "results": [
+    {
+      "id": "fact_1",
+      "prompt": "What is the capital of France?",
+      "response": "<HTTP 503> {\"message\":\"LLM backend unavailable\",\"request_id\":\"1502fe03-e668-4d12-ba70-fa1699108b50\"}",
+      "coherence": 0.0,
+      "appropriateness": 0.0,
+      "style": 0.0,
+      "passed": false,
+      "notes": [
+        "HTTP error calling /chat"
+      ],
+      "latency_ms": 317
+    }
+  ]
+}

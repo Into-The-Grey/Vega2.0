@@ -105,6 +105,1320 @@ app.add_typer(pruning_app, name="pruning")
 adaptive_app = typer.Typer(help="Adaptive Federated Learning utilities")
 app.add_typer(adaptive_app, name="adaptive")
 
+# Productivity commands
+productivity_app = typer.Typer(help="Personal productivity utilities")
+app.add_typer(productivity_app, name="productivity")
+
+# Testing commands
+test_app = typer.Typer(help="Self-testing and diagnostics")
+app.add_typer(test_app, name="test")
+
+# Daemon system commands
+daemon_app = typer.Typer(help="System daemon management")
+app.add_typer(daemon_app, name="daemon")
+
+# System management commands
+system_app = typer.Typer(help="System management utilities")
+app.add_typer(system_app, name="system")
+
+
+# =============================================================================
+# Daemon System Commands
+# =============================================================================
+
+
+@daemon_app.command("start")
+def daemon_start():
+    """Start the Vega daemon service"""
+    try:
+        import subprocess
+
+        result = subprocess.run(
+            ["sudo", "systemctl", "start", "vega-daemon"],
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode == 0:
+            console.print("✅ Daemon started successfully", style="green")
+            # Show status
+            daemon_status()
+        else:
+            console.print(f"✗ Failed to start daemon: {result.stderr}", style="red")
+            raise typer.Exit(1)
+    except Exception as e:
+        console.print(f"✗ Error starting daemon: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@daemon_app.command("stop")
+def daemon_stop():
+    """Stop the Vega daemon service"""
+    try:
+        import subprocess
+
+        result = subprocess.run(
+            ["sudo", "systemctl", "stop", "vega-daemon"],
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode == 0:
+            console.print("✅ Daemon stopped", style="green")
+        else:
+            console.print(f"✗ Failed to stop daemon: {result.stderr}", style="red")
+            raise typer.Exit(1)
+    except Exception as e:
+        console.print(f"✗ Error stopping daemon: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@daemon_app.command("restart")
+def daemon_restart():
+    """Restart the Vega daemon service"""
+    try:
+        import subprocess
+
+        result = subprocess.run(
+            ["sudo", "systemctl", "restart", "vega-daemon"],
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode == 0:
+            console.print("✅ Daemon restarted", style="green")
+            time.sleep(2)
+            daemon_status()
+        else:
+            console.print(f"✗ Failed to restart daemon: {result.stderr}", style="red")
+            raise typer.Exit(1)
+    except Exception as e:
+        console.print(f"✗ Error restarting daemon: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@daemon_app.command("status")
+def daemon_status():
+    """Show daemon service status"""
+    try:
+        import subprocess
+
+        result = subprocess.run(
+            ["systemctl", "status", "vega-daemon", "--no-pager", "-l"],
+            capture_output=True,
+            text=True,
+        )
+
+        # Parse status
+        lines = result.stdout.split("\n")
+        console.print("\n[bold]Vega Daemon Status:[/bold]")
+        for line in lines[:15]:  # Show first 15 lines
+            if "Active:" in line:
+                if "active (running)" in line:
+                    console.print(line, style="green")
+                else:
+                    console.print(line, style="yellow")
+            else:
+                console.print(line)
+
+    except Exception as e:
+        console.print(f"✗ Error getting status: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@daemon_app.command("logs")
+def daemon_logs(
+    lines: int = typer.Option(50, help="Number of lines to show"),
+    follow: bool = typer.Option(False, "-f", "--follow", help="Follow log output"),
+):
+    """Show daemon logs"""
+    try:
+        import subprocess
+        import os
+
+        home = os.path.expanduser("~")
+        log_file = os.path.join(home, "vega_system.log")
+
+        if not os.path.exists(log_file):
+            console.print(f"✗ Log file not found: {log_file}", style="red")
+            raise typer.Exit(1)
+
+        if follow:
+            subprocess.run(["tail", "-f", log_file])
+        else:
+            subprocess.run(["tail", f"-{lines}", log_file])
+
+    except KeyboardInterrupt:
+        pass
+    except Exception as e:
+        console.print(f"✗ Error reading logs: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@daemon_app.command("comments")
+def daemon_comments(
+    lines: int = typer.Option(20, help="Number of lines to show"),
+    follow: bool = typer.Option(False, "-f", "--follow", help="Follow comments"),
+):
+    """Show daemon AI comments and suggestions"""
+    try:
+        import subprocess
+        import os
+
+        home = os.path.expanduser("~")
+        comments_file = os.path.join(home, "VEGA_COMMENTS.txt")
+
+        if not os.path.exists(comments_file):
+            console.print(f"✗ Comments file not found: {comments_file}", style="red")
+            raise typer.Exit(1)
+
+        if follow:
+            subprocess.run(["tail", "-f", comments_file])
+        else:
+            subprocess.run(["tail", f"-{lines}", comments_file])
+
+    except KeyboardInterrupt:
+        pass
+    except Exception as e:
+        console.print(f"✗ Error reading comments: {e}", style="red")
+        raise typer.Exit(1)
+
+
+# =============================================================================
+# Testing Commands
+# =============================================================================
+
+
+@test_app.command("run")
+def test_run(
+    phrase: Optional[str] = typer.Option(
+        None,
+        "--phrase",
+        "-p",
+        help="Natural language intent (e.g., 'test server and database')",
+    ),
+    categories: Optional[str] = typer.Option(
+        None,
+        "--categories",
+        "-c",
+        help="Comma-separated categories (server,daemon,database,datasets,integrations,training,security)",
+    ),
+    interactive: bool = typer.Option(
+        False,
+        "--interactive/--no-interactive",
+        help="Prompt to select categories if not provided",
+    ),
+    destructive: bool = typer.Option(
+        False,
+        "--full/--safe",
+        help="Allow potentially destructive tests (e.g., cleanup/update)",
+    ),
+):
+    """Run the Vega self-test harness with selectable scope."""
+    try:
+        from ..testing import run_tests, AVAILABLE_CATEGORIES, infer_categories
+    except Exception as e:
+        console.print(f"✗ Testing module unavailable: {e}", style="red")
+        raise typer.Exit(1)
+
+    selected_categories: Optional[list[str]] = None
+
+    if categories:
+        selected_categories = [c.strip() for c in categories.split(",") if c.strip()]
+
+    if phrase and not selected_categories:
+        inferred = infer_categories(phrase)
+        console.print(
+            f"Inferred categories from phrase: [bold]{', '.join(inferred)}[/bold]",
+            style="cyan",
+        )
+        selected_categories = inferred
+
+    if interactive and not selected_categories:
+        console.print("\nSelect categories to test (comma-separated):", style="cyan")
+        console.print(
+            "Available: " + ", ".join(AVAILABLE_CATEGORIES),
+            style="cyan",
+        )
+        user_in = input("> ").strip()
+        if user_in:
+            selected_categories = [c.strip() for c in user_in.split(",") if c.strip()]
+
+    console.print("\n[bold]Running tests...[/bold]\n")
+
+    report = run_tests(
+        phrase=phrase,
+        categories=selected_categories,
+        interactive=interactive,
+        destructive=destructive,
+    )
+
+    # Pretty print results
+    try:
+        table = Table(title="Vega Self-Test Results")
+        table.add_column("Category", style="cyan")
+        table.add_column("Test", style="white")
+        table.add_column("Status", style="white")
+        table.add_column("Duration (ms)", justify="right", style="white")
+        table.add_column("Details", style="white")
+        for r in report.get("results", []):
+            status = "[green]PASS[/green]" if r["passed"] else "[red]FAIL[/red]"
+            table.add_row(
+                r["category"],
+                r["name"],
+                status,
+                str(r["duration_ms"]),
+                (r.get("details") or "")[:100],
+            )
+        console.print(table)
+    except Exception:
+        console.print(json.dumps(report, indent=2))
+
+    console.print(
+        f"\nSummary: [bold]{report['passed']}/{report['total']} passed[/bold]",
+        style="cyan",
+    )
+    if report.get("report_path"):
+        console.print(
+            f"Report written to: {report['report_path']}",
+            style="cyan",
+        )
+
+    # Exit non-zero if failures
+    if report["failed"]:
+        raise typer.Exit(code=1)
+
+
+# =============================================================================
+# System Management Commands
+# =============================================================================
+
+
+@system_app.command("health")
+def system_health():
+    """Check system health"""
+    try:
+        from ..daemon.system_manager import VegaSystemManager
+
+        manager = VegaSystemManager()
+        health = manager.monitor_health()
+
+        console.print("\n[bold]System Health:[/bold]")
+
+        # Server status
+        status_style = "green" if health["server_running"] else "red"
+        console.print(
+            f"  Server: [bold {status_style}]{health['server_running']}[/bold {status_style}]"
+        )
+
+        # Resource usage
+        cpu_style = (
+            "green"
+            if health["cpu_percent"] < 70
+            else "yellow" if health["cpu_percent"] < 85 else "red"
+        )
+        console.print(
+            f"  CPU: [bold {cpu_style}]{health['cpu_percent']:.1f}%[/bold {cpu_style}]"
+        )
+
+        mem_style = (
+            "green"
+            if health["memory_percent"] < 70
+            else "yellow" if health["memory_percent"] < 85 else "red"
+        )
+        console.print(
+            f"  Memory: [bold {mem_style}]{health['memory_percent']:.1f}%[/bold {mem_style}]"
+        )
+
+        disk_style = (
+            "green"
+            if health["disk_percent"] < 80
+            else "yellow" if health["disk_percent"] < 90 else "red"
+        )
+        console.print(
+            f"  Disk: [bold {disk_style}]{health['disk_percent']:.1f}%[/bold {disk_style}]"
+        )
+
+        # Suggestions
+        if health["suggestions"]:
+            console.print("\n[bold yellow]Suggestions:[/bold yellow]")
+            for suggestion in health["suggestions"]:
+                console.print(f"  • {suggestion}", style="yellow")
+
+        console.print()
+
+    except Exception as e:
+        console.print(f"✗ Error checking health: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@system_app.command("update")
+def system_update(
+    full: bool = typer.Option(False, "--full", help="Update system, Python, and Vega"),
+):
+    """Trigger system update"""
+    try:
+        from ..daemon.system_manager import VegaSystemManager
+
+        manager = VegaSystemManager()
+
+        if full:
+            console.print("🔄 Running full update...", style="cyan")
+
+            console.print("  Updating system packages...", style="cyan")
+            manager.update_system()
+
+            console.print("  Updating Python packages...", style="cyan")
+            manager.update_python_packages()
+
+            console.print("  Updating Vega...", style="cyan")
+            manager.update_vega()
+
+            console.print("✅ Full update complete", style="green")
+        else:
+            console.print("🔍 Checking for updates...", style="cyan")
+            updates = manager.check_for_updates()
+
+            if updates["system_packages"]:
+                console.print(
+                    f"\n[bold]System packages ({len(updates['system_packages'])} available):[/bold]"
+                )
+                for pkg in updates["system_packages"][:10]:
+                    console.print(f"  • {pkg}")
+                if len(updates["system_packages"]) > 10:
+                    console.print(
+                        f"  ... and {len(updates['system_packages']) - 10} more"
+                    )
+
+            if updates["python_packages"]:
+                console.print(
+                    f"\n[bold]Python packages ({len(updates['python_packages'])} available):[/bold]"
+                )
+                for pkg in updates["python_packages"][:10]:
+                    console.print(
+                        f"  • {pkg['name']} {pkg['version']} → {pkg['latest_version']}"
+                    )
+                if len(updates["python_packages"]) > 10:
+                    console.print(
+                        f"  ... and {len(updates['python_packages']) - 10} more"
+                    )
+
+            if updates["vega_updates"]:
+                console.print("\n[bold]Vega updates available[/bold]")
+
+            console.print("\nRun with --full to install all updates", style="cyan")
+
+    except Exception as e:
+        console.print(f"✗ Error updating: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@system_app.command("cleanup")
+def system_cleanup():
+    """Perform system cleanup"""
+    try:
+        from ..daemon.system_manager import VegaSystemManager
+
+        console.print("🧹 Running system cleanup...", style="cyan")
+
+        manager = VegaSystemManager()
+        manager.cleanup_system()
+
+        console.print("✅ Cleanup complete", style="green")
+
+    except Exception as e:
+        console.print(f"✗ Error during cleanup: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@system_app.command("server")
+def system_server(
+    action: str = typer.Argument(..., help="Action: start, stop, restart, status"),
+):
+    """Control Vega server"""
+    try:
+        from ..daemon.system_manager import VegaSystemManager
+
+        manager = VegaSystemManager()
+
+        if action == "start":
+            manager.start_server()
+            console.print("✅ Server started", style="green")
+        elif action == "stop":
+            manager.stop_server()
+            console.print("✅ Server stopped", style="green")
+        elif action == "restart":
+            manager.restart_server()
+            console.print("✅ Server restarted", style="green")
+        elif action == "status":
+            status = manager.get_server_status()
+            console.print("\n[bold]Server Status:[/bold]")
+            console.print(
+                f"  Running: [bold]{'Yes' if status['running'] else 'No'}[/bold]"
+            )
+            if status["uptime"]:
+                console.print(f"  Uptime: {status['uptime']}")
+            console.print(f"  Restart count: {status['restart_count']}")
+            console.print()
+        else:
+            console.print(
+                f"✗ Unknown action: {action}. Use: start, stop, restart, status",
+                style="red",
+            )
+            raise typer.Exit(1)
+
+    except Exception as e:
+        console.print(f"✗ Error: {e}", style="red")
+        raise typer.Exit(1)
+
+
+# =============================================================================
+# Productivity Commands
+# =============================================================================
+
+
+@productivity_app.command("task-create")
+def productivity_task_create(
+    title: str = typer.Argument(..., help="Task title"),
+    description: str = typer.Option("", help="Task description"),
+    category: str = typer.Option("work", help="Task category"),
+    priority: str = typer.Option("medium", help="Task priority"),
+    due_date: Optional[str] = typer.Option(None, help="Due date (ISO format)"),
+    tags: Optional[str] = typer.Option(None, help="Comma-separated tags"),
+):
+    """Create a new task"""
+    try:
+        from ..productivity import TaskManager, TaskCategory, TaskPriority
+        from datetime import datetime, timedelta
+
+        manager = TaskManager()
+
+        # Parse category and priority
+        try:
+            task_category = TaskCategory(category.lower())
+        except ValueError:
+            console.print(
+                f"Invalid category. Valid options: {', '.join([c.value for c in TaskCategory])}",
+                style="red",
+            )
+            raise typer.Exit(1)
+
+        try:
+            task_priority = TaskPriority(priority.lower())
+        except ValueError:
+            console.print(
+                f"Invalid priority. Valid options: {', '.join([p.value for p in TaskPriority])}",
+                style="red",
+            )
+            raise typer.Exit(1)
+
+        # Parse due date
+        parsed_due_date = None
+        if due_date:
+            try:
+                parsed_due_date = datetime.fromisoformat(due_date)
+            except ValueError:
+                console.print(
+                    "Invalid date format. Use ISO format (YYYY-MM-DD)", style="red"
+                )
+                raise typer.Exit(1)
+
+        # Parse tags
+        task_tags = [t.strip() for t in tags.split(",")] if tags else []
+
+        # Create task
+        task = manager.create_task(
+            title=title,
+            description=description,
+            category=task_category,
+            priority=task_priority,
+            due_date=parsed_due_date,
+            tags=task_tags,
+        )
+
+        console.print(f"✅ Created task: {task.title}", style="green")
+        console.print(f"   ID: {task.id}")
+        console.print(
+            f"   Due: {task.due_date.strftime('%Y-%m-%d %H:%M') if task.due_date else 'No deadline'}"
+        )
+        console.print(f"   Complexity: {task.complexity_score:.2f}")
+
+    except Exception as e:
+        console.print(f"✗ Error creating task: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@productivity_app.command("task-list")
+def productivity_task_list(
+    status: Optional[str] = typer.Option(None, help="Filter by status"),
+    category: Optional[str] = typer.Option(None, help="Filter by category"),
+    priority: Optional[str] = typer.Option(None, help="Filter by priority"),
+    limit: int = typer.Option(20, help="Maximum tasks to show"),
+):
+    """List tasks"""
+    try:
+        from ..productivity import TaskManager, TaskStatus, TaskCategory, TaskPriority
+
+        manager = TaskManager()
+
+        # Parse filters
+        task_status = TaskStatus(status) if status else None
+        task_category = TaskCategory(category) if category else None
+        task_priority = TaskPriority(priority) if priority else None
+
+        tasks = manager.list_tasks(
+            status=task_status, category=task_category, priority=task_priority
+        )[:limit]
+
+        if not tasks:
+            console.print("No tasks found", style="yellow")
+            return
+
+        # Create table
+        table = Table(title=f"Tasks ({len(tasks)})")
+        table.add_column("Title", style="cyan")
+        table.add_column("Status", style="green")
+        table.add_column("Priority", style="yellow")
+        table.add_column("Due Date")
+        table.add_column("Progress")
+
+        for task in tasks:
+            table.add_row(
+                task.title[:40] + "..." if len(task.title) > 40 else task.title,
+                task.status.value,
+                task.priority.value,
+                task.due_date.strftime("%Y-%m-%d") if task.due_date else "-",
+                f"{task.progress * 100:.0f}%",
+            )
+
+        console.print(table)
+
+    except Exception as e:
+        console.print(f"✗ Error listing tasks: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@productivity_app.command("task-prioritize")
+def productivity_task_prioritize(
+    limit: int = typer.Option(10, help="Number of top tasks to show"),
+):
+    """Show prioritized tasks based on AI scoring"""
+    try:
+        from ..productivity import TaskManager
+
+        manager = TaskManager()
+        tasks = manager.get_prioritized_tasks(limit=limit)
+
+        if not tasks:
+            console.print("No active tasks", style="yellow")
+            return
+
+        table = Table(title=f"Top {len(tasks)} Priority Tasks")
+        table.add_column("Rank", style="cyan")
+        table.add_column("Title", style="white")
+        table.add_column("AI Score", style="green")
+        table.add_column("Priority", style="yellow")
+        table.add_column("Due Date")
+
+        for i, task in enumerate(tasks, 1):
+            table.add_row(
+                str(i),
+                task.title[:50] + "..." if len(task.title) > 50 else task.title,
+                f"{task.ai_priority_score:.3f}" if task.ai_priority_score else "N/A",
+                task.priority.value,
+                task.due_date.strftime("%Y-%m-%d") if task.due_date else "-",
+            )
+
+        console.print(table)
+
+    except Exception as e:
+        console.print(f"✗ Error prioritizing tasks: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@productivity_app.command("task-schedule")
+def productivity_task_schedule(
+    days: int = typer.Option(7, help="Number of days to schedule"),
+):
+    """Generate optimized task schedule"""
+    try:
+        from ..productivity import TaskManager
+
+        manager = TaskManager()
+        manager.train_predictor()  # Train on historical data
+        schedule = manager.get_schedule(days=days)
+
+        if not schedule:
+            console.print("No tasks to schedule", style="yellow")
+            return
+
+        console.print(
+            f"\n📅 Optimized Schedule (Next {days} Days)\n", style="bold cyan"
+        )
+
+        for day in sorted(schedule.keys()):
+            tasks = schedule[day]
+            if tasks:
+                console.print(f"\n{day}:", style="bold yellow")
+                for task in tasks:
+                    console.print(f"  • {task.title} ({task.category.value})")
+
+    except Exception as e:
+        console.print(f"✗ Error generating schedule: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@productivity_app.command("task-stats")
+def productivity_task_stats():
+    """Show task management statistics"""
+    try:
+        from ..productivity import TaskManager
+
+        manager = TaskManager()
+        stats = manager.get_stats()
+
+        console.print("\n📊 Task Statistics\n", style="bold cyan")
+        console.print(f"Total tasks: {stats['total_tasks']}")
+        console.print(f"Active tasks: {stats['active_tasks']}")
+        console.print(f"Completed: {stats['completed_tasks']}")
+        console.print(f"Blocked: {stats['blocked_tasks']}")
+        console.print(f"Overdue: {stats['overdue_tasks']}")
+
+        console.print("\nBy Priority:", style="yellow")
+        for priority, count in stats["by_priority"].items():
+            if count > 0:
+                console.print(f"  {priority}: {count}")
+
+        console.print("\nBy Category:", style="yellow")
+        for category, count in stats["by_category"].items():
+            if count > 0:
+                console.print(f"  {category}: {count}")
+
+    except Exception as e:
+        console.print(f"✗ Error getting stats: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@productivity_app.command("knowledge-add")
+def productivity_knowledge_add(
+    content: str = typer.Argument(..., help="Knowledge content"),
+    title: Optional[str] = typer.Option(None, help="Title/summary"),
+    ktype: str = typer.Option("fact", help="Knowledge type"),
+    source: str = typer.Option("manual", help="Knowledge source"),
+    tags: Optional[str] = typer.Option(None, help="Comma-separated tags"),
+):
+    """Add knowledge to personal knowledge base"""
+    try:
+        from ..productivity import KnowledgeBase, KnowledgeType, KnowledgeSource
+
+        kb = KnowledgeBase()
+
+        # Parse type and source
+        try:
+            knowledge_type = KnowledgeType(ktype.lower())
+        except ValueError:
+            console.print(
+                f"Invalid type. Valid options: {', '.join([t.value for t in KnowledgeType])}",
+                style="red",
+            )
+            raise typer.Exit(1)
+
+        try:
+            knowledge_source = KnowledgeSource(source.lower())
+        except ValueError:
+            console.print(
+                f"Invalid source. Valid options: {', '.join([s.value for s in KnowledgeSource])}",
+                style="red",
+            )
+            raise typer.Exit(1)
+
+        # Parse tags
+        knowledge_tags = [t.strip() for t in tags.split(",")] if tags else []
+
+        # Add knowledge
+        entry = kb.add_knowledge(
+            content=content,
+            knowledge_type=knowledge_type,
+            source=knowledge_source,
+            title=title,
+            tags=knowledge_tags,
+        )
+
+        console.print(
+            f"✅ Added knowledge entry: {entry.title or entry.id}", style="green"
+        )
+        console.print(f"   Importance: {entry.importance_score:.2f}")
+        console.print(f"   Concepts: {', '.join(entry.concepts[:5])}")
+
+    except Exception as e:
+        console.print(f"✗ Error adding knowledge: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@productivity_app.command("knowledge-search")
+def productivity_knowledge_search(
+    query: str = typer.Argument(..., help="Search query"),
+    limit: int = typer.Option(10, help="Maximum results"),
+    ktype: Optional[str] = typer.Option(None, help="Filter by knowledge type"),
+):
+    """Search personal knowledge base"""
+    try:
+        from ..productivity import KnowledgeBase, KnowledgeType
+
+        kb = KnowledgeBase()
+
+        # Parse type filter
+        knowledge_type = KnowledgeType(ktype) if ktype else None
+
+        # Search
+        results = kb.search(query, knowledge_type=knowledge_type, top_k=limit)
+
+        if not results:
+            console.print("No results found", style="yellow")
+            return
+
+        console.print(f"\n🔍 Search Results for '{query}'\n", style="bold cyan")
+
+        for i, (entry, score) in enumerate(results, 1):
+            console.print(f"{i}. {entry.title or entry.id}", style="bold")
+            console.print(f"   Score: {score:.3f} | Type: {entry.knowledge_type.value}")
+            console.print(
+                f"   {entry.content[:100]}..."
+                if len(entry.content) > 100
+                else f"   {entry.content}"
+            )
+            console.print()
+
+    except Exception as e:
+        console.print(f"✗ Error searching knowledge: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@productivity_app.command("knowledge-stats")
+def productivity_knowledge_stats():
+    """Show knowledge base statistics"""
+    try:
+        from ..productivity import KnowledgeBase
+
+        kb = KnowledgeBase()
+        stats = kb.get_stats()
+
+        console.print("\n📚 Knowledge Base Statistics\n", style="bold cyan")
+        console.print(f"Total entries: {stats['total_entries']}")
+        console.print(f"Total concepts: {stats['total_concepts']}")
+        console.print(f"Connections: {stats['total_connections']}")
+
+        console.print("\nBy Type:", style="yellow")
+        for ktype, count in stats["by_type"].items():
+            if count > 0:
+                console.print(f"  {ktype}: {count}")
+
+        console.print("\nBy Source:", style="yellow")
+        for source, count in stats["by_source"].items():
+            if count > 0:
+                console.print(f"  {source}: {count}")
+
+    except Exception as e:
+        console.print(f"✗ Error getting stats: {e}", style="red")
+        raise typer.Exit(1)
+
+
+# =============================================================================
+# Focus Tracking Commands
+# =============================================================================
+
+
+@productivity_app.command("focus-start")
+def productivity_focus_start(
+    task_id: Optional[str] = typer.Option(None, help="Task ID to link session to"),
+    focus_type: str = typer.Option(
+        "deep_work",
+        help="Session type (deep_work, shallow_work, learning, creative, meeting, break)",
+    ),
+    context: str = typer.Option("", help="Work context description"),
+):
+    """Start a new focus session"""
+    try:
+        from ..productivity.focus_tracker import FocusTracker, FocusType
+
+        tracker = FocusTracker()
+
+        # Check for active session
+        active = tracker.get_active_session()
+        if active:
+            console.print(
+                f"⚠️  Active session already running (started {active.start_time.strftime('%H:%M')})",
+                style="yellow",
+            )
+            console.print("   Stop it first with: focus-stop")
+            raise typer.Exit(1)
+
+        # Parse focus type
+        try:
+            session_type = FocusType(focus_type.lower())
+        except ValueError:
+            console.print(
+                f"Invalid focus type. Valid options: {', '.join([t.value for t in FocusType])}",
+                style="red",
+            )
+            raise typer.Exit(1)
+
+        # Start session
+        session_id = tracker.start_session(
+            task_id=task_id,
+            focus_type=session_type,
+            context=context,
+        )
+
+        console.print(f"🎯 Focus session started!", style="green bold")
+        console.print(f"   Session ID: {session_id}")
+        console.print(f"   Type: {session_type.value}")
+        if task_id:
+            console.print(f"   Task: {task_id}")
+        if context:
+            console.print(f"   Context: {context}")
+        console.print(
+            "\n💡 Tip: Use 'focus-stop' when done or 'focus-interruption' to log distractions"
+        )
+
+    except Exception as e:
+        console.print(f"✗ Error starting session: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@productivity_app.command("focus-stop")
+def productivity_focus_stop(
+    notes: Optional[str] = typer.Option(None, help="Session notes"),
+):
+    """Stop the active focus session"""
+    try:
+        from ..productivity.focus_tracker import FocusTracker
+
+        tracker = FocusTracker()
+
+        # Get active session
+        active = tracker.get_active_session()
+        if not active:
+            console.print("No active focus session found", style="yellow")
+            raise typer.Exit(1)
+
+        # End session
+        session = tracker.end_session(active.session_id, notes=notes)
+
+        duration_minutes = session.duration // 60
+        duration_seconds = session.duration % 60
+
+        console.print(f"✅ Focus session completed!", style="green bold")
+        console.print(f"   Duration: {duration_minutes}m {duration_seconds}s")
+        console.print(f"   Quality Score: {session.quality_score:.2f}/1.00")
+        console.print(f"   Interruptions: {len(session.interruptions)}")
+
+        # Quality assessment
+        if session.quality_score >= 0.8:
+            console.print("   🌟 Excellent focus!", style="green")
+        elif session.quality_score >= 0.6:
+            console.print("   👍 Good session", style="cyan")
+        else:
+            console.print("   💭 Room for improvement", style="yellow")
+
+    except Exception as e:
+        console.print(f"✗ Error stopping session: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@productivity_app.command("focus-interruption")
+def productivity_focus_interruption(
+    interruption_type: str = typer.Argument(
+        ..., help="Type: notification, distraction, break, external, context_switch"
+    ),
+    source: str = typer.Argument(
+        ..., help="Interruption source (e.g., 'Slack', 'Phone call')"
+    ),
+    duration: int = typer.Option(60, help="Duration in seconds"),
+    impact: float = typer.Option(0.5, help="Impact score (0.0-1.0)"),
+    notes: Optional[str] = typer.Option(None, help="Additional notes"),
+):
+    """Record an interruption during active session"""
+    try:
+        from ..productivity.focus_tracker import FocusTracker, InterruptionType
+
+        tracker = FocusTracker()
+
+        # Get active session
+        active = tracker.get_active_session()
+        if not active:
+            console.print(
+                "No active focus session found. Start one with 'focus-start'",
+                style="yellow",
+            )
+            raise typer.Exit(1)
+
+        # Parse interruption type
+        try:
+            int_type = InterruptionType(interruption_type.lower())
+        except ValueError:
+            console.print(
+                f"Invalid type. Valid options: {', '.join([t.value for t in InterruptionType])}",
+                style="red",
+            )
+            raise typer.Exit(1)
+
+        # Validate impact
+        if not 0.0 <= impact <= 1.0:
+            console.print("Impact score must be between 0.0 and 1.0", style="red")
+            raise typer.Exit(1)
+
+        # Record interruption
+        tracker.record_interruption(
+            session_id=active.session_id,
+            interruption_type=int_type,
+            source=source,
+            duration=duration,
+            impact_score=impact,
+            notes=notes,
+        )
+
+        console.print(f"📝 Interruption recorded", style="cyan")
+        console.print(f"   Type: {int_type.value}")
+        console.print(f"   Source: {source}")
+        console.print(f"   Impact: {impact:.1f}/1.0")
+
+    except Exception as e:
+        console.print(f"✗ Error recording interruption: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@productivity_app.command("focus-metrics")
+def productivity_focus_metrics(
+    days: int = typer.Option(7, help="Number of days to analyze"),
+):
+    """Show focus metrics and statistics"""
+    try:
+        from ..productivity.focus_tracker import FocusTracker
+        from datetime import date, timedelta
+
+        tracker = FocusTracker()
+
+        start_date = date.today() - timedelta(days=days)
+        metrics = tracker.get_metrics(start_date=start_date, end_date=date.today())
+
+        console.print(f"\n🎯 Focus Metrics (Last {days} days)\n", style="bold cyan")
+
+        # Sessions
+        console.print(f"Total Sessions: {metrics.total_sessions}")
+        if metrics.total_sessions == 0:
+            console.print(
+                "No sessions recorded yet. Start with 'focus-start'", style="yellow"
+            )
+            return
+
+        hours = metrics.total_focus_time // 3600
+        minutes = (metrics.total_focus_time % 3600) // 60
+        console.print(f"Total Focus Time: {hours}h {minutes}m")
+
+        avg_minutes = metrics.average_session_duration // 60
+        console.print(f"Average Session: {avg_minutes} minutes")
+
+        # Quality
+        quality_color = (
+            "green"
+            if metrics.quality_average >= 0.7
+            else "yellow" if metrics.quality_average >= 0.5 else "red"
+        )
+        console.print(
+            f"Average Quality: {metrics.quality_average:.2f}/1.00", style=quality_color
+        )
+
+        console.print(f"Deep Work: {metrics.deep_work_percentage:.1f}%")
+        console.print(f"Interruptions: {metrics.interruption_count}")
+
+        # Trend
+        if metrics.productivity_trend:
+            trend_emoji = (
+                "📈"
+                if metrics.improvement_rate > 0
+                else "📉" if metrics.improvement_rate < 0 else "➡️"
+            )
+            console.print(
+                f"\nTrend: {trend_emoji} {abs(metrics.improvement_rate):.1f}% {'improvement' if metrics.improvement_rate > 0 else 'decline'}"
+            )
+
+        # Peak hours
+        if metrics.peak_focus_hours:
+            peak_str = ", ".join(f"{h}:00" for h in metrics.peak_focus_hours)
+            console.print(f"Peak Focus Hours: {peak_str}")
+
+        if metrics.best_day:
+            console.print(f"Best Day: {metrics.best_day}")
+
+    except Exception as e:
+        console.print(f"✗ Error getting metrics: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@productivity_app.command("focus-history")
+def productivity_focus_history(
+    limit: int = typer.Option(10, help="Number of sessions to show"),
+    task_id: Optional[str] = typer.Option(None, help="Filter by task ID"),
+):
+    """Show recent focus sessions"""
+    try:
+        from ..productivity.focus_tracker import FocusTracker
+
+        tracker = FocusTracker()
+        sessions = tracker.get_session_history(limit=limit, task_id=task_id)
+
+        if not sessions:
+            console.print("No focus sessions found", style="yellow")
+            return
+
+        table = Table(title=f"Focus History ({len(sessions)} sessions)")
+        table.add_column("Date/Time", style="cyan")
+        table.add_column("Type", style="yellow")
+        table.add_column("Duration")
+        table.add_column("Quality", style="green")
+        table.add_column("Interruptions", justify="center")
+        table.add_column("Context")
+
+        for session in sessions:
+            if session.duration:
+                duration_str = f"{session.duration // 60}m"
+            else:
+                duration_str = "Active" if session.is_active else "-"
+
+            quality_str = (
+                f"{session.quality_score:.2f}" if not session.is_active else "-"
+            )
+
+            table.add_row(
+                session.start_time.strftime("%m/%d %H:%M"),
+                session.session_type.value,
+                duration_str,
+                quality_str,
+                str(len(session.interruptions)),
+                (
+                    session.context[:30] + "..."
+                    if len(session.context) > 30
+                    else session.context
+                ),
+            )
+
+        console.print(table)
+
+    except Exception as e:
+        console.print(f"✗ Error showing history: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@productivity_app.command("focus-insights")
+def productivity_focus_insights():
+    """Get AI-powered productivity insights"""
+    try:
+        from ..productivity.focus_tracker import FocusTracker
+        from datetime import date, timedelta
+
+        tracker = FocusTracker()
+
+        # Get last 30 days of data
+        start_date = date.today() - timedelta(days=30)
+        sessions = tracker.get_session_history(limit=100)
+        metrics = tracker.get_metrics(start_date=start_date)
+
+        if not sessions:
+            console.print(
+                "Not enough data for insights. Complete a few focus sessions first!",
+                style="yellow",
+            )
+            return
+
+        console.print("\n💡 Productivity Insights\n", style="bold cyan")
+
+        # Peak hours
+        if metrics.peak_focus_hours:
+            peak_str = ", ".join(
+                f"{h}:00-{h+1}:00" for h in metrics.peak_focus_hours[:2]
+            )
+            console.print(f"🌟 Peak Focus Hours: {peak_str}", style="green")
+
+        # Optimal session length
+        optimal = tracker.insights.get_optimal_session_length(sessions)
+        console.print(f"⏱️  Optimal Session Length: {optimal} minutes")
+
+        # Distraction patterns
+        patterns = tracker.distraction_monitor.get_distraction_patterns(days=30)
+        if patterns["total_interruptions"] > 0:
+            console.print(f"\n🚫 Distraction Patterns:")
+            console.print(f"   Total Interruptions: {patterns['total_interruptions']}")
+            console.print(
+                f"   Most Common: {patterns['most_common_type']} from {patterns['most_common_source']}"
+            )
+            console.print(f"   Average Impact: {patterns['average_impact']:.2f}/1.0")
+
+        # Recommendations
+        recommendations = tracker.insights.get_improvement_recommendations(
+            sessions, metrics
+        )
+        if recommendations:
+            console.print(f"\n📋 Recommendations:", style="bold yellow")
+            for i, rec in enumerate(recommendations, 1):
+                console.print(f"{i}. {rec}")
+
+        # Mitigation strategies
+        if patterns["total_interruptions"] > 5:
+            strategies = tracker.distraction_monitor.suggest_mitigation_strategies(
+                patterns
+            )
+            if strategies:
+                console.print(f"\n🛡️  Mitigation Strategies:", style="bold magenta")
+                for strategy in strategies[:3]:
+                    console.print(f"   • {strategy}")
+
+    except Exception as e:
+        console.print(f"✗ Error generating insights: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@productivity_app.command("focus-report")
+def productivity_focus_report(
+    weekly: bool = typer.Option(False, "--weekly", help="Show weekly report"),
+):
+    """Generate detailed focus report"""
+    try:
+        from ..productivity.focus_tracker import FocusTracker
+        from datetime import date, timedelta
+
+        tracker = FocusTracker()
+
+        if weekly:
+            # Weekly report
+            start_date = date.today() - timedelta(days=date.today().weekday())  # Monday
+            sessions = tracker.get_session_history(limit=200)
+            report = tracker.insights.generate_weekly_report(sessions, start_date)
+
+            console.print(f"\n📊 Weekly Focus Report\n", style="bold cyan")
+            console.print(f"Week Starting: {report['week_start']}")
+
+            if report.get("message"):
+                console.print(report["message"], style="yellow")
+                return
+
+            console.print(f"\nTotal Sessions: {report['total_sessions']}")
+            console.print(f"Total Time: {report['total_time_hours']} hours")
+            console.print(f"Average Quality: {report['average_quality']:.2f}/1.00")
+            console.print(f"Flow Sessions: {report['flow_sessions']}")
+
+            if report.get("best_day"):
+                console.print(f"\n🌟 Best Day: {report['best_day']}")
+
+            console.print("\n📅 Daily Breakdown:", style="yellow")
+            table = Table()
+            table.add_column("Date")
+            table.add_column("Sessions")
+            table.add_column("Time (min)")
+            table.add_column("Avg Quality")
+
+            for day, stats in report["daily_stats"].items():
+                table.add_row(
+                    day,
+                    str(stats["sessions"]),
+                    str(stats["time"] // 60),
+                    f"{stats['avg_quality']:.2f}",
+                )
+
+            console.print(table)
+        else:
+            # Summary report
+            metrics = tracker.get_metrics(start_date=date.today() - timedelta(days=7))
+            sessions = tracker.get_session_history(limit=50)
+
+            console.print(f"\n📊 Focus Summary Report\n", style="bold cyan")
+            console.print(f"Last 7 Days")
+            console.print(f"\nSessions: {metrics.total_sessions}")
+
+            if metrics.total_sessions == 0:
+                console.print("No sessions recorded", style="yellow")
+                return
+
+            hours = metrics.total_focus_time // 3600
+            minutes = (metrics.total_focus_time % 3600) // 60
+            console.print(f"Total Time: {hours}h {minutes}m")
+            console.print(f"Quality: {metrics.quality_average:.2f}/1.00")
+            console.print(f"Deep Work: {metrics.deep_work_percentage:.1f}%")
+
+    except Exception as e:
+        console.print(f"✗ Error generating report: {e}", style="red")
+        raise typer.Exit(1)
+
+
+@productivity_app.command("focus-stats")
+def productivity_focus_stats():
+    """Show comprehensive focus statistics"""
+    try:
+        from ..productivity.focus_tracker import FocusTracker
+        from datetime import date, timedelta
+
+        tracker = FocusTracker()
+
+        # All-time stats
+        all_sessions = tracker.get_session_history(limit=1000)
+        completed = [s for s in all_sessions if not s.is_active]
+
+        if not completed:
+            console.print("No completed sessions yet", style="yellow")
+            return
+
+        console.print("\n📈 Focus Statistics (All Time)\n", style="bold cyan")
+
+        # Basic stats
+        total_time = sum(s.duration for s in completed if s.duration)
+        hours = total_time // 3600
+        console.print(f"Total Sessions: {len(completed)}")
+        console.print(f"Total Time: {hours} hours")
+
+        # By type
+        from collections import Counter
+
+        type_counts = Counter(s.session_type.value for s in completed)
+        console.print("\n📊 By Type:", style="yellow")
+        for session_type, count in type_counts.most_common():
+            pct = (count / len(completed)) * 100
+            console.print(f"   {session_type}: {count} ({pct:.1f}%)")
+
+        # Quality distribution
+        high_quality = sum(1 for s in completed if s.quality_score >= 0.7)
+        medium_quality = sum(1 for s in completed if 0.4 <= s.quality_score < 0.7)
+        low_quality = sum(1 for s in completed if s.quality_score < 0.4)
+
+        console.print("\n⭐ Quality Distribution:", style="yellow")
+        console.print(
+            f"   High (≥0.7): {high_quality} ({high_quality/len(completed)*100:.1f}%)",
+            style="green",
+        )
+        console.print(
+            f"   Medium: {medium_quality} ({medium_quality/len(completed)*100:.1f}%)",
+            style="cyan",
+        )
+        console.print(
+            f"   Low (<0.4): {low_quality} ({low_quality/len(completed)*100:.1f}%)",
+            style="red",
+        )
+
+        # Interruptions
+        total_interruptions = sum(len(s.interruptions) for s in completed)
+        avg_interruptions = total_interruptions / len(completed) if completed else 0
+        console.print(
+            f"\n🚫 Interruptions: {total_interruptions} total ({avg_interruptions:.1f} avg/session)"
+        )
+
+        # Active session
+        active = tracker.get_active_session()
+        if active:
+            duration = int((active.start_time - active.start_time).total_seconds())
+            console.print(
+                f"\n🎯 Active Session: {duration // 60}m elapsed", style="green bold"
+            )
+
+    except Exception as e:
+        console.print(f"✗ Error showing stats: {e}", style="red")
+        raise typer.Exit(1)
+
 
 @frl_app.command("bandit")
 def frl_bandit_demo(

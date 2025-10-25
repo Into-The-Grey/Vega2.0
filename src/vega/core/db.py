@@ -344,3 +344,134 @@ def search_conversations(q: str, limit: int = 50) -> List[Dict]:
             }
             for r in rows
         ]
+
+
+def get_persistent_session_id() -> str:
+    """
+    Get or create a persistent session ID for continuing conversations.
+    Returns the most recent session_id or creates a new one if none exists.
+    """
+    with Session(engine) as sess:
+        # Get the most recent conversation's session_id
+        stmt = (
+            select(Conversation.session_id)
+            .where(Conversation.session_id.isnot(None))
+            .order_by(Conversation.id.desc())
+            .limit(1)
+        )
+        result = sess.execute(stmt).scalar_one_or_none()
+
+        if result:
+            return result
+        else:
+            # No existing session, create a new persistent one
+            import uuid
+
+            return f"persistent-{uuid.uuid4()}"
+
+
+def get_recent_context(
+    session_id: Optional[str] = None, limit: int = 10, max_chars: int = 4000
+) -> List[Dict]:
+    """
+    Efficiently retrieve recent conversation history for LLM context.
+
+    Args:
+        session_id: If provided, get context from this session only.
+                   If None, get the most recent global context.
+        limit: Maximum number of exchanges (prompt+response pairs) to retrieve
+        max_chars: Maximum total characters to include (prevents context overflow)
+
+    Returns:
+        List of conversations in chronological order (oldest first) suitable for LLM context
+    """
+    with Session(engine) as sess:
+        stmt = select(Conversation)
+
+        if session_id:
+            stmt = stmt.where(Conversation.session_id == session_id)
+
+        # Get recent conversations, newest first
+        stmt = stmt.order_by(Conversation.id.desc()).limit(limit)
+        rows = sess.execute(stmt).scalars().all()
+
+        # Reverse to get chronological order (oldest to newest)
+        rows = list(reversed(rows))
+
+        # Build context list with character limit
+        context = []
+        total_chars = 0
+
+        for r in rows:
+            entry = {
+                "id": r.id,
+                "ts": r.ts.isoformat(),
+                "prompt": r.prompt,
+                "response": r.response,
+                "session_id": r.session_id,
+            }
+
+            entry_size = len(r.prompt) + len(r.response)
+
+            # Stop if adding this would exceed character limit
+            if total_chars + entry_size > max_chars and context:
+                break
+
+            context.append(entry)
+            total_chars += entry_size
+
+        return context
+
+
+def get_conversation_summary(
+    session_id: Optional[str] = None,
+    older_than_id: Optional[int] = None,
+    max_entries: int = 100,
+) -> str:
+    """
+    Generate a compact summary of older conversations for compressed context.
+    Useful for very long conversation histories.
+
+    Args:
+        session_id: Session to summarize
+        older_than_id: Only summarize conversations with id < this value
+        max_entries: Maximum number of old conversations to include in summary
+
+    Returns:
+        A text summary of the older conversation history
+    """
+    with Session(engine) as sess:
+        stmt = select(Conversation)
+
+        if session_id:
+            stmt = stmt.where(Conversation.session_id == session_id)
+
+        if older_than_id:
+            stmt = stmt.where(Conversation.id < older_than_id)
+
+        stmt = stmt.order_by(Conversation.id.desc()).limit(max_entries)
+        rows = sess.execute(stmt).scalars().all()
+
+        if not rows:
+            return ""
+
+        # Build a compact summary
+        summary_lines = [f"[Earlier conversation context: {len(rows)} exchanges]"]
+
+        # Group by topic/theme (simple keyword extraction)
+        topics = {}
+        for r in rows:
+            # Extract first few words of prompt as topic indicator
+            words = r.prompt.split()[:5]
+            topic_key = " ".join(words)
+            if topic_key not in topics:
+                topics[topic_key] = 0
+            topics[topic_key] += 1
+
+        # Add topic summary
+        if topics:
+            summary_lines.append("Topics discussed:")
+            for topic, count in sorted(topics.items(), key=lambda x: -x[1])[:5]:
+                summary_lines.append(f"  - {topic}... ({count} exchanges)")
+
+        return "\n".join(summary_lines)

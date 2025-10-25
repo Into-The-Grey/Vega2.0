@@ -49,6 +49,9 @@ class Config:
     presence_penalty: float = 0.0
     frequency_penalty: float = 0.0
     dynamic_generation: bool = False
+    # Context window for persistent chat memory
+    context_window_size: int = 10  # Number of recent exchanges to include
+    context_max_chars: int = 4000  # Max characters from conversation history
     # Redis cluster/distributed cache support
     redis_mode: str = "standalone"  # "standalone", "cluster", "sentinel"
     redis_cluster_nodes: tuple[str, ...] = ()  # host:port,host:port,...
@@ -56,6 +59,20 @@ class Config:
     redis_password: str | None = None
     redis_db: int = 0
     redis_ssl: bool = False
+    # Home Assistant integration for voice I/O
+    hass_enabled: bool = False  # Enable Home Assistant integration
+    hass_url: str | None = (
+        None  # Home Assistant URL (e.g., http://homeassistant.local:8123)
+    )
+    hass_token: str | None = None  # Long-lived access token
+    hass_webhook_id: str | None = None  # Webhook ID for receiving HA events
+    hass_tts_service: str = (
+        "tts.cloud_say"  # TTS service to use (tts.cloud_say, tts.speak, etc.)
+    )
+    hass_voice_name: str | None = None  # Default TTS voice name
+    hass_media_player: str | None = (
+        None  # Default media player entity for TTS responses
+    )
 
 
 class ConfigError(RuntimeError):
@@ -138,4 +155,13 @@ def get_config() -> Config:
         redis_password=redis_password,
         redis_db=redis_db,
         redis_ssl=redis_ssl,
+        context_window_size=int(os.getenv("CONTEXT_WINDOW_SIZE", "10")),
+        context_max_chars=int(os.getenv("CONTEXT_MAX_CHARS", "4000")),
+        hass_enabled=os.getenv("HASS_ENABLED", "false").lower() in {"1", "true", "yes"},
+        hass_url=os.getenv("HASS_URL"),
+        hass_token=os.getenv("HASS_TOKEN"),
+        hass_webhook_id=os.getenv("HASS_WEBHOOK_ID", "vega_webhook"),
+        hass_tts_service=os.getenv("HASS_TTS_SERVICE", "tts.cloud_say"),
+        hass_voice_name=os.getenv("HASS_VOICE_NAME"),
+        hass_media_player=os.getenv("HASS_MEDIA_PLAYER"),
     )

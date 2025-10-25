@@ -1,0 +1,44 @@
+[Unit]
+Description=Vega AI Platform Daemon
+Documentation=https://github.com/Into-The-Grey/Vega2.0
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=%USER%
+Group=%USER%
+WorkingDirectory=%VEGA_DIR%
+
+# Environment
+Environment="PATH=%VEGA_DIR%/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="PYTHONPATH=%VEGA_DIR%"
+
+# Main daemon process
+ExecStart=%VEGA_DIR%/.venv/bin/python -m src.vega.daemon.daemon
+
+# Restart policy
+Restart=always
+RestartSec=10
+StartLimitInterval=200
+StartLimitBurst=5
+
+# Resource limits
+LimitNOFILE=65536
+MemoryLimit=4G
+CPUQuota=200%
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=%HOME_DIR% %VEGA_DIR%
+
+# Logging
+StandardOutput=append:%HOME_DIR%/vega_daemon.log
+StandardError=append:%HOME_DIR%/vega_daemon_error.log
+SyslogIdentifier=vega-daemon
+
+[Install]
+WantedBy=multi-user.target

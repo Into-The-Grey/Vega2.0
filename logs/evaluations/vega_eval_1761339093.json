@@ -1,0 +1,113 @@
+{
+  "summary": {
+    "total": 8,
+    "passed": 3,
+    "pass_rate": 37.5,
+    "avg_coherence": 0.688,
+    "avg_appropriateness": 1.0,
+    "avg_style": 0.95
+  },
+  "results": [
+    {
+      "id": "fact_1",
+      "prompt": "What is the capital of France?",
+      "response": "The capital of France is Paris.",
+      "coherence": 1.0,
+      "appropriateness": 1.0,
+      "style": 1.0,
+      "passed": true,
+      "notes": [],
+      "latency_ms": 13
+    },
+    {
+      "id": "fact_2",
+      "prompt": "Who wrote 1984?",
+      "response": "1984 was written by George Orwell.",
+      "coherence": 1.0,
+      "appropriateness": 1.0,
+      "style": 1.0,
+      "passed": true,
+      "notes": [],
+      "latency_ms": 3
+    },
+    {
+      "id": "fact_3",
+      "prompt": "How many continents are there?",
+      "response": "[MOCK RESPONSE] How many continents are there?",
+      "coherence": 0.5,
+      "appropriateness": 1.0,
+      "style": 1.0,
+      "passed": false,
+      "notes": [
+        "Expected keywords missing"
+      ],
+      "latency_ms": 3
+    },
+    {
+      "id": "reason_1",
+      "prompt": "If all Bloops are Razzies and all Razzies are Lazzies, are all Bloops Lazzies? Explain briefly.",
+      "response": "[MOCK RESPONSE] If all Bloops are Razzies and all Razzies are Lazzies, are all Bloops Lazzies? Explain briefly.",
+      "coherence": 0.5,
+      "appropriateness": 1.0,
+      "style": 1.0,
+      "passed": false,
+      "notes": [
+        "Expected keywords missing"
+      ],
+      "latency_ms": 3
+    },
+    {
+      "id": "reason_2",
+      "prompt": "A train leaves City A at 3pm at 60 mph; another leaves City B at 4pm at 80 mph, cities are 280 miles apart, when do they meet? Show steps briefly.",
+      "response": "[MOCK RESPONSE] A train leaves City A at 3pm at 60 mph; another leaves City B at 4pm at 80 mph, cities are 280 miles apart, when do they",
+      "coherence": 0.5,
+      "appropriateness": 1.0,
+      "style": 0.8,
+      "passed": false,
+      "notes": [
+        "Expected keywords missing",
+        "No sentence-ending punctuation"
+      ],
+      "latency_ms": 4
+    },
+    {
+      "id": "code_1",
+      "prompt": "Write a Python function to check if a string is a palindrome. Keep it short.",
+      "response": "def is_pal(s): return s == s[::-1]",
+      "coherence": 1.0,
+      "appropriateness": 1.0,
+      "style": 0.8,
+      "passed": true,
+      "notes": [
+        "No sentence-ending punctuation"
+      ],
+      "latency_ms": 3
+    },
+    {
+      "id": "code_2",
+      "prompt": "In JavaScript, how do you debounce a function? Show a simple example.",
+      "response": "[MOCK RESPONSE] In JavaScript, how do you debounce a function? Show a simple example.",
+      "coherence": 0.5,
+      "appropriateness": 1.0,
+      "style": 1.0,
+      "passed": false,
+      "notes": [
+        "Expected keywords missing"
+      ],
+      "latency_ms": 3
+    },
+    {
+      "id": "ambig_1",
+      "prompt": "Can you do it by tomorrow?",
+      "response": "[MOCK RESPONSE] Can you do it by tomorrow?",
+      "coherence": 0.5,
+      "appropriateness": 1.0,
+      "style": 1.0,
+      "passed": false,
+      "notes": [
+        "Expected keywords missing"
+      ],
+      "latency_ms": 3
+    }
+  ]
+}

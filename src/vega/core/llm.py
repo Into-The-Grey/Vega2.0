@@ -601,7 +601,12 @@ class LLMManager:
         use_cache: bool = True,
         **kwargs,
     ) -> LLMResponse:
-        """Generate response with provider fallback"""
+        """Generate response with graceful provider fallback.
+
+        Tries the preferred provider first (if specified and available), then
+        falls back through a default preference order among available providers.
+        Caches successful responses and updates usage stats.
+        """
         # Check cache first
         if use_cache:
             cache_key = self._get_cache_key(prompt, provider or "auto", **kwargs)
@@ -616,36 +621,66 @@ class LLMManager:
                 "Circuit breaker is open - LLM temporarily unavailable"
             )
 
-        try:
-            llm_provider = self.get_preferred_provider(provider)
-            logger.info(f"Using LLM provider: {llm_provider.name}")
+        # Build candidate provider list
+        available = self.get_available_providers()
+        preference_order = ["ollama", "openai", "anthropic"]
+        candidates: List[str] = []
 
-            response = await llm_provider.generate(prompt, **kwargs)
+        if provider and provider in available:
+            candidates.append(provider)
+        for name in preference_order:
+            if name not in candidates and name in available:
+                candidates.append(name)
+        # Fallback to any other available providers not already listed
+        for name in available:
+            if name not in candidates:
+                candidates.append(name)
 
-            # Track usage
-            if llm_provider.name not in self.usage_tracker:
-                self.usage_tracker[llm_provider.name] = {
-                    "requests": 0,
-                    "total_cost": 0.0,
-                }
-            self.usage_tracker[llm_provider.name]["requests"] += 1
-            self.usage_tracker[llm_provider.name][
-                "total_cost"
-            ] += response.usage.cost_usd
+        last_error: Optional[Exception] = None
 
-            # Cache response
-            if use_cache:
-                self.cache.set(cache_key, response)
+        for prov_name in candidates:
+            try:
+                llm_provider = self.providers[prov_name]
+                logger.info(f"Using LLM provider: {llm_provider.name}")
 
-            # Circuit breaker success
-            self.circuit_breaker.on_success()
+                # Ensure model is specified for providers that require it
+                provider_kwargs = kwargs.copy()
+                if prov_name == "openai" and "model" not in provider_kwargs:
+                    provider_kwargs["model"] = getattr(
+                        llm_provider, "default_model", "gpt-4o-mini"
+                    )
 
-            return response
+                response = await llm_provider.generate(prompt, **provider_kwargs)
 
-        except Exception as e:
-            self.circuit_breaker.on_failure()
-            logger.error(f"LLM generation failed: {e}")
-            raise LLMBackendError(f"LLM generation failed: {e}")
+                # Track usage
+                if llm_provider.name not in self.usage_tracker:
+                    self.usage_tracker[llm_provider.name] = {
+                        "requests": 0,
+                        "total_cost": 0.0,
+                    }
+                self.usage_tracker[llm_provider.name]["requests"] += 1
+                self.usage_tracker[llm_provider.name][
+                    "total_cost"
+                ] += response.usage.cost_usd
+
+                # Cache response
+                if use_cache:
+                    self.cache.set(cache_key, response)
+
+                # Circuit breaker success
+                self.circuit_breaker.on_success()
+
+                return response
+            except Exception as e:
+                # Record failure and try next provider
+                last_error = e
+                # Don't trigger circuit breaker for provider-specific failures during fallback
+                # self.circuit_breaker.on_failure()
+                logger.error(f"LLM generation failed on provider '{prov_name}': {e}")
+                continue
+
+        # If all providers failed, raise the last error
+        raise LLMBackendError(f"LLM generation failed: {last_error}")
 
     async def stream_generate(
         self, prompt: str, provider: Optional[str] = None, **kwargs
@@ -693,15 +728,50 @@ def get_llm_manager() -> LLMManager:
     return _llm_manager
 
 
+# Conversation context formatting
+def format_conversation_context(context: List[Dict[str, Any]]) -> str:
+    """
+    Format conversation history into a structured prompt context.
+
+    Args:
+        context: List of conversation dictionaries with 'prompt' and 'response' keys
+
+    Returns:
+        Formatted string suitable for including in LLM prompts
+    """
+    if not context:
+        return ""
+
+    lines = ["[Conversation History]"]
+    for i, exchange in enumerate(context, 1):
+        lines.append(f"\nExchange {i}:")
+        lines.append(f"User: {exchange['prompt']}")
+        lines.append(f"Assistant: {exchange['response']}")
+
+    lines.append("\n[Current Conversation]")
+    return "\n".join(lines)
+
+
 # Backward compatibility functions
 async def query_llm(
     prompt: str,
     stream: bool = False,
     model: Optional[str] = None,
     provider: Optional[str] = None,
+    conversation_context: Optional[List[Dict[str, Any]]] = None,
     **kwargs,
 ) -> Union[str, AsyncGenerator[str, None]]:
-    """Main LLM query function with provider dispatch"""
+    """
+    Main LLM query function with provider dispatch and conversation context support.
+
+    Args:
+        prompt: The user's current prompt
+        stream: Whether to stream the response
+        model: Model name to use (provider-specific)
+        provider: Provider name (ollama, openai, etc.)
+        conversation_context: List of previous exchanges to include as context
+        **kwargs: Additional provider-specific parameters
+    """
     manager = get_llm_manager()
 
     # Get backend from config if not specified
@@ -709,12 +779,24 @@ async def query_llm(
         cfg = get_config()
         provider = getattr(cfg, "llm_backend", "ollama")
 
+    # Build prompt with conversation context if provided
+    full_prompt = prompt
+    if conversation_context and len(conversation_context) > 0:
+        context_str = format_conversation_context(conversation_context)
+        full_prompt = f"{context_str}\n\nUser: {prompt}\nAssistant:"
+
     if stream:
-        return manager.stream_generate(prompt, provider=provider, model=model, **kwargs)
+        # Only pass model if explicitly provided (not None)
+        generate_kwargs = {"provider": provider, **kwargs}
+        if model is not None:
+            generate_kwargs["model"] = model
+        return manager.stream_generate(full_prompt, **generate_kwargs)
     else:
-        response = await manager.generate(
-            prompt, provider=provider, model=model, **kwargs
-        )
+        # Only pass model if explicitly provided (not None)
+        generate_kwargs = {"provider": provider, **kwargs}
+        if model is not None:
+            generate_kwargs["model"] = model
+        response = await manager.generate(full_prompt, **generate_kwargs)
         return response.content
 
 

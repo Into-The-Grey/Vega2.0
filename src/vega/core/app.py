@@ -7,11 +7,14 @@ from typing import Optional, Dict, Any
 import uuid
 from datetime import datetime
 import asyncio
+import logging
 
 from fastapi import FastAPI, Header, HTTPException, Query
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
+
+logger = logging.getLogger(__name__)
 
 try:
     import sys
@@ -265,7 +268,7 @@ async def readyz():
         raise HTTPException(status_code=503, detail="Not ready") from e
 
 
-# Chat endpoint
+# Chat endpoint with persistent conversation memory
 @app.post("/chat")
 async def chat(
     request: ChatRequest,
@@ -274,23 +277,287 @@ async def chat(
     app.state.metrics["requests_total"] += 1
     require_api_key(x_api_key)
 
-    # Generate/propagate session id
-    session_id = request.session_id or str(uuid.uuid4())
     try:
-        from .llm import LLMBackendError  # type: ignore
+        from .llm import LLMBackendError, query_llm as llm_query  # type: ignore
+        from .db import get_persistent_session_id, get_recent_context  # type: ignore
+        from .config import get_config as get_cfg  # type: ignore
     except Exception:
 
         class LLMBackendError(Exception):
             pass
 
+        # Fallback implementations if imports fail
+        async def llm_query(prompt, stream=False, **kwargs):
+            return query_llm(prompt, stream)
+
+        def get_persistent_session_id():
+            return str(uuid.uuid4())
+
+        def get_recent_context(session_id=None, limit=10, max_chars=4000):
+            return []
+
+        def get_cfg():
+            class _Cfg:
+                context_window_size = 10
+                context_max_chars = 4000
+
+            return _Cfg()
+
     try:
-        response_text = query_llm(request.prompt, stream=request.stream)
+        # Get or create persistent session ID
+        # If user provided session_id, use it; otherwise get the persistent one
+        if request.session_id:
+            session_id = request.session_id
+        else:
+            session_id = get_persistent_session_id()
+
+        # Load conversation context for continuity
+        cfg = get_cfg()
+        context_window = getattr(cfg, "context_window_size", 10)
+        context_max = getattr(cfg, "context_max_chars", 4000)
+
+        conversation_context = get_recent_context(
+            session_id=session_id, limit=context_window, max_chars=context_max
+        )
+
+        # Query LLM with conversation context
+        response_text = await llm_query(
+            request.prompt,
+            stream=request.stream,
+            conversation_context=conversation_context,
+        )
+
+        # Log this exchange
         log_conversation(request.prompt, response_text, session_id)
+
         app.state.metrics["responses_total"] += 1
-        return {"response": response_text, "session_id": session_id}
+        return {
+            "response": response_text,
+            "session_id": session_id,
+            "context_used": len(conversation_context),
+        }
     except LLMBackendError as e:
         app.state.metrics["errors_total"] += 1
         raise HTTPException(status_code=503, detail="LLM backend unavailable") from e
+
+
+# Home Assistant Integration endpoints
+class HAWebhookPayload(BaseModel):
+    """Webhook payload from Home Assistant voice commands"""
+
+    text: str  # Transcribed speech text
+    conversation_id: Optional[str] = None
+    device_id: Optional[str] = None
+    device_type: Optional[str] = (
+        "unknown"  # ios, macos, windows, browser, smart_speaker
+    )
+    user_id: Optional[str] = None
+    language: str = "en"
+
+
+class HAVoiceResponse(BaseModel):
+    """Response to send back to Home Assistant"""
+
+    success: bool
+    response: str
+    tts_sent: bool = False
+    session_id: Optional[str] = None
+
+
+@app.post("/hass/webhook", response_model=HAVoiceResponse)
+async def hass_webhook(
+    payload: HAWebhookPayload,
+    x_api_key: str | None = Header(default=None, alias="X-API-Key"),
+):
+    """
+    Webhook endpoint for Home Assistant voice commands
+
+    Receives transcribed speech from HA Assist and returns response.
+    Automatically sends TTS response back to Home Assistant if configured.
+
+    Flow:
+        1. HA Assist: "Hey Vega, what's the weather?"
+        2. HA → POST /hass/webhook with transcribed text
+        3. Vega → LLM processing with conversation context
+        4. Vega → HA TTS service (send response to user's device)
+        5. Return JSON response with success status
+    """
+    require_api_key(x_api_key)
+
+    try:
+        from .config import get_config as get_cfg
+        from ..integrations.homeassistant import (
+            HomeAssistantClient,
+            VegaHomeAssistantBridge,
+            parse_ha_webhook_payload,
+            HAVoiceContext,
+        )
+    except ImportError:
+        # Fallback if HA integration not available
+        logger.warning("Home Assistant integration not available")
+        return HAVoiceResponse(
+            success=False,
+            response="Home Assistant integration not configured",
+            tts_sent=False,
+        )
+
+    cfg = get_cfg()
+
+    # Check if HA integration is enabled
+    if not getattr(cfg, "hass_enabled", False):
+        return HAVoiceResponse(
+            success=False,
+            response="Home Assistant integration is disabled",
+            tts_sent=False,
+        )
+
+    try:
+        # Import HAVoiceDevice enum for type conversion
+        from ..integrations.homeassistant import HAVoiceDevice
+
+        # Convert device_type string to enum
+        try:
+            device_type_enum = (
+                HAVoiceDevice(payload.device_type)
+                if payload.device_type
+                else HAVoiceDevice.UNKNOWN
+            )
+        except ValueError:
+            device_type_enum = HAVoiceDevice.UNKNOWN
+
+        # Parse webhook payload into context
+        context = HAVoiceContext(
+            text=payload.text,
+            conversation_id=payload.conversation_id,
+            device_id=payload.device_id,
+            device_type=device_type_enum,
+            user_id=payload.user_id,
+            language=payload.language,
+        )
+
+        # Create async chat callback
+        async def vega_chat_callback(prompt: str, session_id: Optional[str] = None):
+            """Call Vega's chat endpoint internally"""
+            from .llm import query_llm as llm_query
+            from .db import get_persistent_session_id, get_recent_context
+
+            if not session_id:
+                session_id = get_persistent_session_id()
+
+            # Load conversation context
+            conversation_context = get_recent_context(
+                session_id=session_id,
+                limit=getattr(cfg, "context_window_size", 10),
+                max_chars=getattr(cfg, "context_max_chars", 4000),
+            )
+
+            # Query LLM
+            response_text = await llm_query(
+                prompt, stream=False, conversation_context=conversation_context
+            )
+
+            # Log conversation
+            log_conversation(prompt, response_text, session_id)
+
+            return {"response": response_text, "session_id": session_id}
+
+        # Process voice command
+        hass_url = getattr(cfg, "hass_url", None)
+        hass_token = getattr(cfg, "hass_token", None)
+
+        if not hass_url or not hass_token:
+            # Process without TTS response
+            result = await vega_chat_callback(context.text)
+            return HAVoiceResponse(
+                success=True,
+                response=result["response"],
+                tts_sent=False,
+                session_id=result["session_id"],
+            )
+
+        # Full integration with TTS response
+        async with HomeAssistantClient(hass_url, hass_token) as ha_client:
+            bridge = VegaHomeAssistantBridge(ha_client, vega_chat_callback)
+
+            # Process command and get response
+            ha_response = await bridge.process_voice_command(context)
+
+            # Send TTS response back to HA
+            tts_success = await bridge.send_response(ha_response)
+
+            return HAVoiceResponse(
+                success=True,
+                response=ha_response.text,
+                tts_sent=tts_success,
+                session_id=ha_response.conversation_id,
+            )
+
+    except Exception as e:
+        logger.error(f"Error processing HA webhook: {e}")
+        return HAVoiceResponse(
+            success=False, response=f"Error: {str(e)}", tts_sent=False
+        )
+
+
+@app.get("/hass/status")
+async def hass_status(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key"),
+):
+    """Check Home Assistant integration status"""
+    require_api_key(x_api_key)
+
+    try:
+        from .config import get_config as get_cfg
+        from ..integrations.homeassistant import test_ha_connection
+    except ImportError:
+        return {
+            "enabled": False,
+            "available": False,
+            "message": "Home Assistant integration module not found",
+        }
+
+    cfg = get_cfg()
+    enabled = getattr(cfg, "hass_enabled", False)
+    hass_url = getattr(cfg, "hass_url", None)
+    hass_token = getattr(cfg, "hass_token", None)
+
+    if not enabled:
+        return {
+            "enabled": False,
+            "configured": bool(hass_url and hass_token),
+            "message": "Home Assistant integration is disabled in config",
+        }
+
+    if not hass_url or not hass_token:
+        return {
+            "enabled": True,
+            "configured": False,
+            "message": "Home Assistant URL or token not configured",
+        }
+
+    # Test connection
+    try:
+        connected = await test_ha_connection(hass_url, hass_token)
+        return {
+            "enabled": True,
+            "configured": True,
+            "connected": connected,
+            "url": hass_url,
+            "webhook_endpoint": "/hass/webhook",
+            "message": (
+                "Home Assistant integration operational"
+                if connected
+                else "Cannot connect to Home Assistant"
+            ),
+        }
+    except Exception as e:
+        return {
+            "enabled": True,
+            "configured": True,
+            "connected": False,
+            "error": str(e),
+            "message": "Error testing Home Assistant connection",
+        }
 
 
 # Proactive conversation models
