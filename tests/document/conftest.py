@@ -15,16 +15,39 @@ sys.path.insert(0, str(project_root))
 
 def pytest_configure(config):
     """Configure pytest with custom settings"""
-    # Configure logging
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-        handlers=[logging.StreamHandler(), logging.FileHandler("test.log")],
+    # Configure logging with proper file handler management
+    # Remove any existing handlers to prevent duplicates
+    root_logger = logging.getLogger()
+    for handler in root_logger.handlers[:]:
+        root_logger.removeHandler(handler)
+
+    # Create handlers
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.INFO)
+
+    # Use a context-managed file handler approach via logging config
+    file_handler = logging.FileHandler("test.log", mode="a")
+    file_handler.setLevel(logging.INFO)
+
+    # Store file handler on config for cleanup
+    if not hasattr(config, "_log_file_handler"):
+        config._log_file_handler = file_handler
+
+    formatter = logging.Formatter(
+        "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     )
+    console_handler.setFormatter(formatter)
+    file_handler.setFormatter(formatter)
+
+    root_logger.setLevel(logging.INFO)
+    root_logger.addHandler(console_handler)
+    root_logger.addHandler(file_handler)
 
     # Disable noisy loggers during testing
     logging.getLogger("urllib3").setLevel(logging.WARNING)
     logging.getLogger("httpx").setLevel(logging.WARNING)
+    logging.getLogger("transformers").setLevel(logging.WARNING)
+    logging.getLogger("torch").setLevel(logging.WARNING)
 
     # Add custom markers
     config.addinivalue_line("markers", "unit: mark test as a unit test")
@@ -110,6 +133,41 @@ def mock_config():
         "use_transformers": False,  # Disable for faster tests
         "max_content_length": 10000,
     }
+
+
+# Session-scoped model caching to avoid reloading heavy models
+_cached_models = {}
+
+
+@pytest.fixture(scope="session")
+def cached_legal_model():
+    """Cache legal-bert model for entire test session to improve performance"""
+    if "legal_bert" not in _cached_models:
+        try:
+            from transformers import AutoTokenizer, AutoModelForSequenceClassification
+            import torch
+
+            model_name = "nlpaueb/legal-bert-base-uncased"
+            tokenizer = AutoTokenizer.from_pretrained(model_name)
+            model = AutoModelForSequenceClassification.from_pretrained(model_name)
+
+            _cached_models["legal_bert"] = {
+                "tokenizer": tokenizer,
+                "model": model,
+                "device": "cuda:0" if torch.cuda.is_available() else "cpu",
+            }
+        except Exception as e:
+            _cached_models["legal_bert"] = None
+
+    return _cached_models.get("legal_bert")
+
+
+@pytest.fixture(scope="session")
+def disable_heavy_ml_models(monkeypatch_session):
+    """Disable heavy ML model loading for faster tests"""
+    # This would require pytest-monkeypatch-session plugin
+    # For now, we'll rely on configuration flags
+    pass
 
 
 # Error testing fixtures
@@ -264,6 +322,122 @@ def pytest_sessionfinish(session, exitstatus):
         print(f"❌ Test session failed with exit status: {exitstatus}")
     print("🧪 Document Intelligence Test Session Complete")
 
+    # Clean up file handler to prevent resource leak
+    if hasattr(session.config, "_log_file_handler"):
+        try:
+            session.config._log_file_handler.close()
+            logging.getLogger().removeHandler(session.config._log_file_handler)
+        except Exception:
+            pass
 
-# Custom test markers for better organization
-pytest_plugins = []
+
+# NOTE: pytest_plugins must be defined at the root conftest.py, not here
+# If you need custom plugins, move them to /home/ncacord/Vega2.0/conftest.py
+
+# Import test fixture data from the fixtures module so these are available
+# as session fixtures for all document tests. Pytest only auto-registers
+# fixtures declared in conftest.py or test modules; tests/document/fixtures.py
+# contains useful sample data and helpers but isn't a conftest, so import
+# the values here and expose lightweight wrappers.
+try:
+    from tests.document import fixtures as doc_fixtures
+except Exception:
+    doc_fixtures = None
+
+
+@pytest.fixture
+def sample_documents():
+    """Provide project-wide sample documents for document tests."""
+    if doc_fixtures is None:
+        return {}
+    return getattr(doc_fixtures, "SAMPLE_DOCUMENTS", {})
+
+
+@pytest.fixture
+def sample_technical_documents():
+    """Alias wrapper for technical document test data."""
+    if doc_fixtures is None:
+        return {}
+    # fixtures module exposes a module-level dict named sample_technical_documents
+    return getattr(doc_fixtures, "sample_technical_documents", {})
+
+
+@pytest.fixture
+def sample_workflow_documents():
+    """Alias wrapper for workflow document test data."""
+    if doc_fixtures is None:
+        return {}
+    return getattr(doc_fixtures, "sample_workflow_documents", {})
+
+
+@pytest.fixture
+def sample_legal_documents():
+    """Alias wrapper for legal document test data."""
+    if doc_fixtures is None:
+        return {}
+    # Check if it's a pytest fixture function first (it is in fixtures.py)
+    # If we got the function object, we need to return a dict directly instead
+    fixture_func_or_data = getattr(doc_fixtures, "sample_legal_documents", None)
+
+    # Return dict mapping directly - don't try to call the fixture function
+    # since we're outside the pytest fixture resolution context
+    sd = getattr(doc_fixtures, "SAMPLE_DOCUMENTS", {})
+    return {
+        "nda": sd.get("contract", ""),
+        "service_agreement": sd.get("contract", ""),
+        "privacy_policy": sd.get("workflow_doc", ""),
+        "liability_clause": sd.get("contract", ""),
+        "complex_contract": sd.get("contract", ""),
+        "entity_heavy_contract": sd.get("research_paper", ""),
+    }
+
+
+@pytest.fixture
+def create_test_context():
+    """Return a helper that builds ProcessingContext objects for tests.
+
+    Tests expect to be able to call create_test_context(session_id=..., ...).
+    Provide a flexible wrapper that accepts the common args and delegates to
+    the TestFixtures helper if available.
+    """
+
+    def _create(
+        content: str | None = None,
+        document_type: str = "test",
+        processing_mode: str = "analysis",
+        session_id: str | None = None,
+        user_id: str | None = None,
+        context_id: str | None = None,
+        metadata: dict | None = None,
+    ):
+        # Prefer the helper in the fixtures module when available
+        if doc_fixtures is not None and hasattr(doc_fixtures, "TestFixtures"):
+            return doc_fixtures.TestFixtures.create_processing_context(
+                context_id=context_id or "test_context",
+                user_id=user_id or "test_user",
+                session_id=session_id or "test_session",
+                metadata=metadata or {},
+            )
+
+        # Fallback: construct a minimal ProcessingContext by importing class
+        try:
+            from src.vega.document.base import ProcessingContext
+
+            return ProcessingContext(
+                context_id=context_id or "test_context",
+                user_id=user_id or "test_user",
+                session_id=session_id or "test_session",
+                metadata=metadata or {},
+            )
+        except Exception:
+            # Last resort: return a simple namespace-like object
+            class _Ctx:
+                def __init__(self):
+                    self.context_id = context_id or "test_context"
+                    self.user_id = user_id or "test_user"
+                    self.session_id = session_id or "test_session"
+                    self.metadata = metadata or {}
+
+            return _Ctx()
+
+    return _create

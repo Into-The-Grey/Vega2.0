@@ -169,12 +169,31 @@ class PersonalSSOManager:
         self.config_file = config_file
         self.providers: Dict[SSOProvider, SSOConfig] = {}
         self.sessions: Dict[str, AuthSession] = {}
-        self.http_client = httpx.AsyncClient(timeout=30.0)
+        self.http_client: Optional[Any] = None
+        self._owns_client = False
 
     async def initialize(self):
         """Initialize SSO manager"""
+        # Set up HTTP client using shared resource manager when possible
+        try:
+            from ..core.resource_manager import get_resource_manager
+
+            manager = await get_resource_manager()
+            self.http_client = manager.get_http_client_direct()
+            self._owns_client = False
+        except (ImportError, Exception):
+            # Fallback to local client
+            self.http_client = httpx.AsyncClient(timeout=30.0)
+            self._owns_client = True
+
         await self._load_configuration()
         logger.info(f"SSO Manager initialized with {len(self.providers)} providers")
+
+    async def cleanup(self):
+        """Cleanup HTTP client if we own it"""
+        if self.http_client and self._owns_client:
+            await self.http_client.aclose()
+            self.http_client = None
 
     async def _load_configuration(self):
         """Load SSO configuration from file"""

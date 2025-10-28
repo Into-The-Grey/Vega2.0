@@ -3248,8 +3248,17 @@ def learn_optimize_prompt(
     console.print(table)
 
 
+def main():
+    """Entry point wrapper for Typer CLI.
+
+    This allows other modules (e.g., main.py) to import and invoke the CLI via
+    `from src.vega.core.cli import main` and then call `main()`.
+    """
+    app()
+
+
 if __name__ == "__main__":
-    app()  # Typer entry
+    main()  # Typer entry
 
 
 # OSINT CLI

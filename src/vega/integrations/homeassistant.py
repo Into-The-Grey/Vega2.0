@@ -109,26 +109,50 @@ class HomeAssistantClient:
         self.base_url = base_url.rstrip("/")
         self.access_token = access_token
         self.timeout = timeout
-        self._client: Optional[httpx.AsyncClient] = None
+        self._client: Optional[Any] = None
+        self._owns_client = False
 
     async def __aenter__(self):
-        self._client = httpx.AsyncClient(
-            timeout=self.timeout,
-            headers={
-                "Authorization": f"Bearer {self.access_token}",
-                "Content-Type": "application/json",
-            },
-        )
+        # Try to use shared HTTP client from resource manager
+        try:
+            from ..core.resource_manager import get_resource_manager
+
+            manager = await get_resource_manager()
+            self._client = manager.get_http_client_direct()
+            self._owns_client = False
+            # Note: Resource manager doesn't support custom headers per-client,
+            # so we'll need to add headers per-request
+        except (ImportError, Exception):
+            # Fallback to local client if resource manager unavailable
+            self._client = httpx.AsyncClient(
+                timeout=self.timeout,
+                headers={
+                    "Authorization": f"Bearer {self.access_token}",
+                    "Content-Type": "application/json",
+                },
+            )
+            self._owns_client = True
         return self
 
     async def __aexit__(self, *args):
-        if self._client:
+        # Only close if we created our own client
+        if self._client and self._owns_client:
             await self._client.aclose()
+
+    def _get_headers(self) -> Dict[str, str]:
+        """Get headers for requests (needed when using shared client)"""
+        return {
+            "Authorization": f"Bearer {self.access_token}",
+            "Content-Type": "application/json",
+        }
 
     async def get_state(self, entity_id: str) -> Optional[Dict[str, Any]]:
         """Get current state of an entity"""
         try:
-            response = await self._client.get(f"{self.base_url}/api/states/{entity_id}")
+            headers = self._get_headers() if not self._owns_client else {}
+            response = await self._client.get(
+                f"{self.base_url}/api/states/{entity_id}", headers=headers or None
+            )
             response.raise_for_status()
             return response.json()
         except Exception as e:

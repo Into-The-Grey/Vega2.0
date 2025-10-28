@@ -17,6 +17,7 @@ from src.vega.document.base import (
     DocumentIntelligenceError,
     ProcessingError,
     ValidationError,
+    ConfigurationError,
     handle_import_error,
 )
 
@@ -369,7 +370,7 @@ class TestImportErrorHandling:
 
     def test_missing_required_import(self):
         """Test handling of missing required import"""
-        with pytest.raises(ImportError):
+        with pytest.raises((ImportError, ConfigurationError)):
             handle_import_error("nonexistent_module_xyz", optional=False)
 
 

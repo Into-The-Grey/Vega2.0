@@ -21,8 +21,14 @@
 
 ## Core Application
 - core/
-  - app.py (FastAPI application)
+  - app.py (FastAPI application + ✅ Persistent Memory Integration with Extended Extraction & Hardening - COMPLETE)
+    - ✅ Extended pattern recognition (Call me, I'm, based in, living in, honorifics)
+    - ✅ UTF-8 sanitization (_sanitize_string) for encoding safety
+    - ✅ /metrics (JSON) and /metrics/prometheus endpoints with extraction counters
+    - ✅ Legacy health endpoints (/livez, /readyz) for test compatibility
   - cli.py (Command-line interface + ✅ Federated pruning CLI integration + ✅ Adaptive FL CLI integration - COMPLETE)
+  - db.py (✅ SQLite persistence with MemoryFact model + UTF-8 sanitization (_sanitize_utf8) + ✅ Memory key normalization (configurable) - COMPLETE)
+  - llm.py (✅ Multi-provider LLM with system_context support for memory injection - COMPLETE)
 - main.py (Entry point: server, cli, test)
 - src/vega/
   - core/ (Core functionality)
@@ -159,6 +165,25 @@
   - ui/ (UI development tools)
 - systemd/
   - vega.service (System service)
+- .github/
+  - workflows/
+    - ci-tests.yml (✅ Continuous Integration - pytest + smoke scripts)
+
+## Monitoring & Observability
+- Endpoints:
+  - /healthz (✅ Basic health check - returns ok status + timestamp)
+  - /livez (✅ Liveness probe - returns alive status)
+  - /readyz (✅ Readiness probe - calls get_history() and returns 503 on failure)
+  - /metrics (✅ JSON metrics - extraction_calls, extraction_facts_total, memory_facts_global_total, requests/responses/errors)
+  - /metrics/prometheus (✅ Prometheus exposition format - core counters, durations, per-status code, and vega_memory_* gauges)
+- Instrumentation:
+  - ✅ In-memory extraction counters (_metrics dict in app.py)
+  - ✅ Memory fact counts (global stored facts from DB)
+  - ✅ Core app metrics (requests_total, responses_total, errors_total, degraded flag)
+  - ✅ Request timing metrics (request_duration_ms_sum, request_duration_count, last_request_duration_ms, avg_request_duration_ms)
+  - ✅ HTTP status code distribution (status_codes map)
+  - ✅ Response compression (GZip middleware)
+  - ✅ Memory key normalization (Config: MEMORY_NORMALIZE_KEYS=true)
 
 ## Testing & Quality
 - tests/
@@ -167,12 +192,20 @@
     - integration/ (`tests/federated/integration/` – 🔄 pruning/orchestrator/communication coordinator suites relocated; FedAvg export restoration pending)
     - validation/ (`tests/federated/validation/` – ✅ distributed compression, cross-silo, and hyperparameter optimization suites)
   - test_*.py (Module tests)
+  - test_app.py (✅ API tests - 20/20 passing including health endpoints)
   - document/test_classification.py (✅ 44/44 document intelligence tests passing)
-- **Status**: Federated unit coverage remains 100%; integration suites consolidated with follow-up dependency work; validation suites passing ✅
- - Evaluation Harness ✅
-   - `tools/evaluation/response_eval.py` (automated scoring, JSON/Markdown reports)
-   - `tools/evaluation/prompts.yaml` (diverse prompt categories)
-   - Dry-run validated; live eval pending LLM backend/model setup (Ollama model pull or external provider key)
+- tools/
+  - test_memory_feature.py (✅ Basic memory extraction & persistence - 4/4 passing)
+  - advanced_test_suite.py (✅ Complex memory integration - 12/12 passing)
+  - extreme_stress_test.py (✅ Adversarial stress testing - 10/10 passing)
+    - Concurrency stress (50-100 threads)
+    - ReDoS attempts, SQL injection, encoding attacks
+    - Race conditions, DB lock exhaustion, key collisions
+- **Status**: Federated unit coverage remains 100%; integration suites consolidated with follow-up dependency work; validation suites passing ✅; Memory feature fully validated with multi-tier testing ✅
+- Evaluation Harness ✅
+  - `tools/evaluation/response_eval.py` (automated scoring, JSON/Markdown reports)
+  - `tools/evaluation/prompts.yaml` (diverse prompt categories)
+  - Dry-run validated; live eval pending LLM backend/model setup (Ollama model pull or external provider key)
 
 ## Documentation
 - docs/

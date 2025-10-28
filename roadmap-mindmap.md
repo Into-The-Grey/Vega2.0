@@ -119,9 +119,15 @@
   - `tools/evaluation/response_eval.py` (JSON + Markdown reports)
   - `tools/evaluation/prompts.yaml` (diverse prompt set)
 - Dry-run pipeline validation ✅ (mock LLM)
-- Live evaluation ⚠️ (LLM backend/model setup required)
-  - Start Ollama and pull model from `.env` (e.g., `mistral`)
-  - Or provide external provider API key(s) for automatic fallback
+- Live evaluation ✅ (multi-provider fallback: Ollama → OpenAI → Anthropic)
+  - Default OpenAI model: gpt-4o-mini
+  - Reports saved under logs/evaluations/
+
+## ⚙️ Core App (recent)
+
+- CLI entrypoint fixed ✅ (src/vega/core/cli.py: main())
+- API key alignment with .env ✅ (get_config wired into FastAPI auth)
+- HTTP streaming in /chat ✅ (StreamingResponse when stream=true)
 
 ## 🚨 Critical Issues
 

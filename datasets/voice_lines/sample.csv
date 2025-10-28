@@ -1,0 +1,3 @@
+id,text,audio_path,speaker,emotion,language,dataset_split,metadata
+001,Hello there and welcome!,audio/001.wav,vega,neutral,en,train,"{""source"":""manual""}"
+002,Thanks for trying Vega.,,vega,neutral,en,val,

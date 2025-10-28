@@ -501,7 +501,6 @@ class FederatedParticipant:
         self.api_key = api_key
         self.secret_key = secret_key
         self.enable_security = enable_security
-
         # Initialize communication
         self.comm_manager = CommunicationManager(
             participant_id=participant_id,
@@ -1373,6 +1372,20 @@ class FederatedParticipant:
     async def cleanup(self):
         """Cleanup participant resources."""
         await self.comm_manager.cleanup()
+
+
+# Backward-compatible export expected by tests
+# Some tests import Participant for mocking/spec purposes, so provide an alias.
+Participant = FederatedParticipant
+
+__all__ = [
+    "LocalTrainingConfig",
+    "TrainingMetrics",
+    "ParticipantMetrics",
+    "LocalModelTrainer",
+    "FederatedParticipant",
+    "Participant",
+]
 
 
 # Example usage and testing

@@ -620,6 +620,13 @@ class DocumentationQualityAnalyzer(BaseDocumentProcessor[DocumentationConfig]):
 
         return suggestions
 
+    # Backwards-compatible convenience used by some tests
+    async def analyze_quality(
+        self, documentation: str, context: Optional[ProcessingContext] = None
+    ) -> ProcessingResult:
+        """Wrapper that forwards to process() for compatibility."""
+        return await self.process(documentation, context)
+
 
 # Main AI class that orchestrates all components
 class TechnicalDocumentationAI:
@@ -636,6 +643,7 @@ class TechnicalDocumentationAI:
         self.api_analyzer = APIDocumentationAnalyzer(self.config)
         self.writing_assistant = TechnicalWritingAssistant(self.config)
         self.quality_analyzer = DocumentationQualityAnalyzer(self.doc_config)
+        self.is_initialized = False
 
     async def initialize(self) -> None:
         """Initialize all processors"""
@@ -645,6 +653,55 @@ class TechnicalDocumentationAI:
             self.writing_assistant.initialize(),
             self.quality_analyzer.initialize(),
         )
+        self.is_initialized = True
+
+    async def process_document(
+        self,
+        data: Union[str, Dict[str, Any], ProcessingContext],
+        context: Optional[ProcessingContext] = None,
+    ) -> ProcessingResult:
+        """
+        Route processing based on input shape/content for convenience in tests.
+
+        - ProcessingContext -> extract content and process
+        - dict with 'code' -> generate_code_docs
+        - string that looks like API doc (has 'param' or 'return' or 'endpoint') -> analyze_api_docs
+        - otherwise -> quality_analysis or assist_writing depending on length
+        """
+        # Handle ProcessingContext as document
+        if isinstance(data, ProcessingContext):
+            text = data.metadata.get("content", "")
+            ctx = data
+
+            # Validate input
+            if not text or not text.strip():
+                return ProcessingResult(
+                    success=False,
+                    context=ctx,
+                    data={"error": "Empty content provided for technical processing"},
+                    errors=["Empty content provided for technical processing"],
+                )
+
+            # Route based on content
+            return await self.quality_analysis(text, ctx)
+
+        if isinstance(data, dict) and ("code" in data or "language" in data):
+            code = data.get("code", "")
+            language = data.get("language", "python")
+            return await self.generate_code_docs(code, language, context)
+
+        if isinstance(data, str):
+            text = data.strip()
+            lower = text.lower()
+            if any(k in lower for k in ["param", "return", "endpoint", "api"]):
+                return await self.analyze_api_docs(text, context)
+            # Prefer quality analysis for medium/long text, otherwise writing assist
+            if len(text.split()) >= 10:
+                return await self.quality_analysis(text, context)
+            return await self.assist_writing(text, context)
+
+        # Fallback: stringify and do quality analysis
+        return await self.quality_analysis(str(data), context)
 
     async def generate_code_docs(
         self,
@@ -682,12 +739,11 @@ class TechnicalDocumentationAI:
             self.writing_assistant.health_check(),
             self.quality_analyzer.health_check(),
         )
-
+        overall_ok = all(c.get("status") == "healthy" for c in checks)
         return {
+            "healthy": bool(self.is_initialized and overall_ok),
             "overall_status": (
-                "healthy"
-                if all(c.get("status") == "healthy" for c in checks)
-                else "degraded"
+                "healthy" if (self.is_initialized and overall_ok) else "degraded"
             ),
             "components": {
                 "code_generator": checks[0],

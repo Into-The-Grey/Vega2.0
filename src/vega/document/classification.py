@@ -874,6 +874,11 @@ class DocumentClassificationAI:
         self.intent_classifier: Optional[IntentClassifier] = None
         self._initialized = False
 
+    @property
+    def is_initialized(self) -> bool:
+        """Check if the orchestrator is initialized"""
+        return self._initialized
+
     async def initialize(self) -> None:
         if self._initialized:
             return
@@ -1170,7 +1175,14 @@ class DocumentClassificationAI:
                 overall_status = "degraded"
                 break
 
-        return {"overall_status": overall_status, "components": checks}
+        all_healthy = self._initialized and overall_status == "healthy"
+
+        return {
+            "healthy": bool(all_healthy),
+            "overall_status": overall_status,
+            "initialized": self._initialized,
+            "components": checks,
+        }
 
 
 __all__ = [

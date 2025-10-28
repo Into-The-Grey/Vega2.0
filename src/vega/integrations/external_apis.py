@@ -190,14 +190,45 @@ class EnhancedSearchProvider:
 
     def __init__(self, config: APIConfig):
         self.config = config
-        self.session = None
+        self.session: Optional[Any] = None
+        self._owns_session = False
+
         if HTTP_AVAILABLE:
+            # Defer client creation - will use shared client when possible
+            self._needs_init = True
+        else:
+            self._needs_init = False
+
+    async def _ensure_session(self):
+        """Lazily initialize HTTP session using shared client when possible"""
+        if self.session is not None or not self._needs_init:
+            return
+
+        try:
+            from ..core.resource_manager import get_resource_manager
+
+            manager = await get_resource_manager()
+            self.session = manager.get_http_client_direct()
+            self._owns_session = False
+        except (ImportError, Exception):
+            # Fallback to local client
             self.session = httpx.AsyncClient(timeout=30.0)
+            self._owns_session = True
+
+        self._needs_init = False
+
+    async def cleanup(self):
+        """Cleanup HTTP session if we own it"""
+        if self.session and self._owns_session:
+            await self.session.aclose()
+            self.session = None
 
     async def search_google(
         self, query: str, num_results: int = 10
     ) -> List[SearchResult]:
         """Search using Google Custom Search API"""
+        await self._ensure_session()
+
         if (
             not self.config.google_search_api_key
             or not self.config.google_search_engine_id
@@ -687,25 +718,59 @@ class GitHubIntegration:
 
     def __init__(self, config: APIConfig):
         self.config = config
-        self.session = None
+        self.session: Optional[Any] = None
+        self._owns_session = False
+        self._auth_headers = {}
+        self._needs_init = False
 
         if HTTP_AVAILABLE and config.github_token:
+            self._auth_headers = {
+                "Authorization": f"token {config.github_token}",
+                "Accept": "application/vnd.github.v3+json",
+            }
+            self._needs_init = True
+
+    async def _ensure_session(self):
+        """Lazily initialize HTTP session using shared client when possible"""
+        if self.session is not None or not self._needs_init:
+            return
+
+        try:
+            from ..core.resource_manager import get_resource_manager
+
+            manager = await get_resource_manager()
+            self.session = manager.get_http_client_direct()
+            self._owns_session = False
+        except (ImportError, Exception):
+            # Fallback to local client with auth headers
             self.session = httpx.AsyncClient(
-                headers={
-                    "Authorization": f"token {config.github_token}",
-                    "Accept": "application/vnd.github.v3+json",
-                },
+                headers=self._auth_headers,
                 timeout=30.0,
             )
+            self._owns_session = True
+
+        self._needs_init = False
+
+    def _get_request_headers(self) -> Dict[str, str]:
+        """Get headers to include in requests when using shared client"""
+        return self._auth_headers if not self._owns_session else {}
+
+    async def cleanup(self):
+        """Cleanup HTTP session if we own it"""
+        if self.session and self._owns_session:
+            await self.session.aclose()
+            self.session = None
 
     def is_available(self) -> bool:
         """Check if GitHub integration is available"""
-        return self.session is not None
+        return bool(self.config.github_token)
 
     async def search_repositories(
         self, query: str, max_results: int = 10
     ) -> List[Dict[str, Any]]:
         """Search GitHub repositories"""
+        await self._ensure_session()
+
         if not self.session:
             raise APIError("GitHub client not configured")
 
@@ -750,19 +815,47 @@ class EnhancedSlackIntegration:
     def __init__(self, config: APIConfig):
         self.config = config
         self.webhook_url = config.slack_webhook_url
-        self.session = None
+        self.session: Optional[Any] = None
+        self._owns_session = False
+        self._needs_init = False
 
         if HTTP_AVAILABLE:
+            self._needs_init = True
+
+    async def _ensure_session(self):
+        """Lazily initialize HTTP session using shared client when possible"""
+        if self.session is not None or not self._needs_init:
+            return
+
+        try:
+            from ..core.resource_manager import get_resource_manager
+
+            manager = await get_resource_manager()
+            self.session = manager.get_http_client_direct()
+            self._owns_session = False
+        except (ImportError, Exception):
+            # Fallback to local client
             self.session = httpx.AsyncClient(timeout=30.0)
+            self._owns_session = True
+
+        self._needs_init = False
+
+    async def cleanup(self):
+        """Cleanup HTTP session if we own it"""
+        if self.session and self._owns_session:
+            await self.session.aclose()
+            self.session = None
 
     def is_available(self) -> bool:
         """Check if Slack integration is available"""
-        return self.webhook_url is not None and self.session is not None
+        return self.webhook_url is not None
 
     async def send_message(
         self, text: str, channel: Optional[str] = None, username: Optional[str] = None
     ) -> bool:
         """Send message to Slack"""
+        await self._ensure_session()
+
         if not self.webhook_url or not self.session:
             raise APIError("Slack webhook not configured")
 

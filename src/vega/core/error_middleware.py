@@ -2,11 +2,13 @@
 FastAPI Error Handling Middleware
 ===============================
 
-Middleware to integrate VegaErrorHandler with FastAPI applications.
+Middleware to integrate VegaErrorHandler with FastAPI applications and
+track lightweight request metrics (counts, durations, status codes).
 """
 
 import uuid
 from typing import Optional
+import time
 from fastapi import Request, Response
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.middleware.base import RequestResponseEndpoint
@@ -121,25 +123,48 @@ class RequestTrackingMiddleware(BaseHTTPMiddleware):
     async def dispatch(
         self, request: Request, call_next: RequestResponseEndpoint
     ) -> Response:
-        # Track request metrics
-        if hasattr(request.app.state, "metrics"):
-            request.app.state.metrics["requests_total"] += 1
+        # Start timer and increment request count
+        metrics = getattr(request.app.state, "metrics", None)
+        if isinstance(metrics, dict):
+            metrics["requests_total"] = metrics.get("requests_total", 0) + 1
 
+        start = time.perf_counter()
+        status_code: int | None = None
         try:
             response = await call_next(request)
+            status_code = int(getattr(response, "status_code", 200) or 200)
 
-            # Track response metrics
-            if hasattr(request.app.state, "metrics"):
-                request.app.state.metrics["responses_total"] += 1
+            # Track response metrics on success path
+            if isinstance(metrics, dict):
+                metrics["responses_total"] = metrics.get("responses_total", 0) + 1
 
             return response
 
-        except Exception as e:
+        except Exception:
             # Track error metrics
-            if hasattr(request.app.state, "metrics"):
-                request.app.state.metrics["errors_total"] += 1
-
+            if isinstance(metrics, dict):
+                metrics["errors_total"] = metrics.get("errors_total", 0) + 1
+            status_code = status_code or 500
             raise
+        finally:
+            # Record duration and status code distribution
+            elapsed_ms = (time.perf_counter() - start) * 1000.0
+            if isinstance(metrics, dict):
+                metrics["request_duration_ms_sum"] = (
+                    metrics.get("request_duration_ms_sum", 0.0) + elapsed_ms
+                )
+                metrics["request_duration_count"] = (
+                    metrics.get("request_duration_count", 0) + 1
+                )
+                metrics["last_request_duration_ms"] = elapsed_ms
+
+                # Status code counts (as strings for JSON friendliness)
+                codes = metrics.get("status_codes")
+                if not isinstance(codes, dict):
+                    codes = {}
+                    metrics["status_codes"] = codes
+                code_key = str(status_code or 0)
+                codes[code_key] = int(codes.get(code_key, 0)) + 1
 
 
 def setup_error_middleware(app):

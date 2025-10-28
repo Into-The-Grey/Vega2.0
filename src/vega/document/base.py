@@ -107,6 +107,11 @@ class ProcessingResult:
     def processing_time(self) -> Optional[float]:
         return self.processing_time_ms / 1000 if self.processing_time_ms else None
 
+    @property
+    def results(self) -> Optional[Dict[str, Any]]:
+        """Alias for data property for backwards compatibility"""
+        return self.data
+
     def to_dict(self) -> Dict[str, Any]:
         return {
             "success": self.success,
@@ -163,14 +168,37 @@ ProcessingResult.success = classmethod(_processing_result_success)  # type: igno
 ProcessingResult.error = classmethod(_processing_result_error)  # type: ignore[attr-defined]
 
 
+class _DefaultConfig:
+    """A tiny forgiving default config used when no explicit config is provided.
+
+    It returns sensible falsy defaults for attributes and exposes a validate_config()
+    that returns an empty list so callers that expect a ConfigurableComponent still work.
+    """
+
+    def __getattr__(self, name: str):
+        # Provide conservative defaults for commonly used names
+        if name in ("min_confidence", "max_document_length", "timeout_seconds"):
+            return 0.0
+        if name in ("supported_languages", "regulations", "clause_patterns"):
+            return []
+        if name.startswith("use_") or name.startswith("enable_"):
+            return False
+        return None
+
+    def validate_config(self) -> List[str]:
+        return []
+
+
 class BaseDocumentProcessor(ABC, Generic[ConfigType]):
     """
     Abstract base class for all document processors.
     Provides consistent async patterns, configuration management, and error handling.
     """
 
-    def __init__(self, config: ConfigType):
-        self.config = config
+    def __init__(self, config: Optional[ConfigType] = None):
+        # Accept None for tests or convenience and provide a forgiving default
+        # configuration object so downstream code can access attributes safely.
+        self.config = config if config is not None else _DefaultConfig()
         self.logger = logging.getLogger(self.__class__.__name__)
         self._initialized = False
         self.metrics = MetricsCollector()
@@ -323,6 +351,22 @@ class BaseDocumentProcessor(ABC, Generic[ConfigType]):
             "stats": self.get_stats(),
             "metrics": self.metrics.get_metrics(),
         }
+
+    async def cleanup(self) -> None:
+        """Cleanup resources - override in subclasses if needed"""
+        self._initialized = False
+        self.metrics.reset()
+        self.logger.info(f"{self.__class__.__name__} cleaned up")
+
+    async def __aenter__(self):
+        """Async context manager entry"""
+        await self.initialize()
+        return self
+
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        """Async context manager exit with cleanup"""
+        await self.cleanup()
+        return False  # Don't suppress exceptions
 
 
 class ConfigurableComponent(ABC):

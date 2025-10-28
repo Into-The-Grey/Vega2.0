@@ -635,11 +635,59 @@ class LegalDocumentAI:
         self.contract_analyzer = ContractAnalyzer(self.legal_config)
         self.compliance_checker = ComplianceChecker(self.compliance_config)
 
+        # Track initialization state
+        self.is_initialized = False
+
     async def initialize(self) -> None:
         """Initialize all processors"""
         await asyncio.gather(
             self.contract_analyzer.initialize(), self.compliance_checker.initialize()
         )
+        self.is_initialized = True
+
+    async def process_document(
+        self,
+        document: Union[str, Dict[str, Any], ProcessingContext],
+        context: Optional[ProcessingContext] = None,
+    ) -> ProcessingResult:
+        """
+        Generic document processing that routes to appropriate analyzer.
+
+        For legal documents, defaults to contract analysis unless document metadata
+        indicates compliance checking.
+        """
+        # Handle ProcessingContext as document
+        if isinstance(document, ProcessingContext):
+            text = document.metadata.get("content", "")
+            ctx = document
+        elif isinstance(document, dict):
+            text = document.get("content", "") or document.get("text", "")
+            doc_type = document.get("type", "contract").lower()
+            ctx = context or ProcessingContext()
+        else:
+            text = str(document)
+            doc_type = "contract"
+            ctx = context or ProcessingContext()
+
+        # Validate input
+        if not text or not text.strip():
+            return ProcessingResult(
+                success=False,
+                context=ctx,
+                data={"error": "Empty content provided for legal document processing"},
+                errors=["Empty content provided for legal document processing"],
+            )
+
+        # Route based on document type
+        if (
+            isinstance(document, dict)
+            and "compliance" in document.get("type", "").lower()
+        ):
+            return await self.check_compliance(text, context=ctx)
+        elif context and "compliance" in context.metadata.get("document_category", ""):
+            return await self.check_compliance(text, context=ctx)
+        else:
+            return await self.analyze_contract(text, context=ctx)
 
     async def analyze_contract(
         self, document_text: str, context: Optional[ProcessingContext] = None
@@ -667,11 +715,12 @@ class LegalDocumentAI:
             self.compliance_checker.health_check(),
         )
 
+        all_healthy = all(c.get("status") == "healthy" for c in checks)
+
         return {
+            "healthy": bool(self.is_initialized and all_healthy),
             "overall_status": (
-                "healthy"
-                if all(c.get("status") == "healthy" for c in checks)
-                else "degraded"
+                "healthy" if (self.is_initialized and all_healthy) else "degraded"
             ),
             "components": {
                 "contract_analyzer": checks[0],
@@ -848,7 +897,7 @@ class LegalEntityRecognizer:
         return entities
 
 
-class ComplianceChecker:
+class LegacyComplianceChecker:
     """
     Checks for compliance issues in legal documents
     """
@@ -882,7 +931,7 @@ class ComplianceChecker:
         return issues
 
 
-class ContractAnalyzer:
+class LegacyContractAnalyzer:
     """
     Analyzes contracts for obligations, risks, and key terms
     """

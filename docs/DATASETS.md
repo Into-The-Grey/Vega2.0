@@ -71,3 +71,23 @@ python -m cli learn evaluate datasets/curated.test.jsonl
 - Consider cleaning and deduplicating inputs to avoid overfitting.
 - For larger datasets, stream processing or HF Datasets may be preferable.
 
+## Voice lines (CSV)
+
+For voice training/evaluation artifacts, place CSV files under `datasets/voice_lines/`.
+
+Recommended columns:
+
+- `id`: unique id
+- `text`: transcript/content
+- `audio_path`: relative path to audio (optional)
+- `speaker`, `emotion`, `language`, `dataset_split`, `metadata` (optional)
+
+A lightweight loader is available at `datasets/loaders/loader_voice_csv.py`:
+
+```python
+from datasets.loaders.loader_voice_csv import iter_voice_lines
+
+for row in iter_voice_lines("datasets/voice_lines/voice_lines.csv"):
+ print(row["id"], row["text"])  # etc.
+```
+

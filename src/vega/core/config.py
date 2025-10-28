@@ -73,6 +73,10 @@ class Config:
     hass_media_player: str | None = (
         None  # Default media player entity for TTS responses
     )
+    # Memory normalization controls
+    memory_normalize_keys: bool = (
+        True  # Normalize memory fact keys (trim, lowercase, remove zero-width)
+    )
 
 
 class ConfigError(RuntimeError):
@@ -164,4 +168,6 @@ def get_config() -> Config:
         hass_tts_service=os.getenv("HASS_TTS_SERVICE", "tts.cloud_say"),
         hass_voice_name=os.getenv("HASS_VOICE_NAME"),
         hass_media_player=os.getenv("HASS_MEDIA_PLAYER"),
+        memory_normalize_keys=os.getenv("MEMORY_NORMALIZE_KEYS", "true").lower()
+        in {"1", "true", "yes"},
     )

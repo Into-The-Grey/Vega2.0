@@ -15,7 +15,9 @@ from __future__ import annotations
 
 import os
 from datetime import datetime
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Any
+import asyncio
+import re
 
 from sqlalchemy import Column, Integer, String, Text, DateTime, create_engine, select
 from sqlalchemy.orm import declarative_base, Session
@@ -43,6 +45,16 @@ class Conversation(Base):
     tags = Column(Text, nullable=True)
     notes = Column(Text, nullable=True)
     reviewed = Column(Integer, nullable=False, default=0)  # 0/1 flag
+
+
+class MemoryFact(Base):
+    __tablename__ = "memories"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    ts = Column(DateTime, default=datetime.utcnow, nullable=False, index=True)
+    session_id = Column(String(64), nullable=True, index=True)
+    key = Column(String(64), nullable=False)
+    value = Column(Text, nullable=False)
 
 
 # Create the engine with SQLite pragmas suitable for local logging
@@ -81,13 +93,31 @@ def _init_db() -> None:
             conn.exec_driver_sql(
                 "ALTER TABLE conversations ADD COLUMN session_id VARCHAR(64);"
             )
-        # Indexes
+        # Indexes - Composite indexes for common query patterns
         try:
+            # Single-column indexes (existing)
             conn.exec_driver_sql(
                 "CREATE INDEX IF NOT EXISTS ix_conv_ts ON conversations (ts DESC);"
             )
             conn.exec_driver_sql(
                 "CREATE INDEX IF NOT EXISTS ix_conv_session ON conversations (session_id, id DESC);"
+            )
+            # Composite indexes for optimal query performance
+            # For session-based time-range queries (get recent conversations in session)
+            conn.exec_driver_sql(
+                "CREATE INDEX IF NOT EXISTS ix_conv_session_ts ON conversations (session_id, ts DESC, id DESC);"
+            )
+            # For time-range queries across all sessions
+            conn.exec_driver_sql(
+                "CREATE INDEX IF NOT EXISTS ix_conv_ts_session ON conversations (ts DESC, session_id, id DESC);"
+            )
+            # For reviewed/unreviewed filtering (learning pipeline)
+            conn.exec_driver_sql(
+                "CREATE INDEX IF NOT EXISTS ix_conv_reviewed_ts ON conversations (reviewed, ts DESC);"
+            )
+            # For source-based filtering (api/cli/integration)
+            conn.exec_driver_sql(
+                "CREATE INDEX IF NOT EXISTS ix_conv_source_ts ON conversations (source, ts DESC);"
             )
         except Exception:
             pass
@@ -100,62 +130,155 @@ def log_conversation(
     prompt: str, response: str, source: str = "api", session_id: Optional[str] = None
 ) -> int:
     """Insert a new conversation row and return its id."""
-    # Optional PII masking
-    try:
-        from ..config import get_config
-        from ..security import mask_pii
+    from .db_profiler import profile_db_function
 
-        if get_config().pii_masking:
-            prompt = mask_pii(prompt)
-            response = mask_pii(response)
-    except Exception:
-        pass
-    with Session(engine) as sess:
-        obj = Conversation(
-            prompt=prompt,
-            response=response,
-            source=source,
-            session_id=session_id,
-        )
-        sess.add(obj)
-        sess.commit()
-        return int(obj.id)
+    @profile_db_function
+    def _do_log():
+        # Optional PII masking
+        prompt_masked = prompt
+        response_masked = response
+        try:
+            from ..config import get_config
+            from ..security import mask_pii
+
+            if get_config().pii_masking:
+                prompt_masked = mask_pii(prompt)
+                response_masked = mask_pii(response)
+        except Exception:
+            pass
+
+        with Session(engine) as sess:
+            obj = Conversation(
+                prompt=prompt_masked,
+                response=response_masked,
+                source=source,
+                session_id=session_id,
+            )
+            sess.add(obj)
+            sess.commit()
+            result_id = int(obj.id)
+
+        # Invalidate conversation history cache after write
+        try:
+            from .query_cache import get_query_cache_sync
+
+            cache = get_query_cache_sync()
+            cache.invalidate_pattern("conversation_history")
+        except Exception:
+            pass  # Cache invalidation failure shouldn't break logging
+
+        return result_id
+
+    return _do_log()
+
+
+async def bulk_log_conversations(conversations: List[Dict[str, Any]]):
+    """Bulk insert conversations asynchronously.
+
+    Uses a threadpool to avoid blocking the event loop while performing
+    synchronous SQLAlchemy operations.
+    """
+
+    def _insert_all():
+        with Session(engine) as sess:
+            objs = [
+                Conversation(
+                    prompt=conv.get("prompt", ""),
+                    response=conv.get("response", ""),
+                    source=conv.get("source", "api"),
+                    session_id=conv.get("session_id"),
+                )
+                for conv in conversations
+            ]
+            if objs:
+                sess.add_all(objs)
+                sess.commit()
+
+    loop = asyncio.get_running_loop()
+    await loop.run_in_executor(None, _insert_all)
 
 
 def purge_old(days: int) -> int:
     """Delete conversations older than N days. Returns rows deleted."""
-    if days <= 0:
-        return 0
-    with Session(engine) as sess:
-        delta = f"-{int(days)} days"
-        res = sess.execute(
-            sqltext("DELETE FROM conversations WHERE ts < datetime('now', :delta)"),
-            {"delta": delta},
-        )
-        sess.commit()
-        return res.rowcount or 0
+    from .db_profiler import profile_db_function
+
+    @profile_db_function
+    def _do_purge():
+        if days <= 0:
+            return 0
+        with Session(engine) as sess:
+            delta = f"-{int(days)} days"
+            res = sess.execute(
+                sqltext("DELETE FROM conversations WHERE ts < datetime('now', :delta)"),
+                {"delta": delta},
+            )
+            sess.commit()
+            return res.rowcount or 0
+
+    return _do_purge()
 
 
 def get_history(limit: int = 50) -> List[Dict]:
     """Fetch the most recent N conversation rows as dictionaries."""
-    with Session(engine) as sess:
-        stmt = select(Conversation).order_by(Conversation.id.desc()).limit(limit)
-        rows = sess.execute(stmt).scalars().all()
-        # newest first; convert to dicts
-        return [
-            {
-                "id": r.id,
-                "ts": r.ts.isoformat(),
-                "prompt": r.prompt,
-                "response": r.response,
-                "source": r.source,
-                "rating": r.rating,
-                "tags": r.tags,
-                "notes": r.notes,
-                "reviewed": int(r.reviewed or 0),
-            }
-            for r in rows
-        ]
+    from .db_profiler import profile_db_function
+
+    @profile_db_function
+    def _do_get():
+        with Session(engine) as sess:
+            stmt = select(Conversation).order_by(Conversation.id.desc()).limit(limit)
+            rows = sess.execute(stmt).scalars().all()
+            # newest first; convert to dicts
+            return [
+                {
+                    "id": r.id,
+                    "ts": r.ts.isoformat(),
+                    "prompt": r.prompt,
+                    "response": r.response,
+                    "source": r.source,
+                    "rating": r.rating,
+                    "tags": r.tags,
+                    "notes": r.notes,
+                    "reviewed": int(r.reviewed or 0),
+                }
+                for r in rows
+            ]
+
+    return _do_get()
+
+
+async def get_history_cached(limit: int = 50, ttl: float = 60.0) -> List[Dict]:
+    """
+    Fetch conversation history with intelligent caching.
+
+    Uses query cache to avoid repeated database queries.
+    Automatically invalidated when new conversations are logged.
+
+    Args:
+        limit: Number of recent conversations to fetch
+        ttl: Cache TTL in seconds (default 60s)
+
+    Returns:
+        List of conversation dictionaries
+    """
+    try:
+        from .query_cache import get_query_cache
+    except ImportError:
+        # Fallback to non-cached version if cache unavailable
+        return get_history(limit)
+
+    cache = await get_query_cache()
+
+    async def _fetch():
+        # Run synchronous DB query in executor to avoid blocking
+        loop = asyncio.get_running_loop()
+        return await loop.run_in_executor(None, get_history, limit)
+
+    return await cache.get_or_fetch(
+        "conversation_history",
+        _fetch,
+        limit=limit,
+        ttl=ttl,
+    )
 
 
 def get_history_page(limit: int = 50, before_id: Optional[int] = None) -> List[Dict]:
@@ -164,49 +287,61 @@ def get_history_page(limit: int = 50, before_id: Optional[int] = None) -> List[D
     - If before_id is provided, return rows with id < before_id, newest first.
     - Otherwise, return the latest rows.
     """
-    with Session(engine) as sess:
-        stmt = select(Conversation)
-        if before_id is not None:
-            stmt = stmt.where(Conversation.id < int(before_id))
-        stmt = stmt.order_by(Conversation.id.desc()).limit(limit)
-        rows = sess.execute(stmt).scalars().all()
-        return [
-            {
-                "id": r.id,
-                "ts": r.ts.isoformat(),
-                "prompt": r.prompt,
-                "response": r.response,
-                "source": r.source,
-                "rating": r.rating,
-                "tags": r.tags,
-                "notes": r.notes,
-                "reviewed": int(r.reviewed or 0),
-            }
-            for r in rows
-        ]
+    from .db_profiler import profile_db_function
+
+    @profile_db_function
+    def _do_get_page():
+        with Session(engine) as sess:
+            stmt = select(Conversation)
+            if before_id is not None:
+                stmt = stmt.where(Conversation.id < int(before_id))
+            stmt = stmt.order_by(Conversation.id.desc()).limit(limit)
+            rows = sess.execute(stmt).scalars().all()
+            return [
+                {
+                    "id": r.id,
+                    "ts": r.ts.isoformat(),
+                    "prompt": r.prompt,
+                    "response": r.response,
+                    "source": r.source,
+                    "rating": r.rating,
+                    "tags": r.tags,
+                    "notes": r.notes,
+                    "reviewed": int(r.reviewed or 0),
+                }
+                for r in rows
+            ]
+
+    return _do_get_page()
 
 
 def get_session_history(session_id: str, limit: int = 8) -> List[Dict]:
     """Fetch last N rows for a given session id, newest first."""
-    with Session(engine) as sess:
-        stmt = (
-            select(Conversation)
-            .where(Conversation.session_id == session_id)
-            .order_by(Conversation.id.desc())
-            .limit(limit)
-        )
-        rows = sess.execute(stmt).scalars().all()
-        return [
-            {
-                "id": r.id,
-                "ts": r.ts.isoformat(),
-                "prompt": r.prompt,
-                "response": r.response,
-                "source": r.source,
-                "session_id": r.session_id,
-            }
-            for r in rows
-        ]
+    from .db_profiler import profile_db_function
+
+    @profile_db_function
+    def _do_get_session():
+        with Session(engine) as sess:
+            stmt = (
+                select(Conversation)
+                .where(Conversation.session_id == session_id)
+                .order_by(Conversation.id.desc())
+                .limit(limit)
+            )
+            rows = sess.execute(stmt).scalars().all()
+            return [
+                {
+                    "id": r.id,
+                    "ts": r.ts.isoformat(),
+                    "prompt": r.prompt,
+                    "response": r.response,
+                    "source": r.source,
+                    "session_id": r.session_id,
+                }
+                for r in rows
+            ]
+
+    return _do_get_session()
 
 
 def set_feedback(
@@ -475,3 +610,94 @@ def get_conversation_summary(
                 summary_lines.append(f"  - {topic}... ({count} exchanges)")
 
         return "\n".join(summary_lines)
+
+
+def _sanitize_utf8(s: str) -> str:
+    """Remove invalid UTF-8 sequences and surrogate pairs"""
+    try:
+        return s.encode("utf-8", errors="ignore").decode("utf-8", errors="ignore")
+    except Exception:
+        return ""
+
+
+def _normalize_key(s: str) -> str:
+    """Normalize memory fact keys.
+
+    - Trim leading/trailing whitespace
+    - Collapse internal whitespace to a single space
+    - Remove zero-width and control characters
+    - Lowercase for consistency
+    """
+    if s is None:
+        return ""
+    # Ensure string and sanitize encoding first
+    try:
+        if not isinstance(s, str):
+            s = str(s)
+    except Exception:
+        s = ""
+    s = _sanitize_utf8(s)
+    # Remove zero-width and BOM-like chars
+    zero_width_pattern = r"[\u200B\u200C\u200D\u2060\uFEFF]"
+    s = re.sub(zero_width_pattern, "", s)
+    # Remove control chars
+    s = re.sub(r"[\x00-\x1F\x7F]", "", s)
+    # Collapse whitespace and trim
+    s = re.sub(r"\s+", " ", s).strip()
+    # Lowercase
+    s = s.lower()
+    return s
+
+
+def set_memory_fact(session_id: Optional[str], key: str, value: str) -> None:
+    """Store or update a simple memory fact for the given session.
+
+    If session_id is None, stores as a global fact.
+    """
+    # Sanitize inputs to prevent encoding errors
+    key = _sanitize_utf8(key)
+    value = _sanitize_utf8(value)
+    if session_id:
+        session_id = _sanitize_utf8(session_id)
+
+    # Optional key normalization via config toggle (defaults to True)
+    try:
+        from ..config import get_config
+
+        if getattr(get_config(), "memory_normalize_keys", True):
+            key = _normalize_key(key)
+    except Exception:
+        # If config unavailable, normalize by default for safety
+        key = _normalize_key(key)
+
+    with Session(engine) as sess:
+        # delete existing fact with same key/session
+        if session_id is None:
+            sess.execute(
+                sqltext("DELETE FROM memories WHERE session_id IS NULL AND key = :k"),
+                {"k": key},
+            )
+        else:
+            sess.execute(
+                sqltext("DELETE FROM memories WHERE session_id = :sid AND key = :k"),
+                {"sid": session_id, "k": key},
+            )
+        obj = MemoryFact(session_id=session_id, key=key, value=value)
+        sess.add(obj)
+        sess.commit()
+
+
+def get_memory_facts(session_id: Optional[str]) -> Dict[str, str]:
+    """Return memory facts for the session merged with global facts (None session)."""
+    facts: Dict[str, str] = {}
+    with Session(engine) as sess:
+        # global facts
+        stmt = select(MemoryFact).where(MemoryFact.session_id.is_(None))
+        for r in sess.execute(stmt).scalars().all():
+            facts[r.key] = r.value
+        # session facts
+        if session_id is not None:
+            stmt = select(MemoryFact).where(MemoryFact.session_id == session_id)
+            for r in sess.execute(stmt).scalars().all():
+                facts[r.key] = r.value
+    return facts

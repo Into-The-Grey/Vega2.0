@@ -8,10 +8,12 @@ import uuid
 from datetime import datetime
 import asyncio
 import logging
+import re
 
 from fastapi import FastAPI, Header, HTTPException, Query
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, PlainTextResponse
 from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.gzip import GZipMiddleware
 from pydantic import BaseModel
 
 logger = logging.getLogger(__name__)
@@ -85,6 +87,22 @@ else:
 if ERROR_HANDLING_AVAILABLE:
     setup_error_middleware(app)
 
+# Add correlation ID middleware for distributed tracing
+try:
+    from .correlation import CorrelationIdMiddleware
+
+    app.add_middleware(CorrelationIdMiddleware)
+    CORRELATION_AVAILABLE = True
+except ImportError:
+    CORRELATION_AVAILABLE = False
+
+# Lightweight compression for larger responses
+try:
+    # Only enable if available; safe default minimum size
+    app.add_middleware(GZipMiddleware, minimum_size=500)
+except Exception:
+    pass
+
 # Collaboration system integration
 try:
     from ..collaboration.integration import integrate_with_main_app
@@ -118,31 +136,154 @@ try:
 except ImportError as e:
     print(f"⚠️ Document intelligence system not available: {e}")
 
+# Advanced performance monitoring endpoints
+try:
+    from .performance_endpoints import router as performance_router
+
+    app.include_router(performance_router)
+    print("✅ Advanced performance monitoring integrated")
+except ImportError as e:
+    print(f"⚠️ Performance monitoring not available: {e}")
+
 # Metrics
 app.state.metrics = {
     "requests_total": 0,
     "responses_total": 0,
     "errors_total": 0,
     "degraded": False,
+    # Request timing metrics (ms)
+    "request_duration_ms_sum": 0.0,
+    "request_duration_count": 0,
+    "last_request_duration_ms": 0.0,
+    # HTTP status code counts
+    "status_codes": {},
+}
+
+
+# Lightweight extraction metrics (in-process)
+_metrics = {
+    "extraction_calls": 0,
+    "extraction_facts_total": 0,
 }
 
 
 # Startup and shutdown events
 @app.on_event("startup")
 async def startup_event():
-    """Start background processes on app startup"""
+    """Initialize resources and start background processes on app startup"""
+
+    print("=" * 80)
+    print("🚀 Vega2.0 Startup Sequence")
+    print("=" * 80)
+
+    # 1. Validate configuration first (fail fast)
+    try:
+        from .config_validator import validate_startup_config
+
+        print("\n📋 Validating configuration...")
+        is_valid = validate_startup_config()
+
+        if not is_valid:
+            print("\n❌ CRITICAL: Configuration validation failed!")
+            print("   Please fix configuration errors before starting the server.")
+            print("   See error messages above for details.\n")
+            # Allow server to start but log warnings
+        else:
+            print("✅ Configuration validation passed\n")
+    except Exception as e:
+        logger.error(f"Configuration validation error: {e}")
+        print(f"⚠️  Configuration validation error: {e}\n")
+
+    # 2. Configure correlation ID logging for distributed tracing
+    if CORRELATION_AVAILABLE:
+        try:
+            from .correlation import configure_correlation_logging
+
+            configure_correlation_logging()
+            logger.info("✓ Correlation ID tracing enabled")
+            print("✅ Distributed tracing enabled (correlation IDs)")
+        except Exception as e:
+            logger.warning(f"Failed to configure correlation logging: {e}")
+
+    # 3. Initialize resource manager
+    try:
+        from .resource_manager import get_resource_manager  # type: ignore
+
+        manager = await get_resource_manager()
+        logger.info("Resource manager initialized")
+        print("✅ Resource manager initialized")
+    except Exception as e:
+        logger.warning(f"Resource manager init failed: {e}")
+        print(f"⚠️  Resource manager init failed: {e}")
+
+    # 4. Initialize database profiler
+    try:
+        from .db_profiler import get_profiler
+
+        profiler = get_profiler()
+        profiler.enabled = True
+        profiler.set_slow_query_threshold(100.0)  # 100ms threshold
+        logger.info("Database profiler initialized")
+        print("✅ Database query profiler enabled (100ms slow query threshold)")
+    except Exception as e:
+        logger.warning(f"Database profiler init failed: {e}")
+        print(f"⚠️  Database profiler init failed: {e}")
+
+    # 5. Background process management
     if PROCESS_MANAGEMENT_AVAILABLE:
         try:
             # Start background processes (optional, can be managed separately)
             # await start_background_processes()
-            print("Background process management available")
+            print("✅ Background process management available")
         except Exception as e:
-            print(f"Warning: Could not start background processes: {e}")
+            print(f"⚠️  Could not start background processes: {e}")
+
+    # 6. Optional retention purge on startup
+    try:
+        from .config import get_config as _get_cfg  # type: ignore
+        from .db import purge_old, vacuum_db  # type: ignore
+
+        _cfg = _get_cfg()
+        days = int(getattr(_cfg, "retention_days", 0) or 0)
+        if days > 0:
+            deleted = purge_old(days)
+            # Vacuum only if we actually deleted rows to reclaim space
+            if deleted > 0:
+                try:
+                    vacuum_db()
+                except Exception:
+                    pass
+            logger.info(
+                "Retention purge completed", extra={"days": days, "deleted": deleted}
+            )
+    except Exception:
+        # Config/DB may not be available in some environments (e.g., tests)
+        pass
 
 
 @app.on_event("shutdown")
 async def shutdown_event():
-    """Stop background processes on app shutdown"""
+    """Gracefully shutdown all resources and background processes"""
+    # Shutdown LLM resources
+    try:
+        from .llm import llm_shutdown  # type: ignore
+
+        await llm_shutdown()
+        logger.info("LLM resources closed")
+    except Exception as e:
+        logger.warning(f"LLM shutdown failed: {e}")
+
+    # Shutdown resource manager
+    try:
+        from .resource_manager import get_resource_manager_sync  # type: ignore
+
+        manager = get_resource_manager_sync()
+        if manager:
+            await manager.shutdown()
+            logger.info("Resource manager shutdown complete")
+    except Exception as e:
+        logger.warning(f"Resource manager shutdown failed: {e}")
+
     if PROCESS_MANAGEMENT_AVAILABLE:
         try:
             await stop_background_processes()
@@ -169,9 +310,22 @@ async def healthz():
     return {"ok": True, "timestamp": datetime.utcnow().isoformat()}
 
 
-@app.get("/metrics")
-async def metrics():
-    return app.state.metrics
+@app.get("/livez")
+async def livez():
+    """Liveness probe (legacy endpoint expected by tests)."""
+    return {"alive": True}
+
+
+@app.get("/readyz")
+async def readyz():
+    """Readiness probe. Uses get_history as a lightweight health check (patched in tests)."""
+    try:
+        # If get_history raises, consider the service unhealthy
+        _ = get_history()
+        return {"ready": True}
+    except Exception:
+        # Return an HTTP 503 to indicate readiness failure
+        raise HTTPException(status_code=503, detail="Service not ready")
 
 
 # --- Minimal config/auth and db/llm shims (for tests to patch) ---
@@ -181,6 +335,20 @@ class _Cfg:
 
 
 cfg = _Cfg()
+
+# Try to align API keys with environment config at import time
+try:
+    from .config import get_config as _get_cfg  # type: ignore
+
+    _env_cfg = _get_cfg()
+    # Update local cfg used by require_api_key with real values
+    cfg.api_key = getattr(_env_cfg, "api_key", cfg.api_key)
+    extra = getattr(_env_cfg, "api_keys_extra", ())
+    if isinstance(extra, (list, tuple)):
+        cfg.api_keys_extra = list(extra)
+except Exception:
+    # Fall back to defaults if config is unavailable at import time
+    pass
 
 
 def require_api_key(x_api_key: str | None):
@@ -198,14 +366,37 @@ def require_api_key(x_api_key: str | None):
 
 
 # Placeholders that tests patch
-def query_llm(prompt: str, stream: bool = False) -> str:  # patched in tests
+# By default, we bind these to real implementations if available; tests can patch them.
+
+
+def query_llm(prompt: str, stream: bool = False, **kwargs):  # patched in tests
+    # Default no-op; will be rebound to real LLM at import time if available
     return f"Echo: {prompt}"
 
 
 def log_conversation(
     prompt: str, response: str, session_id: str | None = None
 ):  # patched
+    # Default no-op; will be rebound to real DB logger at import time if available
     return None
+
+
+# Bind to real implementations when possible (still patchable in tests)
+try:
+    from .llm import query_llm as _real_query_llm  # type: ignore
+
+    query_llm = _real_query_llm  # type: ignore
+except Exception:
+    pass
+
+try:
+    from .db import log_conversation as _real_log_conversation  # type: ignore
+
+    def log_conversation(prompt: str, response: str, session_id: str | None = None):
+        return _real_log_conversation(prompt, response, session_id)  # type: ignore
+
+except Exception:
+    pass
 
 
 def get_history(limit: int = 50):  # patched in tests and used by readiness
@@ -223,6 +414,7 @@ def set_feedback(
 
 
 from fastapi import Response
+from fastapi.responses import StreamingResponse
 from .logging_setup import VegaLogger  # exposed for patching in tests
 
 # VegaLogger already defined above, no need to re-assign
@@ -253,19 +445,205 @@ async def docs_commands_html():
 
 
 # Liveness and Readiness
-@app.get("/livez")
-async def livez():
-    return {"alive": True}
-
-
-@app.get("/readyz")
-async def readyz():
+@app.get("/metrics")
+def metrics_endpoint():
+    """Return application metrics as JSON and include lightweight extraction metrics."""
+    payload = {}
+    # core app metrics stored on app.state.metrics
     try:
-        # Basic readiness check calls history (tests patch this)
-        _ = get_history(limit=1)
-        return {"ready": True}
-    except Exception as e:
-        raise HTTPException(status_code=503, detail="Not ready") from e
+        payload.update(app.state.metrics or {})
+    except Exception:
+        payload.update({})
+
+    # include extraction metrics
+    try:
+        payload["extraction_calls"] = _metrics.get("extraction_calls", 0)
+        payload["extraction_facts_total"] = _metrics.get("extraction_facts_total", 0)
+    except Exception:
+        pass
+
+    # add derived averages where possible
+    try:
+        cnt = float(payload.get("request_duration_count", 0))
+        total = float(payload.get("request_duration_ms_sum", 0.0))
+        payload["avg_request_duration_ms"] = (total / cnt) if cnt > 0 else 0.0
+    except Exception:
+        payload["avg_request_duration_ms"] = 0.0
+
+    # count global stored facts as an approximation
+    try:
+        from src.vega.core.db import get_memory_facts
+
+        facts = get_memory_facts(None)
+        payload["memory_facts_global_total"] = len(facts)
+    except Exception:
+        payload["memory_facts_global_total"] = 0
+
+    return payload
+
+
+@app.get("/metrics/prometheus")
+def metrics_prometheus():
+    """Expose Prometheus-formatted metrics for scraping."""
+    lines = []
+    # Core counters
+    try:
+        m = app.state.metrics or {}
+    except Exception:
+        m = {}
+    lines.append("# HELP vega_requests_total Total number of HTTP requests")
+    lines.append(f"vega_requests_total {int(m.get('requests_total', 0))}")
+    lines.append("# HELP vega_responses_total Total number of HTTP responses")
+    lines.append(f"vega_responses_total {int(m.get('responses_total', 0))}")
+    lines.append("# HELP vega_errors_total Total number of errors")
+    lines.append(f"vega_errors_total {int(m.get('errors_total', 0))}")
+    # Duration summary (sum and count)
+    lines.append(
+        "# HELP vega_request_duration_ms_sum Cumulative request duration in ms"
+    )
+    lines.append(
+        f"vega_request_duration_ms_sum {float(m.get('request_duration_ms_sum', 0.0))}"
+    )
+    lines.append("# HELP vega_request_duration_ms_count Number of measured requests")
+    lines.append(
+        f"vega_request_duration_ms_count {int(m.get('request_duration_count', 0))}"
+    )
+    # Status code distribution
+    codes = m.get("status_codes", {}) if isinstance(m, dict) else {}
+    if isinstance(codes, dict):
+        lines.append("# HELP vega_http_responses_total HTTP responses by status code")
+        for code, count in codes.items():
+            try:
+                lines.append(f'vega_http_responses_total{{code="{code}"}} {int(count)}')
+            except Exception:
+                continue
+    lines.append(
+        "# HELP vega_memory_extraction_calls Total number of extraction attempts"
+    )
+    lines.append(f"vega_memory_extraction_calls {_metrics.get('extraction_calls', 0)}")
+    lines.append(
+        "# HELP vega_memory_extraction_facts_total Total number of extracted facts"
+    )
+    lines.append(
+        f"vega_memory_extraction_facts_total {_metrics.get('extraction_facts_total', 0)}"
+    )
+    try:
+        from src.vega.core.db import get_memory_facts
+
+        facts = get_memory_facts(None)
+        total_stored = len(facts)
+    except Exception:
+        total_stored = 0
+    lines.append(
+        "# HELP vega_memory_facts_stored_total Total stored memory facts (global)"
+    )
+    lines.append(f"vega_memory_facts_stored_total {total_stored}")
+    return PlainTextResponse("\n".join(lines), media_type="text/plain; version=0.0.4")
+
+
+def _sanitize_string(s: str) -> str:
+    """Sanitize a string by removing invalid UTF-8 sequences and ensuring a str return.
+
+    This is defensive: some extreme stress tests inject surrogate or invalid bytes.
+    """
+    try:
+        if s is None:
+            return ""
+        if not isinstance(s, str):
+            s = str(s)
+        return s.encode("utf-8", errors="ignore").decode("utf-8", errors="ignore")
+    except Exception:
+        return ""
+
+
+def _extract_memory_facts(text: str) -> dict[str, str]:
+    facts: dict[str, str] = {}
+    # Track extraction attempts (best-effort, in-memory)
+    try:
+        _metrics["extraction_calls"] += 1
+    except Exception:
+        pass
+    try:
+        # Sanitize input text first
+        text = _sanitize_string(text)
+        # Name patterns:
+        # 1. "my name is [Name]"
+        # 2. "I'm [Name]" (contraction)
+        # Strip common titles: Dr., Mr., Ms., Mrs., Prof., etc.
+
+        # Pattern 1: "my name is ..."
+        m = re.search(
+            r"(?i:\bmy name is\s+)(?:Dr\.|Mr\.|Ms\.|Mrs\.|Prof\.|Sir\.|Madam\s+)?\s*(?-i:([A-Z][A-Za-z\-'`]+(?:\s+[A-Z][A-Za-z\-'`]+)*))(?=\s+and|[,\.!?]|\s*$)",
+            text,
+        )
+        if m:
+            name = m.group(1).strip()
+            facts["user_name"] = name
+
+        # Pattern 2: "I'm [Name]" (contraction)
+        if "user_name" not in facts:
+            m = re.search(
+                r"(?i:\bI'm\s+)(?:Dr\.|Mr\.|Ms\.|Mrs\.|Prof\.|Sir\.|Madam\s+)?\s*(?-i:([A-Z][A-Za-z\-'`]+(?:\s+[A-Z][A-Za-z\-'`]+)*))(?=\s+and|[,\.!?]|\s*$)",
+                text,
+            )
+            if m:
+                name = m.group(1).strip()
+                facts["user_name"] = name
+
+        # Pattern 3: "Call me [Name]"
+        if "user_name" not in facts:
+            m = re.search(
+                r"(?i:\bcall me\s+)(?:Dr\.|Mr\.|Ms\.|Mrs\.|Prof\.|Sir\.|Madam\s+)?\s*(?-i:([A-Z][A-Za-z\-'`]+(?:\s+[A-Z][A-Za-z\-'`]+)*))(?=\s+and|[,\.!?]|\s*$)",
+                text,
+            )
+            if m:
+                name = m.group(1).strip()
+                facts["user_name"] = name
+
+        # Location patterns:
+        # 1. "I live in [Location]"
+        # 2. "I'm living in [Location]" / "living in [Location]"
+
+        # Pattern 1: "I live in ..."
+        m = re.search(
+            r"\bi live in\s+([A-Z][A-Za-z][\w\s,\-]*)(?=\s+and|[,\.!?]|\s*$)",
+            text,
+            re.I,
+        )
+        if m:
+            loc = m.group(1).strip().rstrip(", .!?")
+            facts["user_location"] = loc
+
+        # Pattern 2: "living in ..."
+        if "user_location" not in facts:
+            m = re.search(
+                r"\bliving in\s+([A-Z][A-Za-z][\w\s,\-]*)(?=\s+and|[,\.!?]|\s*$)",
+                text,
+                re.I,
+            )
+            if m:
+                loc = m.group(1).strip().rstrip(", .!?")
+                facts["user_location"] = loc
+
+        # Pattern 3: "based in ..." and "I'm based in ..."
+        if "user_location" not in facts:
+            m = re.search(
+                r"\b(?:I'm\s+based in|based in)\s+([A-Z][A-Za-z][\w\s,\-]*)(?=\s+and|[,\.!?]|\s*$)",
+                text,
+                re.I,
+            )
+            if m:
+                loc = m.group(1).strip().rstrip(", .!?")
+                facts["user_location"] = loc
+
+        # Timezone: "my timezone is ..."
+        m = re.search(r"\bmy time ?zone is\s+([A-Za-z_\/+\-0-9]{1,64})", text, re.I)
+        if m:
+            tz = m.group(1).strip().rstrip(". !?")
+            facts["user_timezone"] = tz
+    except Exception:
+        pass
+    return facts
 
 
 # Chat endpoint with persistent conversation memory
@@ -278,8 +656,14 @@ async def chat(
     require_api_key(x_api_key)
 
     try:
-        from .llm import LLMBackendError, query_llm as llm_query  # type: ignore
-        from .db import get_persistent_session_id, get_recent_context  # type: ignore
+        from .llm import LLMBackendError  # type: ignore
+        from .db import (
+            get_persistent_session_id,
+            get_recent_context,
+            get_conversation_summary,
+            set_memory_fact,
+            get_memory_facts,
+        )  # type: ignore
         from .config import get_config as get_cfg  # type: ignore
     except Exception:
 
@@ -287,14 +671,23 @@ async def chat(
             pass
 
         # Fallback implementations if imports fail
-        async def llm_query(prompt, stream=False, **kwargs):
-            return query_llm(prompt, stream)
 
         def get_persistent_session_id():
             return str(uuid.uuid4())
 
         def get_recent_context(session_id=None, limit=10, max_chars=4000):
             return []
+
+        def get_conversation_summary(
+            session_id=None, older_than_id=None, max_entries=100
+        ):
+            return ""
+
+        def set_memory_fact(session_id, key, value):
+            return None
+
+        def get_memory_facts(session_id=None):
+            return {}
 
         def get_cfg():
             class _Cfg:
@@ -320,15 +713,96 @@ async def chat(
             session_id=session_id, limit=context_window, max_chars=context_max
         )
 
-        # Query LLM with conversation context
-        response_text = await llm_query(
+        # Extract and persist memory facts from the current prompt
+        try:
+            extracted = _extract_memory_facts(request.prompt)
+            for k, v in extracted.items():
+                set_memory_fact(session_id, k, v)
+        except Exception:
+            extracted = {}
+
+        # Build system context from stored facts and a compact summary of older history
+        try:
+            facts = get_memory_facts(session_id)
+        except Exception:
+            facts = {}
+
+        try:
+            older_than_id = (
+                conversation_context[0]["id"] if conversation_context else None
+            )
+        except Exception:
+            older_than_id = None
+
+        try:
+            summary = get_conversation_summary(
+                session_id=session_id, older_than_id=older_than_id, max_entries=50
+            )
+        except Exception:
+            summary = ""
+
+        system_parts = []
+        if facts:
+            mem_lines = ["[Memory Facts]"]
+            for k, v in facts.items():
+                mem_lines.append(f"- {k}: {v}")
+            system_parts.append("\n".join(mem_lines))
+        if summary:
+            system_parts.append(summary)
+        system_context = "\n\n".join(system_parts) if system_parts else None
+
+        # If streaming requested, return a StreamingResponse
+        if request.stream:
+            # Call patchable query_llm (may return coroutine, async generator, or string)
+            res = query_llm(
+                request.prompt,
+                stream=True,
+                conversation_context=conversation_context,
+                system_context=system_context,
+            )
+
+            if asyncio.iscoroutine(res):
+                token_stream = await res  # type: ignore
+            elif hasattr(res, "__aiter__"):
+                token_stream = res  # type: ignore
+            else:
+
+                async def _single_yield():
+                    yield str(res)
+
+                token_stream = _single_yield()
+
+            async def _stream_and_log():
+                """Wrap the token stream to accumulate and log on completion."""
+                buffer = []
+                try:
+                    async for chunk in token_stream:  # type: ignore
+                        buffer.append(chunk)
+                        yield chunk
+                finally:
+                    try:
+                        full = "".join(buffer)
+                        log_conversation(request.prompt, full, session_id)
+                    except Exception:
+                        pass
+
+            app.state.metrics["responses_total"] += 1
+            return StreamingResponse(_stream_and_log(), media_type="text/plain")
+
+        # Non-streaming: Query LLM and return JSON
+        res = query_llm(
             request.prompt,
-            stream=request.stream,
+            stream=False,
             conversation_context=conversation_context,
+            system_context=system_context,
         )
+        response_text = await res if asyncio.iscoroutine(res) else res  # type: ignore
 
         # Log this exchange
-        log_conversation(request.prompt, response_text, session_id)
+        try:
+            log_conversation(request.prompt, response_text, session_id)
+        except Exception:
+            pass
 
         app.state.metrics["responses_total"] += 1
         return {
@@ -825,6 +1299,154 @@ async def admin_config_get(
     return {"module": module, "config": cfg_dict}
 
 
+@app.get("/admin/resources/health")
+async def admin_resources_health(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """Get resource manager health status"""
+    require_api_key(x_api_key)
+
+    try:
+        from .resource_manager import get_resource_manager
+
+        manager = await get_resource_manager()
+        health = await manager.health_check()
+
+        return {
+            "status": "healthy" if health["healthy"] else "degraded",
+            "checks": health,
+            "timestamp": datetime.utcnow().isoformat() + "Z",
+        }
+    except Exception as e:
+        logger.error(f"Failed to get resource health: {e}")
+        return {
+            "status": "unavailable",
+            "error": str(e),
+            "timestamp": datetime.utcnow().isoformat() + "Z",
+        }
+
+
+@app.get("/admin/resources/stats")
+async def admin_resources_stats(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """Get resource manager statistics and metrics"""
+    require_api_key(x_api_key)
+
+    stats = {}
+
+    # Get resource manager stats
+    try:
+        from .resource_manager import get_resource_manager
+
+        manager = await get_resource_manager()
+        resource_stats = manager.get_stats()
+
+        stats["resource_manager"] = {
+            "http_clients_created": resource_stats.http_clients_created,
+            "http_requests_made": resource_stats.http_requests_made,
+            "config_cache_hits": resource_stats.config_cache_hits,
+            "config_cache_misses": resource_stats.config_cache_misses,
+            "config_cache_hit_rate": (
+                round(
+                    resource_stats.config_cache_hits
+                    / (
+                        resource_stats.config_cache_hits
+                        + resource_stats.config_cache_misses
+                    )
+                    * 100,
+                    2,
+                )
+                if (
+                    resource_stats.config_cache_hits
+                    + resource_stats.config_cache_misses
+                )
+                > 0
+                else 0
+            ),
+            "cleanup_tasks_registered": resource_stats.cleanup_tasks_registered,
+            "startup_time": resource_stats.startup_time,
+            "shutdown_time": resource_stats.shutdown_time,
+            "uptime_seconds": (
+                (datetime.utcnow().timestamp() - resource_stats.startup_time)
+                if resource_stats.startup_time
+                else None
+            ),
+        }
+    except Exception as e:
+        logger.error(f"Failed to get resource manager stats: {e}")
+        stats["resource_manager"] = {"error": str(e)}
+
+    # Get config cache stats
+    try:
+        from .config_cache import get_cache_stats
+
+        cache_stats = get_cache_stats()
+
+        stats["config_cache"] = {
+            "hits": cache_stats["hits"],
+            "misses": cache_stats["misses"],
+            "hit_rate": cache_stats["hit_rate"],
+            "cache_age_seconds": cache_stats["cache_age"],
+            "cached": cache_stats["hits"] > 0,
+        }
+    except Exception as e:
+        logger.error(f"Failed to get config cache stats: {e}")
+        stats["config_cache"] = {"error": str(e)}
+
+    stats["timestamp"] = datetime.utcnow().isoformat() + "Z"
+    return stats
+
+
+@app.post("/admin/resources/cache/invalidate")
+async def admin_resources_invalidate_cache(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """Invalidate configuration cache to force reload"""
+    require_api_key(x_api_key)
+
+    try:
+        from .config_cache import invalidate_config_cache
+
+        invalidate_config_cache()
+
+        return {
+            "status": "success",
+            "message": "Configuration cache invalidated successfully",
+            "timestamp": datetime.utcnow().isoformat() + "Z",
+        }
+    except Exception as e:
+        logger.error(f"Failed to invalidate config cache: {e}")
+        raise HTTPException(status_code=500, detail=f"Cache invalidation failed: {e}")
+
+
+@app.get("/admin/resources/pools")
+async def admin_resources_pools(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """
+    Get detailed HTTP connection pool metrics.
+
+    Provides connection pool state, active connections, and usage statistics.
+    Useful for monitoring pool exhaustion and troubleshooting performance.
+    """
+    require_api_key(x_api_key)
+
+    try:
+        from .resource_manager import get_resource_manager
+
+        manager = await get_resource_manager()
+        pool_metrics = manager.get_pool_metrics()
+
+        # Add timestamp
+        pool_metrics["timestamp"] = datetime.utcnow().isoformat() + "Z"
+
+        return pool_metrics
+    except Exception as e:
+        logger.error(f"Failed to get connection pool metrics: {e}")
+        raise HTTPException(status_code=500, detail=f"Pool metrics unavailable: {e}")
+
+
 @app.get("/admin/llm/behavior")
 async def admin_llm_behavior_get(
     x_api_key: str | None = Header(default=None, alias="X-API-Key")
@@ -856,7 +1478,6 @@ async def admin_llm_behavior_update(
     return {"status": "success"}
 
 
-# Background Process Management endpoints
 @app.get("/admin/processes/status")
 async def admin_processes_status(
     x_api_key: str | None = Header(default=None, alias="X-API-Key")
@@ -907,6 +1528,290 @@ async def admin_processes_status(
 
     except Exception as e:
         return {"error": f"Failed to get process status: {str(e)}"}
+
+
+# ==============================================================================
+# NEW DIAGNOSTIC AND MONITORING ENDPOINTS
+# ==============================================================================
+
+
+@app.get("/admin/database/stats")
+async def admin_database_stats(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """
+    Get comprehensive database performance statistics.
+
+    Returns:
+        - Query performance metrics (avg, max, min, slow queries)
+        - Connection pool stats
+        - Database size and table counts
+        - Recent query details
+    """
+    require_api_key(x_api_key)
+
+    try:
+        from .db_profiler import (
+            get_profiler,
+            get_connection_pool_stats,
+            get_database_stats,
+        )
+
+        profiler = get_profiler()
+
+        return {
+            "query_performance": profiler.get_stats(),
+            "connection_pool": get_connection_pool_stats(),
+            "database": get_database_stats(),
+            "recent_queries": profiler.get_recent_queries(limit=10),
+            "slow_queries": profiler.get_slow_queries(limit=10),
+            "timestamp": datetime.utcnow().isoformat() + "Z",
+        }
+    except Exception as e:
+        logger.error(f"Failed to get database stats: {e}")
+        raise HTTPException(status_code=500, detail=f"Database stats unavailable: {e}")
+
+
+@app.post("/admin/database/reset-stats")
+async def admin_database_reset_stats(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """Reset database performance statistics"""
+    require_api_key(x_api_key)
+
+    try:
+        from .db_profiler import get_profiler
+
+        profiler = get_profiler()
+        profiler.reset_stats()
+
+        return {
+            "status": "success",
+            "message": "Database statistics reset successfully",
+            "timestamp": datetime.utcnow().isoformat() + "Z",
+        }
+    except Exception as e:
+        logger.error(f"Failed to reset database stats: {e}")
+        raise HTTPException(status_code=500, detail=f"Reset failed: {e}")
+
+
+@app.get("/admin/integrations/health")
+async def admin_integrations_health(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key"),
+    timeout: float = Query(default=10.0, ge=1.0, le=30.0),
+):
+    """
+    Check health of all external integrations in parallel.
+
+    Tests:
+        - LLM backend (Ollama/HuggingFace)
+        - Database connectivity
+        - Web search (DuckDuckGo)
+        - Web fetch (httpx)
+        - OSINT integrations
+        - Slack connector
+        - Home Assistant (if enabled)
+
+    Query params:
+        - timeout: Maximum time in seconds (default: 10)
+    """
+    require_api_key(x_api_key)
+
+    try:
+        from .integration_health import check_all_integrations
+
+        results = await check_all_integrations(timeout=timeout)
+        return results
+    except Exception as e:
+        logger.error(f"Failed to check integration health: {e}")
+        raise HTTPException(status_code=500, detail=f"Health check failed: {e}")
+
+
+@app.get("/admin/diagnostics/system")
+async def admin_diagnostics_system(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """
+    Get comprehensive system resource diagnostics.
+
+    Returns:
+        - Memory usage (process and system)
+        - CPU usage and load average
+        - Thread count and details
+        - File descriptor usage (Unix)
+        - Network connections
+        - Disk usage
+        - Event loop statistics
+        - Process information
+    """
+    require_api_key(x_api_key)
+
+    try:
+        from .system_diagnostics import get_full_diagnostics
+
+        diagnostics = await get_full_diagnostics()
+        return diagnostics
+    except Exception as e:
+        logger.error(f"Failed to get system diagnostics: {e}")
+        raise HTTPException(status_code=500, detail=f"Diagnostics unavailable: {e}")
+
+
+@app.get("/admin/diagnostics/health-summary")
+async def admin_diagnostics_health_summary(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """Get overall system health status summary"""
+    require_api_key(x_api_key)
+
+    try:
+        from .system_diagnostics import get_health_summary
+
+        health_status = get_health_summary()
+
+        return {
+            "status": health_status,
+            "timestamp": datetime.utcnow().isoformat() + "Z",
+        }
+    except Exception as e:
+        logger.error(f"Failed to get health summary: {e}")
+        raise HTTPException(status_code=500, detail=f"Health summary unavailable: {e}")
+
+
+@app.get("/admin/metrics/comprehensive")
+async def admin_metrics_comprehensive(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """
+    Get comprehensive system metrics from all components.
+
+    This single endpoint aggregates:
+    - Resource usage (CPU, memory)
+    - Request coalescing statistics
+    - Connection pool metrics
+    - Query cache performance
+    - Rate limiter status
+    - Circuit breaker health
+    - Event loop monitoring
+    - Database performance
+    - LLM provider metrics
+
+    Use this for unified monitoring dashboards.
+    """
+    require_api_key(x_api_key)
+
+    try:
+        from .metrics_aggregator import get_metrics_aggregator
+
+        aggregator = await get_metrics_aggregator()
+        snapshot = await aggregator.collect_metrics()
+
+        return {
+            "timestamp": snapshot.timestamp,
+            "uptime_seconds": snapshot.uptime_seconds,
+            "system": {
+                "cpu_percent": snapshot.cpu_percent,
+                "memory_rss_mb": snapshot.memory_rss_mb,
+                "memory_percent": snapshot.memory_percent,
+            },
+            "performance": {
+                "request_coalescing": snapshot.request_coalescing,
+                "connection_pool": snapshot.connection_pool,
+                "query_cache": snapshot.query_cache,
+                "rate_limiter": snapshot.rate_limiter,
+            },
+            "health": {
+                "circuit_breakers": snapshot.circuit_breakers,
+                "event_loop": snapshot.event_loop,
+            },
+            "data": {
+                "database": snapshot.database,
+                "llm": snapshot.llm,
+            },
+        }
+    except Exception as e:
+        logger.error(f"Failed to collect comprehensive metrics: {e}")
+        raise HTTPException(status_code=500, detail=f"Metrics collection failed: {e}")
+
+
+@app.get("/admin/metrics/summary")
+async def admin_metrics_summary(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """Get high-level metrics summary for quick dashboard views"""
+    require_api_key(x_api_key)
+
+    try:
+        from .metrics_aggregator import get_metrics_aggregator
+
+        aggregator = await get_metrics_aggregator()
+        summary = aggregator.get_metrics_summary()
+
+        return summary
+    except Exception as e:
+        logger.error(f"Failed to get metrics summary: {e}")
+        raise HTTPException(status_code=500, detail=f"Metrics summary unavailable: {e}")
+
+
+@app.get("/admin/metrics/trends/{metric_path}")
+async def admin_metrics_trends(
+    metric_path: str,
+    samples: int = Query(default=10, ge=1, le=100),
+    x_api_key: str | None = Header(default=None, alias="X-API-Key"),
+):
+    """
+    Get trend data for a specific metric.
+
+    Examples:
+        - /admin/metrics/trends/cpu_percent
+        - /admin/metrics/trends/query_cache.hit_rate
+        - /admin/metrics/trends/connection_pool.reuse_rate
+    """
+    require_api_key(x_api_key)
+
+    try:
+        from .metrics_aggregator import get_metrics_aggregator
+
+        aggregator = await get_metrics_aggregator()
+        trends = aggregator.get_trends(metric_path, samples)
+
+        return {
+            "metric": metric_path,
+            "samples": len(trends),
+            "values": trends,
+            "latest": trends[-1] if trends else None,
+        }
+    except Exception as e:
+        logger.error(f"Failed to get metric trends: {e}")
+        raise HTTPException(status_code=500, detail=f"Trend data unavailable: {e}")
+
+
+@app.get("/admin/config/validate")
+async def admin_config_validate(
+    x_api_key: str | None = Header(default=None, alias="X-API-Key")
+):
+    """
+    Validate current configuration settings.
+
+    Checks:
+        - Required fields are present
+        - Values are within valid ranges
+        - Security best practices
+        - Integration completeness
+    """
+    require_api_key(x_api_key)
+
+    try:
+        from .config_validator import ConfigValidator
+        from .config import get_config
+
+        config = get_config()
+        validator = ConfigValidator()
+        is_valid, summary = validator.validate_config(config)
+
+        return summary
+    except Exception as e:
+        logger.error(f"Failed to validate config: {e}")
+        raise HTTPException(status_code=500, detail=f"Validation failed: {e}")
 
 
 @app.post("/admin/processes/start")

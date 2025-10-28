@@ -312,6 +312,10 @@ def sample_documents():
     return SAMPLE_DOCUMENTS
 
 
+# Backwards-compatible module-level aliases (allow direct imports from this module)
+sample_documents = SAMPLE_DOCUMENTS
+
+
 @pytest.fixture
 def mock_responses():
     """Fixture providing mock responses"""
@@ -365,6 +369,197 @@ async def initialized_processor():
 def metrics_collector():
     """Fixture providing a metrics collector"""
     return MetricsCollector()
+
+
+# Backwards-compatible fixture/alias names expected by older tests
+@pytest.fixture
+def sample_legal_documents():
+    """Alias mapping for legal document tests"""
+    return {
+        "nda": SAMPLE_DOCUMENTS.get("contract", ""),
+        "service_agreement": SAMPLE_DOCUMENTS.get("contract", ""),
+        "privacy_policy": SAMPLE_DOCUMENTS.get("workflow_doc", ""),
+        "liability_clause": SAMPLE_DOCUMENTS.get("contract", ""),
+        "complex_contract": SAMPLE_DOCUMENTS.get("contract", ""),
+        "entity_heavy_contract": SAMPLE_DOCUMENTS.get("research_paper", ""),
+        # Additional keys tests may need
+        "financial_agreement": SAMPLE_DOCUMENTS.get("contract", ""),
+        "comprehensive_policy": SAMPLE_DOCUMENTS.get("workflow_doc", ""),
+    }
+
+
+# Module-level alias for direct imports from test files
+sample_legal_documents = {
+    "nda": SAMPLE_DOCUMENTS.get("contract", ""),
+    "service_agreement": SAMPLE_DOCUMENTS.get("contract", ""),
+    "privacy_policy": SAMPLE_DOCUMENTS.get("workflow_doc", ""),
+    "liability_clause": SAMPLE_DOCUMENTS.get("contract", ""),
+    "complex_contract": SAMPLE_DOCUMENTS.get("contract", ""),
+    "entity_heavy_contract": SAMPLE_DOCUMENTS.get("research_paper", ""),
+    "financial_agreement": SAMPLE_DOCUMENTS.get("contract", ""),
+    "comprehensive_policy": SAMPLE_DOCUMENTS.get("workflow_doc", ""),
+}
+
+
+@pytest.fixture
+def sample_technical_documents():
+    """Alias mapping for technical document tests"""
+    return {
+        "api_reference": SAMPLE_DOCUMENTS.get("technical_doc", ""),
+        "rest_api_doc": SAMPLE_DOCUMENTS.get("technical_doc", ""),
+        "python_code": "def foo():\n    return 1\n",
+        "draft_specification": SAMPLE_DOCUMENTS.get("workflow_doc", ""),
+        "incomplete_doc": SAMPLE_DOCUMENTS.get("understanding_test", ""),
+        "architecture_doc": SAMPLE_DOCUMENTS.get("research_paper", ""),
+        # Additional keys used by some tests
+        "version_comparison": "v1.0 vs v2.0: changes include new endpoints and deprecations.",
+        "obscure_language_code": 'fn main() { println!("hello"); }',
+        "comprehensive_api_doc": SAMPLE_DOCUMENTS.get("technical_doc", ""),
+        "python_function": "def add(a: int, b: int) -> int:\n    return a + b",
+        "javascript_class": "class Foo { constructor(){ this.x = 1; } }",
+        "openapi_spec": "openapi: 3.0.0\ninfo:\n  title: Sample API\npaths:\n  /users:\n    get:\n      summary: List users",
+        "graphql_schema": "type Query { user(id: ID!): User } type User { id: ID! name: String }",
+        "unclear_specification": "This spec lacks parameter details and examples.",
+        "unstructured_doc": "Random notes without clear structure or headings.",
+        "user_guide": "# Getting Started\nInstall and run. Example usage provided.",
+    }
+
+
+# module-level alias for tests that import directly from fixtures
+sample_technical_documents = {
+    "api_reference": SAMPLE_DOCUMENTS.get("technical_doc", ""),
+    "rest_api_doc": SAMPLE_DOCUMENTS.get("technical_doc", ""),
+    "python_code": "def foo():\n    return 1\n",
+    "draft_specification": SAMPLE_DOCUMENTS.get("workflow_doc", ""),
+    "incomplete_doc": SAMPLE_DOCUMENTS.get("understanding_test", ""),
+    "architecture_doc": SAMPLE_DOCUMENTS.get("research_paper", ""),
+    "version_comparison": "v1.0 vs v2.0: changes include new endpoints and deprecations.",
+    "obscure_language_code": 'fn main() { println!("hello"); }',
+    "comprehensive_api_doc": SAMPLE_DOCUMENTS.get("technical_doc", ""),
+    "python_function": "def add(a: int, b: int) -> int:\n    return a + b",
+    "javascript_class": "class Foo { constructor(){ this.x = 1; } }",
+    "openapi_spec": "openapi: 3.0.0\ninfo:\n  title: Sample API\npaths:\n  /users:\n    get:\n      summary: List users",
+    "graphql_schema": "type Query { user(id: ID!): User } type User { id: ID! name: String }",
+    "unclear_specification": "This spec lacks parameter details and examples.",
+    "unstructured_doc": "Random notes without clear structure or headings.",
+    "user_guide": "# Getting Started\nInstall and run. Example usage provided.",
+}
+
+
+@pytest.fixture
+def create_test_context():
+    """Compatibility wrapper to create ProcessingContext for tests"""
+
+    def _create(
+        content: str,
+        document_type: str = "test",
+        processing_mode: str = "analysis",
+        metadata: dict | None = None,
+    ):
+        return TestFixtures.create_processing_context(
+            context_id="test_context",
+            user_id="test_user",
+            session_id="test_session",
+            metadata=metadata or {},
+        )
+
+    return _create
+
+
+# Also expose a module-level helper function for older tests that import and call it
+def create_test_context(
+    content: str,
+    document_type: str = "test",
+    processing_mode: str = "analysis",
+    metadata: dict | None = None,
+    *,
+    session_id: Optional[str] = None,
+    user_id: Optional[str] = None,
+    context_id: str = "test_context",
+):
+    """Module-level helper compatible with tests that pass session_id as kwarg."""
+    return TestFixtures.create_processing_context(
+        context_id=context_id,
+        user_id=user_id or "test_user",
+        session_id=session_id or "test_session",
+        metadata=metadata or {},
+    )
+
+
+@pytest.fixture
+def mock_legal_processor():
+    """Mock processor for legal tests"""
+    return MockDocumentProcessor()
+
+
+@pytest.fixture
+def mock_technical_processor():
+    """Mock processor for technical tests"""
+    return MockDocumentProcessor()
+
+
+@pytest.fixture
+def performance_monitor():
+    """Simple performance monitor context manager for tests"""
+
+    class _Monitor:
+        def __init__(self):
+            self.metrics = []
+
+        def record_global_metrics(self, accuracy, loss, round_num):
+            self.metrics.append(
+                {"accuracy": accuracy, "loss": loss, "round": round_num}
+            )
+
+        def record_participant_performance(self, perf):
+            # store participant perf objects
+            self.metrics.append(
+                {
+                    "participant": getattr(perf, "participant_id", None),
+                    "accuracy": getattr(perf, "accuracy", None),
+                }
+            )
+
+        def detect_anomalies(self):
+            # Simple heuristic: no anomalies
+            return []
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, exc_type, exc, tb):
+            return False
+
+    return _Monitor
+
+
+@pytest.fixture
+def sample_workflow_documents():
+    """Alias mapping for workflow document tests"""
+    return {
+        "process_flow": SAMPLE_DOCUMENTS.get("workflow_doc", ""),
+        "inefficient_process": SAMPLE_DOCUMENTS.get("workflow_doc", ""),
+        "manual_process": SAMPLE_DOCUMENTS.get("workflow_doc", ""),
+        # Additional keys used by some tests
+        "compliance_workflow": "Workflow with compliance checks and approvals.",
+        "detailed_process": "Step 1: Intake. Step 2: Review. Step 3: Approve.",
+    }
+
+
+# Module-level alias for direct imports
+sample_workflow_documents = {
+    "process_flow": SAMPLE_DOCUMENTS.get("workflow_doc", ""),
+    "inefficient_process": SAMPLE_DOCUMENTS.get("workflow_doc", ""),
+    "manual_process": SAMPLE_DOCUMENTS.get("workflow_doc", ""),
+    "compliance_workflow": "Workflow with compliance checks and approvals.",
+    "detailed_process": "Step 1: Intake. Step 2: Review. Step 3: Approve.",
+}
+
+
+@pytest.fixture
+def mock_workflow_processor():
+    """Mock processor for workflow tests"""
+    return MockDocumentProcessor()
 
 
 # Performance testing utilities

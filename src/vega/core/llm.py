@@ -213,33 +213,55 @@ class OllamaProvider(BaseLLMProvider):
         self.base_url = config.get("ollama_host", "http://127.0.0.1:11434")
         self.default_model = config.get("model_name", "mistral")
 
-    def is_available(self) -> bool:
+    async def is_available(self) -> bool:
         """Check if Ollama is running"""
         try:
-            import requests
+            from .resource_manager import get_resource_manager
 
-            response = requests.get(f"{self.base_url}/api/tags", timeout=5)
+            manager = await get_resource_manager()
+            client = manager.get_http_client_direct()
+
+            response = await client.get(f"{self.base_url}/api/tags", timeout=5.0)
             return response.status_code == 200
-        except Exception:
+        except (ImportError, Exception):
+            # Fallback to local httpx client if resource manager unavailable
+            try:
+                async with httpx.AsyncClient(timeout=5.0) as client:
+                    response = await client.get(f"{self.base_url}/api/tags")
+                    return response.status_code == 200
+            except Exception:
+                return False
             return False
 
-    def get_models(self) -> List[str]:
+    async def get_models(self) -> List[str]:
         """Get available Ollama models"""
-        if not self.is_available():
+        if not await self.is_available():
             return []
         try:
-            import requests
+            from .resource_manager import get_resource_manager
 
-            response = requests.get(f"{self.base_url}/api/tags", timeout=5)
+            manager = await get_resource_manager()
+            client = manager.get_http_client_direct()
+
+            response = await client.get(f"{self.base_url}/api/tags", timeout=5.0)
             if response.status_code == 200:
                 data = response.json()
                 return [model["name"] for model in data.get("models", [])]
-        except Exception:
+        except (ImportError, Exception):
+            # Fallback to local client
+            try:
+                async with httpx.AsyncClient(timeout=5.0) as client:
+                    response = await client.get(f"{self.base_url}/api/tags")
+                    if response.status_code == 200:
+                        data = response.json()
+                        return [model["name"] for model in data.get("models", [])]
+            except Exception:
+                pass
             pass
         return [self.default_model]
 
     async def generate(self, prompt: str, **kwargs) -> LLMResponse:
-        """Generate response using Ollama"""
+        """Generate response using Ollama with shared HTTP client"""
         start_time = time.time()
         model = kwargs.get("model", self.default_model)
 
@@ -258,33 +280,46 @@ class OllamaProvider(BaseLLMProvider):
             },
         }
 
-        async with httpx.AsyncClient(timeout=30.0) as client:
-            try:
-                response = await client.post(
-                    f"{self.base_url}/api/generate", json=payload
-                )
-                response.raise_for_status()
-                result = response.json()
+        # Try to use shared HTTP client from resource manager for better performance
+        try:
+            from .resource_manager import get_resource_manager
 
-                response_time = time.time() - start_time
+            manager = await get_resource_manager()
+            client = manager.get_http_client_direct()
+        except (ImportError, Exception):
+            # Fallback to local client if resource manager unavailable
+            client = httpx.AsyncClient(timeout=30.0)
 
-                return LLMResponse(
-                    content=result.get("response", ""),
-                    provider="ollama",
-                    model=model,
-                    response_time=response_time,
-                    metadata={
-                        "total_duration": result.get("total_duration", 0),
-                        "load_duration": result.get("load_duration", 0),
-                        "prompt_eval_count": result.get("prompt_eval_count", 0),
-                        "eval_count": result.get("eval_count", 0),
-                    },
-                )
-            except Exception as e:
-                raise LLMBackendError(f"Ollama generation failed: {e}")
+        try:
+            response = await client.post(f"{self.base_url}/api/generate", json=payload)
+            response.raise_for_status()
+            result = response.json()
+
+            response_time = time.time() - start_time
+
+            return LLMResponse(
+                content=result.get("response", ""),
+                provider="ollama",
+                model=model,
+                response_time=response_time,
+                metadata={
+                    "total_duration": result.get("total_duration", 0),
+                    "load_duration": result.get("load_duration", 0),
+                    "prompt_eval_count": result.get("prompt_eval_count", 0),
+                    "eval_count": result.get("eval_count", 0),
+                },
+            )
+        except Exception as e:
+            raise LLMBackendError(f"Ollama generation failed: {e}")
+        finally:
+            # Only close if we created a local client (not from resource manager)
+            if isinstance(client, httpx.AsyncClient) and not hasattr(
+                manager, "get_http_client_direct"
+            ):
+                await client.aclose()
 
     async def stream_generate(self, prompt: str, **kwargs) -> AsyncGenerator[str, None]:
-        """Stream tokens from Ollama"""
+        """Stream tokens from Ollama with shared HTTP client"""
         model = kwargs.get("model", self.default_model)
         prompt = self._apply_system_prompt(prompt)
 
@@ -300,24 +335,39 @@ class OllamaProvider(BaseLLMProvider):
             },
         }
 
-        async with httpx.AsyncClient(timeout=60.0) as client:
-            try:
-                async with client.stream(
-                    "POST", f"{self.base_url}/api/generate", json=payload
-                ) as response:
-                    response.raise_for_status()
-                    async for line in response.aiter_lines():
-                        if line.strip():
-                            try:
-                                chunk = json.loads(line)
-                                if "response" in chunk:
-                                    yield chunk["response"]
-                                if chunk.get("done"):
-                                    break
-                            except json.JSONDecodeError:
-                                continue
-            except Exception as e:
-                raise LLMBackendError(f"Ollama streaming failed: {e}")
+        # Try to use shared HTTP client from resource manager for better performance
+        try:
+            from .resource_manager import get_resource_manager
+
+            manager = await get_resource_manager()
+            client = manager.get_http_client_direct()
+            should_close = False
+        except (ImportError, Exception):
+            # Fallback to local client if resource manager unavailable
+            client = httpx.AsyncClient(timeout=60.0)
+            should_close = True
+
+        try:
+            async with client.stream(
+                "POST", f"{self.base_url}/api/generate", json=payload
+            ) as response:
+                response.raise_for_status()
+                async for line in response.aiter_lines():
+                    if line.strip():
+                        try:
+                            chunk = json.loads(line)
+                            if "response" in chunk:
+                                yield chunk["response"]
+                            if chunk.get("done"):
+                                break
+                        except json.JSONDecodeError:
+                            continue
+        except Exception as e:
+            raise LLMBackendError(f"Ollama streaming failed: {e}")
+        finally:
+            # Only close if we created a local client (not from resource manager)
+            if should_close:
+                await client.aclose()
 
     def _apply_system_prompt(self, user_prompt: str) -> str:
         """Apply system prompt if available"""
@@ -601,86 +651,105 @@ class LLMManager:
         use_cache: bool = True,
         **kwargs,
     ) -> LLMResponse:
-        """Generate response with graceful provider fallback.
+        """Generate response with graceful provider fallback and request coalescing.
 
         Tries the preferred provider first (if specified and available), then
         falls back through a default preference order among available providers.
-        Caches successful responses and updates usage stats.
+        Caches successful responses and updates usage stats. Uses a global
+        RequestCoalescer to deduplicate identical concurrent requests.
         """
-        # Check cache first
-        if use_cache:
-            cache_key = self._get_cache_key(prompt, provider or "auto", **kwargs)
-            cached = self.cache.get(cache_key)
-            if cached:
-                logger.debug(f"Cache hit for key: {cache_key[:16]}...")
-                return cached
+        # Import here to avoid circular dependency on module import
+        try:
+            from .request_coalescing import get_llm_coalescer  # type: ignore
+        except Exception:
+            get_llm_coalescer = None  # type: ignore
 
-        # Check circuit breaker
-        if not self.circuit_breaker.allow():
-            raise LLMBackendError(
-                "Circuit breaker is open - LLM temporarily unavailable"
-            )
+        # Build a stable cache key for both the internal TTL cache and coalescer
+        cache_key = self._get_cache_key(prompt, provider or "auto", **kwargs)
 
-        # Build candidate provider list
-        available = self.get_available_providers()
-        preference_order = ["ollama", "openai", "anthropic"]
-        candidates: List[str] = []
+        async def _execute_generation() -> LLMResponse:
+            # Check cache first
+            if use_cache:
+                cached = self.cache.get(cache_key)
+                if cached:
+                    logger.debug(f"Cache hit for key: {cache_key[:16]}...")
+                    return cached
 
-        if provider and provider in available:
-            candidates.append(provider)
-        for name in preference_order:
-            if name not in candidates and name in available:
-                candidates.append(name)
-        # Fallback to any other available providers not already listed
-        for name in available:
-            if name not in candidates:
-                candidates.append(name)
+            # Check circuit breaker
+            if not self.circuit_breaker.allow():
+                raise LLMBackendError(
+                    "Circuit breaker is open - LLM temporarily unavailable"
+                )
 
-        last_error: Optional[Exception] = None
+            # Build candidate provider list
+            available = self.get_available_providers()
+            preference_order = ["ollama", "openai", "anthropic"]
+            candidates: List[str] = []
 
-        for prov_name in candidates:
-            try:
-                llm_provider = self.providers[prov_name]
-                logger.info(f"Using LLM provider: {llm_provider.name}")
+            if provider and provider in available:
+                candidates.append(provider)
+            for name in preference_order:
+                if name not in candidates and name in available:
+                    candidates.append(name)
+            # Fallback to any other available providers not already listed
+            for name in available:
+                if name not in candidates:
+                    candidates.append(name)
 
-                # Ensure model is specified for providers that require it
-                provider_kwargs = kwargs.copy()
-                if prov_name == "openai" and "model" not in provider_kwargs:
-                    provider_kwargs["model"] = getattr(
-                        llm_provider, "default_model", "gpt-4o-mini"
+            last_error: Optional[Exception] = None
+
+            for prov_name in candidates:
+                try:
+                    llm_provider = self.providers[prov_name]
+                    logger.info(f"Using LLM provider: {llm_provider.name}")
+
+                    # Ensure model is specified for providers that require it
+                    provider_kwargs = kwargs.copy()
+                    if prov_name == "openai" and "model" not in provider_kwargs:
+                        provider_kwargs["model"] = getattr(
+                            llm_provider, "default_model", "gpt-4o-mini"
+                        )
+
+                    response = await llm_provider.generate(prompt, **provider_kwargs)
+
+                    # Track usage
+                    if llm_provider.name not in self.usage_tracker:
+                        self.usage_tracker[llm_provider.name] = {
+                            "requests": 0,
+                            "total_cost": 0.0,
+                        }
+                    self.usage_tracker[llm_provider.name]["requests"] += 1
+                    self.usage_tracker[llm_provider.name][
+                        "total_cost"
+                    ] += response.usage.cost_usd
+
+                    # Cache response
+                    if use_cache:
+                        self.cache.set(cache_key, response)
+
+                    # Circuit breaker success
+                    self.circuit_breaker.on_success()
+
+                    return response
+                except Exception as e:
+                    # Record failure and try next provider
+                    last_error = e
+                    logger.error(
+                        f"LLM generation failed on provider '{prov_name}': {e}"
                     )
+                    continue
 
-                response = await llm_provider.generate(prompt, **provider_kwargs)
+            # If all providers failed, raise the last error
+            raise LLMBackendError(f"LLM generation failed: {last_error}")
 
-                # Track usage
-                if llm_provider.name not in self.usage_tracker:
-                    self.usage_tracker[llm_provider.name] = {
-                        "requests": 0,
-                        "total_cost": 0.0,
-                    }
-                self.usage_tracker[llm_provider.name]["requests"] += 1
-                self.usage_tracker[llm_provider.name][
-                    "total_cost"
-                ] += response.usage.cost_usd
-
-                # Cache response
-                if use_cache:
-                    self.cache.set(cache_key, response)
-
-                # Circuit breaker success
-                self.circuit_breaker.on_success()
-
-                return response
-            except Exception as e:
-                # Record failure and try next provider
-                last_error = e
-                # Don't trigger circuit breaker for provider-specific failures during fallback
-                # self.circuit_breaker.on_failure()
-                logger.error(f"LLM generation failed on provider '{prov_name}': {e}")
-                continue
-
-        # If all providers failed, raise the last error
-        raise LLMBackendError(f"LLM generation failed: {last_error}")
+        # Use coalescer if available to deduplicate identical concurrent calls
+        if get_llm_coalescer is not None:
+            coalescer = get_llm_coalescer()
+            # Operation name plus key to ensure stable grouping
+            op_name = "llm_generate"
+            return await coalescer.coalesce(op_name, _execute_generation)
+        else:
+            return await _execute_generation()
 
     async def stream_generate(
         self, prompt: str, provider: Optional[str] = None, **kwargs
