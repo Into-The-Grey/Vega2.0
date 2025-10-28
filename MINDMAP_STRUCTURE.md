@@ -39,4 +39,18 @@
 - Standardized orchestrator interface
   - health_check schema unified
   - Input validation centralized pattern (incremental)
+
+## Repository hygiene
+- Decluttered caches: __pycache__, .pytest_cache, .benchmarks
+- Removed stray logs (audit.log, test.log)
+- Removed local env folder venv_pruning/
+- .gitignore updated to block reintroduction
+
+## Build & tests
+- Syntax fixes: database_optimization.py, user_profiling/cli.py, tools/test_suite/app.py, tools/vega/vega_init.py
+- Compile check: PASS (src, tools)
+- Tests (focused):
+  - tests/test_app.py: PASS
+  - tests/test_document_processing.py: PASS
+  - tests/test_voice.py: partial (piper/vosk providers optional; failing when providers absent)
 ```

@@ -64,6 +64,8 @@
     - All API health tests passing (5/5)
   - ✅ System context injection: facts prepended to LLM prompts for recall across sessions
   - ✅ `/chat` endpoint extracts facts from user prompts and injects memory into context
+- ✅ Repository declutter: removed caches (**pycache**, .pytest_cache, .benchmarks), stray logs, and a stray local env (venv_pruning/); added .gitignore entries to prevent reintroduction
+- ✅ Syntax hardening: fixed async contextmanager return in `database_optimization.py`, corrected imports/indentation in `user_profiling/cli.py`, cleaned duplicate block in `tools/test_suite/app.py`, and repaired corrupted docstring in `tools/vega/vega_init.py`
   - ✅ **Performance & Observability Middleware**
     - Enabled GZip compression middleware (FastAPI) for responses over 500 bytes
     - Request tracking middleware now captures per-request duration (ms) and status code distribution

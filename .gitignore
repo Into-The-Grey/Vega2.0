@@ -33,6 +33,7 @@ env/
 ENV/
 env.bak/
 venv.bak/
+venv_pruning/
 
 # Environment & secrets
 .env
@@ -131,6 +132,9 @@ coverage.xml
 *.cover
 *.py,cover
 .hypothesis/
+
+# Benchmarks and misc caches
+.benchmarks/
 
 # Documentation builds
 docs/_build/

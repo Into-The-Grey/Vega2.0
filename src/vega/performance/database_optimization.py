@@ -148,26 +148,28 @@ class AsyncConnectionPool:
 
         connection = None
         try:
-            # Try to get connection from pool
-            try:
-                connection = self.connections.get_nowait()
-                async with self._lock:
-                    self.stats.idle_connections -= 1
-                    self.stats.active_connections += 1
-                    if self.stats.active_connections > self.stats.peak_usage:
-                        self.stats.peak_usage = self.stats.active_connections
-            except Empty:
-                # Pool is empty, create new connection if under limit
-                if self.active_count < self.pool_size * 2:  # Allow overflow
-                    connection = await aiosqlite.connect(self.database_path)
-                    await self._optimize_connection(connection)
-                    self.active_count += 1
+            # Loop until a connection is acquired or created
+            while connection is None:
+                try:
+                    # Try to get connection from pool
+                    connection = self.connections.get_nowait()
                     async with self._lock:
+                        self.stats.idle_connections -= 1
                         self.stats.active_connections += 1
-                else:
-                    # Wait for connection to become available
-                    await asyncio.sleep(0.1)
-                    return await self.get_connection()
+                        if self.stats.active_connections > self.stats.peak_usage:
+                            self.stats.peak_usage = self.stats.active_connections
+                except Empty:
+                    # Pool is empty, create new connection if under limit
+                    if self.active_count < self.pool_size * 2:  # Allow overflow
+                        connection = await aiosqlite.connect(self.database_path)
+                        await self._optimize_connection(connection)
+                        self.active_count += 1
+                        async with self._lock:
+                            self.stats.active_connections += 1
+                    else:
+                        # Wait for connection to become available then retry
+                        await asyncio.sleep(0.1)
+                        continue
 
             wait_time = (time.time() - start_time) * 1000
             self.wait_times.append(wait_time)
@@ -686,7 +688,10 @@ async def demo_database_optimization():
     start_time = time.time()
     cached_result = await optimizer.execute_query(test_queries[0])
     cache_time = (time.time() - start_time) * 1000
-    print(f"Cached query: {len(cached_result)} results in {cache_time:.2f}ms")
+    cached_count = (
+        len(cached_result) if isinstance(cached_result, list) else cached_result
+    )
+    print(f"Cached query: {cached_count} results in {cache_time:.2f}ms")
 
     # Create suggested indexes
     print("\nCreating suggested indexes...")

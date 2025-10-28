@@ -39,7 +39,7 @@ TEST_CONFIG = {
     "mock_endpoints": {
         "ollama_url": "http://localhost:11434",
         "test_calendar_api": "https://test-calendar-api.example.com",
-    }
+    },
 }
 
 # Initialize FastAPI app
@@ -48,7 +48,7 @@ app = FastAPI(
     description="Comprehensive testing interface for all Vega2.0 components",
     version="1.0.0",
     docs_url="/docs",
-    redoc_url="/redoc"
+    redoc_url="/redoc",
 )
 
 # Create test data directories
@@ -58,21 +58,23 @@ for path in TEST_CONFIG["test_data_paths"].values():
 # Logging setup for tests
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler('test_suite/test_results.log'),
-        logging.StreamHandler()
-    ]
+        logging.FileHandler("test_suite/test_results.log"),
+        logging.StreamHandler(),
+    ],
 )
 logger = logging.getLogger(__name__)
 
 # Test result storage
 test_results: Dict[str, Any] = {}
 
+
 class TestRequest(BaseModel):
     test_category: str
     test_name: str
     parameters: Optional[Dict[str, Any]] = None
+
 
 class TestResult(BaseModel):
     test_id: str
@@ -80,6 +82,7 @@ class TestResult(BaseModel):
     duration: float
     details: Dict[str, Any]
     timestamp: datetime
+
 
 @app.get("/", response_class=HTMLResponse)
 async def test_suite_home():
@@ -190,34 +193,38 @@ async def test_suite_home():
     </html>
     """
 
+
 @app.post("/run_test")
 async def run_single_test(test_request: TestRequest) -> TestResult:
     """Run a single test"""
     test_id = f"{test_request.test_category}.{test_request.test_name}"
     start_time = time.time()
-    
+
     try:
         # Import test modules dynamically to avoid dependency issues
-        test_module = __import__(f"test_suite.tests.test_{test_request.test_category}", fromlist=[test_request.test_name])
+        test_module = __import__(
+            f"test_suite.tests.test_{test_request.test_category}",
+            fromlist=[test_request.test_name],
+        )
         test_function = getattr(test_module, f"test_{test_request.test_name}")
-        
+
         # Run the test with dummy parameters
         result = await test_function(TEST_CONFIG)
-        
+
         duration = time.time() - start_time
         test_result = TestResult(
             test_id=test_id,
             status="PASS" if result.get("success", False) else "FAIL",
             duration=duration,
             details=result,
-            timestamp=datetime.now()
+            timestamp=datetime.now(),
         )
-        
+
         test_results[test_id] = test_result
         logger.info(f"Test {test_id} completed: {test_result.status}")
-        
+
         return test_result
-        
+
     except Exception as e:
         duration = time.time() - start_time
         test_result = TestResult(
@@ -225,13 +232,14 @@ async def run_single_test(test_request: TestRequest) -> TestResult:
             status="FAIL",
             duration=duration,
             details={"success": False, "error": str(e)},
-            timestamp=datetime.now()
+            timestamp=datetime.now(),
         )
-        
+
         test_results[test_id] = test_result
         logger.error(f"Test {test_id} failed: {e}")
-        
+
         return test_result
+
 
 @app.post("/run_all_tests")
 async def run_all_tests() -> List[TestResult]:
@@ -244,30 +252,23 @@ async def run_all_tests() -> List[TestResult]:
         ("core", "database_operations"),
         ("performance", "response_time"),
     ]
-    
+
     results = []
     for category, test_name in all_tests:
         try:
-            result = await run_single_test(TestRequest(test_category=category, test_name=test_name))
+            result = await run_single_test(
+                TestRequest(test_category=category, test_name=test_name)
+            )
             results.append(result)
         except Exception as e:
             logger.error(f"Failed to run test {category}.{test_name}: {e}")
             continue
-    
+
     return results
+
 
 @app.get("/test_results")
 async def get_test_results() -> Dict[str, Any]:
-    """Get all test results"""
-    return {"results": test_results, "summary": {
-        "total": len(test_results),
-        "passed": sum(1 for r in test_results.values() if r.status == "PASS"),
-        "failed": sum(1 for r in test_results.values() if r.status == "FAIL"),
-    }}
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8001)async def get_test_results() -> Dict[str, Any]:
     """Get all test results"""
     return {
         "results": test_results,

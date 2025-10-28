@@ -11,7 +11,7 @@ import sys
 import os
 import asyncio
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 import typer
 from typing import Optional
@@ -19,10 +19,13 @@ from typing import Optional
 # Add parent directory to path for imports
 sys.path.append(str(Path(__file__).parent.parent))
 
-from ..user.user_profiling.database.user_profile_schema import UserProfileDatabase
-from ..user.user_profiling.user_profile_daemon import UserProfileDaemon, DaemonConfig
-from ..user.user_profiling.engines.persona_engine import PersonaEngine
-from ..user.user_profiling.vega_integration import UserProfileManager, DailyBriefingGenerator
+from .database.user_profile_schema import UserProfileDatabase
+from .user_profile_daemon import UserProfileDaemon, DaemonConfig
+from .engines.persona_engine import PersonaEngine
+from .vega_integration import (
+    UserProfileManager,
+    DailyBriefingGenerator,
+)
 
 app = typer.Typer(help="User Profiling Engine CLI")
 
@@ -60,8 +63,10 @@ def status(db_path: Optional[str] = typer.Option(None, help="Database path")):
             SocialCircle,
             InterestsHobbies,
         )
-        from ..user.user_profiling.user_profile_daemon import UnderstandingScoreCalculator
-        
+        from ..user.user_profiling.user_profile_daemon import (
+            UnderstandingScoreCalculator,
+        )
+
         db = UserProfileDatabase(db_path)
         session = db.get_session()
 
@@ -334,7 +339,7 @@ def export(
         }
 
         # Export data from each table
-    from ..user.user_profiling.database.user_profile_schema import (
+        from .database.user_profile_schema import (
             IdentityCore,
             ContactInfo,
             Calendar,

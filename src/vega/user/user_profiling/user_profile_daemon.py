@@ -22,12 +22,12 @@ import sys
 from concurrent.futures import ThreadPoolExecutor
 import aiofiles
 
-from database.user_profile_schema import UserProfileDatabase
-from collectors.profile_intel_collector import run_intelligence_scan
-from collectors.calendar_sync import run_calendar_sync
-from collectors.finance_monitor import run_financial_monitoring
-from engines.edu_predictor import run_educational_analysis
-from engines.persona_engine import run_persona_analysis, PersonaEngine
+from .database.user_profile_schema import UserProfileDatabase
+from .collectors.profile_intel_collector import run_intelligence_scan
+from .collectors.calendar_sync import run_calendar_sync
+from .collectors.finance_monitor import run_financial_monitoring
+from .engines.edu_predictor import run_educational_analysis
+from .engines.persona_engine import run_persona_analysis, PersonaEngine
 
 # Configure logging
 logging.basicConfig(
