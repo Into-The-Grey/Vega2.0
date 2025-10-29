@@ -791,7 +791,7 @@ rm -rf ~/.vega
 
 ## Additional Resources
 
-- [Vega Documentation](../README.md)
+- [Vega Documentation](../../README.md)
 - [Architecture Overview](ARCHITECTURE.md)
 - [Deployment Guide](DEPLOYMENT.md)
 - [Troubleshooting Guide](TROUBLESHOOTING.md)

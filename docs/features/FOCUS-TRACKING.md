@@ -531,7 +531,7 @@ A: Yes, data is stored as JSON in `~/.vega/focus/`. Easy to backup or analyze ex
 - [Task Manager](TASK-MANAGEMENT.md) - Link focus sessions to tasks
 - [Knowledge Base](KNOWLEDGE-BASE.md) - Document focus insights
 - [Architecture](ARCHITECTURE.md) - Technical implementation details
-- [Roadmap](../roadmap.md) - Future focus tracking features
+- [Roadmap](../../roadmap.md) - Future focus tracking features
 
 ## Support
 
