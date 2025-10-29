@@ -90,7 +90,7 @@ Vega2.0/
 │   └── utils/                # Utility functions
 ├── tests/                     # Test files
 ├── docs/                      # Documentation
-├── configs/                   # Configuration files
+├── config/                    # Configuration files
 ├── data/                      # Data files and logs
 └── examples/                  # Usage examples
 ```
@@ -110,7 +110,7 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
 # Set up configuration
-cp configs/.env.example .env
+cp config/.env.example .env
 # Edit .env with your settings
 
 # Initialize the database

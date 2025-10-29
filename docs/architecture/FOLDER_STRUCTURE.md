@@ -4,7 +4,7 @@
 
 ```text
 Vega2.0/
-├── configs/                    # Configuration files
+├── config/                     # Configuration files
 │   ├── app.yaml               # Application settings
 │   ├── llm.yaml               # Language model configuration
 │   ├── ui.yaml                # User interface settings
@@ -91,7 +91,7 @@ Vega2.0/
 
 ### Configuration Management
 
-- **`configs/`** - Centralized configuration files for all modules and environments
+- **`config/`** - Centralized configuration files for all modules and environments
 - **`.env`** - Local environment variables and secrets
 
 ### Core Application
@@ -122,11 +122,11 @@ Vega2.0/
 
 ### Environment & Settings
 
-- **`configs/app.yaml`** - Main application configuration
-- **`configs/llm.yaml`** - Language model settings and endpoints  
-- **`configs/ui.yaml`** - User interface and frontend configuration
-- **`configs/voice.yaml`** - Voice processing and audio settings
-- **`configs/.env.example`** - Template for environment variables
+- **`config/app.yaml`** - Main application configuration
+- **`config/llm.yaml`** - Language model settings and endpoints  
+- **`config/ui.yaml`** - User interface and frontend configuration
+- **`config/voice.yaml`** - Voice processing and audio settings
+- **`config/.env.example`** - Template for environment variables
 - **`requirements.txt`** - Python package dependencies
 
 ### Service & Deployment
@@ -203,7 +203,7 @@ The complete development roadmap is documented in [`roadmap.md`](./roadmap.md) w
 ### Development Workflow
 
 1. **Entry Point:** Use `main.py` with appropriate command (server, cli, test)
-2. **Configuration:** Modify YAML files in `configs/` directory
+2. **Configuration:** Modify YAML files in `config/` directory
 3. **Testing:** Run `python main.py test` or specific test suites
 4. **Development:** Work in `src/vega/` with tests in `tests/`
 5. **Deployment:** Use `systemd/vega.service` for production

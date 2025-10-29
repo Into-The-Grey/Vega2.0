@@ -9,7 +9,7 @@ This directory contains convenient wrapper scripts for the dynamic training syst
 ../check_training_setup.sh
 
 # Run training (auto-detect everything)
-./train_mixed.sh
+./training/train_mixed.sh
 ```
 
 ## Available Scripts
@@ -20,13 +20,13 @@ Tries GPU first, falls back to CPU if unavailable or out of memory.
 
 ```bash
 # Auto-detect data type
-./train_mixed.sh
+./training/train_mixed.sh
 
 # Voice training
-./train_mixed.sh voice
+./training/train_mixed.sh voice
 
 # Text training
-./train_mixed.sh text
+./training/train_mixed.sh text
 ```
 
 **Use when:**

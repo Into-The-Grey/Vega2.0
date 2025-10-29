@@ -51,7 +51,7 @@ http://$SERVER_IP:8080
 
 Can't access? Run these commands:
 
-  Check status:        ./manage_dashboard.sh status
+  Check status:        ./scripts/dashboard/manage_dashboard.sh status
   Check if listening:  sudo lsof -i :8080
   Test locally:        curl http://localhost:8080/api/status
   View logs:           sudo journalctl -u vega-dashboard -n 20

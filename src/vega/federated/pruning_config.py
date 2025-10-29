@@ -150,7 +150,7 @@ class OrchestrationConfig:
 class ConfigManager:
     """Manager for federated pruning configurations."""
 
-    DEFAULT_CONFIG_PATH = Path("configs/federated_pruning.yaml")
+    DEFAULT_CONFIG_PATH = Path("config/federated_pruning.yaml")
 
     @classmethod
     def load_config(cls, config_path: Optional[Path] = None) -> FederatedPruningConfig:

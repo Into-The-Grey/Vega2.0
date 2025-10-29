@@ -145,7 +145,7 @@ class PersonalAccessController:
     in a single-user environment with multiple access contexts
     """
 
-    def __init__(self, config_file: str = "configs/access_control.json"):
+    def __init__(self, config_file: str = "config/access_control.json"):
         self.config_file = config_file
         self.profiles: Dict[str, AccessProfile] = {}
         self.active_profile: Optional[str] = None

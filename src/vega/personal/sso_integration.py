@@ -165,7 +165,7 @@ class PersonalSSOManager:
     Handles authentication with multiple providers for personal use
     """
 
-    def __init__(self, config_file: str = "configs/sso_config.json"):
+    def __init__(self, config_file: str = "config/sso_config.json"):
         self.config_file = config_file
         self.providers: Dict[SSOProvider, SSOConfig] = {}
         self.sessions: Dict[str, AuthSession] = {}

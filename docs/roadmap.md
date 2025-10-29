@@ -27,6 +27,22 @@
   - End-to-end live run succeeds; JSON and Markdown reports saved under `logs/evaluations/`
   - Quick run: `python tools/evaluation/response_eval.py --mode live --limit 20`
 
+### Project Reorganization (Oct 29, 2025)
+
+- ✅ **Comprehensive File Structure Reorganization**
+  - ✅ Consolidated duplicate folders: merged `configs/` → `config/`, removed empty `static/` and `summaries/`
+  - ✅ Organized shell scripts: moved all root-level `.sh` files to `scripts/` subdirectories
+    - `scripts/dashboard/`: setup_dashboard.sh, manage_dashboard.sh, show_dashboard_url.sh
+    - `scripts/training/`: check_training_setup.sh
+    - `scripts/setup/`: setup_persistent_mode.sh
+  - ✅ Consolidated documentation: merged scattered docs into comprehensive guides
+    - `docs/operations/dashboard.md`: consolidated all DASHBOARD_* files
+    - `docs/operations/training.md`: consolidated all TRAINING_\* and VOICE_TRAINING_\* files
+    - `docs/operations/network-jarvis.md`: consolidated NETWORK_\* and PERSISTENT_MODE_\* files
+  - ✅ Cleaned root directory: moved test files to `tests/`, log files to `logs/`, pid files to `data/`
+  - ✅ Updated all import paths and references to reflect new file locations
+  - ✅ Organized remaining docs: moved implementation plans to `development/`, status files to `summaries/`
+
 ### Recent Core Fixes (Oct 25-26, 2025)
 
 - ✅ CLI entrypoint fixed: added `main()` wrapper in `src/vega/core/cli.py` (enables `python main.py cli ...`)

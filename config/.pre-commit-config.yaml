@@ -76,9 +76,9 @@ repos:
 
       - id: security-config-validation
         name: Security Config Validation
-        entry: python -c "import yaml, sys; config = yaml.safe_load(open('configs/security.yaml')); sys.exit(0 if all(s in config for s in ['scanner', 'vulnerability', 'compliance']) else 1)"
+        entry: python -c "import yaml, sys; config = yaml.safe_load(open('config/security.yaml')); sys.exit(0 if all(s in config for s in ['scanner', 'vulnerability', 'compliance']) else 1)"
         language: system
-        files: ^configs/security\.yaml$
+        files: ^config/security\.yaml$
 
       - id: security-results-dir
         name: Ensure Security Results Directory

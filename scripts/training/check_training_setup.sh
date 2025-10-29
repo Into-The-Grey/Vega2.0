@@ -34,8 +34,8 @@ else
     echo "  ❌ Main training script not found"
 fi
 
-if [ -f "scripts/train_mixed.sh" ] && [ -x "scripts/train_mixed.sh" ]; then
-    echo "  ✅ Mixed mode script: scripts/train_mixed.sh (executable)"
+if [ -f "scripts/training/train_mixed.sh" ] && [ -x "scripts/training/train_mixed.sh" ]; then
+    echo "  ✅ Mixed mode script: scripts/training/train_mixed.sh (executable)"
 else
     echo "  ❌ Mixed mode script missing or not executable"
 fi
@@ -141,7 +141,7 @@ if [ -d "recordings" ] && [ "$(find recordings -type f \( -name "*.wav" -o -name
     echo "✅ You're ready for VOICE TRAINING!"
     echo ""
     echo "   Recommended command:"
-    echo "   ./scripts/train_mixed.sh voice"
+    echo "   ./scripts/training/train_mixed.sh voice"
     echo ""
     echo "   This will:"
     echo "   - Try to use GPU for fastest training"
