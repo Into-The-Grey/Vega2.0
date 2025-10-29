@@ -32,6 +32,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 import hashlib
 import time
+import inspect
 
 # Audio processing imports
 try:
@@ -106,6 +107,26 @@ try:
     HTTP_AVAILABLE = True
 except ImportError:
     HTTP_AVAILABLE = False
+
+try:
+    from . import providers as provider_shims
+except Exception:  # pragma: no cover - defensive import guard
+    provider_shims = None
+
+
+def _select_provider_class(name: str, fallback):
+    """Select the provider class, honoring patched mocks while preferring full implementations."""
+    if not provider_shims:
+        return fallback
+
+    candidate = getattr(provider_shims, name, fallback)
+
+    # Known stub classes expose a sentinel flag; fall back to the full implementation when present.
+    if getattr(candidate, "__vega_stub__", False):
+        return fallback
+
+    return candidate
+
 
 logger = logging.getLogger(__name__)
 
@@ -771,11 +792,17 @@ class EnhancedVoiceManager:
         }
 
         # Initialize TTS providers
-        self.tts_providers["piper"] = PiperTTSProvider(provider_config)
-        self.tts_providers["elevenlabs"] = ElevenLabsTTSProvider(provider_config)
+        PiperProvider = _select_provider_class("PiperTTSProvider", PiperTTSProvider)
+        ElevenProvider = _select_provider_class(
+            "ElevenLabsTTSProvider", ElevenLabsTTSProvider
+        )
+
+        self.tts_providers["piper"] = PiperProvider(provider_config)
+        self.tts_providers["elevenlabs"] = ElevenProvider(provider_config)
 
         # Initialize STT providers
-        self.stt_providers["vosk"] = VoskSTTProvider(provider_config)
+        VoskProvider = _select_provider_class("VoskSTTProvider", VoskSTTProvider)
+        self.stt_providers["vosk"] = VoskProvider(provider_config)
 
         logger.info(
             f"Initialized voice providers - TTS: {list(self.tts_providers.keys())}, STT: {list(self.stt_providers.keys())}"
@@ -922,76 +949,42 @@ class EnhancedVoiceManager:
         # Generate speech
         provider_obj = self.tts_providers[provider]
 
-        # Handle different provider types (mock vs real)
+        def _coerce_audio(data: Any) -> bytes:
+            if isinstance(data, bytes):
+                return data
+            if isinstance(data, bytearray):
+                return bytes(data)
+            return b"mock_audio"
+
+        def _build_result(audio_data: bytes) -> TTSResult:
+            return TTSResult(
+                audio_data=audio_data,
+                format="wav",
+                metadata=AudioMetadata(
+                    duration=0.0, sample_rate=16000, channels=1, format="wav"
+                ),
+                voice_config=voice_config,
+                provider=provider,
+                generation_time=0.1,
+            )
+
         try:
-            # Try async call first (real providers)
-            result = await provider_obj.synthesize(text, voice_config)
-            if isinstance(result, TTSResult):
-                return result
-            else:
-                # Wrap simple bytes response
-                return TTSResult(
-                    audio_data=result,
-                    format="wav",
-                    metadata=AudioMetadata(
-                        duration=0.0, sample_rate=16000, channels=1, format="wav"
-                    ),
-                    voice_config=voice_config,
-                    provider=provider,
-                    generation_time=0.1,
-                )
+            result = provider_obj.synthesize(text, voice_config)
         except TypeError:
-            # Fall back to sync call (mock providers)
-            try:
-                # Call without voice_config for simple mock providers
-                audio_data = provider_obj.synthesize(text, **{})
-                if isinstance(audio_data, bytes):
-                    return TTSResult(
-                        audio_data=audio_data,
-                        format="wav",
-                        metadata=AudioMetadata(
-                            duration=0.0, sample_rate=16000, channels=1, format="wav"
-                        ),
-                        voice_config=voice_config,
-                        provider=provider,
-                        generation_time=0.1,
-                    )
-                else:
-                    # Handle different return types carefully
-                    return TTSResult(
-                        audio_data=(
-                            audio_data
-                            if isinstance(audio_data, bytes)
-                            else b"mock_audio"
-                        ),
-                        format="wav",
-                        metadata=AudioMetadata(
-                            duration=0.0, sample_rate=16000, channels=1, format="wav"
-                        ),
-                        voice_config=voice_config,
-                        provider=provider,
-                        generation_time=0.1,
-                    )
-            except Exception:
-                # Try with voice parameter using **kwargs for compatibility
-                voice_kwargs = (
-                    {"voice": voice_config.name}
-                    if voice_config and voice_config.name
-                    else {}
-                )
-                audio_data = provider_obj.synthesize(text, **voice_kwargs)
-                return TTSResult(
-                    audio_data=(
-                        audio_data if isinstance(audio_data, bytes) else b"mock_audio"
-                    ),
-                    format="wav",
-                    metadata=AudioMetadata(
-                        duration=0.0, sample_rate=16000, channels=1, format="wav"
-                    ),
-                    voice_config=voice_config,
-                    provider=provider,
-                    generation_time=0.1,
-                )
+            voice_kwargs = (
+                {"voice": voice_config.name}
+                if isinstance(voice_config, VoiceConfig) and voice_config.name
+                else {}
+            )
+            result = provider_obj.synthesize(text, **voice_kwargs)
+
+        if inspect.isawaitable(result):
+            result = await result
+
+        if isinstance(result, TTSResult):
+            return result
+
+        return _build_result(_coerce_audio(result))
 
     async def transcribe(
         self,
@@ -1018,7 +1011,7 @@ class EnhancedVoiceManager:
             elif hasattr(provider_obj, "is_available"):
                 is_available = provider_obj.is_available
             else:
-                is_available = True  # Default to available
+                is_available = True
 
             if not is_available:
                 raise VoiceError(f"STT provider '{provider}' not available")
@@ -1027,73 +1020,26 @@ class EnhancedVoiceManager:
                 f"STT provider '{provider}' availability check failed: {e}"
             )
 
-        # Transcribe audio
-        provider_obj = self.stt_providers[provider]
-
-        # Handle different provider types (mock vs real)
         try:
-            # Try async call first (real providers)
-            result = await provider_obj.transcribe(audio_data, language)
-            if isinstance(result, STTResult):
-                return result
-            else:
-                # Wrap simple string response
-                return STTResult(
-                    text=result,
-                    confidence=1.0,
-                    provider=provider,
-                    processing_time=0.1,
-                    language=language,
-                )
+            result = provider_obj.transcribe(audio_data, language)
         except TypeError:
-            # Fall back to sync call (mock providers)
-            try:
-                # Call without language for simple mock providers
-                text = provider_obj.transcribe(audio_data)
-                if isinstance(text, str):
-                    return STTResult(
-                        text=text,
-                        confidence=1.0,
-                        provider=provider,
-                        processing_time=0.1,
-                        language=language,
-                    )
-                elif isinstance(text, STTResult):
-                    # Return the result as-is if it's already an STTResult
-                    return text
-                else:
-                    # Convert to string if it's something else
-                    return STTResult(
-                        text=str(text),
-                        confidence=1.0,
-                        provider=provider,
-                        processing_time=0.1,
-                        language=language,
-                    )
-            except Exception:
-                # Try with **kwargs to handle different parameter styles
-                text = provider_obj.transcribe(
-                    audio_data, **{"language": language} if language else {}
-                )
-                if isinstance(text, str):
-                    return STTResult(
-                        text=text,
-                        confidence=1.0,
-                        provider=provider,
-                        processing_time=0.1,
-                        language=language,
-                    )
-                else:
-                    # Convert to string or return as-is
-                    return STTResult(
-                        text=(
-                            str(text) if not isinstance(text, STTResult) else text.text
-                        ),
-                        confidence=1.0,
-                        provider=provider,
-                        processing_time=0.1,
-                        language=language,
-                    )
+            result = provider_obj.transcribe(audio_data)
+
+        if inspect.isawaitable(result):
+            result = await result
+
+        if isinstance(result, STTResult):
+            return result
+
+        text = result if isinstance(result, str) else str(result)
+
+        return STTResult(
+            text=text,
+            confidence=1.0,
+            provider=provider,
+            processing_time=0.1,
+            language=language,
+        )
 
     async def convert_audio_format(
         self, audio_data: bytes, source_format: str, target_format: str, **kwargs
@@ -1119,14 +1065,29 @@ class EnhancedVoiceManager:
 
 
 # Global voice manager instance
+
+
+def _current_provider_signature() -> tuple[int, int, int]:
+    """Build a signature describing which provider classes are currently selected."""
+    piper_cls = _select_provider_class("PiperTTSProvider", PiperTTSProvider)
+    eleven_cls = _select_provider_class("ElevenLabsTTSProvider", ElevenLabsTTSProvider)
+    vosk_cls = _select_provider_class("VoskSTTProvider", VoskSTTProvider)
+    return (id(piper_cls), id(eleven_cls), id(vosk_cls))
+
+
 _voice_manager: Optional[EnhancedVoiceManager] = None
+_voice_provider_signature: Optional[tuple[int, int, int]] = None
 
 
 def get_voice_manager() -> EnhancedVoiceManager:
     """Get global voice manager instance"""
-    global _voice_manager
-    if _voice_manager is None:
+    global _voice_manager, _voice_provider_signature
+
+    signature = _current_provider_signature()
+
+    if _voice_manager is None or signature != _voice_provider_signature:
         _voice_manager = EnhancedVoiceManager()
+        _voice_provider_signature = signature
     return _voice_manager
 
 

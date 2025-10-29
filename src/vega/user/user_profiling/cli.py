@@ -7,25 +7,56 @@ Command-line interface for the User Profiling Engine (UPE).
 Provides easy access to profiling functions and system management.
 """
 
-import sys
 import os
 import asyncio
 import json
 from datetime import datetime, timedelta
 from pathlib import Path
 import typer
-from typing import Optional
-
-# Add parent directory to path for imports
-sys.path.append(str(Path(__file__).parent.parent))
+from typing import Optional, cast
+from functools import lru_cache
 
 from .database.user_profile_schema import UserProfileDatabase
-from .user_profile_daemon import UserProfileDaemon, DaemonConfig
-from .engines.persona_engine import PersonaEngine
-from .vega_integration import (
-    UserProfileManager,
-    DailyBriefingGenerator,
-)
+from .vega_integration import UserProfileManager
+
+
+class OptionalDependencyError(RuntimeError):
+    """Raised when a CLI command requires an optional dependency."""
+
+
+@lru_cache()
+def _load_daemon_components():
+    try:
+        from .user_profile_daemon import (
+            UserProfileDaemon,
+            DaemonConfig,
+            DailyBriefingGenerator,
+        )
+
+        return UserProfileDaemon, DaemonConfig, DailyBriefingGenerator
+    except ImportError as exc:  # pragma: no cover - runtime environment dependent
+        raise OptionalDependencyError(str(exc)) from exc
+
+
+@lru_cache()
+def _load_persona_engine():
+    try:
+        from .engines.persona_engine import PersonaEngine
+
+        return PersonaEngine
+    except ImportError as exc:  # pragma: no cover - runtime environment dependent
+        raise OptionalDependencyError(str(exc)) from exc
+
+
+@lru_cache()
+def _load_understanding_calculator():
+    try:
+        from .user_profile_daemon import UnderstandingScoreCalculator
+
+        return UnderstandingScoreCalculator
+    except ImportError as exc:  # pragma: no cover - runtime environment dependent
+        raise OptionalDependencyError(str(exc)) from exc
+
 
 app = typer.Typer(help="User Profiling Engine CLI")
 
@@ -54,7 +85,7 @@ def status(db_path: Optional[str] = typer.Option(None, help="Database path")):
     typer.echo("🔍 Checking user profiling system status...")
 
     try:
-        from ..user.user_profiling.database.user_profile_schema import (
+        from .database.user_profile_schema import (
             IdentityCore,
             ContactInfo,
             Calendar,
@@ -63,9 +94,12 @@ def status(db_path: Optional[str] = typer.Option(None, help="Database path")):
             SocialCircle,
             InterestsHobbies,
         )
-        from ..user.user_profiling.user_profile_daemon import (
-            UnderstandingScoreCalculator,
-        )
+
+        try:
+            UnderstandingScoreCalculator = _load_understanding_calculator()
+        except OptionalDependencyError as exc:
+            typer.echo(f"❌ Understanding score unavailable: {exc}")
+            raise typer.Exit(1)
 
         db = UserProfileDatabase(db_path)
         session = db.get_session()
@@ -115,6 +149,12 @@ def briefing(
 ):
     """Generate daily briefing"""
     typer.echo("📰 Generating daily briefing...")
+
+    try:
+        _, _, DailyBriefingGenerator = _load_daemon_components()
+    except OptionalDependencyError as exc:
+        typer.echo(f"❌ Daily briefing unavailable: {exc}")
+        raise typer.Exit(1)
 
     async def _generate_briefing():
         try:
@@ -220,10 +260,16 @@ def persona(
     """Show current persona state"""
     typer.echo("🎭 Analyzing persona state...")
 
+    try:
+        PersonaEngineCls = _load_persona_engine()
+    except OptionalDependencyError as exc:
+        typer.echo(f"❌ Persona analysis unavailable: {exc}")
+        raise typer.Exit(1)
+
     async def _analyze_persona():
         try:
             db = UserProfileDatabase(db_path)
-            persona_engine = PersonaEngine(db)
+            persona_engine = PersonaEngineCls(db)
 
             # Get persona summary
             summary = await persona_engine.get_persona_summary()
@@ -266,10 +312,17 @@ def scan(
     """Run profile scan"""
     typer.echo(f"🔍 Running {scan_type} profile scan...")
 
+    try:
+        UserProfileDaemonCls, DaemonConfigCls, _ = _load_daemon_components()
+    except OptionalDependencyError as exc:
+        typer.echo(f"❌ Profile scanning unavailable: {exc}")
+        raise typer.Exit(1)
+
     async def _run_scan():
         try:
-            config = DaemonConfig()
-            daemon = UserProfileDaemon(config, db_path)
+            config = DaemonConfigCls()
+            target_db_path = db_path or "user_profiling.db"
+            daemon = UserProfileDaemonCls(config, target_db_path)
 
             if scan_type == "full":
                 await daemon._run_full_scan()
@@ -293,9 +346,15 @@ def daemon(
     """Start user profiling daemon"""
     typer.echo("🤖 Starting user profiling daemon...")
 
+    try:
+        UserProfileDaemonCls, DaemonConfigCls, _ = _load_daemon_components()
+    except OptionalDependencyError as exc:
+        typer.echo(f"❌ Daemon startup unavailable: {exc}")
+        raise typer.Exit(1)
+
     async def _run_daemon():
         try:
-            config = DaemonConfig()
+            config = DaemonConfigCls()
 
             # Load config from file if provided
             if config_file and os.path.exists(config_file):
@@ -305,7 +364,8 @@ def daemon(
                         if hasattr(config, key):
                             setattr(config, key, value)
 
-            daemon = UserProfileDaemon(config, db_path)
+            target_db_path = db_path or "user_profiling.db"
+            daemon = UserProfileDaemonCls(config, target_db_path)
 
             typer.echo("✅ Daemon started. Press Ctrl+C to stop.")
             await daemon.start_daemon()
@@ -356,7 +416,9 @@ def export(
         export_data["data"]["identity"] = [
             {
                 "full_name": r.full_name,
-                "birth_date": r.birth_date.isoformat() if r.birth_date else None,
+                "birth_date": (
+                    r.birth_date.isoformat() if r.birth_date is not None else None
+                ),
                 "age": r.age,
                 "primary_language": r.primary_language,
                 "primary_location": r.primary_location,
@@ -377,7 +439,9 @@ def export(
                 {
                     "title": r.title,
                     "event_type": r.event_type,
-                    "start_time": r.start_time.isoformat() if r.start_time else None,
+                    "start_time": (
+                        r.start_time.isoformat() if r.start_time is not None else None
+                    ),
                     "importance_score": r.importance_score,
                     "stress_level": r.stress_level,
                 }
@@ -426,17 +490,31 @@ def test_integration():
     try:
         # Test core imports
         try:
-            from .config import get_config
-            from .db import log_conversation
-            from .llm import query_llm
+            import importlib
 
-            typer.echo("✅ Vega2.0 core components accessible")
+            config_module = importlib.import_module("config")
+            db_module = importlib.import_module("db")
+            llm_module = importlib.import_module("llm")
+
+            if all(
+                hasattr(module, attr)
+                for module, attr in (
+                    (config_module, "get_config"),
+                    (db_module, "log_conversation"),
+                    (llm_module, "query_llm"),
+                )
+            ):
+                typer.echo("✅ Vega2.0 core components accessible")
+            else:
+                typer.echo(
+                    "⚠️  Vega2.0 core modules loaded but expected attributes missing"
+                )
         except ImportError as e:
             typer.echo(f"⚠️  Vega2.0 core not accessible: {e}")
 
         # Test user profiling imports
         try:
-            from ..user.user_profiling.vega_integration import (
+            from .vega_integration import (
                 startup_user_profiling,
                 ContextualIntelligenceEngine,
                 UserProfileManager,

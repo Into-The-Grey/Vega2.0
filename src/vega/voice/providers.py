@@ -39,6 +39,8 @@ class STTProviderBase:
 
 # Optional real providers can be added here; tests patch these symbols.
 class PiperTTSProvider(TTSProviderBase):
+    __vega_stub__ = True
+
     def __init__(self, *args, **kwargs):
         pass
 
@@ -53,6 +55,8 @@ class PiperTTSProvider(TTSProviderBase):
 
 
 class VoskSTTProvider(STTProviderBase):
+    __vega_stub__ = True
+
     def __init__(self, *args, **kwargs):
         pass
 
