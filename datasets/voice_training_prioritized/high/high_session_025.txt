@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 25 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1201 | VT-45091 | [numbers_large            ] FYI, Memory usage hit 64,768 megabytes. (7179) Please.
+1202 | VT-75231 | [numbers_large            ] Okay, Throughput peaked at 120,000 requests per second. (2940) If possible.
+1203 | VT-20354 | [numbers_large            ] Heads up: Compute with 3,456,789 samples. (653) Thanks.
+1204 | VT-49253 | [numbers_large            ] Reminder: Compute with 3,456,789 samples. (2603) For real.
+1205 | VT-65406 | [numbers_large            ] Heads up: Memory usage hit 64,768 megabytes. (152) Please.
+1206 | VT-58839 | [numbers_large            ] Okay, Compute with 3,456,789 samples. (863) For real.
+1207 | VT-50861 | [numbers_large            ] Heads up: Pi to ten decimals: 3.1415926535. (1618) If possible.
+1208 | VT-98865 | [numbers_large            ] FYI, Checksum equals 4294967295. (8074)—got it.
+1209 | VT-50575 | [numbers_large            ] FYI, We archived 18.6 terabytes overnight. (270) For real.
+1210 | VT-13203 | [numbers_large            ] Nine hundred ninety-nine million, give or take. (689) For real.
+1211 | VT-97378 | [numbers_large            ] FYI, Budget shortfall is $1.2 million. (7910)—got it.
+1212 | VT-78208 | [numbers_large            ] Retry after 10^6 iterations. (2537) Please.
+1213 | VT-59337 | [numbers_large            ] Listen, Throughput peaked at 120,000 requests per second. (2553) Please.
+1214 | VT-18340 | [numbers_large            ] Budget shortfall is $1.2 million.
+1215 | VT-63926 | [numbers_large            ] Note: Retry after 10^6 iterations. (9501) If possible.
+1216 | VT-67640 | [numbers_large            ] FYI, Pi to ten decimals: 3.1415926535. (7420) Right now.
+1217 | VT-44694 | [numbers_large            ] Reminder: Retry after 10^6 iterations. (2937) Please.
+1218 | VT-90497 | [numbers_large            ] Throughput peaked at 120,000 requests per second. (8891) If possible.
+1219 | VT-55182 | [numbers_large            ] FYI, Nine hundred ninety-nine million, give or take. (6987) Please.
+1220 | VT-64421 | [numbers_large            ] Compute with 3,456,789 samples. (4160)—got it.
+1221 | VT-68672 | [numbers_large            ] Reminder: Nine hundred ninety-nine million, give or take. (2447) Thanks.
+1222 | VT-55384 | [numbers_large            ] We archived 18.6 terabytes overnight.
+1223 | VT-95279 | [numbers_large            ] Note: Memory usage hit 64,768 megabytes. (6188)
+1224 | VT-65850 | [numbers_large            ] Heads up: Memory usage hit 64,768 megabytes. (6756)—copy.
+1225 | VT-62058 | [numbers_large            ] Reminder: Compute with 3,456,789 samples. (1594) For real.
+1226 | VT-55221 | [numbers_large            ] Heads up: Throughput peaked at 120,000 requests per second. (891) For real.
+1227 | VT-26242 | [numbers_large            ] Okay, Retry after 10^6 iterations. (2796) If possible.
+1228 | VT-75333 | [numbers_large            ] Heads up: Throughput peaked at 120,000 requests per second. (4473) Thanks.
+1229 | VT-13203 | [numbers_large            ] Nine hundred ninety-nine million, give or take. (689) For real.
+1230 | VT-95834 | [numbers_large            ] Nine hundred ninety-nine million, give or take.
+1231 | VT-22238 | [numbers_large            ] Listen, Throughput peaked at 120,000 requests per second. (9758)—copy.
+1232 | VT-44474 | [numbers_large            ] FYI, Throughput peaked at 120,000 requests per second. (9146) Right now.
+1233 | VT-96782 | [numbers_large            ] FYI, Latency spiked to 2,147 milliseconds. (1982) For real.
+1234 | VT-57430 | [numbers_large            ] Throughput peaked at 120,000 requests per second.
+1235 | VT-44474 | [numbers_large            ] FYI, Throughput peaked at 120,000 requests per second. (9146) Right now.
+1236 | VT-24638 | [numbers_large            ] Reminder: Latency spiked to 2,147 milliseconds. (2285)
+1237 | VT-53640 | [numbers_large            ] Reminder: Throughput peaked at 120,000 requests per second. (8242) If possible.
+1238 | VT-11502 | [numbers_large            ] Reminder: Nine hundred ninety-nine million, give or take. (1214)—copy.
+1239 | VT-59337 | [numbers_large            ] Listen, Throughput peaked at 120,000 requests per second. (2553) Please.
+1240 | VT-64518 | [numbers_large            ] Note: Memory usage hit 64,768 megabytes. (586)
+1241 | VT-74911 | [numbers_large            ] We archived 18.6 terabytes overnight. (1658)—got it.
+1242 | VT-19761 | [numbers_large            ] Note: Memory usage hit 64,768 megabytes. (6285) Thanks.
+1243 | VT-46309 | [numbers_large            ] Hey, Retry after 10^6 iterations. (2388) For real.
+1244 | VT-68012 | [numbers_large            ] Hey, Nine hundred ninety-nine million, give or take. (4362)—copy.
+1245 | VT-64421 | [numbers_large            ] Compute with 3,456,789 samples. (4160)—got it.
+1246 | VT-67640 | [numbers_large            ] FYI, Pi to ten decimals: 3.1415926535. (7420) Right now.
+1247 | VT-33468 | [numbers_large            ] Note: Throughput peaked at 120,000 requests per second. (5591) Thanks.
+1248 | VT-81044 | [numbers_large            ] Okay, Throughput peaked at 120,000 requests per second. (6965)
+1249 | VT-10458 | [numbers_large            ] Listen, Throughput peaked at 120,000 requests per second. (4689) Thanks.
+1250 | VT-67344 | [numbers_large            ] Compute with 3,456,789 samples. (5157) Please.

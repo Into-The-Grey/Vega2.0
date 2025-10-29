@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 29 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1401 | VT-0157 | [numeric                  ] Ship it to: 123 Maple St., Springfield, IL 62704
+1402 | VT-20392 | [numeric                  ] The total comes to $797.31. For real.
+1403 | VT-67315 | [numeric                  ] FYI, Temperature is 7°F right now.—copy.
+1404 | VT-0123 | [numeric                  ] The invoice date is 1995-02-26.
+1405 | VT-99326 | [numeric                  ] Listen, The invoice date is 2023-06-05. If possible.
+1406 | VT-81453 | [numeric                  ] Hey, The total comes to $56.96. Right now.
+1407 | VT-72394 | [numeric                  ] Temperature is 44°F right now. If possible.
+1408 | VT-0131 | [numeric                  ] The invoice date is 2016-09-10.
+1409 | VT-0132 | [numeric                  ] Ship it to: 9 Grove Court, Boston, MA 02108
+1410 | VT-67438 | [numeric                  ] FYI, The server’s IP is 116.129.57.243. Thanks.
+1411 | VT-53348 | [numeric                  ] Listen, My backup number is (800) 421-4817. Thanks.
+1412 | VT-50430 | [numeric                  ] FYI, My backup number is (865) 485-5089.—copy.
+1413 | VT-17918 | [numeric                  ] Listen, The invoice date is 2023-06-05. Please.
+1414 | VT-42251 | [numeric                  ] My backup number is (580) 767-2680.
+1415 | VT-79502 | [numeric                  ] Listen, Temperature is -14°F right now.—got it.
+1416 | VT-11992 | [numeric                  ] My backup number is (290) 647-2734.
+1417 | VT-0118 | [numeric                  ] My backup number is (654) 655-4868.
+1418 | VT-24597 | [numeric                  ] Hey, My backup number is (448) 251-9700.—copy.
+1419 | VT-0133 | [numeric                  ] The invoice date is 2000-09-23.
+1420 | VT-20468 | [numeric                  ] Note: Call me at (530) 926-4694. Please.
+1421 | VT-32084 | [numeric                  ] Heads up: Ship it to: 808 Elm Street, Denver, CO 80202 Please.
+1422 | VT-36988 | [numeric                  ] My backup number is (275) 517-8565.
+1423 | VT-34446 | [numeric                  ] Note: My backup number is (654) 655-4868. Thanks.
+1424 | VT-99326 | [numeric                  ] Listen, The invoice date is 2023-06-05. If possible.
+1425 | VT-0129 | [numeric                  ] My backup number is (275) 517-8565.
+1426 | VT-74092 | [numeric                  ] Okay, Temperature is 50°F right now. Right now.
+1427 | VT-65954 | [numeric                  ] FYI, The server’s IP is 234.236.45.107. For real.
+1428 | VT-43515 | [numeric                  ] Reminder: Call me at (583) 429-1461.—got it.
+1429 | VT-0143 | [numeric                  ] The server’s IP is 211.148.19.33.
+1430 | VT-65954 | [numeric                  ] FYI, The server’s IP is 234.236.45.107. For real.
+1431 | VT-37136 | [numeric                  ] Reminder: My backup number is (275) 517-8565. If possible.
+1432 | VT-0134 | [numeric                  ] My backup number is (580) 767-2680.
+1433 | VT-24920 | [numeric                  ] Hey, The invoice date is 1995-02-26. Thanks.
+1434 | VT-0131 | [numeric                  ] The invoice date is 2016-09-10.
+1435 | VT-62590 | [numeric                  ] Listen, Tracking ID: KNWI5FLUL1 Right now.
+1436 | VT-0149 | [numeric                  ] Temperature is -14°F right now.
+1437 | VT-0136 | [numeric                  ] Event date: 2003-01-25 at 7:22 PM.
+1438 | VT-25681 | [numeric                  ] FYI, My backup number is (865) 485-5089.—got it.
+1439 | VT-79502 | [numeric                  ] Listen, Temperature is -14°F right now.—got it.
+1440 | VT-53348 | [numeric                  ] Listen, My backup number is (800) 421-4817. Thanks.
+1441 | VT-0125 | [numeric                  ] The invoice date is 2005-06-26.
+1442 | VT-77050 | [numeric                  ] Heads up: Call me at (583) 429-1461.—got it.
+1443 | VT-29662 | [numeric                  ] Heads up: My backup number is (290) 647-2734.—got it.
+1444 | VT-75923 | [numeric                  ] Hey, Tracking ID: K5BXJ2POP8—copy.
+1445 | VT-0149 | [numeric                  ] Temperature is -14°F right now.
+1446 | VT-44140 | [numeric                  ] Hey, Ship it to: 605 Sunset Terrace, Nashville, TN 37201 If possible.
+1447 | VT-81453 | [numeric                  ] Hey, The total comes to $56.96. Right now.
+1448 | VT-27892 | [numeric                  ] Temperature is 7°F right now.—copy.
+1449 | VT-0132 | [numeric                  ] Ship it to: 9 Grove Court, Boston, MA 02108
+1450 | VT-15871 | [numeric                  ] Listen, Event date: 2003-01-25 at 7:22 PM. For real.

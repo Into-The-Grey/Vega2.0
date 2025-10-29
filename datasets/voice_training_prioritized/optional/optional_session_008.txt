@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 8 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0351 | VT-18508 | [dialect_southern_us      ] FYI, Fixing to head out in a minute. Thanks.
+0352 | VT-93573 | [dialect_southern_us      ] Okay, I’m busier than a one‑armed paperhanger.—copy.
+0353 | VT-36174 | [dialect_southern_us      ] Heads up: That ain’t it, chief. Right now.
+0354 | VT-88584 | [dialect_southern_us      ] Hey, Bless your heart, you tried.—got it.
+0355 | VT-88190 | [dialect_southern_us      ] Hey, I’m busier than a one‑armed paperhanger. For real.
+0356 | VT-61386 | [dialect_southern_us      ] Note: Y’all ready or what? For real.
+0357 | VT-49733 | [dialect_southern_us      ] Hey, Bless your heart, you tried. Please.
+0358 | VT-59605 | [dialect_southern_us      ] Reminder: Bless your heart, you tried. Thanks.
+0359 | VT-58889 | [dialect_southern_us      ] Listen, Hotter than blue blazes today. Right now.
+0360 | VT-64423 | [dialect_southern_us      ] Okay, Couldn’t pour water out of a boot with instructions on the heel.—copy.
+0361 | VT-26432 | [dialect_southern_us      ] Note: Might could get that done by supper. Thanks.
+0362 | VT-74742 | [dialect_southern_us      ] FYI, Might could get that done by supper. Please.
+0363 | VT-80092 | [dialect_southern_us      ] FYI, Fixing to head out in a minute. Right now.
+0364 | VT-88584 | [dialect_southern_us      ] Hey, Bless your heart, you tried.—got it.
+0365 | VT-60971 | [dialect_southern_us      ] Okay, Hush now; I’m thinking. For real.
+0366 | VT-83030 | [dialect_southern_us      ] Bless your heart, you tried. If possible.
+0367 | VT-80041 | [dialect_southern_us      ] Heads up: Bless your heart, you tried. If possible.
+0368 | VT-96088 | [dialect_southern_us      ] Okay, Hotter than blue blazes today. If possible.
+0369 | VT-31283 | [dialect_southern_us      ] FYI, Might could get that done by supper. For real.
+0370 | VT-94705 | [dialect_southern_us      ] Reminder: Y’all ready or what?
+0371 | VT-80092 | [dialect_southern_us      ] FYI, Fixing to head out in a minute. Right now.
+0372 | VT-48320 | [dialect_southern_us      ] Listen, Y’all ready or what?—got it.
+0373 | VT-80092 | [dialect_southern_us      ] FYI, Fixing to head out in a minute. Right now.
+0374 | VT-96708 | [dialect_southern_us      ] Reminder: That dog won’t hunt. Thanks.
+0375 | VT-33668 | [dialect_southern_us      ] Listen, Y’all ready or what? For real.
+0376 | VT-80092 | [dialect_southern_us      ] FYI, Fixing to head out in a minute. Right now.
+0377 | VT-41114 | [dystopian                ] The drones monitor your heartbeat. Don’t run. Right now.
+0378 | VT-10966 | [dystopian                ] Okay, We stopped dreaming when the sky turned red. Right now.
+0379 | VT-29690 | [dystopian                ] Okay, We stopped dreaming when the sky turned red.
+0380 | VT-36582 | [dystopian                ] Hey, We stopped dreaming when the sky turned red. If possible.
+0381 | VT-89103 | [dystopian                ] FYI, Hope is a virus they haven’t managed to eliminate yet. Please.
+0382 | VT-91742 | [dystopian                ] Okay, We stopped dreaming when the sky turned red. If possible.
+0383 | VT-84652 | [dystopian                ] Reminder: We stopped dreaming when the sky turned red. If possible.
+0384 | VT-41114 | [dystopian                ] The drones monitor your heartbeat. Don’t run. Right now.
+0385 | VT-27552 | [dystopian                ] Okay, Hope is a virus they haven’t managed to eliminate yet. For real.
+0386 | VT-39046 | [dystopian                ] Reminder: We stopped dreaming when the sky turned red. For real.
+0387 | VT-31749 | [dystopian                ] Note: The drones monitor your heartbeat. Don’t run. Thanks.
+0388 | VT-60889 | [dystopian                ] Reminder: We stopped dreaming when the sky turned red.—got it.
+0389 | VT-73451 | [dystopian                ] The drones monitor your heartbeat. Don’t run.—copy.
+0390 | VT-69105 | [dystopian                ] Listen, Hope is a virus they haven’t managed to eliminate yet.—copy.
+0391 | VT-94042 | [dystopian                ] Hope is a virus they haven’t managed to eliminate yet.—got it.
+0392 | VT-13622 | [dystopian                ] FYI, Hope is a virus they haven’t managed to eliminate yet. If possible.
+0393 | VT-44093 | [dystopian                ] Note: We stopped dreaming when the sky turned red. For real.
+0394 | VT-94628 | [dystopian                ] Note: Hope is a virus they haven’t managed to eliminate yet.—copy.
+0395 | VT-94353 | [dystopian                ] Hope is a virus they haven’t managed to eliminate yet.
+0396 | VT-31749 | [dystopian                ] Note: The drones monitor your heartbeat. Don’t run. Thanks.
+0397 | VT-24273 | [dystopian                ] FYI, Hope is a virus they haven’t managed to eliminate yet.
+0398 | VT-22050 | [dystopian                ] Reminder: Hope is a virus they haven’t managed to eliminate yet. Thanks.
+0399 | VT-14865 | [dystopian                ] Heads up: The drones monitor your heartbeat. Don’t run.
+0400 | VT-84652 | [dystopian                ] Reminder: We stopped dreaming when the sky turned red. If possible.

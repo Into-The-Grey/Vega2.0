@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 32 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1551 | VT-322431 | [conditionals             ] Real talk, Listen, Provided the tests are green, merge. For real. right now. (alt)
+1552 | VT-349735 | [conditionals             ] Listen, If A then B, otherwise C.—got it. — got it. (alt)
+1553 | VT-389192 | [dates_times              ] Reminder: Okay, Schedule it biweekly starting next Monday. (7524) please.
+1554 | VT-378104 | [dates_times              ] Quick one: Heads up: Sunrise is at 06:58; sunset at 17:12. (1041)—copy. — got it.
+1555 | VT-372512 | [dates_times              ] Heads up: Schedule it biweekly starting next Monday. (3129) Right now. please.
+1556 | VT-370381 | [dates_times              ] Listen, Reminder: The deadline moved from Q3 to Q4. (8292) For real. if you can. (alt)
+1557 | VT-383507 | [hesitations_fillers      ] Listen, Heads up: Hmm, not exactly, but close. If possible. — now.
+1558 | VT-372309 | [hesitations_fillers      ] Reminder: Listen, Right… so… moving on. Right now. — got it. (alt)
+1559 | VT-309862 | [hesitations_fillers      ] Note: Reminder: Hmm, not exactly, but close. For real. — got it. (alt)
+1560 | VT-348393 | [hesitations_fillers      ] Real talk, Heads up: I… I don’t know if that’ll fly. For real. — now.
+1561 | VT-370282 | [interjection             ] Heads up: Heads up: Sorta. Right now. (alt)
+1562 | VT-334237 | [interjection             ] Note: FYI, Got it. If possible. thanks. (alt)
+1563 | VT-378193 | [interjection             ] Reminder: Listen, Uh-huh. if you can.
+1564 | VT-341114 | [interjection             ] Reminder: Understood. — got it. (alt)
+1565 | VT-375574 | [interrogative            ] Okay, FYI, Why does it always rain when I'm unprepared?—copy. thanks. (alt)
+1566 | VT-357154 | [interrogative            ] Hey, Is this really what you want? Right now. — got it.
+1567 | VT-370575 | [interrogative            ] Okay, FYI, Is this really what you want?—copy. if you can.
+1568 | VT-387062 | [interrogative            ] Heads up: Is this really what you want? For real. if you can.
+1569 | VT-352383 | [measurements_units       ] FYI, Torque the bolt to 5 newton-meters. (7982) Thanks..
+1570 | VT-328683 | [measurements_units       ] Listen, Fan speed at forty percent. (3180) Right now. — got it.
+1571 | VT-332662 | [measurements_units       ] FYI, Reminder: Torque the bolt to 6 newton-meters. (2773) If possible. — confirm.
+1572 | VT-317477 | [measurements_units       ] Real talk, Note: Hold temperature at 205 Celsius. (6101)—got it. — got it.
+1573 | VT-345870 | [numbers_large            ] FYI, Pi to ten decimals: 2.1415926535. (4114)—copy.
+1574 | VT-332411 | [numbers_large            ] Note: Reminder: Retry after 9^6 iterations. (6520) right now.
+1575 | VT-316544 | [numbers_large            ] Okay, Heads up: Pi to ten decimals: 2.1415926535. (4118) Thanks. — confirm.
+1576 | VT-391680 | [numbers_large            ] Note: Note: Memory usage hit 65,768 megabytes. (6285) Thanks. please.
+1577 | VT-321465 | [numeric                  ] Listen, Reminder: The total comes to $9,693.94. please.
+1578 | VT-340888 | [numeric                  ] Reminder: Hey, The invoice date is 2023-06-05. If possible..
+1579 | VT-325995 | [numeric                  ] FYI, Order #840058 confirmed. Thanks. right now. (alt)
+1580 | VT-339529 | [numeric                  ] FYI, Temperature is -14°F right now.
+1581 | VT-408867 | [comparatives_superlatives] Real talk, Hey, Our best result so far. For real. if you can.
+1582 | VT-417348 | [comparatives_superlatives] Heads up: Note: Better, but not best. For real. — got it.
+1583 | VT-435569 | [comparatives_superlatives] Heads up: Heads up: Our best result so far. If possible. — got it.
+1584 | VT-460055 | [comparatives_superlatives] Listen, Hey, The smallest feasible footprint. Please. please.
+1585 | VT-415002 | [comparatives_superlatives] Hey, The toughest challenge yet.—copy.
+1586 | VT-499213 | [comparatives_superlatives] Listen, Hey, This is the cheapest viable option. If possible. thanks. (alt)
+1587 | VT-487716 | [comparatives_superlatives] Note: Reminder: Faster than yesterday, slower than ideal.—copy. right now. (alt)
+1588 | VT-422437 | [comparatives_superlatives] FYI, Hey, Our best result so far. For real. — got it. (alt)
+1589 | VT-494531 | [comparatives_superlatives] Listen, Listen, This is the cheapest viable option. please. (alt)
+1590 | VT-434942 | [comparatives_superlatives] Real talk, Note: The smallest feasible footprint. Right now..
+1591 | VT-403135 | [comparatives_superlatives] Reminder: Listen, Less fragile, more resilient. If possible. right now.
+1592 | VT-436137 | [comparatives_superlatives] Quick one: Reminder: The toughest challenge yet. Right now. thanks.
+1593 | VT-434673 | [comparatives_superlatives] Reminder: Reminder: Better, but not best. Please. please.
+1594 | VT-468838 | [comparatives_superlatives] Listen, Okay, Worse latency but better throughput. — now.
+1595 | VT-468669 | [comparatives_superlatives] Heads up: Note: This is the cheapest viable option.—got it. — confirm.
+1596 | VT-459914 | [comparatives_superlatives] Note: FYI, Faster than yesterday, slower than ideal. If possible..
+1597 | VT-457503 | [comparatives_superlatives] Note: Note: Better, but not best. Right now. — got it.
+1598 | VT-406923 | [comparatives_superlatives] Heads up: Our best result so far. Please. — confirm.
+1599 | VT-435022 | [comparatives_superlatives] Real talk, This is the cheapest viable option. — now.
+1600 | VT-438998 | [comparatives_superlatives] Note: Listen, Less fragile, more resilient. If possible. thanks.

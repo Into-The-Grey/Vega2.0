@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 181 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+9001 | VT-608126 | [sales_pitch              ] Note: Heads up: Why settle for less when you can have excellence? — now.
+9002 | VT-541527 | [sales_pitch              ] Heads up: Why settle for less when you can have excellence? Thanks. — now.
+9003 | VT-524672 | [sales_pitch              ] Heads up: Why settle for less when you can have excellence? right now. (alt)
+9004 | VT-515921 | [sales_pitch              ] Okay, Okay, This offer won’t last—act today! if you can.
+9005 | VT-651895 | [sales_pitch              ] Heads up: Okay, Why settle for less when you can have excellence?—copy. — confirm.
+9006 | VT-537759 | [sales_pitch              ] Why settle for less when you can have excellence? if you can.
+9007 | VT-575361 | [sales_pitch              ] Note: Heads up: Unlock premium features now with just one click! Thanks. — now.
+9008 | VT-616749 | [sales_pitch              ] Okay, Why settle for less when you can have excellence? Please..
+9009 | VT-641212 | [sales_pitch              ] Real talk, Why settle for less when you can have excellence? Thanks. right now.
+9010 | VT-509427 | [sales_pitch              ] Unlock premium features now with just one click! Thanks. — got it.
+9011 | VT-640089 | [sales_pitch              ] Reminder: Hey, This offer won’t last—act today! Thanks. — got it.
+9012 | VT-578130 | [sales_pitch              ] Note: FYI, Why settle for less when you can have excellence?—got it. — got it.
+9013 | VT-659694 | [sales_pitch              ] Listen, Hey, Unlock premium features now with just one click! Please. — got it.
+9014 | VT-590855 | [sales_pitch              ] Real talk, Hey, Unlock premium features now with just one click!—copy. right now. (alt)
+9015 | VT-606717 | [sales_pitch              ] Quick one: Listen, Why settle for less when you can have excellence? Please. right now.
+9016 | VT-593118 | [sales_pitch              ] Reminder: Reminder: Unlock premium features now with just one click! Please. — got it.
+9017 | VT-599626 | [sales_pitch              ] Heads up: Heads up: Why settle for less when you can have excellence?—copy. right now. (alt)
+9018 | VT-656342 | [sales_pitch              ] Okay, Listen, Why settle for less when you can have excellence?. (alt)
+9019 | VT-632576 | [sales_pitch              ] Quick one: Hey, This offer won’t last—act today! Please. — confirm. (alt)
+9020 | VT-634868 | [sales_pitch              ] FYI, Okay, Unlock premium features now with just one click! If possible. — now.
+9021 | VT-560178 | [sales_pitch              ] Quick one: This offer won’t last—act today! If possible. — confirm.
+9022 | VT-655986 | [sales_pitch              ] Reminder: This offer won’t last—act today! Please. thanks. (alt)
+9023 | VT-663524 | [sales_pitch              ] FYI, Hey, Unlock premium features now with just one click!—copy. — confirm.
+9024 | VT-534264 | [sales_pitch              ] Heads up: Hey, Unlock premium features now with just one click!.
+9025 | VT-576606 | [sales_pitch              ] Why settle for less when you can have excellence? — got it.
+9026 | VT-690082 | [sales_pitch              ] Heads up: This offer won’t last—act today! If possible..
+9027 | VT-616428 | [sales_pitch              ] Listen, Heads up: This offer won’t last—act today! Thanks..
+9028 | VT-683752 | [sales_pitch              ] Heads up: Hey, This offer won’t last—act today! Thanks. right now.
+9029 | VT-625760 | [sales_pitch              ] FYI, Reminder: Unlock premium features now with just one click!—copy. if you can. (alt)
+9030 | VT-610719 | [sales_pitch              ] FYI, FYI, Why settle for less when you can have excellence?—got it.. (alt)
+9031 | VT-689521 | [sales_pitch              ] Heads up: Note: This offer won’t last—act today!—copy. please.
+9032 | VT-667036 | [sales_pitch              ] Quick one: Hey, This offer won’t last—act today!—copy. right now.
+9033 | VT-690428 | [sales_pitch              ] Listen, Why settle for less when you can have excellence? Please. right now.
+9034 | VT-679907 | [sales_pitch              ] Note: This offer won’t last—act today! Thanks.
+9035 | VT-661557 | [sales_pitch              ] Note: Why settle for less when you can have excellence? For real..
+9036 | VT-514056 | [sales_pitch              ] Note: Reminder: This offer won’t last—act today! Please. right now.
+9037 | VT-689874 | [sales_pitch              ] Real talk, Note: This offer won’t last—act today! If possible. thanks. (alt)
+9038 | VT-537277 | [sales_pitch              ] Okay, Okay, Why settle for less when you can have excellence?—copy. if you can.
+9039 | VT-592751 | [sales_pitch              ] Okay, Unlock premium features now with just one click! Thanks. — now. (alt)
+9040 | VT-669476 | [sales_pitch              ] Okay, Note: This offer won’t last—act today!—copy..
+9041 | VT-546685 | [sales_pitch              ] Okay, FYI, Why settle for less when you can have excellence? Thanks. thanks. (alt)
+9042 | VT-526846 | [sales_pitch              ] Real talk, Hey, This offer won’t last—act today!—got it.. (alt)
+9043 | VT-569696 | [sales_pitch              ] Okay, Okay, Unlock premium features now with just one click! right now.
+9044 | VT-621665 | [sales_pitch              ] Reminder: Okay, Why settle for less when you can have excellence? please.
+9045 | VT-623769 | [sales_pitch              ] Okay, Unlock premium features now with just one click! If possible..
+9046 | VT-613823 | [sales_pitch              ] FYI, FYI, Why settle for less when you can have excellence? Thanks.
+9047 | VT-539480 | [sales_pitch              ] FYI, Hey, This offer won’t last—act today!—got it. — got it. (alt)
+9048 | VT-624508 | [sales_pitch              ] Okay, Why settle for less when you can have excellence? If possible. if you can.
+9049 | VT-569330 | [sales_pitch              ] Note: Okay, Why settle for less when you can have excellence? Please. — now.
+9050 | VT-661355 | [sales_pitch              ] Quick one: Heads up: Why settle for less when you can have excellence? thanks. (alt)

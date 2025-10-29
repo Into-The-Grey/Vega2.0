@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 20 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0951 | VT-24134 | [sarcastic                ] Reminder: Oh great, another meeting that could've been an email. Please.
+0952 | VT-27246 | [sarcastic                ] Note: Yeah, because that always works out perfectly, doesn’t it? If possible.
+0953 | VT-47595 | [sarcastic                ] I'm totally not rolling my eyes right now.
+0954 | VT-39763 | [sarcastic                ] Listen, Oh great, another meeting that could've been an email. If possible.
+0955 | VT-35145 | [sarcastic                ] Listen, Yeah, because that always works out perfectly, doesn’t it? Please.
+0956 | VT-17535 | [sarcastic                ] Yeah, because that always works out perfectly, doesn’t it? Thanks.
+0957 | VT-13387 | [sarcastic                ] Listen, Yeah, because that always works out perfectly, doesn’t it?
+0958 | VT-20073 | [sarcastic                ] FYI, I'm totally not rolling my eyes right now. Please.
+0959 | VT-59208 | [sarcastic                ] Hey, I'm totally not rolling my eyes right now. Right now.
+0960 | VT-46369 | [sarcastic                ] Note: Oh great, another meeting that could've been an email. Thanks.
+0961 | VT-31868 | [sarcastic                ] Listen, Yeah, because that always works out perfectly, doesn’t it?—copy.
+0962 | VT-99641 | [sarcastic                ] Reminder: Yeah, because that always works out perfectly, doesn’t it? If possible.
+0963 | VT-12636 | [sarcastic                ] Heads up: Oh great, another meeting that could've been an email.—got it.
+0964 | VT-80675 | [sarcastic                ] Note: Oh great, another meeting that could've been an email.—copy.
+0965 | VT-20295 | [sarcastic                ] Listen, I'm totally not rolling my eyes right now. Thanks.
+0966 | VT-64909 | [sarcastic                ] FYI, I'm totally not rolling my eyes right now. Right now.
+0967 | VT-90680 | [sarcastic                ] Listen, Yeah, because that always works out perfectly, doesn’t it? Please.
+0968 | VT-13387 | [sarcastic                ] Listen, Yeah, because that always works out perfectly, doesn’t it?
+0969 | VT-70382 | [sarcastic                ] I'm totally not rolling my eyes right now. If possible.
+0970 | VT-35495 | [sarcastic                ] Note: Oh great, another meeting that could've been an email. For real.
+0971 | VT-41388 | [sarcastic                ] Reminder: I'm totally not rolling my eyes right now.—got it.
+0972 | VT-10963 | [sarcastic                ] Okay, I'm totally not rolling my eyes right now. Right now.
+0973 | VT-96968 | [sarcastic                ] Listen, Oh great, another meeting that could've been an email.—copy.
+0974 | VT-54848 | [sarcastic                ] Hey, Yeah, because that always works out perfectly, doesn’t it? If possible.
+0975 | VT-90680 | [sarcastic                ] Listen, Yeah, because that always works out perfectly, doesn’t it? Please.
+0976 | VT-40776 | [sarcastic                ] Hey, Yeah, because that always works out perfectly, doesn’t it?—got it.
+0977 | VT-90680 | [sarcastic                ] Listen, Yeah, because that always works out perfectly, doesn’t it? Please.
+0978 | VT-38422 | [sarcastic                ] Reminder: Oh great, another meeting that could've been an email. Please.
+0979 | VT-93446 | [sarcastic                ] Reminder: I'm totally not rolling my eyes right now.—copy.
+0980 | VT-90680 | [sarcastic                ] Listen, Yeah, because that always works out perfectly, doesn’t it? Please.
+0981 | VT-39767 | [sports_cast              ] Listen, He shoots—top shelf!
+0982 | VT-39767 | [sports_cast              ] Listen, He shoots—top shelf!
+0983 | VT-22946 | [sports_cast              ] The underdogs are up by two.
+0984 | VT-67406 | [sports_cast              ] Okay, He shoots—top shelf!
+0985 | VT-61705 | [sports_cast              ] He shoots—top shelf!
+0986 | VT-23846 | [sports_cast              ] Hey, He shoots—top shelf!
+0987 | VT-67406 | [sports_cast              ] Okay, He shoots—top shelf!
+0988 | VT-39767 | [sports_cast              ] Listen, He shoots—top shelf!
+0989 | VT-97535 | [structured               ] Reminder: Grocery list: milk, bread, eggs, spinach, coffee.—copy.
+0990 | VT-90183 | [structured               ] Reminder: Agenda: introductions, updates, blockers, next steps. For real.
+0991 | VT-29121 | [structured               ] Hey, Grocery list: milk, bread, eggs, spinach, coffee. For real.
+0992 | VT-73803 | [structured               ] Heads up: Agenda: introductions, updates, blockers, next steps.—copy.
+0993 | VT-43906 | [structured               ] Listen, Checklist: backups done, patches applied, monitors green. Please.
+0994 | VT-31524 | [structured               ] FYI, Checklist: backups done, patches applied, monitors green.—got it.
+0995 | VT-46991 | [structured               ] Note: Packing list: passport, charger, adapters, toiletries, meds.
+0996 | VT-97535 | [structured               ] Reminder: Grocery list: milk, bread, eggs, spinach, coffee.—copy.
+0997 | VT-69763 | [structured               ] FYI, Checklist: backups done, patches applied, monitors green.—got it.
+0998 | VT-96871 | [structured               ] Okay, Agenda: introductions, updates, blockers, next steps. Please.
+0999 | VT-58348 | [structured               ] FYI, Grocery list: milk, bread, eggs, spinach, coffee.—got it.
+1000 | VT-65972 | [structured               ] Hey, Checklist: backups done, patches applied, monitors green. For real.

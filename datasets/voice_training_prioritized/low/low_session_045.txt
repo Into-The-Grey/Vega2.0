@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 45 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2201 | VT-93863 | [medical                  ] Okay, Schedule an MRI with contrast, stat. Please.
+2202 | VT-66590 | [medical                  ] Heads up: Document informed consent prior to procedure. Right now.
+2203 | VT-49519 | [medical                  ] Okay, Prescribe naproxen, take with food. Right now.
+2204 | VT-49387 | [medical                  ] Heads up: Advise RICE protocol for ankle sprain.—copy.
+2205 | VT-17023 | [medical                  ] Hey, Vitals stable; maintain IV fluids at 75 mL per hour. For real.
+2206 | VT-18018 | [medical                  ] Hey, Administer 0.4 mg sublingual nitroglycerin. Please.
+2207 | VT-27614 | [medical                  ] FYI, Patient reports acute onset of chest discomfort.—got it.
+2208 | VT-34106 | [medical                  ] Note: Advise RICE protocol for ankle sprain.—copy.
+2209 | VT-11866 | [medical                  ] Hey, Allergic to penicillin; note in the chart.—got it.
+2210 | VT-54544 | [medical                  ] Administer 0.4 mg sublingual nitroglycerin.
+2211 | VT-66590 | [medical                  ] Heads up: Document informed consent prior to procedure. Right now.
+2212 | VT-53835 | [medical                  ] FYI, Document informed consent prior to procedure. If possible.
+2213 | VT-82308 | [medical                  ] Heads up: Document informed consent prior to procedure. If possible.
+2214 | VT-72607 | [medical                  ] Reminder: Advise RICE protocol for ankle sprain. Right now.
+2215 | VT-55455 | [medical                  ] Okay, Patient reports acute onset of chest discomfort. If possible.
+2216 | VT-32396 | [medical                  ] Okay, Patient reports acute onset of chest discomfort.—copy.
+2217 | VT-15441 | [medical                  ] Note: Document informed consent prior to procedure. Please.
+2218 | VT-85508 | [medical                  ] Administer 0.4 mg sublingual nitroglycerin.
+2219 | VT-69135 | [medical                  ] Listen, Order a CBC and comprehensive metabolic panel. Please.
+2220 | VT-71581 | [medical                  ] Order a CBC and comprehensive metabolic panel.—got it.
+2221 | VT-13881 | [medical                  ] Hey, Order a CBC and comprehensive metabolic panel.
+2222 | VT-54077 | [medical                  ] FYI, Advise RICE protocol for ankle sprain.—got it.
+2223 | VT-13214 | [medical                  ] FYI, Schedule an MRI with contrast, stat.—copy.
+2224 | VT-26352 | [medical                  ] Listen, Schedule an MRI with contrast, stat. If possible.
+2225 | VT-65373 | [medical                  ] Note: Patient reports acute onset of chest discomfort. Thanks.
+2226 | VT-88409 | [medical                  ] Note: Document informed consent prior to procedure. Thanks.
+2227 | VT-85779 | [medical                  ] Reminder: Schedule an MRI with contrast, stat.
+2228 | VT-44549 | [medical                  ] Okay, Vitals stable; maintain IV fluids at 75 mL per hour.—copy.
+2229 | VT-27614 | [medical                  ] FYI, Patient reports acute onset of chest discomfort.—got it.
+2230 | VT-65373 | [medical                  ] Note: Patient reports acute onset of chest discomfort. Thanks.
+2231 | VT-36453 | [medical                  ] Heads up: Schedule an MRI with contrast, stat.—copy.
+2232 | VT-55455 | [medical                  ] Okay, Patient reports acute onset of chest discomfort. If possible.
+2233 | VT-19299 | [medical                  ] Hey, Allergic to penicillin; note in the chart.—copy.
+2234 | VT-61864 | [medical                  ] Reminder: Prescribe naproxen, take with food.
+2235 | VT-53511 | [medical                  ] Listen, Document informed consent prior to procedure. Right now.
+2236 | VT-32529 | [medical                  ] Note: Administer 0.4 mg sublingual nitroglycerin. For real.
+2237 | VT-69135 | [medical                  ] Listen, Order a CBC and comprehensive metabolic panel. Please.
+2238 | VT-35190 | [medical                  ] Listen, Advise RICE protocol for ankle sprain.—got it.
+2239 | VT-43906 | [medical                  ] Reminder: Vitals stable; maintain IV fluids at 75 mL per hour. Please.
+2240 | VT-64035 | [medical                  ] Order a CBC and comprehensive metabolic panel.
+2241 | VT-57175 | [medical                  ] Note: Advise RICE protocol for ankle sprain. Please.
+2242 | VT-11866 | [medical                  ] Hey, Allergic to penicillin; note in the chart.—got it.
+2243 | VT-72607 | [medical                  ] Reminder: Advise RICE protocol for ankle sprain. Right now.
+2244 | VT-38888 | [medical                  ] FYI, Vitals stable; maintain IV fluids at 75 mL per hour. Please.
+2245 | VT-74668 | [medical                  ] Note: Administer 0.4 mg sublingual nitroglycerin. Thanks.
+2246 | VT-70481 | [medical                  ] Heads up: Patient reports acute onset of chest discomfort.—got it.
+2247 | VT-16751 | [medical                  ] FYI, Administer 0.4 mg sublingual nitroglycerin.—got it.
+2248 | VT-62833 | [medical                  ] Document informed consent prior to procedure.
+2249 | VT-26352 | [medical                  ] Listen, Schedule an MRI with contrast, stat. If possible.
+2250 | VT-94198 | [medical                  ] Okay, Schedule an MRI with contrast, stat. Right now.

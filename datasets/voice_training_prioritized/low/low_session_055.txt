@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 55 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2701 | VT-15738 | [monotone_minimal         ] Note: Fine. If possible.
+2702 | VT-52919 | [monotone_minimal         ] Hey, Proceed. If possible.
+2703 | VT-27483 | [monotone_minimal         ] Reminder: Okay. For real.
+2704 | VT-50885 | [monotone_minimal         ] Proceed. If possible.
+2705 | VT-92612 | [monotone_minimal         ] Heads up: Okay. If possible.
+2706 | VT-24868 | [monotone_minimal         ] Okay.
+2707 | VT-53488 | [monotone_minimal         ] Proceed.
+2708 | VT-82877 | [monotone_minimal         ] Heads up: Sure. Please.
+2709 | VT-64541 | [monotone_minimal         ] Hey, No.—got it.
+2710 | VT-73373 | [monotone_minimal         ] Listen, Confirmed. Right now.
+2711 | VT-59811 | [monotone_minimal         ] Reminder: Confirmed. Right now.
+2712 | VT-89706 | [monotone_minimal         ] Okay, Proceed.—copy.
+2713 | VT-83214 | [monotone_minimal         ] Done. Right now.
+2714 | VT-38720 | [monotone_minimal         ] Listen, Sure. Right now.
+2715 | VT-54591 | [monotone_minimal         ] Reminder: Fine.
+2716 | VT-16046 | [monotone_minimal         ] Heads up: Retry. If possible.
+2717 | VT-53704 | [monotone_minimal         ] Okay, No.—got it.
+2718 | VT-10889 | [monotone_minimal         ] Reminder: Denied. Right now.
+2719 | VT-43545 | [monotone_minimal         ] Note: Sure.—copy.
+2720 | VT-10889 | [monotone_minimal         ] Reminder: Denied. Right now.
+2721 | VT-61450 | [monotone_minimal         ] Sure. Please.
+2722 | VT-23276 | [monotone_minimal         ] Okay, Okay. If possible.
+2723 | VT-31350 | [monotone_minimal         ] FYI, No.—got it.
+2724 | VT-83995 | [monotone_minimal         ] Listen, Okay. Please.
+2725 | VT-40834 | [monotone_minimal         ] Retry.—got it.
+2726 | VT-36777 | [monotone_minimal         ] Note: Denied. For real.
+2727 | VT-97546 | [monotone_minimal         ] Reminder: No. For real.
+2728 | VT-61768 | [monotone_minimal         ] Heads up: Done. For real.
+2729 | VT-79678 | [monotone_minimal         ] Reminder: Okay. If possible.
+2730 | VT-34978 | [monotone_minimal         ] FYI, Denied.—copy.
+2731 | VT-73762 | [monotone_minimal         ] Reminder: Unknown. Thanks.
+2732 | VT-71963 | [monotone_minimal         ] Okay, Denied.—got it.
+2733 | VT-26265 | [monotone_minimal         ] Heads up: Done.—copy.
+2734 | VT-10019 | [monotone_minimal         ] Heads up: Proceed.
+2735 | VT-71131 | [monotone_minimal         ] Okay, Sure. Right now.
+2736 | VT-12767 | [monotone_minimal         ] Proceed. Thanks.
+2737 | VT-12608 | [monotone_minimal         ] Reminder: Fine. If possible.
+2738 | VT-73762 | [monotone_minimal         ] Reminder: Unknown. Thanks.
+2739 | VT-73762 | [monotone_minimal         ] Reminder: Unknown. Thanks.
+2740 | VT-95349 | [monotone_minimal         ] Listen, Unknown. Please.
+2741 | VT-75215 | [monotone_minimal         ] Note: Fine. Right now.
+2742 | VT-66645 | [monotone_minimal         ] Heads up: Fine.
+2743 | VT-27507 | [monotone_minimal         ] Done. For real.
+2744 | VT-88015 | [monotone_minimal         ] FYI, Proceed. Right now.
+2745 | VT-77953 | [monotone_minimal         ] FYI, Unknown.—got it.
+2746 | VT-17638 | [monotone_minimal         ] FYI, Sure. Right now.
+2747 | VT-17007 | [monotone_minimal         ] Listen, Retry. For real.
+2748 | VT-45911 | [monotone_minimal         ] Heads up: Okay.—got it.
+2749 | VT-73373 | [monotone_minimal         ] Listen, Confirmed. Right now.
+2750 | VT-45911 | [monotone_minimal         ] Heads up: Okay.—got it.

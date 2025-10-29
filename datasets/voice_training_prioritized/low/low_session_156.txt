@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 156 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7751 | VT-522673 | [everyday-profanity       ] FYI, Heads up: Can we please stop with this crap and fix it?—got it. — got it.
+7752 | VT-504913 | [everyday-profanity       ] Note: Heads up: Turn the damn lights off when you leave. Right now..
+7753 | VT-540129 | [everyday-profanity       ] FYI, FYI, I’m so done with this bullshit.—got it. thanks. (alt)
+7754 | VT-639717 | [everyday-profanity       ] Real talk, Heads up: I dropped my coffee—again. Ugh. — got it.
+7755 | VT-571679 | [everyday-profanity       ] Heads up: I can’t find the damn keys. right now.
+7756 | VT-675039 | [everyday-profanity       ] Reminder: Listen, This is freaking ridiculous. If possible. please. (alt)
+7757 | VT-624655 | [everyday-profanity       ] Real talk, Reminder: What the hell was that noise? If possible. if you can.
+7758 | VT-656548 | [everyday-profanity       ] Note: That was a total mess, no sugar‑coating it.—copy. thanks.
+7759 | VT-514670 | [everyday-profanity       ] Listen, Reminder: Why does this keep breaking? It’s driving me nuts. please.
+7760 | VT-540611 | [everyday-profanity       ] FYI, FYI, I can’t believe I forgot, that’s on me. (alt)
+7761 | VT-627291 | [everyday-profanity       ] Note: Can we please stop with this crap and fix it?—got it. — now. (alt)
+7762 | VT-693705 | [everyday-profanity       ] Quick one: FYI, Turn the damn lights off when you leave. Right now. right now.
+7763 | VT-556450 | [everyday-profanity       ] Quick one: I’m so done with this bullshit. If possible. — now.
+7764 | VT-582393 | [everyday-profanity       ] FYI, FYI, I dropped my coffee—again. Ugh. If possible. — got it.
+7765 | VT-645650 | [everyday-profanity       ] Okay, FYI, I can’t find the damn keys. Right now.
+7766 | VT-690190 | [everyday-profanity       ] Note: This is freaking ridiculous.—copy. please.
+7767 | VT-576752 | [everyday-profanity       ] Quick one: Listen, What the hell was that noise? Please. — got it. (alt)
+7768 | VT-681700 | [everyday-profanity       ] Reminder: Reminder: That was a total mess, no sugar‑coating it.—got it. please.
+7769 | VT-670754 | [everyday-profanity       ] Heads up: FYI, Why does this keep breaking? It’s driving me nuts. If possible. please.
+7770 | VT-646246 | [everyday-profanity       ] FYI, Hey, I can’t believe I forgot, that’s on me. Right now. — now.
+7771 | VT-683782 | [everyday-profanity       ] Okay, Note: Can we please stop with this crap and fix it? Right now. — now.
+7772 | VT-693526 | [everyday-profanity       ] Real talk, Turn the damn lights off when you leave. For real.
+7773 | VT-584408 | [everyday-profanity       ] Real talk, Reminder: I’m so done with this bullshit. For real. — now. (alt)
+7774 | VT-679523 | [everyday-profanity       ] Hey, I dropped my coffee—again. Ugh. For real. please.
+7775 | VT-673854 | [everyday-profanity       ] Note: Reminder: I can’t find the damn keys. If possible. right now.
+7776 | VT-661902 | [everyday-profanity       ] Listen, This is freaking ridiculous. For real. please.
+7777 | VT-537891 | [everyday-profanity       ] Heads up: What the hell was that noise?—copy. — confirm.
+7778 | VT-512103 | [everyday-profanity       ] Okay, Reminder: That was a total mess, no sugar‑coating it. Thanks. thanks.
+7779 | VT-569351 | [everyday-profanity       ] Why does this keep breaking? It’s driving me nuts.—copy. right now.
+7780 | VT-521905 | [everyday-profanity       ] Heads up: I can’t believe I forgot, that’s on me. Please..
+7781 | VT-622118 | [everyday-profanity       ] Listen, Reminder: Can we please stop with this crap and fix it?—copy. thanks.
+7782 | VT-592966 | [everyday-profanity       ] Heads up: Reminder: Turn the damn lights off when you leave.—got it. — got it.
+7783 | VT-558087 | [everyday-profanity       ] Reminder: Hey, I’m so done with this bullshit.—copy. — now.
+7784 | VT-539346 | [everyday-profanity       ] Note: Hey, I dropped my coffee—again. Ugh. Right now. — got it.
+7785 | VT-529642 | [everyday-profanity       ] Heads up: Heads up: I can’t find the damn keys. For real. please. (alt)
+7786 | VT-514918 | [everyday-profanity       ] Okay, Listen, This is freaking ridiculous. If possible. — got it. (alt)
+7787 | VT-674862 | [everyday-profanity       ] Listen, Note: What the hell was that noise? Right now. please.
+7788 | VT-640633 | [everyday-profanity       ] Heads up: FYI, That was a total mess, no sugar‑coating it. Please. — now.
+7789 | VT-503148 | [everyday-profanity       ] Okay, FYI, Why does this keep breaking? It’s driving me nuts. Please. — got it. (alt)
+7790 | VT-684708 | [everyday-profanity       ] Real talk, Okay, I can’t believe I forgot, that’s on me. Thanks. — now. (alt)
+7791 | VT-508247 | [everyday-profanity       ] Reminder: FYI, Can we please stop with this crap and fix it? If possible.
+7792 | VT-569727 | [everyday-profanity       ] Reminder: Listen, Turn the damn lights off when you leave. — got it.
+7793 | VT-580324 | [everyday-profanity       ] Heads up: Note: I’m so done with this bullshit. Right now. — got it. (alt)
+7794 | VT-613633 | [everyday-profanity       ] FYI, Hey, I dropped my coffee—again. Ugh. Please. thanks. (alt)
+7795 | VT-509217 | [everyday-profanity       ] Note: FYI, I can’t find the damn keys. If possible. — confirm. (alt)
+7796 | VT-642271 | [everyday-profanity       ] Heads up: This is freaking ridiculous. For real.
+7797 | VT-633220 | [everyday-profanity       ] FYI, Listen, What the hell was that noise?—copy. — now.
+7798 | VT-634067 | [everyday-profanity       ] FYI, Note: That was a total mess, no sugar‑coating it. Thanks. — confirm. (alt)
+7799 | VT-559486 | [everyday-profanity       ] Heads up: Heads up: Why does this keep breaking? It’s driving me nuts.—got it. — got it.
+7800 | VT-533528 | [everyday-profanity       ] Note: Hey, I can’t believe I forgot, that’s on me.—got it. — got it.

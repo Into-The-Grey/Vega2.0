@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 43 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2101 | VT-502297 | [comparatives_superlatives] Okay, Heads up: Worse latency but better throughput.—got it..
+2102 | VT-599145 | [comparatives_superlatives] Quick one: Okay, Worse latency but better throughput.—copy. — confirm.
+2103 | VT-672449 | [conditionals             ] Real talk, Hey, Provided the tests are green, merge. Please. thanks.
+2104 | VT-657452 | [conditionals             ] Listen, Reminder: If it ain’t broke, don’t fix it. Please. thanks. (alt)
+2105 | VT-690749 | [conditionals             ] Quick one: Listen, Provided the tests are green, merge. For real. right now. (alt)
+2106 | VT-661471 | [conditionals             ] Okay, If A then B, otherwise C.—got it. — confirm.
+2107 | VT-579927 | [conditionals             ] Reminder: If you’re late, text me first. Right now. (alt)
+2108 | VT-661553 | [conditionals             ] Okay, Hey, Should this pass QA, ship it. Please.
+2109 | VT-608927 | [conditionals             ] Listen, If it fails, roll back immediately. Right now. — now.
+2110 | VT-532610 | [conditionals             ] Quick one: Hey, Provided the tests are green, merge. Please. — got it.
+2111 | VT-694655 | [conditionals             ] Note: Should this pass QA, ship it. For real. right now. (alt)
+2112 | VT-616263 | [conditionals             ] Heads up: Heads up: If A then B, otherwise C. Right now.. (alt)
+2113 | VT-624488 | [conditionals             ] Reminder: Reminder: If and only if the hash matches, proceed. Please. please.
+2114 | VT-630252 | [conditionals             ] Okay, Note: If you’re late, text me first. Please. — now. (alt)
+2115 | VT-617648 | [conditionals             ] FYI, If it ain’t broke, don’t fix it. For real..
+2116 | VT-614850 | [conditionals             ] Reminder: Note: Unless it’s critical, defer to next sprint. please.
+2117 | VT-501868 | [conditionals             ] Reminder: Hey, Should this pass QA, ship it.—copy. — confirm.
+2118 | VT-675171 | [conditionals             ] FYI, If it fails, roll back immediately. Please. if you can.
+2119 | VT-561108 | [conditionals             ] Heads up: If it ain’t broke, don’t fix it. For real. — confirm.
+2120 | VT-652488 | [conditionals             ] Reminder: Heads up: Provided the tests are green, merge. Right now. — now.
+2121 | VT-526721 | [conditionals             ] Reminder: Should this pass QA, ship it.
+2122 | VT-642490 | [conditionals             ] Okay, Reminder: If and only if the hash matches, proceed. Please. — confirm. (alt)
+2123 | VT-586394 | [conditionals             ] Okay, If and only if the hash matches, proceed. Please.
+2124 | VT-534550 | [conditionals             ] Quick one: Heads up: If and only if the hash matches, proceed. Right now. if you can.
+2125 | VT-569329 | [conditionals             ] Okay, Okay, If it ain’t broke, don’t fix it.—got it..
+2126 | VT-566948 | [conditionals             ] Listen, If it fails, roll back immediately. Right now. thanks.
+2127 | VT-592041 | [conditionals             ] Note: Reminder: If it fails, roll back immediately. For real. — now.
+2128 | VT-521016 | [conditionals             ] Note: Okay, If and only if the hash matches, proceed. For real. thanks.
+2129 | VT-685900 | [conditionals             ] FYI, Heads up: Should this pass QA, ship it. If possible. thanks. (alt)
+2130 | VT-626141 | [conditionals             ] FYI, Given enough time, everything breaks.—copy. please.
+2131 | VT-691239 | [conditionals             ] Quick one: Note: Given enough time, everything breaks.—got it. — confirm.
+2132 | VT-605647 | [conditionals             ] FYI, Reminder: Given enough time, everything breaks. — confirm. (alt)
+2133 | VT-612274 | [conditionals             ] Note: If it ain’t broke, don’t fix it. If possible. right now.
+2134 | VT-542084 | [conditionals             ] Listen, If A then B, otherwise C.—got it. please.
+2135 | VT-539955 | [conditionals             ] Heads up: If A then B, otherwise C. Thanks. right now.
+2136 | VT-631778 | [conditionals             ] Real talk, FYI, If it fails, roll back immediately. Thanks. please.
+2137 | VT-651489 | [conditionals             ] Reminder: Hey, If and only if the hash matches, proceed. Thanks. if you can. (alt)
+2138 | VT-504265 | [conditionals             ] Okay, If A then B, otherwise C.—got it. (alt)
+2139 | VT-537107 | [conditionals             ] Listen, Listen, Unless it’s critical, defer to next sprint. Right now.. (alt)
+2140 | VT-639201 | [conditionals             ] Okay, If it fails, roll back immediately. Please. — got it.
+2141 | VT-594327 | [conditionals             ] Okay, FYI, If it fails, roll back immediately. Thanks.
+2142 | VT-648499 | [conditionals             ] Quick one: Note: If A then B, otherwise C.—copy. thanks.
+2143 | VT-627705 | [conditionals             ] Reminder: If it fails, roll back immediately. Right now.
+2144 | VT-561147 | [conditionals             ] Heads up: Reminder: Provided the tests are green, merge. Right now. — got it.
+2145 | VT-574845 | [conditionals             ] Listen, Reminder: If you’re late, text me first. if you can.
+2146 | VT-509926 | [conditionals             ] Heads up: Hey, If and only if the hash matches, proceed. If possible. thanks.
+2147 | VT-550824 | [conditionals             ] Real talk, FYI, Should this pass QA, ship it. For real. — now. (alt)
+2148 | VT-500942 | [conditionals             ] Real talk, FYI, Given enough time, everything breaks.—copy. — now.
+2149 | VT-659520 | [conditionals             ] Real talk, FYI, If it ain’t broke, don’t fix it. Please. — confirm.
+2150 | VT-562900 | [conditionals             ] FYI, Listen, Unless it’s critical, defer to next sprint.—copy. thanks.

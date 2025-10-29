@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 97 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+4801 | VT-23667 | [sports_cast              ] Reminder: Yellow card for a reckless challenge. Right now.
+4802 | VT-74011 | [sports_cast              ] Hey, He shoots—top shelf! Please.
+4803 | VT-48191 | [sports_cast              ] FYI, She nails the triple, crowd goes wild.—copy.
+4804 | VT-39557 | [stream_of_consciousness  ] Reminder: I was thinking about the way the light hits the wall, then the time I fell off the swing set, and maybe none of this even matters because breakfast is just sadness in a bowl, you know? If possible.
+4805 | VT-54802 | [stream_of_consciousness  ] Reminder: I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending.—copy.
+4806 | VT-53677 | [stream_of_consciousness  ] Note: I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending.—copy.
+4807 | VT-29667 | [stream_of_consciousness  ] Heads up: I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending. If possible.
+4808 | VT-25652 | [stream_of_consciousness  ] FYI, What if this moment right now is the one I remember when I'm old and everything smells like dust and lost opportunities?—got it.
+4809 | VT-47704 | [stream_of_consciousness  ] Hey, I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending.
+4810 | VT-74302 | [stream_of_consciousness  ] FYI, I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending.
+4811 | VT-39557 | [stream_of_consciousness  ] Reminder: I was thinking about the way the light hits the wall, then the time I fell off the swing set, and maybe none of this even matters because breakfast is just sadness in a bowl, you know? If possible.
+4812 | VT-28467 | [stream_of_consciousness  ] What if this moment right now is the one I remember when I'm old and everything smells like dust and lost opportunities? For real.
+4813 | VT-11997 | [stream_of_consciousness  ] Listen, I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending. Right now.
+4814 | VT-53680 | [stream_of_consciousness  ] Note: I was thinking about the way the light hits the wall, then the time I fell off the swing set, and maybe none of this even matters because breakfast is just sadness in a bowl, you know? Thanks.
+4815 | VT-14384 | [stream_of_consciousness  ] FYI, I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending.
+4816 | VT-57245 | [stream_of_consciousness  ] FYI, I was thinking about the way the light hits the wall, then the time I fell off the swing set, and maybe none of this even matters because breakfast is just sadness in a bowl, you know?
+4817 | VT-58075 | [stream_of_consciousness  ] Reminder: What if this moment right now is the one I remember when I'm old and everything smells like dust and lost opportunities?—copy.
+4818 | VT-95356 | [stream_of_consciousness  ] Listen, What if this moment right now is the one I remember when I'm old and everything smells like dust and lost opportunities?—got it.
+4819 | VT-23248 | [stream_of_consciousness  ] FYI, What if this moment right now is the one I remember when I'm old and everything smells like dust and lost opportunities? Please.
+4820 | VT-47428 | [stream_of_consciousness  ] Heads up: I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending. Please.
+4821 | VT-19223 | [stream_of_consciousness  ] Okay, What if this moment right now is the one I remember when I'm old and everything smells like dust and lost opportunities? Right now.
+4822 | VT-99060 | [stream_of_consciousness  ] What if this moment right now is the one I remember when I'm old and everything smells like dust and lost opportunities?
+4823 | VT-53680 | [stream_of_consciousness  ] Note: I was thinking about the way the light hits the wall, then the time I fell off the swing set, and maybe none of this even matters because breakfast is just sadness in a bowl, you know? Thanks.
+4824 | VT-70399 | [stream_of_consciousness  ] FYI, What if this moment right now is the one I remember when I'm old and everything smells like dust and lost opportunities? If possible.
+4825 | VT-65085 | [stream_of_consciousness  ] Reminder: What if this moment right now is the one I remember when I'm old and everything smells like dust and lost opportunities? Thanks.
+4826 | VT-87799 | [stream_of_consciousness  ] Hey, I was thinking about the way the light hits the wall, then the time I fell off the swing set, and maybe none of this even matters because breakfast is just sadness in a bowl, you know?—got it.
+4827 | VT-74302 | [stream_of_consciousness  ] FYI, I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending.
+4828 | VT-28060 | [stream_of_consciousness  ] Okay, What if this moment right now is the one I remember when I'm old and everything smells like dust and lost opportunities? Right now.
+4829 | VT-28292 | [stream_of_consciousness  ] I was thinking about the way the light hits the wall, then the time I fell off the swing set, and maybe none of this even matters because breakfast is just sadness in a bowl, you know?—copy.
+4830 | VT-57971 | [stream_of_consciousness  ] Heads up: I was thinking about the way the light hits the wall, then the time I fell off the swing set, and maybe none of this even matters because breakfast is just sadness in a bowl, you know?
+4831 | VT-27064 | [stream_of_consciousness  ] Heads up: What if this moment right now is the one I remember when I'm old and everything smells like dust and lost opportunities? Thanks.
+4832 | VT-86609 | [stream_of_consciousness  ] Hey, I was thinking about the way the light hits the wall, then the time I fell off the swing set, and maybe none of this even matters because breakfast is just sadness in a bowl, you know?—copy.
+4833 | VT-54069 | [stream_of_consciousness  ] Listen, What if this moment right now is the one I remember when I'm old and everything smells like dust and lost opportunities? If possible.
+4834 | VT-65303 | [stream_of_consciousness  ] FYI, What if this moment right now is the one I remember when I'm old and everything smells like dust and lost opportunities?
+4835 | VT-29667 | [stream_of_consciousness  ] Heads up: I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending. If possible.
+4836 | VT-58479 | [stream_of_consciousness  ] Heads up: I was thinking about the way the light hits the wall, then the time I fell off the swing set, and maybe none of this even matters because breakfast is just sadness in a bowl, you know? Thanks.
+4837 | VT-73037 | [stream_of_consciousness  ] Hey, I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending.—copy.
+4838 | VT-60062 | [stream_of_consciousness  ] Heads up: I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending. Thanks.
+4839 | VT-44573 | [stream_of_consciousness  ] Heads up: I was thinking about the way the light hits the wall, then the time I fell off the swing set, and maybe none of this even matters because breakfast is just sadness in a bowl, you know? Please.
+4840 | VT-26843 | [stream_of_consciousness  ] I was thinking about the way the light hits the wall, then the time I fell off the swing set, and maybe none of this even matters because breakfast is just sadness in a bowl, you know? Right now.
+4841 | VT-23248 | [stream_of_consciousness  ] FYI, What if this moment right now is the one I remember when I'm old and everything smells like dust and lost opportunities? Please.
+4842 | VT-73037 | [stream_of_consciousness  ] Hey, I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending.—copy.
+4843 | VT-43809 | [stream_of_consciousness  ] I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending.
+4844 | VT-74302 | [stream_of_consciousness  ] FYI, I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending.
+4845 | VT-60461 | [stream_of_consciousness  ] Okay, I was thinking about the way the light hits the wall, then the time I fell off the swing set, and maybe none of this even matters because breakfast is just sadness in a bowl, you know? Right now.
+4846 | VT-63828 | [stream_of_consciousness  ] What if this moment right now is the one I remember when I'm old and everything smells like dust and lost opportunities?—copy.
+4847 | VT-86842 | [stream_of_consciousness  ] Listen, I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending.
+4848 | VT-67337 | [stream_of_consciousness  ] Listen, I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending. For real.
+4849 | VT-27064 | [stream_of_consciousness  ] Heads up: What if this moment right now is the one I remember when I'm old and everything smells like dust and lost opportunities? Thanks.
+4850 | VT-14798 | [stream_of_consciousness  ] I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending.—got it.

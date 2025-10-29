@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 19 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0901 | VT-67376 | [everyday-profanity       ] Okay, This is freaking ridiculous.
+0902 | VT-49524 | [everyday-profanity       ] Heads up: What the hell was that noise?
+0903 | VT-53614 | [everyday-profanity       ] Listen, That was a total mess, no sugar‑coating it. For real.
+0904 | VT-44232 | [everyday-profanity       ] Okay, Why does this keep breaking? It’s driving me nuts. Right now.
+0905 | VT-92176 | [everyday-profanity       ] Hey, I can’t believe I forgot, that’s on me. For real.
+0906 | VT-60340 | [everyday-profanity       ] Reminder: Can we please stop with this crap and fix it?—got it.
+0907 | VT-17968 | [everyday-profanity       ] Note: Turn the damn lights off when you leave.—copy.
+0908 | VT-84716 | [everyday-profanity       ] Okay, I’m so done with this bullshit. If possible.
+0909 | VT-89641 | [everyday-profanity       ] Hey, I dropped my coffee—again. Ugh. For real.
+0910 | VT-37866 | [everyday-profanity       ] FYI, I can’t find the damn keys. Right now.
+0911 | VT-61979 | [everyday-profanity       ] Okay, This is freaking ridiculous.—got it.
+0912 | VT-80909 | [everyday-profanity       ] Note: What the hell was that noise? Thanks.
+0913 | VT-71427 | [everyday-profanity       ] Hey, That was a total mess, no sugar‑coating it.—got it.
+0914 | VT-16978 | [everyday-profanity       ] Why does this keep breaking? It’s driving me nuts. If possible.
+0915 | VT-38809 | [everyday-profanity       ] Heads up: I can’t believe I forgot, that’s on me.—copy.
+0916 | VT-31575 | [everyday-profanity       ] Reminder: Can we please stop with this crap and fix it? Right now.
+0917 | VT-32509 | [everyday-profanity       ] Note: Turn the damn lights off when you leave. If possible.
+0918 | VT-68826 | [everyday-profanity       ] Heads up: I’m so done with this bullshit. Right now.
+0919 | VT-41721 | [everyday-profanity       ] Hey, I dropped my coffee—again. Ugh. For real.
+0920 | VT-26865 | [everyday-profanity       ] FYI, I can’t find the damn keys.
+0921 | VT-25405 | [everyday-profanity       ] FYI, This is freaking ridiculous.—copy.
+0922 | VT-48931 | [everyday-profanity       ] What the hell was that noise? Please.
+0923 | VT-81492 | [everyday-profanity       ] Note: That was a total mess, no sugar‑coating it.—got it.
+0924 | VT-58017 | [everyday-profanity       ] Reminder: Why does this keep breaking? It’s driving me nuts.—copy.
+0925 | VT-91078 | [everyday-profanity       ] FYI, I can’t believe I forgot, that’s on me. For real.
+0926 | VT-24845 | [everyday-profanity       ] Okay, Can we please stop with this crap and fix it? Right now.
+0927 | VT-93540 | [everyday-profanity       ] Heads up: Turn the damn lights off when you leave.—copy.
+0928 | VT-55515 | [everyday-profanity       ] Note: I’m so done with this bullshit.
+0929 | VT-80754 | [everyday-profanity       ] I dropped my coffee—again. Ugh. Thanks.
+0930 | VT-17497 | [everyday-profanity       ] Note: I can’t find the damn keys. If possible.
+0931 | VT-27178 | [everyday-profanity       ] Reminder: This is freaking ridiculous.—copy.
+0932 | VT-25094 | [everyday-profanity       ] Note: What the hell was that noise? If possible.
+0933 | VT-86253 | [everyday-profanity       ] Reminder: That was a total mess, no sugar‑coating it. Thanks.
+0934 | VT-10557 | [everyday-profanity       ] Listen, Why does this keep breaking? It’s driving me nuts. Please.
+0935 | VT-92227 | [everyday-profanity       ] Okay, I can’t believe I forgot, that’s on me.—copy.
+0936 | VT-12698 | [everyday-profanity       ] Hey, Can we please stop with this crap and fix it? Please.
+0937 | VT-33565 | [everyday-profanity       ] Hey, Turn the damn lights off when you leave. Thanks.
+0938 | VT-40854 | [everyday-profanity       ] Listen, I’m so done with this bullshit. Thanks.
+0939 | VT-71166 | [everyday-profanity       ] Hey, I dropped my coffee—again. Ugh.—got it.
+0940 | VT-75084 | [everyday-profanity       ] Listen, I can’t find the damn keys. For real.
+0941 | VT-90876 | [everyday-profanity       ] Reminder: This is freaking ridiculous. Thanks.
+0942 | VT-19337 | [everyday-profanity       ] Note: What the hell was that noise? If possible.
+0943 | VT-90182 | [everyday-profanity       ] Okay, That was a total mess, no sugar‑coating it. Thanks.
+0944 | VT-58883 | [everyday-profanity       ] Why does this keep breaking? It’s driving me nuts.—got it.
+0945 | VT-63633 | [everyday-profanity       ] I can’t believe I forgot, that’s on me. For real.
+0946 | VT-38941 | [everyday-profanity       ] Okay, Can we please stop with this crap and fix it? For real.
+0947 | VT-21820 | [everyday-profanity       ] Note: Turn the damn lights off when you leave.
+0948 | VT-67564 | [everyday-profanity       ] Note: I’m so done with this bullshit.
+0949 | VT-31385 | [everyday-profanity       ] I dropped my coffee—again. Ugh. Please.
+0950 | VT-40580 | [everyday-profanity       ] Reminder: I can’t find the damn keys.—got it.

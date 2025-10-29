@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 43 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2101 | VT-542020 | [imperative               ] Note: Shut it down immediately. right now.
+2102 | VT-573029 | [imperative               ] Reminder: Okay, Please sit up straight and focus.—got it. — got it.
+2103 | VT-579521 | [imperative               ] Reminder: Please sit up straight and focus. Please..
+2104 | VT-618331 | [imperative               ] Quick one: Shut it down immediately.—copy.
+2105 | VT-637439 | [imperative               ] Okay, Heads up: Shut it down immediately. If possible. — now. (alt)
+2106 | VT-696538 | [imperative               ] Reminder: FYI, Call me when you get home. If possible. please.
+2107 | VT-624011 | [imperative               ] Quick one: Okay, Please sit up straight and focus.—got it. — confirm.
+2108 | VT-681717 | [imperative               ] FYI, FYI, Please sit up straight and focus. Thanks. — now.
+2109 | VT-530540 | [imperative               ] Heads up: Please sit up straight and focus. For real.
+2110 | VT-674209 | [imperative               ] FYI, Hey, Shut it down immediately. Right now. — now.
+2111 | VT-659085 | [imperative               ] Real talk, Note: Call me when you get home. Thanks. — confirm.
+2112 | VT-598590 | [imperative               ] Quick one: Okay, Please sit up straight and focus. For real. — got it.
+2113 | VT-672855 | [imperative               ] Note: Okay, Please sit up straight and focus.—copy..
+2114 | VT-587999 | [imperative               ] Note: Reminder: Call me when you get home. right now.
+2115 | VT-587262 | [imperative               ] Note: Listen, Please sit up straight and focus. Please. — now.
+2116 | VT-633769 | [imperative               ] Heads up: Note: Call me when you get home.—copy. right now.
+2117 | VT-530063 | [imperative               ] Note: FYI, Please sit up straight and focus. Please.
+2118 | VT-650183 | [imperative               ] Quick one: FYI, Please sit up straight and focus. Right now. — got it. (alt)
+2119 | VT-528487 | [imperative               ] Real talk, FYI, Call me when you get home. For real. — now.
+2120 | VT-633141 | [imperative               ] Listen, Reminder: Shut it down immediately. Please. — got it.
+2121 | VT-556956 | [imperative               ] FYI, Please sit up straight and focus. If possible. right now.
+2122 | VT-624088 | [imperative               ] Listen, Hey, Call me when you get home. For real.
+2123 | VT-619306 | [imperative               ] Note: Reminder: Please sit up straight and focus. if you can.
+2124 | VT-629168 | [imperative               ] Real talk, Shut it down immediately. If possible. — now.
+2125 | VT-646568 | [imperative               ] Listen, Okay, Call me when you get home. right now.
+2126 | VT-597101 | [imperative               ] Note: Shut it down immediately. — got it.
+2127 | VT-598898 | [imperative               ] Reminder: Hey, Call me when you get home. For real. — got it.
+2128 | VT-613252 | [imperative               ] Okay, Note: Please sit up straight and focus. Please. — got it.
+2129 | VT-668146 | [imperative               ] Quick one: Reminder: Call me when you get home. For real.. (alt)
+2130 | VT-555391 | [imperative               ] Reminder: FYI, Call me when you get home. If possible. — got it. (alt)
+2131 | VT-649206 | [imperative               ] Note: Listen, Call me when you get home. If possible. — got it.
+2132 | VT-510141 | [imperative               ] Reminder: Okay, Please sit up straight and focus.—copy. if you can.
+2133 | VT-688562 | [imperative               ] Listen, Call me when you get home. — confirm.
+2134 | VT-549355 | [imperative               ] Reminder: Heads up: Call me when you get home. Right now..
+2135 | VT-605740 | [imperative               ] Note: Note: Please sit up straight and focus. If possible. thanks.
+2136 | VT-685773 | [imperative               ] Note: FYI, Shut it down immediately. For real..
+2137 | VT-557883 | [imperative               ] Reminder: Heads up: Shut it down immediately.—got it. thanks.
+2138 | VT-684694 | [imperative               ] FYI, Note: Please sit up straight and focus. If possible. — got it.
+2139 | VT-640518 | [imperative               ] Call me when you get home. Thanks. — now.
+2140 | VT-621993 | [imperative               ] Note: Note: Call me when you get home. For real. — now. (alt)
+2141 | VT-524780 | [imperative               ] Heads up: Heads up: Please sit up straight and focus.
+2142 | VT-675139 | [imperative               ] Note: Call me when you get home.—copy. — now.
+2143 | VT-609697 | [imperative               ] Reminder: Okay, Call me when you get home. If possible. right now. (alt)
+2144 | VT-697856 | [imperative               ] Please sit up straight and focus. Right now. please. (alt)
+2145 | VT-564777 | [imperative               ] Real talk, Note: Please sit up straight and focus. Thanks. — got it.
+2146 | VT-627882 | [imperative               ] Heads up: Hey, Shut it down immediately. Please. if you can. (alt)
+2147 | VT-564078 | [imperative               ] Real talk, FYI, Shut it down immediately. Right now..
+2148 | VT-597361 | [imperative               ] Quick one: Reminder: Please sit up straight and focus. please. (alt)
+2149 | VT-656667 | [imperative               ] Heads up: FYI, Call me when you get home. For real. please.
+2150 | VT-526640 | [imperative               ] Listen, FYI, Please sit up straight and focus.—got it. — now.

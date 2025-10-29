@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 55 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2701 | VT-503493 | [multilingual             ] Listen, Muito obrigado pela resposta. Thanks. if you can.
+2702 | VT-636051 | [multilingual             ] Listen, Hey, Ciao, ci vediamo domani.—copy. if you can.
+2703 | VT-605318 | [multilingual             ] Quick one: FYI, 감사합니다, 다음에 봐요.—got it.
+2704 | VT-687011 | [multilingual             ] Heads up: Listen, नमस्ते, आप कैसे हैं? Please..
+2705 | VT-622104 | [multilingual             ] Heads up: Okay, नमस्ते, आप कैसे हैं?—copy. please.
+2706 | VT-675318 | [multilingual             ] Hey, こんにちは、お元気ですか。 Thanks. please.
+2707 | VT-665570 | [multilingual             ] Quick one: Hey, Olá, tudo bem?—got it. — got it.
+2708 | VT-684819 | [multilingual             ] Real talk, धन्यवाद, फिर मिलेंगे।.
+2709 | VT-628934 | [multilingual             ] Real talk, Listen, धन्यवाद, फिर मिलेंगे।—copy.. (alt)
+2710 | VT-508464 | [multilingual             ] FYI, Reminder: 谢谢你的时间。 if you can.
+2711 | VT-538772 | [multilingual             ] Note: Salam, sab thik hai? Please. — got it.
+2712 | VT-657994 | [multilingual             ] FYI, Hey, धन्यवाद, फिर मिलेंगे। Thanks. (alt)
+2713 | VT-645942 | [multilingual             ] Listen, Okay, 你好，今天忙吗？ For real.
+2714 | VT-529475 | [multilingual             ] FYI, FYI, 谢谢你的时间。 Right now. — confirm.
+2715 | VT-520967 | [multilingual             ] Listen, Reminder: 谢谢你的时间。 if you can.
+2716 | VT-683444 | [multilingual             ] Reminder: धन्यवाद, फिर मिलेंगे। Please. please.
+2717 | VT-650817 | [multilingual             ] Quick one: Reminder: Muito obrigado pela resposta. right now. (alt)
+2718 | VT-556323 | [multilingual             ] Heads up: Okay, ¡Excelente trabajo! Right now. — confirm.
+2719 | VT-635927 | [multilingual             ] Note: Listen, شكراً لك على المساعدة.—got it. — now. (alt)
+2720 | VT-681920 | [multilingual             ] Listen, Ciao, ci vediamo domani..
+2721 | VT-505675 | [multilingual             ] Note: Bonjour, je m’appelle Alex.—copy. — confirm.
+2722 | VT-505413 | [multilingual             ] Listen, Listen, नमस्ते, आप कैसे हैं? Please. — confirm.
+2723 | VT-514062 | [multilingual             ] Note: Note: 안녕하세요, 오늘 기분 어때요? Thanks. — confirm.
+2724 | VT-660066 | [multilingual             ] Note: Hola, ¿cómo estás? thanks.
+2725 | VT-592606 | [multilingual             ] Real talk, नमस्ते, आप कैसे हैं? please.
+2726 | VT-602816 | [multilingual             ] Reminder: Listen, Olá, tudo bem? For real..
+2727 | VT-562951 | [multilingual             ] Reminder: ¡Excelente trabajo! Thanks. thanks. (alt)
+2728 | VT-526833 | [multilingual             ] Okay, Heads up: Olá, tudo bem? Right now. thanks.
+2729 | VT-679277 | [multilingual             ] Heads up: Reminder: 你好，今天忙吗？ For real. right now.
+2730 | VT-663340 | [multilingual             ] Okay, Note: Bonjour, je m’appelle Alex. For real. please.
+2731 | VT-516236 | [multilingual             ] FYI, FYI, 谢谢你的时间。 Right now. thanks.
+2732 | VT-575112 | [multilingual             ] Note: Okay, Bonjour, je m’appelle Alex.—copy. thanks.
+2733 | VT-659817 | [multilingual             ] Listen, Listen, धन्यवाद, फिर मिलेंगे।—copy. thanks.
+2734 | VT-593044 | [multilingual             ] Real talk, Note: धन्यवाद, फिर मिलेंगे। Please.
+2735 | VT-611002 | [multilingual             ] FYI, Hey, Muito obrigado pela resposta. Thanks. — confirm.
+2736 | VT-554614 | [multilingual             ] Listen, Heads up: 你好，今天忙吗？ Right now. please.
+2737 | VT-551440 | [multilingual             ] Okay, Okay, Olá, tudo bem?—copy..
+2738 | VT-608518 | [multilingual             ] Okay, Heads up: 你好，今天忙吗？ Thanks..
+2739 | VT-561393 | [multilingual             ] Bonjour, je m’appelle Alex.—copy. — confirm.
+2740 | VT-689159 | [multilingual             ] FYI, 감사합니다, 다음에 봐요. — got it. (alt)
+2741 | VT-516656 | [multilingual             ] Reminder: Reminder: Hola, ¿cómo estás?—got it. — got it.
+2742 | VT-695659 | [multilingual             ] FYI, Listen, Hola, ¿cómo estás? For real. please.
+2743 | VT-587522 | [multilingual             ] Real talk, FYI, Hasta luego, cuídate. Please. — confirm.
+2744 | VT-620130 | [multilingual             ] Reminder: Listen, Hola, ¿cómo estás? For real. right now.
+2745 | VT-666051 | [multilingual             ] Hey, Hasta luego, cuídate. If possible.
+2746 | VT-566976 | [multilingual             ] Listen, Heads up: 你好，今天忙吗？ Please. — got it. (alt)
+2747 | VT-616782 | [multilingual             ] Quick one: Listen, 감사합니다, 다음에 봐요.—copy.
+2748 | VT-693285 | [multilingual             ] Note: धन्यवाद, फिर मिलेंगे। For real. — now.
+2749 | VT-588593 | [multilingual             ] FYI, Reminder: Salam, sab thik hai?—got it. right now.
+2750 | VT-688616 | [multilingual             ] FYI, धन्यवाद, फिर मिलेंगे। — confirm.

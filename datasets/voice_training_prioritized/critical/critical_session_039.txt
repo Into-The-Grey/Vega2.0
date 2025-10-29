@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 39 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1901 | VT-564256 | [error_messages           ] Quick one: Hey, Unhandled exception: ValueError at line 42. For real. — now.
+1902 | VT-658568 | [error_messages           ] Real talk, Heads up: Timeout waiting for the lock.—got it. please.
+1903 | VT-599714 | [error_messages           ] Listen, Reminder: Unhandled exception: ValueError at line 41. If possible. — got it.
+1904 | VT-627244 | [error_messages           ] Listen, Rate limit exceeded; retry after 59 seconds. Thanks. — confirm.
+1905 | VT-655929 | [error_messages           ] FYI, Disk quota exceeded; cleanup required. If possible. please.
+1906 | VT-632412 | [error_messages           ] Quick one: FYI, Segmentation fault—core dumped.—copy. if you can.
+1907 | VT-670571 | [error_messages           ] Listen, Reminder: Fatal: permission denied (publickey).—copy. — got it.
+1908 | VT-608006 | [error_messages           ] FYI, Hey, Unhandled exception: ValueError at line 42. For real. thanks.
+1909 | VT-590582 | [error_messages           ] Real talk, Listen, Segmentation fault—core dumped. If possible. thanks.
+1910 | VT-698644 | [error_messages           ] Quick one: Hey, Rate limit exceeded; retry after 60 seconds. For real.
+1911 | VT-533628 | [error_messages           ] Quick one: FYI, Dependency conflict: version mismatch. Please. — now.
+1912 | VT-638393 | [error_messages           ] FYI, Disk quota exceeded; cleanup required. For real. — got it.
+1913 | VT-610307 | [error_messages           ] Note: FYI, Timeout waiting for the lock. For real. — got it.
+1914 | VT-528283 | [error_messages           ] Reminder: Okay, Connection reset by peer.—got it. right now.
+1915 | VT-686251 | [error_messages           ] Reminder: Segmentation fault—core dumped. Please. please.
+1916 | VT-634018 | [error_messages           ] Reminder: Hey, Fatal: permission denied (publickey). Right now. — confirm.
+1917 | VT-611411 | [error_messages           ] Real talk, Timeout waiting for the lock.—got it. please.
+1918 | VT-641970 | [error_messages           ] Heads up: Unhandled exception: ValueError at line 41. For real. thanks.
+1919 | VT-538761 | [error_messages           ] FYI, Segmentation fault—core dumped. right now.
+1920 | VT-632946 | [error_messages           ] Reminder: FYI, Dependency conflict: version mismatch. Please. — confirm.
+1921 | VT-665112 | [error_messages           ] Okay, Listen, Dependency conflict: version mismatch. Please. — got it.
+1922 | VT-507201 | [error_messages           ] FYI, FYI, Dependency conflict: version mismatch.—copy. — now.
+1923 | VT-507141 | [error_messages           ] Note: Timeout waiting for the lock. Right now. — now.
+1924 | VT-508715 | [error_messages           ] Reminder: Fatal: permission denied (publickey).—copy. if you can.
+1925 | VT-660927 | [error_messages           ] Heads up: Fatal: permission denied (publickey). Please. thanks.
+1926 | VT-681939 | [error_messages           ] Note: Note: Dependency conflict: version mismatch. If possible. please.
+1927 | VT-692797 | [error_messages           ] FYI, Listen, Segmentation fault—core dumped.—copy. if you can.
+1928 | VT-540706 | [error_messages           ] Note: Checksum failed; file corrupted. Thanks. please.
+1929 | VT-696215 | [error_messages           ] Note: FYI, Checksum failed; file corrupted. Thanks. — confirm.
+1930 | VT-657216 | [error_messages           ] Listen, Hey, Checksum failed; file corrupted.—got it. if you can.
+1931 | VT-551500 | [error_messages           ] Okay, FYI, Timeout waiting for the lock. If possible. — now.
+1932 | VT-664914 | [error_messages           ] Quick one: Rate limit exceeded; retry after 60 seconds. Thanks. right now.
+1933 | VT-689171 | [error_messages           ] Listen, Okay, Rate limit exceeded; retry after 59 seconds. right now.
+1934 | VT-500093 | [error_messages           ] Heads up: FYI, Fatal: permission denied (publickey).—got it. — now.
+1935 | VT-525273 | [error_messages           ] Listen, Dependency conflict: version mismatch. thanks.
+1936 | VT-657501 | [error_messages           ] FYI, Rate limit exceeded; retry after 61 seconds..
+1937 | VT-690589 | [error_messages           ] Reminder: Note: Connection reset by peer. For real. — now.
+1938 | VT-684151 | [error_messages           ] Real talk, Hey, Fatal: permission denied (publickey). Right now. — confirm.
+1939 | VT-606910 | [error_messages           ] Real talk, FYI, Fatal: permission denied (publickey).—got it. — confirm.
+1940 | VT-667313 | [error_messages           ] Real talk, Hey, Rate limit exceeded; retry after 60 seconds. Right now. thanks.
+1941 | VT-631749 | [error_messages           ] Reminder: Reminder: Fatal: permission denied (publickey).—copy. — confirm.
+1942 | VT-501120 | [error_messages           ] Reminder: Unhandled exception: ValueError at line 42. — confirm.
+1943 | VT-673957 | [error_messages           ] Listen, Disk quota exceeded; cleanup required. For real. right now.
+1944 | VT-659483 | [error_messages           ] Okay, Listen, Dependency conflict: version mismatch.—copy. right now.
+1945 | VT-668840 | [error_messages           ] Note: Reminder: Segmentation fault—core dumped.—copy. right now.
+1946 | VT-569774 | [error_messages           ] Note: Note: Checksum failed; file corrupted. Thanks. please.
+1947 | VT-506636 | [error_messages           ] Okay, Hey, Timeout waiting for the lock. Please. — now.
+1948 | VT-648851 | [error_messages           ] Okay, FYI, Connection reset by peer.—copy.
+1949 | VT-535887 | [error_messages           ] Listen, Checksum failed; file corrupted.
+1950 | VT-603139 | [error_messages           ] Note: Listen, Timeout waiting for the lock.—copy. — got it.

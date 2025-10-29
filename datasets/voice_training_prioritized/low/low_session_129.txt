@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 129 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6401 | VT-402847 | [legalese                 ] Force majeure includes acts of God and regulatory action. Right now.. (alt)
+6402 | VT-499475 | [legalese                 ] Note: Okay, This notice constitutes neither an offer nor a solicitation. For real. right now. (alt)
+6403 | VT-467402 | [legalese                 ] Listen, FYI, Notwithstanding the foregoing, this agreement shall remain in effect.—got it. — confirm.
+6404 | VT-466134 | [legalese                 ] FYI, Subject to applicable law and equitable principles. Please..
+6405 | VT-474798 | [legalese                 ] Heads up: Heads up: This notice constitutes neither an offer nor a solicitation.. (alt)
+6406 | VT-417086 | [legalese                 ] Real talk, Heads up: Time is of the essence with respect to performance. For real. if you can.
+6407 | VT-493295 | [legalese                 ] Quick one: Reminder: The parties agree to binding arbitration. Thanks. — confirm. (alt)
+6408 | VT-471063 | [legalese                 ] Okay, Hey, Force majeure includes acts of God and regulatory action. If possible. right now.
+6409 | VT-467096 | [legalese                 ] Listen, Hey, Breach may result in injunctive relief. For real. — confirm.
+6410 | VT-431242 | [legalese                 ] Quick one: FYI, Indemnify and hold harmless the disclosing party.—got it.
+6411 | VT-418271 | [legalese                 ] FYI, FYI, This notice constitutes neither an offer nor a solicitation.—got it. — confirm.
+6412 | VT-480628 | [legalese                 ] Okay, Listen, Notwithstanding the foregoing, this agreement shall remain in effect. Thanks. if you can. (alt)
+6413 | VT-447139 | [legalese                 ] Okay, Reminder: Breach may result in injunctive relief.—got it. please.
+6414 | VT-476755 | [legalese                 ] Okay, FYI, Subject to applicable law and equitable principles.—copy. — confirm. (alt)
+6415 | VT-405218 | [legalese                 ] Okay, This notice constitutes neither an offer nor a solicitation. — now.
+6416 | VT-445109 | [legalese                 ] Heads up: Reminder: The parties agree to binding arbitration. Thanks. — confirm.
+6417 | VT-435093 | [legalese                 ] Quick one: Reminder: The parties agree to binding arbitration. — confirm. (alt)
+6418 | VT-463244 | [legalese                 ] Okay, Reminder: The parties agree to binding arbitration.—got it. — got it.
+6419 | VT-483325 | [legalese                 ] Note: FYI, Breach may result in injunctive relief. — confirm.
+6420 | VT-454644 | [legalese                 ] Real talk, FYI, Notwithstanding the foregoing, this agreement shall remain in effect.—got it. — now.
+6421 | VT-487336 | [legalese                 ] Heads up: Notwithstanding the foregoing, this agreement shall remain in effect. — now.
+6422 | VT-468841 | [legalese                 ] Reminder: Hey, The parties agree to binding arbitration. right now. (alt)
+6423 | VT-415958 | [legalese                 ] Real talk, FYI, This notice constitutes neither an offer nor a solicitation.—got it. please. (alt)
+6424 | VT-461504 | [legalese                 ] Heads up: Okay, Severability ensures the remainder remains enforceable. Thanks. — confirm.
+6425 | VT-497097 | [legalese                 ] FYI, Listen, Severability ensures the remainder remains enforceable. If possible..
+6426 | VT-426157 | [legalese                 ] Listen, Note: Severability ensures the remainder remains enforceable. Please. — confirm.
+6427 | VT-422374 | [legalese                 ] Reminder: Reminder: Breach may result in injunctive relief. Right now. if you can. (alt)
+6428 | VT-407925 | [legalese                 ] Real talk, Time is of the essence with respect to performance. Thanks. if you can. (alt)
+6429 | VT-497072 | [legalese                 ] Reminder: Heads up: Time is of the essence with respect to performance. thanks. (alt)
+6430 | VT-442799 | [legalese                 ] Quick one: FYI, Notwithstanding the foregoing, this agreement shall remain in effect.—got it..
+6431 | VT-479656 | [legalese                 ] Reminder: Okay, The parties agree to binding arbitration. — confirm.
+6432 | VT-435827 | [legalese                 ] Okay, Okay, Time is of the essence with respect to performance. Please.
+6433 | VT-496616 | [legalese                 ] Heads up: Indemnify and hold harmless the disclosing party. Please. — confirm.
+6434 | VT-475067 | [legalese                 ] Okay, Listen, Notwithstanding the foregoing, this agreement shall remain in effect. Thanks. thanks.
+6435 | VT-469383 | [legalese                 ] Listen, FYI, Notwithstanding the foregoing, this agreement shall remain in effect.—got it. if you can.
+6436 | VT-414101 | [legalese                 ] Reminder: Listen, Time is of the essence with respect to performance. right now. (alt)
+6437 | VT-469230 | [legalese                 ] Okay, FYI, Notwithstanding the foregoing, this agreement shall remain in effect.—got it. — now. (alt)
+6438 | VT-457718 | [legalese                 ] Note: Subject to applicable law and equitable principles.—copy. please.
+6439 | VT-449641 | [legalese                 ] Real talk, Heads up: Force majeure includes acts of God and regulatory action. Please. please.
+6440 | VT-475223 | [legalese                 ] Real talk, FYI, The parties agree to binding arbitration. please. (alt)
+6441 | VT-453850 | [legalese                 ] Listen, Okay, This notice constitutes neither an offer nor a solicitation.—copy. — now.
+6442 | VT-480574 | [legalese                 ] Reminder: Okay, Severability ensures the remainder remains enforceable. Thanks. please.
+6443 | VT-443955 | [legalese                 ] Listen, Note: Breach may result in injunctive relief. Please. thanks.
+6444 | VT-437931 | [legalese                 ] FYI, Reminder: Indemnify and hold harmless the disclosing party. If possible. please.
+6445 | VT-410961 | [legalese                 ] Reminder: Severability ensures the remainder remains enforceable.
+6446 | VT-479914 | [legalese                 ] Real talk, Hey, Breach may result in injunctive relief. Please. please. (alt)
+6447 | VT-425628 | [math_readouts            ] Listen, FYI, Matrix A times B is non-commutative. (5944) For real. — got it.
+6448 | VT-438521 | [math_readouts            ] Listen, Reminder: Normalize the vector to unit length. (3778) If possible. — confirm.
+6449 | VT-481074 | [math_readouts            ] Heads up: FYI, Matrix A times B is non-commutative. (7939) Please. thanks.
+6450 | VT-420980 | [math_readouts            ] Okay, Listen, Standard deviation is 3.3. (4278)—copy. if you can.

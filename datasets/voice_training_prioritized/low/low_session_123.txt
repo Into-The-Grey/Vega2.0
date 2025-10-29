@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 123 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6101 | VT-465231 | [emoji                    ] Note: Reminder: Mic check, one, two… 🎤 right now.
+6102 | VT-416218 | [emoji                    ] Reminder: FYI, Coffee first, then code ☕️💻. If possible. — confirm.
+6103 | VT-471487 | [emoji                    ] Quick one: Reminder: New high score! 🕹️ If possible. right now.
+6104 | VT-429131 | [emoji                    ] Listen, FYI, Weather’s perfect for a walk 🌤️. please.
+6105 | VT-400335 | [emoji                    ] Real talk, Coffee first, then code ☕️💻.—got it. — confirm.
+6106 | VT-470563 | [emoji                    ] Reminder: Hey, Deep breaths. You got this. 💪 Please. if you can.
+6107 | VT-497804 | [emoji                    ] Heads up: Okay, We shipped it! 🎉 Please. please.
+6108 | VT-491857 | [emoji                    ] Heads up: Hey, Mic check, one, two… 🎤—got it. if you can.
+6109 | VT-423584 | [emoji                    ] Quick one: Let’s clean up those docs 🧹. Right now. thanks.
+6110 | VT-470098 | [emoji                    ] Okay, Listen, Ugh, my laptop froze again 😑.—copy. — confirm.
+6111 | VT-438657 | [emoji                    ] Okay, Listen, Coffee first, then code ☕️💻. — confirm. (alt)
+6112 | VT-488361 | [emoji                    ] FYI, Okay, New high score! 🕹️ Thanks. — got it.
+6113 | VT-472333 | [emoji                    ] Note: Hey, Let’s clean up those docs 🧹.—got it.
+6114 | VT-431253 | [emoji                    ] Okay, Weather’s perfect for a walk 🌤️.—copy. — now. (alt)
+6115 | VT-461817 | [emoji                    ] Note: Coffee first, then code ☕️💻..
+6116 | VT-450529 | [emoji                    ] Reminder: Okay, We shipped it! 🎉 Please. right now.
+6117 | VT-480640 | [emoji                    ] Note: Okay, We shipped it! 🎉 If possible. please. (alt)
+6118 | VT-400777 | [emoji                    ] Quick one: Hey, We shipped it! 🎉 Right now. if you can.
+6119 | VT-405065 | [emoji                    ] FYI, Note: Let’s clean up those docs 🧹.—copy. thanks.
+6120 | VT-469449 | [emoji                    ] Reminder: Reminder: New high score! 🕹️ If possible. right now.
+6121 | VT-431461 | [emoji                    ] FYI, Heads up: New high score! 🕹️—got it. — confirm. (alt)
+6122 | VT-491341 | [emoji                    ] Okay, Note: We shipped it! 🎉 For real. please.
+6123 | VT-438650 | [emoji                    ] Listen, Reminder: Coffee first, then code ☕️💻. Right now. right now. (alt)
+6124 | VT-483079 | [emoji                    ] Note: Reminder: Running late—be there soon 🚗💨. If possible.
+6125 | VT-406069 | [emoji                    ] Okay, Running late—be there soon 🚗💨.—copy. — confirm.
+6126 | VT-404984 | [emoji                    ] FYI, Running late—be there soon 🚗💨. Thanks.
+6127 | VT-431222 | [emoji                    ] Quick one: Listen, Let’s clean up those docs 🧹.—got it.
+6128 | VT-482760 | [emoji                    ] Heads up: Note: Deep breaths. You got this. 💪 — got it.
+6129 | VT-402017 | [emoji                    ] Real talk, Okay, Deep breaths. You got this. 💪 Please. if you can.
+6130 | VT-450900 | [emoji                    ] Okay, Listen, New high score! 🕹️ Please. — confirm. (alt)
+6131 | VT-440757 | [emoji                    ] Quick one: Listen, We shipped it! 🎉 If possible. please.
+6132 | VT-433388 | [emoji                    ] Quick one: Deep breaths. You got this. 💪—copy. please. (alt)
+6133 | VT-409859 | [emoji                    ] Listen, Hey, Ugh, my laptop froze again 😑.—got it.
+6134 | VT-413806 | [emoji                    ] Okay, New high score! 🕹️ Thanks. — got it.
+6135 | VT-433252 | [emoji                    ] Reminder: Listen, New high score! 🕹️ Please. if you can.
+6136 | VT-414428 | [emoji                    ] Reminder: Okay, Deep breaths. You got this. 💪 Please. if you can.
+6137 | VT-408474 | [emoji                    ] Real talk, Reminder: New high score! 🕹️ If possible. if you can.
+6138 | VT-408050 | [emoji                    ] Note: Listen, Weather’s perfect for a walk 🌤️. right now.
+6139 | VT-409085 | [emoji                    ] Reminder: Hey, Mic check, one, two… 🎤 Please. — confirm. (alt)
+6140 | VT-405998 | [emoji                    ] Heads up: We shipped it! 🎉 If possible. if you can. (alt)
+6141 | VT-498397 | [emoji                    ] Listen, Heads up: Coffee first, then code ☕️💻. right now.
+6142 | VT-416384 | [emoji                    ] Reminder: Running late—be there soon 🚗💨. If possible. if you can.
+6143 | VT-496617 | [emoji                    ] Note: FYI, Let’s clean up those docs 🧹.—got it. right now.
+6144 | VT-497771 | [emoji                    ] Listen, FYI, Ugh, my laptop froze again 😑. Thanks. right now.
+6145 | VT-435914 | [emoji                    ] FYI, Running late—be there soon 🚗💨.
+6146 | VT-400684 | [emoji                    ] Listen, Let’s clean up those docs 🧹. For real. please.
+6147 | VT-419634 | [everyday-profanity       ] Heads up: This is freaking ridiculous. if you can.
+6148 | VT-460693 | [everyday-profanity       ] Listen, What the hell was that noise? — now.
+6149 | VT-425586 | [everyday-profanity       ] FYI, That was a total mess, no sugar‑coating it..
+6150 | VT-483231 | [everyday-profanity       ] Note: Why does this keep breaking? It’s driving me nuts.

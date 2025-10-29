@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 57 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2801 | VT-92813 | [multilingual             ] Okay, Olá, tudo bem?—copy.
+2802 | VT-94149 | [multilingual             ] Heads up: 你好，今天忙吗？ Thanks.
+2803 | VT-0485 | [multilingual             ] 감사합니다, 다음에 봐요.
+2804 | VT-0477 | [multilingual             ] 你好，今天忙吗？
+2805 | VT-52481 | [multilingual             ] Heads up: 你好，今天忙吗？ Please.
+2806 | VT-95060 | [multilingual             ] Listen, 감사합니다, 다음에 봐요.—copy.
+2807 | VT-0470 | [multilingual             ] Hola, ¿cómo estás?
+2808 | VT-0487 | [multilingual             ] धन्यवाद, फिर मिलेंगे।
+2809 | VT-34106 | [multilingual             ] FYI, 谢谢你的时间。 Right now.
+2810 | VT-68150 | [multilingual             ] 你好，今天忙吗？ For real.
+2811 | VT-0487 | [multilingual             ] धन्यवाद, फिर मिलेंगे।
+2812 | VT-0478 | [multilingual             ] नमस्ते, आप कैसे हैं?
+2813 | VT-28002 | [multilingual             ] よろしくお願いします。 For real.
+2814 | VT-86458 | [multilingual             ] Hey, こんにちは、お元気ですか。 Please.
+2815 | VT-28002 | [multilingual             ] よろしくお願いします。 For real.
+2816 | VT-0472 | [multilingual             ] Guten Morgen, wie geht’s dir?
+2817 | VT-0471 | [multilingual             ] Bonjour, je m’appelle Alex.
+2818 | VT-95060 | [multilingual             ] Listen, 감사합니다, 다음에 봐요.—copy.
+2819 | VT-68189 | [multilingual             ] Hey, 谢谢你的时间。—got it.
+2820 | VT-59999 | [multilingual             ] Okay, 감사합니다, 다음에 봐요. Thanks.
+2821 | VT-94149 | [multilingual             ] Heads up: 你好，今天忙吗？ Thanks.
+2822 | VT-45402 | [multilingual             ] FYI, 谢谢你的时间。 Right now.
+2823 | VT-0483 | [multilingual             ] Muito obrigado pela resposta.
+2824 | VT-0472 | [multilingual             ] Guten Morgen, wie geht’s dir?
+2825 | VT-23831 | [multilingual             ] Listen, 감사합니다, 다음에 봐요.—copy.
+2826 | VT-0487 | [multilingual             ] धन्यवाद, फिर मिलेंगे।
+2827 | VT-13998 | [multilingual             ] 감사합니다, 다음에 봐요. For real.
+2828 | VT-68150 | [multilingual             ] 你好，今天忙吗？ For real.
+2829 | VT-81136 | [multilingual             ] Reminder: よろしくお願いします。
+2830 | VT-81136 | [multilingual             ] Reminder: よろしくお願いします。
+2831 | VT-68189 | [multilingual             ] Hey, 谢谢你的时间。—got it.
+2832 | VT-84432 | [multilingual             ] Listen, 谢谢你的时间。 Right now.
+2833 | VT-39350 | [multilingual             ] よろしくお願いします。 Right now.
+2834 | VT-0480 | [multilingual             ] ¡Excelente trabajo!
+2835 | VT-22050 | [multilingual             ] Hey, Olá, tudo bem?—got it.
+2836 | VT-59999 | [multilingual             ] Okay, 감사합니다, 다음에 봐요. Thanks.
+2837 | VT-52481 | [multilingual             ] Heads up: 你好，今天忙吗？ Please.
+2838 | VT-26461 | [multilingual             ] Reminder: 你好，今天忙吗？ For real.
+2839 | VT-26937 | [multilingual             ] Reminder: よろしくお願いします。—got it.
+2840 | VT-0482 | [multilingual             ] Grazie mille, davvero.
+2841 | VT-59999 | [multilingual             ] Okay, 감사합니다, 다음에 봐요. Thanks.
+2842 | VT-10727 | [multilingual             ] Reminder: 谢谢你的时间。
+2843 | VT-36995 | [multilingual             ] Hey, こんにちは、お元気ですか。 Thanks.
+2844 | VT-74081 | [multilingual             ] Hey, Ciao, ci vediamo domani.
+2845 | VT-81136 | [multilingual             ] Reminder: よろしくお願いします。
+2846 | VT-64732 | [multilingual             ] Note: 안녕하세요, 오늘 기분 어때요?
+2847 | VT-59999 | [multilingual             ] Okay, 감사합니다, 다음에 봐요. Thanks.
+2848 | VT-0471 | [multilingual             ] Bonjour, je m’appelle Alex.
+2849 | VT-44545 | [multilingual             ] Heads up: こんにちは、お元気ですか。
+2850 | VT-45402 | [multilingual             ] FYI, 谢谢你的时间。 Right now.

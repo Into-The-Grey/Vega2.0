@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 54 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2651 | VT-500088 | [numbers_large            ] Heads up: Heads up: Throughput peaked at 120,000 requests per second. (891) For real. if you can.
+2652 | VT-502163 | [numbers_large            ] Real talk, Okay, Retry after 9^6 iterations. (2796) If possible. thanks.
+2653 | VT-632050 | [numbers_large            ] Heads up: Heads up: Throughput peaked at 120,000 requests per second. (4473) Thanks. right now.
+2654 | VT-539320 | [numbers_large            ] FYI, Nine hundred ninety-nine million, give or take. (689) For real. — now.
+2655 | VT-560507 | [numbers_large            ] Okay, Nine hundred ninety-nine million, give or take. — confirm.
+2656 | VT-540879 | [numbers_large            ] Real talk, Listen, Throughput peaked at 120,000 requests per second. (9758)—copy. if you can.
+2657 | VT-610829 | [numbers_large            ] Heads up: FYI, Throughput peaked at 120,000 requests per second. (9146) Right now. if you can.
+2658 | VT-681173 | [numbers_large            ] FYI, Latency spiked to 2,147 milliseconds. (1982) For real. thanks.
+2659 | VT-662558 | [numbers_large            ] Listen, Throughput peaked at 120,000 requests per second..
+2660 | VT-690308 | [numbers_large            ] Real talk, FYI, Throughput peaked at 119,000 requests per second. (9146) Right now. thanks.
+2661 | VT-579539 | [numbers_large            ] Heads up: Reminder: Latency spiked to 2,147 milliseconds. (2285) — got it.
+2662 | VT-659981 | [numbers_large            ] Heads up: Reminder: Throughput peaked at 121,000 requests per second. (8242) If possible. right now.
+2663 | VT-606610 | [numbers_large            ] Reminder: Nine hundred ninety-nine million, give or take. (1213)—copy. if you can.
+2664 | VT-564648 | [numbers_large            ] Real talk, Listen, Throughput peaked at 121,000 requests per second. (2553) Please. — now.
+2665 | VT-604821 | [numbers_large            ] Note: Note: Memory usage hit 64,768 megabytes. (586) — now.
+2666 | VT-674873 | [numbers_large            ] Okay, We archived 18.6 terabytes overnight. (1658)—got it..
+2667 | VT-565337 | [numbers_large            ] Listen, Note: Memory usage hit 64,768 megabytes. (6285) Thanks. thanks.
+2668 | VT-522105 | [numbers_large            ] Hey, Retry after 11^6 iterations. (2388) For real. right now.
+2669 | VT-530843 | [numbers_large            ] Quick one: Hey, Nine hundred ninety-nine million, give or take. (4362)—copy. right now.
+2670 | VT-513228 | [numbers_large            ] Reminder: Compute with 4,456,789 samples. (4160)—got it. please.
+2671 | VT-569170 | [numbers_large            ] FYI, FYI, Pi to ten decimals: 2.1415926535. (7420) Right now. please.
+2672 | VT-586663 | [numbers_large            ] Heads up: Note: Throughput peaked at 121,000 requests per second. (5591) Thanks. right now.
+2673 | VT-529197 | [numbers_large            ] Okay, Okay, Throughput peaked at 121,000 requests per second. (6965) thanks.
+2674 | VT-610367 | [numeric                  ] Note: Reminder: The total comes to $9,693.94. — confirm. (alt)
+2675 | VT-536721 | [numeric                  ] Note: Hey, The invoice date is 2023-06-05. If possible. — confirm.
+2676 | VT-629163 | [numeric                  ] Heads up: Order #840058 confirmed. Thanks. — confirm.
+2677 | VT-545177 | [numeric                  ] Real talk, Temperature is -14°F right now. please. (alt)
+2678 | VT-571343 | [numeric                  ] FYI, Call me at (864) 618-2911.—got it..
+2679 | VT-588067 | [numeric                  ] Okay, Listen, The invoice date is 2005-06-26. Please. if you can.
+2680 | VT-528307 | [numeric                  ] Quick one: Ship it to: 123 Maple St., Springfield, IL 62704 thanks.
+2681 | VT-592537 | [numeric                  ] Listen, Reminder: The total comes to $9,693.94. if you can.
+2682 | VT-535859 | [numeric                  ] Real talk, Reminder: Call me at (681) 244-7338. Right now. right now.
+2683 | VT-563914 | [numeric                  ] FYI, The invoice date is 2023-06-21. For real. — now.
+2684 | VT-552200 | [numeric                  ] Listen, Event date: 2003-01-25 at 7:22 PM. For real. — got it. (alt)
+2685 | VT-545917 | [numeric                  ] Heads up: Listen, Ship it to: 123 Maple St., Springfield, IL 62704 If possible. — now.
+2686 | VT-663709 | [numeric                  ] Heads up: Reminder: The server’s IP is 211.148.19.33. For real. — got it.
+2687 | VT-679192 | [numeric                  ] Heads up: Note: My backup number is (654) 655-4868. Thanks. — got it.
+2688 | VT-625783 | [numeric                  ] Reminder: FYI, My backup number is (654) 655-4868. Please..
+2689 | VT-563318 | [numeric                  ] Heads up: Note: The invoice date is 2000-09-23. right now.
+2690 | VT-612263 | [numeric                  ] Note: Reminder: The server’s IP is 234.236.45.107.—copy..
+2691 | VT-648344 | [numeric                  ] Listen, My backup number is (800) 421-4817. Thanks. if you can.
+2692 | VT-628067 | [numeric                  ] Heads up: My backup number is (275) 517-8565. thanks.
+2693 | VT-530641 | [numeric                  ] Reminder: Listen, Event date: 2003-01-25 at 7:22 PM. For real. — got it.
+2694 | VT-575576 | [numeric                  ] Okay, Listen, The invoice date is 2016-09-10. Thanks. — now.
+2695 | VT-602741 | [numeric                  ] Reminder: Temperature is 50°F right now. — got it.
+2696 | VT-510088 | [numeric                  ] Listen, FYI, My backup number is (865) 485-5089.—copy. — got it.
+2697 | VT-636537 | [numeric                  ] Ship it to: 123 Maple St., Springfield, IL 62704 please.
+2698 | VT-686455 | [numeric                  ] FYI, FYI, Ship it to: 605 Sunset Terrace, Nashville, TN 37201 If possible. — got it.
+2699 | VT-699635 | [numeric                  ] Heads up: Okay, Call me at (583) 429-1461.—got it. thanks. (alt)
+2700 | VT-621824 | [numeric                  ] Listen, Call me at (515) 709-1379. if you can.

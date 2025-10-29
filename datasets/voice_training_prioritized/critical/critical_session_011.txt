@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 11 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0501 | VT-38372 | [error_messages           ] Heads up: Checksum failed; file corrupted. Right now.
+0502 | VT-16952 | [error_messages           ] Heads up: Fatal: permission denied (publickey). Please.
+0503 | VT-73906 | [error_messages           ] Listen, Null pointer dereference detected. For real.
+0504 | VT-86145 | [error_messages           ] Unhandled exception: ValueError at line 42. If possible.
+0505 | VT-86145 | [error_messages           ] Unhandled exception: ValueError at line 42. If possible.
+0506 | VT-13319 | [error_messages           ] Reminder: Unhandled exception: ValueError at line 42.—got it.
+0507 | VT-52890 | [error_messages           ] Reminder: Unhandled exception: ValueError at line 42. Please.
+0508 | VT-25515 | [error_messages           ] Rate limit exceeded; retry after 60 seconds.
+0509 | VT-40621 | [error_messages           ] FYI, Fatal: permission denied (publickey). If possible.
+0510 | VT-67798 | [error_messages           ] Okay, Dependency conflict: version mismatch. Please.
+0511 | VT-17766 | [error_messages           ] Hey, Rate limit exceeded; retry after 60 seconds. Right now.
+0512 | VT-65686 | [error_messages           ] FYI, Segmentation fault—core dumped.—copy.
+0513 | VT-30367 | [error_messages           ] Listen, Segmentation fault—core dumped.—copy.
+0514 | VT-26040 | [error_messages           ] Segmentation fault—core dumped. Right now.
+0515 | VT-13319 | [error_messages           ] Reminder: Unhandled exception: ValueError at line 42.—got it.
+0516 | VT-18011 | [error_messages           ] Hey, Dependency conflict: version mismatch.
+0517 | VT-79394 | [error_messages           ] Hey, Fatal: permission denied (publickey). If possible.
+0518 | VT-37259 | [error_messages           ] Listen, Segmentation fault—core dumped.—got it.
+0519 | VT-81201 | [error_messages           ] Hey, Disk quota exceeded; cleanup required. Right now.
+0520 | VT-93501 | [error_messages           ] Hey, Checksum failed; file corrupted.—got it.
+0521 | VT-99630 | [error_messages           ] Note: Segmentation fault—core dumped. Thanks.
+0522 | VT-68560 | [error_messages           ] Okay, Connection reset by peer.—got it.
+0523 | VT-35944 | [error_messages           ] Hey, Rate limit exceeded; retry after 60 seconds.—copy.
+0524 | VT-39126 | [error_messages           ] Okay, Fatal: permission denied (publickey). For real.
+0525 | VT-48518 | [error_messages           ] Okay, Rate limit exceeded; retry after 60 seconds.
+0526 | VT-32427 | [error_messages           ] Hey, Fatal: permission denied (publickey). Right now.
+0527 | VT-90277 | [error_messages           ] Fatal: permission denied (publickey).
+0528 | VT-25515 | [error_messages           ] Rate limit exceeded; retry after 60 seconds.
+0529 | VT-17677 | [error_messages           ] Heads up: Segmentation fault—core dumped.—got it.
+0530 | VT-72293 | [error_messages           ] Hey, Unhandled exception: ValueError at line 42. For real.
+0531 | VT-47058 | [error_messages           ] Hey, Disk quota exceeded; cleanup required. Right now.
+0532 | VT-47282 | [error_messages           ] Hey, Disk quota exceeded; cleanup required.—copy.
+0533 | VT-97588 | [error_messages           ] Rate limit exceeded; retry after 60 seconds. Thanks.
+0534 | VT-35656 | [error_messages           ] Listen, Timeout waiting for the lock.—copy.
+0535 | VT-82675 | [error_messages           ] Note: Segmentation fault—core dumped.—got it.
+0536 | VT-62453 | [error_messages           ] Hey, Connection reset by peer. Thanks.
+0537 | VT-49230 | [error_messages           ] Checksum failed; file corrupted. Thanks.
+0538 | VT-26842 | [error_messages           ] FYI, Unhandled exception: ValueError at line 42.—copy.
+0539 | VT-40892 | [error_messages           ] Okay, Null pointer dereference detected. Right now.
+0540 | VT-33137 | [error_messages           ] Okay, Segmentation fault—core dumped. Thanks.
+0541 | VT-40892 | [error_messages           ] Okay, Null pointer dereference detected. Right now.
+0542 | VT-38593 | [error_messages           ] Reminder: Segmentation fault—core dumped.—copy.
+0543 | VT-79394 | [error_messages           ] Hey, Fatal: permission denied (publickey). If possible.
+0544 | VT-45273 | [error_messages           ] Heads up: Unhandled exception: ValueError at line 42. For real.
+0545 | VT-97478 | [error_messages           ] Okay, Fatal: permission denied (publickey).
+0546 | VT-78028 | [error_messages           ] Listen, Checksum failed; file corrupted. Please.
+0547 | VT-62084 | [error_messages           ] Heads up: Null pointer dereference detected. If possible.
+0548 | VT-30541 | [error_messages           ] Unhandled exception: ValueError at line 42.
+0549 | VT-52046 | [error_messages           ] Timeout waiting for the lock. Right now.
+0550 | VT-34085 | [error_messages           ] Listen, Fatal: permission denied (publickey). Thanks.

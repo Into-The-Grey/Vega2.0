@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 102 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+5051 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5052 | VT-288650 | [trash_talk               ] Holding W isn’t a strategy; it’s a cry for help.
+5053 | VT-230273 | [trash_talk               ] Nice whiff—crosshair on vacation?
+5054 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5055 | VT-284336 | [trash_talk               ] Next time, ping before you feed.
+5056 | VT-277353 | [trash_talk               ] Good game; uninstall only if you want peace.
+5057 | VT-279263 | [trash_talk               ] You brought a pea shooter to a boss fight.
+5058 | VT-284336 | [trash_talk               ] Next time, ping before you feed.
+5059 | VT-284336 | [trash_talk               ] Next time, ping before you feed.
+5060 | VT-230273 | [trash_talk               ] Nice whiff—crosshair on vacation?
+5061 | VT-226969 | [trash_talk               ] You’re padding stats; scoreboard says otherwise.
+5062 | VT-277353 | [trash_talk               ] Good game; uninstall only if you want peace.
+5063 | VT-289396 | [trash_talk               ] If that was your strat, keep it; we farmed it.
+5064 | VT-284336 | [trash_talk               ] Next time, ping before you feed.
+5065 | VT-226969 | [trash_talk               ] You’re padding stats; scoreboard says otherwise.
+5066 | VT-289396 | [trash_talk               ] If that was your strat, keep it; we farmed it.
+5067 | VT-277353 | [trash_talk               ] Good game; uninstall only if you want peace.
+5068 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5069 | VT-288650 | [trash_talk               ] Holding W isn’t a strategy; it’s a cry for help.
+5070 | VT-226969 | [trash_talk               ] You’re padding stats; scoreboard says otherwise.
+5071 | VT-295729 | [trash_talk               ] Great flank—on your own teammates.
+5072 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5073 | VT-288650 | [trash_talk               ] Holding W isn’t a strategy; it’s a cry for help.
+5074 | VT-230273 | [trash_talk               ] Nice whiff—crosshair on vacation?
+5075 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5076 | VT-279263 | [trash_talk               ] You brought a pea shooter to a boss fight.
+5077 | VT-295729 | [trash_talk               ] Great flank—on your own teammates.
+5078 | VT-230273 | [trash_talk               ] Nice whiff—crosshair on vacation?
+5079 | VT-277353 | [trash_talk               ] Good game; uninstall only if you want peace.
+5080 | VT-230273 | [trash_talk               ] Nice whiff—crosshair on vacation?
+5081 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5082 | VT-277353 | [trash_talk               ] Good game; uninstall only if you want peace.
+5083 | VT-295729 | [trash_talk               ] Great flank—on your own teammates.
+5084 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5085 | VT-289396 | [trash_talk               ] If that was your strat, keep it; we farmed it.
+5086 | VT-279263 | [trash_talk               ] You brought a pea shooter to a boss fight.
+5087 | VT-295729 | [trash_talk               ] Great flank—on your own teammates.
+5088 | VT-289396 | [trash_talk               ] If that was your strat, keep it; we farmed it.
+5089 | VT-288650 | [trash_talk               ] Holding W isn’t a strategy; it’s a cry for help.
+5090 | VT-295729 | [trash_talk               ] Great flank—on your own teammates.
+5091 | VT-288650 | [trash_talk               ] Holding W isn’t a strategy; it’s a cry for help.
+5092 | VT-277353 | [trash_talk               ] Good game; uninstall only if you want peace.
+5093 | VT-289396 | [trash_talk               ] If that was your strat, keep it; we farmed it.
+5094 | VT-279263 | [trash_talk               ] You brought a pea shooter to a boss fight.
+5095 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5096 | VT-284336 | [trash_talk               ] Next time, ping before you feed.
+5097 | VT-230273 | [trash_talk               ] Nice whiff—crosshair on vacation?
+5098 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5099 | VT-279263 | [trash_talk               ] You brought a pea shooter to a boss fight.
+5100 | VT-289396 | [trash_talk               ] If that was your strat, keep it; we farmed it.

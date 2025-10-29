@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 71 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+3501 | VT-35085 | [philosophical            ] Listen, Time is just memory unfolding in a straight line.—copy.
+3502 | VT-78604 | [philosophical            ] Heads up: Time is just memory unfolding in a straight line. Please.
+3503 | VT-27541 | [philosophical            ] Reminder: To know yourself is to forget what the world taught you to be.—got it.
+3504 | VT-87675 | [philosophical            ] Time is just memory unfolding in a straight line.
+3505 | VT-80139 | [philosophical            ] Note: Time is just memory unfolding in a straight line. If possible.
+3506 | VT-39088 | [philosophical            ] Note: To know yourself is to forget what the world taught you to be.
+3507 | VT-82581 | [philosophical            ] Hey, What is the sound of thought before it becomes speech?—got it.
+3508 | VT-42387 | [philosophical            ] Note: What is the sound of thought before it becomes speech?
+3509 | VT-39088 | [philosophical            ] Note: To know yourself is to forget what the world taught you to be.
+3510 | VT-89705 | [philosophical            ] Reminder: Time is just memory unfolding in a straight line. Thanks.
+3511 | VT-74557 | [philosophical            ] Time is just memory unfolding in a straight line. For real.
+3512 | VT-80186 | [philosophical            ] Okay, To know yourself is to forget what the world taught you to be. For real.
+3513 | VT-39400 | [philosophical            ] Listen, Time is just memory unfolding in a straight line. Please.
+3514 | VT-18622 | [philosophical            ] Hey, Time is just memory unfolding in a straight line.—got it.
+3515 | VT-16893 | [philosophical            ] Reminder: To know yourself is to forget what the world taught you to be.
+3516 | VT-79346 | [philosophical            ] To know yourself is to forget what the world taught you to be. If possible.
+3517 | VT-68804 | [philosophical            ] Okay, What is the sound of thought before it becomes speech? For real.
+3518 | VT-87617 | [philosophical            ] Okay, What is the sound of thought before it becomes speech?—got it.
+3519 | VT-66501 | [philosophical            ] To know yourself is to forget what the world taught you to be. Please.
+3520 | VT-36848 | [philosophical            ] Heads up: Time is just memory unfolding in a straight line. Right now.
+3521 | VT-99586 | [philosophical            ] Hey, To know yourself is to forget what the world taught you to be.—copy.
+3522 | VT-71215 | [philosophical            ] Okay, What is the sound of thought before it becomes speech? Please.
+3523 | VT-52635 | [philosophical            ] Hey, What is the sound of thought before it becomes speech?
+3524 | VT-14757 | [philosophical            ] Hey, Time is just memory unfolding in a straight line.
+3525 | VT-53464 | [philosophical            ] Note: What is the sound of thought before it becomes speech?—copy.
+3526 | VT-79346 | [philosophical            ] To know yourself is to forget what the world taught you to be. If possible.
+3527 | VT-54135 | [philosophical            ] Okay, To know yourself is to forget what the world taught you to be. Please.
+3528 | VT-19169 | [philosophical            ] Time is just memory unfolding in a straight line.
+3529 | VT-39567 | [philosophical            ] Listen, Time is just memory unfolding in a straight line. For real.
+3530 | VT-38959 | [philosophical            ] Listen, Time is just memory unfolding in a straight line. If possible.
+3531 | VT-42138 | [philosophical            ] Listen, To know yourself is to forget what the world taught you to be. Please.
+3532 | VT-50585 | [philosophical            ] Okay, What is the sound of thought before it becomes speech? If possible.
+3533 | VT-70851 | [philosophical            ] Reminder: To know yourself is to forget what the world taught you to be. If possible.
+3534 | VT-43382 | [philosophical            ] What is the sound of thought before it becomes speech? For real.
+3535 | VT-62160 | [philosophical            ] FYI, To know yourself is to forget what the world taught you to be.
+3536 | VT-16594 | [philosophical            ] Reminder: What is the sound of thought before it becomes speech?—got it.
+3537 | VT-59294 | [philosophical            ] Reminder: To know yourself is to forget what the world taught you to be. If possible.
+3538 | VT-43382 | [philosophical            ] What is the sound of thought before it becomes speech? For real.
+3539 | VT-61921 | [philosophical            ] What is the sound of thought before it becomes speech?
+3540 | VT-61921 | [philosophical            ] What is the sound of thought before it becomes speech?
+3541 | VT-54793 | [philosophical            ] Hey, To know yourself is to forget what the world taught you to be. If possible.
+3542 | VT-99118 | [philosophical            ] To know yourself is to forget what the world taught you to be. Thanks.
+3543 | VT-23732 | [philosophical            ] Listen, Time is just memory unfolding in a straight line. For real.
+3544 | VT-14757 | [philosophical            ] Hey, Time is just memory unfolding in a straight line.
+3545 | VT-48420 | [philosophical            ] What is the sound of thought before it becomes speech? Right now.
+3546 | VT-63890 | [philosophical            ] Heads up: To know yourself is to forget what the world taught you to be.—got it.
+3547 | VT-71534 | [philosophical            ] FYI, To know yourself is to forget what the world taught you to be. Right now.
+3548 | VT-99120 | [philosophical            ] Note: To know yourself is to forget what the world taught you to be. Thanks.
+3549 | VT-80186 | [philosophical            ] Okay, To know yourself is to forget what the world taught you to be. For real.
+3550 | VT-54793 | [philosophical            ] Hey, To know yourself is to forget what the world taught you to be. If possible.

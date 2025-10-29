@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 12 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0551 | VT-45411 | [narrative                ] Back in college, we used to hack vending machines for snacks. Please.
+0552 | VT-81777 | [narrative                ] Okay, Back in college, we used to hack vending machines for snacks. If possible.
+0553 | VT-97548 | [narrative                ] FYI, Back in college, we used to hack vending machines for snacks. Thanks.
+0554 | VT-46719 | [narrative                ] Listen, He opened the envelope, not knowing it would change his life forever. For real.
+0555 | VT-19325 | [narrative                ] Note: He opened the envelope, not knowing it would change his life forever. If possible.
+0556 | VT-26953 | [narrative                ] Listen, Back in college, we used to hack vending machines for snacks.—got it.
+0557 | VT-41915 | [narrative                ] Hey, When I was five, I thought the moon followed me everywhere. If possible.
+0558 | VT-59324 | [narrative                ] FYI, Back in college, we used to hack vending machines for snacks.—got it.
+0559 | VT-41915 | [narrative                ] Hey, When I was five, I thought the moon followed me everywhere. If possible.
+0560 | VT-22016 | [narrative                ] FYI, He opened the envelope, not knowing it would change his life forever. Right now.
+0561 | VT-23791 | [narrative                ] Back in college, we used to hack vending machines for snacks.
+0562 | VT-91095 | [narrative                ] Okay, When I was five, I thought the moon followed me everywhere. If possible.
+0563 | VT-62734 | [narrative                ] He opened the envelope, not knowing it would change his life forever. Right now.
+0564 | VT-77476 | [narrative                ] FYI, He opened the envelope, not knowing it would change his life forever.—got it.
+0565 | VT-54037 | [narrative                ] Listen, He opened the envelope, not knowing it would change his life forever.—copy.
+0566 | VT-44562 | [narrative                ] Listen, Back in college, we used to hack vending machines for snacks. Right now.
+0567 | VT-38925 | [narrative                ] Note: Back in college, we used to hack vending machines for snacks.—copy.
+0568 | VT-91572 | [narrative                ] Note: When I was five, I thought the moon followed me everywhere. If possible.
+0569 | VT-85659 | [narrative                ] Reminder: He opened the envelope, not knowing it would change his life forever.
+0570 | VT-81151 | [narrative                ] Hey, He opened the envelope, not knowing it would change his life forever. Thanks.
+0571 | VT-65405 | [narrative                ] FYI, When I was five, I thought the moon followed me everywhere. Thanks.
+0572 | VT-59577 | [narrative                ] Hey, When I was five, I thought the moon followed me everywhere. If possible.
+0573 | VT-39853 | [narrative                ] Heads up: Back in college, we used to hack vending machines for snacks. Thanks.
+0574 | VT-20955 | [narrative                ] Reminder: Back in college, we used to hack vending machines for snacks.—got it.
+0575 | VT-33865 | [narrative                ] Heads up: He opened the envelope, not knowing it would change his life forever. Please.
+0576 | VT-54037 | [narrative                ] Listen, He opened the envelope, not knowing it would change his life forever.—copy.
+0577 | VT-63140 | [narrative                ] Reminder: Back in college, we used to hack vending machines for snacks. If possible.
+0578 | VT-97181 | [narrative                ] Reminder: When I was five, I thought the moon followed me everywhere. Please.
+0579 | VT-43092 | [narrative                ] Back in college, we used to hack vending machines for snacks.—got it.
+0580 | VT-98812 | [narrative                ] Back in college, we used to hack vending machines for snacks.—copy.
+0581 | VT-59974 | [narrative                ] When I was five, I thought the moon followed me everywhere. Thanks.
+0582 | VT-75549 | [narrative                ] FYI, He opened the envelope, not knowing it would change his life forever. Please.
+0583 | VT-33865 | [narrative                ] Heads up: He opened the envelope, not knowing it would change his life forever. Please.
+0584 | VT-55488 | [narrative                ] Reminder: He opened the envelope, not knowing it would change his life forever. For real.
+0585 | VT-33865 | [narrative                ] Heads up: He opened the envelope, not knowing it would change his life forever. Please.
+0586 | VT-36104 | [narrative                ] Listen, When I was five, I thought the moon followed me everywhere. For real.
+0587 | VT-37540 | [narrative                ] FYI, Back in college, we used to hack vending machines for snacks. If possible.
+0588 | VT-33865 | [narrative                ] Heads up: He opened the envelope, not knowing it would change his life forever. Please.
+0589 | VT-65130 | [paragraph                ] Listen, In the late afternoon, the city softens. Windows warm to a low-gold tone, and the pavement sheds the day’s heat in waves. Bicycles angle homeward. The person in front of you at the crosswalk is listening to something funny; you can tell by the way their shoulders shake. The light changes, and a dozen private stories step forward together.—copy.
+0590 | VT-36179 | [paragraph                ] Listen, He approached the dataset the way a gardener approaches soil, testing it for acidity and memory. Outliers were not weeds to be plucked but clues to the shape of the weather. He learned to trust residuals the way sailors trust clouds, and when the model finally converged, it felt less like victory and more like conversation. Please.
+0591 | VT-40542 | [paragraph                ] Listen, In a small notebook, there are lists of lists: books to read, repairs to make, people to call back. Some entries are crossed out with a thick line, others with a delicate slash that barely disturbs the ink. The habit is less about productivity and more about reassurance—the quiet proof that time can be tamed, or at least persuaded, for a while, to travel in straight lines. Right now.
+0592 | VT-83526 | [paragraph                ] Heads up: Each page in the old manual smelled like a basement but read like a treasure map. Margins filled with pencil notes argued with the printed steps, and grease fingerprints served as punctuation. When the machine finally came back to life, it did so with a cough and then a purr, as if embarrassed by the attention. Thanks.
+0593 | VT-26472 | [paragraph                ] Note: In a small notebook, there are lists of lists: books to read, repairs to make, people to call back. Some entries are crossed out with a thick line, others with a delicate slash that barely disturbs the ink. The habit is less about productivity and more about reassurance—the quiet proof that time can be tamed, or at least persuaded, for a while, to travel in straight lines. Right now.
+0594 | VT-73056 | [paragraph                ] Okay, Software ages in odd ways. It doesn’t rust, but it accrues sediment—workarounds layered over assumptions layered over guesses. Every now and then you dig a new channel and the river runs clear again. Then the silt begins to gather once more, as faithful to gravity as ever.—copy.
+0595 | VT-99118 | [paragraph                ] Note: Airports are choreographed uncertainty. People line up to prove who they are, and then line up again to be reminded where they’re going. The departures board switches fonts of anxiety, but there is a moment on every flight when the noise settles and the aisle lights look like a runway to outer space. Thanks.
+0596 | VT-65130 | [paragraph                ] Listen, In the late afternoon, the city softens. Windows warm to a low-gold tone, and the pavement sheds the day’s heat in waves. Bicycles angle homeward. The person in front of you at the crosswalk is listening to something funny; you can tell by the way their shoulders shake. The light changes, and a dozen private stories step forward together.—copy.
+0597 | VT-17487 | [paragraph                ] When the network finally stabilized, it felt like a room had been aired out. Pings returned with a calm regularity, logs read like sentences instead of riddles, and the graphs exhaled into smooth slopes. It is difficult to explain the comfort of systems behaving; the quiet competence of packets going where they should, of services greeting each other by name. Thanks.
+0598 | VT-61280 | [paragraph                ] FYI, In the late afternoon, the city softens. Windows warm to a low-gold tone, and the pavement sheds the day’s heat in waves. Bicycles angle homeward. The person in front of you at the crosswalk is listening to something funny; you can tell by the way their shoulders shake. The light changes, and a dozen private stories step forward together.—copy.
+0599 | VT-48876 | [paragraph                ] Note: Museum air always smells faintly of dust and possibility. Glass cases hold not just artifacts but instructions for how to look at them: labels, arrows, context distilled into a paragraph. In one gallery, a child counted brushstrokes aloud, unaware that she was inventing a new method of art history as she went. Thanks.
+0600 | VT-83475 | [paragraph                ] Reminder: In the late afternoon, the city softens. Windows warm to a low-gold tone, and the pavement sheds the day’s heat in waves. Bicycles angle homeward. The person in front of you at the crosswalk is listening to something funny; you can tell by the way their shoulders shake. The light changes, and a dozen private stories step forward together.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 187 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+9301 | VT-676224 | [spelling_alphabet        ] Real talk, License plate reads: Zulu Seven Bravo Nine Four. please.
+9302 | VT-565230 | [spelling_alphabet        ] Quick one: Okay, Serial: Tango–Lima–4–Foxtrot–Echo. — got it.
+9303 | VT-570023 | [spelling_alphabet        ] Okay, Note: Serial: Tango–Lima–03–Foxtrot–Echo..
+9304 | VT-643896 | [spelling_alphabet        ] FYI, Confirm: Bravo Echo Yankee Echo Romeo. Please. please.
+9305 | VT-678641 | [spelling_alphabet        ] FYI, Serial: Tango–Lima–03–Foxtrot–Echo. please.
+9306 | VT-562040 | [spelling_alphabet        ] FYI, Note: Serial: Tango–Lima–03–Foxtrot–Echo. — confirm.
+9307 | VT-602572 | [spelling_alphabet        ] Listen, Hey, Confirm: Bravo Echo Yankee Echo Romeo. Please. if you can.
+9308 | VT-627416 | [spelling_alphabet        ] Okay, Reminder: Serial: Tango–Lima–4–Foxtrot–Echo. — confirm.
+9309 | VT-530677 | [spelling_alphabet        ] Listen, Note: License plate reads: Zulu Seven Bravo Nine Four. Thanks. if you can.
+9310 | VT-506682 | [spelling_alphabet        ] Heads up: Note: Serial: Tango–Lima–03–Foxtrot–Echo. For real. please.
+9311 | VT-602122 | [spelling_alphabet        ] Quick one: Note: Say it letter by letter: R—E—S—O—N—A—N—C—E.—got it. if you can.
+9312 | VT-539050 | [spelling_alphabet        ] FYI, Listen, Acronym pronounced like a word: SNAFU.—got it. please.
+9313 | VT-659471 | [spelling_alphabet        ] Quick one: Heads up: Say it letter by letter: R—E—S—O—N—A—N—C—E. Please.
+9314 | VT-506077 | [spelling_alphabet        ] Lowercase only: monolithicservice. For real. — confirm.
+9315 | VT-575523 | [spelling_alphabet        ] Okay, Note: License plate reads: Zulu Seven Bravo Nine Four. For real. if you can.
+9316 | VT-576286 | [spelling_alphabet        ] Okay, Hey, Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—got it. — confirm.
+9317 | VT-698502 | [spelling_alphabet        ] Reminder: Note: My initials are N—A—A, November Alpha Alpha. — now.
+9318 | VT-501051 | [spelling_alphabet        ] Okay, Serial: Tango–Lima–2–Foxtrot–Echo. Right now..
+9319 | VT-525057 | [spelling_alphabet        ] Listen, Reminder: Serial: Tango–Lima–2–Foxtrot–Echo. For real. if you can.
+9320 | VT-591459 | [sports_cast              ] Reminder: Reminder: She nails the triple, crowd goes wild.—copy.
+9321 | VT-677669 | [sports_cast              ] Note: Note: A new personal best by 0.12 seconds! If possible. if you can.
+9322 | VT-656191 | [sports_cast              ] FYI, Listen, She nails the triple, crowd goes wild. Right now. please.
+9323 | VT-682770 | [sports_cast              ] Okay, Break point; deep breath; serve wide. Please..
+9324 | VT-529179 | [sports_cast              ] Real talk, FYI, What a clutch parry into the finisher. Right now. — now.
+9325 | VT-587515 | [sports_cast              ] FYI, Heads up: Fourth and inches with the clock bleeding. if you can.
+9326 | VT-553778 | [sports_cast              ] Quick one: Hey, He shoots—top shelf! For real. please. (alt)
+9327 | VT-500146 | [sports_cast              ] Real talk, Reminder: She nails the triple, crowd goes wild.—copy. — now.
+9328 | VT-543631 | [sports_cast              ] Heads up: Note: Fourth and inches with the clock bleeding. Right now. right now. (alt)
+9329 | VT-604764 | [sports_cast              ] Quick one: Okay, Break point; deep breath; serve wide.—copy. (alt)
+9330 | VT-649488 | [sports_cast              ] FYI, The underdogs are up by two. Please. if you can.
+9331 | VT-674217 | [sports_cast              ] Okay, FYI, What a clutch parry into the finisher. If possible. please.
+9332 | VT-636353 | [sports_cast              ] Real talk, A new personal best by 0.12 seconds! Please. if you can.
+9333 | VT-696607 | [sports_cast              ] Yellow card for a reckless challenge. If possible..
+9334 | VT-551529 | [sports_cast              ] Okay, Okay, Fourth and inches with the clock bleeding.—got it. — got it.
+9335 | VT-604549 | [sports_cast              ] Okay, Hey, He shoots—top shelf!—copy.
+9336 | VT-626326 | [sports_cast              ] Listen, Hey, A new personal best by 0.12 seconds! if you can. (alt)
+9337 | VT-519192 | [sports_cast              ] She nails the triple, crowd goes wild. Please. right now.
+9338 | VT-644225 | [sports_cast              ] Note: Fourth and inches with the clock bleeding..
+9339 | VT-525673 | [sports_cast              ] Quick one: FYI, The underdogs are up by two. Please. if you can.
+9340 | VT-584360 | [sports_cast              ] Reminder: Reminder: The underdogs are up by two. Thanks. please.
+9341 | VT-581368 | [sports_cast              ] FYI, Heads up: The underdogs are up by two.—copy. thanks.
+9342 | VT-550940 | [sports_cast              ] Note: Listen, A new personal best by 0.12 seconds! Thanks. — now.
+9343 | VT-665659 | [sports_cast              ] Note: Hey, He shoots—top shelf! For real. — now.
+9344 | VT-544332 | [sports_cast              ] Quick one: Okay, He shoots—top shelf! Right now.
+9345 | VT-510732 | [sports_cast              ] Note: The underdogs are up by two. If possible. — confirm.
+9346 | VT-679534 | [sports_cast              ] Quick one: Fourth and inches with the clock bleeding. Thanks. if you can.
+9347 | VT-653970 | [sports_cast              ] Okay, That split-second rotation changed everything. Please.. (alt)
+9348 | VT-505439 | [sports_cast              ] Note: Listen, That split-second rotation changed everything. Right now. thanks.
+9349 | VT-660329 | [sports_cast              ] Quick one: Okay, That split-second rotation changed everything. For real..
+9350 | VT-539354 | [sports_cast              ] Heads up: Listen, A new personal best by 0.12 seconds! Right now. thanks.

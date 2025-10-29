@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 117 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+5801 | VT-28207 | [weather_colorful         ] FYI, Wind’s punching sideways; hold your hat.—copy.
+5802 | VT-36862 | [weather_colorful         ] It’s a dry heat, said every liar ever.
+5803 | VT-98616 | [weather_colorful         ] Hey, It’s a dry heat, said every liar ever. If possible.
+5804 | VT-48201 | [weather_colorful         ] Hey, Humidity’s like soup—thick and gross. If possible.
+5805 | VT-20298 | [weather_colorful         ] Note: Cold enough to bully your bones.—got it.
+5806 | VT-83480 | [weather_colorful         ] FYI, Sky’s angry; thunder’s got opinions.—copy.
+5807 | VT-62032 | [weather_colorful         ] Humidity’s like soup—thick and gross. Thanks.
+5808 | VT-27148 | [weather_colorful         ] It’s wet as hell outside—bring a jacket.
+5809 | VT-58837 | [weather_colorful         ] Note: Sky’s angry; thunder’s got opinions. Please.
+5810 | VT-89562 | [weather_colorful         ] Heads up: Sky’s angry; thunder’s got opinions. If possible.
+5811 | VT-73451 | [weather_colorful         ] Okay, Fog so dense it feels like stealth mode.—copy.
+5812 | VT-53694 | [weather_colorful         ] Note: Sun’s cooking the asphalt medium-rare. Thanks.
+5813 | VT-47004 | [weather_colorful         ] Hey, It’s nice. Suspiciously nice. Please.
+5814 | VT-77430 | [weather_colorful         ] Wind’s punching sideways; hold your hat. Thanks.
+5815 | VT-23845 | [weather_colorful         ] Okay, It’s nice. Suspiciously nice.—copy.
+5816 | VT-64722 | [weather_colorful         ] Hey, It’s a dry heat, said every liar ever.—got it.
+5817 | VT-83480 | [weather_colorful         ] FYI, Sky’s angry; thunder’s got opinions.—copy.
+5818 | VT-41540 | [weather_colorful         ] Note: Wind’s punching sideways; hold your hat.—copy.
+5819 | VT-17564 | [weather_colorful         ] Heads up: Sky’s angry; thunder’s got opinions.—got it.
+5820 | VT-79033 | [weather_colorful         ] Listen, Sky’s angry; thunder’s got opinions.—copy.
+5821 | VT-77242 | [weather_colorful         ] Hey, Fog so dense it feels like stealth mode. Right now.
+5822 | VT-78654 | [weather_colorful         ] FYI, It’s nice. Suspiciously nice. Please.
+5823 | VT-58183 | [weather_colorful         ] Reminder: It’s wet as hell outside—bring a jacket. For real.
+5824 | VT-64722 | [weather_colorful         ] Hey, It’s a dry heat, said every liar ever.—got it.
+5825 | VT-27383 | [weather_colorful         ] It’s wet as hell outside—bring a jacket. If possible.
+5826 | VT-64722 | [weather_colorful         ] Hey, It’s a dry heat, said every liar ever.—got it.
+5827 | VT-63765 | [weather_colorful         ] Hey, Rain so hard it’s pressure-washing my soul.—copy.
+5828 | VT-33199 | [weather_colorful         ] Reminder: It’s wet as hell outside—bring a jacket.—copy.
+5829 | VT-64722 | [weather_colorful         ] Hey, It’s a dry heat, said every liar ever.—got it.
+5830 | VT-383810 | [addresses_generic        ] FYI, Heads up: Unit B, second floor, back entrance. For real.
+5831 | VT-332098 | [addresses_generic        ] Okay, Reminder: Use the service elevator—freight only. Right now. — now.
+5832 | VT-388696 | [addresses_generic        ] Real talk, Unit B, second floor, back entrance.—copy. please.
+5833 | VT-304165 | [addresses_generic        ] Reminder: Deliver to the northeast loading dock. If possible. please. (alt)
+5834 | VT-328221 | [code_readouts            ] Heads up: Listen, Function signature: def handler(event, context): Right now. please.
+5835 | VT-312156 | [code_readouts            ] Heads up: Hey, Throw a try-catch around the parser. Thanks. if you can.
+5836 | VT-379131 | [code_readouts            ] FYI, Function signature: def handler(event, context): Thanks. — confirm.
+5837 | VT-370284 | [code_readouts            ] Reminder: Reminder: Export PATH equals dollar HOME slash bin colon PATH.—copy. please.
+5838 | VT-309071 | [dramatic                 ] Real talk, Okay, I would burn the world to keep you warm. For real. — now. (alt)
+5839 | VT-362296 | [dramatic                 ] Real talk, Heads up: And then the silence screamed louder than words. If possible. — now.
+5840 | VT-379507 | [dramatic                 ] Reminder: Okay, And then the silence screamed louder than words. Right now. right now.
+5841 | VT-398994 | [dramatic                 ] Okay, And then the silence screamed louder than words. Right now. thanks.
+5842 | VT-307716 | [emoji                    ] Okay, FYI, Weather’s perfect for a walk 🌤️. please.
+5843 | VT-343309 | [emoji                    ] FYI, FYI, Let’s clean up those docs 🧹. Right now. — got it. (alt)
+5844 | VT-387684 | [emoji                    ] Quick one: Reminder: Weather’s perfect for a walk 🌤️. Right now. right now.
+5845 | VT-394811 | [emoji                    ] Quick one: Note: Deep breaths. You got this. 💪 right now.
+5846 | VT-395748 | [everyday-profanity       ] Real talk, This is freaking ridiculous. — confirm. (alt)
+5847 | VT-338890 | [everyday-profanity       ] Okay, What the hell was that noise?
+5848 | VT-371066 | [everyday-profanity       ] That was a total mess, no sugar‑coating it. if you can. (alt)
+5849 | VT-376569 | [everyday-profanity       ] Quick one: Why does this keep breaking? It’s driving me nuts. — got it.
+5850 | VT-354948 | [finance                  ] Real talk, Okay, We’re cash-flow positive but margin-thin. (2462) If possible. if you can.

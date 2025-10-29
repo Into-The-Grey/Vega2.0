@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 16 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0751 | VT-95431 | [hesitations_fillers      ] Okay, Er, can we circle back? Right now.
+0752 | VT-16976 | [hesitations_fillers      ] Listen, Right… so… moving on. Right now.
+0753 | VT-51751 | [hesitations_fillers      ] Hey, Hmm, not exactly, but close. Thanks.
+0754 | VT-68801 | [hesitations_fillers      ] Note: Well, I mean, like, kind of, yeah. For real.
+0755 | VT-64704 | [hesitations_fillers      ] FYI, Er, can we circle back? Please.
+0756 | VT-60677 | [hesitations_fillers      ] Well, I mean, like, kind of, yeah. Please.
+0757 | VT-49466 | [hesitations_fillers      ] Listen, Well, I mean, like, kind of, yeah. Right now.
+0758 | VT-50736 | [hesitations_fillers      ] Hey, Okay, okay, okay—listen. For real.
+0759 | VT-18335 | [hesitations_fillers      ] FYI, Right… so… moving on. Right now.
+0760 | VT-70144 | [hesitations_fillers      ] Note: Uh… hang on… what was I saying? Right now.
+0761 | VT-51751 | [hesitations_fillers      ] Hey, Hmm, not exactly, but close. Thanks.
+0762 | VT-29589 | [hesitations_fillers      ] Reminder: Uh… hang on… what was I saying?
+0763 | VT-51751 | [hesitations_fillers      ] Hey, Hmm, not exactly, but close. Thanks.
+0764 | VT-30899 | [hesitations_fillers      ] Listen, So—yeah—about that plan…
+0765 | VT-19031 | [hesitations_fillers      ] Note: Uh… hang on… what was I saying? Please.
+0766 | VT-51751 | [hesitations_fillers      ] Hey, Hmm, not exactly, but close. Thanks.
+0767 | VT-96891 | [interjection             ] FYI, Affirmative. If possible.
+0768 | VT-33204 | [interjection             ] Heads up: Understood. Right now.
+0769 | VT-34861 | [interjection             ] Heads up: Understood. Right now.
+0770 | VT-33204 | [interjection             ] Heads up: Understood. Right now.
+0771 | VT-12621 | [interjection             ] Reminder: Understood. For real.
+0772 | VT-57632 | [interjection             ] Heads up: Alright. If possible.
+0773 | VT-81851 | [interjection             ] Reminder: Affirmative. If possible.
+0774 | VT-12621 | [interjection             ] Reminder: Understood. For real.
+0775 | VT-33204 | [interjection             ] Heads up: Understood. Right now.
+0776 | VT-88041 | [interrogative            ] FYI, Why does it always rain when I'm unprepared?—copy.
+0777 | VT-42328 | [interrogative            ] Hey, Is this really what you want? Right now.
+0778 | VT-67975 | [interrogative            ] FYI, Is this really what you want?—copy.
+0779 | VT-82915 | [interrogative            ] Is this really what you want? For real.
+0780 | VT-61380 | [interrogative            ] Note: Do you even hear yourself right now?—got it.
+0781 | VT-50282 | [interrogative            ] Hey, Is this really what you want?
+0782 | VT-74655 | [interrogative            ] Reminder: Is this really what you want?—copy.
+0783 | VT-88041 | [interrogative            ] FYI, Why does it always rain when I'm unprepared?—copy.
+0784 | VT-73187 | [interrogative            ] Okay, Do you even hear yourself right now?—got it.
+0785 | VT-29495 | [interrogative            ] FYI, Is this really what you want?—got it.
+0786 | VT-48244 | [interrogative            ] Heads up: Why does it always rain when I'm unprepared?—got it.
+0787 | VT-21888 | [interrogative            ] Heads up: Is this really what you want? If possible.
+0788 | VT-14808 | [interrogative            ] Reminder: Why does it always rain when I'm unprepared?—copy.
+0789 | VT-58744 | [interrogative            ] Do you even hear yourself right now? Thanks.
+0790 | VT-40938 | [interrogative            ] Listen, Do you even hear yourself right now? Thanks.
+0791 | VT-69067 | [interrogative            ] Reminder: Do you even hear yourself right now? Please.
+0792 | VT-85892 | [interrogative            ] Okay, Is this really what you want?—copy.
+0793 | VT-70454 | [interrogative            ] FYI, Do you even hear yourself right now?
+0794 | VT-49366 | [interrogative            ] Do you even hear yourself right now?
+0795 | VT-48244 | [interrogative            ] Heads up: Why does it always rain when I'm unprepared?—got it.
+0796 | VT-21845 | [interrogative            ] Do you even hear yourself right now?—got it.
+0797 | VT-96184 | [interrogative            ] Listen, Do you even hear yourself right now? For real.
+0798 | VT-12852 | [interrogative            ] Okay, Why does it always rain when I'm unprepared? If possible.
+0799 | VT-74655 | [interrogative            ] Reminder: Is this really what you want?—copy.
+0800 | VT-87793 | [interrogative            ] FYI, Do you even hear yourself right now? For real.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 174 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+8651 | VT-648595 | [negations                ] Listen, I’m not doing that again. For real.. (alt)
+8652 | VT-543069 | [negations                ] Reminder: Heads up: Do not open that email. For real. — now. (alt)
+8653 | VT-572188 | [negations                ] Listen, We can’t ship without tests. Right now. thanks.
+8654 | VT-652050 | [negations                ] Heads up: Hey, No logs, no proof. For real. thanks.
+8655 | VT-635063 | [negations                ] Okay, FYI, No logs, no proof. For real. — now.
+8656 | VT-640612 | [passive_aggressive       ] Reminder: Listen, No, really, take your time. It’s not like deadlines matter. right now.
+8657 | VT-563726 | [passive_aggressive       ] Real talk, Oh, you’re here. How… unexpected. Right now. please. (alt)
+8658 | VT-520599 | [passive_aggressive       ] Note: Reminder: Oh, you’re here. How… unexpected.—got it..
+8659 | VT-526589 | [passive_aggressive       ] Quick one: Hey, Oh, you’re here. How… unexpected..
+8660 | VT-513612 | [passive_aggressive       ] Okay, Note: I love how you always do things your way, even when they’re wrong. Right now. — got it.
+8661 | VT-695532 | [passive_aggressive       ] FYI, Hey, Oh, you’re here. How… unexpected.—got it. — got it.
+8662 | VT-514020 | [passive_aggressive       ] Okay, Oh, you’re here. How… unexpected. Right now. if you can.
+8663 | VT-504510 | [passive_aggressive       ] Real talk, Listen, No, really, take your time. It’s not like deadlines matter. — got it.
+8664 | VT-533532 | [passive_aggressive       ] Real talk, FYI, I love how you always do things your way, even when they’re wrong.. (alt)
+8665 | VT-697655 | [passive_aggressive       ] Listen, FYI, Oh, you’re here. How… unexpected. For real. (alt)
+8666 | VT-625687 | [passive_aggressive       ] Real talk, Note: No, really, take your time. It’s not like deadlines matter.—copy. — confirm.
+8667 | VT-557005 | [passive_aggressive       ] Listen, Okay, Oh, you’re here. How… unexpected. Please. please.
+8668 | VT-543679 | [passive_aggressive       ] Heads up: Heads up: No, really, take your time. It’s not like deadlines matter. — got it.
+8669 | VT-518860 | [passive_aggressive       ] Real talk, Okay, I love how you always do things your way, even when they’re wrong. Please. — now.
+8670 | VT-652519 | [passive_aggressive       ] Reminder: I love how you always do things your way, even when they’re wrong.—copy.
+8671 | VT-621585 | [passive_aggressive       ] Quick one: Okay, I love how you always do things your way, even when they’re wrong. Please. — confirm.
+8672 | VT-668577 | [passive_aggressive       ] Note: FYI, Oh, you’re here. How… unexpected.—got it. — confirm.
+8673 | VT-615193 | [passive_aggressive       ] Reminder: FYI, I love how you always do things your way, even when they’re wrong.—got it. — got it. (alt)
+8674 | VT-696912 | [passive_aggressive       ] Quick one: I love how you always do things your way, even when they’re wrong. thanks.
+8675 | VT-534905 | [passive_aggressive       ] Okay, Note: No, really, take your time. It’s not like deadlines matter.—copy. if you can.
+8676 | VT-669559 | [passive_aggressive       ] I love how you always do things your way, even when they’re wrong. If possible. — got it. (alt)
+8677 | VT-591765 | [passive_aggressive       ] Listen, I love how you always do things your way, even when they’re wrong.—got it. — confirm.
+8678 | VT-684137 | [passive_aggressive       ] Heads up: Okay, No, really, take your time. It’s not like deadlines matter. Right now. — now.
+8679 | VT-634665 | [passive_aggressive       ] Okay, Okay, Oh, you’re here. How… unexpected. Right now..
+8680 | VT-608110 | [passive_aggressive       ] Listen, I love how you always do things your way, even when they’re wrong. Thanks. — confirm.
+8681 | VT-610039 | [passive_aggressive       ] FYI, No, really, take your time. It’s not like deadlines matter.—got it.
+8682 | VT-619428 | [passive_aggressive       ] Quick one: Note: No, really, take your time. It’s not like deadlines matter. Right now. (alt)
+8683 | VT-682317 | [passive_aggressive       ] Heads up: Reminder: I love how you always do things your way, even when they’re wrong. if you can.
+8684 | VT-577425 | [passive_aggressive       ] Heads up: Hey, No, really, take your time. It’s not like deadlines matter. Thanks. if you can.
+8685 | VT-606387 | [passive_aggressive       ] Listen, Hey, I love how you always do things your way, even when they’re wrong.—copy.
+8686 | VT-581222 | [passive_aggressive       ] Reminder: Listen, I love how you always do things your way, even when they’re wrong. Right now.
+8687 | VT-618519 | [passive_aggressive       ] Quick one: Hey, Oh, you’re here. How… unexpected. — got it.
+8688 | VT-637134 | [passive_aggressive       ] Heads up: No, really, take your time. It’s not like deadlines matter. If possible.
+8689 | VT-677899 | [passive_aggressive       ] FYI, Heads up: Oh, you’re here. How… unexpected. Right now. thanks.
+8690 | VT-504124 | [passive_aggressive       ] Note: Oh, you’re here. How… unexpected.—copy. please.
+8691 | VT-694407 | [passive_aggressive       ] Note: No, really, take your time. It’s not like deadlines matter. For real. — confirm.
+8692 | VT-696289 | [passive_aggressive       ] Reminder: Note: No, really, take your time. It’s not like deadlines matter. right now.
+8693 | VT-692467 | [passive_aggressive       ] Okay, I love how you always do things your way, even when they’re wrong. Please. please.
+8694 | VT-563019 | [passive_aggressive       ] Note: Heads up: Oh, you’re here. How… unexpected. Right now.
+8695 | VT-601939 | [passive_aggressive       ] Okay, Okay, Oh, you’re here. How… unexpected. If possible..
+8696 | VT-531906 | [passive_aggressive       ] FYI, Okay, Oh, you’re here. How… unexpected. Right now. thanks.
+8697 | VT-603212 | [passive_aggressive       ] Real talk, No, really, take your time. It’s not like deadlines matter.—copy. — confirm.
+8698 | VT-545104 | [passive_aggressive       ] Real talk, FYI, I love how you always do things your way, even when they’re wrong. For real. please.
+8699 | VT-514976 | [passive_aggressive       ] Real talk, FYI, Oh, you’re here. How… unexpected..
+8700 | VT-671795 | [passive_aggressive       ] Note: Hey, Oh, you’re here. How… unexpected.—copy. — confirm. (alt)

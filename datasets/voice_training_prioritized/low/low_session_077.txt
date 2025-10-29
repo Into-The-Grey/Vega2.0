@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 77 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+3801 | VT-76534 | [robotic_formal           ] FYI, This unit has no emotional processing capabilities. Thank you. Right now.
+3802 | VT-31775 | [robotic_formal           ] Okay, System acknowledgment: request received and validated. Right now.
+3803 | VT-47762 | [robotic_formal           ] Listen, Initiating process sequence in accordance with protocol alpha. For real.
+3804 | VT-38652 | [robotic_formal           ] This unit has no emotional processing capabilities. Thank you.
+3805 | VT-47869 | [robotic_formal           ] Listen, System acknowledgment: request received and validated. For real.
+3806 | VT-91823 | [robotic_formal           ] Listen, Initiating process sequence in accordance with protocol alpha. If possible.
+3807 | VT-14273 | [robotic_formal           ] Listen, Initiating process sequence in accordance with protocol alpha. If possible.
+3808 | VT-39935 | [robotic_formal           ] FYI, Initiating process sequence in accordance with protocol alpha.
+3809 | VT-22886 | [robotic_formal           ] FYI, This unit has no emotional processing capabilities. Thank you. Thanks.
+3810 | VT-53618 | [robotic_formal           ] Note: This unit has no emotional processing capabilities. Thank you.—copy.
+3811 | VT-95481 | [robotic_formal           ] Note: System acknowledgment: request received and validated.—copy.
+3812 | VT-30415 | [robotic_formal           ] FYI, Initiating process sequence in accordance with protocol alpha. Thanks.
+3813 | VT-12209 | [robotic_formal           ] Hey, Initiating process sequence in accordance with protocol alpha. Please.
+3814 | VT-67590 | [robotic_formal           ] Note: System acknowledgment: request received and validated.
+3815 | VT-48071 | [robotic_formal           ] FYI, System acknowledgment: request received and validated.—copy.
+3816 | VT-89878 | [robotic_formal           ] Listen, This unit has no emotional processing capabilities. Thank you. If possible.
+3817 | VT-86863 | [robotic_formal           ] Listen, This unit has no emotional processing capabilities. Thank you. If possible.
+3818 | VT-24420 | [robotic_formal           ] Listen, Initiating process sequence in accordance with protocol alpha. Please.
+3819 | VT-39935 | [robotic_formal           ] FYI, Initiating process sequence in accordance with protocol alpha.
+3820 | VT-88233 | [robotic_formal           ] Listen, This unit has no emotional processing capabilities. Thank you. Right now.
+3821 | VT-63958 | [robotic_formal           ] System acknowledgment: request received and validated. Thanks.
+3822 | VT-78914 | [robotic_formal           ] Note: This unit has no emotional processing capabilities. Thank you.
+3823 | VT-59003 | [robotic_formal           ] This unit has no emotional processing capabilities. Thank you. For real.
+3824 | VT-86958 | [robotic_formal           ] Hey, System acknowledgment: request received and validated.—got it.
+3825 | VT-78210 | [robotic_formal           ] FYI, Initiating process sequence in accordance with protocol alpha. Thanks.
+3826 | VT-24420 | [robotic_formal           ] Listen, Initiating process sequence in accordance with protocol alpha. Please.
+3827 | VT-61241 | [robotic_formal           ] Note: Initiating process sequence in accordance with protocol alpha. Right now.
+3828 | VT-24420 | [robotic_formal           ] Listen, Initiating process sequence in accordance with protocol alpha. Please.
+3829 | VT-70214 | [robotic_formal           ] FYI, System acknowledgment: request received and validated. Thanks.
+3830 | VT-31548 | [robotic_formal           ] Okay, This unit has no emotional processing capabilities. Thank you. Please.
+3831 | VT-24420 | [robotic_formal           ] Listen, Initiating process sequence in accordance with protocol alpha. Please.
+3832 | VT-44320 | [sales_pitch              ] Heads up: Unlock premium features now with just one click! For real.
+3833 | VT-52125 | [sales_pitch              ] Hey, This offer won’t last—act today! Thanks.
+3834 | VT-10138 | [sales_pitch              ] FYI, This offer won’t last—act today! If possible.
+3835 | VT-40429 | [sales_pitch              ] Hey, This offer won’t last—act today! Please.
+3836 | VT-88336 | [sales_pitch              ] Heads up: Why settle for less when you can have excellence?—got it.
+3837 | VT-18705 | [sales_pitch              ] Reminder: This offer won’t last—act today! For real.
+3838 | VT-23954 | [sales_pitch              ] Hey, This offer won’t last—act today! Thanks.
+3839 | VT-44320 | [sales_pitch              ] Heads up: Unlock premium features now with just one click! For real.
+3840 | VT-57468 | [sales_pitch              ] Hey, Why settle for less when you can have excellence? For real.
+3841 | VT-37108 | [sales_pitch              ] Note: This offer won’t last—act today!—copy.
+3842 | VT-47199 | [sales_pitch              ] Heads up: Unlock premium features now with just one click! Thanks.
+3843 | VT-62707 | [sales_pitch              ] This offer won’t last—act today!—copy.
+3844 | VT-46489 | [sales_pitch              ] Heads up: Unlock premium features now with just one click!—got it.
+3845 | VT-46312 | [sales_pitch              ] Heads up: Why settle for less when you can have excellence?
+3846 | VT-88986 | [sales_pitch              ] Heads up: Why settle for less when you can have excellence? Thanks.
+3847 | VT-90091 | [sales_pitch              ] Why settle for less when you can have excellence?
+3848 | VT-38666 | [sales_pitch              ] Okay, This offer won’t last—act today!
+3849 | VT-43427 | [sales_pitch              ] Okay, Why settle for less when you can have excellence?—copy.
+3850 | VT-46258 | [sales_pitch              ] Why settle for less when you can have excellence?

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 78 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+3851 | VT-47199 | [sales_pitch              ] Heads up: Unlock premium features now with just one click! Thanks.
+3852 | VT-85419 | [sales_pitch              ] Why settle for less when you can have excellence? Please.
+3853 | VT-30877 | [sales_pitch              ] Why settle for less when you can have excellence? Thanks.
+3854 | VT-73709 | [sales_pitch              ] Unlock premium features now with just one click! Thanks.
+3855 | VT-23954 | [sales_pitch              ] Hey, This offer won’t last—act today! Thanks.
+3856 | VT-62955 | [sales_pitch              ] FYI, Why settle for less when you can have excellence?—got it.
+3857 | VT-76930 | [sales_pitch              ] Hey, Unlock premium features now with just one click! Please.
+3858 | VT-78566 | [sales_pitch              ] Hey, Unlock premium features now with just one click!—copy.
+3859 | VT-67718 | [sales_pitch              ] Listen, Why settle for less when you can have excellence? Please.
+3860 | VT-41024 | [sales_pitch              ] Reminder: Unlock premium features now with just one click! Please.
+3861 | VT-24602 | [sales_pitch              ] Heads up: Why settle for less when you can have excellence?—copy.
+3862 | VT-79829 | [sales_pitch              ] Listen, Why settle for less when you can have excellence?
+3863 | VT-40429 | [sales_pitch              ] Hey, This offer won’t last—act today! Please.
+3864 | VT-74417 | [sales_pitch              ] Okay, Unlock premium features now with just one click! If possible.
+3865 | VT-54765 | [sales_pitch              ] This offer won’t last—act today! If possible.
+3866 | VT-48554 | [sales_pitch              ] Reminder: This offer won’t last—act today! Please.
+3867 | VT-25200 | [sales_pitch              ] Hey, Unlock premium features now with just one click!—copy.
+3868 | VT-92114 | [sales_pitch              ] Hey, Unlock premium features now with just one click!
+3869 | VT-90091 | [sales_pitch              ] Why settle for less when you can have excellence?
+3870 | VT-54765 | [sales_pitch              ] This offer won’t last—act today! If possible.
+3871 | VT-34917 | [sales_pitch              ] Heads up: This offer won’t last—act today! Thanks.
+3872 | VT-23954 | [sales_pitch              ] Hey, This offer won’t last—act today! Thanks.
+3873 | VT-84066 | [sales_pitch              ] Reminder: Unlock premium features now with just one click!—copy.
+3874 | VT-76781 | [sales_pitch              ] FYI, Why settle for less when you can have excellence?—got it.
+3875 | VT-52407 | [sales_pitch              ] Note: This offer won’t last—act today!—copy.
+3876 | VT-54925 | [sales_pitch              ] Hey, This offer won’t last—act today!—copy.
+3877 | VT-67718 | [sales_pitch              ] Listen, Why settle for less when you can have excellence? Please.
+3878 | VT-26060 | [sales_pitch              ] Note: This offer won’t last—act today! Thanks.
+3879 | VT-47707 | [sales_pitch              ] Why settle for less when you can have excellence? For real.
+3880 | VT-73660 | [sales_pitch              ] Reminder: This offer won’t last—act today! Please.
+3881 | VT-84580 | [sales_pitch              ] Note: This offer won’t last—act today! If possible.
+3882 | VT-43427 | [sales_pitch              ] Okay, Why settle for less when you can have excellence?—copy.
+3883 | VT-73709 | [sales_pitch              ] Unlock premium features now with just one click! Thanks.
+3884 | VT-50397 | [sales_pitch              ] Note: This offer won’t last—act today!—copy.
+3885 | VT-82594 | [sales_pitch              ] FYI, Why settle for less when you can have excellence? Thanks.
+3886 | VT-29709 | [sales_pitch              ] Hey, This offer won’t last—act today!—got it.
+3887 | VT-46959 | [sales_pitch              ] Okay, Unlock premium features now with just one click!
+3888 | VT-51441 | [sales_pitch              ] Okay, Why settle for less when you can have excellence?
+3889 | VT-74417 | [sales_pitch              ] Okay, Unlock premium features now with just one click! If possible.
+3890 | VT-34793 | [sales_pitch              ] FYI, Why settle for less when you can have excellence? Thanks.
+3891 | VT-62135 | [sales_pitch              ] Hey, This offer won’t last—act today!—got it.
+3892 | VT-69875 | [sales_pitch              ] Okay, Why settle for less when you can have excellence? If possible.
+3893 | VT-63785 | [sales_pitch              ] Okay, Why settle for less when you can have excellence? Please.
+3894 | VT-46312 | [sales_pitch              ] Heads up: Why settle for less when you can have excellence?
+3895 | VT-54925 | [sales_pitch              ] Hey, This offer won’t last—act today!—copy.
+3896 | VT-46258 | [sales_pitch              ] Why settle for less when you can have excellence?
+3897 | VT-65631 | [sales_pitch              ] Note: Why settle for less when you can have excellence?
+3898 | VT-89181 | [sales_pitch              ] This offer won’t last—act today!—got it.
+3899 | VT-44006 | [sales_pitch              ] Reminder: Unlock premium features now with just one click! Thanks.
+3900 | VT-36818 | [sales_pitch              ] Reminder: Unlock premium features now with just one click!

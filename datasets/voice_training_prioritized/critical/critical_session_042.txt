@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 42 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2051 | VT-620005 | [everyday                 ] Heads up: I forgot my keys again. please.
+2052 | VT-610060 | [everyday                 ] Real talk, I’m running five minutes late—sorry!
+2053 | VT-531255 | [everyday                 ] Note: I’m running five minutes late—sorry! — now.
+2054 | VT-639278 | [everyday                 ] Quick one: I forgot my keys again. — confirm.
+2055 | VT-598944 | [everyday                 ] FYI, Reminder: See you on Wednesday!—got it. thanks.
+2056 | VT-589561 | [everyday                 ] Heads up: See you on Wednesday! please. (alt)
+2057 | VT-565243 | [everyday                 ] Reminder: Hey, I appreciate the quick response. Please. right now.
+2058 | VT-643482 | [everyday                 ] Real talk, I'll grab lunch near the studio. — got it.
+2059 | VT-646399 | [everyday                 ] Quick one: See you on Saturday! thanks. (alt)
+2060 | VT-589669 | [everyday                 ] FYI, I'll be at the office around noon..
+2061 | VT-581790 | [everyday                 ] Listen, Good evening.
+2062 | VT-694898 | [everyday                 ] Note: See you on Sunday! — got it.
+2063 | VT-601967 | [everyday                 ] Heads up: Hey Avery, can you call me back when you get a chance? please.
+2064 | VT-540131 | [everyday                 ] Real talk, FYI, Could you double‑check the address? Thanks. right now.
+2065 | VT-620436 | [everyday                 ] Real talk, Could you send me that file before 5:05 PM?.
+2066 | VT-640760 | [everyday                 ] Note: Could you send me that file before 7:30 AM? thanks.
+2067 | VT-531731 | [everyday                 ] Note: Note: Could you send me that file before noon? For real. thanks. (alt)
+2068 | VT-517574 | [everyday                 ] Quick one: FYI, Okay, but what’s the worst-case scenario?—got it. right now. (alt)
+2069 | VT-664719 | [imperative               ] Heads up: Reminder: Shut it down immediately. Please. please.
+2070 | VT-607750 | [imperative               ] Real talk, FYI, Please sit up straight and focus. Thanks. if you can. (alt)
+2071 | VT-603891 | [imperative               ] Note: Hey, Please sit up straight and focus. For real. thanks.
+2072 | VT-594333 | [imperative               ] Real talk, Note: Please sit up straight and focus. Thanks. if you can.
+2073 | VT-625873 | [imperative               ] Reminder: Call me when you get home. Thanks. — now.
+2074 | VT-643485 | [imperative               ] Real talk, Please sit up straight and focus. If possible. — got it.
+2075 | VT-549363 | [imperative               ] Reminder: Please sit up straight and focus. For real..
+2076 | VT-522077 | [imperative               ] Note: Reminder: Shut it down immediately. Please. — got it.
+2077 | VT-641484 | [imperative               ] Note: FYI, Call me when you get home.—copy..
+2078 | VT-656166 | [imperative               ] Listen, Note: Please sit up straight and focus. If possible. — now. (alt)
+2079 | VT-641335 | [imperative               ] Reminder: Shut it down immediately. please.
+2080 | VT-501689 | [imperative               ] Okay, Note: Please sit up straight and focus. — confirm.
+2081 | VT-515870 | [imperative               ] Quick one: Hey, Shut it down immediately.—copy. — confirm.
+2082 | VT-525892 | [imperative               ] Quick one: Listen, Call me when you get home. If possible. thanks.
+2083 | VT-643397 | [imperative               ] Real talk, Reminder: Call me when you get home.—copy. thanks. (alt)
+2084 | VT-607093 | [imperative               ] Note: FYI, Call me when you get home. If possible. thanks.
+2085 | VT-503829 | [imperative               ] FYI, Reminder: Please sit up straight and focus. Please..
+2086 | VT-654876 | [imperative               ] Okay, FYI, Call me when you get home. For real. please.
+2087 | VT-604301 | [imperative               ] Listen, Call me when you get home. — got it.
+2088 | VT-553284 | [imperative               ] Note: Shut it down immediately..
+2089 | VT-525518 | [imperative               ] Listen, Listen, Call me when you get home. Please..
+2090 | VT-674624 | [imperative               ] Note: Note: Call me when you get home. For real. — now. (alt)
+2091 | VT-680196 | [imperative               ] Listen, Reminder: Shut it down immediately. Please. please.
+2092 | VT-639160 | [imperative               ] Quick one: Please sit up straight and focus. For real. please. (alt)
+2093 | VT-529843 | [imperative               ] Real talk, Okay, Call me when you get home. please. (alt)
+2094 | VT-534981 | [imperative               ] Quick one: Hey, Shut it down immediately. please.
+2095 | VT-667616 | [imperative               ] Quick one: FYI, Shut it down immediately.—got it. if you can.
+2096 | VT-647690 | [imperative               ] Reminder: Call me when you get home. thanks. (alt)
+2097 | VT-551988 | [imperative               ] Hey, Shut it down immediately.—got it. thanks.
+2098 | VT-688516 | [imperative               ] Note: Listen, Call me when you get home.—copy. — now.
+2099 | VT-526318 | [imperative               ] Heads up: Reminder: Call me when you get home.—got it. thanks.
+2100 | VT-657949 | [imperative               ] Quick one: Note: Please sit up straight and focus. Thanks..

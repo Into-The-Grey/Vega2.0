@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 12 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0551 | VT-74725 | [dates_times              ] Reminder: The deadline moved from Q3 to Q4. (6458) Thanks.
+0552 | VT-79486 | [dates_times              ] Note: My birthday is on 02/29—leap year baby. (5643)—copy.
+0553 | VT-69875 | [dates_times              ] Heads up: Today is the 27th of October, 2025. (1379)
+0554 | VT-39045 | [dates_times              ] Okay, The deadline moved from Q3 to Q4. (6550) If possible.
+0555 | VT-96512 | [dates_times              ] Note: Set a reminder for 7:45 PM on Friday. (6412)
+0556 | VT-63790 | [dates_times              ] Heads up: Today is the 27th of October, 2025. (5098)—got it.
+0557 | VT-91821 | [dates_times              ] Reminder: Today is the 27th of October, 2025. (5535)—got it.
+0558 | VT-18859 | [dates_times              ] Heads up: What's the date two weeks from yesterday? (9367)—got it.
+0559 | VT-96954 | [dates_times              ] Reminder: Timer: three hours, twenty-one minutes, go. (64)—copy.
+0560 | VT-50411 | [dates_times              ] FYI, Sunrise is at 06:58; sunset at 17:12. (3615)—got it.
+0561 | VT-19724 | [dates_times              ] Wake me up in 23 minutes. (1487) Thanks.
+0562 | VT-24993 | [dates_times              ] Heads up: Sunrise is at 06:58; sunset at 17:12. (1041)—copy.
+0563 | VT-64954 | [dates_times              ] Listen, Schedule it biweekly starting next Monday. (1370) Thanks.
+0564 | VT-69875 | [dates_times              ] Heads up: Today is the 27th of October, 2025. (1379)
+0565 | VT-60273 | [dates_times              ] Note: Wake me up in 23 minutes. (5900)—copy.
+0566 | VT-92042 | [dates_times              ] Listen, Today is the 27th of October, 2025. (6731) For real.
+0567 | VT-27422 | [dates_times              ] Note: Today is the 27th of October, 2025. (8209)—got it.
+0568 | VT-18423 | [dates_times              ] Okay, What's the date two weeks from yesterday? (1222) Right now.
+0569 | VT-34787 | [dates_times              ] Hey, Sunrise is at 06:58; sunset at 17:12. (2241)
+0570 | VT-75877 | [dates_times              ] Set a reminder for 7:45 PM on Friday. (6140) If possible.
+0571 | VT-64954 | [dates_times              ] Listen, Schedule it biweekly starting next Monday. (1370) Thanks.
+0572 | VT-29736 | [dates_times              ] Hey, Set a reminder for 7:45 PM on Friday. (4392) If possible.
+0573 | VT-64954 | [dates_times              ] Listen, Schedule it biweekly starting next Monday. (1370) Thanks.
+0574 | VT-46351 | [dates_times              ] Okay, Convert 14:30 UTC to Central Time. (124) Please.
+0575 | VT-44306 | [dates_times              ] Set a reminder for 7:45 PM on Friday. (2961) For real.
+0576 | VT-64954 | [dates_times              ] Listen, Schedule it biweekly starting next Monday. (1370) Thanks.
+0577 | VT-37215 | [hesitations_fillers      ] Heads up: Hmm, not exactly, but close. If possible.
+0578 | VT-16976 | [hesitations_fillers      ] Listen, Right… so… moving on. Right now.
+0579 | VT-87444 | [hesitations_fillers      ] Reminder: Hmm, not exactly, but close. For real.
+0580 | VT-20966 | [hesitations_fillers      ] Heads up: I… I don’t know if that’ll fly. For real.
+0581 | VT-21933 | [hesitations_fillers      ] Mmm, nope, that’s not it. Please.
+0582 | VT-28913 | [hesitations_fillers      ] Heads up: Well, I mean, like, kind of, yeah.
+0583 | VT-73123 | [hesitations_fillers      ] Note: Uh… hang on… what was I saying? Right now.
+0584 | VT-37215 | [hesitations_fillers      ] Heads up: Hmm, not exactly, but close. If possible.
+0585 | VT-48363 | [hesitations_fillers      ] Note: Well, I mean, like, kind of, yeah. Please.
+0586 | VT-91570 | [hesitations_fillers      ] Reminder: I… I don’t know if that’ll fly.—copy.
+0587 | VT-17290 | [hesitations_fillers      ] Reminder: Wait—uh—did you hear that?
+0588 | VT-20066 | [hesitations_fillers      ] FYI, Mmm, nope, that’s not it. Thanks.
+0589 | VT-32827 | [hesitations_fillers      ] Reminder: Right… so… moving on.—copy.
+0590 | VT-66107 | [hesitations_fillers      ] Listen, So—yeah—about that plan…
+0591 | VT-92450 | [hesitations_fillers      ] Listen, Well, I mean, like, kind of, yeah.—got it.
+0592 | VT-70144 | [hesitations_fillers      ] Note: Uh… hang on… what was I saying? Right now.
+0593 | VT-57334 | [hesitations_fillers      ] Right… so… moving on. Right now.
+0594 | VT-59522 | [hesitations_fillers      ] Reminder: Hmm, not exactly, but close. Please.
+0595 | VT-24005 | [hesitations_fillers      ] Well, I mean, like, kind of, yeah.
+0596 | VT-17290 | [hesitations_fillers      ] Reminder: Wait—uh—did you hear that?
+0597 | VT-14440 | [hesitations_fillers      ] Okay, Wait—uh—did you hear that? Please.
+0598 | VT-88367 | [hesitations_fillers      ] Okay, Wait—uh—did you hear that? If possible.
+0599 | VT-18335 | [hesitations_fillers      ] FYI, Right… so… moving on. Right now.
+0600 | VT-73123 | [hesitations_fillers      ] Note: Uh… hang on… what was I saying? Right now.

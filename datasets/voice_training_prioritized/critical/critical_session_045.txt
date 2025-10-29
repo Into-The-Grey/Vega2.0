@@ -1,0 +1,59 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 45 of 45
+# Lines: 49
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2201 | VT-674361 | [question_variants        ] Listen, FYI, Can you confirm we’re good? thanks.
+2202 | VT-693519 | [question_variants        ] Okay, FYI, Are we good? For real. — got it.
+2203 | VT-616453 | [question_variants        ] Okay, Note: Are we good? Right now. — got it. (alt)
+2204 | VT-579239 | [question_variants        ] Note: Is everything okay with that?—copy. — confirm. (alt)
+2205 | VT-670849 | [question_variants        ] Quick one: Hey, Are we good? thanks. (alt)
+2206 | VT-599605 | [question_variants        ] Real talk, Reminder: Good—yes or no? For real.
+2207 | VT-677271 | [question_variants        ] FYI, Okay, You sure? Please. — confirm.
+2208 | VT-660175 | [question_variants        ] Real talk, Okay, Positive? Thanks. thanks.
+2209 | VT-584908 | [question_variants        ] Okay, FYI, We good? Please.. (alt)
+2210 | VT-534000 | [question_variants        ] Listen, Heads up: Any reason not to proceed? Right now. (alt)
+2211 | VT-695238 | [question_variants        ] Okay, Hey, What’s the catch?—got it. please.
+2212 | VT-618287 | [question_variants        ] Real talk, Reminder: Can you confirm we’re good? Please. — now.
+2213 | VT-570101 | [question_variants        ] Quick one: Any reason not to proceed? — now.
+2214 | VT-523816 | [question_variants        ] Heads up: What’s the catch? Please. — got it.
+2215 | VT-543039 | [question_variants        ] Quick one: Heads up: Good—yes or no? For real. right now.
+2216 | VT-620756 | [question_variants        ] Listen, Hey, What’s the catch? Please. right now.
+2217 | VT-635889 | [question_variants        ] Okay, Hey, Can you confirm we’re good? if you can.
+2218 | VT-656508 | [question_variants        ] Reminder: Reminder: We good? Thanks..
+2219 | VT-592931 | [question_variants        ] Real talk, Note: Are we good? If possible. please.
+2220 | VT-571466 | [question_variants        ] Quick one: Okay, We good? please.
+2221 | VT-525033 | [question_variants        ] Heads up: Positive?. (alt)
+2222 | VT-572489 | [question_variants        ] Okay, FYI, Is everything okay with that? Right now. — confirm.
+2223 | VT-643038 | [question_variants        ] FYI, FYI, Is everything okay with that? For real.
+2224 | VT-561916 | [question_variants        ] Real talk, Reminder: Are we good? Right now.
+2225 | VT-545548 | [question_variants        ] Listen, Hey, Can you confirm we’re good? Please.
+2226 | VT-658082 | [question_variants        ] Note: What’s the catch? If possible..
+2227 | VT-685211 | [question_variants        ] Heads up: Note: Can you confirm we’re good? Thanks. — got it.
+2228 | VT-645026 | [question_variants        ] FYI, We good? Please.
+2229 | VT-622902 | [question_variants        ] Okay, We good? thanks.
+2230 | VT-530018 | [question_variants        ] Reminder: Heads up: Can you confirm we’re good? Please.
+2231 | VT-551586 | [question_variants        ] Reminder: Note: Can you confirm we’re good? Please. if you can.
+2232 | VT-550674 | [question_variants        ] Reminder: Hey, Does that check out? For real. — got it. (alt)
+2233 | VT-675698 | [question_variants        ] Okay, Can you confirm we’re good?
+2234 | VT-699112 | [question_variants        ] Quick one: Note: Can you confirm we’re good? Please. — now.
+2235 | VT-657308 | [question_variants        ] Okay, FYI, Does that check out?—copy. right now. (alt)
+2236 | VT-503019 | [question_variants        ] FYI, Okay, Can you confirm we’re good?—got it.. (alt)
+2237 | VT-660686 | [question_variants        ] Quick one: Hey, We good? — now.
+2238 | VT-501456 | [question_variants        ] Quick one: Reminder: Can you confirm we’re good? Please. — got it.
+2239 | VT-619814 | [question_variants        ] Reminder: Heads up: Is everything okay with that?—copy. — confirm.
+2240 | VT-507395 | [question_variants        ] Listen, Listen, Positive? Right now. — got it.
+2241 | VT-565338 | [question_variants        ] Okay, Note: Is everything okay with that?—copy. right now.
+2242 | VT-583776 | [question_variants        ] Okay, Reminder: What’s the catch? Please. — got it.
+2243 | VT-619220 | [question_variants        ] Quick one: Hey, We good? If possible. right now.
+2244 | VT-520792 | [question_variants        ] Note: Are we good? If possible.. (alt)
+2245 | VT-590689 | [question_variants        ] FYI, Heads up: Good—yes or no? For real..
+2246 | VT-611506 | [question_variants        ] Quick one: Can you confirm we’re good? If possible. — got it. (alt)
+2247 | VT-562889 | [question_variants        ] Okay, FYI, Can you confirm we’re good?—got it. — got it.
+2248 | VT-764703 | [question_variants        ] Good—yes or no? Thanks. — confirm. (alt)
+2249 | VT-727214 | [imperative               ] Okay, Reminder: Shut it down immediately. Please. if you can.

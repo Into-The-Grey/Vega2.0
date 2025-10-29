@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 92 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+4551 | VT-71160 | [spelling_alphabet        ] FYI, Serial: Tango–Lima–03–Foxtrot–Echo. Thanks.
+4552 | VT-84984 | [spelling_alphabet        ] Listen, All caps: API KEY REVOKED.
+4553 | VT-89095 | [spelling_alphabet        ] Hey, My initials are N—A—A, November Alpha Alpha.—copy.
+4554 | VT-93576 | [spelling_alphabet        ] Confirm: Bravo Echo Yankee Echo Romeo.—copy.
+4555 | VT-46751 | [spelling_alphabet        ] Listen, License plate reads: Zulu Seven Bravo Nine Four.—got it.
+4556 | VT-93576 | [spelling_alphabet        ] Confirm: Bravo Echo Yankee Echo Romeo.—copy.
+4557 | VT-55540 | [spelling_alphabet        ] Heads up: License plate reads: Zulu Seven Bravo Nine Four.—got it.
+4558 | VT-84486 | [spelling_alphabet        ] Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November. For real.
+4559 | VT-39560 | [spelling_alphabet        ] FYI, My initials are N—A—A, November Alpha Alpha.
+4560 | VT-83790 | [spelling_alphabet        ] Note: Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.
+4561 | VT-66146 | [spelling_alphabet        ] FYI, All caps: API KEY REVOKED. If possible.
+4562 | VT-87345 | [spelling_alphabet        ] Listen, Confirm: Bravo Echo Yankee Echo Romeo.—got it.
+4563 | VT-72317 | [spelling_alphabet        ] FYI, My initials are N—A—A, November Alpha Alpha. Right now.
+4564 | VT-69159 | [spelling_alphabet        ] Hey, Lowercase only: monolithicservice. For real.
+4565 | VT-55220 | [spelling_alphabet        ] Note: Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—got it.
+4566 | VT-45311 | [spelling_alphabet        ] Reminder: Confirm: Bravo Echo Yankee Echo Romeo. Please.
+4567 | VT-57214 | [spelling_alphabet        ] Reminder: Acronym pronounced like a word: SNAFU. If possible.
+4568 | VT-49960 | [spelling_alphabet        ] Heads up: Confirm: Bravo Echo Yankee Echo Romeo.—got it.
+4569 | VT-17777 | [spelling_alphabet        ] Heads up: Lowercase only: monolithicservice.—copy.
+4570 | VT-70579 | [spelling_alphabet        ] FYI, Say it letter by letter: R—E—S—O—N—A—N—C—E. Thanks.
+4571 | VT-26250 | [spelling_alphabet        ] Heads up: License plate reads: Zulu Seven Bravo Nine Four. For real.
+4572 | VT-88064 | [spelling_alphabet        ] FYI, Say it letter by letter: R—E—S—O—N—A—N—C—E.—copy.
+4573 | VT-32733 | [spelling_alphabet        ] Okay, Serial: Tango–Lima–03–Foxtrot–Echo.
+4574 | VT-57214 | [spelling_alphabet        ] Reminder: Acronym pronounced like a word: SNAFU. If possible.
+4575 | VT-57214 | [spelling_alphabet        ] Reminder: Acronym pronounced like a word: SNAFU. If possible.
+4576 | VT-83168 | [spelling_alphabet        ] Reminder: Acronym pronounced like a word: SNAFU. Thanks.
+4577 | VT-80613 | [spelling_alphabet        ] Reminder: Serial: Tango–Lima–03–Foxtrot–Echo.
+4578 | VT-25979 | [spelling_alphabet        ] Note: Serial: Tango–Lima–03–Foxtrot–Echo. Thanks.
+4579 | VT-65679 | [spelling_alphabet        ] FYI, Lowercase only: monolithicservice. Right now.
+4580 | VT-90401 | [spelling_alphabet        ] Okay, Say it letter by letter: R—E—S—O—N—A—N—C—E. If possible.
+4581 | VT-62843 | [spelling_alphabet        ] Listen, Acronym pronounced like a word: SNAFU. Thanks.
+4582 | VT-58802 | [spelling_alphabet        ] Reminder: License plate reads: Zulu Seven Bravo Nine Four.—copy.
+4583 | VT-25962 | [spelling_alphabet        ] Okay, All caps: API KEY REVOKED. For real.
+4584 | VT-62701 | [spelling_alphabet        ] FYI, Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November. If possible.
+4585 | VT-12635 | [spelling_alphabet        ] Okay, Username: delta.delta—underscore—root. For real.
+4586 | VT-62701 | [spelling_alphabet        ] FYI, Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November. If possible.
+4587 | VT-36744 | [spelling_alphabet        ] Listen, Confirm: Bravo Echo Yankee Echo Romeo. Right now.
+4588 | VT-34757 | [spelling_alphabet        ] My initials are N—A—A, November Alpha Alpha.
+4589 | VT-26844 | [spelling_alphabet        ] Reminder: My initials are N—A—A, November Alpha Alpha.—got it.
+4590 | VT-40300 | [spelling_alphabet        ] Okay, Say it letter by letter: R—E—S—O—N—A—N—C—E.—got it.
+4591 | VT-61186 | [spelling_alphabet        ] Hey, Username: delta.delta—underscore—root. Right now.
+4592 | VT-26250 | [spelling_alphabet        ] Heads up: License plate reads: Zulu Seven Bravo Nine Four. For real.
+4593 | VT-95893 | [spelling_alphabet        ] Heads up: Say it letter by letter: R—E—S—O—N—A—N—C—E. Right now.
+4594 | VT-86724 | [spelling_alphabet        ] FYI, Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November. Thanks.
+4595 | VT-53069 | [spelling_alphabet        ] Listen, License plate reads: Zulu Seven Bravo Nine Four. Please.
+4596 | VT-94123 | [spelling_alphabet        ] FYI, License plate reads: Zulu Seven Bravo Nine Four. Please.
+4597 | VT-56611 | [spelling_alphabet        ] FYI, All caps: API KEY REVOKED. If possible.
+4598 | VT-25262 | [spelling_alphabet        ] Okay, Acronym pronounced like a word: SNAFU.—copy.
+4599 | VT-69159 | [spelling_alphabet        ] Hey, Lowercase only: monolithicservice. For real.
+4600 | VT-93576 | [spelling_alphabet        ] Confirm: Bravo Echo Yankee Echo Romeo.—copy.

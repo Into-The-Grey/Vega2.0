@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 41 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2001 | VT-598105 | [everyday                 ] Note: I'll be at the office around noon. Thanks. (alt)
+2002 | VT-537322 | [everyday                 ] Listen, Could you send me that file before 5:05 PM? please.
+2003 | VT-546036 | [everyday                 ] Note: Did you try a different cable and port? if you can.
+2004 | VT-626371 | [everyday                 ] Reminder: Let's meet on Thursday to go over the plan. — confirm.
+2005 | VT-600370 | [everyday                 ] Note: Hey, Hey Casey, can you call me back when you get a chance?—copy. thanks.
+2006 | VT-519175 | [everyday                 ] Quick one: How have you been? thanks.
+2007 | VT-566133 | [everyday                 ] Okay, Turn the volume down a bit, please.—copy. right now.
+2008 | VT-686423 | [everyday                 ] FYI, Long time no see. — confirm. (alt)
+2009 | VT-545630 | [everyday                 ] Okay, Listen, Let me know if you need anything else. For real. please.
+2010 | VT-580828 | [everyday                 ] Okay, Thanks, that was super helpful. if you can. (alt)
+2011 | VT-600089 | [everyday                 ] Listen, Okay, but what’s the worst-case scenario? (alt)
+2012 | VT-601870 | [everyday                 ] Reminder: Do you want to split the bill? thanks.
+2013 | VT-575371 | [everyday                 ] Listen, We can wrap this up by midnight. if you can.
+2014 | VT-558588 | [everyday                 ] Let me know if you need anything else. thanks.
+2015 | VT-571932 | [everyday                 ] Okay, FYI, Let's meet on Friday to go over the plan. Right now. please. (alt)
+2016 | VT-528507 | [everyday                 ] Listen, Good evening..
+2017 | VT-597936 | [everyday                 ] FYI, Okay, Mark it as tentative until we confirm. For real. — got it.
+2018 | VT-559361 | [everyday                 ] Heads up: How's it going?
+2019 | VT-683385 | [everyday                 ] FYI, Okay, I'll grab lunch near the store.—copy. — now.
+2020 | VT-692652 | [everyday                 ] Okay, Let’s keep it simple this time. right now.
+2021 | VT-613818 | [everyday                 ] FYI, What exactly did we agree to last time?. (alt)
+2022 | VT-688653 | [everyday                 ] Listen, Hey, Let's meet on Sunday to go over the plan.—got it. thanks.
+2023 | VT-619821 | [everyday                 ] Real talk, How's it going?.
+2024 | VT-647624 | [everyday                 ] FYI, Reminder: We can wrap this up by 5:05 PM. For real. thanks.
+2025 | VT-641312 | [everyday                 ] Reminder: Long time no see. — confirm.
+2026 | VT-529938 | [everyday                 ] Real talk, Mark it as tentative until we confirm. please.
+2027 | VT-551662 | [everyday                 ] Real talk, Reminder: I’ll send a follow-up email tonight. Please. if you can. (alt)
+2028 | VT-614355 | [everyday                 ] Heads up: I’ll handle the return; you keep the receipt. — got it.
+2029 | VT-548216 | [everyday                 ] Note: Reminder: I’ll circle back after lunch. — got it.
+2030 | VT-543229 | [everyday                 ] Heads up: Do you want to split the bill?.
+2031 | VT-593600 | [everyday                 ] Okay, I appreciate the quick response. — got it. (alt)
+2032 | VT-502022 | [everyday                 ] Listen, I'll grab lunch near the studio. thanks.
+2033 | VT-690083 | [everyday                 ] Listen, Could you double‑check the address? — got it. (alt)
+2034 | VT-576102 | [everyday                 ] FYI, It’s not urgent—get to it when you can. (alt)
+2035 | VT-511783 | [everyday                 ] Real talk, Could you send me that file before 5:05 PM? — now. (alt)
+2036 | VT-617191 | [everyday                 ] Okay, Turn the volume down a bit, please.—copy. — now.
+2037 | VT-519893 | [everyday                 ] Note: Open settings → Privacy → Microphone and toggle access on. please.
+2038 | VT-534320 | [everyday                 ] Note: I'll grab lunch near the cafe..
+2039 | VT-685589 | [everyday                 ] Heads up: FYI, Could you double‑check the address? Thanks. if you can.
+2040 | VT-568242 | [everyday                 ] FYI, Quick question: did you update the doc? Right now. please.
+2041 | VT-634342 | [everyday                 ] Quick one: Who’s bringing snacks for the meeting? (alt)
+2042 | VT-537130 | [everyday                 ] Real talk, Okay, Mark it as tentative until we confirm. For real. — confirm. (alt)
+2043 | VT-693476 | [everyday                 ] Reminder: We can wrap this up by 7:22 PM. right now.
+2044 | VT-662027 | [everyday                 ] Quick one: I’ll confirm the details and get back to you. — got it.
+2045 | VT-574297 | [everyday                 ] Note: Hey, Text me when you arrive. Thanks. — got it.
+2046 | VT-654437 | [everyday                 ] Real talk, Let's meet on Tuesday to go over the plan. thanks.
+2047 | VT-635102 | [everyday                 ] Note: Did you try a different cable and port? Right now. — now.
+2048 | VT-627322 | [everyday                 ] Listen, Reminder: I’ll circle back after lunch..
+2049 | VT-596784 | [everyday                 ] Heads up: Did you try a different cable and port? if you can.
+2050 | VT-627500 | [everyday                 ] Listen, Reminder: No worries, it happens. If possible. — confirm.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 31 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1501 | VT-482352 | [denials_corrections      ] Note: Heads up: Amend the record accordingly.—got it..
+1502 | VT-407341 | [denials_corrections      ] FYI, Listen, That assumption falls apart under pressure. If possible..
+1503 | VT-486162 | [denials_corrections      ] Quick one: Hey, That assumption falls apart under pressure. Please.. (alt)
+1504 | VT-497769 | [denials_corrections      ] Heads up: No, that's not accurate. For real. — now.
+1505 | VT-467932 | [denials_corrections      ] Heads up: Heads up: That was my mistake; here’s the fix.—got it. — got it.
+1506 | VT-459095 | [denials_corrections      ] Note: Okay, That assumption falls apart under pressure. For real..
+1507 | VT-497577 | [denials_corrections      ] FYI, Heads up: Negative—try a different approach.—got it. — now.
+1508 | VT-473993 | [denials_corrections      ] No, that's not accurate..
+1509 | VT-410925 | [denials_corrections      ] Real talk, No, that's not accurate. For real. right now. (alt)
+1510 | VT-461127 | [denials_corrections      ] Reminder: Reminder: That assumption falls apart under pressure. Right now. — confirm.
+1511 | VT-423023 | [denials_corrections      ] Okay, Hey, No, that's not accurate.—copy. — now. (alt)
+1512 | VT-431844 | [denials_corrections      ] You mixed up the units again.—got it..
+1513 | VT-452873 | [denials_corrections      ] FYI, False—cite your source. For real. right now.
+1514 | VT-472862 | [denials_corrections      ] Quick one: Okay, That was my mistake; here’s the fix. For real. — now.
+1515 | VT-435479 | [denials_corrections      ] FYI, Reminder: Close, but not quite.
+1516 | VT-409154 | [denials_corrections      ] Note: Listen, Retract the last statement.—copy. thanks.
+1517 | VT-417169 | [denials_corrections      ] Listen, Amend the record accordingly. Thanks. — now. (alt)
+1518 | VT-454787 | [denials_corrections      ] Hey, Negative—try a different approach. Thanks.
+1519 | VT-460366 | [denials_corrections      ] Retract the last statement. — got it.
+1520 | VT-471733 | [denials_corrections      ] Quick one: Heads up: Amend the record accordingly. For real. right now.
+1521 | VT-468255 | [error_messages           ] Listen, Hey, Unhandled exception: ValueError at line 42. For real..
+1522 | VT-484912 | [error_messages           ] Listen, Heads up: Timeout waiting for the lock.—got it. — got it.
+1523 | VT-451319 | [error_messages           ] Reminder: Unhandled exception: ValueError at line 42. If possible. thanks.
+1524 | VT-486260 | [error_messages           ] Okay, Rate limit exceeded; retry after 60 seconds. Thanks.. (alt)
+1525 | VT-475357 | [error_messages           ] Quick one: Disk quota exceeded; cleanup required. If possible. (alt)
+1526 | VT-427402 | [error_messages           ] FYI, FYI, Segmentation fault—core dumped.—copy. — got it. (alt)
+1527 | VT-499292 | [error_messages           ] FYI, Reminder: Fatal: permission denied (publickey).—copy. if you can.
+1528 | VT-421016 | [error_messages           ] Reminder: Hey, Unhandled exception: ValueError at line 42. For real. right now.
+1529 | VT-429486 | [error_messages           ] FYI, Listen, Segmentation fault—core dumped. If possible. please.
+1530 | VT-488128 | [error_messages           ] Listen, Hey, Rate limit exceeded; retry after 60 seconds. For real. right now. (alt)
+1531 | VT-462079 | [error_messages           ] Listen, FYI, Dependency conflict: version mismatch. Please. if you can.
+1532 | VT-422719 | [error_messages           ] Reminder: Disk quota exceeded; cleanup required. For real. thanks.
+1533 | VT-423760 | [error_messages           ] Reminder: FYI, Timeout waiting for the lock. For real. — confirm.
+1534 | VT-449482 | [error_messages           ] Okay, Okay, Connection reset by peer.—got it.
+1535 | VT-480467 | [error_messages           ] Listen, Segmentation fault—core dumped. Please. — got it.
+1536 | VT-442875 | [error_messages           ] Reminder: Hey, Fatal: permission denied (publickey). Right now. — confirm.
+1537 | VT-424000 | [error_messages           ] Real talk, Timeout waiting for the lock.—got it. please. (alt)
+1538 | VT-421700 | [error_messages           ] Reminder: Heads up: Unhandled exception: ValueError at line 42. For real. — now. (alt)
+1539 | VT-451483 | [error_messages           ] Note: Segmentation fault—core dumped.
+1540 | VT-446653 | [error_messages           ] FYI, Dependency conflict: version mismatch. Please. — now.
+1541 | VT-494074 | [error_messages           ] Heads up: Listen, Dependency conflict: version mismatch. Please. — confirm.
+1542 | VT-497339 | [error_messages           ] Quick one: FYI, Dependency conflict: version mismatch.—copy.
+1543 | VT-446644 | [error_messages           ] Reminder: Note: Timeout waiting for the lock. Right now. (alt)
+1544 | VT-446729 | [error_messages           ] Listen, Reminder: Fatal: permission denied (publickey).—copy.
+1545 | VT-432273 | [error_messages           ] Real talk, Heads up: Fatal: permission denied (publickey). Please. thanks.
+1546 | VT-493142 | [error_messages           ] Heads up: Note: Dependency conflict: version mismatch. If possible. — got it.
+1547 | VT-452469 | [error_messages           ] Reminder: Listen, Segmentation fault—core dumped.—copy. if you can.
+1548 | VT-489768 | [error_messages           ] Real talk, Note: Checksum failed; file corrupted. Thanks.
+1549 | VT-462690 | [error_messages           ] Note: FYI, Checksum failed; file corrupted. Thanks. if you can.
+1550 | VT-410536 | [error_messages           ] Note: Hey, Checksum failed; file corrupted.—got it. — now.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 85 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+4201 | VT-81248 | [slang-heavy              ] Listen, We vibin’ or what?
+4202 | VT-84111 | [slang-heavy              ] Yo, that was straight fire, no cap! Please.
+4203 | VT-45393 | [slang-heavy              ] Okay, She ghosted me after I dropped the bag, smh. If possible.
+4204 | VT-23414 | [slang-heavy              ] Heads up: We vibin’ or what?
+4205 | VT-28808 | [slang-heavy              ] Yo, that was straight fire, no cap!—got it.
+4206 | VT-90417 | [slang-heavy              ] She ghosted me after I dropped the bag, smh.—got it.
+4207 | VT-93540 | [slang-heavy              ] FYI, We vibin’ or what? Thanks.
+4208 | VT-20715 | [slang-heavy              ] Heads up: Yo, that was straight fire, no cap! If possible.
+4209 | VT-27843 | [slang-heavy              ] Reminder: She ghosted me after I dropped the bag, smh.—got it.
+4210 | VT-12423 | [slang-heavy              ] Listen, We vibin’ or what?—got it.
+4211 | VT-94358 | [slang-heavy              ] FYI, Yo, that was straight fire, no cap!
+4212 | VT-99197 | [slang-heavy              ] Note: She ghosted me after I dropped the bag, smh. Right now.
+4213 | VT-17574 | [slang-heavy              ] Hey, We vibin’ or what? Please.
+4214 | VT-239367 | [slang-heavy              ] Low-key I’m cooked; need a nap and a win.
+4215 | VT-260119 | [slang-heavy              ] That drop was clean—no cap.
+4216 | VT-201290 | [slang-heavy              ] We ate, we left no crumbs; that build slapped.
+4217 | VT-222275 | [slang-heavy              ] Vibes are off—let’s bounce and try later.
+4218 | VT-250104 | [slang-heavy              ] Hard carry, easy clap—next lobby.
+4219 | VT-239929 | [slang-heavy              ] That deal was mid; pass.
+4220 | VT-291984 | [slang-heavy              ] Ship it—beta gang rise up.
+4221 | VT-278536 | [slang-heavy              ] Say less; I’m already on it.
+4222 | VT-288131 | [slang-heavy              ] Bro, that’s wild; send proof.
+4223 | VT-293352 | [slang-heavy              ] We’re cooking—don’t turn the heat down.
+4224 | VT-60136 | [sound_effects            ] Boom! Crash! The whole lab went dark. Please.
+4225 | VT-97671 | [sound_effects            ] Heads up: Pshhh, like air escaping a balloon of secrets. If possible.
+4226 | VT-39403 | [sound_effects            ] Listen, Pshhh, like air escaping a balloon of secrets. If possible.
+4227 | VT-70437 | [sound_effects            ] Pshhh, like air escaping a balloon of secrets.
+4228 | VT-82234 | [sound_effects            ] Reminder: Tick tick tick… and then silence.
+4229 | VT-59869 | [sound_effects            ] Note: Pshhh, like air escaping a balloon of secrets.
+4230 | VT-52063 | [sound_effects            ] Reminder: Pshhh, like air escaping a balloon of secrets.
+4231 | VT-60136 | [sound_effects            ] Boom! Crash! The whole lab went dark. Please.
+4232 | VT-35014 | [sound_effects            ] Reminder: Tick tick tick… and then silence. For real.
+4233 | VT-58798 | [sound_effects            ] Note: Pshhh, like air escaping a balloon of secrets.—copy.
+4234 | VT-67660 | [sound_effects            ] Note: Boom! Crash! The whole lab went dark. Thanks.
+4235 | VT-68370 | [sound_effects            ] Reminder: Pshhh, like air escaping a balloon of secrets.—copy.
+4236 | VT-77386 | [sound_effects            ] Hey, Boom! Crash! The whole lab went dark. Please.
+4237 | VT-45361 | [sound_effects            ] Note: Tick tick tick… and then silence. Right now.
+4238 | VT-27452 | [sound_effects            ] Listen, Tick tick tick… and then silence. Please.
+4239 | VT-71458 | [sound_effects            ] Note: Tick tick tick… and then silence. For real.
+4240 | VT-43629 | [sound_effects            ] FYI, Pshhh, like air escaping a balloon of secrets. Right now.
+4241 | VT-56822 | [sound_effects            ] Reminder: Tick tick tick… and then silence. Right now.
+4242 | VT-48305 | [sound_effects            ] Tick tick tick… and then silence.
+4243 | VT-67660 | [sound_effects            ] Note: Boom! Crash! The whole lab went dark. Thanks.
+4244 | VT-26365 | [sound_effects            ] Reminder: Tick tick tick… and then silence. Please.
+4245 | VT-90279 | [sound_effects            ] Reminder: Tick tick tick… and then silence.—copy.
+4246 | VT-25310 | [sound_effects            ] Reminder: Boom! Crash! The whole lab went dark. Please.
+4247 | VT-52063 | [sound_effects            ] Reminder: Pshhh, like air escaping a balloon of secrets.
+4248 | VT-67588 | [sound_effects            ] Okay, Tick tick tick… and then silence. Thanks.
+4249 | VT-58911 | [sound_effects            ] FYI, Boom! Crash! The whole lab went dark. Please.
+4250 | VT-92676 | [sound_effects            ] Reminder: Boom! Crash! The whole lab went dark.—copy.

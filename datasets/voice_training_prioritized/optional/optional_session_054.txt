@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 54 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2651 | VT-550663 | [laughter_breaths         ] Heads up: *chuckles* Good one. please.
+2652 | VT-534214 | [laughter_breaths         ] Okay, Listen, *whisper* Don’t wake the server.—got it. please.
+2653 | VT-675746 | [laughter_breaths         ] Note: Hey, *whisper* Don’t wake the server. If possible. thanks.
+2654 | VT-535338 | [laughter_breaths         ] FYI, *laughs* That was ridiculous. Right now. right now.
+2655 | VT-629550 | [laughter_breaths         ] Okay, Okay, *snorts* You’re kidding, right?—copy. — now.
+2656 | VT-644265 | [laughter_breaths         ] Real talk, Okay, *coughs* Sorry—allergies. Please. if you can.
+2657 | VT-627769 | [laughter_breaths         ] Listen, Hey, *snorts* You’re kidding, right?
+2658 | VT-692967 | [laughter_breaths         ] Heads up: Hey, *sighs* Okay, let’s try again. For real. right now.
+2659 | VT-550529 | [laughter_breaths         ] *sighs* Okay, let’s try again. — got it.
+2660 | VT-563024 | [laughter_breaths         ] Reminder: Hey, *snorts* You’re kidding, right?—got it. right now. (alt)
+2661 | VT-546563 | [laughter_breaths         ] FYI, Hey, *snorts* You’re kidding, right? Right now. — now.
+2662 | VT-573485 | [laughter_breaths         ] Reminder: Note: *yawns* Coffee. Now.—copy. — got it.
+2663 | VT-694353 | [laughter_breaths         ] Quick one: *snorts* You’re kidding, right? right now.
+2664 | VT-519071 | [laughter_breaths         ] Listen, Hey, *snorts* You’re kidding, right? Right now. if you can.
+2665 | VT-508612 | [laughter_breaths         ] FYI, Hey, *yawns* Coffee. Now.—copy. right now.
+2666 | VT-696208 | [laughter_breaths         ] FYI, FYI, *snorts* You’re kidding, right?—copy. — now.
+2667 | VT-681992 | [laughter_breaths         ] Real talk, Note: *sighs* Okay, let’s try again. Thanks. if you can.
+2668 | VT-683199 | [laughter_breaths         ] Note: *snorts* You’re kidding, right? For real. please.
+2669 | VT-675927 | [laughter_breaths         ] Quick one: Listen, *whisper* Don’t wake the server. Right now. — now.
+2670 | VT-541073 | [laughter_breaths         ] Quick one: Listen, *chuckles* Good one. If possible. right now.
+2671 | VT-566163 | [laughter_breaths         ] FYI, *whisper* Don’t wake the server. Thanks. — confirm.
+2672 | VT-507020 | [laughter_breaths         ] Reminder: Hey, *coughs* Sorry—allergies.—got it.
+2673 | VT-550484 | [laughter_breaths         ] Okay, Heads up: *sighs* Okay, let’s try again. If possible.
+2674 | VT-557843 | [laughter_breaths         ] Reminder: Note: *laughs* That was ridiculous. Please. — now.
+2675 | VT-611385 | [laughter_breaths         ] Note: Listen, *deep breath* We’ve got this. Thanks..
+2676 | VT-697336 | [laughter_breaths         ] Listen, Heads up: *snorts* You’re kidding, right?—copy..
+2677 | VT-522434 | [laughter_breaths         ] FYI, *snorts* You’re kidding, right? Right now. right now.
+2678 | VT-559857 | [multilingual             ] Okay, Grazie mille, davvero. If possible. if you can.
+2679 | VT-594288 | [multilingual             ] Listen, Note: 안녕하세요, 오늘 기분 어때요? — now.
+2680 | VT-656453 | [multilingual             ] Listen, FYI, ¡Excelente trabajo! Please. right now.
+2681 | VT-586000 | [multilingual             ] FYI, धन्यवाद, फिर मिलेंगे। thanks.
+2682 | VT-571211 | [multilingual             ] Note: Note: شكراً لك على المساعدة. Please. thanks.
+2683 | VT-575216 | [multilingual             ] Note: Bonjour, je m’appelle Alex. Please. — got it.
+2684 | VT-513726 | [multilingual             ] Listen, Reminder: Muito obrigado pela resposta. — got it.
+2685 | VT-579670 | [multilingual             ] Listen, Okay, Grazie mille, davvero. If possible. — now.
+2686 | VT-568389 | [multilingual             ] Heads up: Okay, 감사합니다, 다음에 봐요. For real. — confirm.
+2687 | VT-647674 | [multilingual             ] Real talk, Note: धन्यवाद, फिर मिलेंगे।—copy. if you can.
+2688 | VT-691468 | [multilingual             ] Reminder: FYI, Salam, sab thik hai? For real. — got it. (alt)
+2689 | VT-591740 | [multilingual             ] Real talk, Merci beaucoup pour votre aide. Thanks. right now.
+2690 | VT-647132 | [multilingual             ] Real talk, Heads up: 안녕하세요, 오늘 기분 어때요?—got it. if you can. (alt)
+2691 | VT-558193 | [multilingual             ] Reminder: Heads up: 你好，今天忙吗？ Thanks.
+2692 | VT-669876 | [multilingual             ] Quick one: FYI, Bonjour, je m’appelle Alex. For real. if you can.
+2693 | VT-546374 | [multilingual             ] Heads up: FYI, 谢谢你的时间。 Right now. right now.
+2694 | VT-633916 | [multilingual             ] Note: Listen, Olá, tudo bem?—copy.. (alt)
+2695 | VT-601225 | [multilingual             ] Quick one: Reminder: ¡Excelente trabajo! Thanks. thanks. (alt)
+2696 | VT-589873 | [multilingual             ] Okay, FYI, Salam, sab thik hai? For real. if you can. (alt)
+2697 | VT-547812 | [multilingual             ] Heads up: Heads up: Ciao, ci vediamo domani. For real. right now.
+2698 | VT-521676 | [multilingual             ] Note: FYI, Ciao, ci vediamo domani.—copy. thanks.
+2699 | VT-549986 | [multilingual             ] FYI, Heads up: Olá, tudo bem? Right now. — got it. (alt)
+2700 | VT-609756 | [multilingual             ] Note: Reminder: Muito obrigado pela resposta. if you can.

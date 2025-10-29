@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 101 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+5001 | VT-0463 | [tongue_twister           ] Freshly fried flying fish.
+5002 | VT-0352 | [tongue_twister           ] Toy boat, toy boat, toy boat.
+5003 | VT-0420 | [tongue_twister           ] Rowdy robots race rrightly.
+5004 | VT-0454 | [tongue_twister           ] Zesty zebras zigzag zzightly.
+5005 | VT-0399 | [tongue_twister           ] Lilting lilies leap llightly.
+5006 | VT-0455 | [tongue_twister           ] Zany zebras zoom zzightly.
+5007 | VT-0463 | [tongue_twister           ] Freshly fried flying fish.
+5008 | VT-0372 | [tongue_twister           ] Crisp crows crackle ccightly.
+5009 | VT-0391 | [tongue_twister           ] Giddy guitars glide ggightly.
+5010 | VT-0399 | [tongue_twister           ] Lilting lilies leap llightly.
+5011 | VT-0407 | [tongue_twister           ] Muddy marmots march mmightly.
+5012 | VT-0439 | [tongue_twister           ] Tiny tools tiptoe ttightly.
+5013 | VT-0443 | [tongue_twister           ] Tiny tickets titter ttightly.
+5014 | VT-0458 | [tongue_twister           ] Zingy zippers zip zzightly.
+5015 | VT-0451 | [tongue_twister           ] Wily wolves wobble wwightly.
+5016 | VT-0463 | [tongue_twister           ] Freshly fried flying fish.
+5017 | VT-0350 | [tongue_twister           ] Red lorry, yellow lorry.
+5018 | VT-0399 | [tongue_twister           ] Lilting lilies leap llightly.
+5019 | VT-0463 | [tongue_twister           ] Freshly fried flying fish.
+5020 | VT-0402 | [tongue_twister           ] Lanky lilies leap llightly.
+5021 | VT-0391 | [tongue_twister           ] Giddy guitars glide ggightly.
+5022 | VT-0443 | [tongue_twister           ] Tiny tickets titter ttightly.
+5023 | VT-0378 | [tongue_twister           ] Daring drums dodge ddightly.
+5024 | VT-0369 | [tongue_twister           ] Crafty cables crawl ccightly.
+5025 | VT-0381 | [tongue_twister           ] Fuzzy ferrets fizz ffightly.
+5026 | VT-0439 | [tongue_twister           ] Tiny tools tiptoe ttightly.
+5027 | VT-0369 | [tongue_twister           ] Crafty cables crawl ccightly.
+5028 | VT-0352 | [tongue_twister           ] Toy boat, toy boat, toy boat.
+5029 | VT-0388 | [tongue_twister           ] Fervent flutes fizz ffightly.
+5030 | VT-0463 | [tongue_twister           ] Freshly fried flying fish.
+5031 | VT-0446 | [tongue_twister           ] Wily wolves wiggle wwightly.
+5032 | VT-0380 | [tongue_twister           ] Dusty drums dangle ddightly.
+5033 | VT-0381 | [tongue_twister           ] Fuzzy ferrets fizz ffightly.
+5034 | VT-0381 | [tongue_twister           ] Fuzzy ferrets fizz ffightly.
+5035 | VT-0381 | [tongue_twister           ] Fuzzy ferrets fizz ffightly.
+5036 | VT-0458 | [tongue_twister           ] Zingy zippers zip zzightly.
+5037 | VT-0454 | [tongue_twister           ] Zesty zebras zigzag zzightly.
+5038 | VT-0407 | [tongue_twister           ] Muddy marmots march mmightly.
+5039 | VT-0388 | [tongue_twister           ] Fervent flutes fizz ffightly.
+5040 | VT-0359 | [tongue_twister           ] Brisk brooms bobble bbightly.
+5041 | VT-0352 | [tongue_twister           ] Toy boat, toy boat, toy boat.
+5042 | VT-0436 | [tongue_twister           ] Tidy tools tumble ttightly.
+5043 | VT-0436 | [tongue_twister           ] Tidy tools tumble ttightly.
+5044 | VT-0436 | [tongue_twister           ] Tidy tools tumble ttightly.
+5045 | VT-0443 | [tongue_twister           ] Tiny tickets titter ttightly.
+5046 | VT-0436 | [tongue_twister           ] Tidy tools tumble ttightly.
+5047 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5048 | VT-279263 | [trash_talk               ] You brought a pea shooter to a boss fight.
+5049 | VT-284336 | [trash_talk               ] Next time, ping before you feed.
+5050 | VT-277353 | [trash_talk               ] Good game; uninstall only if you want peace.

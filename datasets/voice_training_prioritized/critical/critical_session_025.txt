@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 25 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1201 | VT-48721 | [question_variants        ] Good—yes or no? Thanks.
+1202 | VT-95082 | [question_variants        ] Hey, What’s the catch? For real.
+1203 | VT-18333 | [question_variants        ] Hey, Good—yes or no? For real.
+1204 | VT-77026 | [question_variants        ] Note: Is everything okay with that?—copy.
+1205 | VT-27840 | [question_variants        ] Heads up: You sure? Right now.
+1206 | VT-20106 | [question_variants        ] FYI, We good? If possible.
+1207 | VT-69229 | [question_variants        ] Hey, Are we good?
+1208 | VT-48721 | [question_variants        ] Good—yes or no? Thanks.
+1209 | VT-13360 | [question_variants        ] Listen, We good? Right now.
+1210 | VT-36436 | [question_variants        ] Hey, Is everything okay with that?—got it.
+1211 | VT-33476 | [question_variants        ] Listen, Positive? Right now.
+1212 | VT-29669 | [question_variants        ] Okay, You sure? Please.
+1213 | VT-35345 | [question_variants        ] Reminder: What’s the catch?—copy.
+1214 | VT-12764 | [question_variants        ] Note: Can you confirm we’re good? Thanks.
+1215 | VT-86193 | [question_variants        ] FYI, We good?—got it.
+1216 | VT-35387 | [question_variants        ] FYI, Are we good? For real.
+1217 | VT-52014 | [question_variants        ] What’s the catch? If possible.
+1218 | VT-71976 | [question_variants        ] Heads up: Good—yes or no? For real.
+1219 | VT-41530 | [question_variants        ] We good?
+1220 | VT-33476 | [question_variants        ] Listen, Positive? Right now.
+1221 | VT-93102 | [question_variants        ] Heads up: Positive? Please.
+1222 | VT-80153 | [question_variants        ] Okay, Positive? For real.
+1223 | VT-15189 | [question_variants        ] Hey, What’s the catch? Please.
+1224 | VT-69229 | [question_variants        ] Hey, Are we good?
+1225 | VT-93439 | [question_variants        ] FYI, Are we good?—copy.
+1226 | VT-46113 | [question_variants        ] Note: Positive? Please.
+1227 | VT-66127 | [question_variants        ] Note: We good? If possible.
+1228 | VT-86103 | [question_variants        ] Heads up: Any reason not to proceed? Right now.
+1229 | VT-69871 | [question_variants        ] FYI, Any reason not to proceed?
+1230 | VT-98256 | [question_variants        ] Okay, Any reason not to proceed? Please.
+1231 | VT-78887 | [question_variants        ] Okay, What’s the catch?—got it.
+1232 | VT-77026 | [question_variants        ] Note: Is everything okay with that?—copy.
+1233 | VT-76053 | [question_variants        ] FYI, Is everything okay with that? Right now.
+1234 | VT-21576 | [question_variants        ] Note: Are we good? Right now.
+1235 | VT-35519 | [question_variants        ] Heads up: Positive? Thanks.
+1236 | VT-74876 | [question_variants        ] Okay, Is everything okay with that?—copy.
+1237 | VT-99906 | [question_variants        ] FYI, Can you confirm we’re good?
+1238 | VT-35387 | [question_variants        ] FYI, Are we good? For real.
+1239 | VT-21576 | [question_variants        ] Note: Are we good? Right now.
+1240 | VT-15904 | [question_variants        ] Is everything okay with that?—copy.
+1241 | VT-69229 | [question_variants        ] Hey, Are we good?
+1242 | VT-69518 | [question_variants        ] Reminder: Good—yes or no? For real.
+1243 | VT-12618 | [question_variants        ] Okay, You sure? Please.
+1244 | VT-98366 | [question_variants        ] Okay, Positive? Thanks.
+1245 | VT-53051 | [question_variants        ] FYI, We good? Please.
+1246 | VT-86103 | [question_variants        ] Heads up: Any reason not to proceed? Right now.
+1247 | VT-47286 | [question_variants        ] Hey, What’s the catch?—got it.
+1248 | VT-36889 | [question_variants        ] Reminder: Can you confirm we’re good? Please.
+1249 | VT-98577 | [question_variants        ] Any reason not to proceed?
+1250 | VT-19707 | [question_variants        ] Heads up: What’s the catch? Please.

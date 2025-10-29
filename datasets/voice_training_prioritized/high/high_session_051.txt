@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 51 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2501 | VT-534983 | [interrogative            ] Listen, Is this really what you want? For real. — now. (alt)
+2502 | VT-572455 | [interrogative            ] Reminder: Why does it always rain when I'm unprepared? Thanks. — confirm. (alt)
+2503 | VT-556368 | [interrogative            ] Heads up: Reminder: Why does it always rain when I'm unprepared? — got it.
+2504 | VT-539307 | [interrogative            ] Listen, FYI, Is this really what you want? if you can.
+2505 | VT-605535 | [interrogative            ] Heads up: FYI, Do you even hear yourself right now?
+2506 | VT-554190 | [interrogative            ] Okay, Okay, Is this really what you want? Please. — got it.
+2507 | VT-639822 | [interrogative            ] Heads up: FYI, Why does it always rain when I'm unprepared? For real. if you can. (alt)
+2508 | VT-571233 | [measurements_units       ] Heads up: Torque the bolt to 7 newton-meters. (7982) Thanks. — now.
+2509 | VT-558765 | [measurements_units       ] FYI, Listen, Fan speed at forty percent. (3179) Right now. thanks.
+2510 | VT-545531 | [measurements_units       ] Heads up: Reminder: Torque the bolt to 6 newton-meters. (2773) If possible. if you can.
+2511 | VT-630078 | [measurements_units       ] Note: Note: Hold temperature at 205 Celsius. (6101)—got it. thanks.
+2512 | VT-517928 | [measurements_units       ] Okay, Okay, Mix 1:1 by volume, not weight. (8441) — confirm.
+2513 | VT-692379 | [measurements_units       ] Listen, Cut the rod to 145 millimeters. (1894) Right now. please.
+2514 | VT-518743 | [measurements_units       ] Real talk, Print at 0.2 millimeter layer height. (3540) Please. if you can.
+2515 | VT-575991 | [measurements_units       ] Okay, Torque the bolt to 5 newton-meters. (7982) Thanks. please.
+2516 | VT-539658 | [measurements_units       ] Okay, Okay, Cut the rod to 144 millimeters. (6965) Right now. please.
+2517 | VT-625971 | [measurements_units       ] Reminder: Okay, Hold temperature at 206 Celsius. (6610) If possible. — now.
+2518 | VT-684623 | [measurements_units       ] Real talk, Note: Tolerance is plus or minus 1.05 millimeters. (2874) if you can.
+2519 | VT-604706 | [measurements_units       ] FYI, FYI, Mix 2:1 by volume, not weight. (1897) If possible. right now.
+2520 | VT-513137 | [measurements_units       ] Okay, Fan speed at forty percent. (6574) Please. please.
+2521 | VT-520036 | [measurements_units       ] Quick one: Maintain 24 volts at 3 amps. (3871)—got it..
+2522 | VT-669884 | [measurements_units       ] FYI, Note: Cut the rod to 144 millimeters. (412) If possible. — now.
+2523 | VT-644316 | [measurements_units       ] Note: Hey, Print at 0.2 millimeter layer height. (5616)—copy..
+2524 | VT-526266 | [measurements_units       ] Hey, Fan speed at forty percent. (9951) Please. — got it.
+2525 | VT-625143 | [measurements_units       ] Reminder: Listen, Torque the bolt to 6 newton-meters. (7066) Please. — now.
+2526 | VT-629471 | [measurements_units       ] Quick one: Cut the rod to 144 millimeters.
+2527 | VT-550993 | [measurements_units       ] Quick one: Note: Tolerance is plus or minus 0.05 millimeters. (2874) — now.
+2528 | VT-583460 | [measurements_units       ] Reminder: Reminder: Tolerance is plus or minus 1.05 millimeters. (7404)—got it. — got it.
+2529 | VT-558696 | [measurements_units       ] Quick one: Hey, Tolerance is plus or minus 1.05 millimeters. (3573) Please. — now.
+2530 | VT-615416 | [measurements_units       ] Note: Fan speed at forty percent. (2465) For real. — now.
+2531 | VT-531311 | [measurements_units       ] Reminder: Print at 1.2 millimeter layer height. (3540) Please..
+2532 | VT-671261 | [measurements_units       ] Note: Heads up: Print at 0.2 millimeter layer height. (4494) Right now. — got it.
+2533 | VT-518036 | [measurements_units       ] Quick one: Okay, Tolerance is plus or minus 0.05 millimeters. (6094) Please. — now.
+2534 | VT-600577 | [measurements_units       ] Reminder: Okay, Cut the rod to 146 millimeters. (7596) Thanks. — confirm.
+2535 | VT-590082 | [measurements_units       ] FYI, Listen, Density measured at 0.24 grams per cubic centimeter. (2763)—copy. if you can.
+2536 | VT-601625 | [measurements_units       ] Reminder: Density measured at 0.24 grams per cubic centimeter. (4345)—copy. if you can.
+2537 | VT-532835 | [measurements_units       ] Listen, Heads up: Density measured at 0.24 grams per cubic centimeter. (9554) Please. right now.
+2538 | VT-672780 | [measurements_units       ] Okay, Heads up: Fan speed at forty percent. (3030) For real.
+2539 | VT-683771 | [measurements_units       ] Listen, Note: Hold temperature at 204 Celsius. (6101)—got it..
+2540 | VT-506526 | [measurements_units       ] Real talk, Hold temperature at 205 Celsius. (8087)—copy. — confirm.
+2541 | VT-614870 | [measurements_units       ] Reminder: Print at 0.2 millimeter layer height. (3559)
+2542 | VT-676104 | [measurements_units       ] Real talk, Hey, Tolerance is plus or minus 0.05 millimeters. (5976) Please. please.
+2543 | VT-593613 | [measurements_units       ] Reminder: Heads up: Hold temperature at 205 Celsius. (6206) Right now. right now.
+2544 | VT-564629 | [measurements_units       ] Note: Note: Maintain 23 volts at 3 amps. (4872) Thanks. please.
+2545 | VT-626498 | [measurements_units       ] Note: Hey, Print at 0.2 millimeter layer height. (5616)—copy. thanks.
+2546 | VT-698276 | [measurements_units       ] Note: Print at 0.2 millimeter layer height. (3559).
+2547 | VT-549157 | [measurements_units       ] Okay, Heads up: Hold temperature at 204 Celsius. (5287) Thanks. if you can.
+2548 | VT-693870 | [measurements_units       ] Print at 0.2 millimeter layer height. (3540) Please. if you can.
+2549 | VT-593579 | [measurements_units       ] Reminder: Torque the bolt to 5 newton-meters. (4652)—copy. — got it.
+2550 | VT-628351 | [measurements_units       ] Real talk, Heads up: Mix 3:1 by volume, not weight. (8819) thanks.

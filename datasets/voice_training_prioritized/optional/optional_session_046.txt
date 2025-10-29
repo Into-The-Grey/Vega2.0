@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 46 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2251 | VT-624627 | [dialect_southern_us      ] Listen, Hey, I’m busier than a one‑armed paperhanger. If possible. right now.
+2252 | VT-663671 | [dialect_southern_us      ] Okay, Couldn’t pour water out of a boot with instructions on the heel. — got it.
+2253 | VT-668300 | [dialect_southern_us      ] Reminder: Note: I’m busier than a one‑armed paperhanger. Thanks. right now.
+2254 | VT-694707 | [dialect_southern_us      ] Okay, Listen, Might could get that done by supper. if you can.
+2255 | VT-546134 | [dialect_southern_us      ] Heads up: Okay, Bless your heart, you tried. Thanks.
+2256 | VT-680877 | [dialect_southern_us      ] Heads up: Heads up: Y’all ready or what?—got it. — confirm.
+2257 | VT-627915 | [dialect_southern_us      ] FYI, Heads up: Fixing to head out in a minute. Thanks. — now.
+2258 | VT-640956 | [dialect_southern_us      ] Note: Reminder: That dog won’t hunt. If possible..
+2259 | VT-633622 | [dialect_southern_us      ] Quick one: Reminder: That dog won’t hunt. thanks.
+2260 | VT-591790 | [dialect_southern_us      ] Note: Hey, That dog won’t hunt. If possible. — got it. (alt)
+2261 | VT-636732 | [dystopian                ] Reminder: The drones monitor your heartbeat. Don’t run. Right now. thanks.
+2262 | VT-625476 | [dystopian                ] Okay, We stopped dreaming when the sky turned red. Right now. — now.
+2263 | VT-684398 | [dystopian                ] Reminder: Okay, We stopped dreaming when the sky turned red.
+2264 | VT-678043 | [dystopian                ] Hey, We stopped dreaming when the sky turned red. If possible..
+2265 | VT-659407 | [dystopian                ] Okay, FYI, Hope is a virus they haven’t managed to eliminate yet. Please.
+2266 | VT-665749 | [dystopian                ] FYI, Okay, We stopped dreaming when the sky turned red. If possible. right now. (alt)
+2267 | VT-522946 | [dystopian                ] Heads up: Reminder: We stopped dreaming when the sky turned red. If possible. please.
+2268 | VT-563535 | [dystopian                ] Note: The drones monitor your heartbeat. Don’t run. Right now. — confirm. (alt)
+2269 | VT-534244 | [dystopian                ] Heads up: Okay, Hope is a virus they haven’t managed to eliminate yet. For real. right now.
+2270 | VT-656173 | [dystopian                ] Note: Reminder: We stopped dreaming when the sky turned red. For real. — confirm.
+2271 | VT-544661 | [dystopian                ] Okay, Note: The drones monitor your heartbeat. Don’t run. Thanks. if you can.
+2272 | VT-617049 | [dystopian                ] Real talk, Reminder: We stopped dreaming when the sky turned red.—got it. right now.
+2273 | VT-641156 | [dystopian                ] Note: The drones monitor your heartbeat. Don’t run.—copy. — got it.
+2274 | VT-533213 | [dystopian                ] FYI, Listen, Hope is a virus they haven’t managed to eliminate yet.—copy. — now.
+2275 | VT-654429 | [dystopian                ] FYI, Hope is a virus they haven’t managed to eliminate yet.—got it. thanks. (alt)
+2276 | VT-641565 | [dystopian                ] FYI, FYI, Hope is a virus they haven’t managed to eliminate yet. If possible. right now.
+2277 | VT-564121 | [dystopian                ] Real talk, Note: We stopped dreaming when the sky turned red. For real. if you can.
+2278 | VT-683190 | [dystopian                ] Heads up: Note: Hope is a virus they haven’t managed to eliminate yet.—copy..
+2279 | VT-631624 | [dystopian                ] Listen, Hope is a virus they haven’t managed to eliminate yet. if you can.
+2280 | VT-628423 | [dystopian                ] Real talk, Note: The drones monitor your heartbeat. Don’t run. Thanks. right now.
+2281 | VT-537878 | [dystopian                ] Quick one: FYI, Hope is a virus they haven’t managed to eliminate yet. please.
+2282 | VT-526792 | [dystopian                ] Heads up: Reminder: Hope is a virus they haven’t managed to eliminate yet. Thanks. please.
+2283 | VT-664826 | [dystopian                ] Note: Heads up: The drones monitor your heartbeat. Don’t run. right now. (alt)
+2284 | VT-698754 | [dystopian                ] Note: Reminder: We stopped dreaming when the sky turned red. If possible. if you can. (alt)
+2285 | VT-663345 | [dystopian                ] Real talk, Heads up: Hope is a virus they haven’t managed to eliminate yet.—copy. right now.
+2286 | VT-512538 | [dystopian                ] Listen, Hey, The drones monitor your heartbeat. Don’t run. Right now. — got it.
+2287 | VT-609440 | [dystopian                ] Reminder: FYI, The drones monitor your heartbeat. Don’t run. Right now. right now. (alt)
+2288 | VT-589414 | [dystopian                ] FYI, Reminder: Hope is a virus they haven’t managed to eliminate yet. Thanks. if you can. (alt)
+2289 | VT-563920 | [dystopian                ] Real talk, Heads up: The drones monitor your heartbeat. Don’t run. Right now. thanks.
+2290 | VT-542728 | [dystopian                ] Okay, Hey, Hope is a virus they haven’t managed to eliminate yet. Please. — confirm.
+2291 | VT-505920 | [dystopian                ] Hey, Hope is a virus they haven’t managed to eliminate yet. Thanks. thanks.
+2292 | VT-548402 | [dystopian                ] Listen, Hey, We stopped dreaming when the sky turned red. If possible. please.
+2293 | VT-567878 | [dystopian                ] Quick one: Heads up: The drones monitor your heartbeat. Don’t run. If possible. please.
+2294 | VT-688897 | [dystopian                ] Note: Listen, We stopped dreaming when the sky turned red.. (alt)
+2295 | VT-636001 | [dystopian                ] Heads up: We stopped dreaming when the sky turned red. For real..
+2296 | VT-601823 | [dystopian                ] Reminder: Heads up: The drones monitor your heartbeat. Don’t run. Thanks. — confirm.
+2297 | VT-689266 | [dystopian                ] Reminder: Listen, The drones monitor your heartbeat. Don’t run. Right now. right now. (alt)
+2298 | VT-513908 | [dystopian                ] Okay, FYI, Hope is a virus they haven’t managed to eliminate yet. If possible. right now.
+2299 | VT-637633 | [dystopian                ] Listen, Listen, We stopped dreaming when the sky turned red. (alt)
+2300 | VT-691130 | [dystopian                ] Listen, Hey, We stopped dreaming when the sky turned red.—got it.. (alt)

@@ -1,0 +1,21 @@
+# VEGA Voice Training - HIGH Priority
+# Session 56 of 56
+# Lines: 11
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 2-3 minutes
+#======================================================================
+
+2751 | VT-650875 | [numeric                  ] Heads up: FYI, My backup number is (865) 485-5089.—got it. right now. (alt)
+2752 | VT-657135 | [numeric                  ] Note: Listen, Temperature is -14°F right now.—got it. thanks.
+2753 | VT-620974 | [numeric                  ] Okay, Listen, My backup number is (800) 421-4817. Thanks. — confirm.
+2754 | VT-616398 | [numeric                  ] Okay, The invoice date is 2005-06-26.
+2755 | VT-528516 | [numeric                  ] Reminder: Heads up: Call me at (583) 429-1461.—got it.
+2756 | VT-763757 | [numeric                  ] Okay, Reminder: The total comes to $9,693.94..
+2757 | VT-721286 | [numbers_large            ] Reminder: FYI, Pi to ten decimals: 3.1415926535. (4114)—copy. — got it.
+2758 | VT-738880 | [hesitations_fillers      ] FYI, Heads up: Hmm, not exactly, but close. If possible. — got it.
+2759 | VT-718576 | [interjection             ] Heads up: Heads up: Sorta. Right now. please.
+2760 | VT-759961 | [interrogative            ] FYI, Why does it always rain when I'm unprepared?—copy. thanks.
+2761 | VT-720160 | [measurements_units       ] FYI, Torque the bolt to 7 newton-meters. (7982) Thanks.

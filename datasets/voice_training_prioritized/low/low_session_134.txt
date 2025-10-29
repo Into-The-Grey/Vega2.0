@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 134 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6651 | VT-435288 | [negations                ] Okay, We can’t ship without tests. Right now. — confirm.
+6652 | VT-470585 | [negations                ] Heads up: Reminder: Never deploy on Friday. Right now. right now.
+6653 | VT-491265 | [negations                ] Quick one: I won’t sign off on that.—got it. please.
+6654 | VT-494766 | [negations                ] Okay, I’m not doing that again. For real..
+6655 | VT-455929 | [negations                ] Heads up: Note: Do not open that email. Thanks. thanks.
+6656 | VT-408990 | [negations                ] Quick one: Listen, We can’t ship without tests.—copy. — got it. (alt)
+6657 | VT-459413 | [negations                ] Real talk, Reminder: I’m not doing that again. If possible. — confirm.
+6658 | VT-485444 | [negations                ] Quick one: Never deploy on Friday.—copy. if you can.
+6659 | VT-425505 | [negations                ] Real talk, Okay, That’s not what I asked for. Thanks. — got it.
+6660 | VT-484141 | [negations                ] Listen, Listen, I won’t sign off on that. If possible. — got it.
+6661 | VT-413424 | [negations                ] Real talk, Reminder: No chance.—copy. thanks. (alt)
+6662 | VT-426763 | [negations                ] Real talk, Hey, No logs, no proof. if you can. (alt)
+6663 | VT-469501 | [negations                ] Listen, Okay, I’m not doing that again. If possible. — now.
+6664 | VT-476005 | [negations                ] Quick one: Hey, Do not open that email. Please. — got it.
+6665 | VT-466172 | [negations                ] Quick one: Listen, No chance.—got it..
+6666 | VT-446262 | [negations                ] Real talk, We can’t ship without tests. Right now..
+6667 | VT-417560 | [negations                ] Note: I’m not doing that again. right now.
+6668 | VT-462968 | [negations                ] Real talk, Okay, That’s not what I asked for. Thanks. — confirm. (alt)
+6669 | VT-459827 | [negations                ] Hey, That’s not what I asked for. For real. please.
+6670 | VT-423100 | [negations                ] Note: Note: That’s not what I asked for. Thanks. — confirm.
+6671 | VT-433927 | [negations                ] Heads up: Reminder: No chance. Please. right now.
+6672 | VT-449010 | [negations                ] Note: Do not open that email. Thanks.. (alt)
+6673 | VT-481948 | [negations                ] Note: Hey, Do not open that email.—got it. — got it. (alt)
+6674 | VT-411985 | [negations                ] Note: Listen, That’s not what I asked for. For real. — got it.
+6675 | VT-451308 | [negations                ] Quick one: Okay, I’m not doing that again. For real. — now. (alt)
+6676 | VT-434432 | [negations                ] Reminder: Note: Nothing about this is simple. For real. if you can.
+6677 | VT-474471 | [negations                ] Reminder: Listen, Nothing about this is simple. Thanks. right now. (alt)
+6678 | VT-421747 | [negations                ] Real talk, Okay, Nothing about this is simple.—got it. — confirm.
+6679 | VT-464056 | [negations                ] Reminder: Heads up: No chance. — got it.
+6680 | VT-409507 | [negations                ] Reminder: Reminder: Never deploy on Friday. Right now.
+6681 | VT-419126 | [negations                ] Heads up: Listen, Never deploy on Friday. Please. if you can.
+6682 | VT-464208 | [negations                ] Heads up: Note: Do not open that email. Right now. thanks. (alt)
+6683 | VT-490029 | [negations                ] Okay, That’s not what I asked for. Please. right now.
+6684 | VT-495869 | [negations                ] Listen, Heads up: Never deploy on Friday. Right now. — confirm. (alt)
+6685 | VT-424395 | [negations                ] Quick one: Heads up: No logs, no proof.
+6686 | VT-433868 | [negations                ] Heads up: Hey, Do not open that email. Please..
+6687 | VT-480810 | [negations                ] Heads up: Note: Do not open that email. Right now. if you can.
+6688 | VT-492464 | [negations                ] Real talk, Note: Never deploy on Friday. If possible.. (alt)
+6689 | VT-437445 | [negations                ] Heads up: Note: Do not open that email. Thanks. please. (alt)
+6690 | VT-466116 | [negations                ] Okay, FYI, We can’t ship without tests.—got it. — confirm.
+6691 | VT-473193 | [negations                ] Real talk, FYI, I won’t sign off on that. — now.
+6692 | VT-489409 | [negations                ] Listen, Reminder: That’s not what I asked for. Please. — got it.
+6693 | VT-494589 | [negations                ] Quick one: Listen, I’m not doing that again. Please. — got it. (alt)
+6694 | VT-439616 | [negations                ] FYI, Note: Nothing about this is simple. For real..
+6695 | VT-413150 | [negations                ] Listen, Hey, No chance. Thanks. — now.
+6696 | VT-467949 | [negations                ] Real talk, Listen, No logs, no proof.—got it. (alt)
+6697 | VT-444252 | [negations                ] Note: Nothing about this is simple. — got it.
+6698 | VT-482910 | [negations                ] Okay, FYI, No chance.—got it.
+6699 | VT-433419 | [passive_aggressive       ] Reminder: Listen, No, really, take your time. It’s not like deadlines matter. — got it.
+6700 | VT-440923 | [passive_aggressive       ] Heads up: Oh, you’re here. How… unexpected. Right now. thanks.

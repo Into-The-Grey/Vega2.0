@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 30 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1451 | VT-469565 | [creative                 ] Note: Listen, The crisp pattern drifted at the edge of the room. Right now. if you can.
+1452 | VT-402875 | [creative                 ] Listen, The crisp pattern drifted at the edge of the room. If possible. please.
+1453 | VT-439613 | [creative                 ] Reminder: Hey, The dusty ripple gathered at the edge of the room.—got it. please. (alt)
+1454 | VT-426389 | [creative                 ] FYI, Reminder: The dusty ripple gathered at the edge of the room.—got it..
+1455 | VT-488514 | [creative                 ] FYI, Hey, The crisp pattern drifted at the edge of the room.—copy. if you can.
+1456 | VT-465837 | [creative                 ] Okay, Listen, The dusty ripple gathered at the edge of the room. Please. — confirm.
+1457 | VT-457553 | [creative                 ] Real talk, FYI, The dusty ripple gathered at the edge of the room. Thanks..
+1458 | VT-453095 | [creative                 ] Okay, Hey, The crisp pattern drifted at the edge of the room. Thanks. please. (alt)
+1459 | VT-463299 | [creative                 ] Heads up: The dusty ripple gathered at the edge of the room. — now. (alt)
+1460 | VT-487674 | [emotional                ] Heads up: Note: I miss you more than words can say. if you can.
+1461 | VT-400949 | [emotional                ] Reminder: Okay, I'm so proud of how far we've come. Right now. if you can.
+1462 | VT-470702 | [emotional                ] Reminder: Hey, I'm so proud of how far we've come.—got it. — confirm.
+1463 | VT-455924 | [emotional                ] Listen, I'm so proud of how far we've come. Please. — now. (alt)
+1464 | VT-405226 | [emotional                ] Heads up: Okay, Why does everything have to hurt so much? Thanks. if you can.
+1465 | VT-419687 | [emotional                ] Quick one: Reminder: I'm so proud of how far we've come. Thanks. please.
+1466 | VT-487515 | [emotional                ] Listen, FYI, I'm so proud of how far we've come. please. (alt)
+1467 | VT-415228 | [emotional                ] Note: I miss you more than words can say. if you can.
+1468 | VT-469086 | [emotional                ] Listen, Okay, Why does everything have to hurt so much? For real. please.
+1469 | VT-433328 | [emotional                ] Listen, FYI, I'm so proud of how far we've come. — now. (alt)
+1470 | VT-437355 | [emotional                ] Heads up: FYI, I miss you more than words can say. If possible..
+1471 | VT-471786 | [emotional                ] Listen, I'm so proud of how far we've come. If possible.
+1472 | VT-426435 | [emotional                ] Heads up: Okay, I miss you more than words can say. For real.
+1473 | VT-492548 | [emotional                ] FYI, Hey, Why does everything have to hurt so much? Thanks. — now.
+1474 | VT-461587 | [emotional                ] Listen, Why does everything have to hurt so much? Thanks..
+1475 | VT-486406 | [emotional                ] Heads up: Why does everything have to hurt so much? Right now..
+1476 | VT-408913 | [emotional                ] Note: I'm so proud of how far we've come.—copy. please.
+1477 | VT-472492 | [emotional                ] Note: Hey, Why does everything have to hurt so much?—copy.
+1478 | VT-491709 | [emotional                ] Why does everything have to hurt so much? — now.
+1479 | VT-435018 | [emotional                ] Quick one: FYI, I miss you more than words can say. If possible..
+1480 | VT-451104 | [emotional                ] FYI, Note: Why does everything have to hurt so much?—copy. thanks.
+1481 | VT-492868 | [emotional                ] FYI, FYI, Why does everything have to hurt so much? — confirm.
+1482 | VT-469418 | [emotional                ] FYI, I miss you more than words can say. — got it.
+1483 | VT-488500 | [emotional                ] FYI, FYI, I'm so proud of how far we've come. — confirm.
+1484 | VT-432828 | [emotional                ] FYI, Why does everything have to hurt so much? Right now. please. (alt)
+1485 | VT-450087 | [emotional                ] Real talk, Hey, I miss you more than words can say.—copy. (alt)
+1486 | VT-446847 | [emotional                ] Heads up: Reminder: I miss you more than words can say. Right now.. (alt)
+1487 | VT-479664 | [emotional                ] Note: Reminder: Why does everything have to hurt so much?—got it. right now. (alt)
+1488 | VT-424295 | [emotional                ] Quick one: Hey, I miss you more than words can say. If possible. thanks.
+1489 | VT-425393 | [emotional                ] FYI, FYI, Why does everything have to hurt so much?—copy. thanks.
+1490 | VT-445955 | [emotional                ] Reminder: Heads up: Why does everything have to hurt so much? Please. thanks. (alt)
+1491 | VT-457152 | [emotional                ] Quick one: Listen, I'm so proud of how far we've come. Please. — got it. (alt)
+1492 | VT-480705 | [emotional                ] FYI, Okay, I miss you more than words can say. Please. please.
+1493 | VT-439694 | [emotional                ] Okay, Listen, I'm so proud of how far we've come. If possible. right now.
+1494 | VT-491411 | [emotional                ] Heads up: Heads up: I'm so proud of how far we've come.—copy. — got it.
+1495 | VT-422982 | [emotional                ] Reminder: I miss you more than words can say.—got it. right now.
+1496 | VT-448386 | [emotional                ] Quick one: FYI, I miss you more than words can say.—copy.
+1497 | VT-430292 | [emotional                ] Heads up: Heads up: Why does everything have to hurt so much? Right now. — now.
+1498 | VT-463201 | [emotional                ] Quick one: Listen, I'm so proud of how far we've come. If possible. — confirm. (alt)
+1499 | VT-420050 | [emotional                ] Note: Okay, I'm so proud of how far we've come. For real. right now.
+1500 | VT-422516 | [emotional                ] Okay, FYI, I'm so proud of how far we've come. — now.

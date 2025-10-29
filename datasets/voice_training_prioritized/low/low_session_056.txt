@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 56 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2751 | VT-95525 | [monotone_minimal         ] Hey, Denied.—copy.
+2752 | VT-84752 | [monotone_minimal         ] No.
+2753 | VT-64541 | [monotone_minimal         ] Hey, No.—got it.
+2754 | VT-47948 | [monotone_minimal         ] Note: Proceed. If possible.
+2755 | VT-59811 | [monotone_minimal         ] Reminder: Confirmed. Right now.
+2756 | VT-71131 | [monotone_minimal         ] Okay, Sure. Right now.
+2757 | VT-11007 | [monotone_minimal         ] FYI, Proceed.—copy.
+2758 | VT-42371 | [monotone_minimal         ] Heads up: Okay. Thanks.
+2759 | VT-17605 | [monotone_minimal         ] Reminder: Sure.—copy.
+2760 | VT-29425 | [monotone_minimal         ] Okay, Sure.—got it.
+2761 | VT-52185 | [monotone_minimal         ] Note: Retry.—got it.
+2762 | VT-64916 | [monotone_minimal         ] Reminder: Unknown. Right now.
+2763 | VT-61768 | [monotone_minimal         ] Heads up: Done. For real.
+2764 | VT-10889 | [monotone_minimal         ] Reminder: Denied. Right now.
+2765 | VT-39490 | [monotone_minimal         ] Hey, Done. For real.
+2766 | VT-14084 | [monotone_minimal         ] Note: No.—got it.
+2767 | VT-71131 | [monotone_minimal         ] Okay, Sure. Right now.
+2768 | VT-39657 | [monotone_minimal         ] Heads up: Denied. For real.
+2769 | VT-43545 | [monotone_minimal         ] Note: Sure.—copy.
+2770 | VT-75918 | [monotone_minimal         ] Hey, Sure.—got it.
+2771 | VT-54417 | [monotone_minimal         ] Retry.—got it.
+2772 | VT-37348 | [monotone_minimal         ] Heads up: Done. If possible.
+2773 | VT-92612 | [monotone_minimal         ] Heads up: Okay. If possible.
+2774 | VT-14084 | [monotone_minimal         ] Note: No.—got it.
+2775 | VT-27483 | [monotone_minimal         ] Reminder: Okay. For real.
+2776 | VT-14084 | [monotone_minimal         ] Note: No.—got it.
+2777 | VT-25967 | [monotone_minimal         ] Listen, Fine. If possible.
+2778 | VT-82618 | [monotone_minimal         ] Reminder: Okay. If possible.
+2779 | VT-14084 | [monotone_minimal         ] Note: No.—got it.
+2780 | VT-64732 | [multilingual             ] Note: 안녕하세요, 오늘 기분 어때요?
+2781 | VT-0487 | [multilingual             ] धन्यवाद, फिर मिलेंगे।
+2782 | VT-94149 | [multilingual             ] Heads up: 你好，今天忙吗？ Thanks.
+2783 | VT-45402 | [multilingual             ] FYI, 谢谢你的时间。 Right now.
+2784 | VT-84341 | [multilingual             ] Listen, Olá, tudo bem?—copy.
+2785 | VT-0485 | [multilingual             ] 감사합니다, 다음에 봐요.
+2786 | VT-80424 | [multilingual             ] FYI, 감사합니다, 다음에 봐요.—got it.
+2787 | VT-36995 | [multilingual             ] Hey, こんにちは、お元気ですか。 Thanks.
+2788 | VT-22050 | [multilingual             ] Hey, Olá, tudo bem?—got it.
+2789 | VT-0487 | [multilingual             ] धन्यवाद, फिर मिलेंगे।
+2790 | VT-10727 | [multilingual             ] Reminder: 谢谢你的时间。
+2791 | VT-12959 | [multilingual             ] Okay, 你好，今天忙吗？ For real.
+2792 | VT-45402 | [multilingual             ] FYI, 谢谢你的时间。 Right now.
+2793 | VT-10727 | [multilingual             ] Reminder: 谢谢你的时间。
+2794 | VT-0473 | [multilingual             ] Ciao, ci vediamo domani.
+2795 | VT-0470 | [multilingual             ] Hola, ¿cómo estás?
+2796 | VT-0478 | [multilingual             ] नमस्ते, आप कैसे हैं?
+2797 | VT-26461 | [multilingual             ] Reminder: 你好，今天忙吗？ For real.
+2798 | VT-34106 | [multilingual             ] FYI, 谢谢你的时间。 Right now.
+2799 | VT-0479 | [multilingual             ] Salam, sab thik hai?
+2800 | VT-88609 | [multilingual             ] Heads up: 你好，今天忙吗？ Right now.

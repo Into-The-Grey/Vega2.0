@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 193 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+9601 | VT-531319 | [uncertainty              ] Okay, FYI, Possibly, but unlikely. For real.
+9602 | VT-585084 | [uncertainty              ] Heads up: Reminder: I’m not sure yet.—got it. — confirm. (alt)
+9603 | VT-640220 | [uncertainty              ] Listen, Too early to call. Please. — confirm.
+9604 | VT-605971 | [uncertainty              ] FYI, Reminder: Possibly, but unlikely.—got it. — now.
+9605 | VT-559141 | [uncertainty              ] FYI, Reminder: Maybe—leaning no. For real. — got it. (alt)
+9606 | VT-600507 | [uncertainty              ] Listen, Hey, I’m not sure yet.—copy. please. (alt)
+9607 | VT-657431 | [uncertainty              ] Reminder: Reminder: I’m not sure yet.—got it. right now.
+9608 | VT-528779 | [uncertainty              ] Heads up: Note: Possibly, but unlikely. If possible. if you can.
+9609 | VT-640777 | [uncertainty              ] Note: I’m not sure yet. Right now. thanks.
+9610 | VT-676694 | [uncertainty              ] Note: Note: It depends on the constraints. Please. please.
+9611 | VT-699754 | [uncertainty              ] Heads up: Listen, I doubt it. Thanks. — confirm.
+9612 | VT-699080 | [uncertainty              ] Note: Listen, Too early to call. Right now. thanks.
+9613 | VT-575437 | [uncertainty              ] Real talk, Listen, Hard to say without more data. Thanks. — now.
+9614 | VT-600076 | [uncertainty              ] Note: Heads up: We’ll see.
+9615 | VT-535806 | [uncertainty              ] Quick one: Reminder: I don’t have that info.—got it. please.
+9616 | VT-550963 | [uncertainty              ] Heads up: Maybe—leaning no. Right now. thanks.
+9617 | VT-610767 | [uncertainty              ] Listen, We’ll see. please. (alt)
+9618 | VT-601153 | [uncertainty              ] Okay, Note: I don’t have that info. For real. — now.
+9619 | VT-576309 | [uncertainty              ] Quick one: Hey, It depends on the constraints. if you can. (alt)
+9620 | VT-680370 | [uncertainty              ] Quick one: Heads up: I don’t have that info. If possible.. (alt)
+9621 | VT-577408 | [uncertainty              ] Listen, Maybe—leaning no. Thanks. — got it.
+9622 | VT-529682 | [uncertainty              ] Reminder: Hey, Hard to say without more data.—copy.
+9623 | VT-602935 | [uncertainty              ] Real talk, Listen, I’m not sure yet.—got it. thanks.
+9624 | VT-569769 | [uncertainty              ] Okay, Hard to say without more data. If possible. if you can.
+9625 | VT-600725 | [uncertainty              ] Reminder: Too early to call. — now. (alt)
+9626 | VT-610318 | [uncertainty              ] Listen, FYI, Possibly, but unlikely. For real.
+9627 | VT-560878 | [uncertainty              ] Listen, Hey, Possibly, but unlikely.—copy. — now.
+9628 | VT-552103 | [uncertainty              ] Listen, Note: I’m not sure yet. Thanks. — got it. (alt)
+9629 | VT-620408 | [uncertainty              ] FYI, Heads up: Maybe—leaning no. Right now.
+9630 | VT-664449 | [uncertainty              ] Heads up: Okay, I don’t have that info. Please.. (alt)
+9631 | VT-631769 | [uncertainty              ] Note: FYI, Maybe—leaning no.—copy. — confirm.
+9632 | VT-573651 | [uncertainty              ] Okay, Listen, Hard to say without more data. Thanks. — confirm.
+9633 | VT-651796 | [uncertainty              ] Note: Hard to say without more data. if you can.
+9634 | VT-570792 | [uncertainty              ] Quick one: Reminder: Maybe—leaning no. For real. — confirm.
+9635 | VT-608236 | [uncertainty              ] Okay, FYI, Maybe—leaning no. Right now. if you can.
+9636 | VT-674704 | [uncertainty              ] Real talk, Okay, Fifty-fifty at best.—got it. — got it.
+9637 | VT-674012 | [uncertainty              ] Heads up: Maybe—leaning no. — now.
+9638 | VT-516561 | [uncertainty              ] Listen, FYI, Maybe—leaning no. Right now. — now. (alt)
+9639 | VT-559027 | [uncertainty              ] FYI, Okay, Fifty-fifty at best. Please. — now.
+9640 | VT-623251 | [uncertainty              ] Listen, Heads up: Maybe—leaning no.—copy..
+9641 | VT-533166 | [uncertainty              ] Note: Hard to say without more data. For real. — now.
+9642 | VT-668507 | [uncertainty              ] Real talk, Maybe—leaning no. Right now. — confirm.
+9643 | VT-674957 | [uncertainty              ] Heads up: Okay, Possibly, but unlikely. If possible.
+9644 | VT-653136 | [uncertainty              ] Reminder: Hey, Too early to call. — got it.
+9645 | VT-623509 | [uncertainty              ] Heads up: Hey, Possibly, but unlikely. If possible. — got it.
+9646 | VT-576795 | [uncertainty              ] Real talk, Hey, I don’t have that info. Thanks..
+9647 | VT-602308 | [uncertainty              ] Okay, Hey, Hard to say without more data. For real. — now.
+9648 | VT-684724 | [uncertainty              ] FYI, Listen, I’m not sure yet.—got it. right now.
+9649 | VT-505298 | [uncertainty              ] FYI, Hey, It depends on the constraints. — confirm.
+9650 | VT-525404 | [uncertainty              ] Okay, Note: Maybe—leaning no. For real. — now.

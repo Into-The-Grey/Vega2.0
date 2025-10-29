@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 16 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0751 | VT-0524 | [everyday                 ] Please label the boxes by room and by priority.
+0752 | VT-0071 | [everyday                 ] Text me when you arrive.
+0753 | VT-43434 | [everyday                 ] Listen, Double‑tap to wake; swipe down for quick settings. If possible.
+0754 | VT-84458 | [everyday                 ] Reminder: No worries, it happens. If possible.
+0755 | VT-0064 | [everyday                 ] Turn the volume down a bit, please.
+0756 | VT-0064 | [everyday                 ] Turn the volume down a bit, please.
+0757 | VT-42116 | [everyday                 ] Okay, I'll grab lunch near the store.—copy.
+0758 | VT-0058 | [everyday                 ] See you on Wednesday!
+0759 | VT-0517 | [everyday                 ] Open settings → Privacy → Microphone and toggle access on.
+0760 | VT-0068 | [everyday                 ] I’ll circle back after lunch.
+0761 | VT-0072 | [everyday                 ] Drive safe and take your time.
+0762 | VT-17534 | [everyday                 ] Reminder: I'll be at the shop around noon. Right now.
+0763 | VT-0039 | [everyday                 ] I'll grab lunch near the cafe.
+0764 | VT-44050 | [everyday                 ] Hey, Could you send me that file before midnight? Thanks.
+0765 | VT-97188 | [everyday                 ] Okay, Pleasure to see you again. For real.
+0766 | VT-0028 | [everyday                 ] Could you send me that file before midnight?
+0767 | VT-97188 | [everyday                 ] Okay, Pleasure to see you again. For real.
+0768 | VT-48058 | [everyday                 ] I'll grab lunch near the studio.—copy.
+0769 | VT-0078 | [everyday                 ] I’m stepping out for fresh air.
+0770 | VT-83816 | [everyday                 ] Note: We can wrap this up by 9:00 AM. Please.
+0771 | VT-46161 | [everyday                 ] Heads up: Could you send me that file before 5:05 PM? Right now.
+0772 | VT-91578 | [everyday                 ] Heads up: We can wrap this up by 7:22 PM. Right now.
+0773 | VT-0071 | [everyday                 ] Text me when you arrive.
+0774 | VT-85886 | [everyday                 ] Listen, Press and hold the power button for ten seconds.
+0775 | VT-0001 | [everyday                 ] How's it going?
+0776 | VT-91709 | [everyday                 ] FYI, Quick question: did you update the doc? Right now.
+0777 | VT-25007 | [everyday                 ] FYI, Let's meet on Tuesday to go over the plan.—got it.
+0778 | VT-0030 | [everyday                 ] Let me know if you need anything else.
+0779 | VT-18531 | [everyday                 ] This line is busy; I’ll try later. If possible.
+0780 | VT-65155 | [everyday                 ] Thanks, that was super helpful.
+0781 | VT-0044 | [everyday                 ] I'll be at home around noon.
+0782 | VT-10877 | [everyday                 ] Note: That sounds great to me.—copy.
+0783 | VT-77248 | [everyday                 ] Okay, Hey Sam, can you call me back when you get a chance?—copy.
+0784 | VT-0071 | [everyday                 ] Text me when you arrive.
+0785 | VT-62200 | [everyday                 ] Note: Open settings → Privacy → Microphone and toggle access on.—got it.
+0786 | VT-0011 | [everyday                 ] Could you send me that file before noon?
+0787 | VT-0060 | [everyday                 ] Could you send me that file before 6:15 AM?
+0788 | VT-0516 | [everyday                 ] Could you rephrase that in simpler terms?
+0789 | VT-35895 | [everyday                 ] Turn the volume down a bit, please.—copy.
+0790 | VT-84782 | [everyday                 ] Hey, Let's meet on Sunday to go over the plan.—got it.
+0791 | VT-77248 | [everyday                 ] Okay, Hey Sam, can you call me back when you get a chance?—copy.
+0792 | VT-0025 | [everyday                 ] I'll grab lunch near the lab.
+0793 | VT-77248 | [everyday                 ] Okay, Hey Sam, can you call me back when you get a chance?—copy.
+0794 | VT-35399 | [everyday                 ] Hey, Hey Avery, can you call me back when you get a chance? Thanks.
+0795 | VT-0081 | [everyday                 ] I’ll confirm the details and get back to you.
+0796 | VT-77248 | [everyday                 ] Okay, Hey Sam, can you call me back when you get a chance?—copy.
+0797 | VT-86583 | [hesitations_fillers      ] Okay, okay, okay—listen.
+0798 | VT-18477 | [hesitations_fillers      ] Wait—uh—did you hear that?
+0799 | VT-19005 | [hesitations_fillers      ] So—yeah—about that plan…
+0800 | VT-86583 | [hesitations_fillers      ] Okay, okay, okay—listen.

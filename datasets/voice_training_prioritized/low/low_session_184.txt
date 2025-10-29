@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 184 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+9151 | VT-666424 | [slang-heavy              ] Quick one: Hey, We vibin’ or what? Right now. — got it. (alt)
+9152 | VT-582514 | [slang-heavy              ] Hey, Yo, that was straight fire, no cap!—copy. thanks.
+9153 | VT-674221 | [slang-heavy              ] Heads up: She ghosted me after I dropped the bag, smh.—copy. — now.
+9154 | VT-687988 | [sound_effects            ] Heads up: Boom! Crash! The whole lab went dark. Please. — now.
+9155 | VT-627645 | [sound_effects            ] Okay, Heads up: Pshhh, like air escaping a balloon of secrets. If possible. if you can.
+9156 | VT-664685 | [sound_effects            ] Real talk, Listen, Pshhh, like air escaping a balloon of secrets. If possible. please.
+9157 | VT-567792 | [sound_effects            ] FYI, Pshhh, like air escaping a balloon of secrets.
+9158 | VT-699105 | [sound_effects            ] Heads up: Reminder: Tick tick tick… and then silence. please.
+9159 | VT-640324 | [sound_effects            ] Listen, Note: Pshhh, like air escaping a balloon of secrets.
+9160 | VT-649674 | [sound_effects            ] Listen, Reminder: Pshhh, like air escaping a balloon of secrets. — got it.
+9161 | VT-591215 | [sound_effects            ] Boom! Crash! The whole lab went dark. Please.
+9162 | VT-595791 | [sound_effects            ] Note: Reminder: Tick tick tick… and then silence. For real..
+9163 | VT-630221 | [sound_effects            ] Real talk, Note: Pshhh, like air escaping a balloon of secrets.—copy. — got it.
+9164 | VT-544567 | [sound_effects            ] Quick one: Note: Boom! Crash! The whole lab went dark. Thanks. — got it.
+9165 | VT-552338 | [sound_effects            ] Okay, Reminder: Pshhh, like air escaping a balloon of secrets.—copy. (alt)
+9166 | VT-673366 | [sound_effects            ] Reminder: Hey, Boom! Crash! The whole lab went dark. Please. right now.
+9167 | VT-621660 | [sound_effects            ] Quick one: Note: Tick tick tick… and then silence. Right now. if you can. (alt)
+9168 | VT-586108 | [sound_effects            ] Heads up: Listen, Tick tick tick… and then silence. Please. if you can.
+9169 | VT-635333 | [sound_effects            ] Real talk, Note: Tick tick tick… and then silence. For real.
+9170 | VT-688149 | [sound_effects            ] Reminder: FYI, Pshhh, like air escaping a balloon of secrets. Right now. please. (alt)
+9171 | VT-623542 | [sound_effects            ] Listen, Reminder: Tick tick tick… and then silence. Right now.
+9172 | VT-660355 | [sound_effects            ] Okay, Tick tick tick… and then silence. — now.
+9173 | VT-688603 | [sound_effects            ] Quick one: Note: Boom! Crash! The whole lab went dark. Thanks. right now. (alt)
+9174 | VT-546117 | [sound_effects            ] Reminder: Reminder: Tick tick tick… and then silence. Please. please. (alt)
+9175 | VT-530185 | [sound_effects            ] Quick one: Reminder: Tick tick tick… and then silence.—copy. — got it.
+9176 | VT-617341 | [sound_effects            ] Real talk, Reminder: Boom! Crash! The whole lab went dark. Please. — confirm.
+9177 | VT-525904 | [sound_effects            ] Reminder: Reminder: Pshhh, like air escaping a balloon of secrets. — got it. (alt)
+9178 | VT-539075 | [sound_effects            ] Okay, Okay, Tick tick tick… and then silence. Thanks. right now.
+9179 | VT-567164 | [sound_effects            ] Heads up: FYI, Boom! Crash! The whole lab went dark. Please. if you can.
+9180 | VT-657142 | [sound_effects            ] Quick one: Reminder: Boom! Crash! The whole lab went dark.—copy. right now.
+9181 | VT-601636 | [sound_effects            ] Listen, Okay, Tick tick tick… and then silence.—got it..
+9182 | VT-595324 | [sound_effects            ] FYI, Reminder: Boom! Crash! The whole lab went dark.—copy. thanks.
+9183 | VT-697844 | [sound_effects            ] FYI, Tick tick tick… and then silence. Right now. if you can.
+9184 | VT-559668 | [sound_effects            ] Note: Heads up: Tick tick tick… and then silence. If possible. — confirm.
+9185 | VT-657296 | [sound_effects            ] Heads up: Pshhh, like air escaping a balloon of secrets. — got it.
+9186 | VT-641177 | [sound_effects            ] Quick one: Okay, Boom! Crash! The whole lab went dark. For real. — got it.
+9187 | VT-633628 | [sound_effects            ] Listen, Pshhh, like air escaping a balloon of secrets.—copy. — got it.
+9188 | VT-622956 | [sound_effects            ] FYI, FYI, Pshhh, like air escaping a balloon of secrets. Please. — confirm.
+9189 | VT-664405 | [sound_effects            ] Quick one: Listen, Boom! Crash! The whole lab went dark.. (alt)
+9190 | VT-661585 | [sound_effects            ] FYI, FYI, Boom! Crash! The whole lab went dark. — confirm.
+9191 | VT-659187 | [sound_effects            ] Note: Tick tick tick… and then silence. For real. (alt)
+9192 | VT-557633 | [sound_effects            ] Reminder: Pshhh, like air escaping a balloon of secrets.—copy. thanks.
+9193 | VT-536767 | [sound_effects            ] Reminder: Listen, Pshhh, like air escaping a balloon of secrets. If possible. — got it.
+9194 | VT-541002 | [sound_effects            ] Heads up: Reminder: Pshhh, like air escaping a balloon of secrets..
+9195 | VT-520416 | [sound_effects            ] Note: FYI, Boom! Crash! The whole lab went dark. If possible..
+9196 | VT-600432 | [sound_effects            ] Note: FYI, Tick tick tick… and then silence. Please. — now.
+9197 | VT-533425 | [sound_effects            ] Heads up: Note: Pshhh, like air escaping a balloon of secrets. Thanks. — got it. (alt)
+9198 | VT-629099 | [sound_effects            ] Hey, Pshhh, like air escaping a balloon of secrets. Thanks. please.
+9199 | VT-509261 | [sound_effects            ] Reminder: Okay, Tick tick tick… and then silence.—got it. — confirm.
+9200 | VT-583350 | [sound_effects            ] Heads up: Listen, Pshhh, like air escaping a balloon of secrets.—copy. — got it.

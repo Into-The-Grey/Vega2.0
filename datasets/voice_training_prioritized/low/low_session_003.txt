@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 3 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0101 | VT-94662 | [addresses_generic        ] Hey, Unit B, second floor, back entrance. Thanks.
+0102 | VT-76113 | [addresses_generic        ] Unit B, second floor, back entrance. Thanks.
+0103 | VT-76087 | [addresses_generic        ] FYI, Unit B, second floor, back entrance. If possible.
+0104 | VT-43130 | [addresses_generic        ] Deliver to the northeast loading dock.
+0105 | VT-73485 | [addresses_generic        ] Heads up: Ship it to 123 Example Street, Suite 400, Springfield.—got it.
+0106 | VT-44895 | [addresses_generic        ] Heads up: Corner house with the red door. Right now.
+0107 | VT-25402 | [addresses_generic        ] Listen, Deliver to the northeast loading dock. Thanks.
+0108 | VT-36928 | [addresses_generic        ] Reminder: The ZIP code is 60614, not 60641. Right now.
+0109 | VT-36818 | [addresses_generic        ] Okay, The ZIP code is 60614, not 60641. If possible.
+0110 | VT-85858 | [addresses_generic        ] Note: The ZIP code is 60614, not 60641.—copy.
+0111 | VT-76113 | [addresses_generic        ] Unit B, second floor, back entrance. Thanks.
+0112 | VT-22740 | [addresses_generic        ] Okay, Corner house with the red door. Thanks.
+0113 | VT-62825 | [addresses_generic        ] FYI, Ship it to 123 Example Street, Suite 400, Springfield. If possible.
+0114 | VT-75428 | [addresses_generic        ] FYI, The ZIP code is 60614, not 60641.
+0115 | VT-57823 | [addresses_generic        ] Note: Mail it care of John Doe, PO Box 1029. Please.
+0116 | VT-23104 | [addresses_generic        ] Reminder: Send the parcel to Building 9, Bay 12. If possible.
+0117 | VT-63892 | [addresses_generic        ] Note: The ZIP code is 60614, not 60641. For real.
+0118 | VT-69234 | [addresses_generic        ] Hey, Cross streets are Maple and 8th. If possible.
+0119 | VT-41331 | [addresses_generic        ] Listen, Deliver to the northeast loading dock. Thanks.
+0120 | VT-10196 | [addresses_generic        ] FYI, Ship it to 123 Example Street, Suite 400, Springfield. If possible.
+0121 | VT-76407 | [addresses_generic        ] Hey, Deliver to the northeast loading dock. Right now.
+0122 | VT-12108 | [addresses_generic        ] Ship it to 123 Example Street, Suite 400, Springfield. Thanks.
+0123 | VT-14804 | [addresses_generic        ] Ship it to 123 Example Street, Suite 400, Springfield.
+0124 | VT-43130 | [addresses_generic        ] Deliver to the northeast loading dock.
+0125 | VT-72580 | [addresses_generic        ] Heads up: The ZIP code is 60614, not 60641. Thanks.
+0126 | VT-19229 | [addresses_generic        ] Heads up: Unit B, second floor, back entrance. For real.
+0127 | VT-49362 | [addresses_generic        ] Hey, Mail it care of John Doe, PO Box 1029. If possible.
+0128 | VT-98740 | [addresses_generic        ] Note: Mail it care of John Doe, PO Box 1029.—copy.
+0129 | VT-28307 | [addresses_generic        ] Reminder: Deliver to the northeast loading dock. If possible.
+0130 | VT-37580 | [addresses_generic        ] Reminder: Use the service elevator—freight only.—got it.
+0131 | VT-22499 | [addresses_generic        ] Okay, The ZIP code is 60614, not 60641.—copy.
+0132 | VT-17323 | [addresses_generic        ] Listen, Cross streets are Maple and 8th. If possible.
+0133 | VT-13920 | [addresses_generic        ] Reminder: Send the parcel to Building 9, Bay 12.—got it.
+0134 | VT-50942 | [addresses_generic        ] Okay, Unit B, second floor, back entrance. If possible.
+0135 | VT-29773 | [addresses_generic        ] Reminder: Apartment 3C, buzzer code 5147.
+0136 | VT-93686 | [addresses_generic        ] FYI, The ZIP code is 60614, not 60641.—copy.
+0137 | VT-29773 | [addresses_generic        ] Reminder: Apartment 3C, buzzer code 5147.
+0138 | VT-27500 | [addresses_generic        ] FYI, The ZIP code is 60614, not 60641.
+0139 | VT-62825 | [addresses_generic        ] FYI, Ship it to 123 Example Street, Suite 400, Springfield. If possible.
+0140 | VT-61120 | [addresses_generic        ] Unit B, second floor, back entrance. Right now.
+0141 | VT-43224 | [addresses_generic        ] Ship it to 123 Example Street, Suite 400, Springfield.
+0142 | VT-46240 | [addresses_generic        ] Listen, Send the parcel to Building 9, Bay 12. For real.
+0143 | VT-90801 | [addresses_generic        ] Apartment 3C, buzzer code 5147. If possible.
+0144 | VT-18069 | [addresses_generic        ] Heads up: Unit B, second floor, back entrance. For real.
+0145 | VT-69753 | [addresses_generic        ] Use the service elevator—freight only. If possible.
+0146 | VT-49555 | [addresses_generic        ] Reminder: Ship it to 123 Example Street, Suite 400, Springfield.—copy.
+0147 | VT-50987 | [addresses_generic        ] Listen, Apartment 3C, buzzer code 5147. For real.
+0148 | VT-44895 | [addresses_generic        ] Heads up: Corner house with the red door. Right now.
+0149 | VT-29539 | [addresses_generic        ] Okay, Apartment 3C, buzzer code 5147.—got it.
+0150 | VT-19862 | [addresses_generic        ] Okay, Use the service elevator—freight only. Please.

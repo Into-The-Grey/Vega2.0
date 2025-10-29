@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 8 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0351 | VT-31068 | [conditionals             ] Listen, If it fails, roll back immediately. Thanks.
+0352 | VT-75959 | [conditionals             ] Hey, In case of downtime, switch to read-only.—got it.
+0353 | VT-89002 | [conditionals             ] Provided the tests are green, merge.
+0354 | VT-50200 | [conditionals             ] Hey, Provided the tests are green, merge. Please.
+0355 | VT-46055 | [conditionals             ] Okay, If A then B, otherwise C.—copy.
+0356 | VT-35504 | [conditionals             ] Okay, If you’re late, text me first. Right now.
+0357 | VT-28375 | [conditionals             ] Should this pass QA, ship it. Please.
+0358 | VT-87180 | [conditionals             ] FYI, If A then B, otherwise C.—copy.
+0359 | VT-79961 | [conditionals             ] FYI, If it fails, roll back immediately. Thanks.
+0360 | VT-71294 | [conditionals             ] Reminder: Should this pass QA, ship it. For real.
+0361 | VT-75958 | [conditionals             ] Hey, Should this pass QA, ship it.—copy.
+0362 | VT-84583 | [conditionals             ] Reminder: Given enough time, everything breaks.
+0363 | VT-69377 | [conditionals             ] Note: If and only if the hash matches, proceed. If possible.
+0364 | VT-69641 | [conditionals             ] Okay, If it ain’t broke, don’t fix it. For real.
+0365 | VT-34812 | [conditionals             ] Listen, In case of downtime, switch to read-only. Please.
+0366 | VT-83675 | [conditionals             ] Reminder: If it ain’t broke, don’t fix it. Please.
+0367 | VT-80919 | [conditionals             ] Hey, Provided the tests are green, merge. Right now.
+0368 | VT-28375 | [conditionals             ] Should this pass QA, ship it. Please.
+0369 | VT-52480 | [conditionals             ] Heads up: In case of downtime, switch to read-only.—copy.
+0370 | VT-19823 | [conditionals             ] Heads up: Should this pass QA, ship it. Thanks.
+0371 | VT-65062 | [conditionals             ] Heads up: Should this pass QA, ship it.—copy.
+0372 | VT-87371 | [conditionals             ] FYI, Given enough time, everything breaks. For real.
+0373 | VT-27109 | [conditionals             ] Okay, If it ain’t broke, don’t fix it.—got it.
+0374 | VT-79150 | [conditionals             ] If it fails, roll back immediately. Please.
+0375 | VT-80919 | [conditionals             ] Hey, Provided the tests are green, merge. Right now.
+0376 | VT-45668 | [conditionals             ] Okay, If it fails, roll back immediately.—got it.
+0377 | VT-80919 | [conditionals             ] Hey, Provided the tests are green, merge. Right now.
+0378 | VT-13456 | [conditionals             ] FYI, Unless it’s critical, defer to next sprint. For real.
+0379 | VT-72887 | [conditionals             ] If it fails, roll back immediately. Please.
+0380 | VT-80919 | [conditionals             ] Hey, Provided the tests are green, merge. Right now.
+0381 | VT-29941 | [dates_times              ] Okay, Schedule it biweekly starting next Monday. (7524)
+0382 | VT-24993 | [dates_times              ] Heads up: Sunrise is at 06:58; sunset at 17:12. (1041)—copy.
+0383 | VT-28392 | [dates_times              ] Heads up: Schedule it biweekly starting next Monday. (3129) Right now.
+0384 | VT-76059 | [dates_times              ] Reminder: The deadline moved from Q3 to Q4. (8292) For real.
+0385 | VT-87861 | [dates_times              ] FYI, My birthday is on 02/29—leap year baby. (9745)
+0386 | VT-55140 | [dates_times              ] Note: Today is the 27th of October, 2025. (8654)—copy.
+0387 | VT-52670 | [dates_times              ] Reminder: Set a reminder for 7:45 PM on Friday. (980) If possible.
+0388 | VT-29941 | [dates_times              ] Okay, Schedule it biweekly starting next Monday. (7524)
+0389 | VT-78011 | [dates_times              ] Okay, Today is the 27th of October, 2025. (4702)—got it.
+0390 | VT-65836 | [dates_times              ] Listen, The deadline moved from Q3 to Q4. (8265) Please.
+0391 | VT-84640 | [dates_times              ] Heads up: Timer: three hours, twenty-one minutes, go. (9836) Right now.
+0392 | VT-52007 | [dates_times              ] Note: My birthday is on 02/29—leap year baby. (7109) For real.
+0393 | VT-79324 | [dates_times              ] Heads up: Sunrise is at 06:58; sunset at 17:12. (4769) Right now.
+0394 | VT-42938 | [dates_times              ] Convert 14:30 UTC to Central Time. (384) Thanks.
+0395 | VT-91821 | [dates_times              ] Reminder: Today is the 27th of October, 2025. (5535)—got it.
+0396 | VT-75877 | [dates_times              ] Set a reminder for 7:45 PM on Friday. (6140) If possible.
+0397 | VT-73896 | [dates_times              ] Reminder: Sunrise is at 06:58; sunset at 17:12. (6269) For real.
+0398 | VT-43530 | [dates_times              ] Reminder: Schedule it biweekly starting next Monday. (4108)—copy.
+0399 | VT-49157 | [dates_times              ] Today is the 27th of October, 2025.
+0400 | VT-84640 | [dates_times              ] Heads up: Timer: three hours, twenty-one minutes, go. (9836) Right now.

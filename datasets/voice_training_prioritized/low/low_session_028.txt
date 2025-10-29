@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 28 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1351 | VT-78516 | [flirty                   ] Hey, You have the kind of voice I’d sync my heartbeat to.
+1352 | VT-43480 | [flirty                   ] I wasn’t blushing until you started talking. If possible.
+1353 | VT-86126 | [flirty                   ] Reminder: Are you Wi-Fi? Because I’m feeling a connection.
+1354 | VT-77075 | [flirty                   ] Reminder: You have the kind of voice I’d sync my heartbeat to.—got it.
+1355 | VT-19669 | [flirty                   ] Note: I wasn’t blushing until you started talking. Thanks.
+1356 | VT-72405 | [flirty                   ] Note: Are you Wi-Fi? Because I’m feeling a connection.—copy.
+1357 | VT-34582 | [flirty                   ] You have the kind of voice I’d sync my heartbeat to.—copy.
+1358 | VT-20783 | [flirty                   ] Listen, I wasn’t blushing until you started talking. If possible.
+1359 | VT-31860 | [flirty                   ] Hey, Are you Wi-Fi? Because I’m feeling a connection. Thanks.
+1360 | VT-88161 | [flirty                   ] Reminder: You have the kind of voice I’d sync my heartbeat to.—got it.
+1361 | VT-90779 | [flirty                   ] Hey, I wasn’t blushing until you started talking.—copy.
+1362 | VT-64676 | [flirty                   ] Hey, Are you Wi-Fi? Because I’m feeling a connection. Please.
+1363 | VT-49950 | [flirty                   ] FYI, You have the kind of voice I’d sync my heartbeat to. If possible.
+1364 | VT-53178 | [flirty                   ] Reminder: I wasn’t blushing until you started talking. Please.
+1365 | VT-89945 | [flirty                   ] Hey, Are you Wi-Fi? Because I’m feeling a connection.—got it.
+1366 | VT-70603 | [flirty                   ] You have the kind of voice I’d sync my heartbeat to. Right now.
+1367 | VT-10028 | [flirty                   ] Hey, I wasn’t blushing until you started talking. Please.
+1368 | VT-68222 | [flirty                   ] Hey, Are you Wi-Fi? Because I’m feeling a connection. Thanks.
+1369 | VT-43560 | [flirty                   ] Hey, You have the kind of voice I’d sync my heartbeat to. For real.
+1370 | VT-79757 | [flirty                   ] Okay, I wasn’t blushing until you started talking. Right now.
+1371 | VT-91225 | [flirty                   ] Note: Are you Wi-Fi? Because I’m feeling a connection. If possible.
+1372 | VT-78582 | [flirty                   ] Okay, You have the kind of voice I’d sync my heartbeat to. Right now.
+1373 | VT-23398 | [flirty                   ] Listen, I wasn’t blushing until you started talking.—copy.
+1374 | VT-20548 | [flirty                   ] Reminder: Are you Wi-Fi? Because I’m feeling a connection. If possible.
+1375 | VT-99505 | [flirty                   ] Heads up: You have the kind of voice I’d sync my heartbeat to.—got it.
+1376 | VT-46327 | [flirty                   ] Hey, I wasn’t blushing until you started talking.—copy.
+1377 | VT-75956 | [flirty                   ] Listen, Are you Wi-Fi? Because I’m feeling a connection. Right now.
+1378 | VT-11549 | [flirty                   ] You have the kind of voice I’d sync my heartbeat to. Thanks.
+1379 | VT-26070 | [flirty                   ] Heads up: I wasn’t blushing until you started talking. Please.
+1380 | VT-228707 | [flirty                   ] Careful—keep talking like that and I’ll start smiling.
+1381 | VT-243606 | [flirty                   ] If we sync schedules, I’ll bring the coffee and the chaos.
+1382 | VT-291139 | [flirty                   ] You make small talk feel like a highlight reel.
+1383 | VT-246784 | [flirty                   ] Text me when you miss me; I’ll answer suspiciously fast.
+1384 | VT-235298 | [flirty                   ] You’re trouble—cute trouble—but still trouble.
+1385 | VT-259164 | [flirty                   ] If charm was a buff, you’d be meta.
+1386 | VT-204428 | [flirty                   ] Your laugh just soft‑launched my day.
+1387 | VT-268591 | [flirty                   ] I’ll pretend to need help if it gets me your attention.
+1388 | VT-226718 | [flirty                   ] I didn’t plan to flirt; you started it by existing.
+1389 | VT-242178 | [flirty                   ] I’ll be serious when you stop being distracting.
+1390 | VT-84085 | [gibberish                ] Meep morp, zip zap zibberoo!
+1391 | VT-23470 | [home_assistant_commands  ] Note: Lock the front door and arm stay. Please.
+1392 | VT-18187 | [home_assistant_commands  ] Note: Turn off everything in the bedroom. Please.
+1393 | VT-17924 | [home_assistant_commands  ] Note: Lock the front door and arm stay. Thanks.
+1394 | VT-84300 | [home_assistant_commands  ] Start the 'Movie Night' scene.—copy.
+1395 | VT-46684 | [home_assistant_commands  ] Okay, Mute the living room speakers. Please.
+1396 | VT-44795 | [home_assistant_commands  ] Note: Set thermostat to sixty-eight degrees. Please.
+1397 | VT-78067 | [home_assistant_commands  ] Lights to twenty percent, warm white. Right now.
+1398 | VT-23470 | [home_assistant_commands  ] Note: Lock the front door and arm stay. Please.
+1399 | VT-95985 | [home_assistant_commands  ] Heads up: Set thermostat to sixty-eight degrees. For real.
+1400 | VT-85869 | [home_assistant_commands  ] Start the 'Movie Night' scene. For real.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 22 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1051 | VT-18657 | [measurements_units       ] Okay, Maintain 24 volts at 3 amps. (9539)—copy.
+1052 | VT-37562 | [measurements_units       ] Okay, Maintain 24 volts at 3 amps. (6528)—copy.
+1053 | VT-20050 | [measurements_units       ] Okay, Maintain 24 volts at 3 amps. (1215) If possible.
+1054 | VT-31617 | [measurements_units       ] Heads up: Print at 0.2 millimeter layer height. (5226) For real.
+1055 | VT-48901 | [measurements_units       ] Hey, Mix 2:1 by volume, not weight. (9211) Thanks.
+1056 | VT-49811 | [measurements_units       ] Note: Hold temperature at 205 Celsius. (6101)—got it.
+1057 | VT-65024 | [measurements_units       ] Hey, Hold temperature at 205 Celsius. (6236)
+1058 | VT-98659 | [measurements_units       ] FYI, Hold temperature at 205 Celsius. (4466)—copy.
+1059 | VT-86049 | [measurements_units       ] Listen, Density measured at 1.24 grams per cubic centimeter. (2763)—copy.
+1060 | VT-32725 | [measurements_units       ] Reminder: Print at 0.2 millimeter layer height. (5114)—got it.
+1061 | VT-52412 | [measurements_units       ] Density measured at 1.24 grams per cubic centimeter.
+1062 | VT-20870 | [measurements_units       ] Note: Tolerance is plus or minus 0.05 millimeters. (2874)
+1063 | VT-71181 | [measurements_units       ] Listen, Density measured at 1.24 grams per cubic centimeter. (7957) Right now.
+1064 | VT-39255 | [measurements_units       ] Note: Bed level offset minus 0.12 millimeters. (5687) Right now.
+1065 | VT-32741 | [measurements_units       ] Heads up: Torque the bolt to 6 newton-meters. (3629)—got it.
+1066 | VT-29350 | [measurements_units       ] Okay, Density measured at 1.24 grams per cubic centimeter. (5499) Please.
+1067 | VT-31268 | [measurements_units       ] Okay, Print at 0.2 millimeter layer height. (9817)—got it.
+1068 | VT-39255 | [measurements_units       ] Note: Bed level offset minus 0.12 millimeters. (5687) Right now.
+1069 | VT-95160 | [measurements_units       ] Reminder: Torque the bolt to 6 newton-meters. (7765) For real.
+1070 | VT-95160 | [measurements_units       ] Reminder: Torque the bolt to 6 newton-meters. (7765) For real.
+1071 | VT-65393 | [measurements_units       ] FYI, Torque the bolt to 6 newton-meters. (4485) Right now.
+1072 | VT-46028 | [measurements_units       ] Okay, Torque the bolt to 6 newton-meters. (4359) Thanks.
+1073 | VT-15055 | [measurements_units       ] Hold temperature at 205 Celsius.
+1074 | VT-31617 | [measurements_units       ] Heads up: Print at 0.2 millimeter layer height. (5226) For real.
+1075 | VT-91875 | [measurements_units       ] Okay, Tolerance is plus or minus 0.05 millimeters. (5617) If possible.
+1076 | VT-89324 | [measurements_units       ] Heads up: Hold temperature at 205 Celsius. (5287) Thanks.
+1077 | VT-78318 | [measurements_units       ] Listen, Cut the rod to 145 millimeters. (1894) Right now.
+1078 | VT-68660 | [measurements_units       ] Okay, Cut the rod to 145 millimeters. (8589) Please.
+1079 | VT-82314 | [measurements_units       ] FYI, Cut the rod to 145 millimeters. (9300) Right now.
+1080 | VT-65393 | [measurements_units       ] FYI, Torque the bolt to 6 newton-meters. (4485) Right now.
+1081 | VT-95038 | [measurements_units       ] Note: Tolerance is plus or minus 0.05 millimeters. (2007) Right now.
+1082 | VT-84578 | [measurements_units       ] FYI, Print at 0.2 millimeter layer height. (8114) If possible.
+1083 | VT-40084 | [measurements_units       ] FYI, Cut the rod to 145 millimeters. (6153)
+1084 | VT-11383 | [measurements_units       ] FYI, Mix 2:1 by volume, not weight. (1347)—got it.
+1085 | VT-76358 | [measurements_units       ] FYI, Density measured at 1.24 grams per cubic centimeter. (855) If possible.
+1086 | VT-16213 | [measurements_units       ] Note: Cut the rod to 145 millimeters. (6335)
+1087 | VT-50590 | [measurements_units       ] Maintain 24 volts at 3 amps. (3871)—got it.
+1088 | VT-58082 | [measurements_units       ] Reminder: Hold temperature at 205 Celsius. (9417) Thanks.
+1089 | VT-92203 | [measurements_units       ] Okay, Print at 0.2 millimeter layer height. (9851) Thanks.
+1090 | VT-19164 | [measurements_units       ] Hold temperature at 205 Celsius. (8087)—copy.
+1091 | VT-25091 | [measurements_units       ] Hey, Print at 0.2 millimeter layer height. (5616)—copy.
+1092 | VT-95285 | [measurements_units       ] Print at 0.2 millimeter layer height.
+1093 | VT-15055 | [measurements_units       ] Hold temperature at 205 Celsius.
+1094 | VT-43986 | [measurements_units       ] Listen, Cut the rod to 145 millimeters. (7750) If possible.
+1095 | VT-10483 | [measurements_units       ] Torque the bolt to 6 newton-meters. (7982) Thanks.
+1096 | VT-27495 | [measurements_units       ] Okay, Mix 2:1 by volume, not weight. (5016) Right now.
+1097 | VT-49781 | [measurements_units       ] Listen, Mix 2:1 by volume, not weight. (7923) Please.
+1098 | VT-49811 | [measurements_units       ] Note: Hold temperature at 205 Celsius. (6101)—got it.
+1099 | VT-87407 | [measurements_units       ] Okay, Fan speed at forty percent. (7590)
+1100 | VT-36901 | [measurements_units       ] FYI, Cut the rod to 145 millimeters. (1981) If possible.

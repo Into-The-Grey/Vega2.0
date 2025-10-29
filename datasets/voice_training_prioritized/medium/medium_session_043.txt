@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 43 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2101 | VT-657415 | [sarcastic                ] Listen, Listen, Oh great, another meeting that could've been an email. If possible..
+2102 | VT-684423 | [sarcastic                ] Quick one: Okay, Yeah, because that always works out perfectly, doesn’t it? For real. please.
+2103 | VT-677800 | [sarcastic                ] Reminder: Reminder: I'm totally not rolling my eyes right now. right now. (alt)
+2104 | VT-613714 | [sarcastic                ] Note: Note: Oh great, another meeting that could've been an email. Right now. — confirm.
+2105 | VT-608500 | [sarcastic                ] Quick one: Okay, I'm totally not rolling my eyes right now. For real. right now.
+2106 | VT-637918 | [sarcastic                ] Okay, Note: Oh great, another meeting that could've been an email. Thanks. — confirm. (alt)
+2107 | VT-697485 | [sarcastic                ] Okay, FYI, Yeah, because that always works out perfectly, doesn’t it?—got it. thanks.
+2108 | VT-548922 | [sarcastic                ] Quick one: Listen, Yeah, because that always works out perfectly, doesn’t it?—copy. if you can.
+2109 | VT-586339 | [sarcastic                ] Hey, Yeah, because that always works out perfectly, doesn’t it? If possible. — got it. (alt)
+2110 | VT-562915 | [sarcastic                ] Listen, Reminder: I'm totally not rolling my eyes right now. if you can.
+2111 | VT-649766 | [sarcastic                ] Listen, FYI, Yeah, because that always works out perfectly, doesn’t it? Thanks. please.
+2112 | VT-613122 | [sarcastic                ] Real talk, Yeah, because that always works out perfectly, doesn’t it? thanks. (alt)
+2113 | VT-574314 | [sarcastic                ] Listen, Note: Oh great, another meeting that could've been an email. Right now. thanks. (alt)
+2114 | VT-531794 | [sarcastic                ] Note: Yeah, because that always works out perfectly, doesn’t it? please.
+2115 | VT-516579 | [sarcastic                ] Listen, Heads up: Yeah, because that always works out perfectly, doesn’t it?—got it. right now.
+2116 | VT-627076 | [sarcastic                ] Heads up: Listen, Oh great, another meeting that could've been an email.—copy.
+2117 | VT-541826 | [sarcastic                ] Reminder: Listen, I'm totally not rolling my eyes right now. if you can.
+2118 | VT-609317 | [sarcastic                ] Okay, Yeah, because that always works out perfectly, doesn’t it?—copy.. (alt)
+2119 | VT-677018 | [sarcastic                ] Oh great, another meeting that could've been an email.—got it. — got it. (alt)
+2120 | VT-558753 | [sarcastic                ] Quick one: Reminder: Oh great, another meeting that could've been an email. Please. thanks.
+2121 | VT-580844 | [sarcastic                ] Reminder: Yeah, because that always works out perfectly, doesn’t it? — now.
+2122 | VT-561663 | [sarcastic                ] Note: Hey, Oh great, another meeting that could've been an email. Thanks. thanks.
+2123 | VT-686072 | [sarcastic                ] Quick one: Reminder: Yeah, because that always works out perfectly, doesn’t it? If possible. if you can. (alt)
+2124 | VT-613779 | [sarcastic                ] Hey, Yeah, because that always works out perfectly, doesn’t it? For real. — confirm.
+2125 | VT-623941 | [sarcastic                ] Heads up: I'm totally not rolling my eyes right now. Thanks.
+2126 | VT-538315 | [sarcastic                ] Okay, Okay, Oh great, another meeting that could've been an email. Please.
+2127 | VT-603838 | [sarcastic                ] Quick one: Hey, I'm totally not rolling my eyes right now. Right now. — confirm. (alt)
+2128 | VT-634023 | [sarcastic                ] FYI, Note: I'm totally not rolling my eyes right now.—copy. — got it.
+2129 | VT-527446 | [sarcastic                ] FYI, Hey, Oh great, another meeting that could've been an email. If possible.
+2130 | VT-557000 | [sarcastic                ] FYI, Oh great, another meeting that could've been an email.. (alt)
+2131 | VT-565326 | [sarcastic                ] Real talk, Hey, Yeah, because that always works out perfectly, doesn’t it? If possible. if you can.
+2132 | VT-612515 | [sarcastic                ] Listen, Hey, I'm totally not rolling my eyes right now. Right now. right now.
+2133 | VT-609746 | [sarcastic                ] Quick one: Listen, I'm totally not rolling my eyes right now. Please. please.
+2134 | VT-692265 | [sarcastic                ] Listen, I'm totally not rolling my eyes right now..
+2135 | VT-562169 | [sarcastic                ] FYI, Oh great, another meeting that could've been an email. — confirm.
+2136 | VT-545265 | [sarcastic                ] Listen, Heads up: Yeah, because that always works out perfectly, doesn’t it? please.
+2137 | VT-588840 | [sarcastic                ] Listen, I'm totally not rolling my eyes right now. If possible. please. (alt)
+2138 | VT-681124 | [sarcastic                ] Listen, FYI, I'm totally not rolling my eyes right now. Thanks. — confirm.
+2139 | VT-535930 | [sarcastic                ] Okay, Yeah, because that always works out perfectly, doesn’t it? — now.
+2140 | VT-508754 | [sarcastic                ] FYI, I'm totally not rolling my eyes right now. — now.
+2141 | VT-586307 | [sarcastic                ] Real talk, Hey, Yeah, because that always works out perfectly, doesn’t it?—copy. if you can. (alt)
+2142 | VT-630215 | [sarcastic                ] Reminder: Note: I'm totally not rolling my eyes right now. Please. if you can. (alt)
+2143 | VT-649950 | [sarcastic                ] Okay, Heads up: I'm totally not rolling my eyes right now. Please. please. (alt)
+2144 | VT-560496 | [sarcastic                ] Heads up: FYI, Yeah, because that always works out perfectly, doesn’t it? Thanks. if you can.
+2145 | VT-614732 | [sarcastic                ] Note: Listen, Oh great, another meeting that could've been an email.—copy. — got it. (alt)
+2146 | VT-695476 | [sarcastic                ] Quick one: Okay, I'm totally not rolling my eyes right now.
+2147 | VT-550426 | [sarcastic                ] Listen, Yeah, because that always works out perfectly, doesn’t it? If possible. — got it.
+2148 | VT-596370 | [sarcastic                ] Note: Listen, I'm totally not rolling my eyes right now. right now.
+2149 | VT-519818 | [sarcastic                ] Note: Note: Oh great, another meeting that could've been an email. Thanks. please.
+2150 | VT-526507 | [sarcastic                ] Okay, Yeah, because that always works out perfectly, doesn’t it?—got it.. (alt)

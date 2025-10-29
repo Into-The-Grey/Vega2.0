@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 161 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+8001 | VT-695437 | [home_assistant_commands  ] Heads up: FYI, Open the garage halfway.—copy. if you can.
+8002 | VT-556680 | [home_assistant_commands  ] Reminder: Heads up: Set thermostat to sixty-eight degrees. Please. thanks.
+8003 | VT-530012 | [home_assistant_commands  ] FYI, Note: Lights to twenty percent, warm white. Right now..
+8004 | VT-647599 | [home_assistant_commands  ] Note: Reminder: Turn off everything in the bedroom. Please. — confirm.
+8005 | VT-683900 | [home_assistant_commands  ] Real talk, Hey, Lock the front door and arm stay.—got it. — got it.
+8006 | VT-577647 | [home_assistant_commands  ] Listen, Set thermostat to sixty-eight degrees.
+8007 | VT-558177 | [home_assistant_commands  ] Reminder: FYI, Run the vacuum downstairs.—got it. — now.
+8008 | VT-525536 | [home_assistant_commands  ] Quick one: FYI, Run the vacuum downstairs. Thanks. thanks.
+8009 | VT-554844 | [home_assistant_commands  ] Heads up: Hey, Run the vacuum downstairs. right now.
+8010 | VT-555888 | [home_assistant_commands  ] Heads up: Turn off everything in the bedroom. Thanks. right now.
+8011 | VT-546813 | [home_assistant_commands  ] Note: Lights to twenty percent, warm white. Right now..
+8012 | VT-675622 | [home_assistant_commands  ] Reminder: Lights to twenty percent, warm white. If possible. thanks.
+8013 | VT-610492 | [home_assistant_commands  ] Heads up: Run the vacuum downstairs. Please.
+8014 | VT-591528 | [home_assistant_commands  ] Okay, Reminder: Set thermostat to sixty-eight degrees. For real. — got it.
+8015 | VT-518140 | [home_assistant_commands  ] Heads up: Heads up: Show camera feed on the kitchen display. Right now. — got it. (alt)
+8016 | VT-502252 | [home_assistant_commands  ] Reminder: Listen, Show camera feed on the kitchen display. — got it. (alt)
+8017 | VT-562844 | [home_assistant_commands  ] FYI, Show camera feed on the kitchen display..
+8018 | VT-555054 | [home_assistant_commands  ] Reminder: Listen, Turn off everything in the bedroom. Thanks. if you can.
+8019 | VT-586046 | [home_assistant_commands  ] Note: Start the 'Movie Night' scene.—copy. right now.
+8020 | VT-649401 | [home_assistant_commands  ] Note: Note: Start the 'Movie Night' scene. If possible. right now.
+8021 | VT-600065 | [home_assistant_commands  ] Real talk, Note: Lights to twenty percent, warm white.—got it. — got it.
+8022 | VT-658226 | [home_assistant_commands  ] Okay, Run the vacuum downstairs. If possible. right now.
+8023 | VT-676306 | [home_assistant_commands  ] Listen, Start the 'Movie Night' scene. Thanks. — confirm.
+8024 | VT-646534 | [home_assistant_commands  ] Real talk, Note: Open the garage halfway. Thanks. thanks.
+8025 | VT-514064 | [home_assistant_commands  ] Heads up: Note: Lights to twenty percent, warm white. Right now. — now.
+8026 | VT-597920 | [home_assistant_commands  ] Note: Lights to twenty percent, warm white.—got it. — confirm.
+8027 | VT-661266 | [home_assistant_commands  ] Quick one: FYI, Start the 'Movie Night' scene.—got it. thanks. (alt)
+8028 | VT-571383 | [home_assistant_commands  ] Okay, Lights to twenty percent, warm white. Right now. — got it. (alt)
+8029 | VT-629610 | [home_assistant_commands  ] Reminder: FYI, Lock the front door and arm stay. — confirm.
+8030 | VT-523180 | [home_assistant_commands  ] Note: Mute the living room speakers.—got it. — confirm.
+8031 | VT-534794 | [home_assistant_commands  ] Quick one: Run the vacuum downstairs.—got it. — confirm.
+8032 | VT-595739 | [home_assistant_commands  ] Note: Okay, Set thermostat to sixty-eight degrees.—got it. thanks.
+8033 | VT-679720 | [home_assistant_commands  ] Quick one: Heads up: Show camera feed on the kitchen display. Right now. right now.
+8034 | VT-541852 | [home_assistant_commands  ] Real talk, Okay, Turn off everything in the bedroom. If possible. if you can.
+8035 | VT-548362 | [home_assistant_commands  ] Real talk, Listen, Open the garage halfway. Right now. — now.
+8036 | VT-698854 | [home_assistant_commands  ] Note: Show camera feed on the kitchen display..
+8037 | VT-648797 | [home_assistant_commands  ] Listen, Reminder: Turn off everything in the bedroom. right now. (alt)
+8038 | VT-671765 | [home_assistant_commands  ] FYI, Hey, Lock the front door and arm stay.—got it. right now.
+8039 | VT-508435 | [home_assistant_commands  ] FYI, Turn off everything in the bedroom. Thanks. — confirm.
+8040 | VT-678535 | [home_assistant_commands  ] Okay, Hey, Open the garage halfway. (alt)
+8041 | VT-559348 | [home_assistant_commands  ] Reminder: Note: Set thermostat to sixty-eight degrees. For real. — got it.
+8042 | VT-546408 | [home_assistant_commands  ] FYI, FYI, Lights to twenty percent, warm white. For real. right now.
+8043 | VT-533521 | [home_assistant_commands  ] Note: Note: Set thermostat to sixty-eight degrees.—got it. — got it.
+8044 | VT-536210 | [home_assistant_commands  ] Listen, Run the vacuum downstairs. right now.
+8045 | VT-680080 | [home_assistant_commands  ] Listen, Note: Start the 'Movie Night' scene. If possible.
+8046 | VT-683498 | [home_assistant_commands  ] Okay, Heads up: Start the 'Movie Night' scene. — got it.
+8047 | VT-504267 | [home_assistant_commands  ] Listen, Lights to twenty percent, warm white.—copy.. (alt)
+8048 | VT-551465 | [home_assistant_commands  ] Quick one: FYI, Open the garage halfway.—got it. thanks.
+8049 | VT-509117 | [home_assistant_commands  ] Okay, Reminder: Turn off everything in the bedroom. Please. — confirm.
+8050 | VT-598927 | [home_assistant_commands  ] Heads up: FYI, Open the garage halfway.—copy. right now.

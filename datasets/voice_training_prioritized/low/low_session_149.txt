@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 149 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7401 | VT-638749 | [addresses_generic        ] Reminder: Use the service elevator—freight only. Right now. if you can.
+7402 | VT-649345 | [addresses_generic        ] Okay, Unit B, second floor, back entrance.—copy. please.
+7403 | VT-525609 | [addresses_generic        ] Reminder: Deliver to the northeast loading dock. If possible. please.
+7404 | VT-598443 | [addresses_generic        ] FYI, Heads up: Mail it care of John Doe, PO Box 1029. If possible.. (alt)
+7405 | VT-507305 | [addresses_generic        ] Real talk, Reminder: The ZIP code is 60614, not 60641. Right now. — got it. (alt)
+7406 | VT-550924 | [addresses_generic        ] Okay, Reminder: Ship it to 123 Example Street, Suite 400, Springfield. For real.
+7407 | VT-667431 | [addresses_generic        ] Reminder: Heads up: Unit B, second floor, back entrance. For real. — confirm.
+7408 | VT-508029 | [addresses_generic        ] FYI, FYI, The ZIP code is 60614, not 60641. Please. — got it. (alt)
+7409 | VT-531975 | [addresses_generic        ] Okay, FYI, Deliver to the northeast loading dock.—copy. (alt)
+7410 | VT-535681 | [addresses_generic        ] Real talk, Heads up: Corner house with the red door.—copy. if you can. (alt)
+7411 | VT-653689 | [addresses_generic        ] Quick one: Okay, Mail it care of John Doe, PO Box 1029.—copy. thanks.
+7412 | VT-651348 | [addresses_generic        ] Note: Heads up: Use the service elevator—freight only. For real. if you can.
+7413 | VT-639354 | [addresses_generic        ] Quick one: Hey, Cross streets are Maple and 8th. If possible..
+7414 | VT-698447 | [addresses_generic        ] Reminder: Reminder: The ZIP code is 60614, not 60641. Right now.
+7415 | VT-660337 | [addresses_generic        ] Okay, Ship it to 123 Example Street, Suite 400, Springfield. Thanks. if you can.
+7416 | VT-639249 | [addresses_generic        ] Listen, FYI, Use the service elevator—freight only.—got it. — now.
+7417 | VT-586817 | [addresses_generic        ] Listen, Reminder: Unit B, second floor, back entrance. Right now. if you can. (alt)
+7418 | VT-538478 | [addresses_generic        ] Listen, The ZIP code is 60614, not 60641. — got it.
+7419 | VT-667388 | [addresses_generic        ] Note: Heads up: Corner house with the red door.—copy.
+7420 | VT-691360 | [addresses_generic        ] Real talk, FYI, Corner house with the red door. Thanks. — got it.
+7421 | VT-540311 | [addresses_generic        ] Real talk, Hey, Corner house with the red door. Thanks..
+7422 | VT-634761 | [addresses_generic        ] Okay, Listen, Use the service elevator—freight only.—got it. thanks.
+7423 | VT-632445 | [addresses_generic        ] Reminder: Reminder: Ship it to 123 Example Street, Suite 400, Springfield. For real.
+7424 | VT-553677 | [addresses_generic        ] Okay, Note: Ship it to 123 Example Street, Suite 400, Springfield. Please. — now.
+7425 | VT-650157 | [addresses_generic        ] Note: Listen, Corner house with the red door. Thanks. thanks.
+7426 | VT-524768 | [addresses_generic        ] Reminder: Listen, The ZIP code is 60614, not 60641. Thanks. right now.
+7427 | VT-545175 | [addresses_generic        ] Okay, Hey, Send the parcel to Building 9, Bay 12. Please. if you can.
+7428 | VT-535778 | [addresses_generic        ] Heads up: Note: Send the parcel to Building 9, Bay 12. Please. if you can. (alt)
+7429 | VT-560086 | [addresses_generic        ] Quick one: Reminder: Send the parcel to Building 9, Bay 12. Thanks. — now. (alt)
+7430 | VT-633685 | [addresses_generic        ] Note: Okay, Use the service elevator—freight only. Please. right now.
+7431 | VT-582658 | [addresses_generic        ] Real talk, Reminder: Deliver to the northeast loading dock. If possible. right now. (alt)
+7432 | VT-697946 | [addresses_generic        ] Heads up: Hey, Deliver to the northeast loading dock. Right now. — got it.
+7433 | VT-635654 | [addresses_generic        ] Quick one: FYI, Ship it to 123 Example Street, Suite 400, Springfield. Please. if you can.
+7434 | VT-517473 | [addresses_generic        ] Note: Listen, Corner house with the red door. Please. thanks.
+7435 | VT-618962 | [addresses_generic        ] Reminder: Note: Deliver to the northeast loading dock.—got it..
+7436 | VT-530869 | [addresses_generic        ] Okay, Okay, Cross streets are Maple and 8th. Thanks. — now.
+7437 | VT-529775 | [addresses_generic        ] Heads up: Ship it to 123 Example Street, Suite 400, Springfield. Thanks. right now.
+7438 | VT-629864 | [addresses_generic        ] Note: FYI, Ship it to 123 Example Street, Suite 400, Springfield. Please. — got it.
+7439 | VT-526673 | [addresses_generic        ] Note: Listen, Deliver to the northeast loading dock. Thanks. thanks.
+7440 | VT-661019 | [addresses_generic        ] Reminder: Ship it to 123 Example Street, Suite 400, Springfield. For real.
+7441 | VT-531849 | [addresses_generic        ] Heads up: Unit B, second floor, back entrance. If possible. thanks.
+7442 | VT-568619 | [addresses_generic        ] Listen, Hey, Mail it care of John Doe, PO Box 1029.—got it. right now.
+7443 | VT-671143 | [addresses_generic        ] Reminder: Corner house with the red door. For real. — got it.
+7444 | VT-687433 | [addresses_generic        ] Listen, FYI, The ZIP code is 60614, not 60641. — got it.
+7445 | VT-583339 | [addresses_generic        ] Okay, Hey, Send the parcel to Building 9, Bay 12. Please. thanks.
+7446 | VT-667317 | [addresses_generic        ] Okay, Use the service elevator—freight only. if you can. (alt)
+7447 | VT-639317 | [addresses_generic        ] Quick one: Reminder: Cross streets are Maple and 8th.—copy. — got it. (alt)
+7448 | VT-684331 | [addresses_generic        ] FYI, Send the parcel to Building 9, Bay 12..
+7449 | VT-591697 | [addresses_generic        ] Reminder: Reminder: Use the service elevator—freight only.—got it.
+7450 | VT-575466 | [addresses_generic        ] FYI, Reminder: Unit B, second floor, back entrance. Right now. please.

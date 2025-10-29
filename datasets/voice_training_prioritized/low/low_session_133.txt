@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 133 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6601 | VT-411540 | [monotone_minimal         ] Listen, Heads up: Confirmed.—got it. if you can.
+6602 | VT-460624 | [monotone_minimal         ] FYI, Listen, Sure.—copy. right now.
+6603 | VT-452534 | [monotone_minimal         ] Note: FYI, Okay. Please. thanks.
+6604 | VT-427669 | [monotone_minimal         ] Real talk, Hey, No.—got it. if you can.
+6605 | VT-450073 | [monotone_minimal         ] Reminder: Listen, Sure.—got it. please.
+6606 | VT-474399 | [monotone_minimal         ] Reminder: FYI, Proceed. Right now. — now.
+6607 | VT-419051 | [monotone_minimal         ] FYI, Reminder: Unknown. For real. — got it. (alt)
+6608 | VT-461702 | [monotone_minimal         ] Note: Confirmed. If possible. — now.
+6609 | VT-455607 | [monotone_minimal         ] FYI, Listen, Done. Please. please.
+6610 | VT-487813 | [monotone_minimal         ] Quick one: Note: Fine. If possible. — now.
+6611 | VT-439896 | [monotone_minimal         ] Reminder: Okay, Sure.—got it. right now.
+6612 | VT-496315 | [monotone_minimal         ] Heads up: Heads up: Okay. If possible. if you can.
+6613 | VT-476245 | [monotone_minimal         ] FYI, Hey, Done.—copy. thanks.
+6614 | VT-401202 | [monotone_minimal         ] Note: Hey, No. Please. right now.
+6615 | VT-416054 | [monotone_minimal         ] Reminder: Sure..
+6616 | VT-436461 | [monotone_minimal         ] FYI, Reminder: Unknown. For real. — confirm.
+6617 | VT-496612 | [monotone_minimal         ] Okay, Reminder: Unknown.—got it. — confirm.
+6618 | VT-486697 | [monotone_minimal         ] Listen, Unknown. If possible. please.
+6619 | VT-407114 | [monotone_minimal         ] FYI, Heads up: Done. If possible.
+6620 | VT-424200 | [monotone_minimal         ] Okay, FYI, Okay. Please. — got it.
+6621 | VT-403255 | [monotone_minimal         ] Note: Note: Okay. If possible. — got it. (alt)
+6622 | VT-484277 | [monotone_minimal         ] Reminder: Heads up: Unknown. Please. right now.
+6623 | VT-435758 | [monotone_minimal         ] Listen, FYI, Sure. Right now. — got it. (alt)
+6624 | VT-420472 | [monotone_minimal         ] Note: Heads up: Retry. Right now. — got it.
+6625 | VT-444693 | [monotone_minimal         ] Retry. Please.
+6626 | VT-457912 | [monotone_minimal         ] Note: Retry.—got it. — now.
+6627 | VT-403446 | [monotone_minimal         ] Reminder: Heads up: Done.—copy. right now.
+6628 | VT-413274 | [monotone_minimal         ] Heads up: Okay, Proceed.—copy. right now.
+6629 | VT-471601 | [monotone_minimal         ] Real talk, Proceed. If possible. — confirm.
+6630 | VT-425163 | [monotone_minimal         ] FYI, Heads up: Okay. Thanks. — now. (alt)
+6631 | VT-400873 | [monotone_minimal         ] Quick one: Listen, Unknown. Please. thanks. (alt)
+6632 | VT-421506 | [monotone_minimal         ] Listen, Proceed. If possible. — got it.
+6633 | VT-418387 | [monotone_minimal         ] Heads up: Fine. Thanks.
+6634 | VT-486062 | [monotone_minimal         ] Real talk, Heads up: Okay. If possible. if you can.
+6635 | VT-422249 | [monotone_minimal         ] Quick one: Heads up: Okay. Thanks. right now.
+6636 | VT-422217 | [monotone_minimal         ] Listen, Heads up: Proceed. If possible. right now. (alt)
+6637 | VT-425411 | [monotone_minimal         ] Okay, FYI, Okay. Please. please.
+6638 | VT-418947 | [monotone_minimal         ] Note: No. Right now. if you can.
+6639 | VT-422818 | [monotone_minimal         ] Heads up: Confirmed. If possible. — got it.
+6640 | VT-476368 | [monotone_minimal         ] Okay, Note: Unknown. — confirm. (alt)
+6641 | VT-420811 | [monotone_minimal         ] FYI, Sure. Please. — confirm.
+6642 | VT-463669 | [monotone_minimal         ] Listen, Heads up: Retry. Right now.. (alt)
+6643 | VT-435158 | [monotone_minimal         ] Note: Reminder: Done. For real. if you can.
+6644 | VT-434567 | [monotone_minimal         ] Reminder: FYI, Fine. Thanks. right now.
+6645 | VT-494746 | [monotone_minimal         ] Retry. please.
+6646 | VT-422105 | [monotone_minimal         ] Real talk, Done. Right now. — confirm. (alt)
+6647 | VT-434398 | [multilingual             ] 감사합니다, 다음에 봐요..
+6648 | VT-413649 | [multilingual             ] Okay, नमस्ते, आप कैसे हैं?
+6649 | VT-432134 | [negations                ] Reminder: Listen, We can’t ship without tests.—copy. right now.
+6650 | VT-408920 | [negations                ] Listen, FYI, No chance. Please. — confirm. (alt)

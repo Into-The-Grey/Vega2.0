@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 158 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7851 | VT-562648 | [finance                  ] Reminder: File the 1099s and W‑2s by January 31. (8855) — now.
+7852 | VT-523344 | [finance                  ] FYI, Listen, File the 1099s and W‑2s by January 31. (570) if you can.
+7853 | VT-640801 | [finance                  ] Real talk, Heads up: Set a limit order at $42.10 with a 5% trailing stop. (2679) For real..
+7854 | VT-558577 | [finance                  ] FYI, Cap table updated after the seed extension. (5072) Please..
+7855 | VT-575717 | [finance                  ] Note: FYI, File the 1099s and W‑2s by January 31. (9865) Please. please.
+7856 | VT-591203 | [finance                  ] Note: Note: Reconcile the ledger before EOD. (2022)—got it. please.
+7857 | VT-687658 | [finance                  ] Listen, FYI, Set a limit order at $42.10 with a 5% trailing stop. (5859) If possible. thanks.
+7858 | VT-605024 | [finance                  ] Listen, Heads up: Set a limit order at $42.10 with a 5% trailing stop. (2679) For real..
+7859 | VT-688407 | [finance                  ] Heads up: Reminder: File the 1099s and W‑2s by January 31. (2195) Thanks..
+7860 | VT-627282 | [finance                  ] Heads up: Listen, Set a limit order at $42.10 with a 5% trailing stop. (4059) For real. please.
+7861 | VT-560844 | [finance                  ] Note: Heads up: We’re cash-flow positive but margin-thin. (8377)—copy. (alt)
+7862 | VT-510801 | [finance                  ] Quick one: Reminder: Our burn rate is unsustainable at current hiring levels. (5552)—got it.. (alt)
+7863 | VT-542952 | [finance                  ] Note: Okay, Cap table updated after the seed extension. (313) if you can. (alt)
+7864 | VT-504545 | [finance                  ] Real talk, APR is 23.99% after the promo period. (8778) For real. right now.
+7865 | VT-686648 | [finance                  ] Listen, Initiate a wire—domestic ABA, not SWIFT. (5767) right now.
+7866 | VT-631128 | [finance                  ] Quick one: FYI, Flag that transaction as potentially fraudulent. (2105) For real..
+7867 | VT-694596 | [finance                  ] Real talk, Heads up: Reconcile the ledger before EOD. (1317) For real. please.
+7868 | VT-597873 | [finance                  ] Real talk, Initiate a wire—domestic ABA, not SWIFT. — confirm.
+7869 | VT-527425 | [finance                  ] Flag that transaction as potentially fraudulent. (9189) Right now. — got it.
+7870 | VT-538380 | [finance                  ] Okay, Okay, We’re cash-flow positive but margin-thin. (513) If possible. — got it.
+7871 | VT-508320 | [finance                  ] Quick one: Flag that transaction as potentially fraudulent. (1471) Thanks. — now.
+7872 | VT-609419 | [finance                  ] Quick one: Heads up: Reconcile the ledger before EOD. (3512) For real. — confirm.
+7873 | VT-574742 | [finance                  ] Quick one: Hey, APR is 23.99% after the promo period. (6079) If possible. thanks.
+7874 | VT-591571 | [finance                  ] Reminder: Set a limit order at $42.10 with a 5% trailing stop. (3720) Right now. please. (alt)
+7875 | VT-659181 | [finance                  ] Real talk, Okay, APR is 23.99% after the promo period. (5673) Please. thanks.
+7876 | VT-567447 | [finance                  ] Listen, Cap table updated after the seed extension.
+7877 | VT-576538 | [finance                  ] Note: Listen, File the 1099s and W‑2s by January 31. (570) — confirm.
+7878 | VT-502031 | [finance                  ] Real talk, Reminder: File the 1099s and W‑2s by January 31. (509) — now. (alt)
+7879 | VT-551536 | [finance                  ] Listen, Heads up: Set a limit order at $42.10 with a 5% trailing stop. (3412) For real. right now.
+7880 | VT-648335 | [finance                  ] Listen, Note: Reconcile the ledger before EOD. (8452)—got it. right now.
+7881 | VT-696902 | [finance                  ] Listen, Heads up: Flag that transaction as potentially fraudulent. (1702)—got it. thanks. (alt)
+7882 | VT-529741 | [finance                  ] Quick one: Note: Reconcile the ledger before EOD. (4475) Thanks. — got it. (alt)
+7883 | VT-548993 | [finance                  ] Heads up: APR is 23.99% after the promo period. (8778) For real. (alt)
+7884 | VT-552648 | [finance                  ] Okay, APR is 23.99% after the promo period. — now.
+7885 | VT-509953 | [finance                  ] Real talk, FYI, Reconcile the ledger before EOD. (6075)—copy. if you can.
+7886 | VT-591726 | [finance                  ] Okay, Heads up: Reconcile the ledger before EOD. (6666) Right now. — got it.
+7887 | VT-665935 | [finance                  ] Real talk, Reminder: Diversify with a low-cost index fund. (2938) For real..
+7888 | VT-656002 | [finance                  ] Reconcile the ledger before EOD. right now.
+7889 | VT-544529 | [finance                  ] Heads up: Reconcile the ledger before EOD. (6666) Right now. — got it.
+7890 | VT-673665 | [finance                  ] Hey, Diversify with a low-cost index fund. (8859) thanks. (alt)
+7891 | VT-535105 | [finance                  ] Heads up: Note: Reconcile the ledger before EOD. (9061) For real. — now.
+7892 | VT-559528 | [finance                  ] Heads up: Note: APR is 23.99% after the promo period. (1936) Please..
+7893 | VT-542503 | [finance                  ] Heads up: Heads up: Reconcile the ledger before EOD. (1317) For real.. (alt)
+7894 | VT-633437 | [finance                  ] Okay, File the 1099s and W‑2s by January 31. (1583) — confirm.
+7895 | VT-665193 | [finance                  ] Reminder: Cap table updated after the seed extension. (5827)—copy. right now. (alt)
+7896 | VT-684268 | [finance                  ] Quick one: Reminder: File the 1099s and W‑2s by January 31. (8855) if you can.
+7897 | VT-565083 | [finance                  ] Quick one: Listen, Flag that transaction as potentially fraudulent. (8787) For real. thanks.
+7898 | VT-661637 | [finance                  ] Real talk, Note: APR is 23.99% after the promo period. (9956) If possible. please.
+7899 | VT-630899 | [finance                  ] FYI, Reminder: Set a limit order at $42.10 with a 5% trailing stop. (3720) Right now. — confirm. (alt)
+7900 | VT-662122 | [finance                  ] Heads up: Okay, We’re cash-flow positive but margin-thin. (513) If possible..

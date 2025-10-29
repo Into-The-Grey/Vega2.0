@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 27 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1301 | VT-23203 | [laughter_breaths         ] *chuckles* Good one. For real.
+1302 | VT-89055 | [laughter_breaths         ] FYI, *snorts* You’re kidding, right?—copy.
+1303 | VT-83555 | [laughter_breaths         ] *snorts* You’re kidding, right?—got it.
+1304 | VT-20192 | [laughter_breaths         ] Okay, *coughs* Sorry—allergies. Right now.
+1305 | VT-46922 | [laughter_breaths         ] *whisper* Don’t wake the server.—copy.
+1306 | VT-93115 | [laughter_breaths         ] Note: *sighs* Okay, let’s try again.
+1307 | VT-87388 | [laughter_breaths         ] Okay, *laughs* That was ridiculous.—copy.
+1308 | VT-72194 | [laughter_breaths         ] FYI, *clears throat* As I was saying…
+1309 | VT-87388 | [laughter_breaths         ] Okay, *laughs* That was ridiculous.—copy.
+1310 | VT-44789 | [laughter_breaths         ] Reminder: *yawns* Coffee. Now.—got it.
+1311 | VT-64054 | [laughter_breaths         ] Hey, *deep breath* We’ve got this.—copy.
+1312 | VT-19402 | [laughter_breaths         ] Reminder: *whisper* Don’t wake the server. For real.
+1313 | VT-39399 | [laughter_breaths         ] Reminder: *clears throat* As I was saying… For real.
+1314 | VT-65220 | [laughter_breaths         ] *sighs* Okay, let’s try again. Right now.
+1315 | VT-92868 | [laughter_breaths         ] Note: *whisper* Don’t wake the server. For real.
+1316 | VT-31603 | [laughter_breaths         ] FYI, *laughs* That was ridiculous.—copy.
+1317 | VT-70612 | [laughter_breaths         ] Listen, *sighs* Okay, let’s try again. If possible.
+1318 | VT-26864 | [laughter_breaths         ] Reminder: *sighs* Okay, let’s try again.—copy.
+1319 | VT-10158 | [laughter_breaths         ] Heads up: *gasp* No way. Please.
+1320 | VT-82503 | [laughter_breaths         ] Okay, *chuckles* Good one. If possible.
+1321 | VT-15050 | [laughter_breaths         ] Hey, *coughs* Sorry—allergies.
+1322 | VT-77556 | [laughter_breaths         ] Okay, *yawns* Coffee. Now.—copy.
+1323 | VT-17457 | [laughter_breaths         ] Note: *coughs* Sorry—allergies. Right now.
+1324 | VT-40345 | [laughter_breaths         ] Listen, *deep breath* We’ve got this. Thanks.
+1325 | VT-65220 | [laughter_breaths         ] *sighs* Okay, let’s try again. Right now.
+1326 | VT-33672 | [laughter_breaths         ] Listen, *yawns* Coffee. Now. For real.
+1327 | VT-96976 | [laughter_breaths         ] Listen, *sighs* Okay, let’s try again.
+1328 | VT-37582 | [laughter_breaths         ] FYI, *sighs* Okay, let’s try again.—got it.
+1329 | VT-47722 | [laughter_breaths         ] Listen, *gasp* No way. Right now.
+1330 | VT-46031 | [laughter_breaths         ] Okay, *coughs* Sorry—allergies.—got it.
+1331 | VT-97075 | [laughter_breaths         ] Hey, *laughs* That was ridiculous.—got it.
+1332 | VT-40345 | [laughter_breaths         ] Listen, *deep breath* We’ve got this. Thanks.
+1333 | VT-75323 | [laughter_breaths         ] Reminder: *laughs* That was ridiculous.—copy.
+1334 | VT-40345 | [laughter_breaths         ] Listen, *deep breath* We’ve got this. Thanks.
+1335 | VT-92874 | [laughter_breaths         ] *snorts* You’re kidding, right? Please.
+1336 | VT-40291 | [laughter_breaths         ] *laughs* That was ridiculous. Right now.
+1337 | VT-40345 | [laughter_breaths         ] Listen, *deep breath* We’ve got this. Thanks.
+1338 | VT-34573 | [multilingual             ] Okay, Grazie mille, davvero. If possible.
+1339 | VT-34227 | [multilingual             ] FYI, ¡Excelente trabajo! Please.
+1340 | VT-28273 | [multilingual             ] Note: شكراً لك على المساعدة. Please.
+1341 | VT-61619 | [multilingual             ] Bonjour, je m’appelle Alex. Please.
+1342 | VT-17294 | [multilingual             ] Reminder: Muito obrigado pela resposta.
+1343 | VT-34573 | [multilingual             ] Okay, Grazie mille, davvero. If possible.
+1344 | VT-15603 | [multilingual             ] Okay, 감사합니다, 다음에 봐요. For real.
+1345 | VT-49263 | [multilingual             ] Note: धन्यवाद, फिर मिलेंगे।—copy.
+1346 | VT-47513 | [multilingual             ] FYI, Salam, sab thik hai? For real.
+1347 | VT-56808 | [multilingual             ] Merci beaucoup pour votre aide. Thanks.
+1348 | VT-48932 | [multilingual             ] Heads up: 안녕하세요, 오늘 기분 어때요?—got it.
+1349 | VT-75652 | [multilingual             ] FYI, Bonjour, je m’appelle Alex. For real.
+1350 | VT-40576 | [multilingual             ] Reminder: ¡Excelente trabajo! Thanks.

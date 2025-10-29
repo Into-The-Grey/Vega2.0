@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 24 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1151 | VT-56095 | [measurements_units       ] Listen, Fan speed at forty percent. (3179) Right now.
+1152 | VT-31016 | [measurements_units       ] Listen, Torque the bolt to 6 newton-meters. (8082) If possible.
+1153 | VT-40084 | [measurements_units       ] FYI, Cut the rod to 145 millimeters. (6153)
+1154 | VT-99004 | [measurements_units       ] Note: Bed level offset minus 0.12 millimeters. (7125) If possible.
+1155 | VT-16416 | [measurements_units       ] Hey, Cut the rod to 145 millimeters. (4390) If possible.
+1156 | VT-68660 | [measurements_units       ] Okay, Cut the rod to 145 millimeters. (8589) Please.
+1157 | VT-57241 | [measurements_units       ] Reminder: Density measured at 1.24 grams per cubic centimeter. (9344) Please.
+1158 | VT-81078 | [measurements_units       ] Fan speed at forty percent. (2465) For real.
+1159 | VT-25091 | [measurements_units       ] Hey, Print at 0.2 millimeter layer height. (5616)—copy.
+1160 | VT-31016 | [measurements_units       ] Listen, Torque the bolt to 6 newton-meters. (8082) If possible.
+1161 | VT-92203 | [measurements_units       ] Okay, Print at 0.2 millimeter layer height. (9851) Thanks.
+1162 | VT-31016 | [measurements_units       ] Listen, Torque the bolt to 6 newton-meters. (8082) If possible.
+1163 | VT-40273 | [measurements_units       ] FYI, Maintain 24 volts at 3 amps. (3550)—got it.
+1164 | VT-31268 | [measurements_units       ] Okay, Print at 0.2 millimeter layer height. (9817)—got it.
+1165 | VT-31016 | [measurements_units       ] Listen, Torque the bolt to 6 newton-meters. (8082) If possible.
+1166 | VT-56851 | [numbers_large            ] FYI, Pi to ten decimals: 3.1415926535. (4114)—copy.
+1167 | VT-71574 | [numbers_large            ] Reminder: Retry after 10^6 iterations. (6520)
+1168 | VT-66611 | [numbers_large            ] Heads up: Pi to ten decimals: 3.1415926535. (4118) Thanks.
+1169 | VT-19761 | [numbers_large            ] Note: Memory usage hit 64,768 megabytes. (6285) Thanks.
+1170 | VT-62913 | [numbers_large            ] Hey, Checksum equals 4294967295. (1558) If possible.
+1171 | VT-20064 | [numbers_large            ] Hey, Nine hundred ninety-nine million, give or take. (470) Thanks.
+1172 | VT-58839 | [numbers_large            ] Okay, Compute with 3,456,789 samples. (863) For real.
+1173 | VT-56851 | [numbers_large            ] FYI, Pi to ten decimals: 3.1415926535. (4114)—copy.
+1174 | VT-44493 | [numbers_large            ] Hey, Nine hundred ninety-nine million, give or take. (9075) If possible.
+1175 | VT-36130 | [numbers_large            ] Heads up: Memory usage hit 64,768 megabytes. (370)—copy.
+1176 | VT-67316 | [numbers_large            ] Hey, We archived 18.6 terabytes overnight. (4988)
+1177 | VT-98524 | [numbers_large            ] Heads up: Checksum equals 4294967295. (750) For real.
+1178 | VT-91114 | [numbers_large            ] Reminder: Retry after 10^6 iterations. (2778) For real.
+1179 | VT-75333 | [numbers_large            ] Heads up: Throughput peaked at 120,000 requests per second. (4473) Thanks.
+1180 | VT-33719 | [numbers_large            ] Note: Nine hundred ninety-nine million, give or take. (9150) For real.
+1181 | VT-20354 | [numbers_large            ] Heads up: Compute with 3,456,789 samples. (653) Thanks.
+1182 | VT-48220 | [numbers_large            ] Hey, Retry after 10^6 iterations. (308)
+1183 | VT-67640 | [numbers_large            ] FYI, Pi to ten decimals: 3.1415926535. (7420) Right now.
+1184 | VT-95834 | [numbers_large            ] Nine hundred ninety-nine million, give or take.
+1185 | VT-67316 | [numbers_large            ] Hey, We archived 18.6 terabytes overnight. (4988)
+1186 | VT-93901 | [numbers_large            ] Reminder: We archived 18.6 terabytes overnight. (650) Right now.
+1187 | VT-83636 | [numbers_large            ] Okay, We archived 18.6 terabytes overnight. (82) Right now.
+1188 | VT-44694 | [numbers_large            ] Reminder: Retry after 10^6 iterations. (2937) Please.
+1189 | VT-58839 | [numbers_large            ] Okay, Compute with 3,456,789 samples. (863) For real.
+1190 | VT-65653 | [numbers_large            ] Hey, Compute with 3,456,789 samples. (5486) Right now.
+1191 | VT-48722 | [numbers_large            ] Hey, We archived 18.6 terabytes overnight. (9642) Thanks.
+1192 | VT-30111 | [numbers_large            ] Heads up: Nine hundred ninety-nine million, give or take. (4831) Please.
+1193 | VT-97378 | [numbers_large            ] FYI, Budget shortfall is $1.2 million. (7910)—got it.
+1194 | VT-43699 | [numbers_large            ] FYI, Budget shortfall is $1.2 million. (7690) Thanks.
+1195 | VT-18137 | [numbers_large            ] Note: Budget shortfall is $1.2 million. (624) For real.
+1196 | VT-16221 | [numbers_large            ] Heads up: Retry after 10^6 iterations. (8097)
+1197 | VT-19761 | [numbers_large            ] Note: Memory usage hit 64,768 megabytes. (6285) Thanks.
+1198 | VT-95279 | [numbers_large            ] Note: Memory usage hit 64,768 megabytes. (6188)
+1199 | VT-49253 | [numbers_large            ] Reminder: Compute with 3,456,789 samples. (2603) For real.
+1200 | VT-57680 | [numbers_large            ] FYI, We archived 18.6 terabytes overnight. (7218)—got it.

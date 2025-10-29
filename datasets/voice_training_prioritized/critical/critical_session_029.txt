@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 29 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1401 | VT-356985 | [denials_corrections      ] Note: Heads up: You mixed up the units again. For real. — confirm. (alt)
+1402 | VT-394646 | [denials_corrections      ] Listen, Reminder: Amend the record accordingly. — got it.
+1403 | VT-366542 | [denials_corrections      ] FYI, Heads up: You mixed up the units again. Thanks. thanks.
+1404 | VT-366540 | [denials_corrections      ] Okay, Listen, That assumption falls apart under pressure. If possible. — now.
+1405 | VT-324931 | [error_messages           ] Real talk, Hey, Unhandled exception: ValueError at line 42. For real. — confirm. (alt)
+1406 | VT-324050 | [error_messages           ] Listen, Heads up: Timeout waiting for the lock.—got it. — confirm. (alt)
+1407 | VT-309880 | [error_messages           ] Quick one: Reminder: Unhandled exception: ValueError at line 42. If possible. — got it. (alt)
+1408 | VT-385477 | [error_messages           ] Real talk, Rate limit exceeded; retry after 60 seconds. Thanks.
+1409 | VT-398771 | [everyday                 ] Okay, Note: We can wrap this up by 9:00 AM. Please. — now.
+1410 | VT-363092 | [everyday                 ] Okay, Note: That sounds great to me.—copy..
+1411 | VT-321579 | [everyday                 ] Reminder: Call out if anything looks off.
+1412 | VT-334760 | [everyday                 ] Quick one: Good evening. thanks.
+1413 | VT-360332 | [imperative               ] Heads up: Reminder: Shut it down immediately. Please. thanks.
+1414 | VT-329831 | [imperative               ] Okay, FYI, Please sit up straight and focus. Thanks.
+1415 | VT-352227 | [imperative               ] Heads up: Hey, Please sit up straight and focus. For real. thanks.
+1416 | VT-336585 | [imperative               ] Heads up: Note: Please sit up straight and focus. Thanks. — got it.
+1417 | VT-348368 | [question_variants        ] Quick one: Good—yes or no? Thanks. — got it.
+1418 | VT-355771 | [question_variants        ] Real talk, Hey, What’s the catch? For real. if you can.
+1419 | VT-359473 | [question_variants        ] Listen, Hey, Good—yes or no? For real. thanks.
+1420 | VT-315814 | [question_variants        ] Okay, Note: Is everything okay with that?—copy. if you can. (alt)
+1421 | VT-457757 | [agreements               ] Quick one: Okay, I’m in.—got it..
+1422 | VT-498610 | [agreements               ] Heads up: Reminder: Copy that.—copy.
+1423 | VT-446278 | [agreements               ] FYI, Okay, I’m in.—got it. — now. (alt)
+1424 | VT-402011 | [agreements               ] Listen, That’s a yes from me. Right now. right now. (alt)
+1425 | VT-425801 | [agreements               ] FYI, Listen, Green light.—copy. please. (alt)
+1426 | VT-484215 | [agreements               ] Reminder: Note: Agreed—let’s lock it. Thanks. right now.
+1427 | VT-407716 | [agreements               ] Reminder: Heads up: Yep, that works for me. Please. right now.
+1428 | VT-454486 | [agreements               ] Heads up: Okay, I’m in.—got it. — got it.
+1429 | VT-497591 | [agreements               ] Okay, Note: Agreed—let’s lock it. Thanks. please. (alt)
+1430 | VT-485128 | [agreements               ] Note: Heads up: That’s a yes from me.—got it. if you can.
+1431 | VT-449629 | [agreements               ] Note: Approved. For real.
+1432 | VT-489011 | [agreements               ] Okay, Hey, Green light.—got it.
+1433 | VT-415081 | [agreements               ] Reminder: Okay, Copy that. Please. thanks.
+1434 | VT-437625 | [agreements               ] Note: Reminder: Count me on board. Please.
+1435 | VT-454306 | [agreements               ] Listen, Listen, Agreed—let’s lock it.—got it. — confirm.
+1436 | VT-487060 | [agreements               ] Heads up: Note: Yep, that works for me.—copy.
+1437 | VT-407415 | [agreements               ] FYI, Heads up: Copy that. If possible.
+1438 | VT-449032 | [agreements               ] Reminder: FYI, I’m in. If possible..
+1439 | VT-422770 | [agreements               ] Agreed—let’s lock it. — confirm.
+1440 | VT-424085 | [agreements               ] Okay, Note: Approved. For real. please.
+1441 | VT-411551 | [agreements               ] Real talk, Approved. — got it.
+1442 | VT-420704 | [agreements               ] Reminder: Okay, Approved. right now.
+1443 | VT-410542 | [agreements               ] Okay, Copy that. For real. — got it. (alt)
+1444 | VT-402670 | [agreements               ] Reminder: Heads up: Yep, that works for me. Please. — got it.
+1445 | VT-440036 | [agreements               ] FYI, Hey, Yep, that works for me. If possible. if you can.
+1446 | VT-493003 | [agreements               ] Quick one: Approved. Thanks. if you can.
+1447 | VT-442696 | [agreements               ] Hey, Agreed—let’s lock it. For real. if you can.
+1448 | VT-443328 | [agreements               ] Okay, Reminder: Sounds right. If possible. please.
+1449 | VT-403573 | [agreements               ] Reminder: Sounds right. Right now..
+1450 | VT-452206 | [agreements               ] FYI, Sounds right. If possible.. (alt)

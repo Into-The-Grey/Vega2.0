@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 10 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0451 | VT-48995 | [narrative                ] Okay, He opened the envelope, not knowing it would change his life forever. For real.
+0452 | VT-37540 | [narrative                ] FYI, Back in college, we used to hack vending machines for snacks. If possible.
+0453 | VT-89378 | [narrative                ] Note: He opened the envelope, not knowing it would change his life forever. Right now.
+0454 | VT-46167 | [narrative                ] Hey, He opened the envelope, not knowing it would change his life forever.—copy.
+0455 | VT-71308 | [narrative                ] Okay, He opened the envelope, not knowing it would change his life forever.—copy.
+0456 | VT-63597 | [narrative                ] Listen, Back in college, we used to hack vending machines for snacks. Please.
+0457 | VT-64065 | [narrative                ] He opened the envelope, not knowing it would change his life forever.
+0458 | VT-57868 | [narrative                ] Heads up: He opened the envelope, not knowing it would change his life forever. Right now.
+0459 | VT-55285 | [narrative                ] Note: Back in college, we used to hack vending machines for snacks.
+0460 | VT-33215 | [narrative                ] When I was five, I thought the moon followed me everywhere.
+0461 | VT-85595 | [narrative                ] Okay, When I was five, I thought the moon followed me everywhere. Right now.
+0462 | VT-55285 | [narrative                ] Note: Back in college, we used to hack vending machines for snacks.
+0463 | VT-58147 | [narrative                ] FYI, He opened the envelope, not knowing it would change his life forever. Right now.
+0464 | VT-59120 | [narrative                ] Reminder: He opened the envelope, not knowing it would change his life forever.—got it.
+0465 | VT-55652 | [narrative                ] Listen, Back in college, we used to hack vending machines for snacks.
+0466 | VT-26987 | [narrative                ] Reminder: He opened the envelope, not knowing it would change his life forever.
+0467 | VT-19688 | [narrative                ] He opened the envelope, not knowing it would change his life forever.—got it.
+0468 | VT-41923 | [narrative                ] Listen, Back in college, we used to hack vending machines for snacks.—copy.
+0469 | VT-35838 | [narrative                ] Note: Back in college, we used to hack vending machines for snacks. Right now.
+0470 | VT-63802 | [narrative                ] Hey, When I was five, I thought the moon followed me everywhere.
+0471 | VT-92570 | [narrative                ] Reminder: When I was five, I thought the moon followed me everywhere.
+0472 | VT-25603 | [narrative                ] Back in college, we used to hack vending machines for snacks. If possible.
+0473 | VT-46016 | [narrative                ] Note: He opened the envelope, not knowing it would change his life forever. For real.
+0474 | VT-88073 | [narrative                ] Heads up: Back in college, we used to hack vending machines for snacks. For real.
+0475 | VT-43313 | [narrative                ] Listen, When I was five, I thought the moon followed me everywhere.
+0476 | VT-60639 | [narrative                ] Listen, When I was five, I thought the moon followed me everywhere. If possible.
+0477 | VT-59464 | [narrative                ] Note: He opened the envelope, not knowing it would change his life forever.—got it.
+0478 | VT-44624 | [narrative                ] Heads up: When I was five, I thought the moon followed me everywhere. For real.
+0479 | VT-35838 | [narrative                ] Note: Back in college, we used to hack vending machines for snacks. Right now.
+0480 | VT-42675 | [narrative                ] Back in college, we used to hack vending machines for snacks.—got it.
+0481 | VT-17260 | [narrative                ] Heads up: He opened the envelope, not knowing it would change his life forever. Please.
+0482 | VT-52407 | [narrative                ] Heads up: He opened the envelope, not knowing it would change his life forever. Please.
+0483 | VT-18386 | [narrative                ] Listen, He opened the envelope, not knowing it would change his life forever. If possible.
+0484 | VT-94870 | [narrative                ] Note: Back in college, we used to hack vending machines for snacks. If possible.
+0485 | VT-83003 | [narrative                ] Okay, When I was five, I thought the moon followed me everywhere.—got it.
+0486 | VT-26953 | [narrative                ] Listen, Back in college, we used to hack vending machines for snacks.—got it.
+0487 | VT-39387 | [narrative                ] When I was five, I thought the moon followed me everywhere. For real.
+0488 | VT-38632 | [narrative                ] Back in college, we used to hack vending machines for snacks. Right now.
+0489 | VT-21062 | [narrative                ] Note: When I was five, I thought the moon followed me everywhere.
+0490 | VT-37540 | [narrative                ] FYI, Back in college, we used to hack vending machines for snacks. If possible.
+0491 | VT-39387 | [narrative                ] When I was five, I thought the moon followed me everywhere. For real.
+0492 | VT-46704 | [narrative                ] Listen, When I was five, I thought the moon followed me everywhere. If possible.
+0493 | VT-46704 | [narrative                ] Listen, When I was five, I thought the moon followed me everywhere. If possible.
+0494 | VT-83245 | [narrative                ] FYI, Back in college, we used to hack vending machines for snacks. Please.
+0495 | VT-16167 | [narrative                ] Reminder: Back in college, we used to hack vending machines for snacks.
+0496 | VT-80883 | [narrative                ] Note: He opened the envelope, not knowing it would change his life forever.—got it.
+0497 | VT-59464 | [narrative                ] Note: He opened the envelope, not knowing it would change his life forever.—got it.
+0498 | VT-78914 | [narrative                ] Okay, When I was five, I thought the moon followed me everywhere. Right now.
+0499 | VT-50534 | [narrative                ] Note: Back in college, we used to hack vending machines for snacks. Thanks.
+0500 | VT-23841 | [narrative                ] FYI, Back in college, we used to hack vending machines for snacks. Right now.

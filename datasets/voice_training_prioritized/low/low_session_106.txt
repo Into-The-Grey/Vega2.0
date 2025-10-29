@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 106 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+5251 | VT-62939 | [uncertainty              ] Note: Hard to say without more data.—got it.
+5252 | VT-98414 | [uncertainty              ] Hey, Possibly, but unlikely.—copy.
+5253 | VT-54520 | [uncertainty              ] Hey, Too early to call.—got it.
+5254 | VT-13581 | [uncertainty              ] Heads up: I doubt it.
+5255 | VT-65160 | [uncertainty              ] Reminder: I don’t have that info. If possible.
+5256 | VT-27003 | [uncertainty              ] FYI, Maybe—leaning no.—copy.
+5257 | VT-50584 | [uncertainty              ] Listen, Hard to say without more data. Please.
+5258 | VT-52769 | [uncertainty              ] Hey, I’m not sure yet.—copy.
+5259 | VT-30506 | [uncertainty              ] Hey, I don’t have that info. Right now.
+5260 | VT-44512 | [uncertainty              ] Hey, It depends on the constraints.
+5261 | VT-99071 | [uncertainty              ] Hard to say without more data.
+5262 | VT-54520 | [uncertainty              ] Hey, Too early to call.—got it.
+5263 | VT-88862 | [uncertainty              ] Reminder: Too early to call. If possible.
+5264 | VT-58318 | [uncertainty              ] Heads up: Too early to call. Thanks.
+5265 | VT-30553 | [uncertainty              ] Heads up: I don’t have that info. If possible.
+5266 | VT-49637 | [uncertainty              ] Note: I’m not sure yet. Right now.
+5267 | VT-61984 | [uncertainty              ] FYI, I’m not sure yet. For real.
+5268 | VT-24502 | [uncertainty              ] Too early to call. For real.
+5269 | VT-47706 | [uncertainty              ] Note: Hard to say without more data. Right now.
+5270 | VT-23172 | [uncertainty              ] Heads up: We’ll see.
+5271 | VT-69143 | [uncertainty              ] Note: We’ll see.—got it.
+5272 | VT-99659 | [uncertainty              ] Hey, We’ll see.
+5273 | VT-10102 | [uncertainty              ] I don’t have that info.
+5274 | VT-77863 | [uncertainty              ] Hey, Possibly, but unlikely. If possible.
+5275 | VT-42654 | [uncertainty              ] FYI, Possibly, but unlikely. For real.
+5276 | VT-53733 | [uncertainty              ] Reminder: I’m not sure yet.—got it.
+5277 | VT-46906 | [uncertainty              ] Listen, Too early to call. Please.
+5278 | VT-44090 | [uncertainty              ] Reminder: Possibly, but unlikely.—got it.
+5279 | VT-79146 | [uncertainty              ] Reminder: Maybe—leaning no. For real.
+5280 | VT-52769 | [uncertainty              ] Hey, I’m not sure yet.—copy.
+5281 | VT-53733 | [uncertainty              ] Reminder: I’m not sure yet.—got it.
+5282 | VT-93760 | [uncertainty              ] Note: Possibly, but unlikely. If possible.
+5283 | VT-49637 | [uncertainty              ] Note: I’m not sure yet. Right now.
+5284 | VT-77738 | [uncertainty              ] Note: It depends on the constraints. Please.
+5285 | VT-74920 | [uncertainty              ] Listen, I doubt it. Thanks.
+5286 | VT-75061 | [uncertainty              ] Listen, Too early to call. Right now.
+5287 | VT-68594 | [uncertainty              ] Listen, Hard to say without more data. Thanks.
+5288 | VT-23172 | [uncertainty              ] Heads up: We’ll see.
+5289 | VT-49846 | [uncertainty              ] Reminder: I don’t have that info.—got it.
+5290 | VT-80810 | [uncertainty              ] Maybe—leaning no. Right now.
+5291 | VT-68219 | [uncertainty              ] We’ll see.
+5292 | VT-39965 | [uncertainty              ] Note: I don’t have that info. For real.
+5293 | VT-44512 | [uncertainty              ] Hey, It depends on the constraints.
+5294 | VT-30553 | [uncertainty              ] Heads up: I don’t have that info. If possible.
+5295 | VT-46466 | [uncertainty              ] Listen, Maybe—leaning no. Thanks.
+5296 | VT-86747 | [uncertainty              ] Hey, Hard to say without more data.—copy.
+5297 | VT-71807 | [uncertainty              ] Listen, I’m not sure yet.—got it.
+5298 | VT-15720 | [uncertainty              ] Hard to say without more data. If possible.
+5299 | VT-12362 | [uncertainty              ] Too early to call.
+5300 | VT-42654 | [uncertainty              ] FYI, Possibly, but unlikely. For real.

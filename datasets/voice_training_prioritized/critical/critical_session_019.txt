@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 19 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0901 | VT-21261 | [imperative               ] Reminder: Shut it down immediately.
+0902 | VT-72482 | [imperative               ] Hey, Shut it down immediately. Thanks.
+0903 | VT-72482 | [imperative               ] Hey, Shut it down immediately. Thanks.
+0904 | VT-60304 | [imperative               ] FYI, Please sit up straight and focus.—copy.
+0905 | VT-96361 | [imperative               ] FYI, Please sit up straight and focus. Right now.
+0906 | VT-39144 | [imperative               ] Okay, Call me when you get home. For real.
+0907 | VT-23062 | [imperative               ] Hey, Call me when you get home. For real.
+0908 | VT-81656 | [imperative               ] Hey, Shut it down immediately. Please.
+0909 | VT-90061 | [imperative               ] FYI, Please sit up straight and focus. Thanks.
+0910 | VT-90743 | [imperative               ] Please sit up straight and focus. If possible.
+0911 | VT-26233 | [imperative               ] Listen, Please sit up straight and focus. Right now.
+0912 | VT-26603 | [imperative               ] Heads up: Please sit up straight and focus.
+0913 | VT-60304 | [imperative               ] FYI, Please sit up straight and focus.—copy.
+0914 | VT-83265 | [imperative               ] Please sit up straight and focus. Right now.
+0915 | VT-88928 | [imperative               ] Hey, Shut it down immediately. Thanks.
+0916 | VT-84902 | [imperative               ] Listen, Call me when you get home. If possible.
+0917 | VT-16441 | [imperative               ] Hey, Shut it down immediately. For real.
+0918 | VT-57935 | [imperative               ] Listen, Please sit up straight and focus.—got it.
+0919 | VT-68276 | [imperative               ] Shut it down immediately. If possible.
+0920 | VT-71375 | [imperative               ] Listen, Call me when you get home. If possible.
+0921 | VT-37644 | [imperative               ] Hey, Call me when you get home. For real.
+0922 | VT-25806 | [imperative               ] Note: Call me when you get home. If possible.
+0923 | VT-32126 | [imperative               ] Shut it down immediately.
+0924 | VT-44857 | [imperative               ] FYI, Call me when you get home. If possible.
+0925 | VT-30297 | [imperative               ] Shut it down immediately.
+0926 | VT-39144 | [imperative               ] Okay, Call me when you get home. For real.
+0927 | VT-97149 | [imperative               ] Note: Shut it down immediately. Please.
+0928 | VT-39437 | [imperative               ] Reminder: Shut it down immediately. Please.
+0929 | VT-81825 | [imperative               ] Reminder: Please sit up straight and focus.—copy.
+0930 | VT-27888 | [imperative               ] Reminder: Call me when you get home. Thanks.
+0931 | VT-18116 | [imperative               ] Note: Please sit up straight and focus. Thanks.
+0932 | VT-31258 | [imperative               ] FYI, Please sit up straight and focus. Right now.
+0933 | VT-91682 | [imperative               ] Hey, Please sit up straight and focus. For real.
+0934 | VT-94840 | [imperative               ] Okay, Shut it down immediately.—copy.
+0935 | VT-36889 | [imperative               ] Call me when you get home. Right now.
+0936 | VT-79567 | [imperative               ] Please sit up straight and focus. For real.
+0937 | VT-92064 | [imperative               ] Reminder: Please sit up straight and focus. Right now.
+0938 | VT-97144 | [imperative               ] Heads up: Shut it down immediately. For real.
+0939 | VT-92064 | [imperative               ] Reminder: Please sit up straight and focus. Right now.
+0940 | VT-35782 | [imperative               ] Okay, Please sit up straight and focus.—copy.
+0941 | VT-88928 | [imperative               ] Hey, Shut it down immediately. Thanks.
+0942 | VT-94238 | [imperative               ] Hey, Call me when you get home.
+0943 | VT-36909 | [imperative               ] Please sit up straight and focus. Please.
+0944 | VT-33582 | [imperative               ] Okay, Call me when you get home. If possible.
+0945 | VT-48051 | [imperative               ] Listen, Please sit up straight and focus. For real.
+0946 | VT-28298 | [imperative               ] Listen, Shut it down immediately. If possible.
+0947 | VT-21861 | [imperative               ] Shut it down immediately.—got it.
+0948 | VT-68072 | [imperative               ] Call me when you get home. Please.
+0949 | VT-90708 | [imperative               ] Call me when you get home.—copy.
+0950 | VT-81656 | [imperative               ] Hey, Shut it down immediately. Please.

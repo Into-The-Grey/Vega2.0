@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 139 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6901 | VT-443726 | [sales_pitch              ] Okay, FYI, This offer won’t last—act today! If possible. please.
+6902 | VT-478288 | [sales_pitch              ] Hey, This offer won’t last—act today! Please.. (alt)
+6903 | VT-438747 | [sales_pitch              ] Reminder: Heads up: Why settle for less when you can have excellence?—got it. please.
+6904 | VT-439669 | [sales_pitch              ] Okay, Reminder: This offer won’t last—act today! For real. — now.
+6905 | VT-487173 | [sales_pitch              ] Hey, This offer won’t last—act today! Thanks. — got it.
+6906 | VT-430122 | [sales_pitch              ] FYI, Heads up: Unlock premium features now with just one click! For real. — got it.
+6907 | VT-450413 | [sales_pitch              ] Hey, Why settle for less when you can have excellence? For real. — now. (alt)
+6908 | VT-425819 | [sales_pitch              ] Reminder: Note: This offer won’t last—act today!—copy. — now.
+6909 | VT-462484 | [sales_pitch              ] Real talk, Heads up: Unlock premium features now with just one click! Thanks. if you can.
+6910 | VT-462641 | [sales_pitch              ] Okay, This offer won’t last—act today!—copy. please. (alt)
+6911 | VT-437842 | [sales_pitch              ] Note: Heads up: Unlock premium features now with just one click!—got it. if you can. (alt)
+6912 | VT-481530 | [sales_pitch              ] Note: Heads up: Why settle for less when you can have excellence? — got it. (alt)
+6913 | VT-451722 | [sales_pitch              ] Note: Heads up: Why settle for less when you can have excellence? Thanks.. (alt)
+6914 | VT-418162 | [sales_pitch              ] Why settle for less when you can have excellence? — now.
+6915 | VT-401588 | [sales_pitch              ] Heads up: Okay, This offer won’t last—act today!.
+6916 | VT-417680 | [sales_pitch              ] Reminder: Okay, Why settle for less when you can have excellence?—copy. right now.
+6917 | VT-449023 | [sales_pitch              ] Listen, Why settle for less when you can have excellence? thanks.
+6918 | VT-485645 | [sales_pitch              ] Listen, Heads up: Unlock premium features now with just one click! Thanks. please.
+6919 | VT-477569 | [sales_pitch              ] Quick one: Why settle for less when you can have excellence? Please.
+6920 | VT-477573 | [sales_pitch              ] Real talk, Why settle for less when you can have excellence? Thanks. — confirm. (alt)
+6921 | VT-499838 | [sales_pitch              ] Okay, Unlock premium features now with just one click! Thanks.
+6922 | VT-424657 | [sales_pitch              ] Heads up: Hey, This offer won’t last—act today! Thanks. — got it. (alt)
+6923 | VT-402930 | [sales_pitch              ] Note: FYI, Why settle for less when you can have excellence?—got it. — confirm.
+6924 | VT-431436 | [sales_pitch              ] Okay, Hey, Unlock premium features now with just one click! Please. — confirm.
+6925 | VT-424526 | [sales_pitch              ] Hey, Unlock premium features now with just one click!—copy.
+6926 | VT-496826 | [sales_pitch              ] Listen, Listen, Why settle for less when you can have excellence? Please. — now. (alt)
+6927 | VT-493140 | [sales_pitch              ] Reminder: Unlock premium features now with just one click! Please..
+6928 | VT-446723 | [sales_pitch              ] Heads up: Why settle for less when you can have excellence?—copy. — got it.
+6929 | VT-474444 | [sales_pitch              ] Note: Listen, Why settle for less when you can have excellence? — got it.
+6930 | VT-471904 | [sales_pitch              ] Okay, Hey, This offer won’t last—act today! Please. if you can.
+6931 | VT-412536 | [sales_pitch              ] Note: Okay, Unlock premium features now with just one click! If possible. please. (alt)
+6932 | VT-470410 | [sales_pitch              ] Heads up: This offer won’t last—act today! If possible. please.
+6933 | VT-413631 | [sales_pitch              ] Note: Reminder: This offer won’t last—act today! Please. — confirm.
+6934 | VT-471652 | [sales_pitch              ] FYI, Hey, Unlock premium features now with just one click!—copy. — confirm.
+6935 | VT-433959 | [sales_pitch              ] Okay, Hey, Unlock premium features now with just one click! — got it.
+6936 | VT-431642 | [sales_pitch              ] Reminder: Why settle for less when you can have excellence? — got it.
+6937 | VT-443094 | [sales_pitch              ] FYI, This offer won’t last—act today! If possible..
+6938 | VT-494276 | [sales_pitch              ] Quick one: Heads up: This offer won’t last—act today! Thanks. — got it.
+6939 | VT-481130 | [sales_pitch              ] Quick one: Hey, This offer won’t last—act today! Thanks. — got it.
+6940 | VT-430736 | [sales_pitch              ] Real talk, Reminder: Unlock premium features now with just one click!—copy. please.
+6941 | VT-447032 | [sales_pitch              ] FYI, FYI, Why settle for less when you can have excellence?—got it. — got it.
+6942 | VT-462566 | [sales_pitch              ] Heads up: Note: This offer won’t last—act today!—copy. — now. (alt)
+6943 | VT-425814 | [sales_pitch              ] Heads up: Hey, This offer won’t last—act today!—copy. if you can.
+6944 | VT-427382 | [sales_pitch              ] Heads up: Listen, Why settle for less when you can have excellence? Please. if you can.
+6945 | VT-449621 | [sales_pitch              ] Heads up: Note: This offer won’t last—act today! Thanks. — now.
+6946 | VT-475767 | [sales_pitch              ] Reminder: Why settle for less when you can have excellence? For real. if you can.
+6947 | VT-437715 | [sales_pitch              ] Reminder: This offer won’t last—act today! Please. — now.
+6948 | VT-425532 | [sales_pitch              ] Reminder: Note: This offer won’t last—act today! If possible. (alt)
+6949 | VT-446417 | [slang-heavy              ] Okay, Yo, that was straight fire, no cap! right now. (alt)
+6950 | VT-467845 | [slang-heavy              ] FYI, She ghosted me after I dropped the bag, smh. — confirm.

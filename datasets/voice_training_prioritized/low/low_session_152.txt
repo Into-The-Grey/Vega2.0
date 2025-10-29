@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 152 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7551 | VT-572044 | [code_readouts            ] Heads up: Heads up: Git rebase main then force-with-lease. Thanks. please.
+7552 | VT-514654 | [code_readouts            ] Real talk, Return HTTP 200 with JSON payload. please.
+7553 | VT-574473 | [code_readouts            ] Listen, Listen, Return HTTP 200 with JSON payload.—copy. right now.
+7554 | VT-697448 | [code_readouts            ] Quick one: Okay, Git rebase main then force-with-lease. Right now. thanks.
+7555 | VT-595128 | [code_readouts            ] Okay, Reminder: Return HTTP 201 with JSON payload.—copy..
+7556 | VT-530408 | [code_readouts            ] Real talk, FYI, Run pip install requests in a clean virtual environment.—copy. right now.
+7557 | VT-683985 | [code_readouts            ] Reminder: Listen, Return HTTP 200 with JSON payload. Please. — got it.
+7558 | VT-676529 | [code_readouts            ] FYI, Heads up: Export PATH equals dollar HOME slash bin colon PATH.—got it. if you can.
+7559 | VT-559969 | [code_readouts            ] Real talk, Heads up: Kubernetes pod restarted due to OOMKill.—got it. — got it.
+7560 | VT-592664 | [code_readouts            ] FYI, Reminder: Export PATH equals dollar HOME slash bin colon PATH.—copy.
+7561 | VT-615312 | [code_readouts            ] FYI, FYI, Throw a try-catch around the parser.—copy. right now.
+7562 | VT-541114 | [code_readouts            ] Heads up: Hey, Run pip install requests in a clean virtual environment..
+7563 | VT-538912 | [code_readouts            ] Listen, Hey, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis. Thanks.
+7564 | VT-501492 | [code_readouts            ] Note: Okay, Function signature: def handler(event, context): Right now. thanks.
+7565 | VT-642243 | [code_readouts            ] Real talk, Heads up: Return HTTP 200 with JSON payload. If possible. thanks.
+7566 | VT-663458 | [code_readouts            ] Real talk, Okay, Return HTTP 201 with JSON payload.—copy. — confirm.
+7567 | VT-590135 | [code_readouts            ] Listen, Okay, Return HTTP 200 with JSON payload. right now.
+7568 | VT-622101 | [dramatic                 ] Note: Okay, I would burn the world to keep you warm. For real. please. (alt)
+7569 | VT-520621 | [dramatic                 ] Okay, Heads up: And then the silence screamed louder than words. If possible..
+7570 | VT-508866 | [dramatic                 ] Listen, Okay, And then the silence screamed louder than words. Right now. — now.
+7571 | VT-541774 | [dramatic                 ] And then the silence screamed louder than words. Right now. if you can.
+7572 | VT-685222 | [dramatic                 ] Heads up: Reminder: This isn't just a game—it’s everything. For real..
+7573 | VT-592950 | [dramatic                 ] Note: Reminder: And then the silence screamed louder than words. Please. — now.
+7574 | VT-642995 | [dramatic                 ] Heads up: Listen, And then the silence screamed louder than words. Please..
+7575 | VT-651347 | [dramatic                 ] Okay, I would burn the world to keep you warm. For real. — got it. (alt)
+7576 | VT-638806 | [dramatic                 ] Reminder: This isn't just a game—it’s everything. If possible.. (alt)
+7577 | VT-583566 | [dramatic                 ] Quick one: Listen, And then the silence screamed louder than words.—copy.
+7578 | VT-531963 | [dramatic                 ] Okay, Hey, I would burn the world to keep you warm. — now.
+7579 | VT-563356 | [dramatic                 ] Listen, And then the silence screamed louder than words.—copy. — got it. (alt)
+7580 | VT-583053 | [dramatic                 ] Note: Reminder: I would burn the world to keep you warm.—copy. please.
+7581 | VT-579316 | [dramatic                 ] Real talk, This isn't just a game—it’s everything. For real. if you can.
+7582 | VT-588038 | [dramatic                 ] Listen, FYI, This isn't just a game—it’s everything. For real.
+7583 | VT-512143 | [dramatic                 ] Okay, FYI, This isn't just a game—it’s everything.—copy. (alt)
+7584 | VT-691767 | [dramatic                 ] Listen, Hey, And then the silence screamed louder than words. If possible. if you can.
+7585 | VT-563723 | [dramatic                 ] FYI, This isn't just a game—it’s everything.—copy..
+7586 | VT-588220 | [dramatic                 ] Quick one: This isn't just a game—it’s everything. — confirm.
+7587 | VT-626123 | [dramatic                 ] Note: Hey, I would burn the world to keep you warm. if you can.
+7588 | VT-624731 | [dramatic                 ] Okay, Listen, This isn't just a game—it’s everything. Thanks. thanks.
+7589 | VT-629495 | [dramatic                 ] Note: Heads up: This isn't just a game—it’s everything. Please.
+7590 | VT-541876 | [dramatic                 ] Heads up: I would burn the world to keep you warm. Right now. (alt)
+7591 | VT-637402 | [dramatic                 ] Heads up: Listen, And then the silence screamed louder than words. Please. — got it.
+7592 | VT-676818 | [dramatic                 ] Listen, Reminder: This isn't just a game—it’s everything. If possible. — got it. (alt)
+7593 | VT-534936 | [dramatic                 ] Okay, Listen, I would burn the world to keep you warm. — got it.
+7594 | VT-580116 | [dramatic                 ] Note: Okay, I would burn the world to keep you warm.—copy. thanks.
+7595 | VT-537011 | [dramatic                 ] FYI, Reminder: This isn't just a game—it’s everything.—got it.
+7596 | VT-675758 | [dramatic                 ] Quick one: FYI, I would burn the world to keep you warm. Thanks. thanks.
+7597 | VT-603274 | [dramatic                 ] Reminder: Okay, This isn't just a game—it’s everything. Thanks. — confirm.
+7598 | VT-516945 | [dramatic                 ] Heads up: Hey, This isn't just a game—it’s everything.—copy. if you can.
+7599 | VT-597499 | [dramatic                 ] FYI, And then the silence screamed louder than words. Right now. — got it.
+7600 | VT-665440 | [dramatic                 ] Real talk, Hey, I would burn the world to keep you warm. Thanks.

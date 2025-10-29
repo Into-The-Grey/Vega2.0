@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 44 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2151 | VT-689826 | [sarcastic                ] Listen, Okay, Oh great, another meeting that could've been an email. Please. if you can.
+2152 | VT-674606 | [sarcastic                ] Heads up: Note: Yeah, because that always works out perfectly, doesn’t it? Right now. — confirm. (alt)
+2153 | VT-594690 | [sarcastic                ] Quick one: Reminder: I'm totally not rolling my eyes right now.—copy. — now.
+2154 | VT-569038 | [sarcastic                ] Quick one: Note: Yeah, because that always works out perfectly, doesn’t it? Please.. (alt)
+2155 | VT-609055 | [sarcastic                ] Okay, Heads up: Yeah, because that always works out perfectly, doesn’t it? For real. — now. (alt)
+2156 | VT-604041 | [sarcastic                ] Real talk, FYI, Yeah, because that always works out perfectly, doesn’t it?—got it. — now.
+2157 | VT-515903 | [sarcastic                ] Listen, FYI, I'm totally not rolling my eyes right now. Thanks. thanks.
+2158 | VT-656028 | [sarcastic                ] Heads up: Yeah, because that always works out perfectly, doesn’t it? thanks.
+2159 | VT-581650 | [sarcastic                ] Heads up: Yeah, because that always works out perfectly, doesn’t it? If possible. please.
+2160 | VT-571526 | [sarcastic                ] Reminder: Heads up: I'm totally not rolling my eyes right now. Thanks.
+2161 | VT-553124 | [sarcastic                ] Reminder: Heads up: Oh great, another meeting that could've been an email. — now.
+2162 | VT-594465 | [sarcastic                ] Reminder: Listen, Oh great, another meeting that could've been an email. Thanks. — got it.
+2163 | VT-680896 | [sarcastic                ] Quick one: Heads up: I'm totally not rolling my eyes right now. Thanks. please.
+2164 | VT-532930 | [sarcastic                ] Reminder: Yeah, because that always works out perfectly, doesn’t it? For real. please.
+2165 | VT-622932 | [sarcastic                ] FYI, Okay, Yeah, because that always works out perfectly, doesn’t it?—copy. thanks.
+2166 | VT-634816 | [sarcastic                ] Okay, I'm totally not rolling my eyes right now.—got it. — confirm.
+2167 | VT-563200 | [sarcastic                ] FYI, Hey, Yeah, because that always works out perfectly, doesn’t it?—copy. — confirm.
+2168 | VT-565950 | [sarcastic                ] Real talk, Note: Yeah, because that always works out perfectly, doesn’t it? thanks.
+2169 | VT-519158 | [sarcastic                ] Okay, FYI, I'm totally not rolling my eyes right now. Thanks..
+2170 | VT-627120 | [sarcastic                ] Okay, Heads up: I'm totally not rolling my eyes right now. Thanks.
+2171 | VT-627013 | [sarcastic                ] Heads up: FYI, Oh great, another meeting that could've been an email. Right now. if you can.
+2172 | VT-544177 | [sarcastic                ] Reminder: Hey, Oh great, another meeting that could've been an email. For real. — confirm.
+2173 | VT-512596 | [sarcastic                ] Note: Listen, I'm totally not rolling my eyes right now..
+2174 | VT-647998 | [sarcastic                ] Note: FYI, Yeah, because that always works out perfectly, doesn’t it? Thanks.
+2175 | VT-603075 | [sarcastic                ] Listen, Okay, I'm totally not rolling my eyes right now. Thanks. right now.
+2176 | VT-631219 | [sarcastic                ] Note: Note: Oh great, another meeting that could've been an email.—copy. right now.
+2177 | VT-660504 | [structured               ] Okay, Reminder: Grocery list: milk, bread, eggs, spinach, coffee.—copy.
+2178 | VT-591691 | [structured               ] Real talk, Reminder: Agenda: introductions, updates, blockers, next steps. For real. — confirm. (alt)
+2179 | VT-666021 | [structured               ] Note: Hey, Grocery list: milk, bread, eggs, spinach, coffee. For real.
+2180 | VT-537478 | [structured               ] Real talk, Heads up: Agenda: introductions, updates, blockers, next steps.—copy.
+2181 | VT-656077 | [structured               ] Reminder: Listen, Checklist: backups done, patches applied, monitors green. Please. — got it.
+2182 | VT-571268 | [structured               ] FYI, Checklist: backups done, patches applied, monitors green.—got it. — confirm.
+2183 | VT-615671 | [structured               ] Quick one: Note: Packing list: passport, charger, adapters, toiletries, meds.
+2184 | VT-661121 | [structured               ] Reminder: Grocery list: milk, bread, eggs, spinach, coffee.—copy.
+2185 | VT-613978 | [structured               ] Reminder: FYI, Checklist: backups done, patches applied, monitors green.—got it. thanks.
+2186 | VT-604810 | [structured               ] FYI, Okay, Agenda: introductions, updates, blockers, next steps. Please. if you can. (alt)
+2187 | VT-544937 | [structured               ] Reminder: FYI, Grocery list: milk, bread, eggs, spinach, coffee.—got it. if you can. (alt)
+2188 | VT-529016 | [structured               ] Hey, Checklist: backups done, patches applied, monitors green. For real. — got it.
+2189 | VT-649448 | [structured               ] Quick one: Reminder: Agenda: introductions, updates, blockers, next steps.—copy..
+2190 | VT-595669 | [structured               ] FYI, Reminder: To‑do: sweep, mop, laundry, email, stretch.—got it. right now.
+2191 | VT-501925 | [structured               ] Okay, Note: Checklist: backups done, patches applied, monitors green. Right now. — got it. (alt)
+2192 | VT-696862 | [structured               ] Quick one: Note: Packing list: passport, charger, adapters, toiletries, meds. For real. thanks.
+2193 | VT-564001 | [structured               ] Reminder: Reminder: Agenda: introductions, updates, blockers, next steps.—copy. right now.
+2194 | VT-622020 | [structured               ] Listen, Heads up: Grocery list: milk, bread, eggs, spinach, coffee. Please. — confirm.
+2195 | VT-608933 | [structured               ] Checklist: backups done, patches applied, monitors green. please.
+2196 | VT-694107 | [structured               ] FYI, Grocery list: milk, bread, eggs, spinach, coffee.—got it.
+2197 | VT-556287 | [structured               ] FYI, Reminder: Grocery list: milk, bread, eggs, spinach, coffee.—copy..
+2198 | VT-682709 | [structured               ] Real talk, Listen, Grocery list: milk, bread, eggs, spinach, coffee. If possible. — got it.
+2199 | VT-539516 | [structured               ] Real talk, Hey, Agenda: introductions, updates, blockers, next steps. Please.. (alt)
+2200 | VT-619437 | [structured               ] Real talk, Note: Packing list: passport, charger, adapters, toiletries, meds. — now.

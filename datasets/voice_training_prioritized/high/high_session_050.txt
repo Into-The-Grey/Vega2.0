@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 50 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2451 | VT-530892 | [interrogative            ] Okay, Note: Why does it always rain when I'm unprepared?—copy. — confirm.
+2452 | VT-652658 | [interrogative            ] Listen, Do you even hear yourself right now? — got it.
+2453 | VT-554361 | [interrogative            ] Real talk, FYI, Why does it always rain when I'm unprepared? If possible. thanks.
+2454 | VT-615468 | [interrogative            ] Quick one: Heads up: Do you even hear yourself right now? — got it.
+2455 | VT-634799 | [interrogative            ] Listen, Heads up: Do you even hear yourself right now? For real.
+2456 | VT-603502 | [interrogative            ] Note: Is this really what you want? For real. thanks.
+2457 | VT-646883 | [interrogative            ] FYI, Okay, Why does it always rain when I'm unprepared? If possible..
+2458 | VT-680691 | [interrogative            ] Okay, Is this really what you want? Thanks..
+2459 | VT-534610 | [interrogative            ] Reminder: Note: Is this really what you want? If possible. (alt)
+2460 | VT-557481 | [interrogative            ] Reminder: Okay, Why does it always rain when I'm unprepared? Right now. thanks.
+2461 | VT-538787 | [interrogative            ] Reminder: Listen, Why does it always rain when I'm unprepared?—copy. — now.
+2462 | VT-557992 | [interrogative            ] FYI, Reminder: Do you even hear yourself right now? Please.
+2463 | VT-505199 | [interrogative            ] Heads up: Is this really what you want? Thanks. please.
+2464 | VT-592369 | [interrogative            ] Heads up: Listen, Is this really what you want?—got it. — now.
+2465 | VT-608695 | [interrogative            ] Quick one: Reminder: Is this really what you want?—copy. if you can.
+2466 | VT-613647 | [interrogative            ] Reminder: Heads up: Why does it always rain when I'm unprepared?—copy..
+2467 | VT-622227 | [interrogative            ] Heads up: Do you even hear yourself right now? Right now. thanks.
+2468 | VT-572274 | [interrogative            ] FYI, Is this really what you want? For real. — now.
+2469 | VT-681470 | [interrogative            ] Quick one: Note: Is this really what you want?—got it. — confirm.
+2470 | VT-547749 | [interrogative            ] Real talk, Do you even hear yourself right now? — got it.
+2471 | VT-641149 | [interrogative            ] Okay, Heads up: Is this really what you want? Thanks. thanks. (alt)
+2472 | VT-692219 | [interrogative            ] Okay, Hey, Do you even hear yourself right now? For real. — got it.
+2473 | VT-504718 | [interrogative            ] Reminder: Is this really what you want? If possible. if you can.
+2474 | VT-534291 | [interrogative            ] Heads up: Okay, Is this really what you want? For real. — got it.
+2475 | VT-642945 | [interrogative            ] Note: FYI, Do you even hear yourself right now? — confirm.
+2476 | VT-621562 | [interrogative            ] Listen, Okay, Why does it always rain when I'm unprepared? If possible. — confirm.
+2477 | VT-644149 | [interrogative            ] Listen, Okay, Is this really what you want?—copy. thanks.
+2478 | VT-561646 | [interrogative            ] FYI, Listen, Do you even hear yourself right now? Right now. — now.
+2479 | VT-531681 | [interrogative            ] Note: FYI, Is this really what you want? — got it.
+2480 | VT-513607 | [interrogative            ] FYI, Listen, Why does it always rain when I'm unprepared? For real. — confirm.
+2481 | VT-551037 | [interrogative            ] Heads up: Okay, Do you even hear yourself right now? Right now. — got it.
+2482 | VT-677217 | [interrogative            ] Okay, Okay, Why does it always rain when I'm unprepared? If possible. please.
+2483 | VT-681826 | [interrogative            ] Note: Listen, Do you even hear yourself right now? Right now..
+2484 | VT-625774 | [interrogative            ] Listen, Hey, Is this really what you want? Right now.
+2485 | VT-578398 | [interrogative            ] Listen, Note: Do you even hear yourself right now? Thanks. please.
+2486 | VT-569393 | [interrogative            ] Heads up: Heads up: Do you even hear yourself right now? If possible.. (alt)
+2487 | VT-571605 | [interrogative            ] Quick one: Do you even hear yourself right now? Thanks.
+2488 | VT-606576 | [interrogative            ] Heads up: Note: Is this really what you want?—got it.. (alt)
+2489 | VT-615588 | [interrogative            ] Reminder: Do you even hear yourself right now? — now.
+2490 | VT-618940 | [interrogative            ] Note: Hey, Do you even hear yourself right now?—copy. (alt)
+2491 | VT-614878 | [interrogative            ] Heads up: Okay, Is this really what you want? Please. — got it.
+2492 | VT-535701 | [interrogative            ] FYI, Listen, Why does it always rain when I'm unprepared?—got it. — confirm.
+2493 | VT-678533 | [interrogative            ] Real talk, Okay, Why does it always rain when I'm unprepared? Please. — confirm.
+2494 | VT-605252 | [interrogative            ] Okay, Is this really what you want? Please.
+2495 | VT-510407 | [interrogative            ] Real talk, Listen, Do you even hear yourself right now? — now.
+2496 | VT-517430 | [interrogative            ] Listen, Reminder: Do you even hear yourself right now? Right now. — now. (alt)
+2497 | VT-692692 | [interrogative            ] Note: Reminder: Is this really what you want? Thanks. if you can.
+2498 | VT-585843 | [interrogative            ] Hey, Do you even hear yourself right now? For real. — got it.
+2499 | VT-652131 | [interrogative            ] Note: Hey, Do you even hear yourself right now? Right now. right now.
+2500 | VT-501876 | [interrogative            ] Heads up: Is this really what you want? If possible. thanks.

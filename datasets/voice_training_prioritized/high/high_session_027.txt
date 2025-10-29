@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 27 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1301 | VT-96720 | [numbers_large            ] Reminder: Nine hundred ninety-nine million, give or take. (9610) Thanks.
+1302 | VT-80035 | [numbers_large            ] Listen, Latency spiked to 2,147 milliseconds. (5002)—copy.
+1303 | VT-13203 | [numbers_large            ] Nine hundred ninety-nine million, give or take. (689) For real.
+1304 | VT-90008 | [numbers_large            ] Note: Compute with 3,456,789 samples. (2056) For real.
+1305 | VT-53054 | [numbers_large            ] FYI, Pi to ten decimals: 3.1415926535. (4171) If possible.
+1306 | VT-88416 | [numbers_large            ] Note: Compute with 3,456,789 samples. (8748)—copy.
+1307 | VT-44950 | [numbers_large            ] Okay, Budget shortfall is $1.2 million. (5102) If possible.
+1308 | VT-51738 | [numbers_large            ] Heads up: Latency spiked to 2,147 milliseconds. (8330) Thanks.
+1309 | VT-64547 | [numbers_large            ] Hey, Pi to ten decimals: 3.1415926535. (2743) Please.
+1310 | VT-67379 | [numbers_large            ] Reminder: Retry after 10^6 iterations. (7407)
+1311 | VT-52247 | [numbers_large            ] Heads up: Compute with 3,456,789 samples. (8938) Right now.
+1312 | VT-15963 | [numbers_large            ] Note: Latency spiked to 2,147 milliseconds. (7451)
+1313 | VT-44195 | [numbers_large            ] We archived 18.6 terabytes overnight. (3844) Right now.
+1314 | VT-22831 | [numbers_large            ] Latency spiked to 2,147 milliseconds. (3330) Thanks.
+1315 | VT-16221 | [numbers_large            ] Heads up: Retry after 10^6 iterations. (8097)
+1316 | VT-69138 | [numbers_large            ] Memory usage hit 64,768 megabytes. (1866) For real.
+1317 | VT-95269 | [numbers_large            ] FYI, Nine hundred ninety-nine million, give or take. (4233) For real.
+1318 | VT-82849 | [numbers_large            ] Heads up: Memory usage hit 64,768 megabytes. (7180) If possible.
+1319 | VT-22238 | [numbers_large            ] Listen, Throughput peaked at 120,000 requests per second. (9758)—copy.
+1320 | VT-44195 | [numbers_large            ] We archived 18.6 terabytes overnight. (3844) Right now.
+1321 | VT-44195 | [numbers_large            ] We archived 18.6 terabytes overnight. (3844) Right now.
+1322 | VT-57680 | [numbers_large            ] FYI, We archived 18.6 terabytes overnight. (7218)—got it.
+1323 | VT-53640 | [numbers_large            ] Reminder: Throughput peaked at 120,000 requests per second. (8242) If possible.
+1324 | VT-90497 | [numbers_large            ] Throughput peaked at 120,000 requests per second. (8891) If possible.
+1325 | VT-98004 | [numbers_large            ] Retry after 10^6 iterations. (1576) Right now.
+1326 | VT-36130 | [numbers_large            ] Heads up: Memory usage hit 64,768 megabytes. (370)—copy.
+1327 | VT-15405 | [numbers_large            ] Note: We archived 18.6 terabytes overnight. (5623)—got it.
+1328 | VT-55182 | [numbers_large            ] FYI, Nine hundred ninety-nine million, give or take. (6987) Please.
+1329 | VT-29502 | [numbers_large            ] FYI, Budget shortfall is $1.2 million. (5751) Right now.
+1330 | VT-96218 | [numbers_large            ] Compute with 3,456,789 samples. (7890) Right now.
+1331 | VT-99164 | [numbers_large            ] Okay, Checksum equals 4294967295. (9318)—copy.
+1332 | VT-96218 | [numbers_large            ] Compute with 3,456,789 samples. (7890) Right now.
+1333 | VT-22944 | [numbers_large            ] Latency spiked to 2,147 milliseconds. (9063)—got it.
+1334 | VT-16354 | [numbers_large            ] Pi to ten decimals: 3.1415926535.
+1335 | VT-56851 | [numbers_large            ] FYI, Pi to ten decimals: 3.1415926535. (4114)—copy.
+1336 | VT-31886 | [numbers_large            ] Memory usage hit 64,768 megabytes. (3022) Please.
+1337 | VT-93890 | [numbers_large            ] Reminder: Checksum equals 4294967295. (2665) For real.
+1338 | VT-95269 | [numbers_large            ] FYI, Nine hundred ninety-nine million, give or take. (4233) For real.
+1339 | VT-91690 | [numbers_large            ] Note: Memory usage hit 64,768 megabytes. (6667)—got it.
+1340 | VT-49253 | [numbers_large            ] Reminder: Compute with 3,456,789 samples. (2603) For real.
+1341 | VT-68672 | [numbers_large            ] Reminder: Nine hundred ninety-nine million, give or take. (2447) Thanks.
+1342 | VT-33719 | [numbers_large            ] Note: Nine hundred ninety-nine million, give or take. (9150) For real.
+1343 | VT-18137 | [numbers_large            ] Note: Budget shortfall is $1.2 million. (624) For real.
+1344 | VT-17544 | [numbers_large            ] Reminder: We archived 18.6 terabytes overnight. (9643) Right now.
+1345 | VT-67379 | [numbers_large            ] Reminder: Retry after 10^6 iterations. (7407)
+1346 | VT-80035 | [numbers_large            ] Listen, Latency spiked to 2,147 milliseconds. (5002)—copy.
+1347 | VT-71574 | [numbers_large            ] Reminder: Retry after 10^6 iterations. (6520)
+1348 | VT-91185 | [numbers_large            ] FYI, Pi to ten decimals: 3.1415926535. (4948)—copy.
+1349 | VT-95269 | [numbers_large            ] FYI, Nine hundred ninety-nine million, give or take. (4233) For real.
+1350 | VT-38424 | [numbers_large            ] FYI, Latency spiked to 2,147 milliseconds. (3233) Please.

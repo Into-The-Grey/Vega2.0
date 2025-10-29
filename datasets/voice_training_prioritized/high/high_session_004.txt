@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 4 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0151 | VT-87566 | [comparatives_superlatives] Heads up: Less fragile, more resilient. Please.
+0152 | VT-19649 | [comparatives_superlatives] Note: Less fragile, more resilient. Thanks.
+0153 | VT-39145 | [comparatives_superlatives] Note: Worse latency but better throughput. For real.
+0154 | VT-21854 | [comparatives_superlatives] Okay, Worse latency but better throughput. Right now.
+0155 | VT-94557 | [comparatives_superlatives] Better, but not best. If possible.
+0156 | VT-29646 | [comparatives_superlatives] Note: The smallest feasible footprint. Right now.
+0157 | VT-97594 | [comparatives_superlatives] Okay, Less fragile, more resilient. Please.
+0158 | VT-18370 | [comparatives_superlatives] Heads up: This is the cheapest viable option. If possible.
+0159 | VT-36252 | [comparatives_superlatives] Listen, The most elegant solution wins. For real.
+0160 | VT-41470 | [comparatives_superlatives] Okay, Faster than yesterday, slower than ideal. Please.
+0161 | VT-41470 | [comparatives_superlatives] Okay, Faster than yesterday, slower than ideal. Please.
+0162 | VT-22402 | [comparatives_superlatives] Higher accuracy with minimal overhead. If possible.
+0163 | VT-87740 | [comparatives_superlatives] Hey, Our best result so far. For real.
+0164 | VT-75448 | [comparatives_superlatives] Reminder: The smallest feasible footprint.—copy.
+0165 | VT-70363 | [comparatives_superlatives] Okay, The toughest challenge yet.—got it.
+0166 | VT-63143 | [comparatives_superlatives] Listen, This is the cheapest viable option. Please.
+0167 | VT-89111 | [comparatives_superlatives] Heads up: The smallest feasible footprint. Right now.
+0168 | VT-58506 | [comparatives_superlatives] Reminder: Faster than yesterday, slower than ideal.—copy.
+0169 | VT-70698 | [comparatives_superlatives] This is the cheapest viable option.
+0170 | VT-83571 | [comparatives_superlatives] Note: This is the cheapest viable option.—got it.
+0171 | VT-24261 | [comparatives_superlatives] Listen, The most elegant solution wins. Thanks.
+0172 | VT-16585 | [comparatives_superlatives] Heads up: Less fragile, more resilient. Thanks.
+0173 | VT-62802 | [comparatives_superlatives] Listen, Higher accuracy with minimal overhead.
+0174 | VT-46983 | [comparatives_superlatives] Note: Better, but not best. For real.
+0175 | VT-11962 | [comparatives_superlatives] Listen, Our best result so far.
+0176 | VT-63143 | [comparatives_superlatives] Listen, This is the cheapest viable option. Please.
+0177 | VT-94693 | [comparatives_superlatives] Reminder: Higher accuracy with minimal overhead. Right now.
+0178 | VT-85333 | [comparatives_superlatives] Listen, This is the cheapest viable option. Please.
+0179 | VT-72220 | [comparatives_superlatives] Heads up: This is the cheapest viable option. For real.
+0180 | VT-60908 | [comparatives_superlatives] Note: The most elegant solution wins. Thanks.
+0181 | VT-13472 | [comparatives_superlatives] Hey, Better, but not best. For real.
+0182 | VT-41786 | [comparatives_superlatives] FYI, Faster than yesterday, slower than ideal. If possible.
+0183 | VT-11962 | [comparatives_superlatives] Listen, Our best result so far.
+0184 | VT-41569 | [comparatives_superlatives] Heads up: Faster than yesterday, slower than ideal.—copy.
+0185 | VT-11962 | [comparatives_superlatives] Listen, Our best result so far.
+0186 | VT-39440 | [comparatives_superlatives] Reminder: Worse latency but better throughput.
+0187 | VT-28153 | [comparatives_superlatives] Hey, Faster than yesterday, slower than ideal. Right now.
+0188 | VT-11962 | [comparatives_superlatives] Listen, Our best result so far.
+0189 | VT-50200 | [conditionals             ] Hey, Provided the tests are green, merge. Please.
+0190 | VT-83675 | [conditionals             ] Reminder: If it ain’t broke, don’t fix it. Please.
+0191 | VT-68502 | [conditionals             ] Listen, Provided the tests are green, merge. For real.
+0192 | VT-74987 | [conditionals             ] If A then B, otherwise C.—got it.
+0193 | VT-50481 | [conditionals             ] If you’re late, text me first. Right now.
+0194 | VT-48173 | [conditionals             ] Hey, Should this pass QA, ship it. Please.
+0195 | VT-79320 | [conditionals             ] If it fails, roll back immediately. Right now.
+0196 | VT-50200 | [conditionals             ] Hey, Provided the tests are green, merge. Please.
+0197 | VT-57464 | [conditionals             ] Note: Should this pass QA, ship it. For real.
+0198 | VT-52542 | [conditionals             ] Heads up: If A then B, otherwise C. Right now.
+0199 | VT-75923 | [conditionals             ] Reminder: If and only if the hash matches, proceed. Please.
+0200 | VT-51896 | [conditionals             ] Note: If you’re late, text me first. Please.

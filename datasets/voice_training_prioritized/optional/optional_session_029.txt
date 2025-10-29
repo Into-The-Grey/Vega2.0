@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 29 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1401 | VT-66018 | [multilingual             ] Listen, Grazie mille, davvero.—copy.
+1402 | VT-66018 | [multilingual             ] Listen, Grazie mille, davvero.—copy.
+1403 | VT-35351 | [multilingual             ] Hey, ¡Excelente trabajo! Thanks.
+1404 | VT-80637 | [multilingual             ] Hey, Grazie mille, davvero.—got it.
+1405 | VT-96274 | [multilingual             ] Okay, Muito obrigado pela resposta. Please.
+1406 | VT-47271 | [multilingual             ] Heads up: Salam, sab thik hai? Please.
+1407 | VT-25870 | [multilingual             ] Reminder: धन्यवाद, फिर मिलेंगे। Please.
+1408 | VT-61619 | [multilingual             ] Bonjour, je m’appelle Alex. Please.
+1409 | VT-35351 | [multilingual             ] Hey, ¡Excelente trabajo! Thanks.
+1410 | VT-51206 | [multilingual             ] Reminder: Salam, sab thik hai?—got it.
+1411 | VT-61231 | [multilingual             ] Note: Merci beaucoup pour votre aide. For real.
+1412 | VT-16094 | [multilingual             ] Okay, こんにちは、お元気ですか。 If possible.
+1413 | VT-60537 | [multilingual             ] Okay, Bonjour, je m’appelle Alex.—copy.
+1414 | VT-75546 | [multilingual             ] Note: धन्यवाद, फिर मिलेंगे। Please.
+1415 | VT-86722 | [multilingual             ] FYI, Muito obrigado pela resposta.
+1416 | VT-31610 | [multilingual             ] Listen, धन्यवाद, फिर मिलेंगे।—copy.
+1417 | VT-34573 | [multilingual             ] Okay, Grazie mille, davvero. If possible.
+1418 | VT-81609 | [multilingual             ] Reminder: شكراً لك على المساعدة.—got it.
+1419 | VT-86852 | [multilingual             ] Okay, Merci beaucoup pour votre aide. If possible.
+1420 | VT-27609 | [multilingual             ] Listen, Olá, tudo bem? For real.
+1421 | VT-64027 | [multilingual             ] Okay, こんにちは、お元気ですか。 If possible.
+1422 | VT-72822 | [multilingual             ] FYI, Grazie mille, davvero. For real.
+1423 | VT-39755 | [multilingual             ] Reminder: Bonjour, je m’appelle Alex.—copy.
+1424 | VT-39350 | [multilingual             ] Bonjour, je m’appelle Alex.—copy.
+1425 | VT-28195 | [multilingual             ] Hey, Grazie mille, davvero. Right now.
+1426 | VT-32732 | [multilingual             ] Okay, नमस्ते, आप कैसे हैं?—got it.
+1427 | VT-39898 | [multilingual             ] Okay, 안녕하세요, 오늘 기분 어때요? If possible.
+1428 | VT-77342 | [multilingual             ] Reminder: 谢谢你的时间。 If possible.
+1429 | VT-66192 | [multilingual             ] Okay, Hasta luego, cuídate.—got it.
+1430 | VT-47271 | [multilingual             ] Heads up: Salam, sab thik hai? Please.
+1431 | VT-59306 | [multilingual             ] Note: Hasta luego, cuídate. Right now.
+1432 | VT-16034 | [multilingual             ] FYI, Guten Morgen, wie geht’s dir? Right now.
+1433 | VT-75807 | [multilingual             ] Note: Guten Morgen, wie geht’s dir? For real.
+1434 | VT-39644 | [multilingual             ] Reminder: Hola, ¿cómo estás?—got it.
+1435 | VT-47271 | [multilingual             ] Heads up: Salam, sab thik hai? Please.
+1436 | VT-47271 | [multilingual             ] Heads up: Salam, sab thik hai? Please.
+1437 | VT-96852 | [multilingual             ] Note: Salam, sab thik hai? Please.
+1438 | VT-60175 | [multilingual             ] Okay, Olá, tudo bem? For real.
+1439 | VT-49263 | [multilingual             ] Note: धन्यवाद, फिर मिलेंगे।—copy.
+1440 | VT-30833 | [multilingual             ] Listen, Salam, sab thik hai?—copy.
+1441 | VT-26756 | [multilingual             ] Note: Bonjour, je m’appelle Alex. For real.
+1442 | VT-11246 | [multilingual             ] Listen, नमस्ते, आप कैसे हैं? Please.
+1443 | VT-57609 | [multilingual             ] Listen, Muito obrigado pela resposta.—copy.
+1444 | VT-81609 | [multilingual             ] Reminder: شكراً لك على المساعدة.—got it.
+1445 | VT-57609 | [multilingual             ] Listen, Muito obrigado pela resposta.—copy.
+1446 | VT-34573 | [multilingual             ] Okay, Grazie mille, davvero. If possible.
+1447 | VT-53348 | [multilingual             ] FYI, धन्यवाद, फिर मिलेंगे। Thanks.
+1448 | VT-86852 | [multilingual             ] Okay, Merci beaucoup pour votre aide. If possible.
+1449 | VT-30281 | [multilingual             ] Note: Guten Morgen, wie geht’s dir?—got it.
+1450 | VT-60537 | [multilingual             ] Okay, Bonjour, je m’appelle Alex.—copy.

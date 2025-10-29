@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 32 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1551 | VT-450096 | [error_messages           ] FYI, FYI, Timeout waiting for the lock. If possible. — confirm.
+1552 | VT-431776 | [error_messages           ] Reminder: Rate limit exceeded; retry after 60 seconds. Thanks. — confirm.
+1553 | VT-436854 | [error_messages           ] Real talk, Okay, Rate limit exceeded; retry after 60 seconds. — got it.
+1554 | VT-422904 | [error_messages           ] Okay, FYI, Fatal: permission denied (publickey).—got it. right now.
+1555 | VT-483520 | [error_messages           ] Heads up: Dependency conflict: version mismatch. right now.
+1556 | VT-421963 | [error_messages           ] Heads up: Rate limit exceeded; retry after 60 seconds. — got it.
+1557 | VT-437336 | [error_messages           ] Quick one: Note: Connection reset by peer. For real. right now.
+1558 | VT-481810 | [error_messages           ] Listen, Hey, Fatal: permission denied (publickey). Right now. please.
+1559 | VT-478295 | [error_messages           ] Heads up: FYI, Fatal: permission denied (publickey).—got it. — got it.
+1560 | VT-435911 | [error_messages           ] Quick one: Hey, Rate limit exceeded; retry after 60 seconds. Right now. right now. (alt)
+1561 | VT-432393 | [error_messages           ] Reminder: Fatal: permission denied (publickey).—copy. — got it. (alt)
+1562 | VT-442159 | [error_messages           ] Unhandled exception: ValueError at line 42..
+1563 | VT-494699 | [error_messages           ] Heads up: Disk quota exceeded; cleanup required. For real. if you can. (alt)
+1564 | VT-493346 | [error_messages           ] Note: Listen, Dependency conflict: version mismatch.—copy. please.
+1565 | VT-462843 | [error_messages           ] Heads up: Reminder: Segmentation fault—core dumped.—copy. right now.
+1566 | VT-480824 | [error_messages           ] Note: Checksum failed; file corrupted. Thanks. right now.
+1567 | VT-433655 | [error_messages           ] Listen, Hey, Timeout waiting for the lock. Please. right now.
+1568 | VT-432890 | [error_messages           ] Okay, FYI, Connection reset by peer.—copy. thanks.
+1569 | VT-484895 | [error_messages           ] Heads up: Checksum failed; file corrupted. — now. (alt)
+1570 | VT-476756 | [error_messages           ] Real talk, Listen, Timeout waiting for the lock.—copy.. (alt)
+1571 | VT-468235 | [everyday                 ] Note: We can wrap this up by 9:00 AM. Please..
+1572 | VT-490200 | [everyday                 ] Quick one: Note: That sounds great to me.—copy. — got it.
+1573 | VT-417627 | [everyday                 ] Quick one: Call out if anything looks off. — now. (alt)
+1574 | VT-452852 | [everyday                 ] FYI, Good evening..
+1575 | VT-454617 | [everyday                 ] Listen, What’s up?—got it. please.
+1576 | VT-423941 | [everyday                 ] Listen, Do you want coffee or tea? if you can.
+1577 | VT-410209 | [everyday                 ] Okay, Long time no see. thanks.
+1578 | VT-440988 | [everyday                 ] Quick one: Note: We can wrap this up by 9:00 AM. Please. if you can.
+1579 | VT-495523 | [everyday                 ] Quick one: Reminder: Hold on a second, I'll check. Right now. right now.
+1580 | VT-477804 | [everyday                 ] Listen, Drive safe and take your time.
+1581 | VT-419091 | [everyday                 ] Quick one: Let's meet on Thursday to go over the plan..
+1582 | VT-438981 | [everyday                 ] Reminder: FYI, Good evening.—got it. right now.
+1583 | VT-455464 | [everyday                 ] Quick one: Are you free later? — got it. (alt)
+1584 | VT-412849 | [everyday                 ] Note: Did you try a different cable and port? Right now..
+1585 | VT-443181 | [everyday                 ] Listen, FYI, Let's meet on Tuesday to go over the plan.—got it. if you can.
+1586 | VT-463146 | [everyday                 ] Note: Hey, Let's meet on Sunday to go over the plan.—got it. thanks.
+1587 | VT-421493 | [everyday                 ] Reminder: I'll be at the office around noon. Thanks. — got it.
+1588 | VT-403770 | [everyday                 ] Quick one: Could you send me that file before 5:05 PM?. (alt)
+1589 | VT-459983 | [everyday                 ] Reminder: Did you try a different cable and port? — now.
+1590 | VT-417245 | [everyday                 ] Quick one: Let's meet on Thursday to go over the plan. — now.
+1591 | VT-460165 | [everyday                 ] Listen, Hey, Hey Casey, can you call me back when you get a chance?—copy. — confirm.
+1592 | VT-431632 | [everyday                 ] Listen, How have you been?.
+1593 | VT-462148 | [everyday                 ] FYI, Turn the volume down a bit, please.—copy. — now.
+1594 | VT-401177 | [everyday                 ] Note: Long time no see.
+1595 | VT-455775 | [everyday                 ] Quick one: Listen, Let me know if you need anything else. For real. if you can. (alt)
+1596 | VT-403663 | [everyday                 ] Listen, Thanks, that was super helpful. if you can.
+1597 | VT-472943 | [everyday                 ] Real talk, Okay, but what’s the worst-case scenario? — now. (alt)
+1598 | VT-438425 | [everyday                 ] Okay, Do you want to split the bill? if you can.
+1599 | VT-466655 | [everyday                 ] Note: We can wrap this up by midnight. — confirm.
+1600 | VT-453340 | [everyday                 ] FYI, Let me know if you need anything else. if you can.

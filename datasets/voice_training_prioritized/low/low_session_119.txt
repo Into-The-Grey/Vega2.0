@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 119 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+5901 | VT-302260 | [philosophical            ] FYI, FYI, To know yourself is to forget what the world taught you to be. For real. thanks. (alt)
+5902 | VT-390673 | [philosophical            ] Okay, To know yourself is to forget what the world taught you to be. If possible. thanks.
+5903 | VT-370236 | [robotic_formal           ] Note: Listen, System acknowledgment: request received and validated. For real. right now. (alt)
+5904 | VT-363464 | [robotic_formal           ] Listen, Listen, This unit has no emotional processing capabilities. Thank you. If possible. — got it.
+5905 | VT-313176 | [robotic_formal           ] Okay, Heads up: This unit has no emotional processing capabilities. Thank you. If possible. thanks. (alt)
+5906 | VT-323519 | [robotic_formal           ] Listen, Hey, This unit has no emotional processing capabilities. Thank you.—got it.
+5907 | VT-316591 | [sales_pitch              ] Listen, Heads up: Unlock premium features now with just one click! For real.
+5908 | VT-372529 | [sales_pitch              ] Listen, Hey, This offer won’t last—act today! Thanks. — now.
+5909 | VT-398669 | [sales_pitch              ] Quick one: FYI, This offer won’t last—act today! If possible. please.
+5910 | VT-375243 | [sales_pitch              ] Listen, Hey, This offer won’t last—act today! Please. — confirm.
+5911 | VT-315525 | [slang-heavy              ] Real talk, Yo, that was straight fire, no cap!.
+5912 | VT-381057 | [slang-heavy              ] Okay, She ghosted me after I dropped the bag, smh. — got it.
+5913 | VT-358028 | [slang-heavy              ] Listen, We vibin’ or what?.
+5914 | VT-381399 | [slang-heavy              ] Reminder: Yo, that was straight fire, no cap!—copy. please.
+5915 | VT-327235 | [sound_effects            ] Okay, Boom! Crash! The whole lab went dark. Please. thanks.
+5916 | VT-320585 | [sound_effects            ] Okay, Heads up: Pshhh, like air escaping a balloon of secrets. If possible. — now.
+5917 | VT-320517 | [sound_effects            ] Listen, Pshhh, like air escaping a balloon of secrets. If possible..
+5918 | VT-377832 | [sound_effects            ] Quick one: Pshhh, like air escaping a balloon of secrets. thanks. (alt)
+5919 | VT-337762 | [spelling_alphabet        ] Quick one: Reminder: My initials are N—A—A, November Alpha Alpha.—got it. please.
+5920 | VT-390096 | [spelling_alphabet        ] Listen, Note: Lowercase only: monolithicservice. Thanks. right now.
+5921 | VT-355723 | [spelling_alphabet        ] Okay, Okay, My initials are N—A—A, November Alpha Alpha. Right now. — now.
+5922 | VT-334816 | [spelling_alphabet        ] FYI, Heads up: Say it letter by letter: R—E—S—O—N—A—N—C—E. Please.
+5923 | VT-321747 | [sports_cast              ] Listen, Reminder: She nails the triple, crowd goes wild.—copy. thanks.
+5924 | VT-361433 | [sports_cast              ] Listen, Note: A new personal best by 0.12 seconds! If possible..
+5925 | VT-365597 | [sports_cast              ] Real talk, Listen, She nails the triple, crowd goes wild. Right now. — confirm.
+5926 | VT-378385 | [sports_cast              ] Okay, Break point; deep breath; serve wide. Please..
+5927 | VT-379129 | [stream_of_consciousness  ] Listen, Reminder: I was thinking about the way the light hits the wall, then the time I fell off the swing set, and maybe none of this even matters because breakfast is just sadness in a bowl, you know? If possible. (alt)
+5928 | VT-388381 | [stream_of_consciousness  ] Reminder: I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending.—copy. thanks.
+5929 | VT-399125 | [stream_of_consciousness  ] Note: Note: I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending.—copy. — confirm.
+5930 | VT-357963 | [stream_of_consciousness  ] Listen, Heads up: I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending. If possible. — now.
+5931 | VT-301792 | [trash_talk               ] Real talk, That was textbook throw—appreciate the assist.. (alt)
+5932 | VT-314871 | [trash_talk               ] Quick one: You brought a pea shooter to a boss fight. please.
+5933 | VT-320181 | [trash_talk               ] Quick one: Next time, ping before you feed. thanks.
+5934 | VT-335838 | [trash_talk               ] Reminder: Good game; uninstall only if you want peace. — confirm.
+5935 | VT-331946 | [uncertainty              ] Quick one: Note: It depends on the constraints.—got it. — got it. (alt)
+5936 | VT-324983 | [uncertainty              ] Real talk, Okay, I don’t have that info.—copy. — now.
+5937 | VT-336208 | [uncertainty              ] Reminder: Note: It depends on the constraints.—copy. if you can.
+5938 | VT-366550 | [uncertainty              ] Listen, Hey, Possibly, but unlikely. If possible.
+5939 | VT-339132 | [urls_emails_codes        ] Quick one: My handle is @zero_cool_1995. Right now. — now.
+5940 | VT-358529 | [urls_emails_codes        ] Heads up: Note: Join the room ID 834-555-120 with passcode 'orbit'. Right now. if you can.
+5941 | VT-372340 | [urls_emails_codes        ] Reminder: My handle is @zero_cool_1995. If possible. — confirm.
+5942 | VT-342176 | [urls_emails_codes        ] Okay, Hey, The repo lives at github dot com slash acme slash core. If possible..
+5943 | VT-330613 | [weather_colorful         ] Reminder: Hey, It’s a dry heat, said every liar ever. If possible.
+5944 | VT-361993 | [weather_colorful         ] Reminder: Okay, It’s nice. Suspiciously nice.—copy..
+5945 | VT-385461 | [weather_colorful         ] Note: Okay, It’s a dry heat, said every liar ever. If possible. — confirm.
+5946 | VT-316547 | [weather_colorful         ] Real talk, FYI, Humidity’s like soup—thick and gross. For real. if you can.
+5947 | VT-480970 | [addresses_generic        ] Real talk, Heads up: Unit B, second floor, back entrance. For real. if you can.
+5948 | VT-495930 | [addresses_generic        ] Note: Reminder: Use the service elevator—freight only. Right now. if you can.
+5949 | VT-447165 | [addresses_generic        ] Listen, Unit B, second floor, back entrance.—copy..
+5950 | VT-426862 | [addresses_generic        ] Heads up: Reminder: Deliver to the northeast loading dock. If possible. please.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 37 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1801 | VT-500836 | [agreements               ] Real talk, Count me on board. — now. (alt)
+1802 | VT-555154 | [agreements               ] Reminder: Reminder: Count me on board. Please. — confirm. (alt)
+1803 | VT-613139 | [agreements               ] Okay, Okay, Solid. Do it. For real.
+1804 | VT-636701 | [agreements               ] Quick one: Heads up: Count me on board. Please. if you can.
+1805 | VT-555317 | [agreements               ] Heads up: Agreed—let’s lock it. If possible. if you can.
+1806 | VT-556291 | [agreements               ] Listen, Count me on board. Right now..
+1807 | VT-588332 | [agreements               ] Note: Reminder: That’s a yes from me. For real. if you can.
+1808 | VT-615048 | [agreements               ] Listen, Hey, Approved.—copy. if you can. (alt)
+1809 | VT-539298 | [agreements               ] Reminder: That’s a yes from me. Right now. thanks.
+1810 | VT-635283 | [agreements               ] Copy that. Right now. please. (alt)
+1811 | VT-684652 | [agreements               ] Quick one: Heads up: Agreed—let’s lock it.—copy..
+1812 | VT-589519 | [agreements               ] Note: FYI, Yep, that works for me. For real.. (alt)
+1813 | VT-692678 | [agreements               ] Reminder: FYI, I’m in. If possible.
+1814 | VT-654727 | [agreements               ] Heads up: Count me on board. For real. — confirm.
+1815 | VT-661985 | [agreements               ] FYI, Reminder: Count me on board. If possible. — now. (alt)
+1816 | VT-547183 | [agreements               ] Listen, Heads up: Count me on board.—copy. thanks.
+1817 | VT-523685 | [denials_corrections      ] Real talk, Heads up: You mixed up the units again. For real. thanks.
+1818 | VT-671228 | [denials_corrections      ] Listen, Reminder: Amend the record accordingly. if you can.
+1819 | VT-519745 | [denials_corrections      ] Note: Heads up: You mixed up the units again. Thanks. right now.
+1820 | VT-646602 | [denials_corrections      ] Heads up: Listen, That assumption falls apart under pressure. If possible. — confirm.
+1821 | VT-690778 | [denials_corrections      ] Reminder: False—cite your source. — got it. (alt)
+1822 | VT-665847 | [denials_corrections      ] Real talk, Okay, Close, but not quite. Right now. — confirm.
+1823 | VT-500089 | [denials_corrections      ] Heads up: Hey, No, that's not accurate.—copy. please.
+1824 | VT-693257 | [denials_corrections      ] Okay, Heads up: You mixed up the units again. For real..
+1825 | VT-571138 | [denials_corrections      ] Quick one: Close, but not quite.—got it. right now. (alt)
+1826 | VT-652742 | [denials_corrections      ] Okay, Heads up: That assumption falls apart under pressure. Right now. — now.
+1827 | VT-586795 | [denials_corrections      ] FYI, Okay, That was my mistake; here’s the fix. Right now. — confirm.
+1828 | VT-626155 | [denials_corrections      ] Listen, Note: False—cite your source. Thanks. — got it. (alt)
+1829 | VT-525861 | [denials_corrections      ] Real talk, Hey, Amend the record accordingly. Right now. — now.
+1830 | VT-679188 | [denials_corrections      ] Okay, Listen, Negative—try a different approach. — got it.
+1831 | VT-649216 | [denials_corrections      ] Reminder: FYI, Close, but not quite. For real.. (alt)
+1832 | VT-580498 | [denials_corrections      ] Okay, No, that's not accurate. — got it. (alt)
+1833 | VT-555301 | [denials_corrections      ] Quick one: FYI, Amend the record accordingly.—copy. — confirm.
+1834 | VT-581068 | [denials_corrections      ] Okay, You mixed up the units again.—copy. (alt)
+1835 | VT-690326 | [denials_corrections      ] Heads up: Close, but not quite. if you can.
+1836 | VT-605920 | [denials_corrections      ] Note: Okay, That was my mistake; here’s the fix. Right now.. (alt)
+1837 | VT-512459 | [denials_corrections      ] Reminder: That was my mistake; here’s the fix.—got it. right now. (alt)
+1838 | VT-660531 | [denials_corrections      ] Reminder: That was my mistake; here’s the fix. Right now. right now. (alt)
+1839 | VT-619413 | [denials_corrections      ] Note: Hey, Amend the record accordingly. Please..
+1840 | VT-627833 | [denials_corrections      ] Heads up: Hey, No, that's not accurate.—copy. — confirm.
+1841 | VT-618745 | [denials_corrections      ] Heads up: FYI, No, that's not accurate. If possible. — confirm.
+1842 | VT-656204 | [denials_corrections      ] Note: That was my mistake; here’s the fix.—got it. — confirm.
+1843 | VT-670914 | [denials_corrections      ] FYI, Heads up: Close, but not quite. If possible. please.
+1844 | VT-694654 | [denials_corrections      ] Heads up: Listen, Retract the last statement.—copy..
+1845 | VT-576120 | [denials_corrections      ] Listen, Retract the last statement. Right now. — confirm.
+1846 | VT-589178 | [denials_corrections      ] Real talk, Note: Retract the last statement. Right now. right now.
+1847 | VT-699586 | [denials_corrections      ] Heads up: Heads up: Amend the record accordingly.—got it.
+1848 | VT-538641 | [denials_corrections      ] FYI, Listen, That assumption falls apart under pressure. If possible. thanks.
+1849 | VT-508392 | [denials_corrections      ] Heads up: Hey, That assumption falls apart under pressure. Please. if you can.
+1850 | VT-680893 | [denials_corrections      ] Reminder: No, that's not accurate. For real. — confirm.

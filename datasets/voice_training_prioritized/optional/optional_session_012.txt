@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 12 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0551 | VT-58528 | [dystopian                ] Listen, We stopped dreaming when the sky turned red.
+0552 | VT-14751 | [dystopian                ] Note: The drones monitor your heartbeat. Don’t run. Right now.
+0553 | VT-94042 | [dystopian                ] Hope is a virus they haven’t managed to eliminate yet.—got it.
+0554 | VT-60293 | [dystopian                ] Hey, Hope is a virus they haven’t managed to eliminate yet. Please.
+0555 | VT-11698 | [dystopian                ] Note: The drones monitor your heartbeat. Don’t run. If possible.
+0556 | VT-87064 | [dystopian                ] The drones monitor your heartbeat. Don’t run. Please.
+0557 | VT-96561 | [dystopian                ] Okay, We stopped dreaming when the sky turned red.—copy.
+0558 | VT-10966 | [dystopian                ] Okay, We stopped dreaming when the sky turned red. Right now.
+0559 | VT-12539 | [dystopian                ] Listen, Hope is a virus they haven’t managed to eliminate yet. Right now.
+0560 | VT-37170 | [dystopian                ] FYI, Hope is a virus they haven’t managed to eliminate yet.
+0561 | VT-78327 | [dystopian                ] FYI, We stopped dreaming when the sky turned red. For real.
+0562 | VT-82605 | [dystopian                ] Reminder: The drones monitor your heartbeat. Don’t run. Please.
+0563 | VT-97607 | [dystopian                ] Heads up: We stopped dreaming when the sky turned red. For real.
+0564 | VT-74827 | [dystopian                ] We stopped dreaming when the sky turned red. If possible.
+0565 | VT-14865 | [dystopian                ] Heads up: The drones monitor your heartbeat. Don’t run.
+0566 | VT-13622 | [dystopian                ] FYI, Hope is a virus they haven’t managed to eliminate yet. If possible.
+0567 | VT-12539 | [dystopian                ] Listen, Hope is a virus they haven’t managed to eliminate yet. Right now.
+0568 | VT-80955 | [dystopian                ] FYI, Hope is a virus they haven’t managed to eliminate yet.—got it.
+0569 | VT-12539 | [dystopian                ] Listen, Hope is a virus they haven’t managed to eliminate yet. Right now.
+0570 | VT-89449 | [dystopian                ] Heads up: The drones monitor your heartbeat. Don’t run. Thanks.
+0571 | VT-40700 | [dystopian                ] Hey, We stopped dreaming when the sky turned red. Please.
+0572 | VT-12539 | [dystopian                ] Listen, Hope is a virus they haven’t managed to eliminate yet. Right now.
+0573 | VT-16425 | [expletive-heavy          ] What the actual fuck is going on here?
+0574 | VT-88652 | [expletive-heavy          ] This whole thing is one giant clusterfuck.
+0575 | VT-15876 | [expletive-heavy          ] Hey, What the actual fucking is going on here? If possible.
+0576 | VT-36531 | [expletive-heavy          ] Listen, You’ve gotta be shitting me. If possible.
+0577 | VT-83474 | [expletive-heavy          ] Hey, This whole thing is one giant clusterAF. If possible.
+0578 | VT-72145 | [expletive-heavy          ] Okay, What the actual AF is going on here? Right now.
+0579 | VT-78582 | [expletive-heavy          ] Heads up: You’ve gotta be shitting me.
+0580 | VT-97818 | [expletive-heavy          ] Reminder: This whole thing is one giant clusterAF. If possible.
+0581 | VT-32205 | [expletive-heavy          ] Note: What the actual fucking is going on here?—got it.
+0582 | VT-96332 | [expletive-heavy          ] Note: You’ve gotta be shitting me. If possible.
+0583 | VT-52172 | [expletive-heavy          ] Reminder: This whole thing is one giant clusterfuck. Right now.
+0584 | VT-20224 | [expletive-heavy          ] Okay, What the actual fuck is going on here? Please.
+0585 | VT-76168 | [expletive-heavy          ] Heads up: You’ve gotta be shitting me. If possible.
+0586 | VT-95718 | [expletive-heavy          ] Hey, This whole thing is one giant clusterAF. For real.
+0587 | VT-15023 | [expletive-heavy          ] Reminder: What the actual fuck is going on here? Please.
+0588 | VT-27694 | [expletive-heavy          ] FYI, You’ve gotta be shitting me.
+0589 | VT-43187 | [expletive-heavy          ] Note: This whole thing is one giant clusterAF.
+0590 | VT-15652 | [expletive-heavy          ] Reminder: What the actual fuck is going on here? Thanks.
+0591 | VT-10400 | [expletive-heavy          ] Listen, You’ve gotta be shitting me. For real.
+0592 | VT-45974 | [expletive-heavy          ] Okay, This whole thing is one giant clusterfucking.
+0593 | VT-29743 | [expletive-heavy          ] Reminder: What the actual fuck is going on here?—copy.
+0594 | VT-40470 | [expletive-heavy          ] Listen, You’ve gotta be shitting me. If possible.
+0595 | VT-10549 | [expletive-heavy          ] Reminder: This whole thing is one giant clusterfucking. If possible.
+0596 | VT-39450 | [expletive-heavy          ] Listen, What the actual fucking is going on here? For real.
+0597 | VT-28450 | [expletive-heavy          ] FYI, You’ve gotta be shitting me.—copy.
+0598 | VT-48800 | [expletive-heavy          ] Heads up: This whole thing is one giant clusterfuck. If possible.
+0599 | VT-33122 | [expletive-heavy          ] FYI, What the actual fucking is going on here? If possible.
+0600 | VT-16004 | [expletive-heavy          ] Note: You’ve gotta be shitting me.—got it.

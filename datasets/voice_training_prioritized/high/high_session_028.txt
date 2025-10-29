@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 28 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1351 | VT-96720 | [numbers_large            ] Reminder: Nine hundred ninety-nine million, give or take. (9610) Thanks.
+1352 | VT-90916 | [numbers_large            ] Nine hundred ninety-nine million, give or take. (1594)—copy.
+1353 | VT-88067 | [numbers_large            ] FYI, Budget shortfall is $1.2 million. (5649) Right now.
+1354 | VT-44694 | [numbers_large            ] Reminder: Retry after 10^6 iterations. (2937) Please.
+1355 | VT-20354 | [numbers_large            ] Heads up: Compute with 3,456,789 samples. (653) Thanks.
+1356 | VT-91185 | [numbers_large            ] FYI, Pi to ten decimals: 3.1415926535. (4948)—copy.
+1357 | VT-15878 | [numbers_large            ] Hey, Compute with 3,456,789 samples. (9233) Please.
+1358 | VT-91185 | [numbers_large            ] FYI, Pi to ten decimals: 3.1415926535. (4948)—copy.
+1359 | VT-20513 | [numbers_large            ] Okay, Throughput peaked at 120,000 requests per second. (7251) Please.
+1360 | VT-62058 | [numbers_large            ] Reminder: Compute with 3,456,789 samples. (1594) For real.
+1361 | VT-91185 | [numbers_large            ] FYI, Pi to ten decimals: 3.1415926535. (4948)—copy.
+1362 | VT-36934 | [numeric                  ] Reminder: The total comes to $9,693.94.
+1363 | VT-22988 | [numeric                  ] Hey, The invoice date is 2023-06-05. If possible.
+1364 | VT-46061 | [numeric                  ] Order #840058 confirmed. Thanks.
+1365 | VT-0149 | [numeric                  ] Temperature is -14°F right now.
+1366 | VT-57459 | [numeric                  ] FYI, Call me at (864) 618-2911.—got it.
+1367 | VT-60581 | [numeric                  ] Listen, The invoice date is 2005-06-26. Please.
+1368 | VT-0157 | [numeric                  ] Ship it to: 123 Maple St., Springfield, IL 62704
+1369 | VT-36934 | [numeric                  ] Reminder: The total comes to $9,693.94.
+1370 | VT-17090 | [numeric                  ] Reminder: Call me at (681) 244-7338. Right now.
+1371 | VT-62861 | [numeric                  ] FYI, The invoice date is 2023-06-21. For real.
+1372 | VT-15871 | [numeric                  ] Listen, Event date: 2003-01-25 at 7:22 PM. For real.
+1373 | VT-76165 | [numeric                  ] Listen, Ship it to: 123 Maple St., Springfield, IL 62704 If possible.
+1374 | VT-80303 | [numeric                  ] Reminder: The server’s IP is 211.148.19.33. For real.
+1375 | VT-34446 | [numeric                  ] Note: My backup number is (654) 655-4868. Thanks.
+1376 | VT-74592 | [numeric                  ] FYI, My backup number is (654) 655-4868. Please.
+1377 | VT-77762 | [numeric                  ] Note: The invoice date is 2000-09-23.
+1378 | VT-57556 | [numeric                  ] Reminder: The server’s IP is 234.236.45.107.—copy.
+1379 | VT-53348 | [numeric                  ] Listen, My backup number is (800) 421-4817. Thanks.
+1380 | VT-0129 | [numeric                  ] My backup number is (275) 517-8565.
+1381 | VT-15871 | [numeric                  ] Listen, Event date: 2003-01-25 at 7:22 PM. For real.
+1382 | VT-33153 | [numeric                  ] Listen, The invoice date is 2016-09-10. Thanks.
+1383 | VT-0128 | [numeric                  ] Temperature is 50°F right now.
+1384 | VT-50430 | [numeric                  ] FYI, My backup number is (865) 485-5089.—copy.
+1385 | VT-0157 | [numeric                  ] Ship it to: 123 Maple St., Springfield, IL 62704
+1386 | VT-95048 | [numeric                  ] FYI, Ship it to: 605 Sunset Terrace, Nashville, TN 37201 If possible.
+1387 | VT-15683 | [numeric                  ] Okay, Call me at (583) 429-1461.—got it.
+1388 | VT-81453 | [numeric                  ] Hey, The total comes to $56.96. Right now.
+1389 | VT-42051 | [numeric                  ] Listen, Event date: 1994-06-13 at 7:30 AM. For real.
+1390 | VT-17941 | [numeric                  ] Hey, Call me at (864) 618-2911. Thanks.
+1391 | VT-45201 | [numeric                  ] Note: Call me at (681) 244-7338. Please.
+1392 | VT-0149 | [numeric                  ] Temperature is -14°F right now.
+1393 | VT-24597 | [numeric                  ] Hey, My backup number is (448) 251-9700.—copy.
+1394 | VT-55818 | [numeric                  ] Reminder: My backup number is (926) 266-9882.—got it.
+1395 | VT-85052 | [numeric                  ] Listen, Temperature is 44°F right now. Thanks.
+1396 | VT-56920 | [numeric                  ] Heads up: The total comes to $9,693.94.—got it.
+1397 | VT-97492 | [numeric                  ] Hey, The invoice date is 2010-05-27. For real.
+1398 | VT-77762 | [numeric                  ] Note: The invoice date is 2000-09-23.
+1399 | VT-55818 | [numeric                  ] Reminder: My backup number is (926) 266-9882.—got it.
+1400 | VT-21742 | [numeric                  ] Reminder: Call me at (760) 717-4312. Right now.

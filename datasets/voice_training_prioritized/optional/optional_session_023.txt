@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 23 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1101 | VT-95718 | [glitchy_ai               ] Okay, Error…voice…loop…loop…loop…disconn//ect. Right now.
+1102 | VT-34288 | [glitchy_ai               ] Note: I… I… I can’t… complete… th-th-this… sentence.
+1103 | VT-18963 | [glitchy_ai               ] Okay, Syntax failure. Restarting neural core in 3... 2... Please.
+1104 | VT-83429 | [glitchy_ai               ] I… I… I can’t… complete… th-th-this… sentence. Please.
+1105 | VT-29583 | [glitchy_ai               ] FYI, Syntax failure. Restarting neural core in 3... 2...—copy.
+1106 | VT-25545 | [glitchy_ai               ] Note: Error…voice…loop…loop…loop…disconn//ect. For real.
+1107 | VT-16158 | [glitchy_ai               ] Note: Error…voice…loop…loop…loop…disconn//ect. Thanks.
+1108 | VT-26712 | [glitchy_ai               ] FYI, I… I… I can’t… complete… th-th-this… sentence.
+1109 | VT-95074 | [glitchy_ai               ] FYI, I… I… I can’t… complete… th-th-this… sentence. Please.
+1110 | VT-51587 | [glitchy_ai               ] Note: Error…voice…loop…loop…loop…disconn//ect. Thanks.
+1111 | VT-59979 | [glitchy_ai               ] Heads up: Syntax failure. Restarting neural core in 3... 2... Please.
+1112 | VT-78889 | [glitchy_ai               ] I… I… I can’t… complete… th-th-this… sentence. If possible.
+1113 | VT-66221 | [glitchy_ai               ] Note: Syntax failure. Restarting neural core in 3... 2... If possible.
+1114 | VT-13080 | [glitchy_ai               ] Heads up: I… I… I can’t… complete… th-th-this… sentence. If possible.
+1115 | VT-21719 | [glitchy_ai               ] Okay, I… I… I can’t… complete… th-th-this… sentence.
+1116 | VT-92069 | [glitchy_ai               ] Hey, I… I… I can’t… complete… th-th-this… sentence. Thanks.
+1117 | VT-51587 | [glitchy_ai               ] Note: Error…voice…loop…loop…loop…disconn//ect. Thanks.
+1118 | VT-51587 | [glitchy_ai               ] Note: Error…voice…loop…loop…loop…disconn//ect. Thanks.
+1119 | VT-79415 | [glitchy_ai               ] Syntax failure. Restarting neural core in 3... 2... For real.
+1120 | VT-97075 | [glitchy_ai               ] Reminder: I… I… I can’t… complete… th-th-this… sentence.—got it.
+1121 | VT-33709 | [glitchy_ai               ] Syntax failure. Restarting neural core in 3... 2... Right now.
+1122 | VT-10994 | [glitchy_ai               ] Heads up: Syntax failure. Restarting neural core in 3... 2... Right now.
+1123 | VT-91471 | [glitchy_ai               ] Syntax failure. Restarting neural core in 3... 2...
+1124 | VT-58481 | [glitchy_ai               ] I… I… I can’t… complete… th-th-this… sentence. Thanks.
+1125 | VT-81427 | [glitchy_ai               ] Note: I… I… I can’t… complete… th-th-this… sentence.
+1126 | VT-63628 | [glitchy_ai               ] FYI, Syntax failure. Restarting neural core in 3... 2...—got it.
+1127 | VT-55233 | [glitchy_ai               ] Error…voice…loop…loop…loop…disconn//ect.
+1128 | VT-49967 | [glitchy_ai               ] Heads up: Syntax failure. Restarting neural core in 3... 2... For real.
+1129 | VT-55233 | [glitchy_ai               ] Error…voice…loop…loop…loop…disconn//ect.
+1130 | VT-24052 | [glitchy_ai               ] Listen, I… I… I can’t… complete… th-th-this… sentence. For real.
+1131 | VT-25523 | [glitchy_ai               ] Syntax failure. Restarting neural core in 3... 2...
+1132 | VT-73896 | [glitchy_ai               ] Listen, Error…voice…loop…loop…loop…disconn//ect. Right now.
+1133 | VT-73296 | [glitchy_ai               ] Note: I… I… I can’t… complete… th-th-this… sentence. Right now.
+1134 | VT-60872 | [glitchy_ai               ] Okay, I… I… I can’t… complete… th-th-this… sentence. Right now.
+1135 | VT-13080 | [glitchy_ai               ] Heads up: I… I… I can’t… complete… th-th-this… sentence. If possible.
+1136 | VT-77622 | [glitchy_ai               ] Hey, Syntax failure. Restarting neural core in 3... 2... For real.
+1137 | VT-97177 | [glitchy_ai               ] Reminder: Syntax failure. Restarting neural core in 3... 2... Right now.
+1138 | VT-59691 | [glitchy_ai               ] Listen, Error…voice…loop…loop…loop…disconn//ect. Please.
+1139 | VT-69027 | [glitchy_ai               ] Okay, I… I… I can’t… complete… th-th-this… sentence. For real.
+1140 | VT-45947 | [glitchy_ai               ] Hey, I… I… I can’t… complete… th-th-this… sentence.
+1141 | VT-82332 | [glitchy_ai               ] Okay, Error…voice…loop…loop…loop…disconn//ect. Right now.
+1142 | VT-16158 | [glitchy_ai               ] Note: Error…voice…loop…loop…loop…disconn//ect. Thanks.
+1143 | VT-87636 | [glitchy_ai               ] Hey, Syntax failure. Restarting neural core in 3... 2...
+1144 | VT-27371 | [glitchy_ai               ] FYI, Syntax failure. Restarting neural core in 3... 2... If possible.
+1145 | VT-34459 | [glitchy_ai               ] I… I… I can’t… complete… th-th-this… sentence. Thanks.
+1146 | VT-13080 | [glitchy_ai               ] Heads up: I… I… I can’t… complete… th-th-this… sentence. If possible.
+1147 | VT-32901 | [glitchy_ai               ] Heads up: Syntax failure. Restarting neural core in 3... 2... If possible.
+1148 | VT-98665 | [glitchy_ai               ] Reminder: Error…voice…loop…loop…loop…disconn//ect. If possible.
+1149 | VT-77230 | [glitchy_ai               ] Reminder: Syntax failure. Restarting neural core in 3... 2...—got it.
+1150 | VT-54349 | [glitchy_ai               ] Hey, Syntax failure. Restarting neural core in 3... 2...—got it.

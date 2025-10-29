@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 47 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2301 | VT-57307 | [medical                  ] FYI, Administer 0.4 mg sublingual nitroglycerin. Thanks.
+2302 | VT-70726 | [medical                  ] Reminder: Allergic to penicillin; note in the chart. Please.
+2303 | VT-42186 | [medical                  ] Note: Document informed consent prior to procedure. Thanks.
+2304 | VT-51867 | [medical                  ] Heads up: Patient reports acute onset of chest discomfort.—copy.
+2305 | VT-24115 | [medical                  ] Note: Administer 0.4 mg sublingual nitroglycerin. Please.
+2306 | VT-46565 | [medical                  ] FYI, Prescribe naproxen, take with food. Thanks.
+2307 | VT-61732 | [medical                  ] Heads up: Order a CBC and comprehensive metabolic panel. For real.
+2308 | VT-16751 | [medical                  ] FYI, Administer 0.4 mg sublingual nitroglycerin.—got it.
+2309 | VT-17023 | [medical                  ] Hey, Vitals stable; maintain IV fluids at 75 mL per hour. For real.
+2310 | VT-94198 | [medical                  ] Okay, Schedule an MRI with contrast, stat. Right now.
+2311 | VT-64774 | [medical                  ] Okay, Patient reports acute onset of chest discomfort.—got it.
+2312 | VT-26352 | [medical                  ] Listen, Schedule an MRI with contrast, stat. If possible.
+2313 | VT-27614 | [medical                  ] FYI, Patient reports acute onset of chest discomfort.—got it.
+2314 | VT-33496 | [medical                  ] Patient reports acute onset of chest discomfort.
+2315 | VT-60485 | [medical                  ] Schedule an MRI with contrast, stat.
+2316 | VT-17236 | [medical                  ] Heads up: Administer 0.4 mg sublingual nitroglycerin. Please.
+2317 | VT-13157 | [medical                  ] FYI, Allergic to penicillin; note in the chart.—got it.
+2318 | VT-96257 | [medical                  ] Okay, Prescribe naproxen, take with food. Thanks.
+2319 | VT-44433 | [medical                  ] Prescribe naproxen, take with food.—copy.
+2320 | VT-13214 | [medical                  ] FYI, Schedule an MRI with contrast, stat.—copy.
+2321 | VT-57175 | [medical                  ] Note: Advise RICE protocol for ankle sprain. Please.
+2322 | VT-80561 | [medical                  ] Hey, Administer 0.4 mg sublingual nitroglycerin. Thanks.
+2323 | VT-98782 | [medical                  ] Vitals stable; maintain IV fluids at 75 mL per hour. Right now.
+2324 | VT-70376 | [medical                  ] Order a CBC and comprehensive metabolic panel. Right now.
+2325 | VT-99346 | [medical                  ] Heads up: Allergic to penicillin; note in the chart. If possible.
+2326 | VT-74209 | [medical                  ] Heads up: Rule out pulmonary embolism with D‑dimer. For real.
+2327 | VT-31723 | [medical                  ] Heads up: Administer 0.4 mg sublingual nitroglycerin. Please.
+2328 | VT-74209 | [medical                  ] Heads up: Rule out pulmonary embolism with D‑dimer. For real.
+2329 | VT-32529 | [medical                  ] Note: Administer 0.4 mg sublingual nitroglycerin. For real.
+2330 | VT-51867 | [medical                  ] Heads up: Patient reports acute onset of chest discomfort.—copy.
+2331 | VT-28377 | [medical                  ] Listen, Allergic to penicillin; note in the chart.—copy.
+2332 | VT-26674 | [medical                  ] Okay, Patient reports acute onset of chest discomfort. Thanks.
+2333 | VT-43562 | [medical                  ] Heads up: Order a CBC and comprehensive metabolic panel. For real.
+2334 | VT-20232 | [medical                  ] Okay, Rule out pulmonary embolism with D‑dimer.—copy.
+2335 | VT-24063 | [medical                  ] Okay, Allergic to penicillin; note in the chart.—got it.
+2336 | VT-81954 | [medical                  ] Hey, Advise RICE protocol for ankle sprain. For real.
+2337 | VT-42309 | [medical                  ] Okay, Patient reports acute onset of chest discomfort.
+2338 | VT-88879 | [medical                  ] Hey, Rule out pulmonary embolism with D‑dimer. For real.
+2339 | VT-86665 | [medical                  ] Okay, Document informed consent prior to procedure. Thanks.
+2340 | VT-63523 | [medical                  ] Okay, Rule out pulmonary embolism with D‑dimer.—got it.
+2341 | VT-54077 | [medical                  ] FYI, Advise RICE protocol for ankle sprain.—got it.
+2342 | VT-28004 | [medical                  ] FYI, Schedule an MRI with contrast, stat. Please.
+2343 | VT-24115 | [medical                  ] Note: Administer 0.4 mg sublingual nitroglycerin. Please.
+2344 | VT-58115 | [medical                  ] Okay, Schedule an MRI with contrast, stat. If possible.
+2345 | VT-76700 | [medical                  ] Okay, Vitals stable; maintain IV fluids at 75 mL per hour. Please.
+2346 | VT-86665 | [medical                  ] Okay, Document informed consent prior to procedure. Thanks.
+2347 | VT-86665 | [medical                  ] Okay, Document informed consent prior to procedure. Thanks.
+2348 | VT-88409 | [medical                  ] Note: Document informed consent prior to procedure. Thanks.
+2349 | VT-21304 | [medical                  ] Heads up: Vitals stable; maintain IV fluids at 75 mL per hour.
+2350 | VT-38888 | [medical                  ] FYI, Vitals stable; maintain IV fluids at 75 mL per hour. Please.

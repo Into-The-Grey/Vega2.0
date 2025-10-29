@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 6 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0251 | VT-98965 | [emotional                ] Note: I'm so proud of how far we've come. Thanks.
+0252 | VT-89358 | [emotional                ] I miss you more than words can say. Thanks.
+0253 | VT-97567 | [emotional                ] Note: Why does everything have to hurt so much?—copy.
+0254 | VT-70352 | [emotional                ] Okay, I miss you more than words can say. Please.
+0255 | VT-50859 | [emotional                ] Hey, Why does everything have to hurt so much? For real.
+0256 | VT-92641 | [emotional                ] Heads up: I'm so proud of how far we've come. Thanks.
+0257 | VT-59749 | [emotional                ] Heads up: Why does everything have to hurt so much? If possible.
+0258 | VT-14482 | [emotional                ] Okay, Why does everything have to hurt so much?
+0259 | VT-85236 | [emotional                ] Hey, Why does everything have to hurt so much? Thanks.
+0260 | VT-73902 | [emotional                ] Okay, I'm so proud of how far we've come. Please.
+0261 | VT-68823 | [emotional                ] Why does everything have to hurt so much?
+0262 | VT-42452 | [emotional                ] Why does everything have to hurt so much? For real.
+0263 | VT-39556 | [emotional                ] Note: I'm so proud of how far we've come. Thanks.
+0264 | VT-71711 | [emotional                ] Heads up: I miss you more than words can say.—got it.
+0265 | VT-27341 | [emotional                ] Heads up: I miss you more than words can say.
+0266 | VT-39556 | [emotional                ] Note: I'm so proud of how far we've come. Thanks.
+0267 | VT-24337 | [emotional                ] Hey, Why does everything have to hurt so much?—got it.
+0268 | VT-24823 | [emotional                ] Hey, Why does everything have to hurt so much? Please.
+0269 | VT-76797 | [emotional                ] Hey, I'm so proud of how far we've come. For real.
+0270 | VT-33366 | [emotional                ] Hey, Why does everything have to hurt so much? Please.
+0271 | VT-53100 | [emotional                ] Reminder: Why does everything have to hurt so much?—copy.
+0272 | VT-31470 | [emotional                ] Reminder: I'm so proud of how far we've come. Right now.
+0273 | VT-38380 | [emotional                ] Listen, I'm so proud of how far we've come. Please.
+0274 | VT-28308 | [emotional                ] FYI, I miss you more than words can say. Please.
+0275 | VT-43236 | [emotional                ] Heads up: I miss you more than words can say. Thanks.
+0276 | VT-98965 | [emotional                ] Note: I'm so proud of how far we've come. Thanks.
+0277 | VT-17680 | [emotional                ] Hey, Why does everything have to hurt so much?—copy.
+0278 | VT-57521 | [emotional                ] I'm so proud of how far we've come. Thanks.
+0279 | VT-33594 | [emotional                ] Hey, I miss you more than words can say. If possible.
+0280 | VT-25008 | [emotional                ] FYI, I miss you more than words can say.—got it.
+0281 | VT-74501 | [emotional                ] Okay, Why does everything have to hurt so much? Right now.
+0282 | VT-74994 | [emotional                ] Hey, I miss you more than words can say. Right now.
+0283 | VT-38380 | [emotional                ] Listen, I'm so proud of how far we've come. Please.
+0284 | VT-11111 | [emotional                ] FYI, I'm so proud of how far we've come.
+0285 | VT-20387 | [emotional                ] Listen, Why does everything have to hurt so much? Please.
+0286 | VT-15682 | [emotional                ] Reminder: Why does everything have to hurt so much?—got it.
+0287 | VT-40462 | [emotional                ] Listen, Why does everything have to hurt so much?—copy.
+0288 | VT-42194 | [emotional                ] Heads up: I'm so proud of how far we've come. Right now.
+0289 | VT-75821 | [emotional                ] FYI, I miss you more than words can say. If possible.
+0290 | VT-73333 | [emotional                ] Note: I'm so proud of how far we've come. Please.
+0291 | VT-99714 | [emotional                ] I miss you more than words can say. Right now.
+0292 | VT-18512 | [emotional                ] I'm so proud of how far we've come. For real.
+0293 | VT-22433 | [emotional                ] Note: I miss you more than words can say.—got it.
+0294 | VT-92641 | [emotional                ] Heads up: I'm so proud of how far we've come. Thanks.
+0295 | VT-99714 | [emotional                ] I miss you more than words can say. Right now.
+0296 | VT-89080 | [emotional                ] I miss you more than words can say.—got it.
+0297 | VT-89080 | [emotional                ] I miss you more than words can say.—got it.
+0298 | VT-49902 | [emotional                ] Heads up: I'm so proud of how far we've come. Right now.
+0299 | VT-14239 | [emotional                ] I'm so proud of how far we've come. If possible.
+0300 | VT-98352 | [emotional                ] Reminder: Why does everything have to hurt so much? Thanks.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 21 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1001 | VT-73394 | [measurements_units       ] Heads up: Fan speed at forty percent. (3030) For real.
+1002 | VT-49811 | [measurements_units       ] Note: Hold temperature at 205 Celsius. (6101)—got it.
+1003 | VT-19164 | [measurements_units       ] Hold temperature at 205 Celsius. (8087)—copy.
+1004 | VT-52044 | [measurements_units       ] Print at 0.2 millimeter layer height. (3559)
+1005 | VT-79604 | [measurements_units       ] Hey, Tolerance is plus or minus 0.05 millimeters. (5976) Please.
+1006 | VT-31430 | [measurements_units       ] Heads up: Hold temperature at 205 Celsius. (6206) Right now.
+1007 | VT-26386 | [measurements_units       ] Note: Maintain 24 volts at 3 amps. (4872) Thanks.
+1008 | VT-25091 | [measurements_units       ] Hey, Print at 0.2 millimeter layer height. (5616)—copy.
+1009 | VT-52044 | [measurements_units       ] Print at 0.2 millimeter layer height. (3559)
+1010 | VT-89324 | [measurements_units       ] Heads up: Hold temperature at 205 Celsius. (5287) Thanks.
+1011 | VT-76532 | [measurements_units       ] Print at 0.2 millimeter layer height. (3540) Please.
+1012 | VT-16203 | [measurements_units       ] Reminder: Torque the bolt to 6 newton-meters. (4652)—copy.
+1013 | VT-51433 | [measurements_units       ] Heads up: Mix 2:1 by volume, not weight. (8819)
+1014 | VT-18707 | [measurements_units       ] Tolerance is plus or minus 0.05 millimeters. (7821) Please.
+1015 | VT-56114 | [measurements_units       ] Heads up: Cut the rod to 145 millimeters. (8179)—copy.
+1016 | VT-86049 | [measurements_units       ] Listen, Density measured at 1.24 grams per cubic centimeter. (2763)—copy.
+1017 | VT-80293 | [measurements_units       ] Note: Fan speed at forty percent. (7009)
+1018 | VT-61097 | [measurements_units       ] FYI, Maintain 24 volts at 3 amps. (8528) For real.
+1019 | VT-52412 | [measurements_units       ] Density measured at 1.24 grams per cubic centimeter.
+1020 | VT-87407 | [measurements_units       ] Okay, Fan speed at forty percent. (7590)
+1021 | VT-67580 | [measurements_units       ] Listen, Torque the bolt to 6 newton-meters. (7066) Please.
+1022 | VT-81078 | [measurements_units       ] Fan speed at forty percent. (2465) For real.
+1023 | VT-80861 | [measurements_units       ] Listen, Maintain 24 volts at 3 amps. (4170)
+1024 | VT-63706 | [measurements_units       ] FYI, Cut the rod to 145 millimeters. (8718) Thanks.
+1025 | VT-18745 | [measurements_units       ] Okay, Print at 0.2 millimeter layer height. (5020)—copy.
+1026 | VT-16213 | [measurements_units       ] Note: Cut the rod to 145 millimeters. (6335)
+1027 | VT-11221 | [measurements_units       ] Tolerance is plus or minus 0.05 millimeters.
+1028 | VT-19164 | [measurements_units       ] Hold temperature at 205 Celsius. (8087)—copy.
+1029 | VT-58082 | [measurements_units       ] Reminder: Hold temperature at 205 Celsius. (9417) Thanks.
+1030 | VT-31268 | [measurements_units       ] Okay, Print at 0.2 millimeter layer height. (9817)—got it.
+1031 | VT-93319 | [measurements_units       ] Reminder: Maintain 24 volts at 3 amps. (2617) If possible.
+1032 | VT-99437 | [measurements_units       ] Okay, Fan speed at forty percent. (9074) For real.
+1033 | VT-50590 | [measurements_units       ] Maintain 24 volts at 3 amps. (3871)—got it.
+1034 | VT-56114 | [measurements_units       ] Heads up: Cut the rod to 145 millimeters. (8179)—copy.
+1035 | VT-57126 | [measurements_units       ] Cut the rod to 145 millimeters.
+1036 | VT-89753 | [measurements_units       ] Listen, Maintain 24 volts at 3 amps. (7165) Thanks.
+1037 | VT-74002 | [measurements_units       ] Okay, Maintain 24 volts at 3 amps. (3430) Thanks.
+1038 | VT-42634 | [measurements_units       ] Bed level offset minus 0.12 millimeters. (2104) Right now.
+1039 | VT-74002 | [measurements_units       ] Okay, Maintain 24 volts at 3 amps. (3430) Thanks.
+1040 | VT-19925 | [measurements_units       ] Hey, Bed level offset minus 0.12 millimeters. (995)—got it.
+1041 | VT-48278 | [measurements_units       ] Reminder: Maintain 24 volts at 3 amps. (200)—got it.
+1042 | VT-82314 | [measurements_units       ] FYI, Cut the rod to 145 millimeters. (9300) Right now.
+1043 | VT-61097 | [measurements_units       ] FYI, Maintain 24 volts at 3 amps. (8528) For real.
+1044 | VT-40768 | [measurements_units       ] Heads up: Hold temperature at 205 Celsius. (3285) Please.
+1045 | VT-95038 | [measurements_units       ] Note: Tolerance is plus or minus 0.05 millimeters. (2007) Right now.
+1046 | VT-49811 | [measurements_units       ] Note: Hold temperature at 205 Celsius. (6101)—got it.
+1047 | VT-44253 | [measurements_units       ] Note: Fan speed at forty percent. (5549) For real.
+1048 | VT-63668 | [measurements_units       ] Reminder: Cut the rod to 145 millimeters. (3337)
+1049 | VT-18745 | [measurements_units       ] Okay, Print at 0.2 millimeter layer height. (5020)—copy.
+1050 | VT-67580 | [measurements_units       ] Listen, Torque the bolt to 6 newton-meters. (7066) Please.

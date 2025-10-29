@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 83 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+4101 | VT-18675 | [slang-heavy              ] Note: She ghosted me after I dropped the bag, smh. Right now.
+4102 | VT-89009 | [slang-heavy              ] Heads up: We vibin’ or what? Right now.
+4103 | VT-96082 | [slang-heavy              ] Listen, Yo, that was straight fire, no cap! Thanks.
+4104 | VT-40734 | [slang-heavy              ] Listen, She ghosted me after I dropped the bag, smh.—copy.
+4105 | VT-94471 | [slang-heavy              ] We vibin’ or what? For real.
+4106 | VT-18557 | [slang-heavy              ] Hey, Yo, that was straight fire, no cap!—copy.
+4107 | VT-59860 | [slang-heavy              ] FYI, She ghosted me after I dropped the bag, smh.
+4108 | VT-11366 | [slang-heavy              ] Hey, We vibin’ or what? Right now.
+4109 | VT-49264 | [slang-heavy              ] Hey, Yo, that was straight fire, no cap!—copy.
+4110 | VT-20357 | [slang-heavy              ] She ghosted me after I dropped the bag, smh.—copy.
+4111 | VT-54597 | [slang-heavy              ] FYI, We vibin’ or what?—got it.
+4112 | VT-78678 | [slang-heavy              ] Yo, that was straight fire, no cap! Right now.
+4113 | VT-88176 | [slang-heavy              ] Hey, She ghosted me after I dropped the bag, smh.—copy.
+4114 | VT-59932 | [slang-heavy              ] Heads up: We vibin’ or what? Thanks.
+4115 | VT-16031 | [slang-heavy              ] Listen, Yo, that was straight fire, no cap!
+4116 | VT-98854 | [slang-heavy              ] Heads up: She ghosted me after I dropped the bag, smh. Thanks.
+4117 | VT-40781 | [slang-heavy              ] FYI, We vibin’ or what?—got it.
+4118 | VT-86452 | [slang-heavy              ] Okay, Yo, that was straight fire, no cap! Please.
+4119 | VT-79854 | [slang-heavy              ] Hey, She ghosted me after I dropped the bag, smh. Thanks.
+4120 | VT-20504 | [slang-heavy              ] Listen, We vibin’ or what? Thanks.
+4121 | VT-46044 | [slang-heavy              ] Okay, Yo, that was straight fire, no cap! Please.
+4122 | VT-76960 | [slang-heavy              ] She ghosted me after I dropped the bag, smh. Thanks.
+4123 | VT-73399 | [slang-heavy              ] Note: We vibin’ or what?
+4124 | VT-47188 | [slang-heavy              ] Yo, that was straight fire, no cap! If possible.
+4125 | VT-28509 | [slang-heavy              ] Note: She ghosted me after I dropped the bag, smh.—copy.
+4126 | VT-90927 | [slang-heavy              ] Reminder: We vibin’ or what? If possible.
+4127 | VT-69811 | [slang-heavy              ] Hey, Yo, that was straight fire, no cap! If possible.
+4128 | VT-81764 | [slang-heavy              ] Hey, She ghosted me after I dropped the bag, smh. Thanks.
+4129 | VT-16195 | [slang-heavy              ] Reminder: We vibin’ or what? Thanks.
+4130 | VT-33097 | [slang-heavy              ] Okay, Yo, that was straight fire, no cap!
+4131 | VT-76022 | [slang-heavy              ] Hey, She ghosted me after I dropped the bag, smh.—copy.
+4132 | VT-93692 | [slang-heavy              ] Heads up: We vibin’ or what?—got it.
+4133 | VT-92866 | [slang-heavy              ] Heads up: Yo, that was straight fire, no cap! If possible.
+4134 | VT-13611 | [slang-heavy              ] Heads up: She ghosted me after I dropped the bag, smh. If possible.
+4135 | VT-46220 | [slang-heavy              ] FYI, We vibin’ or what? For real.
+4136 | VT-55259 | [slang-heavy              ] FYI, Yo, that was straight fire, no cap! If possible.
+4137 | VT-51623 | [slang-heavy              ] She ghosted me after I dropped the bag, smh.
+4138 | VT-26389 | [slang-heavy              ] We vibin’ or what?
+4139 | VT-85612 | [slang-heavy              ] Yo, that was straight fire, no cap! Please.
+4140 | VT-88238 | [slang-heavy              ] Listen, She ghosted me after I dropped the bag, smh.—got it.
+4141 | VT-96926 | [slang-heavy              ] We vibin’ or what? For real.
+4142 | VT-21182 | [slang-heavy              ] Hey, Yo, that was straight fire, no cap! For real.
+4143 | VT-14357 | [slang-heavy              ] Note: She ghosted me after I dropped the bag, smh. Right now.
+4144 | VT-24039 | [slang-heavy              ] Reminder: We vibin’ or what?—copy.
+4145 | VT-19821 | [slang-heavy              ] Yo, that was straight fire, no cap! Right now.
+4146 | VT-20070 | [slang-heavy              ] FYI, She ghosted me after I dropped the bag, smh. Please.
+4147 | VT-67567 | [slang-heavy              ] Listen, We vibin’ or what? Please.
+4148 | VT-17308 | [slang-heavy              ] Yo, that was straight fire, no cap! Thanks.
+4149 | VT-97624 | [slang-heavy              ] Listen, She ghosted me after I dropped the bag, smh.—copy.
+4150 | VT-66627 | [slang-heavy              ] Note: We vibin’ or what?—got it.

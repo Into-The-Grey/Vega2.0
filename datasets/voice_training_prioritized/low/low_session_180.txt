@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 180 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+8951 | VT-595848 | [robotic_formal           ] Listen, This unit has no emotional processing capabilities. Thank you.—copy. — confirm.
+8952 | VT-603595 | [robotic_formal           ] Reminder: Initiating process sequence in accordance with protocol alpha. If possible. — now.
+8953 | VT-508935 | [robotic_formal           ] Heads up: Note: This unit has no emotional processing capabilities. Thank you. If possible.
+8954 | VT-635247 | [robotic_formal           ] Real talk, Listen, This unit has no emotional processing capabilities. Thank you. Right now. right now. (alt)
+8955 | VT-685884 | [robotic_formal           ] Heads up: Listen, Initiating process sequence in accordance with protocol alpha. Thanks. — got it.
+8956 | VT-521639 | [robotic_formal           ] Listen, Hey, System acknowledgment: request received and validated.—got it.
+8957 | VT-619416 | [robotic_formal           ] Hey, This unit has no emotional processing capabilities. Thank you. Please. if you can.
+8958 | VT-621742 | [robotic_formal           ] Reminder: Note: Initiating process sequence in accordance with protocol alpha. If possible. if you can.
+8959 | VT-592077 | [robotic_formal           ] Heads up: Hey, This unit has no emotional processing capabilities. Thank you. Please. please.
+8960 | VT-633811 | [robotic_formal           ] Listen, Note: System acknowledgment: request received and validated.—copy. please.
+8961 | VT-682508 | [robotic_formal           ] Listen, Heads up: Initiating process sequence in accordance with protocol alpha. — got it.
+8962 | VT-573671 | [robotic_formal           ] Note: Note: System acknowledgment: request received and validated. For real. — got it. (alt)
+8963 | VT-628032 | [robotic_formal           ] Real talk, Hey, Initiating process sequence in accordance with protocol alpha. If possible. (alt)
+8964 | VT-694964 | [robotic_formal           ] FYI, Okay, This unit has no emotional processing capabilities. Thank you. Please. please.
+8965 | VT-629429 | [robotic_formal           ] Hey, Initiating process sequence in accordance with protocol alpha. Please. if you can.
+8966 | VT-685287 | [robotic_formal           ] FYI, Heads up: Initiating process sequence in accordance with protocol alpha. Right now. — now. (alt)
+8967 | VT-553808 | [robotic_formal           ] Reminder: FYI, Initiating process sequence in accordance with protocol alpha. Please. thanks.
+8968 | VT-522266 | [robotic_formal           ] FYI, This unit has no emotional processing capabilities. Thank you. If possible. right now.
+8969 | VT-695720 | [robotic_formal           ] Initiating process sequence in accordance with protocol alpha. — got it. (alt)
+8970 | VT-582600 | [robotic_formal           ] Reminder: Initiating process sequence in accordance with protocol alpha.—got it.
+8971 | VT-643265 | [robotic_formal           ] This unit has no emotional processing capabilities. Thank you. For real. — now.
+8972 | VT-662537 | [robotic_formal           ] FYI, FYI, System acknowledgment: request received and validated..
+8973 | VT-644796 | [robotic_formal           ] Okay, Note: System acknowledgment: request received and validated. Thanks. right now.
+8974 | VT-646277 | [robotic_formal           ] Listen, This unit has no emotional processing capabilities. Thank you. For real. right now.
+8975 | VT-589272 | [robotic_formal           ] Listen, FYI, Initiating process sequence in accordance with protocol alpha.—got it. — now.
+8976 | VT-569017 | [robotic_formal           ] FYI, Initiating process sequence in accordance with protocol alpha. For real. thanks.
+8977 | VT-686796 | [robotic_formal           ] Okay, Heads up: This unit has no emotional processing capabilities. Thank you.—got it. if you can.
+8978 | VT-657562 | [robotic_formal           ] Reminder: Reminder: Initiating process sequence in accordance with protocol alpha. If possible. — now. (alt)
+8979 | VT-696482 | [robotic_formal           ] Listen, Initiating process sequence in accordance with protocol alpha.—copy..
+8980 | VT-542463 | [robotic_formal           ] FYI, This unit has no emotional processing capabilities. Thank you. If possible. please.
+8981 | VT-524480 | [robotic_formal           ] Hey, This unit has no emotional processing capabilities. Thank you.—got it. please.
+8982 | VT-654953 | [robotic_formal           ] Heads up: Heads up: System acknowledgment: request received and validated. if you can.
+8983 | VT-655775 | [robotic_formal           ] Reminder: Okay, System acknowledgment: request received and validated..
+8984 | VT-509727 | [robotic_formal           ] Real talk, Hey, This unit has no emotional processing capabilities. Thank you. Please. right now.
+8985 | VT-584415 | [robotic_formal           ] Okay, Listen, Initiating process sequence in accordance with protocol alpha. Thanks. if you can.
+8986 | VT-569789 | [robotic_formal           ] Quick one: This unit has no emotional processing capabilities. Thank you. If possible. — now.
+8987 | VT-585287 | [robotic_formal           ] Heads up: System acknowledgment: request received and validated. — confirm.
+8988 | VT-565979 | [sales_pitch              ] Quick one: Heads up: Unlock premium features now with just one click! For real. if you can.
+8989 | VT-562320 | [sales_pitch              ] Okay, Hey, This offer won’t last—act today! Thanks..
+8990 | VT-528239 | [sales_pitch              ] FYI, This offer won’t last—act today! If possible. — confirm.
+8991 | VT-538451 | [sales_pitch              ] Hey, This offer won’t last—act today! Please. — now.
+8992 | VT-513289 | [sales_pitch              ] Quick one: Heads up: Why settle for less when you can have excellence?—got it. — got it. (alt)
+8993 | VT-685413 | [sales_pitch              ] Reminder: Reminder: This offer won’t last—act today! For real. please.
+8994 | VT-582404 | [sales_pitch              ] Quick one: Hey, This offer won’t last—act today! Thanks. right now. (alt)
+8995 | VT-690438 | [sales_pitch              ] Okay, Heads up: Unlock premium features now with just one click! For real. right now.
+8996 | VT-698870 | [sales_pitch              ] Reminder: Hey, Why settle for less when you can have excellence? For real. if you can. (alt)
+8997 | VT-547934 | [sales_pitch              ] Reminder: Note: This offer won’t last—act today!—copy. if you can. (alt)
+8998 | VT-633624 | [sales_pitch              ] FYI, Heads up: Unlock premium features now with just one click! Thanks.
+8999 | VT-669104 | [sales_pitch              ] Note: This offer won’t last—act today!—copy. — got it.
+9000 | VT-591030 | [sales_pitch              ] Heads up: Unlock premium features now with just one click!—got it. — confirm. (alt)

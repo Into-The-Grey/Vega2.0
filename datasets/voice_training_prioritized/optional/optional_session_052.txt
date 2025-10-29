@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 52 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2551 | VT-571317 | [glitchy_ai               ] Okay, Listen, Syntax failure. Restarting neural core in 3... 2... If possible. — got it.
+2552 | VT-567994 | [glitchy_ai               ] Quick one: Hey, Syntax failure. Restarting neural core in 3... 2... Right now..
+2553 | VT-540022 | [glitchy_ai               ] FYI, Hey, Error…voice…loop…loop…loop…disconn//ect. Right now. — confirm.
+2554 | VT-658039 | [glitchy_ai               ] Quick one: Okay, I… I… I can’t… complete… th-th-this… sentence. Please. please.
+2555 | VT-544752 | [glitchy_ai               ] Hey, Syntax failure. Restarting neural core in 3... 2...—copy. — got it.
+2556 | VT-659675 | [glitchy_ai               ] Reminder: Note: Syntax failure. Restarting neural core in 3... 2...—copy.. (alt)
+2557 | VT-552568 | [glitchy_ai               ] Heads up: I… I… I can’t… complete… th-th-this… sentence. Right now. thanks.
+2558 | VT-688511 | [glitchy_ai               ] Hey, Syntax failure. Restarting neural core in 3... 2... Thanks. thanks.
+2559 | VT-565531 | [glitchy_ai               ] Quick one: FYI, I… I… I can’t… complete… th-th-this… sentence. Please.. (alt)
+2560 | VT-501918 | [glitchy_ai               ] Heads up: Reminder: Syntax failure. Restarting neural core in 3... 2... Please. (alt)
+2561 | VT-675286 | [glitchy_ai               ] Quick one: Listen, Syntax failure. Restarting neural core in 3... 2... If possible. — confirm.
+2562 | VT-647588 | [glitchy_ai               ] Listen, I… I… I can’t… complete… th-th-this… sentence. Please. please. (alt)
+2563 | VT-596285 | [glitchy_ai               ] Real talk, Listen, Error…voice…loop…loop…loop…disconn//ect. Right now. — confirm.
+2564 | VT-623640 | [glitchy_ai               ] Note: Syntax failure. Restarting neural core in 3... 2... Right now. right now.
+2565 | VT-612751 | [glitchy_ai               ] Listen, Note: I… I… I can’t… complete… th-th-this… sentence. — got it.
+2566 | VT-552147 | [glitchy_ai               ] Real talk, Okay, Syntax failure. Restarting neural core in 3... 2... please. (alt)
+2567 | VT-520845 | [glitchy_ai               ] Real talk, Listen, Error…voice…loop…loop…loop…disconn//ect. Please. thanks. (alt)
+2568 | VT-583297 | [glitchy_ai               ] Reminder: Listen, I… I… I can’t… complete… th-th-this… sentence. right now. (alt)
+2569 | VT-689182 | [glitchy_ai               ] Heads up: Note: Error…voice…loop…loop…loop…disconn//ect. Please. thanks. (alt)
+2570 | VT-544455 | [glitchy_ai               ] Reminder: Heads up: I… I… I can’t… complete… th-th-this… sentence.—copy. (alt)
+2571 | VT-608411 | [glitchy_ai               ] Listen, Syntax failure. Restarting neural core in 3... 2...—got it. please.
+2572 | VT-502446 | [glitchy_ai               ] I… I… I can’t… complete… th-th-this… sentence. Right now. — got it.
+2573 | VT-515777 | [glitchy_ai               ] Reminder: I… I… I can’t… complete… th-th-this… sentence. For real. thanks.
+2574 | VT-538627 | [glitchy_ai               ] Note: Listen, I… I… I can’t… complete… th-th-this… sentence. Thanks. — got it.
+2575 | VT-553854 | [glitchy_ai               ] Quick one: Note: Syntax failure. Restarting neural core in 3... 2...—copy. — now.
+2576 | VT-686945 | [glitchy_ai               ] Listen, I… I… I can’t… complete… th-th-this… sentence. if you can.
+2577 | VT-532653 | [glitchy_ai               ] Reminder: Hey, I… I… I can’t… complete… th-th-this… sentence. Thanks..
+2578 | VT-587701 | [glitchy_ai               ] Okay, Okay, Syntax failure. Restarting neural core in 3... 2...—got it.
+2579 | VT-609227 | [glitchy_ai               ] Heads up: Error…voice…loop…loop…loop…disconn//ect. Thanks. if you can.
+2580 | VT-595651 | [glitchy_ai               ] Listen, Listen, Error…voice…loop…loop…loop…disconn//ect.
+2581 | VT-579438 | [glitchy_ai               ] Quick one: Okay, Syntax failure. Restarting neural core in 3... 2...—got it.. (alt)
+2582 | VT-637017 | [glitchy_ai               ] Heads up: Hey, I… I… I can’t… complete… th-th-this… sentence.—copy..
+2583 | VT-509759 | [glitchy_ai               ] Quick one: Reminder: I… I… I can’t… complete… th-th-this… sentence.—got it. right now.
+2584 | VT-562819 | [glitchy_ai               ] Real talk, Okay, Syntax failure. Restarting neural core in 3... 2... If possible. — now.
+2585 | VT-580542 | [glitchy_ai               ] Real talk, FYI, I… I… I can’t… complete… th-th-this… sentence. Please. — confirm.
+2586 | VT-620471 | [glitchy_ai               ] Listen, I… I… I can’t… complete… th-th-this… sentence. Thanks. — confirm.
+2587 | VT-590172 | [glitchy_ai               ] Real talk, Listen, Syntax failure. Restarting neural core in 3... 2... Thanks..
+2588 | VT-602191 | [glitchy_ai               ] Heads up: FYI, Syntax failure. Restarting neural core in 3... 2... Please. please.
+2589 | VT-533815 | [glitchy_ai               ] Okay, Note: Error…voice…loop…loop…loop…disconn//ect. Thanks. — confirm.
+2590 | VT-630679 | [glitchy_ai               ] Quick one: FYI, Error…voice…loop…loop…loop…disconn//ect. For real. if you can.
+2591 | VT-690744 | [glitchy_ai               ] Note: Okay, Syntax failure. Restarting neural core in 3... 2... thanks.
+2592 | VT-527449 | [glitchy_ai               ] Quick one: Listen, I… I… I can’t… complete… th-th-this… sentence. Please. thanks.
+2593 | VT-551104 | [glitchy_ai               ] FYI, Hey, Syntax failure. Restarting neural core in 3... 2...—copy. — got it.
+2594 | VT-574237 | [glitchy_ai               ] Listen, Error…voice…loop…loop…loop…disconn//ect. right now.
+2595 | VT-677224 | [laughter_breaths         ] Real talk, Hey, *deep breath* We’ve got this.—copy. please. (alt)
+2596 | VT-608005 | [laughter_breaths         ] FYI, Note: *coughs* Sorry—allergies. Right now.. (alt)
+2597 | VT-635940 | [laughter_breaths         ] Quick one: Listen, *deep breath* We’ve got this. Please. — got it.
+2598 | VT-538693 | [laughter_breaths         ] Reminder: FYI, *whisper* Don’t wake the server. Thanks. if you can.
+2599 | VT-536668 | [laughter_breaths         ] Quick one: Okay, *clears throat* As I was saying… Thanks. please.
+2600 | VT-655829 | [laughter_breaths         ] FYI, Okay, *sighs* Okay, let’s try again. For real. please.

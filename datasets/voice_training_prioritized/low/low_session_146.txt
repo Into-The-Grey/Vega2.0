@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 146 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7251 | VT-445630 | [uncertainty              ] Real talk, Okay, I don’t have that info.—copy. thanks.
+7252 | VT-489480 | [uncertainty              ] Quick one: Note: It depends on the constraints.—copy. — got it.
+7253 | VT-477409 | [uncertainty              ] Quick one: Hey, Possibly, but unlikely. If possible. — confirm.
+7254 | VT-440747 | [uncertainty              ] FYI, I doubt it. If possible. if you can.
+7255 | VT-430537 | [uncertainty              ] Reminder: Note: Hard to say without more data.—copy. — got it.
+7256 | VT-412847 | [uncertainty              ] Real talk, Note: I’m not sure yet. Right now. — got it.
+7257 | VT-492276 | [uncertainty              ] Listen, Note: It depends on the constraints.—got it.
+7258 | VT-470919 | [uncertainty              ] Note: Hard to say without more data.—got it. please. (alt)
+7259 | VT-462336 | [uncertainty              ] Real talk, Hey, Possibly, but unlikely.—copy. — now.
+7260 | VT-487959 | [uncertainty              ] Real talk, Hey, Too early to call.—got it. if you can.
+7261 | VT-442819 | [uncertainty              ] Heads up: I doubt it. — now.
+7262 | VT-473772 | [uncertainty              ] Heads up: Reminder: I don’t have that info. If possible. — got it.
+7263 | VT-470818 | [uncertainty              ] Note: FYI, Maybe—leaning no.—copy. — now. (alt)
+7264 | VT-409518 | [uncertainty              ] Listen, Hard to say without more data. Please.
+7265 | VT-401468 | [uncertainty              ] Reminder: Hey, I’m not sure yet.—copy. — got it.
+7266 | VT-466268 | [uncertainty              ] Note: Hey, I don’t have that info. Right now. — got it. (alt)
+7267 | VT-437889 | [uncertainty              ] Note: Hey, It depends on the constraints.
+7268 | VT-470643 | [uncertainty              ] Okay, Hard to say without more data. if you can. (alt)
+7269 | VT-497479 | [uncertainty              ] FYI, Hey, Too early to call.—got it. please. (alt)
+7270 | VT-448271 | [uncertainty              ] Real talk, Reminder: Too early to call. If possible. thanks.
+7271 | VT-437099 | [uncertainty              ] Real talk, Heads up: Too early to call. Thanks. — now.
+7272 | VT-412909 | [uncertainty              ] Note: Heads up: I don’t have that info. If possible. if you can.
+7273 | VT-481781 | [uncertainty              ] FYI, Note: I’m not sure yet. Right now.
+7274 | VT-451798 | [uncertainty              ] Quick one: FYI, I’m not sure yet. For real. — got it.
+7275 | VT-497839 | [uncertainty              ] Quick one: Too early to call. For real. if you can.
+7276 | VT-453739 | [uncertainty              ] Okay, Note: Hard to say without more data. Right now. — confirm. (alt)
+7277 | VT-457974 | [uncertainty              ] Note: Heads up: We’ll see. — confirm. (alt)
+7278 | VT-474337 | [uncertainty              ] Note: Note: We’ll see.—got it. — now.
+7279 | VT-408513 | [uncertainty              ] Okay, Hey, We’ll see.
+7280 | VT-429455 | [uncertainty              ] Note: I don’t have that info.. (alt)
+7281 | VT-452950 | [uncertainty              ] Listen, Hey, Possibly, but unlikely. If possible.
+7282 | VT-445101 | [uncertainty              ] Real talk, FYI, Possibly, but unlikely. For real. thanks. (alt)
+7283 | VT-407852 | [uncertainty              ] Note: Reminder: I’m not sure yet.—got it.
+7284 | VT-428582 | [uncertainty              ] Okay, Listen, Too early to call. Please. — now. (alt)
+7285 | VT-403372 | [uncertainty              ] FYI, Reminder: Possibly, but unlikely.—got it..
+7286 | VT-406656 | [uncertainty              ] Heads up: Reminder: Maybe—leaning no. For real. — got it. (alt)
+7287 | VT-407510 | [uncertainty              ] FYI, Hey, I’m not sure yet.—copy. — confirm.
+7288 | VT-446069 | [uncertainty              ] Reminder: Reminder: I’m not sure yet.—got it. if you can.
+7289 | VT-498211 | [uncertainty              ] Note: Note: Possibly, but unlikely. If possible.
+7290 | VT-469073 | [uncertainty              ] Okay, Note: I’m not sure yet. Right now. — now.
+7291 | VT-400022 | [uncertainty              ] Real talk, Note: It depends on the constraints. Please. (alt)
+7292 | VT-432693 | [uncertainty              ] FYI, Listen, I doubt it. Thanks. — got it.
+7293 | VT-474622 | [uncertainty              ] Real talk, Listen, Too early to call. Right now. thanks.
+7294 | VT-453195 | [uncertainty              ] Heads up: Listen, Hard to say without more data. Thanks. if you can.
+7295 | VT-440277 | [uncertainty              ] Quick one: Heads up: We’ll see. please.
+7296 | VT-431949 | [uncertainty              ] Reminder: Reminder: I don’t have that info.—got it. — confirm. (alt)
+7297 | VT-417506 | [uncertainty              ] Heads up: Maybe—leaning no. Right now. — now.
+7298 | VT-493361 | [uncertainty              ] Note: We’ll see.. (alt)
+7299 | VT-401876 | [uncertainty              ] Okay, Note: I don’t have that info. For real. right now. (alt)
+7300 | VT-471891 | [urls_emails_codes        ] My handle is @zero_cool_1995. Right now. — confirm.

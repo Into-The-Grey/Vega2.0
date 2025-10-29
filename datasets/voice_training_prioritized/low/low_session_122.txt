@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 122 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6051 | VT-435370 | [dramatic                 ] Reminder: This isn't just a game—it’s everything. For real. (alt)
+6052 | VT-478775 | [dramatic                 ] Quick one: Reminder: And then the silence screamed louder than words. Please. (alt)
+6053 | VT-429045 | [dramatic                 ] Reminder: Listen, And then the silence screamed louder than words. Please. — got it.
+6054 | VT-406591 | [dramatic                 ] Note: Okay, I would burn the world to keep you warm. For real. if you can. (alt)
+6055 | VT-498901 | [dramatic                 ] Quick one: Reminder: This isn't just a game—it’s everything. If possible. — now.
+6056 | VT-486761 | [dramatic                 ] Listen, Listen, And then the silence screamed louder than words.—copy. thanks.
+6057 | VT-455998 | [dramatic                 ] Okay, Hey, I would burn the world to keep you warm. — confirm. (alt)
+6058 | VT-447622 | [dramatic                 ] FYI, And then the silence screamed louder than words.—copy. — got it.
+6059 | VT-438119 | [dramatic                 ] Reminder: I would burn the world to keep you warm.—copy. if you can. (alt)
+6060 | VT-464762 | [dramatic                 ] FYI, This isn't just a game—it’s everything. For real.
+6061 | VT-492469 | [dramatic                 ] FYI, FYI, This isn't just a game—it’s everything. For real. thanks. (alt)
+6062 | VT-490014 | [dramatic                 ] Okay, FYI, This isn't just a game—it’s everything.—copy. if you can. (alt)
+6063 | VT-457855 | [dramatic                 ] FYI, Hey, And then the silence screamed louder than words. If possible. thanks.
+6064 | VT-451465 | [dramatic                 ] Real talk, FYI, This isn't just a game—it’s everything.—copy. if you can.
+6065 | VT-446301 | [dramatic                 ] Reminder: This isn't just a game—it’s everything.
+6066 | VT-448523 | [dramatic                 ] Heads up: Hey, I would burn the world to keep you warm. — confirm.
+6067 | VT-483095 | [dramatic                 ] Quick one: Listen, This isn't just a game—it’s everything. Thanks. — got it.
+6068 | VT-421661 | [dramatic                 ] FYI, Heads up: This isn't just a game—it’s everything. Please..
+6069 | VT-492826 | [dramatic                 ] Note: I would burn the world to keep you warm. Right now. — confirm. (alt)
+6070 | VT-451754 | [dramatic                 ] Okay, Listen, And then the silence screamed louder than words. Please. — got it. (alt)
+6071 | VT-459797 | [dramatic                 ] Listen, Reminder: This isn't just a game—it’s everything. If possible. please.
+6072 | VT-476694 | [dramatic                 ] Listen, Listen, I would burn the world to keep you warm. thanks. (alt)
+6073 | VT-496588 | [dramatic                 ] Okay, Okay, I would burn the world to keep you warm.—copy. — confirm.
+6074 | VT-487598 | [dramatic                 ] Quick one: Reminder: This isn't just a game—it’s everything.—got it. — now.
+6075 | VT-468357 | [dramatic                 ] Okay, FYI, I would burn the world to keep you warm. Thanks. please.
+6076 | VT-481677 | [dramatic                 ] Reminder: Okay, This isn't just a game—it’s everything. Thanks. — now. (alt)
+6077 | VT-414822 | [dramatic                 ] Listen, Hey, This isn't just a game—it’s everything.—copy. please.
+6078 | VT-440079 | [dramatic                 ] Reminder: And then the silence screamed louder than words. Right now.
+6079 | VT-494443 | [dramatic                 ] Real talk, Hey, I would burn the world to keep you warm. Thanks. — got it.
+6080 | VT-497868 | [dramatic                 ] Reminder: Note: And then the silence screamed louder than words.
+6081 | VT-437412 | [dramatic                 ] Okay, Note: And then the silence screamed louder than words. Right now. please.
+6082 | VT-403445 | [dramatic                 ] FYI, FYI, I would burn the world to keep you warm.—got it..
+6083 | VT-438581 | [dramatic                 ] Real talk, FYI, I would burn the world to keep you warm.—copy. if you can.
+6084 | VT-443592 | [dramatic                 ] Quick one: FYI, This isn't just a game—it’s everything.—copy. thanks.
+6085 | VT-454352 | [dramatic                 ] Note: And then the silence screamed louder than words. right now.
+6086 | VT-467496 | [dramatic                 ] Hey, And then the silence screamed louder than words. For real. — confirm.
+6087 | VT-418492 | [dramatic                 ] Reminder: Listen, And then the silence screamed louder than words. Please. right now.
+6088 | VT-481424 | [dramatic                 ] Heads up: Reminder: I would burn the world to keep you warm. Please. right now.
+6089 | VT-431087 | [dramatic                 ] Real talk, Listen, This isn't just a game—it’s everything. Thanks. right now.
+6090 | VT-457248 | [dramatic                 ] Quick one: Heads up: And then the silence screamed louder than words. Please. right now.
+6091 | VT-414224 | [dramatic                 ] Listen, Note: And then the silence screamed louder than words.—got it.
+6092 | VT-448763 | [dramatic                 ] Listen, Reminder: This isn't just a game—it’s everything.—got it. thanks.
+6093 | VT-488241 | [dramatic                 ] FYI, Listen, And then the silence screamed louder than words. Thanks. thanks.
+6094 | VT-421083 | [dramatic                 ] Reminder: This isn't just a game—it’s everything. Please. thanks.
+6095 | VT-497750 | [dramatic                 ] Real talk, And then the silence screamed louder than words. Thanks. if you can.
+6096 | VT-445091 | [dramatic                 ] Real talk, Okay, And then the silence screamed louder than words. Please. if you can.
+6097 | VT-437798 | [emoji                    ] FYI, Weather’s perfect for a walk 🌤️. — now.
+6098 | VT-440000 | [emoji                    ] Reminder: FYI, Let’s clean up those docs 🧹. Right now.. (alt)
+6099 | VT-499096 | [emoji                    ] Listen, Reminder: Weather’s perfect for a walk 🌤️. Right now. thanks.
+6100 | VT-493888 | [emoji                    ] Note: Note: Deep breaths. You got this. 💪 — now. (alt)

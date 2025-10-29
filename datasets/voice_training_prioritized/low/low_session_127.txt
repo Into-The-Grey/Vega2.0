@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 127 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6301 | VT-423946 | [home_assistant_commands  ] Real talk, Okay, Mute the living room speakers. Please. please. (alt)
+6302 | VT-489330 | [home_assistant_commands  ] Listen, Note: Set thermostat to sixty-eight degrees. Please. if you can. (alt)
+6303 | VT-438865 | [home_assistant_commands  ] Note: Lights to twenty percent, warm white. Right now.
+6304 | VT-452439 | [home_assistant_commands  ] FYI, Note: Lock the front door and arm stay. Please.. (alt)
+6305 | VT-499127 | [home_assistant_commands  ] Okay, Heads up: Set thermostat to sixty-eight degrees. For real. please.
+6306 | VT-488139 | [home_assistant_commands  ] Heads up: Start the 'Movie Night' scene. For real. — now.
+6307 | VT-463848 | [home_assistant_commands  ] Okay, FYI, Run the vacuum downstairs.—got it. — now.
+6308 | VT-413330 | [home_assistant_commands  ] Heads up: Okay, Mute the living room speakers. Right now. thanks. (alt)
+6309 | VT-427838 | [home_assistant_commands  ] Listen, FYI, Turn off everything in the bedroom. Thanks. thanks.
+6310 | VT-463659 | [home_assistant_commands  ] Listen, FYI, Open the garage halfway.—copy.. (alt)
+6311 | VT-459121 | [home_assistant_commands  ] Reminder: Heads up: Set thermostat to sixty-eight degrees. Please..
+6312 | VT-453270 | [home_assistant_commands  ] Listen, Note: Lights to twenty percent, warm white. Right now. — got it.
+6313 | VT-411341 | [home_assistant_commands  ] Quick one: Reminder: Turn off everything in the bedroom. Please.. (alt)
+6314 | VT-451651 | [home_assistant_commands  ] Okay, Hey, Lock the front door and arm stay.—got it. if you can.
+6315 | VT-472802 | [home_assistant_commands  ] Reminder: Set thermostat to sixty-eight degrees. please. (alt)
+6316 | VT-472178 | [home_assistant_commands  ] FYI, Run the vacuum downstairs.—got it. if you can.
+6317 | VT-435894 | [home_assistant_commands  ] Okay, FYI, Run the vacuum downstairs. Thanks. if you can. (alt)
+6318 | VT-467996 | [home_assistant_commands  ] Quick one: Hey, Run the vacuum downstairs.
+6319 | VT-409280 | [home_assistant_commands  ] FYI, Turn off everything in the bedroom. Thanks. — now.
+6320 | VT-402401 | [home_assistant_commands  ] Reminder: Lights to twenty percent, warm white. Right now..
+6321 | VT-480687 | [home_assistant_commands  ] Heads up: Lights to twenty percent, warm white. If possible. please.
+6322 | VT-441716 | [home_assistant_commands  ] Quick one: Heads up: Run the vacuum downstairs. Please. right now.
+6323 | VT-486165 | [home_assistant_commands  ] FYI, Reminder: Set thermostat to sixty-eight degrees. For real. if you can. (alt)
+6324 | VT-427269 | [home_assistant_commands  ] Real talk, Heads up: Show camera feed on the kitchen display. Right now. right now.
+6325 | VT-412129 | [home_assistant_commands  ] Note: Listen, Show camera feed on the kitchen display. if you can.
+6326 | VT-470538 | [home_assistant_commands  ] Note: FYI, Show camera feed on the kitchen display. thanks.
+6327 | VT-444551 | [home_assistant_commands  ] Real talk, Listen, Turn off everything in the bedroom. Thanks. — got it. (alt)
+6328 | VT-480068 | [home_assistant_commands  ] Listen, Start the 'Movie Night' scene.—copy. thanks. (alt)
+6329 | VT-461310 | [home_assistant_commands  ] Okay, Note: Start the 'Movie Night' scene. If possible..
+6330 | VT-462320 | [home_assistant_commands  ] Okay, Note: Lights to twenty percent, warm white.—got it. right now.
+6331 | VT-469401 | [home_assistant_commands  ] Note: Okay, Run the vacuum downstairs. If possible. please. (alt)
+6332 | VT-468199 | [home_assistant_commands  ] Listen, Start the 'Movie Night' scene. Thanks. right now.
+6333 | VT-445461 | [home_assistant_commands  ] FYI, Note: Open the garage halfway. Thanks. — confirm. (alt)
+6334 | VT-432040 | [home_assistant_commands  ] Reminder: Note: Lights to twenty percent, warm white. Right now. — got it.
+6335 | VT-453859 | [home_assistant_commands  ] Note: Lights to twenty percent, warm white.—got it.
+6336 | VT-400876 | [home_assistant_commands  ] Heads up: FYI, Start the 'Movie Night' scene.—got it. right now.
+6337 | VT-495085 | [home_assistant_commands  ] Lights to twenty percent, warm white. Right now. — confirm.
+6338 | VT-465371 | [home_assistant_commands  ] Note: FYI, Lock the front door and arm stay. please.
+6339 | VT-431051 | [home_assistant_commands  ] Okay, Note: Mute the living room speakers.—got it..
+6340 | VT-405215 | [home_assistant_commands  ] Run the vacuum downstairs.—got it..
+6341 | VT-488647 | [home_assistant_commands  ] Okay, Okay, Set thermostat to sixty-eight degrees.—got it. — confirm.
+6342 | VT-427162 | [home_assistant_commands  ] Heads up: Heads up: Show camera feed on the kitchen display. Right now. if you can.
+6343 | VT-499721 | [home_assistant_commands  ] Okay, Okay, Turn off everything in the bedroom. If possible. if you can.
+6344 | VT-411181 | [home_assistant_commands  ] Listen, Listen, Open the garage halfway. Right now. thanks.
+6345 | VT-451117 | [home_assistant_commands  ] Listen, Show camera feed on the kitchen display..
+6346 | VT-462089 | [home_assistant_commands  ] Note: Reminder: Turn off everything in the bedroom. — now.
+6347 | VT-434550 | [homophones_minimal_pairs ] Real talk, Okay, I need a new role for this roll.—got it..
+6348 | VT-477010 | [homophones_minimal_pairs ] Real talk, Heads up: Sight the site before the cite. — now.
+6349 | VT-409268 | [homophones_minimal_pairs ] Reminder: Hey, I need a new role for this roll. — now.
+6350 | VT-420574 | [homophones_minimal_pairs ] FYI, Hey, I’ll read the readme later. please.

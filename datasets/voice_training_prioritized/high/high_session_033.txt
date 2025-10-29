@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 33 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1601 | VT-473329 | [comparatives_superlatives] Note: Note: Less fragile, more resilient.—copy. if you can. (alt)
+1602 | VT-442255 | [comparatives_superlatives] Real talk, Heads up: Less fragile, more resilient.—got it.
+1603 | VT-458907 | [comparatives_superlatives] Okay, Hey, Better, but not best. For real. — got it.
+1604 | VT-481985 | [comparatives_superlatives] Quick one: Reminder: Faster than yesterday, slower than ideal.—copy.. (alt)
+1605 | VT-497420 | [comparatives_superlatives] Okay, Heads up: Faster than yesterday, slower than ideal. For real. if you can.
+1606 | VT-426798 | [comparatives_superlatives] Note: Heads up: Less fragile, more resilient. If possible. thanks.
+1607 | VT-462964 | [comparatives_superlatives] Reminder: This is the cheapest viable option.—got it.
+1608 | VT-438774 | [comparatives_superlatives] Heads up: Heads up: The most elegant solution wins. Thanks. (alt)
+1609 | VT-441927 | [comparatives_superlatives] FYI, Listen, The most elegant solution wins. If possible. if you can.
+1610 | VT-482392 | [comparatives_superlatives] Note: Listen, The most elegant solution wins. Thanks. please.
+1611 | VT-483932 | [comparatives_superlatives] Real talk, Heads up: Better, but not best. right now.
+1612 | VT-465486 | [comparatives_superlatives] Okay, Hey, The smallest feasible footprint. Please. — got it.
+1613 | VT-422446 | [comparatives_superlatives] Okay, The smallest feasible footprint. Please. right now. (alt)
+1614 | VT-475339 | [comparatives_superlatives] Real talk, Reminder: Faster than yesterday, slower than ideal.—copy. if you can.
+1615 | VT-424488 | [comparatives_superlatives] Quick one: Note: Less fragile, more resilient. Thanks. if you can.
+1616 | VT-493122 | [comparatives_superlatives] Listen, The smallest feasible footprint. please.
+1617 | VT-437817 | [comparatives_superlatives] Reminder: Reminder: Worse latency but better throughput.—got it.
+1618 | VT-463338 | [comparatives_superlatives] Reminder: FYI, Faster than yesterday, slower than ideal. If possible. if you can.
+1619 | VT-488374 | [comparatives_superlatives] Okay, Reminder: Faster than yesterday, slower than ideal.—copy. — now.
+1620 | VT-481588 | [comparatives_superlatives] Reminder: The smallest feasible footprint. Please. — got it. (alt)
+1621 | VT-444443 | [comparatives_superlatives] Reminder: Reminder: Faster than yesterday, slower than ideal.—copy..
+1622 | VT-483067 | [comparatives_superlatives] FYI, Our best result so far. Thanks. — confirm.
+1623 | VT-434815 | [comparatives_superlatives] FYI, Reminder: The toughest challenge yet.—copy. — confirm.
+1624 | VT-445122 | [comparatives_superlatives] Less fragile, more resilient. Right now. right now.
+1625 | VT-414263 | [comparatives_superlatives] Real talk, Listen, This is the cheapest viable option. If possible. please. (alt)
+1626 | VT-415615 | [comparatives_superlatives] Okay, Heads up: The most elegant solution wins. Thanks. — confirm.
+1627 | VT-452150 | [comparatives_superlatives] Quick one: Reminder: Better, but not best. If possible. if you can. (alt)
+1628 | VT-437426 | [comparatives_superlatives] Real talk, Okay, Worse latency but better throughput. Right now. please.
+1629 | VT-429674 | [comparatives_superlatives] The most elegant solution wins. (alt)
+1630 | VT-446484 | [comparatives_superlatives] Okay, Note: Better, but not best.—got it. thanks.
+1631 | VT-482175 | [conditionals             ] Listen, Hey, Provided the tests are green, merge. Please. — got it.
+1632 | VT-471374 | [conditionals             ] Note: Reminder: If it ain’t broke, don’t fix it. Please. — got it. (alt)
+1633 | VT-434268 | [conditionals             ] Listen, Provided the tests are green, merge. For real. right now.
+1634 | VT-469749 | [conditionals             ] Listen, If A then B, otherwise C.—got it.
+1635 | VT-411299 | [conditionals             ] Quick one: If you’re late, text me first. Right now.. (alt)
+1636 | VT-472204 | [conditionals             ] Real talk, Hey, Should this pass QA, ship it. Please..
+1637 | VT-430470 | [conditionals             ] Real talk, If it fails, roll back immediately. Right now. if you can. (alt)
+1638 | VT-495190 | [conditionals             ] Note: Hey, Provided the tests are green, merge. Please. right now.
+1639 | VT-414631 | [conditionals             ] Real talk, Note: Should this pass QA, ship it. For real. please.
+1640 | VT-486212 | [conditionals             ] FYI, Heads up: If A then B, otherwise C. Right now. — now.
+1641 | VT-441745 | [conditionals             ] Reminder: If and only if the hash matches, proceed. Please. right now. (alt)
+1642 | VT-496898 | [conditionals             ] Okay, Note: If you’re late, text me first. Please.. (alt)
+1643 | VT-473285 | [conditionals             ] Okay, FYI, If it ain’t broke, don’t fix it. For real. right now.
+1644 | VT-497311 | [conditionals             ] Heads up: Note: Unless it’s critical, defer to next sprint. thanks. (alt)
+1645 | VT-483738 | [conditionals             ] Quick one: Hey, Should this pass QA, ship it.—copy. if you can.
+1646 | VT-404966 | [conditionals             ] FYI, If it fails, roll back immediately. Please..
+1647 | VT-410777 | [conditionals             ] Heads up: If it ain’t broke, don’t fix it. For real. — got it.
+1648 | VT-482409 | [conditionals             ] Real talk, Heads up: Provided the tests are green, merge. Right now. if you can.
+1649 | VT-481983 | [conditionals             ] Quick one: Should this pass QA, ship it. — got it.
+1650 | VT-492858 | [conditionals             ] Listen, Reminder: If and only if the hash matches, proceed. Please.

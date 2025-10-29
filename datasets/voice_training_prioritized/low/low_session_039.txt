@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 39 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1901 | VT-36431 | [legalese                 ] Listen, Subject to applicable law and equitable principles.—copy.
+1902 | VT-80113 | [legalese                 ] Subject to applicable law and equitable principles.—got it.
+1903 | VT-57786 | [legalese                 ] Time is of the essence with respect to performance.
+1904 | VT-29474 | [legalese                 ] Heads up: Notwithstanding the foregoing, this agreement shall remain in effect. If possible.
+1905 | VT-84344 | [legalese                 ] Heads up: The parties agree to binding arbitration. Please.
+1906 | VT-48493 | [legalese                 ] Listen, Time is of the essence with respect to performance.
+1907 | VT-23947 | [legalese                 ] Okay, This notice constitutes neither an offer nor a solicitation. For real.
+1908 | VT-41800 | [legalese                 ] Note: This notice constitutes neither an offer nor a solicitation. Right now.
+1909 | VT-20578 | [legalese                 ] This notice constitutes neither an offer nor a solicitation. If possible.
+1910 | VT-36431 | [legalese                 ] Listen, Subject to applicable law and equitable principles.—copy.
+1911 | VT-50797 | [legalese                 ] Okay, The parties agree to binding arbitration. Please.
+1912 | VT-60828 | [legalese                 ] FYI, Notwithstanding the foregoing, this agreement shall remain in effect. For real.
+1913 | VT-71860 | [legalese                 ] Hey, This notice constitutes neither an offer nor a solicitation.
+1914 | VT-33423 | [legalese                 ] FYI, Force majeure includes acts of God and regulatory action. Please.
+1915 | VT-63840 | [legalese                 ] FYI, Severability ensures the remainder remains enforceable.
+1916 | VT-45439 | [legalese                 ] Okay, This notice constitutes neither an offer nor a solicitation. Thanks.
+1917 | VT-74589 | [legalese                 ] FYI, Indemnify and hold harmless the disclosing party.—got it.
+1918 | VT-38341 | [legalese                 ] Reminder: Time is of the essence with respect to performance.
+1919 | VT-24670 | [legalese                 ] Notwithstanding the foregoing, this agreement shall remain in effect.
+1920 | VT-71449 | [legalese                 ] Heads up: Time is of the essence with respect to performance.
+1921 | VT-14313 | [legalese                 ] Listen, Notwithstanding the foregoing, this agreement shall remain in effect. Thanks.
+1922 | VT-24490 | [legalese                 ] Notwithstanding the foregoing, this agreement shall remain in effect.
+1923 | VT-57786 | [legalese                 ] Time is of the essence with respect to performance.
+1924 | VT-54030 | [legalese                 ] Heads up: This notice constitutes neither an offer nor a solicitation. Please.
+1925 | VT-81888 | [legalese                 ] FYI, Subject to applicable law and equitable principles. Please.
+1926 | VT-55011 | [legalese                 ] Note: Force majeure includes acts of God and regulatory action. Thanks.
+1927 | VT-82074 | [legalese                 ] Reminder: Force majeure includes acts of God and regulatory action. Please.
+1928 | VT-88834 | [legalese                 ] Time is of the essence with respect to performance. Thanks.
+1929 | VT-48440 | [legalese                 ] Hey, Breach may result in injunctive relief. Please.
+1930 | VT-26742 | [legalese                 ] Hey, This notice constitutes neither an offer nor a solicitation.—got it.
+1931 | VT-65591 | [legalese                 ] Listen, Indemnify and hold harmless the disclosing party.
+1932 | VT-60849 | [legalese                 ] Note: Severability ensures the remainder remains enforceable. Right now.
+1933 | VT-67366 | [legalese                 ] FYI, Subject to applicable law and equitable principles. Right now.
+1934 | VT-53540 | [legalese                 ] Note: This warranty is provided as-is without limitation.—copy.
+1935 | VT-45255 | [legalese                 ] Hey, This notice constitutes neither an offer nor a solicitation.—got it.
+1936 | VT-53540 | [legalese                 ] Note: This warranty is provided as-is without limitation.—copy.
+1937 | VT-91239 | [legalese                 ] Okay, This notice constitutes neither an offer nor a solicitation.—copy.
+1938 | VT-60828 | [legalese                 ] FYI, Notwithstanding the foregoing, this agreement shall remain in effect. For real.
+1939 | VT-90903 | [legalese                 ] Listen, Subject to applicable law and equitable principles. Thanks.
+1940 | VT-50507 | [legalese                 ] Hey, Notwithstanding the foregoing, this agreement shall remain in effect. For real.
+1941 | VT-81615 | [legalese                 ] Heads up: Severability ensures the remainder remains enforceable.—copy.
+1942 | VT-75009 | [legalese                 ] Reminder: This warranty is provided as-is without limitation. If possible.
+1943 | VT-84813 | [legalese                 ] Note: Subject to applicable law and equitable principles. If possible.
+1944 | VT-76392 | [legalese                 ] FYI, Breach may result in injunctive relief. Thanks.
+1945 | VT-17043 | [legalese                 ] Hey, Notwithstanding the foregoing, this agreement shall remain in effect.—copy.
+1946 | VT-57929 | [legalese                 ] Hey, This warranty is provided as-is without limitation.
+1947 | VT-84344 | [legalese                 ] Heads up: The parties agree to binding arbitration. Please.
+1948 | VT-96697 | [legalese                 ] Hey, This warranty is provided as-is without limitation. Please.
+1949 | VT-55942 | [legalese                 ] Reminder: Breach may result in injunctive relief. Right now.
+1950 | VT-71587 | [legalese                 ] Reminder: Time is of the essence with respect to performance.—copy.

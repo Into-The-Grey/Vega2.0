@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 45 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2201 | VT-547829 | [structured               ] Okay, Okay, Packing list: passport, charger, adapters, toiletries, meds. Please. thanks.
+2202 | VT-600974 | [structured               ] Listen, Listen, Grocery list: milk, bread, eggs, spinach, coffee. For real. please.
+2203 | VT-664559 | [structured               ] Listen, Heads up: Checklist: backups done, patches applied, monitors green. Please. — got it.
+2204 | VT-653158 | [structured               ] Quick one: Okay, To‑do: sweep, mop, laundry, email, stretch. Thanks. — confirm. (alt)
+2205 | VT-548819 | [structured               ] Listen, Okay, To‑do: sweep, mop, laundry, email, stretch. For real..
+2206 | VT-583609 | [structured               ] Real talk, Hey, To‑do: sweep, mop, laundry, email, stretch. For real. if you can.
+2207 | VT-657983 | [structured               ] FYI, FYI, Agenda: introductions, updates, blockers, next steps.—copy. please.
+2208 | VT-537220 | [structured               ] Heads up: Agenda: introductions, updates, blockers, next steps.—copy. thanks.
+2209 | VT-681112 | [structured               ] Heads up: Agenda: introductions, updates, blockers, next steps. Right now. thanks.
+2210 | VT-659129 | [structured               ] Note: Listen, Packing list: passport, charger, adapters, toiletries, meds. For real. — confirm.
+2211 | VT-578721 | [structured               ] Heads up: Note: Grocery list: milk, bread, eggs, spinach, coffee.—got it. right now.
+2212 | VT-607688 | [structured               ] Okay, Note: Agenda: introductions, updates, blockers, next steps. Thanks. — got it.
+2213 | VT-526676 | [structured               ] To‑do: sweep, mop, laundry, email, stretch. Right now. please.
+2214 | VT-579652 | [structured               ] Quick one: Note: Packing list: passport, charger, adapters, toiletries, meds. For real. if you can.
+2215 | VT-537911 | [structured               ] Quick one: Listen, Packing list: passport, charger, adapters, toiletries, meds. For real. thanks. (alt)
+2216 | VT-563646 | [structured               ] Listen, Agenda: introductions, updates, blockers, next steps. Thanks. right now.
+2217 | VT-616234 | [structured               ] Real talk, Note: Packing list: passport, charger, adapters, toiletries, meds. please.
+2218 | VT-597780 | [structured               ] Okay, Reminder: Grocery list: milk, bread, eggs, spinach, coffee. Thanks..
+2219 | VT-624066 | [structured               ] FYI, Listen, Checklist: backups done, patches applied, monitors green.—got it. — got it.
+2220 | VT-584803 | [structured               ] Listen, Note: Grocery list: milk, bread, eggs, spinach, coffee.—got it. if you can.
+2221 | VT-546313 | [structured               ] Okay, Okay, Checklist: backups done, patches applied, monitors green. Please. (alt)
+2222 | VT-681486 | [structured               ] Real talk, Okay, To‑do: sweep, mop, laundry, email, stretch. Thanks. right now. (alt)
+2223 | VT-622159 | [structured               ] Reminder: FYI, Agenda: introductions, updates, blockers, next steps.—got it. — got it.
+2224 | VT-690312 | [structured               ] Real talk, Listen, To‑do: sweep, mop, laundry, email, stretch. Right now. please.
+2225 | VT-642355 | [structured               ] FYI, Okay, To‑do: sweep, mop, laundry, email, stretch. For real. — got it.
+2226 | VT-550786 | [structured               ] Note: Okay, Agenda: introductions, updates, blockers, next steps. Right now. — confirm.
+2227 | VT-520611 | [structured               ] Heads up: Heads up: Grocery list: milk, bread, eggs, spinach, coffee. Please. — got it.
+2228 | VT-527162 | [structured               ] Reminder: Hey, Agenda: introductions, updates, blockers, next steps. Please. — got it.
+2229 | VT-543425 | [structured               ] Okay, To‑do: sweep, mop, laundry, email, stretch. please.
+2230 | VT-580161 | [structured               ] Quick one: Okay, Checklist: backups done, patches applied, monitors green. Right now.. (alt)
+2231 | VT-515178 | [structured               ] Note: Hey, Packing list: passport, charger, adapters, toiletries, meds. If possible. right now. (alt)
+2232 | VT-539936 | [structured               ] Note: Checklist: backups done, patches applied, monitors green. Thanks.
+2233 | VT-593281 | [structured               ] Heads up: Grocery list: milk, bread, eggs, spinach, coffee. Thanks. right now.
+2234 | VT-676162 | [structured               ] Real talk, Agenda: introductions, updates, blockers, next steps. Right now.
+2235 | VT-639993 | [structured               ] Listen, Agenda: introductions, updates, blockers, next steps. Please. — confirm.
+2236 | VT-569344 | [structured               ] Listen, Reminder: Packing list: passport, charger, adapters, toiletries, meds. For real. — now.
+2237 | VT-640838 | [structured               ] FYI, Listen, To‑do: sweep, mop, laundry, email, stretch. Please.
+2238 | VT-615330 | [structured               ] Quick one: Note: Agenda: introductions, updates, blockers, next steps. Thanks. if you can. (alt)
+2239 | VT-558897 | [structured               ] Heads up: Reminder: To‑do: sweep, mop, laundry, email, stretch.—got it. — now.
+2240 | VT-585590 | [structured               ] Okay, Checklist: backups done, patches applied, monitors green. Please. right now.
+2241 | VT-546719 | [structured               ] Real talk, Checklist: backups done, patches applied, monitors green. right now.
+2242 | VT-621011 | [structured               ] Reminder: Okay, To‑do: sweep, mop, laundry, email, stretch. If possible. — now.
+2243 | VT-549066 | [structured               ] Okay, Okay, To‑do: sweep, mop, laundry, email, stretch. — confirm.
+2244 | VT-684934 | [structured               ] Real talk, Heads up: Packing list: passport, charger, adapters, toiletries, meds. For real. — now.
+2245 | VT-636027 | [structured               ] Real talk, To‑do: sweep, mop, laundry, email, stretch. — now.
+2246 | VT-507588 | [structured               ] Quick one: Okay, To‑do: sweep, mop, laundry, email, stretch. please. (alt)
+2247 | VT-533772 | [structured               ] Okay, Hey, Packing list: passport, charger, adapters, toiletries, meds.—got it. please.
+2248 | VT-566309 | [structured               ] Note: Note: To‑do: sweep, mop, laundry, email, stretch. Please. — got it.
+2249 | VT-617373 | [structured               ] Listen, Hey, Checklist: backups done, patches applied, monitors green. Please. thanks.
+2250 | VT-652117 | [structured               ] Listen, To‑do: sweep, mop, laundry, email, stretch. Right now..

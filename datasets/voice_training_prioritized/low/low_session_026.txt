@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 26 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1251 | VT-22838 | [flirty                   ] FYI, Are you Wi-Fi? Because I’m feeling a connection. Right now.
+1252 | VT-37153 | [flirty                   ] Hey, You have the kind of voice I’d sync my heartbeat to.
+1253 | VT-87367 | [flirty                   ] I wasn’t blushing until you started talking.
+1254 | VT-46406 | [flirty                   ] Hey, Are you Wi-Fi? Because I’m feeling a connection. Please.
+1255 | VT-29236 | [flirty                   ] Heads up: You have the kind of voice I’d sync my heartbeat to. For real.
+1256 | VT-12217 | [flirty                   ] Listen, I wasn’t blushing until you started talking. Right now.
+1257 | VT-34652 | [flirty                   ] Note: Are you Wi-Fi? Because I’m feeling a connection. Thanks.
+1258 | VT-19729 | [flirty                   ] Note: You have the kind of voice I’d sync my heartbeat to. If possible.
+1259 | VT-84999 | [flirty                   ] I wasn’t blushing until you started talking.—got it.
+1260 | VT-94370 | [flirty                   ] Heads up: Are you Wi-Fi? Because I’m feeling a connection.
+1261 | VT-40785 | [flirty                   ] Heads up: You have the kind of voice I’d sync my heartbeat to.
+1262 | VT-89483 | [flirty                   ] Note: I wasn’t blushing until you started talking. Right now.
+1263 | VT-31998 | [flirty                   ] Heads up: Are you Wi-Fi? Because I’m feeling a connection. Thanks.
+1264 | VT-14706 | [flirty                   ] Reminder: You have the kind of voice I’d sync my heartbeat to. For real.
+1265 | VT-95009 | [flirty                   ] Hey, I wasn’t blushing until you started talking. Please.
+1266 | VT-30812 | [flirty                   ] Are you Wi-Fi? Because I’m feeling a connection.
+1267 | VT-74833 | [flirty                   ] Listen, You have the kind of voice I’d sync my heartbeat to.
+1268 | VT-95405 | [flirty                   ] Hey, I wasn’t blushing until you started talking. Thanks.
+1269 | VT-39794 | [flirty                   ] Hey, Are you Wi-Fi? Because I’m feeling a connection.—copy.
+1270 | VT-34587 | [flirty                   ] Note: You have the kind of voice I’d sync my heartbeat to.—got it.
+1271 | VT-28271 | [flirty                   ] I wasn’t blushing until you started talking.—got it.
+1272 | VT-22687 | [flirty                   ] Heads up: Are you Wi-Fi? Because I’m feeling a connection. Right now.
+1273 | VT-24287 | [flirty                   ] Okay, You have the kind of voice I’d sync my heartbeat to. Thanks.
+1274 | VT-78045 | [flirty                   ] Okay, I wasn’t blushing until you started talking.—copy.
+1275 | VT-52845 | [flirty                   ] Okay, Are you Wi-Fi? Because I’m feeling a connection. If possible.
+1276 | VT-26904 | [flirty                   ] FYI, You have the kind of voice I’d sync my heartbeat to. Thanks.
+1277 | VT-42709 | [flirty                   ] I wasn’t blushing until you started talking.—copy.
+1278 | VT-13035 | [flirty                   ] Okay, Are you Wi-Fi? Because I’m feeling a connection. Right now.
+1279 | VT-58587 | [flirty                   ] Reminder: You have the kind of voice I’d sync my heartbeat to.
+1280 | VT-97597 | [flirty                   ] I wasn’t blushing until you started talking. For real.
+1281 | VT-45826 | [flirty                   ] Heads up: Are you Wi-Fi? Because I’m feeling a connection.—copy.
+1282 | VT-28239 | [flirty                   ] You have the kind of voice I’d sync my heartbeat to. Thanks.
+1283 | VT-59760 | [flirty                   ] Hey, I wasn’t blushing until you started talking. If possible.
+1284 | VT-36356 | [flirty                   ] Note: Are you Wi-Fi? Because I’m feeling a connection.
+1285 | VT-51945 | [flirty                   ] Listen, You have the kind of voice I’d sync my heartbeat to. Thanks.
+1286 | VT-24537 | [flirty                   ] Reminder: I wasn’t blushing until you started talking. If possible.
+1287 | VT-11352 | [flirty                   ] Hey, Are you Wi-Fi? Because I’m feeling a connection. For real.
+1288 | VT-24806 | [flirty                   ] Okay, You have the kind of voice I’d sync my heartbeat to. If possible.
+1289 | VT-28012 | [flirty                   ] Reminder: I wasn’t blushing until you started talking. Right now.
+1290 | VT-22089 | [flirty                   ] Are you Wi-Fi? Because I’m feeling a connection. Please.
+1291 | VT-75002 | [flirty                   ] Reminder: You have the kind of voice I’d sync my heartbeat to. If possible.
+1292 | VT-56785 | [flirty                   ] Reminder: I wasn’t blushing until you started talking.—copy.
+1293 | VT-73714 | [flirty                   ] Okay, Are you Wi-Fi? Because I’m feeling a connection. Right now.
+1294 | VT-94952 | [flirty                   ] Listen, You have the kind of voice I’d sync my heartbeat to. For real.
+1295 | VT-66042 | [flirty                   ] Reminder: I wasn’t blushing until you started talking.
+1296 | VT-30221 | [flirty                   ] Are you Wi-Fi? Because I’m feeling a connection.—copy.
+1297 | VT-99075 | [flirty                   ] Hey, You have the kind of voice I’d sync my heartbeat to. Thanks.
+1298 | VT-86112 | [flirty                   ] Note: I wasn’t blushing until you started talking. For real.
+1299 | VT-55183 | [flirty                   ] Note: Are you Wi-Fi? Because I’m feeling a connection. Please.
+1300 | VT-89142 | [flirty                   ] Heads up: You have the kind of voice I’d sync my heartbeat to. Right now.

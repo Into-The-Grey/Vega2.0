@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 1 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0001 | VT-12653 | [dark_humor               ] At least when I'm dead, I won't owe anyone money.
+0002 | VT-28462 | [dark_humor               ] Life’s a joke, and I’m the punchline.
+0003 | VT-67466 | [dark_humor               ] He wanted a promotion… so we promoted him to 'missing'.
+0004 | VT-81567 | [dark_humor               ] Listen, At least when I'm dead, I won't owe anyone money. Right now.
+0005 | VT-11384 | [dark_humor               ] Life’s a joke, and I’m the punchline.—got it.
+0006 | VT-51902 | [dark_humor               ] Okay, He wanted a promotion… so we promoted him to 'missing'. If possible.
+0007 | VT-31215 | [dark_humor               ] Hey, At least when I'm dead, I won't owe anyone money.—copy.
+0008 | VT-97662 | [dark_humor               ] Note: Life’s a joke, and I’m the punchline. Please.
+0009 | VT-81905 | [dark_humor               ] FYI, He wanted a promotion… so we promoted him to 'missing'.—copy.
+0010 | VT-37794 | [dark_humor               ] Hey, At least when I'm dead, I won't owe anyone money.—copy.
+0011 | VT-22196 | [dark_humor               ] Reminder: Life’s a joke, and I’m the punchline.
+0012 | VT-44267 | [dark_humor               ] Listen, He wanted a promotion… so we promoted him to 'missing'. Please.
+0013 | VT-33216 | [dark_humor               ] Hey, At least when I'm dead, I won't owe anyone money. For real.
+0014 | VT-23665 | [dark_humor               ] Reminder: Life’s a joke, and I’m the punchline.—copy.
+0015 | VT-71083 | [dark_humor               ] Note: He wanted a promotion… so we promoted him to 'missing'.
+0016 | VT-96945 | [dark_humor               ] Note: At least when I'm dead, I won't owe anyone money.—copy.
+0017 | VT-51464 | [dark_humor               ] Heads up: Life’s a joke, and I’m the punchline. Right now.
+0018 | VT-56290 | [dark_humor               ] Listen, He wanted a promotion… so we promoted him to 'missing'. If possible.
+0019 | VT-33009 | [dark_humor               ] Reminder: At least when I'm dead, I won't owe anyone money. For real.
+0020 | VT-28758 | [dark_humor               ] Heads up: Life’s a joke, and I’m the punchline. For real.
+0021 | VT-51610 | [dark_humor               ] Listen, He wanted a promotion… so we promoted him to 'missing'. Please.
+0022 | VT-31898 | [dark_humor               ] Listen, At least when I'm dead, I won't owe anyone money. Right now.
+0023 | VT-87031 | [dark_humor               ] FYI, Life’s a joke, and I’m the punchline. If possible.
+0024 | VT-36114 | [dark_humor               ] Listen, He wanted a promotion… so we promoted him to 'missing'. Thanks.
+0025 | VT-38273 | [dark_humor               ] Reminder: At least when I'm dead, I won't owe anyone money.
+0026 | VT-67924 | [dark_humor               ] Note: Life’s a joke, and I’m the punchline.—copy.
+0027 | VT-23705 | [dark_humor               ] FYI, He wanted a promotion… so we promoted him to 'missing'.—copy.
+0028 | VT-37693 | [dark_humor               ] Note: At least when I'm dead, I won't owe anyone money. For real.
+0029 | VT-57861 | [dark_humor               ] Listen, Life’s a joke, and I’m the punchline. Right now.
+0030 | VT-43796 | [dark_humor               ] Listen, He wanted a promotion… so we promoted him to 'missing'.—got it.
+0031 | VT-61904 | [dark_humor               ] Note: At least when I'm dead, I won't owe anyone money. Right now.
+0032 | VT-36556 | [dark_humor               ] Heads up: Life’s a joke, and I’m the punchline.
+0033 | VT-76224 | [dark_humor               ] He wanted a promotion… so we promoted him to 'missing'.—got it.
+0034 | VT-21019 | [dark_humor               ] Reminder: At least when I'm dead, I won't owe anyone money.
+0035 | VT-86287 | [dark_humor               ] FYI, Life’s a joke, and I’m the punchline.—got it.
+0036 | VT-63877 | [dark_humor               ] Okay, He wanted a promotion… so we promoted him to 'missing'. Right now.
+0037 | VT-65152 | [dark_humor               ] Reminder: At least when I'm dead, I won't owe anyone money.
+0038 | VT-94630 | [dark_humor               ] Heads up: Life’s a joke, and I’m the punchline.—copy.
+0039 | VT-46929 | [dark_humor               ] Listen, He wanted a promotion… so we promoted him to 'missing'. For real.
+0040 | VT-71769 | [dark_humor               ] Hey, At least when I'm dead, I won't owe anyone money. Please.
+0041 | VT-27572 | [dark_humor               ] FYI, Life’s a joke, and I’m the punchline.—got it.
+0042 | VT-34085 | [dark_humor               ] FYI, He wanted a promotion… so we promoted him to 'missing'.—got it.
+0043 | VT-85632 | [dark_humor               ] At least when I'm dead, I won't owe anyone money. Right now.
+0044 | VT-44298 | [dark_humor               ] FYI, Life’s a joke, and I’m the punchline. Please.
+0045 | VT-20535 | [dark_humor               ] Listen, He wanted a promotion… so we promoted him to 'missing'. Right now.
+0046 | VT-94620 | [dark_humor               ] Heads up: At least when I'm dead, I won't owe anyone money. Please.
+0047 | VT-54755 | [dark_humor               ] Listen, Life’s a joke, and I’m the punchline. Please.
+0048 | VT-47949 | [dark_humor               ] Okay, He wanted a promotion… so we promoted him to 'missing'.—copy.
+0049 | VT-49857 | [dark_humor               ] Hey, At least when I'm dead, I won't owe anyone money.—got it.
+0050 | VT-30142 | [dark_humor               ] FYI, Life’s a joke, and I’m the punchline.

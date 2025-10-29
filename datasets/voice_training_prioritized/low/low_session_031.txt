@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 31 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1501 | VT-92664 | [home_assistant_commands  ] Lock the front door and arm stay. For real.
+1502 | VT-89760 | [home_assistant_commands  ] Heads up: Run the vacuum downstairs.—copy.
+1503 | VT-37253 | [home_assistant_commands  ] Lights to twenty percent, warm white. Thanks.
+1504 | VT-76210 | [home_assistant_commands  ] Set thermostat to sixty-eight degrees. If possible.
+1505 | VT-27017 | [home_assistant_commands  ] Heads up: Mute the living room speakers. If possible.
+1506 | VT-44549 | [home_assistant_commands  ] FYI, Show camera feed on the kitchen display. For real.
+1507 | VT-90126 | [home_assistant_commands  ] Note: Set thermostat to sixty-eight degrees.—got it.
+1508 | VT-20927 | [home_assistant_commands  ] FYI, Open the garage halfway.—copy.
+1509 | VT-86230 | [home_assistant_commands  ] Heads up: Start the 'Movie Night' scene.
+1510 | VT-78805 | [home_assistant_commands  ] Lights to twenty percent, warm white.—copy.
+1511 | VT-93032 | [home_assistant_commands  ] Note: Start the 'Movie Night' scene. If possible.
+1512 | VT-68354 | [home_assistant_commands  ] Note: Lights to twenty percent, warm white. Right now.
+1513 | VT-85849 | [home_assistant_commands  ] Lights to twenty percent, warm white.
+1514 | VT-34597 | [home_assistant_commands  ] Start the 'Movie Night' scene.
+1515 | VT-22845 | [home_assistant_commands  ] Set thermostat to sixty-eight degrees. Thanks.
+1516 | VT-23470 | [home_assistant_commands  ] Note: Lock the front door and arm stay. Please.
+1517 | VT-68533 | [home_assistant_commands  ] Heads up: Mute the living room speakers.—got it.
+1518 | VT-10682 | [home_assistant_commands  ] Listen, Mute the living room speakers.—copy.
+1519 | VT-84300 | [home_assistant_commands  ] Start the 'Movie Night' scene.—copy.
+1520 | VT-43159 | [home_assistant_commands  ] Reminder: Turn off everything in the bedroom.
+1521 | VT-95722 | [home_assistant_commands  ] Reminder: Set thermostat to sixty-eight degrees. Please.
+1522 | VT-26947 | [home_assistant_commands  ] Okay, Open the garage halfway. If possible.
+1523 | VT-78413 | [home_assistant_commands  ] Hey, Show camera feed on the kitchen display.—copy.
+1524 | VT-84596 | [home_assistant_commands  ] Heads up: Lock the front door and arm stay. If possible.
+1525 | VT-57800 | [home_assistant_commands  ] Announce dinner in five minutes.—got it.
+1526 | VT-66279 | [home_assistant_commands  ] Okay, Set thermostat to sixty-eight degrees.
+1527 | VT-57800 | [home_assistant_commands  ] Announce dinner in five minutes.—got it.
+1528 | VT-96645 | [home_assistant_commands  ] Okay, Set thermostat to sixty-eight degrees.—got it.
+1529 | VT-37253 | [home_assistant_commands  ] Lights to twenty percent, warm white. Thanks.
+1530 | VT-93471 | [home_assistant_commands  ] Note: Lock the front door and arm stay. Please.
+1531 | VT-63885 | [home_assistant_commands  ] Okay, Lights to twenty percent, warm white. If possible.
+1532 | VT-44674 | [home_assistant_commands  ] Reminder: Show camera feed on the kitchen display.
+1533 | VT-54701 | [home_assistant_commands  ] Reminder: Announce dinner in five minutes. If possible.
+1534 | VT-23563 | [home_assistant_commands  ] Heads up: Lock the front door and arm stay. If possible.
+1535 | VT-15835 | [home_assistant_commands  ] Okay, Turn off everything in the bedroom. Thanks.
+1536 | VT-75373 | [home_assistant_commands  ] Reminder: Lights to twenty percent, warm white.—copy.
+1537 | VT-52530 | [home_assistant_commands  ] Heads up: Announce dinner in five minutes. If possible.
+1538 | VT-25077 | [home_assistant_commands  ] Run the vacuum downstairs.
+1539 | VT-89384 | [home_assistant_commands  ] Okay, Announce dinner in five minutes. For real.
+1540 | VT-31833 | [home_assistant_commands  ] Listen, Turn off everything in the bedroom. Thanks.
+1541 | VT-21207 | [home_assistant_commands  ] Hey, Start the 'Movie Night' scene.—copy.
+1542 | VT-76210 | [home_assistant_commands  ] Set thermostat to sixty-eight degrees. If possible.
+1543 | VT-76234 | [home_assistant_commands  ] Start the 'Movie Night' scene.
+1544 | VT-98654 | [home_assistant_commands  ] Heads up: Open the garage halfway. Right now.
+1545 | VT-25077 | [home_assistant_commands  ] Run the vacuum downstairs.
+1546 | VT-25077 | [home_assistant_commands  ] Run the vacuum downstairs.
+1547 | VT-65839 | [home_assistant_commands  ] Okay, Run the vacuum downstairs. If possible.
+1548 | VT-79610 | [home_assistant_commands  ] Note: Open the garage halfway.—got it.
+1549 | VT-64965 | [home_assistant_commands  ] Hey, Open the garage halfway.
+1550 | VT-76475 | [home_assistant_commands  ] Reminder: Turn off everything in the bedroom. Thanks.

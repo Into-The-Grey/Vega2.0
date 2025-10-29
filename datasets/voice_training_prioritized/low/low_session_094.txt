@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 94 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+4651 | VT-61968 | [sports_cast              ] Okay, Yellow card for a reckless challenge.—copy.
+4652 | VT-61896 | [sports_cast              ] Hey, He shoots—top shelf!—copy.
+4653 | VT-72023 | [sports_cast              ] Okay, Break point; deep breath; serve wide. If possible.
+4654 | VT-12991 | [sports_cast              ] Hey, He shoots—top shelf! For real.
+4655 | VT-39076 | [sports_cast              ] She nails the triple, crowd goes wild.—got it.
+4656 | VT-75028 | [sports_cast              ] Hey, What a clutch parry into the finisher. Thanks.
+4657 | VT-12541 | [sports_cast              ] Okay, The underdogs are up by two. Right now.
+4658 | VT-16039 | [sports_cast              ] FYI, Fourth and inches with the clock bleeding.
+4659 | VT-19935 | [sports_cast              ] Okay, That split-second rotation changed everything. Please.
+4660 | VT-86539 | [sports_cast              ] FYI, A new personal best by 0.12 seconds! Please.
+4661 | VT-75463 | [sports_cast              ] Note: Yellow card for a reckless challenge. If possible.
+4662 | VT-37899 | [sports_cast              ] That split-second rotation changed everything.
+4663 | VT-91862 | [sports_cast              ] Hey, A new personal best by 0.12 seconds! If possible.
+4664 | VT-51856 | [sports_cast              ] She nails the triple, crowd goes wild. Please.
+4665 | VT-87839 | [sports_cast              ] Listen, A new personal best by 0.12 seconds! Thanks.
+4666 | VT-37078 | [sports_cast              ] Note: Yellow card for a reckless challenge. Please.
+4667 | VT-45015 | [sports_cast              ] Fourth and inches with the clock bleeding.—got it.
+4668 | VT-59827 | [sports_cast              ] Note: He shoots—top shelf!—copy.
+4669 | VT-57268 | [sports_cast              ] Note: Fourth and inches with the clock bleeding.—copy.
+4670 | VT-24712 | [sports_cast              ] Note: Break point; deep breath; serve wide. Thanks.
+4671 | VT-54918 | [sports_cast              ] Note: Break point; deep breath; serve wide. If possible.
+4672 | VT-74011 | [sports_cast              ] Hey, He shoots—top shelf! Please.
+4673 | VT-17715 | [sports_cast              ] Yellow card for a reckless challenge.—copy.
+4674 | VT-90798 | [sports_cast              ] Listen, A new personal best by 0.12 seconds!
+4675 | VT-23565 | [sports_cast              ] Yellow card for a reckless challenge. If possible.
+4676 | VT-16039 | [sports_cast              ] FYI, Fourth and inches with the clock bleeding.
+4677 | VT-98932 | [sports_cast              ] Fourth and inches with the clock bleeding.
+4678 | VT-51363 | [sports_cast              ] Reminder: Yellow card for a reckless challenge. Please.
+4679 | VT-74374 | [sports_cast              ] Hey, Yellow card for a reckless challenge. If possible.
+4680 | VT-18807 | [sports_cast              ] Listen, Overtime rules are in effect now. If possible.
+4681 | VT-68679 | [sports_cast              ] Yellow card for a reckless challenge.
+4682 | VT-74374 | [sports_cast              ] Hey, Yellow card for a reckless challenge. If possible.
+4683 | VT-40782 | [sports_cast              ] Note: Overtime rules are in effect now. If possible.
+4684 | VT-82835 | [sports_cast              ] Yellow card for a reckless challenge. Please.
+4685 | VT-93465 | [sports_cast              ] Fourth and inches with the clock bleeding. If possible.
+4686 | VT-75463 | [sports_cast              ] Note: Yellow card for a reckless challenge. If possible.
+4687 | VT-67424 | [sports_cast              ] Heads up: Break point; deep breath; serve wide. If possible.
+4688 | VT-11980 | [sports_cast              ] Hey, The underdogs are up by two.
+4689 | VT-81574 | [sports_cast              ] Okay, Break point; deep breath; serve wide. Please.
+4690 | VT-95230 | [sports_cast              ] Note: A new personal best by 0.12 seconds!
+4691 | VT-25222 | [sports_cast              ] Reminder: Fourth and inches with the clock bleeding. For real.
+4692 | VT-59827 | [sports_cast              ] Note: He shoots—top shelf!—copy.
+4693 | VT-51856 | [sports_cast              ] She nails the triple, crowd goes wild. Please.
+4694 | VT-57397 | [sports_cast              ] FYI, Yellow card for a reckless challenge.—copy.
+4695 | VT-50417 | [sports_cast              ] Hey, Yellow card for a reckless challenge. Right now.
+4696 | VT-98217 | [sports_cast              ] FYI, Yellow card for a reckless challenge. If possible.
+4697 | VT-17065 | [sports_cast              ] Listen, He shoots—top shelf! Please.
+4698 | VT-53579 | [sports_cast              ] Note: What a clutch parry into the finisher. Thanks.
+4699 | VT-81574 | [sports_cast              ] Okay, Break point; deep breath; serve wide. Please.
+4700 | VT-60561 | [sports_cast              ] Break point; deep breath; serve wide. Thanks.

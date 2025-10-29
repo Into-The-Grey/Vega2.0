@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 26 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1251 | VT-71976 | [question_variants        ] Heads up: Good—yes or no? For real.
+1252 | VT-15189 | [question_variants        ] Hey, What’s the catch? Please.
+1253 | VT-40549 | [question_variants        ] Hey, Can you confirm we’re good?
+1254 | VT-74043 | [question_variants        ] Reminder: We good? Thanks.
+1255 | VT-44320 | [question_variants        ] Note: Are we good? If possible.
+1256 | VT-13590 | [question_variants        ] Okay, We good?
+1257 | VT-39318 | [question_variants        ] Positive?
+1258 | VT-76053 | [question_variants        ] FYI, Is everything okay with that? Right now.
+1259 | VT-37272 | [question_variants        ] FYI, Is everything okay with that? For real.
+1260 | VT-22387 | [question_variants        ] Reminder: Are we good? Right now.
+1261 | VT-91901 | [question_variants        ] Hey, Can you confirm we’re good? Please.
+1262 | VT-45653 | [question_variants        ] What’s the catch? If possible.
+1263 | VT-12764 | [question_variants        ] Note: Can you confirm we’re good? Thanks.
+1264 | VT-53051 | [question_variants        ] FYI, We good? Please.
+1265 | VT-41530 | [question_variants        ] We good?
+1266 | VT-77057 | [question_variants        ] Heads up: Can you confirm we’re good? Please.
+1267 | VT-88270 | [question_variants        ] Note: Can you confirm we’re good? Please.
+1268 | VT-60000 | [question_variants        ] Hey, Does that check out? For real.
+1269 | VT-99119 | [question_variants        ] Can you confirm we’re good?
+1270 | VT-88270 | [question_variants        ] Note: Can you confirm we’re good? Please.
+1271 | VT-10752 | [question_variants        ] FYI, Does that check out?—copy.
+1272 | VT-95180 | [question_variants        ] Okay, Can you confirm we’re good?—got it.
+1273 | VT-91041 | [question_variants        ] Hey, We good?
+1274 | VT-36889 | [question_variants        ] Reminder: Can you confirm we’re good? Please.
+1275 | VT-61891 | [question_variants        ] Heads up: Is everything okay with that?—copy.
+1276 | VT-35747 | [question_variants        ] Listen, Positive? Right now.
+1277 | VT-77026 | [question_variants        ] Note: Is everything okay with that?—copy.
+1278 | VT-36846 | [question_variants        ] Reminder: What’s the catch? Please.
+1279 | VT-63850 | [question_variants        ] Hey, We good? If possible.
+1280 | VT-44320 | [question_variants        ] Note: Are we good? If possible.
+1281 | VT-71976 | [question_variants        ] Heads up: Good—yes or no? For real.
+1282 | VT-55448 | [question_variants        ] Can you confirm we’re good? If possible.
+1283 | VT-32656 | [question_variants        ] FYI, Can you confirm we’re good?—got it.
+1284 | VT-43916 | [question_variants        ] Heads up: Can you confirm we’re good?—copy.
+1285 | VT-76162 | [question_variants        ] FYI, Are we good? For real.
+1286 | VT-63475 | [question_variants        ] Okay, You sure?—got it.
+1287 | VT-77026 | [question_variants        ] Note: Is everything okay with that?—copy.
+1288 | VT-79800 | [question_variants        ] Reminder: Is everything okay with that? Please.
+1289 | VT-52817 | [question_variants        ] Is everything okay with that?—copy.
+1290 | VT-86103 | [question_variants        ] Heads up: Any reason not to proceed? Right now.
+1291 | VT-86368 | [question_variants        ] Listen, Are we good? Please.
+1292 | VT-98577 | [question_variants        ] Any reason not to proceed?
+1293 | VT-33476 | [question_variants        ] Listen, Positive? Right now.
+1294 | VT-35145 | [question_variants        ] Any reason not to proceed? Right now.
+1295 | VT-55402 | [question_variants        ] Reminder: Does that check out?—copy.
+1296 | VT-83395 | [question_variants        ] Listen, Good—yes or no?
+1297 | VT-57818 | [question_variants        ] Okay, Any reason not to proceed?—copy.
+1298 | VT-22387 | [question_variants        ] Reminder: Are we good? Right now.
+1299 | VT-55402 | [question_variants        ] Reminder: Does that check out?—copy.
+1300 | VT-55454 | [question_variants        ] Okay, Good—yes or no? Please.

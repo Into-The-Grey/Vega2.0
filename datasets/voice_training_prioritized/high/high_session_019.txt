@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 19 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0901 | VT-88041 | [interrogative            ] FYI, Why does it always rain when I'm unprepared?—copy.
+0902 | VT-82542 | [interrogative            ] Is this really what you want? If possible.
+0903 | VT-74858 | [interrogative            ] FYI, Do you even hear yourself right now? Right now.
+0904 | VT-82915 | [interrogative            ] Is this really what you want? For real.
+0905 | VT-54951 | [interrogative            ] Okay, Is this really what you want? For real.
+0906 | VT-18732 | [interrogative            ] Heads up: Is this really what you want? For real.
+0907 | VT-66040 | [interrogative            ] Note: Why does it always rain when I'm unprepared?—copy.
+0908 | VT-62117 | [interrogative            ] Hey, Do you even hear yourself right now? Right now.
+0909 | VT-36920 | [interrogative            ] Listen, Is this really what you want?
+0910 | VT-37237 | [interrogative            ] Is this really what you want?—got it.
+0911 | VT-17146 | [interrogative            ] Okay, Why does it always rain when I'm unprepared? If possible.
+0912 | VT-37237 | [interrogative            ] Is this really what you want?—got it.
+0913 | VT-63316 | [interrogative            ] Note: Is this really what you want?—got it.
+0914 | VT-33685 | [interrogative            ] Hey, Why does it always rain when I'm unprepared? Thanks.
+0915 | VT-61123 | [interrogative            ] Note: Do you even hear yourself right now? Thanks.
+0916 | VT-91013 | [interrogative            ] Reminder: Is this really what you want? Please.
+0917 | VT-57797 | [interrogative            ] Okay, Do you even hear yourself right now?
+0918 | VT-94279 | [interrogative            ] Reminder: Is this really what you want? If possible.
+0919 | VT-85643 | [interrogative            ] Hey, Why does it always rain when I'm unprepared? Right now.
+0920 | VT-24297 | [interrogative            ] Note: Why does it always rain when I'm unprepared? Thanks.
+0921 | VT-81631 | [interrogative            ] Listen, Do you even hear yourself right now? Right now.
+0922 | VT-11356 | [interrogative            ] Note: Do you even hear yourself right now?—copy.
+0923 | VT-51015 | [interrogative            ] Reminder: Why does it always rain when I'm unprepared? Right now.
+0924 | VT-22072 | [interrogative            ] Listen, Is this really what you want? Thanks.
+0925 | VT-53716 | [interrogative            ] Heads up: Do you even hear yourself right now? For real.
+0926 | VT-76681 | [interrogative            ] FYI, Is this really what you want?
+0927 | VT-51357 | [interrogative            ] Note: Do you even hear yourself right now? If possible.
+0928 | VT-66979 | [interrogative            ] Heads up: Do you even hear yourself right now?
+0929 | VT-43821 | [interrogative            ] Hey, Do you even hear yourself right now?—copy.
+0930 | VT-51015 | [interrogative            ] Reminder: Why does it always rain when I'm unprepared? Right now.
+0931 | VT-51015 | [interrogative            ] Reminder: Why does it always rain when I'm unprepared? Right now.
+0932 | VT-59078 | [interrogative            ] Note: Is this really what you want? If possible.
+0933 | VT-19264 | [interrogative            ] Reminder: Do you even hear yourself right now? Right now.
+0934 | VT-19377 | [interrogative            ] Okay, Is this really what you want?—copy.
+0935 | VT-98896 | [interrogative            ] Is this really what you want? Right now.
+0936 | VT-29495 | [interrogative            ] FYI, Is this really what you want?—got it.
+0937 | VT-69642 | [interrogative            ] Listen, Do you even hear yourself right now? If possible.
+0938 | VT-82978 | [interrogative            ] Listen, Do you even hear yourself right now? Right now.
+0939 | VT-24543 | [interrogative            ] Note: Is this really what you want?—copy.
+0940 | VT-22341 | [interrogative            ] Heads up: Why does it always rain when I'm unprepared?—copy.
+0941 | VT-82542 | [interrogative            ] Is this really what you want? If possible.
+0942 | VT-22341 | [interrogative            ] Heads up: Why does it always rain when I'm unprepared?—copy.
+0943 | VT-32324 | [interrogative            ] Do you even hear yourself right now? Please.
+0944 | VT-88041 | [interrogative            ] FYI, Why does it always rain when I'm unprepared?—copy.
+0945 | VT-83987 | [interrogative            ] FYI, Do you even hear yourself right now? Thanks.
+0946 | VT-74858 | [interrogative            ] FYI, Do you even hear yourself right now? Right now.
+0947 | VT-51357 | [interrogative            ] Note: Do you even hear yourself right now? If possible.
+0948 | VT-78882 | [interrogative            ] Heads up: Is this really what you want? Thanks.
+0949 | VT-66982 | [interrogative            ] Is this really what you want? Thanks.
+0950 | VT-36491 | [interrogative            ] Listen, Why does it always rain when I'm unprepared? For real.

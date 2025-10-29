@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 28 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1351 | VT-47513 | [multilingual             ] FYI, Salam, sab thik hai? For real.
+1352 | VT-29924 | [multilingual             ] Heads up: Ciao, ci vediamo domani. For real.
+1353 | VT-98768 | [multilingual             ] FYI, Ciao, ci vediamo domani.—copy.
+1354 | VT-40091 | [multilingual             ] Heads up: Olá, tudo bem? Right now.
+1355 | VT-17294 | [multilingual             ] Reminder: Muito obrigado pela resposta.
+1356 | VT-74811 | [multilingual             ] Muito obrigado pela resposta. Thanks.
+1357 | VT-50208 | [multilingual             ] Hey, Ciao, ci vediamo domani.—copy.
+1358 | VT-66225 | [multilingual             ] Listen, नमस्ते, आप कैसे हैं? Please.
+1359 | VT-56265 | [multilingual             ] Okay, नमस्ते, आप कैसे हैं?—copy.
+1360 | VT-31610 | [multilingual             ] Listen, धन्यवाद, फिर मिलेंगे।—copy.
+1361 | VT-96852 | [multilingual             ] Note: Salam, sab thik hai? Please.
+1362 | VT-18260 | [multilingual             ] Hey, धन्यवाद, फिर मिलेंगे। Thanks.
+1363 | VT-25870 | [multilingual             ] Reminder: धन्यवाद, फिर मिलेंगे। Please.
+1364 | VT-17294 | [multilingual             ] Reminder: Muito obrigado pela resposta.
+1365 | VT-92231 | [multilingual             ] Okay, ¡Excelente trabajo! Right now.
+1366 | VT-21123 | [multilingual             ] Listen, شكراً لك على المساعدة.—got it.
+1367 | VT-39350 | [multilingual             ] Bonjour, je m’appelle Alex.—copy.
+1368 | VT-66225 | [multilingual             ] Listen, नमस्ते, आप कैसे हैं? Please.
+1369 | VT-63784 | [multilingual             ] Note: 안녕하세요, 오늘 기분 어때요? Thanks.
+1370 | VT-27609 | [multilingual             ] Listen, Olá, tudo bem? For real.
+1371 | VT-40576 | [multilingual             ] Reminder: ¡Excelente trabajo! Thanks.
+1372 | VT-40091 | [multilingual             ] Heads up: Olá, tudo bem? Right now.
+1373 | VT-26756 | [multilingual             ] Note: Bonjour, je m’appelle Alex. For real.
+1374 | VT-60537 | [multilingual             ] Okay, Bonjour, je m’appelle Alex.—copy.
+1375 | VT-31610 | [multilingual             ] Listen, धन्यवाद, फिर मिलेंगे।—copy.
+1376 | VT-75546 | [multilingual             ] Note: धन्यवाद, फिर मिलेंगे। Please.
+1377 | VT-70586 | [multilingual             ] Hey, Muito obrigado pela resposta. Thanks.
+1378 | VT-39350 | [multilingual             ] Bonjour, je m’appelle Alex.—copy.
+1379 | VT-39644 | [multilingual             ] Reminder: Hola, ¿cómo estás?—got it.
+1380 | VT-63721 | [multilingual             ] Listen, Hola, ¿cómo estás? For real.
+1381 | VT-31981 | [multilingual             ] FYI, Hasta luego, cuídate. Please.
+1382 | VT-63721 | [multilingual             ] Listen, Hola, ¿cómo estás? For real.
+1383 | VT-81999 | [multilingual             ] Hey, Hasta luego, cuídate. If possible.
+1384 | VT-80848 | [multilingual             ] Note: धन्यवाद, फिर मिलेंगे। For real.
+1385 | VT-51206 | [multilingual             ] Reminder: Salam, sab thik hai?—got it.
+1386 | VT-97472 | [multilingual             ] Note: 안녕하세요, 오늘 기분 어때요?—got it.
+1387 | VT-48411 | [multilingual             ] Hey, 감사합니다, 다음에 봐요. If possible.
+1388 | VT-40576 | [multilingual             ] Reminder: ¡Excelente trabajo! Thanks.
+1389 | VT-26340 | [multilingual             ] Reminder: 你好，今天忙吗？ If possible.
+1390 | VT-72764 | [multilingual             ] Listen, Hola, ¿cómo estás?—got it.
+1391 | VT-96274 | [multilingual             ] Okay, Muito obrigado pela resposta. Please.
+1392 | VT-49784 | [multilingual             ] Okay, Merci beaucoup pour votre aide.
+1393 | VT-16034 | [multilingual             ] FYI, Guten Morgen, wie geht’s dir? Right now.
+1394 | VT-84456 | [multilingual             ] Guten Morgen, wie geht’s dir? If possible.
+1395 | VT-66225 | [multilingual             ] Listen, नमस्ते, आप कैसे हैं? Please.
+1396 | VT-77342 | [multilingual             ] Reminder: 谢谢你的时间。 If possible.
+1397 | VT-47513 | [multilingual             ] FYI, Salam, sab thik hai? For real.
+1398 | VT-11246 | [multilingual             ] Listen, नमस्ते, आप कैसे हैं? Please.
+1399 | VT-72822 | [multilingual             ] FYI, Grazie mille, davvero. For real.
+1400 | VT-70586 | [multilingual             ] Hey, Muito obrigado pela resposta. Thanks.

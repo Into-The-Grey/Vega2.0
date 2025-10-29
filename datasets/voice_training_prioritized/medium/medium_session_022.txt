@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 22 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1051 | VT-79121 | [structured               ] Reminder: To‑do: sweep, mop, laundry, email, stretch.—got it.
+1052 | VT-19567 | [structured               ] Okay, Checklist: backups done, patches applied, monitors green. Please.
+1053 | VT-0537 | [structured               ] Checklist: backups done, patches applied, monitors green.
+1054 | VT-48450 | [structured               ] Okay, To‑do: sweep, mop, laundry, email, stretch. If possible.
+1055 | VT-83825 | [structured               ] Okay, To‑do: sweep, mop, laundry, email, stretch.
+1056 | VT-47367 | [structured               ] Heads up: Packing list: passport, charger, adapters, toiletries, meds. For real.
+1057 | VT-0538 | [structured               ] To‑do: sweep, mop, laundry, email, stretch.
+1058 | VT-83825 | [structured               ] Okay, To‑do: sweep, mop, laundry, email, stretch.
+1059 | VT-95390 | [structured               ] Hey, Packing list: passport, charger, adapters, toiletries, meds.—got it.
+1060 | VT-40689 | [structured               ] Note: To‑do: sweep, mop, laundry, email, stretch. Please.
+1061 | VT-90266 | [structured               ] Hey, Checklist: backups done, patches applied, monitors green. Please.
+1062 | VT-57204 | [structured               ] Listen, To‑do: sweep, mop, laundry, email, stretch. Right now.
+1063 | VT-85860 | [structured               ] Note: Agenda: introductions, updates, blockers, next steps.—copy.
+1064 | VT-31676 | [structured               ] Reminder: Grocery list: milk, bread, eggs, spinach, coffee.—got it.
+1065 | VT-73803 | [structured               ] Heads up: Agenda: introductions, updates, blockers, next steps.—copy.
+1066 | VT-64619 | [structured               ] Listen, Agenda: introductions, updates, blockers, next steps. For real.
+1067 | VT-83490 | [structured               ] Okay, Checklist: backups done, patches applied, monitors green. If possible.
+1068 | VT-51719 | [structured               ] Hey, Packing list: passport, charger, adapters, toiletries, meds. If possible.
+1069 | VT-68227 | [structured               ] Heads up: Grocery list: milk, bread, eggs, spinach, coffee. Please.
+1070 | VT-60545 | [structured               ] To‑do: sweep, mop, laundry, email, stretch.—copy.
+1071 | VT-69480 | [structured               ] Note: To‑do: sweep, mop, laundry, email, stretch. For real.
+1072 | VT-34302 | [structured               ] To‑do: sweep, mop, laundry, email, stretch. Please.
+1073 | VT-87196 | [structured               ] Note: Packing list: passport, charger, adapters, toiletries, meds.—copy.
+1074 | VT-55839 | [structured               ] Listen, Checklist: backups done, patches applied, monitors green.—copy.
+1075 | VT-73803 | [structured               ] Heads up: Agenda: introductions, updates, blockers, next steps.—copy.
+1076 | VT-14981 | [structured               ] Listen, Agenda: introductions, updates, blockers, next steps. For real.
+1077 | VT-33255 | [structured               ] FYI, Agenda: introductions, updates, blockers, next steps.—got it.
+1078 | VT-98599 | [structured               ] Okay, To‑do: sweep, mop, laundry, email, stretch. Thanks.
+1079 | VT-66540 | [structured               ] FYI, Packing list: passport, charger, adapters, toiletries, meds. If possible.
+1080 | VT-80247 | [structured               ] Okay, To‑do: sweep, mop, laundry, email, stretch. For real.
+1081 | VT-58348 | [structured               ] FYI, Grocery list: milk, bread, eggs, spinach, coffee.—got it.
+1082 | VT-90364 | [structured               ] Listen, To‑do: sweep, mop, laundry, email, stretch. Please.
+1083 | VT-98733 | [structured               ] Okay, Packing list: passport, charger, adapters, toiletries, meds. For real.
+1084 | VT-13153 | [structured               ] Note: Grocery list: milk, bread, eggs, spinach, coffee. Right now.
+1085 | VT-21323 | [structured               ] To‑do: sweep, mop, laundry, email, stretch. Right now.
+1086 | VT-81014 | [structured               ] Reminder: Packing list: passport, charger, adapters, toiletries, meds. For real.
+1087 | VT-98733 | [structured               ] Okay, Packing list: passport, charger, adapters, toiletries, meds. For real.
+1088 | VT-11030 | [structured               ] Note: Grocery list: milk, bread, eggs, spinach, coffee. If possible.
+1089 | VT-11030 | [structured               ] Note: Grocery list: milk, bread, eggs, spinach, coffee. If possible.
+1090 | VT-64607 | [structured               ] Listen, Grocery list: milk, bread, eggs, spinach, coffee. Please.
+1091 | VT-70177 | [structured               ] Listen, Grocery list: milk, bread, eggs, spinach, coffee.
+1092 | VT-0534 | [structured               ] Agenda: introductions, updates, blockers, next steps.
+1093 | VT-87196 | [structured               ] Note: Packing list: passport, charger, adapters, toiletries, meds.—copy.
+1094 | VT-31311 | [structured               ] Listen, Grocery list: milk, bread, eggs, spinach, coffee. Thanks.
+1095 | VT-24502 | [structured               ] Listen, Agenda: introductions, updates, blockers, next steps. Thanks.
+1096 | VT-31524 | [structured               ] FYI, Checklist: backups done, patches applied, monitors green.—got it.
+1097 | VT-14459 | [structured               ] Okay, Checklist: backups done, patches applied, monitors green. Thanks.
+1098 | VT-90266 | [structured               ] Hey, Checklist: backups done, patches applied, monitors green. Please.
+1099 | VT-64607 | [structured               ] Listen, Grocery list: milk, bread, eggs, spinach, coffee. Please.
+1100 | VT-31676 | [structured               ] Reminder: Grocery list: milk, bread, eggs, spinach, coffee.—got it.

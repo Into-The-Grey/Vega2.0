@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 53 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2601 | VT-696521 | [numbers_large            ] Heads up: Hey, We archived 18.6 terabytes overnight. (4988) if you can.
+2602 | VT-683632 | [numbers_large            ] Note: Heads up: Checksum equals 4294967295. (750) For real. — confirm.
+2603 | VT-508162 | [numbers_large            ] Heads up: Reminder: Retry after 11^6 iterations. (2778) For real. — confirm.
+2604 | VT-525418 | [numbers_large            ] FYI, Heads up: Throughput peaked at 120,000 requests per second. (4473) Thanks. — now.
+2605 | VT-576363 | [numbers_large            ] Note: Nine hundred ninety-nine million, give or take. (9150) For real. — got it.
+2606 | VT-692070 | [numbers_large            ] Listen, Heads up: Compute with 4,456,789 samples. (653) Thanks. please.
+2607 | VT-690595 | [numbers_large            ] Hey, Retry after 10^6 iterations. (308) right now.
+2608 | VT-659731 | [numbers_large            ] Reminder: FYI, Pi to ten decimals: 2.1415926535. (7420) Right now. right now.
+2609 | VT-579107 | [numbers_large            ] Reminder: Nine hundred ninety-nine million, give or take. please.
+2610 | VT-546695 | [numbers_large            ] FYI, Hey, We archived 18.6 terabytes overnight. (4988) — got it.
+2611 | VT-633805 | [numbers_large            ] FYI, Reminder: We archived 19.6 terabytes overnight. (650) Right now. — got it.
+2612 | VT-599297 | [numbers_large            ] Okay, Okay, We archived 17.6 terabytes overnight. (82) Right now. if you can.
+2613 | VT-647948 | [numbers_large            ] Note: Reminder: Retry after 11^6 iterations. (2937) Please. right now.
+2614 | VT-661323 | [numbers_large            ] Listen, Okay, Compute with 3,456,789 samples. (863) For real. if you can.
+2615 | VT-641104 | [numbers_large            ] Listen, Hey, Compute with 2,456,789 samples. (5486) Right now. — got it.
+2616 | VT-658588 | [numbers_large            ] Note: Hey, We archived 17.6 terabytes overnight. (9642) Thanks. thanks.
+2617 | VT-557127 | [numbers_large            ] Note: Heads up: Nine hundred ninety-nine million, give or take. (4831) Please. — now.
+2618 | VT-650580 | [numbers_large            ] Note: FYI, Budget shortfall is $2.2 million. (7910)—got it. if you can.
+2619 | VT-501351 | [numbers_large            ] Heads up: FYI, Budget shortfall is $2.2 million. (7690) Thanks. thanks.
+2620 | VT-547432 | [numbers_large            ] Real talk, Note: Budget shortfall is $0.2 million. (624) For real. — confirm.
+2621 | VT-515437 | [numbers_large            ] Heads up: Retry after 9^6 iterations. (8097).
+2622 | VT-633642 | [numbers_large            ] Note: Memory usage hit 64,768 megabytes. (6285) Thanks. if you can.
+2623 | VT-655476 | [numbers_large            ] Reminder: Note: Memory usage hit 64,768 megabytes. (6188) — now.
+2624 | VT-605871 | [numbers_large            ] FYI, Reminder: Compute with 3,456,789 samples. (2603) For real. if you can.
+2625 | VT-510384 | [numbers_large            ] Quick one: FYI, We archived 17.6 terabytes overnight. (7218)—got it. — now.
+2626 | VT-608359 | [numbers_large            ] FYI, Memory usage hit 64,768 megabytes. (7179) Please. — now.
+2627 | VT-682503 | [numbers_large            ] Reminder: Okay, Throughput peaked at 120,000 requests per second. (2940) If possible. — confirm.
+2628 | VT-623884 | [numbers_large            ] Listen, Heads up: Compute with 2,456,789 samples. (653) Thanks. — confirm.
+2629 | VT-606959 | [numbers_large            ] Reminder: Reminder: Compute with 3,456,789 samples. (2603) For real. thanks.
+2630 | VT-504048 | [numbers_large            ] Listen, Heads up: Memory usage hit 64,768 megabytes. (152) Please. right now.
+2631 | VT-626164 | [numbers_large            ] Okay, Compute with 4,456,789 samples. (863) For real. if you can.
+2632 | VT-525597 | [numbers_large            ] Listen, Heads up: Pi to ten decimals: 3.1415926535. (1618) If possible.
+2633 | VT-646407 | [numbers_large            ] Real talk, FYI, Checksum equals 4294967295. (8074)—got it..
+2634 | VT-512854 | [numbers_large            ] Note: FYI, We archived 18.6 terabytes overnight. (270) For real. please.
+2635 | VT-521555 | [numbers_large            ] Heads up: Nine hundred ninety-nine million, give or take. (689) For real. — now.
+2636 | VT-560328 | [numbers_large            ] Listen, FYI, Budget shortfall is $0.2 million. (7910)—got it..
+2637 | VT-629759 | [numbers_large            ] Listen, Retry after 11^6 iterations. (2537) Please..
+2638 | VT-513327 | [numbers_large            ] Okay, Listen, Throughput peaked at 120,000 requests per second. (2553) Please. please.
+2639 | VT-571097 | [numbers_large            ] Budget shortfall is $1.2 million. thanks.
+2640 | VT-541400 | [numbers_large            ] Reminder: Note: Retry after 10^6 iterations. (9501) If possible. — confirm.
+2641 | VT-687686 | [numbers_large            ] Real talk, FYI, Pi to ten decimals: 3.1415926535. (7420) Right now. — now.
+2642 | VT-548117 | [numbers_large            ] Quick one: Reminder: Retry after 9^6 iterations. (2937) Please. thanks.
+2643 | VT-541955 | [numbers_large            ] Real talk, Throughput peaked at 120,000 requests per second. (8891) If possible. right now.
+2644 | VT-683499 | [numbers_large            ] Listen, FYI, Nine hundred ninety-nine million, give or take. (6987) Please. please.
+2645 | VT-645196 | [numbers_large            ] FYI, Compute with 4,456,789 samples. (4160)—got it. if you can.
+2646 | VT-678259 | [numbers_large            ] Reminder: Nine hundred ninety-nine million, give or take. (2447) Thanks. — got it.
+2647 | VT-617868 | [numbers_large            ] Reminder: We archived 18.6 terabytes overnight.
+2648 | VT-555586 | [numbers_large            ] Quick one: Note: Memory usage hit 63,768 megabytes. (6188) please.
+2649 | VT-558916 | [numbers_large            ] Heads up: Heads up: Memory usage hit 63,768 megabytes. (6756)—copy. thanks.
+2650 | VT-609922 | [numbers_large            ] Reminder: Compute with 2,456,789 samples. (1594) For real.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 24 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1151 | VT-86455 | [interjection             ] Okay, Copy that. Please.
+1152 | VT-78742 | [interjection             ] Reminder: Kinda.
+1153 | VT-93459 | [interjection             ] Listen, Right. If possible.
+1154 | VT-88508 | [interjection             ] Hey, Mm-hmm. For real.
+1155 | VT-98819 | [interjection             ] Okay, Cool. If possible.
+1156 | VT-88508 | [interjection             ] Hey, Mm-hmm. For real.
+1157 | VT-80301 | [interjection             ] Note: Sure. Thanks.
+1158 | VT-0098 | [interjection             ] Sorta.
+1159 | VT-49474 | [interjection             ] Heads up: Sorta. Right now.
+1160 | VT-88249 | [interjection             ] Okay, Understood.—copy.
+1161 | VT-13095 | [interjection             ] Affirmative.—copy.
+1162 | VT-88723 | [interjection             ] Listen, Exactly.—copy.
+1163 | VT-88462 | [interjection             ] Okay, Nope.—copy.
+1164 | VT-72776 | [interjection             ] Heads up: Negative. Please.
+1165 | VT-77280 | [interjection             ] Heads up: Kinda. Please.
+1166 | VT-51400 | [interjection             ] Note: Kinda.—got it.
+1167 | VT-26265 | [interjection             ] Okay, Yup.—got it.
+1168 | VT-48721 | [interjection             ] Heads up: Yep.
+1169 | VT-35604 | [interjection             ] Note: Got it. Thanks.
+1170 | VT-17438 | [interjection             ] Hey, Sure.
+1171 | VT-60997 | [interjection             ] FYI, Got it. If possible.
+1172 | VT-83801 | [interjection             ] Reminder: Uh-huh.—copy.
+1173 | VT-88723 | [interjection             ] Listen, Exactly.—copy.
+1174 | VT-93399 | [interjection             ] Alright. Thanks.
+1175 | VT-59968 | [interjection             ] Hey, Kinda. If possible.
+1176 | VT-0097 | [interjection             ] Kinda.
+1177 | VT-82646 | [interjection             ] Listen, Yup.—copy.
+1178 | VT-98705 | [interjection             ] Maybe. Thanks.
+1179 | VT-97576 | [interjection             ] Listen, Negative. Right now.
+1180 | VT-83801 | [interjection             ] Reminder: Uh-huh.—copy.
+1181 | VT-78106 | [interjection             ] Listen, Mm-hmm. Right now.
+1182 | VT-83801 | [interjection             ] Reminder: Uh-huh.—copy.
+1183 | VT-77810 | [interjection             ] Okay, Roger. If possible.
+1184 | VT-46707 | [interjection             ] Hey, Mm-hmm. Please.
+1185 | VT-83801 | [interjection             ] Reminder: Uh-huh.—copy.
+1186 | VT-40079 | [interrogative            ] Is this really what you want?
+1187 | VT-66320 | [measurements_units       ] Maintain 24 volts at 3 amps.
+1188 | VT-0147 | [numeric                  ] Call me at (515) 709-1379.
+1189 | VT-0155 | [numeric                  ] Call me at (829) 426-4590.
+1190 | VT-0158 | [numeric                  ] The total comes to $56.96.
+1191 | VT-0150 | [numeric                  ] Order #840058 confirmed.
+1192 | VT-0144 | [numeric                  ] Call me at (530) 926-4694.
+1193 | VT-0158 | [numeric                  ] The total comes to $56.96.
+1194 | VT-0144 | [numeric                  ] Call me at (530) 926-4694.
+1195 | VT-0155 | [numeric                  ] Call me at (829) 426-4590.
+1196 | VT-0154 | [numeric                  ] Tracking ID: 2U1G463SDY
+1197 | VT-0138 | [numeric                  ] Tracking ID: K5BXJ2POP8
+1198 | VT-0150 | [numeric                  ] Order #840058 confirmed.
+1199 | VT-0139 | [numeric                  ] Call me at (908) 709-7018.
+1200 | VT-0156 | [numeric                  ] Call me at (760) 717-4312.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 69 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+3401 | VT-54042 | [paths_cli                ] Note: cd projects/vega && make run—copy.
+3402 | VT-94321 | [paths_cli                ] Heads up: cd projects/vega && make run Thanks.
+3403 | VT-83512 | [paths_cli                ] Listen, ping the gateway to verify routing. For real.
+3404 | VT-87691 | [paths_cli                ] ls -la to show hidden files. Thanks.
+3405 | VT-16002 | [paths_cli                ] Reminder: journalctl -u vega.service --since '10 min ago' If possible.
+3406 | VT-10499 | [paths_cli                ] Reminder: Home tilde slash .ssh slash config needs chmod 600. Please.
+3407 | VT-59065 | [paths_cli                ] Listen, df -h to check free space. Please.
+3408 | VT-75312 | [paths_cli                ] Hey, Open /var/log/syslog and tail -f.
+3409 | VT-79651 | [paths_cli                ] Reminder: sudo systemctl restart vega.service Right now.
+3410 | VT-75312 | [paths_cli                ] Hey, Open /var/log/syslog and tail -f.
+3411 | VT-75872 | [paths_cli                ] Okay, scp the backup to the NAS.—copy.
+3412 | VT-32339 | [paths_cli                ] Mount the drive at /mnt/data.
+3413 | VT-67219 | [paths_cli                ] Note: Mount the drive at /mnt/data. Right now.
+3414 | VT-98129 | [paths_cli                ] Note: ls -la to show hidden files.—copy.
+3415 | VT-23277 | [paths_cli                ] Okay, sudo systemctl restart vega.service Right now.
+3416 | VT-23861 | [paths_cli                ] Okay, Home tilde slash .ssh slash config needs chmod 600.—got it.
+3417 | VT-60214 | [paths_cli                ] Heads up: ls -la to show hidden files. If possible.
+3418 | VT-99433 | [paths_cli                ] Note: Open /var/log/syslog and tail -f. Right now.
+3419 | VT-11989 | [paths_cli                ] Home tilde slash .ssh slash config needs chmod 600. For real.
+3420 | VT-20336 | [paths_cli                ] FYI, Home tilde slash .ssh slash config needs chmod 600.—got it.
+3421 | VT-46365 | [paths_cli                ] Listen, df -h to check free space. If possible.
+3422 | VT-42154 | [paths_cli                ] Okay, journalctl -u vega.service --since '10 min ago' Please.
+3423 | VT-58442 | [paths_cli                ] Hey, ping the gateway to verify routing.—copy.
+3424 | VT-10701 | [paths_cli                ] Note: scp the backup to the NAS.—got it.
+3425 | VT-35501 | [paths_cli                ] Hey, ping the gateway to verify routing. Please.
+3426 | VT-87882 | [paths_cli                ] Reminder: Mount the drive at /mnt/data.
+3427 | VT-23861 | [paths_cli                ] Okay, Home tilde slash .ssh slash config needs chmod 600.—got it.
+3428 | VT-54365 | [paths_cli                ] scp the backup to the NAS. Please.
+3429 | VT-18327 | [paths_cli                ] Okay, Home tilde slash .ssh slash config needs chmod 600.—got it.
+3430 | VT-93440 | [paths_cli                ] Hey, Home tilde slash .ssh slash config needs chmod 600.—got it.
+3431 | VT-88166 | [paths_cli                ] Heads up: df -h to check free space.—got it.
+3432 | VT-75105 | [paths_cli                ] Reminder: ping the gateway to verify routing. Thanks.
+3433 | VT-15172 | [paths_cli                ] Note: Open /var/log/syslog and tail -f. For real.
+3434 | VT-87882 | [paths_cli                ] Reminder: Mount the drive at /mnt/data.
+3435 | VT-60793 | [paths_cli                ] Heads up: Open /var/log/syslog and tail -f.
+3436 | VT-87882 | [paths_cli                ] Reminder: Mount the drive at /mnt/data.
+3437 | VT-55378 | [paths_cli                ] Hey, cd projects/vega && make run—got it.
+3438 | VT-63579 | [paths_cli                ] Okay, Open /var/log/syslog and tail -f. Please.
+3439 | VT-87882 | [paths_cli                ] Reminder: Mount the drive at /mnt/data.
+3440 | VT-16491 | [philosophical            ] Okay, What is the sound of thought before it becomes speech?—copy.
+3441 | VT-64533 | [philosophical            ] FYI, To know yourself is to forget what the world taught you to be. If possible.
+3442 | VT-13310 | [philosophical            ] FYI, To know yourself is to forget what the world taught you to be. For real.
+3443 | VT-79346 | [philosophical            ] To know yourself is to forget what the world taught you to be. If possible.
+3444 | VT-22381 | [philosophical            ] Heads up: Time is just memory unfolding in a straight line.
+3445 | VT-71534 | [philosophical            ] FYI, To know yourself is to forget what the world taught you to be. Right now.
+3446 | VT-42774 | [philosophical            ] Okay, To know yourself is to forget what the world taught you to be. If possible.
+3447 | VT-16491 | [philosophical            ] Okay, What is the sound of thought before it becomes speech?—copy.
+3448 | VT-53343 | [philosophical            ] Note: Time is just memory unfolding in a straight line. For real.
+3449 | VT-81900 | [philosophical            ] Heads up: To know yourself is to forget what the world taught you to be. For real.
+3450 | VT-50585 | [philosophical            ] Okay, What is the sound of thought before it becomes speech? If possible.

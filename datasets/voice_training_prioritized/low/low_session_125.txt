@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 125 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6201 | VT-471659 | [finance                  ] Okay, Okay, Our burn rate is unsustainable at current hiring levels. (3499) For real. right now.
+6202 | VT-476402 | [finance                  ] Note: APR is 23.99% after the promo period. (3569) Please..
+6203 | VT-444343 | [finance                  ] Listen, Set a limit order at $42.10 with a 5% trailing stop. (4059) For real. thanks.
+6204 | VT-482159 | [finance                  ] Heads up: Okay, We’re cash-flow positive but margin-thin. (2462) If possible. thanks.
+6205 | VT-480680 | [finance                  ] Note: FYI, APR is 23.99% after the promo period. (1694) thanks.
+6206 | VT-460703 | [finance                  ] Listen, File the 1099s and W‑2s by January 31. (4324) Right now. — got it. (alt)
+6207 | VT-434910 | [finance                  ] Okay, Cap table updated after the seed extension. (3) Please. — now. (alt)
+6208 | VT-417286 | [finance                  ] Listen, FYI, Our burn rate is unsustainable at current hiring levels. (951) For real. — now.
+6209 | VT-496105 | [finance                  ] Reminder: Hey, Flag that transaction as potentially fraudulent. (4146) Please. — now.
+6210 | VT-403146 | [finance                  ] Real talk, Note: Reconcile the ledger before EOD. (4475) Thanks..
+6211 | VT-490152 | [finance                  ] Note: Hey, APR is 23.99% after the promo period. (8772) — confirm.
+6212 | VT-443251 | [finance                  ] Real talk, FYI, Set a limit order at $42.10 with a 5% trailing stop. (5859) If possible. — confirm.
+6213 | VT-437914 | [finance                  ] Okay, Listen, Flag that transaction as potentially fraudulent. (2341) thanks.
+6214 | VT-494768 | [finance                  ] Okay, Okay, We’re cash-flow positive but margin-thin. (513) If possible. if you can. (alt)
+6215 | VT-446244 | [finance                  ] APR is 23.99% after the promo period. (alt)
+6216 | VT-403920 | [finance                  ] Note: Cap table updated after the seed extension. (3) Please.
+6217 | VT-431992 | [finance                  ] Cap table updated after the seed extension. (8133) Thanks. thanks.
+6218 | VT-413519 | [finance                  ] Okay, Listen, Cap table updated after the seed extension. (7779)—copy. (alt)
+6219 | VT-404085 | [finance                  ] Real talk, Flag that transaction as potentially fraudulent. (1471) Thanks. if you can.
+6220 | VT-460748 | [finance                  ] Okay, Listen, Set a limit order at $42.10 with a 5% trailing stop. (4059) For real.
+6221 | VT-443954 | [finance                  ] Heads up: Okay, Set a limit order at $42.10 with a 5% trailing stop. (7032) Please. right now.
+6222 | VT-443666 | [finance                  ] Real talk, Note: Cap table updated after the seed extension. (1266) please.
+6223 | VT-410051 | [finance                  ] Quick one: Okay, APR is 23.99% after the promo period. (1365)—got it..
+6224 | VT-435524 | [finance                  ] FYI, Initiate a wire—domestic ABA, not SWIFT. (5767) if you can. (alt)
+6225 | VT-426567 | [finance                  ] Okay, Note: Initiate a wire—domestic ABA, not SWIFT. (1152) if you can.
+6226 | VT-429278 | [finance                  ] Quick one: Hey, Initiate a wire—domestic ABA, not SWIFT. (5795) if you can.
+6227 | VT-478878 | [finance                  ] Okay, Heads up: Flag that transaction as potentially fraudulent. (4026) Please..
+6228 | VT-454715 | [finance                  ] Heads up: Reminder: File the 1099s and W‑2s by January 31. (8855)
+6229 | VT-496478 | [finance                  ] Okay, Listen, File the 1099s and W‑2s by January 31. (570) right now. (alt)
+6230 | VT-479156 | [finance                  ] FYI, Heads up: Set a limit order at $42.10 with a 5% trailing stop. (2679) For real. if you can.
+6231 | VT-478302 | [finance                  ] Quick one: Cap table updated after the seed extension. (5072) Please. — now.
+6232 | VT-458937 | [finance                  ] Reminder: FYI, File the 1099s and W‑2s by January 31. (9865) Please..
+6233 | VT-434079 | [finance                  ] Listen, Note: Reconcile the ledger before EOD. (2022)—got it. — got it. (alt)
+6234 | VT-487900 | [finance                  ] Okay, FYI, Set a limit order at $42.10 with a 5% trailing stop. (5859) If possible. please.
+6235 | VT-423742 | [finance                  ] Reminder: Heads up: Set a limit order at $42.10 with a 5% trailing stop. (2679) For real. right now.
+6236 | VT-483147 | [finance                  ] Heads up: Reminder: File the 1099s and W‑2s by January 31. (2195) Thanks. please. (alt)
+6237 | VT-457705 | [finance                  ] Listen, Set a limit order at $42.10 with a 5% trailing stop. (4059) For real. — confirm. (alt)
+6238 | VT-435057 | [finance                  ] Quick one: Heads up: We’re cash-flow positive but margin-thin. (8377)—copy. if you can. (alt)
+6239 | VT-477966 | [finance                  ] Reminder: Reminder: Our burn rate is unsustainable at current hiring levels. (5552)—got it. — confirm.
+6240 | VT-476109 | [finance                  ] Quick one: Okay, Cap table updated after the seed extension. (313) — now.
+6241 | VT-497314 | [finance                  ] Reminder: APR is 23.99% after the promo period. (8778) For real. — now.
+6242 | VT-482535 | [finance                  ] Quick one: Initiate a wire—domestic ABA, not SWIFT. (5767) — confirm. (alt)
+6243 | VT-421731 | [finance                  ] Quick one: FYI, Flag that transaction as potentially fraudulent. (2105) For real. — confirm.
+6244 | VT-429230 | [finance                  ] Heads up: Heads up: Reconcile the ledger before EOD. (1317) For real. thanks.
+6245 | VT-463365 | [finance                  ] Listen, Initiate a wire—domestic ABA, not SWIFT. right now.
+6246 | VT-412054 | [finance                  ] Quick one: Flag that transaction as potentially fraudulent. (9189) Right now. if you can.
+6247 | VT-482934 | [flirty                   ] Quick one: Are you Wi-Fi? Because I’m feeling a connection. — now. (alt)
+6248 | VT-459232 | [flirty                   ] You have the kind of voice I’d sync my heartbeat to. please.
+6249 | VT-463491 | [flirty                   ] Note: I wasn’t blushing until you started talking. if you can. (alt)
+6250 | VT-408363 | [flirty                   ] Note: Note: Are you Wi-Fi? Because I’m feeling a connection. For real. if you can.

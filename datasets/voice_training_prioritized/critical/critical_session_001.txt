@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 1 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0001 | VT-72314 | [agreements               ] Okay, I’m in.—got it.
+0002 | VT-36182 | [agreements               ] Reminder: Copy that.—copy.
+0003 | VT-92448 | [agreements               ] Okay, I’m in.—got it.
+0004 | VT-66512 | [agreements               ] That’s a yes from me. Right now.
+0005 | VT-90266 | [agreements               ] Listen, Green light.—copy.
+0006 | VT-18297 | [agreements               ] Note: Agreed—let’s lock it. Thanks.
+0007 | VT-14639 | [agreements               ] Heads up: Yep, that works for me. Please.
+0008 | VT-72314 | [agreements               ] Okay, I’m in.—got it.
+0009 | VT-19378 | [agreements               ] Note: Agreed—let’s lock it. Thanks.
+0010 | VT-68682 | [agreements               ] Heads up: That’s a yes from me.—got it.
+0011 | VT-94913 | [agreements               ] Note: Approved. For real.
+0012 | VT-56697 | [agreements               ] Hey, Green light.—got it.
+0013 | VT-78785 | [agreements               ] Okay, Copy that. Please.
+0014 | VT-30721 | [agreements               ] Reminder: Count me on board. Please.
+0015 | VT-62054 | [agreements               ] Listen, Agreed—let’s lock it.—got it.
+0016 | VT-74384 | [agreements               ] Note: Yep, that works for me.—copy.
+0017 | VT-58238 | [agreements               ] Heads up: Copy that. If possible.
+0018 | VT-14613 | [agreements               ] FYI, I’m in. If possible.
+0019 | VT-99958 | [agreements               ] Agreed—let’s lock it.
+0020 | VT-94913 | [agreements               ] Note: Approved. For real.
+0021 | VT-86212 | [agreements               ] Approved.
+0022 | VT-99712 | [agreements               ] Okay, Approved.
+0023 | VT-50415 | [agreements               ] Copy that. For real.
+0024 | VT-14639 | [agreements               ] Heads up: Yep, that works for me. Please.
+0025 | VT-48541 | [agreements               ] Hey, Yep, that works for me. If possible.
+0026 | VT-45220 | [agreements               ] Approved. Thanks.
+0027 | VT-53040 | [agreements               ] Hey, Agreed—let’s lock it. For real.
+0028 | VT-53599 | [agreements               ] Reminder: Sounds right. If possible.
+0029 | VT-35191 | [agreements               ] Reminder: Sounds right. Right now.
+0030 | VT-27819 | [agreements               ] FYI, Sounds right. If possible.
+0031 | VT-23910 | [agreements               ] Hey, Copy that.
+0032 | VT-66512 | [agreements               ] That’s a yes from me. Right now.
+0033 | VT-55074 | [agreements               ] That’s a yes from me.
+0034 | VT-63707 | [agreements               ] FYI, Yep, that works for me. If possible.
+0035 | VT-59317 | [agreements               ] Listen, Approved. For real.
+0036 | VT-12614 | [agreements               ] Reminder: That’s a yes from me. If possible.
+0037 | VT-94428 | [agreements               ] FYI, Count me on board. If possible.
+0038 | VT-74384 | [agreements               ] Note: Yep, that works for me.—copy.
+0039 | VT-63707 | [agreements               ] FYI, Yep, that works for me. If possible.
+0040 | VT-96449 | [agreements               ] Hey, That’s a yes from me. Thanks.
+0041 | VT-14639 | [agreements               ] Heads up: Yep, that works for me. Please.
+0042 | VT-56574 | [agreements               ] I’m in. Please.
+0043 | VT-96511 | [agreements               ] Reminder: Green light. For real.
+0044 | VT-58047 | [agreements               ] Listen, Approved.—got it.
+0045 | VT-57169 | [agreements               ] Listen, Agreed—let’s lock it. Right now.
+0046 | VT-53599 | [agreements               ] Reminder: Sounds right. If possible.
+0047 | VT-86662 | [agreements               ] Listen, Copy that.
+0048 | VT-37622 | [agreements               ] Listen, Count me on board. Right now.
+0049 | VT-24364 | [agreements               ] Sounds right.
+0050 | VT-18566 | [agreements               ] Note: Copy that.

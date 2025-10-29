@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 5 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0201 | VT-61173 | [comparatives_superlatives] Better, but not best. Please.
+0202 | VT-71623 | [comparatives_superlatives] The toughest challenge yet.
+0203 | VT-33059 | [comparatives_superlatives] Our best result so far.
+0204 | VT-61173 | [comparatives_superlatives] Better, but not best. Please.
+0205 | VT-12679 | [conditionals             ] Should this pass QA, ship it.
+0206 | VT-12679 | [conditionals             ] Should this pass QA, ship it.
+0207 | VT-80954 | [conditionals             ] If A then B, otherwise C.
+0208 | VT-80954 | [conditionals             ] If A then B, otherwise C.
+0209 | VT-86517 | [denials_corrections      ] Heads up: You mixed up the units again. For real.
+0210 | VT-48397 | [denials_corrections      ] Reminder: Amend the record accordingly.
+0211 | VT-77142 | [denials_corrections      ] Heads up: You mixed up the units again. Thanks.
+0212 | VT-89087 | [denials_corrections      ] Listen, That assumption falls apart under pressure. If possible.
+0213 | VT-50337 | [denials_corrections      ] False—cite your source.
+0214 | VT-65472 | [denials_corrections      ] Okay, Close, but not quite. Right now.
+0215 | VT-43580 | [denials_corrections      ] Hey, No, that's not accurate.—copy.
+0216 | VT-86517 | [denials_corrections      ] Heads up: You mixed up the units again. For real.
+0217 | VT-78785 | [denials_corrections      ] Close, but not quite.—got it.
+0218 | VT-81941 | [denials_corrections      ] Heads up: That assumption falls apart under pressure. Right now.
+0219 | VT-12497 | [denials_corrections      ] Okay, That was my mistake; here’s the fix. Right now.
+0220 | VT-26664 | [denials_corrections      ] Note: False—cite your source. Thanks.
+0221 | VT-27021 | [denials_corrections      ] Hey, Amend the record accordingly. Right now.
+0222 | VT-12076 | [denials_corrections      ] Listen, Negative—try a different approach.
+0223 | VT-75606 | [denials_corrections      ] FYI, Close, but not quite. For real.
+0224 | VT-17226 | [denials_corrections      ] No, that's not accurate.
+0225 | VT-84262 | [denials_corrections      ] FYI, Amend the record accordingly.—copy.
+0226 | VT-87586 | [denials_corrections      ] You mixed up the units again.—copy.
+0227 | VT-23501 | [denials_corrections      ] Close, but not quite.
+0228 | VT-12497 | [denials_corrections      ] Okay, That was my mistake; here’s the fix. Right now.
+0229 | VT-87061 | [denials_corrections      ] Reminder: That was my mistake; here’s the fix.—got it.
+0230 | VT-94534 | [denials_corrections      ] Reminder: That was my mistake; here’s the fix. Right now.
+0231 | VT-40048 | [denials_corrections      ] Hey, Amend the record accordingly. Please.
+0232 | VT-43580 | [denials_corrections      ] Hey, No, that's not accurate.—copy.
+0233 | VT-53518 | [denials_corrections      ] FYI, No, that's not accurate. If possible.
+0234 | VT-40115 | [denials_corrections      ] That was my mistake; here’s the fix.—got it.
+0235 | VT-52021 | [denials_corrections      ] Heads up: Close, but not quite. If possible.
+0236 | VT-66450 | [denials_corrections      ] Listen, Retract the last statement.—copy.
+0237 | VT-91894 | [denials_corrections      ] Retract the last statement. Right now.
+0238 | VT-65184 | [denials_corrections      ] Note: Retract the last statement. Right now.
+0239 | VT-18163 | [denials_corrections      ] Heads up: Amend the record accordingly.—got it.
+0240 | VT-89087 | [denials_corrections      ] Listen, That assumption falls apart under pressure. If possible.
+0241 | VT-13156 | [denials_corrections      ] Hey, That assumption falls apart under pressure. Please.
+0242 | VT-68364 | [denials_corrections      ] No, that's not accurate. For real.
+0243 | VT-47489 | [denials_corrections      ] Heads up: That was my mistake; here’s the fix.—got it.
+0244 | VT-83698 | [denials_corrections      ] Okay, That assumption falls apart under pressure. For real.
+0245 | VT-16383 | [denials_corrections      ] Heads up: Negative—try a different approach.—got it.
+0246 | VT-17226 | [denials_corrections      ] No, that's not accurate.
+0247 | VT-68364 | [denials_corrections      ] No, that's not accurate. For real.
+0248 | VT-39693 | [denials_corrections      ] Reminder: That assumption falls apart under pressure. Right now.
+0249 | VT-43580 | [denials_corrections      ] Hey, No, that's not accurate.—copy.
+0250 | VT-60418 | [denials_corrections      ] You mixed up the units again.—got it.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 88 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+4351 | VT-55578 | [sound_effects            ] Listen, Tick tick tick… and then silence. For real.
+4352 | VT-70437 | [sound_effects            ] Pshhh, like air escaping a balloon of secrets.
+4353 | VT-29590 | [sound_effects            ] Pshhh, like air escaping a balloon of secrets. Right now.
+4354 | VT-50626 | [sound_effects            ] Heads up: Pshhh, like air escaping a balloon of secrets.—got it.
+4355 | VT-11248 | [sound_effects            ] Note: Boom! Crash! The whole lab went dark. Thanks.
+4356 | VT-21424 | [sound_effects            ] Hey, Tick tick tick… and then silence.—got it.
+4357 | VT-98742 | [sound_effects            ] FYI, Pshhh, like air escaping a balloon of secrets. Please.
+4358 | VT-79335 | [sound_effects            ] Pshhh, like air escaping a balloon of secrets. Please.
+4359 | VT-50539 | [sound_effects            ] Hey, Boom! Crash! The whole lab went dark.—got it.
+4360 | VT-79335 | [sound_effects            ] Pshhh, like air escaping a balloon of secrets. Please.
+4361 | VT-13432 | [sound_effects            ] Hey, Pshhh, like air escaping a balloon of secrets. Thanks.
+4362 | VT-12122 | [sound_effects            ] Note: Boom! Crash! The whole lab went dark. For real.
+4363 | VT-54474 | [sound_effects            ] Note: Tick tick tick… and then silence. Thanks.
+4364 | VT-19569 | [sound_effects            ] Note: Pshhh, like air escaping a balloon of secrets. Thanks.
+4365 | VT-64808 | [sound_effects            ] Note: Tick tick tick… and then silence. Thanks.
+4366 | VT-42798 | [sound_effects            ] FYI, Pshhh, like air escaping a balloon of secrets. Thanks.
+4367 | VT-48885 | [sound_effects            ] Note: Boom! Crash! The whole lab went dark. Please.
+4368 | VT-99542 | [sound_effects            ] Boom! Crash! The whole lab went dark. Please.
+4369 | VT-43291 | [sound_effects            ] Okay, Tick tick tick… and then silence. Right now.
+4370 | VT-79292 | [sound_effects            ] Tick tick tick… and then silence.—got it.
+4371 | VT-86673 | [sound_effects            ] Listen, Boom! Crash! The whole lab went dark. Right now.
+4372 | VT-36205 | [sound_effects            ] Note: Pshhh, like air escaping a balloon of secrets. Right now.
+4373 | VT-64875 | [sound_effects            ] Heads up: Tick tick tick… and then silence. If possible.
+4374 | VT-22544 | [sound_effects            ] Reminder: Pshhh, like air escaping a balloon of secrets. Right now.
+4375 | VT-31024 | [sound_effects            ] Tick tick tick… and then silence. Thanks.
+4376 | VT-68314 | [sound_effects            ] FYI, Tick tick tick… and then silence.—got it.
+4377 | VT-53468 | [sound_effects            ] Heads up: Tick tick tick… and then silence. Please.
+4378 | VT-86673 | [sound_effects            ] Listen, Boom! Crash! The whole lab went dark. Right now.
+4379 | VT-86673 | [sound_effects            ] Listen, Boom! Crash! The whole lab went dark. Right now.
+4380 | VT-45120 | [sound_effects            ] FYI, Pshhh, like air escaping a balloon of secrets. Please.
+4381 | VT-84185 | [sound_effects            ] Reminder: Tick tick tick… and then silence. Please.
+4382 | VT-13634 | [sound_effects            ] Hey, Pshhh, like air escaping a balloon of secrets. Thanks.
+4383 | VT-93986 | [sound_effects            ] Reminder: Pshhh, like air escaping a balloon of secrets.
+4384 | VT-58798 | [sound_effects            ] Note: Pshhh, like air escaping a balloon of secrets.—copy.
+4385 | VT-75051 | [sound_effects            ] Listen, Tick tick tick… and then silence. Right now.
+4386 | VT-82638 | [sound_effects            ] Heads up: Tick tick tick… and then silence. Thanks.
+4387 | VT-36468 | [sound_effects            ] Okay, Pshhh, like air escaping a balloon of secrets.—copy.
+4388 | VT-51885 | [sound_effects            ] Okay, Boom! Crash! The whole lab went dark. Please.
+4389 | VT-45195 | [sound_effects            ] Okay, Pshhh, like air escaping a balloon of secrets. Thanks.
+4390 | VT-51885 | [sound_effects            ] Okay, Boom! Crash! The whole lab went dark. Please.
+4391 | VT-95124 | [sound_effects            ] Hey, Tick tick tick… and then silence. Please.
+4392 | VT-97126 | [sound_effects            ] Pshhh, like air escaping a balloon of secrets.
+4393 | VT-60136 | [sound_effects            ] Boom! Crash! The whole lab went dark. Please.
+4394 | VT-63315 | [sound_effects            ] FYI, Tick tick tick… and then silence. Right now.
+4395 | VT-55578 | [sound_effects            ] Listen, Tick tick tick… and then silence. For real.
+4396 | VT-31024 | [sound_effects            ] Tick tick tick… and then silence. Thanks.
+4397 | VT-91124 | [sound_effects            ] Listen, Pshhh, like air escaping a balloon of secrets.—got it.
+4398 | VT-13757 | [sound_effects            ] Pshhh, like air escaping a balloon of secrets.—copy.
+4399 | VT-77549 | [sound_effects            ] Okay, Boom! Crash! The whole lab went dark. Please.
+4400 | VT-27452 | [sound_effects            ] Listen, Tick tick tick… and then silence. Please.

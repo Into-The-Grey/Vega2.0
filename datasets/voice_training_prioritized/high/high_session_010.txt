@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 10 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0451 | VT-77076 | [dates_times              ] Listen, Wake me up in 23 minutes. (3690) Right now.
+0452 | VT-55072 | [dates_times              ] Note: Convert 14:30 UTC to Central Time. (7232)—got it.
+0453 | VT-57207 | [dates_times              ] Hey, Today is the 27th of October, 2025. (7147) Right now.
+0454 | VT-86484 | [dates_times              ] Note: Convert 14:30 UTC to Central Time. (4609) Please.
+0455 | VT-97205 | [dates_times              ] FYI, The deadline moved from Q3 to Q4. (1858) If possible.
+0456 | VT-20137 | [dates_times              ] Note: Timer: three hours, twenty-one minutes, go. (8015) Please.
+0457 | VT-76059 | [dates_times              ] Reminder: The deadline moved from Q3 to Q4. (8292) For real.
+0458 | VT-10735 | [dates_times              ] Reminder: Sunrise is at 06:58; sunset at 17:12. (5006) Please.
+0459 | VT-78371 | [dates_times              ] Okay, Today is the 27th of October, 2025. (2630)—copy.
+0460 | VT-24981 | [dates_times              ] Listen, Set a reminder for 7:45 PM on Friday. (4763) Please.
+0461 | VT-43530 | [dates_times              ] Reminder: Schedule it biweekly starting next Monday. (4108)—copy.
+0462 | VT-51965 | [dates_times              ] FYI, Convert 14:30 UTC to Central Time. (5821)—copy.
+0463 | VT-52865 | [dates_times              ] Hey, Convert 14:30 UTC to Central Time. (3135)—got it.
+0464 | VT-49811 | [dates_times              ] Reminder: Convert 14:30 UTC to Central Time. (9091) Thanks.
+0465 | VT-34287 | [dates_times              ] Heads up: Set a reminder for 7:45 PM on Friday. (355)
+0466 | VT-90549 | [dates_times              ] Listen, My birthday is on 02/29—leap year baby. (2693) If possible.
+0467 | VT-76059 | [dates_times              ] Reminder: The deadline moved from Q3 to Q4. (8292) For real.
+0468 | VT-74441 | [dates_times              ] The deadline moved from Q3 to Q4. (5662) Thanks.
+0469 | VT-61534 | [dates_times              ] FYI, The deadline moved from Q3 to Q4. (1103)—copy.
+0470 | VT-59852 | [dates_times              ] Hey, What's the date two weeks from yesterday? (653) If possible.
+0471 | VT-19919 | [dates_times              ] Heads up: Set a reminder for 7:45 PM on Friday. (9280) Please.
+0472 | VT-50924 | [dates_times              ] What's the date two weeks from yesterday?
+0473 | VT-84640 | [dates_times              ] Heads up: Timer: three hours, twenty-one minutes, go. (9836) Right now.
+0474 | VT-24353 | [dates_times              ] What's the date two weeks from yesterday? (29)—copy.
+0475 | VT-71879 | [dates_times              ] Wake me up in 23 minutes. (6368) Please.
+0476 | VT-11127 | [dates_times              ] Note: Schedule it biweekly starting next Monday. (2320)
+0477 | VT-92697 | [dates_times              ] Reminder: What's the date two weeks from yesterday? (9752) If possible.
+0478 | VT-44306 | [dates_times              ] Set a reminder for 7:45 PM on Friday. (2961) For real.
+0479 | VT-71879 | [dates_times              ] Wake me up in 23 minutes. (6368) Please.
+0480 | VT-25169 | [dates_times              ] FYI, Schedule it biweekly starting next Monday. (5381) Thanks.
+0481 | VT-25169 | [dates_times              ] FYI, Schedule it biweekly starting next Monday. (5381) Thanks.
+0482 | VT-66455 | [dates_times              ] Note: Schedule it biweekly starting next Monday. (42)—copy.
+0483 | VT-57863 | [dates_times              ] Hey, Schedule it biweekly starting next Monday. (3603)—copy.
+0484 | VT-10849 | [dates_times              ] The deadline moved from Q3 to Q4.
+0485 | VT-34287 | [dates_times              ] Heads up: Set a reminder for 7:45 PM on Friday. (355)
+0486 | VT-38979 | [dates_times              ] Note: Timer: three hours, twenty-one minutes, go. (2334) Thanks.
+0487 | VT-90107 | [dates_times              ] Note: The deadline moved from Q3 to Q4. (4232)—copy.
+0488 | VT-55140 | [dates_times              ] Note: Today is the 27th of October, 2025. (8654)—copy.
+0489 | VT-27422 | [dates_times              ] Note: Today is the 27th of October, 2025. (8209)—got it.
+0490 | VT-57207 | [dates_times              ] Hey, Today is the 27th of October, 2025. (7147) Right now.
+0491 | VT-66455 | [dates_times              ] Note: Schedule it biweekly starting next Monday. (42)—copy.
+0492 | VT-20137 | [dates_times              ] Note: Timer: three hours, twenty-one minutes, go. (8015) Please.
+0493 | VT-25273 | [dates_times              ] Hey, Set a reminder for 7:45 PM on Friday. (3614) Please.
+0494 | VT-69875 | [dates_times              ] Heads up: Today is the 27th of October, 2025. (1379)
+0495 | VT-71269 | [dates_times              ] Hey, My birthday is on 02/29—leap year baby. (4231) Please.
+0496 | VT-44638 | [dates_times              ] Hey, What's the date two weeks from yesterday? (8662) If possible.
+0497 | VT-63790 | [dates_times              ] Heads up: Today is the 27th of October, 2025. (5098)—got it.
+0498 | VT-42938 | [dates_times              ] Convert 14:30 UTC to Central Time. (384) Thanks.
+0499 | VT-47800 | [dates_times              ] Note: The deadline moved from Q3 to Q4. (7912) Right now.
+0500 | VT-29736 | [dates_times              ] Hey, Set a reminder for 7:45 PM on Friday. (4392) If possible.

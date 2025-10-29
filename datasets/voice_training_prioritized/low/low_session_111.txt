@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 111 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+5501 | VT-77416 | [urls_emails_codes        ] Okay, Paste the invite code: XR7F-29Q4-J1LM.—copy.
+5502 | VT-13478 | [urls_emails_codes        ] Okay, Email support at helpdesk@example.com. If possible.
+5503 | VT-24408 | [urls_emails_codes        ] Email support at helpdesk@example.com.
+5504 | VT-91290 | [urls_emails_codes        ] Okay, Paste the invite code: XR7F-29Q4-J1LM.—got it.
+5505 | VT-91760 | [urls_emails_codes        ] Note: Paste the invite code: XR7F-29Q4-J1LM.
+5506 | VT-43354 | [urls_emails_codes        ] Listen, Open the PR titled 'fix/auth-refresh' ASAP. If possible.
+5507 | VT-65552 | [urls_emails_codes        ] Paste the invite code: XR7F-29Q4-J1LM.
+5508 | VT-91760 | [urls_emails_codes        ] Note: Paste the invite code: XR7F-29Q4-J1LM.
+5509 | VT-81657 | [urls_emails_codes        ] Listen, Open the PR titled 'fix/auth-refresh' ASAP.—copy.
+5510 | VT-60469 | [urls_emails_codes        ] Paste the invite code: XR7F-29Q4-J1LM.—got it.
+5511 | VT-14491 | [urls_emails_codes        ] Reminder: Email support at helpdesk@example.com.—copy.
+5512 | VT-45578 | [urls_emails_codes        ] Reminder: Paste the invite code: XR7F-29Q4-J1LM.—got it.
+5513 | VT-64300 | [urls_emails_codes        ] Heads up: The repo lives at github dot com slash acme slash core. Right now.
+5514 | VT-27711 | [urls_emails_codes        ] Listen, Text me the OTP when you get it. Thanks.
+5515 | VT-60947 | [urls_emails_codes        ] Hey, The repo lives at github dot com slash acme slash core. If possible.
+5516 | VT-76282 | [urls_emails_codes        ] Listen, Join the room ID 834-555-120 with passcode 'orbit'.—got it.
+5517 | VT-71261 | [urls_emails_codes        ] Okay, Email support at helpdesk@example.com. If possible.
+5518 | VT-24903 | [urls_emails_codes        ] Hey, Visit https://example.org/docs/getting-started.—got it.
+5519 | VT-58109 | [urls_emails_codes        ] Listen, My handle is @zero_cool_1995.
+5520 | VT-71516 | [urls_emails_codes        ] Reminder: Paste the invite code: XR7F-29Q4-J1LM.—got it.
+5521 | VT-83355 | [urls_emails_codes        ] FYI, Paste the invite code: XR7F-29Q4-J1LM.
+5522 | VT-40922 | [urls_emails_codes        ] Listen, Paste the invite code: XR7F-29Q4-J1LM. Thanks.
+5523 | VT-41653 | [urls_emails_codes        ] Heads up: Visit https://example.org/docs/getting-started.—copy.
+5524 | VT-95226 | [urls_emails_codes        ] FYI, The meeting link is in the calendar description.—copy.
+5525 | VT-60947 | [urls_emails_codes        ] Hey, The repo lives at github dot com slash acme slash core. If possible.
+5526 | VT-96938 | [urls_emails_codes        ] Listen, The repo lives at github dot com slash acme slash core. Thanks.
+5527 | VT-45194 | [urls_emails_codes        ] Note: The repo lives at github dot com slash acme slash core. If possible.
+5528 | VT-38905 | [urls_emails_codes        ] Listen, Use coupon code FINAL-BOSS at checkout. For real.
+5529 | VT-65970 | [urls_emails_codes        ] Hey, Visit https://example.org/docs/getting-started. Thanks.
+5530 | VT-83562 | [urls_emails_codes        ] Use coupon code FINAL-BOSS at checkout.
+5531 | VT-80343 | [urls_emails_codes        ] Listen, Text me the OTP when you get it. For real.
+5532 | VT-93356 | [urls_emails_codes        ] Note: Use coupon code FINAL-BOSS at checkout.
+5533 | VT-57829 | [urls_emails_codes        ] Listen, Open the PR titled 'fix/auth-refresh' ASAP.—copy.
+5534 | VT-49019 | [urls_emails_codes        ] Note: My handle is @zero_cool_1995.
+5535 | VT-36432 | [urls_emails_codes        ] FYI, Use coupon code FINAL-BOSS at checkout. For real.
+5536 | VT-54933 | [urls_emails_codes        ] Visit https://example.org/docs/getting-started.
+5537 | VT-57829 | [urls_emails_codes        ] Listen, Open the PR titled 'fix/auth-refresh' ASAP.—copy.
+5538 | VT-80205 | [urls_emails_codes        ] Listen, My handle is @zero_cool_1995.
+5539 | VT-80205 | [urls_emails_codes        ] Listen, My handle is @zero_cool_1995.
+5540 | VT-36812 | [urls_emails_codes        ] Hey, My handle is @zero_cool_1995.—got it.
+5541 | VT-14155 | [urls_emails_codes        ] Listen, My handle is @zero_cool_1995. Please.
+5542 | VT-80573 | [urls_emails_codes        ] The repo lives at github dot com slash acme slash core.
+5543 | VT-41653 | [urls_emails_codes        ] Heads up: Visit https://example.org/docs/getting-started.—copy.
+5544 | VT-56367 | [urls_emails_codes        ] FYI, Text me the OTP when you get it. Thanks.
+5545 | VT-35192 | [urls_emails_codes        ] The repo lives at github dot com slash acme slash core.—got it.
+5546 | VT-35637 | [urls_emails_codes        ] Heads up: Email support at helpdesk@example.com. For real.
+5547 | VT-44015 | [urls_emails_codes        ] Hey, Email support at helpdesk@example.com. Please.
+5548 | VT-14491 | [urls_emails_codes        ] Reminder: Email support at helpdesk@example.com.—copy.
+5549 | VT-36812 | [urls_emails_codes        ] Hey, My handle is @zero_cool_1995.—got it.
+5550 | VT-27711 | [urls_emails_codes        ] Listen, Text me the OTP when you get it. Thanks.

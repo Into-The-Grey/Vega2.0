@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 62 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+3051 | VT-47219 | [passive_aggressive       ] Hey, Oh, you’re here. How… unexpected.
+3052 | VT-54013 | [passive_aggressive       ] Note: I love how you always do things your way, even when they’re wrong. Right now.
+3053 | VT-50863 | [passive_aggressive       ] Hey, Oh, you’re here. How… unexpected.—got it.
+3054 | VT-59682 | [passive_aggressive       ] Okay, Oh, you’re here. How… unexpected. Right now.
+3055 | VT-45254 | [passive_aggressive       ] Listen, No, really, take your time. It’s not like deadlines matter.
+3056 | VT-41789 | [passive_aggressive       ] FYI, I love how you always do things your way, even when they’re wrong.
+3057 | VT-36853 | [passive_aggressive       ] FYI, Oh, you’re here. How… unexpected. For real.
+3058 | VT-44310 | [passive_aggressive       ] Note: No, really, take your time. It’s not like deadlines matter.—copy.
+3059 | VT-87682 | [passive_aggressive       ] Okay, Oh, you’re here. How… unexpected. Please.
+3060 | VT-86373 | [passive_aggressive       ] Heads up: No, really, take your time. It’s not like deadlines matter.
+3061 | VT-44049 | [passive_aggressive       ] Okay, I love how you always do things your way, even when they’re wrong. Please.
+3062 | VT-74766 | [passive_aggressive       ] Reminder: I love how you always do things your way, even when they’re wrong.—copy.
+3063 | VT-35545 | [passive_aggressive       ] Okay, I love how you always do things your way, even when they’re wrong. Please.
+3064 | VT-65618 | [passive_aggressive       ] FYI, Oh, you’re here. How… unexpected.—got it.
+3065 | VT-27233 | [passive_aggressive       ] FYI, I love how you always do things your way, even when they’re wrong.—got it.
+3066 | VT-33330 | [passive_aggressive       ] I love how you always do things your way, even when they’re wrong.
+3067 | VT-44310 | [passive_aggressive       ] Note: No, really, take your time. It’s not like deadlines matter.—copy.
+3068 | VT-55204 | [passive_aggressive       ] I love how you always do things your way, even when they’re wrong. If possible.
+3069 | VT-75286 | [passive_aggressive       ] Listen, I love how you always do things your way, even when they’re wrong.—got it.
+3070 | VT-43041 | [passive_aggressive       ] Okay, No, really, take your time. It’s not like deadlines matter. Right now.
+3071 | VT-59682 | [passive_aggressive       ] Okay, Oh, you’re here. How… unexpected. Right now.
+3072 | VT-72511 | [passive_aggressive       ] Listen, I love how you always do things your way, even when they’re wrong. Thanks.
+3073 | VT-27970 | [passive_aggressive       ] No, really, take your time. It’s not like deadlines matter.—got it.
+3074 | VT-20274 | [passive_aggressive       ] Note: No, really, take your time. It’s not like deadlines matter. Right now.
+3075 | VT-29065 | [passive_aggressive       ] Reminder: I love how you always do things your way, even when they’re wrong.
+3076 | VT-49406 | [passive_aggressive       ] Hey, No, really, take your time. It’s not like deadlines matter. Thanks.
+3077 | VT-78332 | [passive_aggressive       ] Hey, I love how you always do things your way, even when they’re wrong.—copy.
+3078 | VT-98330 | [passive_aggressive       ] Listen, I love how you always do things your way, even when they’re wrong. Right now.
+3079 | VT-47219 | [passive_aggressive       ] Hey, Oh, you’re here. How… unexpected.
+3080 | VT-67780 | [passive_aggressive       ] Heads up: No, really, take your time. It’s not like deadlines matter. If possible.
+3081 | VT-18466 | [passive_aggressive       ] Heads up: Oh, you’re here. How… unexpected. Right now.
+3082 | VT-72991 | [passive_aggressive       ] Note: Oh, you’re here. How… unexpected.—copy.
+3083 | VT-19854 | [passive_aggressive       ] No, really, take your time. It’s not like deadlines matter. For real.
+3084 | VT-31632 | [passive_aggressive       ] Note: No, really, take your time. It’s not like deadlines matter.
+3085 | VT-35545 | [passive_aggressive       ] Okay, I love how you always do things your way, even when they’re wrong. Please.
+3086 | VT-18466 | [passive_aggressive       ] Heads up: Oh, you’re here. How… unexpected. Right now.
+3087 | VT-63496 | [passive_aggressive       ] Okay, Oh, you’re here. How… unexpected. If possible.
+3088 | VT-59682 | [passive_aggressive       ] Okay, Oh, you’re here. How… unexpected. Right now.
+3089 | VT-83031 | [passive_aggressive       ] No, really, take your time. It’s not like deadlines matter.—copy.
+3090 | VT-72418 | [passive_aggressive       ] FYI, I love how you always do things your way, even when they’re wrong. For real.
+3091 | VT-85977 | [passive_aggressive       ] FYI, Oh, you’re here. How… unexpected.
+3092 | VT-13792 | [passive_aggressive       ] Hey, Oh, you’re here. How… unexpected.—copy.
+3093 | VT-29065 | [passive_aggressive       ] Reminder: I love how you always do things your way, even when they’re wrong.
+3094 | VT-73715 | [passive_aggressive       ] Note: Oh, you’re here. How… unexpected.
+3095 | VT-31705 | [passive_aggressive       ] Heads up: I love how you always do things your way, even when they’re wrong. For real.
+3096 | VT-98183 | [passive_aggressive       ] Heads up: Oh, you’re here. How… unexpected.
+3097 | VT-62772 | [passive_aggressive       ] Heads up: Oh, you’re here. How… unexpected.—got it.
+3098 | VT-27233 | [passive_aggressive       ] FYI, I love how you always do things your way, even when they’re wrong.—got it.
+3099 | VT-43041 | [passive_aggressive       ] Okay, No, really, take your time. It’s not like deadlines matter. Right now.
+3100 | VT-80760 | [passive_aggressive       ] Listen, Oh, you’re here. How… unexpected. Right now.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 177 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+8801 | VT-614039 | [paths_cli                ] Quick one: Note: cd projects/vega && make run—got it. — now.
+8802 | VT-565930 | [paths_cli                ] Note: Listen, Home tilde slash .ssh slash config needs chmod 599. For real. — now.
+8803 | VT-652844 | [paths_cli                ] Real talk, Home tilde slash .ssh slash config needs chmod 599. — confirm.
+8804 | VT-673116 | [paths_cli                ] Reminder: FYI, cd projects/vega && make run Please. — confirm.
+8805 | VT-509959 | [paths_cli                ] Heads up: Listen, cd projects/vega && make run—got it. thanks.
+8806 | VT-527649 | [paths_cli                ] FYI, Listen, scp the backup to the NAS. Right now. — got it.
+8807 | VT-618739 | [paths_cli                ] cd projects/vega && make run thanks.
+8808 | VT-581698 | [paths_cli                ] Real talk, Listen, cd projects/vega && make run—got it. thanks.
+8809 | VT-587650 | [paths_cli                ] Note: scp the backup to the NAS. Thanks. please.
+8810 | VT-630244 | [paths_cli                ] Quick one: Note: cd projects/vega && make run—copy. right now.
+8811 | VT-665541 | [paths_cli                ] Listen, Heads up: Home tilde slash .ssh slash config needs chmod 599..
+8812 | VT-514228 | [paths_cli                ] Reminder: Hey, cd projects/vega && make run Thanks. please.
+8813 | VT-556774 | [paths_cli                ] Listen, Reminder: ls -la to show hidden files.—copy. — got it.
+8814 | VT-692030 | [paths_cli                ] Quick one: Okay, journalctl -u vega.service --since '11 min ago'—got it. if you can.
+8815 | VT-672087 | [paths_cli                ] Real talk, Note: ls -la to show hidden files. Thanks. — confirm.
+8816 | VT-502448 | [paths_cli                ] Heads up: ping the gateway to verify routing. Please.
+8817 | VT-610656 | [paths_cli                ] Listen, Reminder: Home tilde slash .ssh slash config needs chmod 601. If possible.
+8818 | VT-691185 | [paths_cli                ] Okay, Heads up: Open /var/log/syslog and tail -f. Right now. please.
+8819 | VT-655847 | [paths_cli                ] Reminder: Note: Mount the drive at /mnt/data.—got it. — confirm.
+8820 | VT-651979 | [paths_cli                ] FYI, Hey, cd projects/vega && make run—copy. — confirm.
+8821 | VT-584940 | [paths_cli                ] Quick one: cd projects/vega && make run please.
+8822 | VT-610400 | [philosophical            ] Note: Okay, What is the sound of thought before it becomes speech?—copy..
+8823 | VT-598201 | [philosophical            ] Okay, FYI, To know yourself is to forget what the world taught you to be. If possible. right now.
+8824 | VT-639866 | [philosophical            ] FYI, FYI, To know yourself is to forget what the world taught you to be. For real. right now.
+8825 | VT-690759 | [philosophical            ] Note: To know yourself is to forget what the world taught you to be. If possible. — confirm.
+8826 | VT-631978 | [philosophical            ] Real talk, Heads up: Time is just memory unfolding in a straight line. right now.
+8827 | VT-657070 | [philosophical            ] Quick one: FYI, To know yourself is to forget what the world taught you to be. Right now. — now.
+8828 | VT-641307 | [philosophical            ] Real talk, Okay, To know yourself is to forget what the world taught you to be. If possible. — got it. (alt)
+8829 | VT-572357 | [philosophical            ] Real talk, Okay, What is the sound of thought before it becomes speech?—copy. thanks.
+8830 | VT-678545 | [philosophical            ] Note: Time is just memory unfolding in a straight line. For real.
+8831 | VT-524073 | [philosophical            ] Reminder: Heads up: To know yourself is to forget what the world taught you to be. For real. — confirm. (alt)
+8832 | VT-647722 | [philosophical            ] Note: Okay, What is the sound of thought before it becomes speech? If possible. — now.
+8833 | VT-578672 | [philosophical            ] Quick one: Note: To know yourself is to forget what the world taught you to be. For real. right now.
+8834 | VT-529868 | [philosophical            ] Note: FYI, What is the sound of thought before it becomes speech?—got it. right now.
+8835 | VT-572606 | [philosophical            ] Note: Heads up: Time is just memory unfolding in a straight line. Please. please.
+8836 | VT-531266 | [philosophical            ] Real talk, Time is just memory unfolding in a straight line. Please. — confirm.
+8837 | VT-620034 | [philosophical            ] Quick one: Time is just memory unfolding in a straight line. For real. please.
+8838 | VT-598010 | [philosophical            ] Okay, Listen, To know yourself is to forget what the world taught you to be.—got it..
+8839 | VT-530034 | [philosophical            ] Real talk, Heads up: Time is just memory unfolding in a straight line. Right now. thanks.
+8840 | VT-617390 | [philosophical            ] Listen, Time is just memory unfolding in a straight line.
+8841 | VT-561651 | [philosophical            ] Listen, Okay, What is the sound of thought before it becomes speech? If possible. — now.
+8842 | VT-622606 | [philosophical            ] Note: Time is just memory unfolding in a straight line. — now.
+8843 | VT-526670 | [philosophical            ] Real talk, Hey, Time is just memory unfolding in a straight line. Right now. — now.
+8844 | VT-618602 | [philosophical            ] Okay, Hey, What is the sound of thought before it becomes speech? If possible. — got it.
+8845 | VT-519654 | [philosophical            ] Heads up: Okay, To know yourself is to forget what the world taught you to be. If possible. — now.
+8846 | VT-689079 | [philosophical            ] Heads up: Hey, Time is just memory unfolding in a straight line. Right now. thanks.
+8847 | VT-621341 | [philosophical            ] Reminder: Heads up: What is the sound of thought before it becomes speech? Thanks. if you can.
+8848 | VT-595190 | [philosophical            ] Note: What is the sound of thought before it becomes speech?—got it. right now.
+8849 | VT-530326 | [philosophical            ] Reminder: Listen, Time is just memory unfolding in a straight line. For real. if you can.
+8850 | VT-523699 | [philosophical            ] Reminder: Note: What is the sound of thought before it becomes speech? For real..

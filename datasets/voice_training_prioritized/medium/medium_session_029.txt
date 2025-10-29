@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 29 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1401 | VT-373772 | [sarcastic                ] Listen, Heads up: I'm totally not rolling my eyes right now. Thanks. please.
+1402 | VT-357132 | [structured               ] Quick one: Reminder: Grocery list: milk, bread, eggs, spinach, coffee.—copy. please.
+1403 | VT-353523 | [structured               ] Heads up: Reminder: Agenda: introductions, updates, blockers, next steps. For real. if you can.
+1404 | VT-321079 | [structured               ] Heads up: Hey, Grocery list: milk, bread, eggs, spinach, coffee. For real..
+1405 | VT-337777 | [structured               ] Reminder: Heads up: Agenda: introductions, updates, blockers, next steps.—copy. — got it. (alt)
+1406 | VT-311542 | [technical                ] Heads up: Add observability around the Apache Kafka for better insights. thanks.
+1407 | VT-352976 | [technical                ] Real talk, We’ll containerize after we gather baseline metrics on the WebRTC peer connection.
+1408 | VT-371118 | [technical                ] Quick one: Let’s containerize with feature flags to isolate the read‑write lock.. (alt)
+1409 | VT-367952 | [technical                ] Heads up: The optimistic concurrency should be idempotent by design. — confirm.
+1410 | VT-415485 | [creative                 ] Hey, The crisp pattern drifted at the edge of the room.—got it. — now.
+1411 | VT-417986 | [creative                 ] Reminder: The dusty ripple gathered at the edge of the room. Please. if you can.
+1412 | VT-466730 | [creative                 ] FYI, Heads up: The crisp pattern drifted at the edge of the room.—copy. right now.
+1413 | VT-498346 | [creative                 ] Reminder: Heads up: The crisp pattern drifted at the edge of the room.—copy..
+1414 | VT-439984 | [creative                 ] Reminder: Reminder: The crisp pattern drifted at the edge of the room. If possible. — now. (alt)
+1415 | VT-488890 | [creative                 ] Heads up: FYI, The dusty ripple gathered at the edge of the room.—copy. — now.
+1416 | VT-435084 | [creative                 ] Okay, Hey, The crisp pattern drifted at the edge of the room.—copy. thanks. (alt)
+1417 | VT-417846 | [creative                 ] Heads up: Hey, The crisp pattern drifted at the edge of the room.—got it. — got it.
+1418 | VT-456442 | [creative                 ] FYI, The dusty ripple gathered at the edge of the room. For real. — got it.
+1419 | VT-499906 | [creative                 ] Okay, Reminder: The crisp pattern drifted at the edge of the room. Right now. right now.
+1420 | VT-423743 | [creative                 ] Reminder: Listen, The dusty ripple gathered at the edge of the room. If possible. thanks. (alt)
+1421 | VT-447115 | [creative                 ] Okay, Reminder: The crisp pattern drifted at the edge of the room. For real. — now.
+1422 | VT-428435 | [creative                 ] Reminder: Okay, The dusty ripple gathered at the edge of the room.—got it. please.
+1423 | VT-493062 | [creative                 ] Quick one: Hey, The dusty ripple gathered at the edge of the room.—got it. — now.
+1424 | VT-400921 | [creative                 ] Note: The dusty ripple gathered at the edge of the room.—copy. — confirm.
+1425 | VT-435763 | [creative                 ] Reminder: FYI, The crisp pattern drifted at the edge of the room.—got it. — now.
+1426 | VT-435398 | [creative                 ] Okay, Note: The dusty ripple gathered at the edge of the room. Right now. — now.
+1427 | VT-444544 | [creative                 ] Note: Note: The crisp pattern drifted at the edge of the room. Right now. — got it.
+1428 | VT-495145 | [creative                 ] Heads up: The dusty ripple gathered at the edge of the room. thanks.
+1429 | VT-494634 | [creative                 ] Listen, Listen, The dusty ripple gathered at the edge of the room. If possible. — confirm.
+1430 | VT-498894 | [creative                 ] Heads up: Listen, The dusty ripple gathered at the edge of the room.—got it. if you can.
+1431 | VT-403434 | [creative                 ] Listen, Heads up: The dusty ripple gathered at the edge of the room. For real. if you can.
+1432 | VT-463881 | [creative                 ] Note: Heads up: The dusty ripple gathered at the edge of the room. For real. right now.
+1433 | VT-418187 | [creative                 ] Real talk, Hey, The crisp pattern drifted at the edge of the room.—copy. please.
+1434 | VT-431479 | [creative                 ] FYI, Heads up: The crisp pattern drifted at the edge of the room. Please. right now.
+1435 | VT-475744 | [creative                 ] Heads up: The dusty ripple gathered at the edge of the room. For real..
+1436 | VT-422406 | [creative                 ] Okay, The dusty ripple gathered at the edge of the room. Thanks. thanks. (alt)
+1437 | VT-492338 | [creative                 ] Heads up: Hey, The crisp pattern drifted at the edge of the room.—copy. thanks.
+1438 | VT-404947 | [creative                 ] Heads up: Heads up: The crisp pattern drifted at the edge of the room. right now. (alt)
+1439 | VT-496507 | [creative                 ] Note: Listen, The crisp pattern drifted at the edge of the room. For real. thanks.
+1440 | VT-431527 | [creative                 ] Listen, Reminder: The dusty ripple gathered at the edge of the room. Right now. thanks. (alt)
+1441 | VT-489052 | [creative                 ] FYI, Heads up: The crisp pattern drifted at the edge of the room.—copy. — got it. (alt)
+1442 | VT-406774 | [creative                 ] Okay, Okay, The crisp pattern drifted at the edge of the room. Thanks..
+1443 | VT-414004 | [creative                 ] Reminder: Listen, The crisp pattern drifted at the edge of the room.—got it.
+1444 | VT-451058 | [creative                 ] Note: Reminder: The dusty ripple gathered at the edge of the room. Thanks. — confirm. (alt)
+1445 | VT-498109 | [creative                 ] Note: FYI, The crisp pattern drifted at the edge of the room. Please. (alt)
+1446 | VT-420870 | [creative                 ] Okay, Okay, The dusty ripple gathered at the edge of the room.—copy.
+1447 | VT-458809 | [creative                 ] Listen, FYI, The crisp pattern drifted at the edge of the room.—got it. — now.
+1448 | VT-468861 | [creative                 ] Real talk, Listen, The crisp pattern drifted at the edge of the room.—got it. — now.
+1449 | VT-434976 | [creative                 ] Real talk, Listen, The crisp pattern drifted at the edge of the room. For real. if you can.
+1450 | VT-462481 | [creative                 ] Note: Hey, The crisp pattern drifted at the edge of the room.—copy. — confirm.

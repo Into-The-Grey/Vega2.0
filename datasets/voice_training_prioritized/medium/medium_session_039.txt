@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 39 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1901 | VT-673088 | [emotional                ] Quick one: Okay, I miss you more than words can say. Please. — got it.
+1902 | VT-647863 | [emotional                ] Heads up: Hey, Why does everything have to hurt so much? For real..
+1903 | VT-678079 | [emotional                ] Okay, Heads up: I'm so proud of how far we've come. Thanks.. (alt)
+1904 | VT-601459 | [emotional                ] Okay, Heads up: Why does everything have to hurt so much? If possible. — confirm.
+1905 | VT-533514 | [emotional                ] Reminder: Okay, Why does everything have to hurt so much? if you can. (alt)
+1906 | VT-689948 | [emotional                ] Okay, Hey, Why does everything have to hurt so much? Thanks.
+1907 | VT-535293 | [emotional                ] Okay, Okay, I'm so proud of how far we've come. Please. — confirm.
+1908 | VT-556501 | [emotional                ] Note: Why does everything have to hurt so much? (alt)
+1909 | VT-698951 | [emotional                ] FYI, Why does everything have to hurt so much? For real. — now.
+1910 | VT-675065 | [emotional                ] Reminder: Note: I'm so proud of how far we've come. Thanks. if you can.
+1911 | VT-687676 | [emotional                ] Heads up: I miss you more than words can say.—got it. — now. (alt)
+1912 | VT-537400 | [emotional                ] Real talk, Heads up: I miss you more than words can say. if you can.
+1913 | VT-539214 | [emotional                ] Note: I'm so proud of how far we've come. Thanks. — confirm. (alt)
+1914 | VT-690811 | [emotional                ] FYI, Hey, Why does everything have to hurt so much?—got it.. (alt)
+1915 | VT-671135 | [emotional                ] Heads up: Hey, Why does everything have to hurt so much? Please. please.
+1916 | VT-618973 | [emotional                ] Listen, Hey, I'm so proud of how far we've come. For real. thanks.
+1917 | VT-598487 | [emotional                ] Quick one: Hey, Why does everything have to hurt so much? Please. — now.
+1918 | VT-637184 | [emotional                ] Quick one: Reminder: Why does everything have to hurt so much?—copy. thanks.
+1919 | VT-505968 | [emotional                ] Note: Reminder: I'm so proud of how far we've come. Right now. please.
+1920 | VT-691280 | [emotional                ] Listen, Listen, I'm so proud of how far we've come. Please. — now.
+1921 | VT-537641 | [emotional                ] Listen, FYI, I miss you more than words can say. Please. right now.
+1922 | VT-603085 | [emotional                ] Quick one: Heads up: I miss you more than words can say. Thanks..
+1923 | VT-686456 | [emotional                ] Reminder: Note: I'm so proud of how far we've come. Thanks. right now. (alt)
+1924 | VT-626040 | [emotional                ] Hey, Why does everything have to hurt so much?—copy. — confirm.
+1925 | VT-536283 | [emotional                ] Note: I'm so proud of how far we've come. Thanks.. (alt)
+1926 | VT-625327 | [emotional                ] Reminder: Hey, I miss you more than words can say. If possible. thanks.
+1927 | VT-555199 | [emotional                ] FYI, I miss you more than words can say.—got it.
+1928 | VT-531061 | [narrative                ] Heads up: Okay, When I was five, I thought the moon followed me everywhere. If possible. — got it.
+1929 | VT-689169 | [narrative                ] Okay, Reminder: Back in college, we used to hack vending machines for snacks.—got it. please.
+1930 | VT-518653 | [narrative                ] Heads up: Hey, Back in college, we used to hack vending machines for snacks. Right now. — now.
+1931 | VT-593171 | [narrative                ] Real talk, Note: Back in college, we used to hack vending machines for snacks. Right now. — confirm.
+1932 | VT-668877 | [narrative                ] Note: FYI, He opened the envelope, not knowing it would change his life forever. Right now. — now.
+1933 | VT-571561 | [narrative                ] Listen, FYI, Back in college, we used to hack vending machines for snacks. Right now. — now.
+1934 | VT-539482 | [narrative                ] Listen, Okay, Back in college, we used to hack vending machines for snacks. Please..
+1935 | VT-664594 | [narrative                ] Listen, Okay, When I was five, I thought the moon followed me everywhere. If possible. thanks. (alt)
+1936 | VT-501666 | [narrative                ] Reminder: FYI, He opened the envelope, not knowing it would change his life forever. Thanks. if you can.
+1937 | VT-556043 | [narrative                ] Heads up: FYI, Back in college, we used to hack vending machines for snacks. Thanks..
+1938 | VT-571217 | [narrative                ] Heads up: Okay, When I was five, I thought the moon followed me everywhere.—got it. — now.
+1939 | VT-513787 | [narrative                ] FYI, Back in college, we used to hack vending machines for snacks. For real. thanks. (alt)
+1940 | VT-690847 | [narrative                ] Listen, Heads up: When I was five, I thought the moon followed me everywhere..
+1941 | VT-660372 | [narrative                ] Okay, He opened the envelope, not knowing it would change his life forever.—copy..
+1942 | VT-612878 | [narrative                ] Listen, Reminder: He opened the envelope, not knowing it would change his life forever. thanks. (alt)
+1943 | VT-605762 | [narrative                ] FYI, FYI, He opened the envelope, not knowing it would change his life forever. Please. — got it.
+1944 | VT-591019 | [narrative                ] Listen, Heads up: Back in college, we used to hack vending machines for snacks. For real. right now.
+1945 | VT-697248 | [narrative                ] Listen, Note: He opened the envelope, not knowing it would change his life forever. For real. — confirm.
+1946 | VT-647305 | [narrative                ] Quick one: He opened the envelope, not knowing it would change his life forever. — confirm.
+1947 | VT-524603 | [narrative                ] Reminder: Okay, When I was five, I thought the moon followed me everywhere.—got it. please. (alt)
+1948 | VT-677568 | [narrative                ] Real talk, Heads up: He opened the envelope, not knowing it would change his life forever. Thanks. — confirm.
+1949 | VT-644355 | [narrative                ] Okay, FYI, He opened the envelope, not knowing it would change his life forever.—copy. thanks. (alt)
+1950 | VT-641154 | [narrative                ] Real talk, When I was five, I thought the moon followed me everywhere. Thanks..

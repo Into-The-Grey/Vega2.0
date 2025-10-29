@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 7 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0301 | VT-78096 | [conditionals             ] Given enough time, everything breaks. If possible.
+0302 | VT-71294 | [conditionals             ] Reminder: Should this pass QA, ship it. For real.
+0303 | VT-12852 | [conditionals             ] Note: Unless it’s critical, defer to next sprint.
+0304 | VT-35371 | [conditionals             ] Note: If A then B, otherwise C.—copy.
+0305 | VT-45668 | [conditionals             ] Okay, If it fails, roll back immediately.—got it.
+0306 | VT-83863 | [conditionals             ] If A then B, otherwise C. Thanks.
+0307 | VT-79150 | [conditionals             ] If it fails, roll back immediately. Please.
+0308 | VT-16595 | [conditionals             ] If it fails, roll back immediately.
+0309 | VT-26770 | [conditionals             ] Okay, Should this pass QA, ship it. For real.
+0310 | VT-50200 | [conditionals             ] Hey, Provided the tests are green, merge. Please.
+0311 | VT-34406 | [conditionals             ] FYI, If you’re late, text me first. If possible.
+0312 | VT-35504 | [conditionals             ] Okay, If you’re late, text me first. Right now.
+0313 | VT-74987 | [conditionals             ] If A then B, otherwise C.—got it.
+0314 | VT-97237 | [conditionals             ] Note: If it ain’t broke, don’t fix it. Thanks.
+0315 | VT-76516 | [conditionals             ] Should this pass QA, ship it. Thanks.
+0316 | VT-52664 | [conditionals             ] Reminder: Unless it’s critical, defer to next sprint.—copy.
+0317 | VT-16837 | [conditionals             ] Given enough time, everything breaks. For real.
+0318 | VT-25985 | [conditionals             ] Note: Provided the tests are green, merge. Right now.
+0319 | VT-34812 | [conditionals             ] Listen, In case of downtime, switch to read-only. Please.
+0320 | VT-19823 | [conditionals             ] Heads up: Should this pass QA, ship it. Thanks.
+0321 | VT-34812 | [conditionals             ] Listen, In case of downtime, switch to read-only. Please.
+0322 | VT-25607 | [conditionals             ] FYI, Should this pass QA, ship it. For real.
+0323 | VT-55627 | [conditionals             ] FYI, If it fails, roll back immediately. Please.
+0324 | VT-64520 | [conditionals             ] Provided the tests are green, merge.—copy.
+0325 | VT-37942 | [conditionals             ] Hey, If it fails, roll back immediately.
+0326 | VT-77631 | [conditionals             ] FYI, Given enough time, everything breaks. Please.
+0327 | VT-30382 | [conditionals             ] Okay, In case of downtime, switch to read-only.—got it.
+0328 | VT-92142 | [conditionals             ] Okay, Provided the tests are green, merge. Right now.
+0329 | VT-69641 | [conditionals             ] Okay, If it ain’t broke, don’t fix it. For real.
+0330 | VT-93291 | [conditionals             ] Hey, If it fails, roll back immediately. If possible.
+0331 | VT-44798 | [conditionals             ] Reminder: In case of downtime, switch to read-only. Please.
+0332 | VT-57604 | [conditionals             ] Hey, If and only if the hash matches, proceed. Thanks.
+0333 | VT-63965 | [conditionals             ] Hey, In case of downtime, switch to read-only. Right now.
+0334 | VT-33533 | [conditionals             ] Note: If it ain’t broke, don’t fix it. If possible.
+0335 | VT-26007 | [conditionals             ] FYI, If A then B, otherwise C.—copy.
+0336 | VT-28375 | [conditionals             ] Should this pass QA, ship it. Please.
+0337 | VT-36724 | [conditionals             ] Hey, If A then B, otherwise C. If possible.
+0338 | VT-12200 | [conditionals             ] Listen, Unless it’s critical, defer to next sprint.
+0339 | VT-57604 | [conditionals             ] Hey, If and only if the hash matches, proceed. Thanks.
+0340 | VT-57604 | [conditionals             ] Hey, If and only if the hash matches, proceed. Thanks.
+0341 | VT-91027 | [conditionals             ] Hey, If and only if the hash matches, proceed. Thanks.
+0342 | VT-67711 | [conditionals             ] Hey, Unless it’s critical, defer to next sprint.—got it.
+0343 | VT-17684 | [conditionals             ] Reminder: Unless it’s critical, defer to next sprint.—got it.
+0344 | VT-60053 | [conditionals             ] FYI, If it ain’t broke, don’t fix it. Thanks.
+0345 | VT-52542 | [conditionals             ] Heads up: If A then B, otherwise C. Right now.
+0346 | VT-38999 | [conditionals             ] FYI, If and only if the hash matches, proceed.—got it.
+0347 | VT-13551 | [conditionals             ] Note: Should this pass QA, ship it. Right now.
+0348 | VT-76046 | [conditionals             ] FYI, Given enough time, everything breaks.—copy.
+0349 | VT-31068 | [conditionals             ] Listen, If it fails, roll back immediately. Thanks.
+0350 | VT-34406 | [conditionals             ] FYI, If you’re late, text me first. If possible.

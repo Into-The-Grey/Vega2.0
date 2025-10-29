@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 145 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7201 | VT-497020 | [trash_talk               ] Note: You brought a pea shooter to a boss fight. if you can.
+7202 | VT-465278 | [trash_talk               ] FYI, Next time, ping before you feed.. (alt)
+7203 | VT-460614 | [trash_talk               ] Real talk, Good game; uninstall only if you want peace. thanks. (alt)
+7204 | VT-431199 | [trash_talk               ] Note: That was textbook throw—appreciate the assist. — got it.
+7205 | VT-498938 | [trash_talk               ] Real talk, Holding W isn’t a strategy; it’s a cry for help.
+7206 | VT-441484 | [trash_talk               ] Listen, Nice whiff—crosshair on vacation? — got it.
+7207 | VT-432929 | [trash_talk               ] Reminder: That was textbook throw—appreciate the assist..
+7208 | VT-410252 | [trash_talk               ] Reminder: Next time, ping before you feed.. (alt)
+7209 | VT-484725 | [trash_talk               ] Real talk, Good game; uninstall only if you want peace. if you can.
+7210 | VT-442285 | [trash_talk               ] Reminder: You brought a pea shooter to a boss fight. — confirm.
+7211 | VT-434835 | [trash_talk               ] Quick one: Next time, ping before you feed. — now.
+7212 | VT-488258 | [trash_talk               ] Listen, Next time, ping before you feed. — confirm.
+7213 | VT-485877 | [trash_talk               ] Heads up: Nice whiff—crosshair on vacation? please.
+7214 | VT-431036 | [trash_talk               ] Heads up: You’re padding stats; scoreboard says otherwise. — now.
+7215 | VT-438917 | [trash_talk               ] Heads up: Good game; uninstall only if you want peace. if you can. (alt)
+7216 | VT-451783 | [trash_talk               ] Note: If that was your strat, keep it; we farmed it. — got it.
+7217 | VT-429116 | [trash_talk               ] Next time, ping before you feed. — got it.
+7218 | VT-434027 | [trash_talk               ] You’re padding stats; scoreboard says otherwise. thanks.
+7219 | VT-441621 | [trash_talk               ] Listen, If that was your strat, keep it; we farmed it. right now.
+7220 | VT-430879 | [trash_talk               ] Note: Good game; uninstall only if you want peace. — got it. (alt)
+7221 | VT-401185 | [trash_talk               ] Heads up: You peeked wide with no cover—free pick. thanks.
+7222 | VT-467115 | [trash_talk               ] Quick one: Holding W isn’t a strategy; it’s a cry for help. — confirm.
+7223 | VT-456478 | [trash_talk               ] Reminder: You’re padding stats; scoreboard says otherwise. please.
+7224 | VT-474465 | [trash_talk               ] FYI, Great flank—on your own teammates. please.
+7225 | VT-493121 | [trash_talk               ] Listen, You peeked wide with no cover—free pick. please.
+7226 | VT-424473 | [trash_talk               ] Note: Holding W isn’t a strategy; it’s a cry for help.
+7227 | VT-485937 | [trash_talk               ] Real talk, Nice whiff—crosshair on vacation? — confirm. (alt)
+7228 | VT-458217 | [trash_talk               ] Real talk, That was textbook throw—appreciate the assist.
+7229 | VT-412320 | [trash_talk               ] You brought a pea shooter to a boss fight.
+7230 | VT-408012 | [trash_talk               ] Note: Great flank—on your own teammates. — got it.
+7231 | VT-432692 | [trash_talk               ] Reminder: Nice whiff—crosshair on vacation? thanks.
+7232 | VT-480173 | [trash_talk               ] Quick one: Good game; uninstall only if you want peace. — now. (alt)
+7233 | VT-416033 | [trash_talk               ] FYI, Nice whiff—crosshair on vacation? if you can.
+7234 | VT-417236 | [trash_talk               ] Real talk, That was textbook throw—appreciate the assist. please.
+7235 | VT-441635 | [trash_talk               ] Real talk, Good game; uninstall only if you want peace. — got it.
+7236 | VT-440704 | [trash_talk               ] Reminder: Great flank—on your own teammates. — got it.
+7237 | VT-460597 | [trash_talk               ] Okay, That was textbook throw—appreciate the assist. — got it.
+7238 | VT-451915 | [trash_talk               ] Note: If that was your strat, keep it; we farmed it. if you can. (alt)
+7239 | VT-406842 | [trash_talk               ] Note: You brought a pea shooter to a boss fight. thanks.
+7240 | VT-418750 | [trash_talk               ] Real talk, Great flank—on your own teammates. if you can.
+7241 | VT-431667 | [trash_talk               ] Real talk, If that was your strat, keep it; we farmed it..
+7242 | VT-493875 | [trash_talk               ] Heads up: Holding W isn’t a strategy; it’s a cry for help..
+7243 | VT-443212 | [trash_talk               ] Great flank—on your own teammates. — got it.
+7244 | VT-492347 | [trash_talk               ] Okay, Holding W isn’t a strategy; it’s a cry for help. — now.
+7245 | VT-445555 | [trash_talk               ] FYI, Good game; uninstall only if you want peace. — confirm.
+7246 | VT-465005 | [trash_talk               ] Real talk, If that was your strat, keep it; we farmed it. — got it.
+7247 | VT-430425 | [trash_talk               ] Real talk, You brought a pea shooter to a boss fight. please.
+7248 | VT-454900 | [trash_talk               ] Heads up: That was textbook throw—appreciate the assist. right now.
+7249 | VT-425596 | [trash_talk               ] Quick one: Next time, ping before you feed. right now. (alt)
+7250 | VT-400480 | [uncertainty              ] Quick one: Note: It depends on the constraints.—got it. (alt)

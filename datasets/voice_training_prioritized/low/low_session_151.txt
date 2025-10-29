@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 151 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7501 | VT-658132 | [code_readouts            ] Real talk, Okay, Function signature: def handler(event, context): Right now. thanks.
+7502 | VT-661316 | [code_readouts            ] Listen, Run pip install requests in a clean virtual environment.
+7503 | VT-683948 | [code_readouts            ] Okay, FYI, Kubernetes pod restarted due to OOMKill.—copy. thanks.
+7504 | VT-535724 | [code_readouts            ] Quick one: Okay, Kubernetes pod restarted due to OOMKill. Please. — confirm.
+7505 | VT-616158 | [code_readouts            ] Listen, Hey, Kubernetes pod restarted due to OOMKill.—copy. — now.
+7506 | VT-664365 | [code_readouts            ] Listen, Heads up: Throw a try-catch around the parser. Please. — confirm.
+7507 | VT-532487 | [code_readouts            ] FYI, Okay, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis.—got it. thanks.
+7508 | VT-527077 | [code_readouts            ] Okay, FYI, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis. For real. please.
+7509 | VT-558990 | [code_readouts            ] Real talk, Reminder: Kubernetes pod restarted due to OOMKill.—got it. if you can.
+7510 | VT-509892 | [code_readouts            ] Real talk, Note: Run pip install requests in a clean virtual environment. Thanks..
+7511 | VT-603640 | [code_readouts            ] Heads up: Hey, Use async await to avoid blocking. If possible. — now.
+7512 | VT-657998 | [code_readouts            ] Okay, Reminder: Use async await to avoid blocking. If possible. — confirm.
+7513 | VT-688555 | [code_readouts            ] FYI, Use async await to avoid blocking.—copy. — now.
+7514 | VT-504217 | [code_readouts            ] Heads up: Note: Throw a try-catch around the parser. Right now. — now.
+7515 | VT-603577 | [code_readouts            ] Reminder: Export PATH equals dollar HOME slash bin colon PATH.—copy.
+7516 | VT-664288 | [code_readouts            ] Quick one: FYI, Export PATH equals dollar HOME slash bin colon PATH. Thanks.
+7517 | VT-561396 | [code_readouts            ] Real talk, Okay, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis. Thanks. please.
+7518 | VT-549345 | [code_readouts            ] Okay, Reminder: Kubernetes pod restarted due to OOMKill. Right now. — now.
+7519 | VT-621950 | [code_readouts            ] Note: Listen, Export PATH equals dollar HOME slash bin colon PATH. If possible. — got it.
+7520 | VT-532899 | [code_readouts            ] Reminder: Note: Return HTTP 200 with JSON payload. Right now. — now.
+7521 | VT-562165 | [code_readouts            ] Note: Reminder: Backtick, backtick, python: print open parenthesis 'hello' close parenthesis. Right now. right now.
+7522 | VT-530322 | [code_readouts            ] Quick one: Okay, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis. Thanks. right now.
+7523 | VT-673931 | [code_readouts            ] Listen, Heads up: Export PATH equals dollar HOME slash bin colon PATH.—copy. please.
+7524 | VT-586537 | [code_readouts            ] Reminder: Okay, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis.—got it.
+7525 | VT-577184 | [code_readouts            ] Heads up: Heads up: Function signature: def handler(event, context):—got it. please.
+7526 | VT-551234 | [code_readouts            ] Real talk, Reminder: Docker build dash t app colon latest dot If possible. — got it.
+7527 | VT-583951 | [code_readouts            ] Note: Hey, Kubernetes pod restarted due to OOMKill. — confirm.
+7528 | VT-523147 | [code_readouts            ] Note: Note: Run pip install requests in a clean virtual environment. If possible. — confirm.
+7529 | VT-533692 | [code_readouts            ] Listen, Hey, Use async await to avoid blocking. If possible.
+7530 | VT-564929 | [code_readouts            ] Note: Heads up: Throw a try-catch around the parser. If possible. — now.
+7531 | VT-528159 | [code_readouts            ] FYI, Listen, Return HTTP 201 with JSON payload. Please. if you can.
+7532 | VT-671299 | [code_readouts            ] Reminder: Use async await to avoid blocking. — now.
+7533 | VT-663367 | [code_readouts            ] Okay, Heads up: Throw a try-catch around the parser. — confirm.
+7534 | VT-675725 | [code_readouts            ] Note: Okay, Function signature: def handler(event, context): Right now. if you can.
+7535 | VT-536316 | [code_readouts            ] FYI, Heads up: Throw a try-catch around the parser. Please. please.
+7536 | VT-696272 | [code_readouts            ] Return HTTP 200 with JSON payload. For real. right now.
+7537 | VT-553936 | [code_readouts            ] FYI, Listen, Run pip install requests in a clean virtual environment. If possible..
+7538 | VT-663527 | [code_readouts            ] Hey, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis. Thanks. — confirm.
+7539 | VT-508030 | [code_readouts            ] Okay, Run pip install requests in a clean virtual environment. Thanks. if you can.
+7540 | VT-663823 | [code_readouts            ] Listen, Kubernetes pod restarted due to OOMKill.
+7541 | VT-687626 | [code_readouts            ] Real talk, FYI, Export PATH equals dollar HOME slash bin colon PATH. Thanks..
+7542 | VT-619718 | [code_readouts            ] Okay, Listen, Export PATH equals dollar HOME slash bin colon PATH. Right now.
+7543 | VT-649225 | [code_readouts            ] Listen, Hey, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis. If possible..
+7544 | VT-669356 | [code_readouts            ] Note: Note: Return HTTP 200 with JSON payload. Please.
+7545 | VT-512722 | [code_readouts            ] Heads up: Note: Throw a try-catch around the parser.—got it. — got it.
+7546 | VT-545147 | [code_readouts            ] FYI, Return HTTP 199 with JSON payload.—got it. — confirm.
+7547 | VT-633544 | [code_readouts            ] Quick one: Note: Run pip install requests in a clean virtual environment. If possible. — confirm.
+7548 | VT-652978 | [code_readouts            ] Heads up: Run pip install requests in a clean virtual environment. — confirm.
+7549 | VT-650332 | [code_readouts            ] FYI, Okay, Return HTTP 201 with JSON payload. For real. please.
+7550 | VT-551748 | [code_readouts            ] Real talk, Listen, Return HTTP 201 with JSON payload.—copy. — now.

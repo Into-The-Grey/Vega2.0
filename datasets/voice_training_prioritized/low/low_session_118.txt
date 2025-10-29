@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 118 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+5851 | VT-326772 | [finance                  ] Heads up: Heads up: Flag that transaction as potentially fraudulent. (9415) Right now. right now.
+5852 | VT-317154 | [finance                  ] Listen, Hey, We’re cash-flow positive but margin-thin. (3409) Right now. — confirm.
+5853 | VT-398548 | [finance                  ] FYI, Reminder: File the 1099s and W‑2s by January 31. (8855)
+5854 | VT-373792 | [flirty                   ] FYI, Are you Wi-Fi? Because I’m feeling a connection. please.
+5855 | VT-366307 | [flirty                   ] Listen, You have the kind of voice I’d sync my heartbeat to. — now.
+5856 | VT-309016 | [flirty                   ] Okay, I wasn’t blushing until you started talking. if you can.
+5857 | VT-357433 | [flirty                   ] Real talk, Note: Are you Wi-Fi? Because I’m feeling a connection. For real. thanks.
+5858 | VT-305482 | [home_assistant_commands  ] Listen, Note: Lock the front door and arm stay. Please. if you can.
+5859 | VT-305229 | [home_assistant_commands  ] Heads up: Note: Turn off everything in the bedroom. Please. right now.
+5860 | VT-387416 | [home_assistant_commands  ] FYI, Note: Lock the front door and arm stay. Thanks. if you can.
+5861 | VT-353264 | [home_assistant_commands  ] Note: Start the 'Movie Night' scene.—copy. right now.
+5862 | VT-323206 | [homophones_minimal_pairs ] Okay, I need a new role for this roll.—got it. — now.
+5863 | VT-396542 | [homophones_minimal_pairs ] Reminder: Heads up: Sight the site before the cite. right now.
+5864 | VT-334970 | [homophones_minimal_pairs ] FYI, Hey, I need a new role for this roll..
+5865 | VT-305075 | [homophones_minimal_pairs ] Okay, Hey, I’ll read the readme later. right now.
+5866 | VT-300053 | [legalese                 ] Listen, FYI, Subject to applicable law and equitable principles. Please. thanks. (alt)
+5867 | VT-376019 | [legalese                 ] Heads up: FYI, Breach may result in injunctive relief. For real. — confirm.
+5868 | VT-388555 | [legalese                 ] Okay, Note: Subject to applicable law and equitable principles. Please. — got it.
+5869 | VT-396463 | [legalese                 ] Note: Time is of the essence with respect to performance. Thanks. please.
+5870 | VT-387012 | [math_readouts            ] Heads up: FYI, Matrix A times B is non-commutative. (5944) For real. please.
+5871 | VT-398453 | [math_readouts            ] Okay, Reminder: Normalize the vector to unit length. (3778) If possible. right now.
+5872 | VT-319313 | [math_readouts            ] Quick one: FYI, Matrix A times B is non-commutative. (7938) Please. please.
+5873 | VT-359692 | [math_readouts            ] Reminder: Listen, Standard deviation is 1.3. (4278)—copy. — confirm.
+5874 | VT-378047 | [medical                  ] Heads up: FYI, Allergic to penicillin; note in the chart.—got it. — confirm.
+5875 | VT-394276 | [medical                  ] Real talk, Note: Advise RICE protocol for ankle sprain. If possible..
+5876 | VT-371810 | [medical                  ] Quick one: Allergic to penicillin; note in the chart. Please. — now.
+5877 | VT-362216 | [medical                  ] Quick one: FYI, Schedule an MRI with contrast, stat.—copy. thanks.
+5878 | VT-383579 | [meta                     ] Listen, Okay, This phrase was generated to train a machine to sound more human. If possible. — got it.
+5879 | VT-331358 | [meta                     ] Listen, Hey, Welcome to the part of the dataset where the AI talks about itself. Thanks. — confirm. (alt)
+5880 | VT-337450 | [meta                     ] Okay, Hey, Welcome to the part of the dataset where the AI talks about itself. Thanks. thanks.
+5881 | VT-370798 | [meta                     ] FYI, Heads up: Welcome to the part of the dataset where the AI talks about itself. For real. — now. (alt)
+5882 | VT-350205 | [monotone_minimal         ] Note: Hey, No.—got it. right now. (alt)
+5883 | VT-353424 | [monotone_minimal         ] Heads up: Hey, Done. For real. — got it.
+5884 | VT-308161 | [monotone_minimal         ] Okay, Note: No. If possible..
+5885 | VT-376556 | [monotone_minimal         ] Okay, Proceed.—copy..
+5886 | VT-363654 | [multilingual             ] धन्यवाद, फिर मिलेंगे।.
+5887 | VT-349689 | [negations                ] Heads up: Listen, We can’t ship without tests.—copy. right now.
+5888 | VT-344236 | [negations                ] Reminder: FYI, No chance. Please. thanks.
+5889 | VT-355255 | [negations                ] Listen, We can’t ship without tests. Right now. please.
+5890 | VT-398176 | [negations                ] Real talk, Reminder: Never deploy on Friday. Right now.
+5891 | VT-368386 | [passive_aggressive       ] Listen, Listen, No, really, take your time. It’s not like deadlines matter. — got it.
+5892 | VT-360931 | [passive_aggressive       ] Reminder: Oh, you’re here. How… unexpected. Right now. thanks.
+5893 | VT-332177 | [passive_aggressive       ] FYI, Reminder: Oh, you’re here. How… unexpected.—got it. thanks.
+5894 | VT-331963 | [passive_aggressive       ] Quick one: Hey, Oh, you’re here. How… unexpected..
+5895 | VT-364789 | [paths_cli                ] Note: Note: Mount the drive at /mnt/data. Right now. — confirm.
+5896 | VT-327802 | [paths_cli                ] Listen, Hey, ping the gateway to verify routing. Please. if you can.
+5897 | VT-336655 | [paths_cli                ] Listen, Listen, Mount the drive at /mnt/data. For real. — got it.
+5898 | VT-301330 | [paths_cli                ] Okay, Note: ls -la to show hidden files. Thanks. please.
+5899 | VT-331635 | [philosophical            ] Reminder: Okay, What is the sound of thought before it becomes speech?—copy. — confirm.
+5900 | VT-331499 | [philosophical            ] Quick one: FYI, To know yourself is to forget what the world taught you to be. If possible. — confirm.

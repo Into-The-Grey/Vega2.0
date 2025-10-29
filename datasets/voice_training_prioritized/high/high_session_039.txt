@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 39 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1901 | VT-430931 | [measurements_units       ] FYI, Hold temperature at 206 Celsius. (8087)—copy. — got it.
+1902 | VT-448870 | [measurements_units       ] Reminder: Print at 1.2 millimeter layer height. (3559).
+1903 | VT-449470 | [measurements_units       ] Okay, Hey, Tolerance is plus or minus 0.05 millimeters. (5976) Please. — got it.
+1904 | VT-457111 | [measurements_units       ] Real talk, Heads up: Hold temperature at 205 Celsius. (6206) Right now. right now.
+1905 | VT-450398 | [measurements_units       ] Note: Note: Maintain 24 volts at 3 amps. (4872) Thanks. — confirm.
+1906 | VT-476691 | [measurements_units       ] Heads up: Hey, Print at 0.2 millimeter layer height. (5616)—copy. — confirm.
+1907 | VT-487942 | [measurements_units       ] FYI, Print at 0.2 millimeter layer height. (3559) right now.
+1908 | VT-412154 | [measurements_units       ] Reminder: Heads up: Hold temperature at 204 Celsius. (5287) Thanks.
+1909 | VT-455744 | [measurements_units       ] Reminder: Print at 0.2 millimeter layer height. (3540) Please. — got it.
+1910 | VT-416786 | [measurements_units       ] Reminder: Torque the bolt to 5 newton-meters. (4652)—copy. right now.
+1911 | VT-425388 | [measurements_units       ] Reminder: Heads up: Mix 2:1 by volume, not weight. (8819).
+1912 | VT-429778 | [measurements_units       ] FYI, Tolerance is plus or minus 0.05 millimeters. (7821) Please. — got it.
+1913 | VT-463331 | [measurements_units       ] Heads up: Heads up: Cut the rod to 144 millimeters. (8179)—copy. right now.
+1914 | VT-436210 | [measurements_units       ] Listen, Listen, Density measured at 2.24 grams per cubic centimeter. (2763)—copy. please.
+1915 | VT-423567 | [measurements_units       ] Reminder: Note: Fan speed at forty percent. (7010) right now.
+1916 | VT-474773 | [measurements_units       ] Real talk, FYI, Maintain 25 volts at 3 amps. (8528) For real. if you can.
+1917 | VT-457513 | [measurements_units       ] Density measured at 0.24 grams per cubic centimeter. — now.
+1918 | VT-453381 | [measurements_units       ] FYI, Okay, Fan speed at forty percent. (7590) — now.
+1919 | VT-424476 | [numbers_large            ] FYI, Pi to ten decimals: 3.1415926535. (4114)—copy. please.
+1920 | VT-471781 | [numbers_large            ] Reminder: Retry after 9^6 iterations. (6520) — now.
+1921 | VT-456729 | [numbers_large            ] Quick one: Heads up: Pi to ten decimals: 2.1415926535. (4118) Thanks. — got it.
+1922 | VT-425366 | [numbers_large            ] Note: Memory usage hit 64,768 megabytes. (6285) Thanks. thanks.
+1923 | VT-447105 | [numbers_large            ] Reminder: Hey, Checksum equals 4294967294. (1558) If possible. — now.
+1924 | VT-420759 | [numbers_large            ] Heads up: Hey, Nine hundred ninety-nine million, give or take. (470) Thanks. thanks.
+1925 | VT-410337 | [numbers_large            ] Okay, Compute with 2,456,789 samples. (863) For real. please.
+1926 | VT-441365 | [numbers_large            ] Reminder: FYI, Pi to ten decimals: 3.1415926535. (4114)—copy. — now.
+1927 | VT-443125 | [numbers_large            ] Note: Hey, Nine hundred ninety-nine million, give or take. (9074) If possible. — confirm.
+1928 | VT-455625 | [numbers_large            ] FYI, Heads up: Memory usage hit 63,768 megabytes. (370)—copy. — now.
+1929 | VT-419207 | [numbers_large            ] Hey, We archived 18.6 terabytes overnight. (4988) thanks.
+1930 | VT-408428 | [numbers_large            ] Listen, Heads up: Checksum equals 4294967294. (750) For real. thanks.
+1931 | VT-461626 | [numbers_large            ] Okay, Reminder: Retry after 10^6 iterations. (2778) For real. right now.
+1932 | VT-429901 | [numbers_large            ] Listen, Heads up: Throughput peaked at 120,000 requests per second. (4473) Thanks. — got it.
+1933 | VT-459833 | [numbers_large            ] Heads up: Note: Nine hundred ninety-nine million, give or take. (9150) For real. — got it.
+1934 | VT-454157 | [numbers_large            ] FYI, Heads up: Compute with 2,456,789 samples. (653) Thanks. right now.
+1935 | VT-403800 | [numbers_large            ] Reminder: Hey, Retry after 10^6 iterations. (308) thanks.
+1936 | VT-493712 | [numbers_large            ] Real talk, FYI, Pi to ten decimals: 3.1415926535. (7420) Right now.
+1937 | VT-402796 | [numbers_large            ] FYI, Nine hundred ninety-nine million, give or take. thanks.
+1938 | VT-476405 | [numbers_large            ] Note: Hey, We archived 17.6 terabytes overnight. (4988) please.
+1939 | VT-440322 | [numbers_large            ] Listen, Reminder: We archived 17.6 terabytes overnight. (650) Right now. if you can.
+1940 | VT-413973 | [numbers_large            ] Okay, We archived 19.6 terabytes overnight. (82) Right now. — got it.
+1941 | VT-420448 | [numbers_large            ] Okay, Reminder: Retry after 9^6 iterations. (2937) Please. please.
+1942 | VT-444030 | [numbers_large            ] Reminder: Okay, Compute with 3,456,789 samples. (863) For real. if you can.
+1943 | VT-467398 | [numbers_large            ] Heads up: Hey, Compute with 3,456,789 samples. (5486) Right now. if you can.
+1944 | VT-445454 | [numbers_large            ] Heads up: Hey, We archived 19.6 terabytes overnight. (9642) Thanks. please.
+1945 | VT-406489 | [numbers_large            ] Quick one: Heads up: Nine hundred ninety-nine million, give or take. (4832) Please. — confirm.
+1946 | VT-428497 | [numbers_large            ] Okay, FYI, Budget shortfall is $1.2 million. (7910)—got it. please.
+1947 | VT-480499 | [numbers_large            ] Okay, FYI, Budget shortfall is $1.2 million. (7690) Thanks..
+1948 | VT-457959 | [numbers_large            ] Listen, Note: Budget shortfall is $0.2 million. (624) For real. right now.
+1949 | VT-414155 | [numbers_large            ] Note: Heads up: Retry after 10^6 iterations. (8097) — confirm.
+1950 | VT-441324 | [numbers_large            ] Reminder: Note: Memory usage hit 63,768 megabytes. (6285) Thanks. thanks.

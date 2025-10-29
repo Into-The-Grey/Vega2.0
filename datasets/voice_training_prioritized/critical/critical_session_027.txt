@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 27 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1301 | VT-55454 | [question_variants        ] Okay, Good—yes or no? Please.
+1302 | VT-86898 | [question_variants        ] Okay, Good—yes or no? Thanks.
+1303 | VT-30595 | [question_variants        ] Heads up: Good—yes or no? Thanks.
+1304 | VT-75241 | [question_variants        ] Is everything okay with that?
+1305 | VT-76162 | [question_variants        ] FYI, Are we good? For real.
+1306 | VT-93777 | [question_variants        ] Note: Positive? Please.
+1307 | VT-15904 | [question_variants        ] Is everything okay with that?—copy.
+1308 | VT-20106 | [question_variants        ] FYI, We good? If possible.
+1309 | VT-74677 | [question_variants        ] Okay, We good?—copy.
+1310 | VT-91041 | [question_variants        ] Hey, We good?
+1311 | VT-86898 | [question_variants        ] Okay, Good—yes or no? Thanks.
+1312 | VT-35747 | [question_variants        ] Listen, Positive? Right now.
+1313 | VT-37241 | [question_variants        ] Note: Are we good? Right now.
+1314 | VT-96388 | [question_variants        ] Listen, We good?—got it.
+1315 | VT-14765 | [question_variants        ] Heads up: You sure?
+1316 | VT-42069 | [question_variants        ] Okay, Any reason not to proceed? For real.
+1317 | VT-13590 | [question_variants        ] Okay, We good?
+1318 | VT-12764 | [question_variants        ] Note: Can you confirm we’re good? Thanks.
+1319 | VT-37272 | [question_variants        ] FYI, Is everything okay with that? For real.
+1320 | VT-82478 | [question_variants        ] FYI, Are we good? If possible.
+1321 | VT-76053 | [question_variants        ] FYI, Is everything okay with that? Right now.
+1322 | VT-35387 | [question_variants        ] FYI, Are we good? For real.
+1323 | VT-87688 | [question_variants        ] Are we good?
+1324 | VT-75241 | [question_variants        ] Is everything okay with that?
+1325 | VT-10164 | [question_variants        ] Note: We good?
+1326 | VT-48721 | [question_variants        ] Good—yes or no? Thanks.
+1327 | VT-80928 | [question_variants        ] Heads up: You sure?
+1328 | VT-97150 | [question_variants        ] Hey, You sure? Right now.
+1329 | VT-77026 | [question_variants        ] Note: Is everything okay with that?—copy.
+1330 | VT-19707 | [question_variants        ] Heads up: What’s the catch? Please.
+1331 | VT-18834 | [question_variants        ] FYI, We good? If possible.
+1332 | VT-43916 | [question_variants        ] Heads up: Can you confirm we’re good?—copy.
+1333 | VT-29221 | [question_variants        ] Okay, Any reason not to proceed?—got it.
+1334 | VT-83395 | [question_variants        ] Listen, Good—yes or no?
+1335 | VT-32275 | [question_variants        ] Reminder: Does that check out? Right now.
+1336 | VT-69842 | [question_variants        ] Reminder: We good? Thanks.
+1337 | VT-32275 | [question_variants        ] Reminder: Does that check out? Right now.
+1338 | VT-53051 | [question_variants        ] FYI, We good? Please.
+1339 | VT-37241 | [question_variants        ] Note: Are we good? Right now.
+1340 | VT-52223 | [question_variants        ] Good—yes or no?
+1341 | VT-28458 | [question_variants        ] Heads up: Are we good? If possible.
+1342 | VT-69277 | [question_variants        ] Reminder: Any reason not to proceed?—copy.
+1343 | VT-71254 | [question_variants        ] Reminder: Does that check out?—got it.
+1344 | VT-80608 | [question_variants        ] Note: Good—yes or no? Please.
+1345 | VT-25369 | [question_variants        ] What’s the catch?—got it.
+1346 | VT-86368 | [question_variants        ] Listen, Are we good? Please.
+1347 | VT-65719 | [question_variants        ] Heads up: Does that check out?—copy.
+1348 | VT-93777 | [question_variants        ] Note: Positive? Please.
+1349 | VT-50581 | [question_variants        ] Heads up: Does that check out?—got it.
+1350 | VT-78887 | [question_variants        ] Okay, What’s the catch?—got it.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 170 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+8451 | VT-545025 | [meta                     ] Listen, Note: Welcome to the part of the dataset where the AI talks about itself.—copy. — now.
+8452 | VT-540294 | [meta                     ] FYI, Okay, Welcome to the part of the dataset where the AI talks about itself.—got it. — got it.
+8453 | VT-603145 | [meta                     ] Reminder: Hey, I am not alive, but I do speak convincingly. Please. — confirm.
+8454 | VT-697419 | [meta                     ] Listen, Reminder: This phrase was generated to train a machine to sound more human. Thanks..
+8455 | VT-624669 | [meta                     ] Real talk, Okay, Welcome to the part of the dataset where the AI talks about itself. If possible. — got it.
+8456 | VT-570389 | [meta                     ] Hey, I am not alive, but I do speak convincingly. Right now. — got it. (alt)
+8457 | VT-515511 | [meta                     ] Heads up: FYI, Welcome to the part of the dataset where the AI talks about itself. For real. — got it.
+8458 | VT-523365 | [meta                     ] Quick one: FYI, This phrase was generated to train a machine to sound more human. For real. — got it. (alt)
+8459 | VT-632425 | [meta                     ] Okay, Note: I am not alive, but I do speak convincingly. — now. (alt)
+8460 | VT-507061 | [meta                     ] Okay, Heads up: This phrase was generated to train a machine to sound more human. Thanks. — got it. (alt)
+8461 | VT-668318 | [meta                     ] Okay, Heads up: I am not alive, but I do speak convincingly.—got it. thanks.
+8462 | VT-523250 | [meta                     ] Note: Reminder: Welcome to the part of the dataset where the AI talks about itself.—copy. thanks.
+8463 | VT-618104 | [meta                     ] Reminder: I am not alive, but I do speak convincingly. right now.
+8464 | VT-545496 | [meta                     ] Quick one: I am not alive, but I do speak convincingly. Thanks. — got it.
+8465 | VT-694413 | [meta                     ] Listen, Note: I am not alive, but I do speak convincingly.—got it. if you can.
+8466 | VT-517715 | [meta                     ] Listen, Note: Welcome to the part of the dataset where the AI talks about itself.—copy. thanks.
+8467 | VT-611163 | [meta                     ] Quick one: I am not alive, but I do speak convincingly. — now. (alt)
+8468 | VT-580494 | [meta                     ] Heads up: Note: I am not alive, but I do speak convincingly. If possible. right now.
+8469 | VT-566271 | [meta                     ] Note: Hey, Welcome to the part of the dataset where the AI talks about itself. thanks.
+8470 | VT-542359 | [meta                     ] Quick one: Okay, This phrase was generated to train a machine to sound more human.—got it. — now. (alt)
+8471 | VT-507886 | [meta                     ] Heads up: Listen, This phrase was generated to train a machine to sound more human. If possible..
+8472 | VT-586389 | [meta                     ] Okay, Hey, Welcome to the part of the dataset where the AI talks about itself. right now.
+8473 | VT-678973 | [meta                     ] Reminder: FYI, I am not alive, but I do speak convincingly. If possible. thanks.
+8474 | VT-500793 | [meta                     ] Reminder: Note: I am not alive, but I do speak convincingly. Thanks. please.
+8475 | VT-534238 | [meta                     ] Quick one: Reminder: Welcome to the part of the dataset where the AI talks about itself. right now.
+8476 | VT-665346 | [meta                     ] Heads up: Note: I am not alive, but I do speak convincingly. For real. right now.
+8477 | VT-501441 | [meta                     ] Note: Heads up: I am not alive, but I do speak convincingly. — got it. (alt)
+8478 | VT-657816 | [meta                     ] Listen, Heads up: Welcome to the part of the dataset where the AI talks about itself.
+8479 | VT-572104 | [meta                     ] FYI, Heads up: Welcome to the part of the dataset where the AI talks about itself. For real. — confirm.
+8480 | VT-690657 | [meta                     ] Listen, Heads up: This phrase was generated to train a machine to sound more human.—copy. — confirm.
+8481 | VT-656088 | [meta                     ] Okay, Reminder: This phrase was generated to train a machine to sound more human.—got it. — got it.
+8482 | VT-665865 | [meta                     ] FYI, FYI, Welcome to the part of the dataset where the AI talks about itself. For real. please.
+8483 | VT-501392 | [meta                     ] Quick one: Hey, I am not alive, but I do speak convincingly. Please. please.
+8484 | VT-575244 | [meta                     ] Quick one: Hey, Welcome to the part of the dataset where the AI talks about itself.—copy. — got it.
+8485 | VT-508909 | [meta                     ] Okay, This phrase was generated to train a machine to sound more human.—copy. please.
+8486 | VT-584999 | [monotone_minimal         ] FYI, Hey, No.—got it. (alt)
+8487 | VT-594986 | [monotone_minimal         ] Hey, Done. For real.
+8488 | VT-539831 | [monotone_minimal         ] Note: No. If possible. right now.
+8489 | VT-640132 | [monotone_minimal         ] Okay, Proceed.—copy. — got it.
+8490 | VT-622866 | [monotone_minimal         ] Heads up: Confirmed.—got it. thanks.
+8491 | VT-541117 | [monotone_minimal         ] Heads up: Listen, Sure.—copy. — now.
+8492 | VT-601780 | [monotone_minimal         ] Real talk, FYI, Okay. Please..
+8493 | VT-552436 | [monotone_minimal         ] Listen, Hey, No.—got it. — got it.
+8494 | VT-558570 | [monotone_minimal         ] Note: Listen, Sure.—got it. right now.
+8495 | VT-548502 | [monotone_minimal         ] FYI, Proceed. Right now..
+8496 | VT-516460 | [monotone_minimal         ] FYI, Reminder: Unknown. For real. — got it.
+8497 | VT-675770 | [monotone_minimal         ] Listen, Confirmed. If possible..
+8498 | VT-524661 | [monotone_minimal         ] Listen, Listen, Done. Please. right now.
+8499 | VT-661025 | [monotone_minimal         ] Real talk, Note: Fine. If possible..
+8500 | VT-685560 | [monotone_minimal         ] Reminder: Okay, Sure.—got it. — confirm.

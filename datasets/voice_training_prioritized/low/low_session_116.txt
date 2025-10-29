@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 116 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+5751 | VT-93488 | [weather_colorful         ] Listen, Rain so hard it’s pressure-washing my soul.
+5752 | VT-63664 | [weather_colorful         ] Listen, Humidity’s like soup—thick and gross.—got it.
+5753 | VT-27383 | [weather_colorful         ] It’s wet as hell outside—bring a jacket. If possible.
+5754 | VT-75895 | [weather_colorful         ] Heads up: Humidity’s like soup—thick and gross.—copy.
+5755 | VT-58183 | [weather_colorful         ] Reminder: It’s wet as hell outside—bring a jacket. For real.
+5756 | VT-90134 | [weather_colorful         ] It’s wet as hell outside—bring a jacket.
+5757 | VT-55258 | [weather_colorful         ] Humidity’s like soup—thick and gross.
+5758 | VT-36537 | [weather_colorful         ] Listen, Sky’s angry; thunder’s got opinions.—copy.
+5759 | VT-98616 | [weather_colorful         ] Hey, It’s a dry heat, said every liar ever. If possible.
+5760 | VT-60918 | [weather_colorful         ] Note: Cold enough to bully your bones. Right now.
+5761 | VT-20298 | [weather_colorful         ] Note: Cold enough to bully your bones.—got it.
+5762 | VT-88568 | [weather_colorful         ] FYI, Humidity’s like soup—thick and gross. For real.
+5763 | VT-26874 | [weather_colorful         ] Hey, It’s nice. Suspiciously nice. If possible.
+5764 | VT-11117 | [weather_colorful         ] Sky’s angry; thunder’s got opinions. Thanks.
+5765 | VT-47576 | [weather_colorful         ] Listen, Rain so hard it’s pressure-washing my soul. Thanks.
+5766 | VT-28226 | [weather_colorful         ] Okay, Fog so dense it feels like stealth mode. Right now.
+5767 | VT-25184 | [weather_colorful         ] Okay, It’s a dry heat, said every liar ever.—copy.
+5768 | VT-77430 | [weather_colorful         ] Wind’s punching sideways; hold your hat. Thanks.
+5769 | VT-17564 | [weather_colorful         ] Heads up: Sky’s angry; thunder’s got opinions.—got it.
+5770 | VT-77430 | [weather_colorful         ] Wind’s punching sideways; hold your hat. Thanks.
+5771 | VT-44172 | [weather_colorful         ] Listen, Sky’s angry; thunder’s got opinions.
+5772 | VT-78820 | [weather_colorful         ] Heads up: It’s wet as hell outside—bring a jacket. If possible.
+5773 | VT-59252 | [weather_colorful         ] Hey, It’s a dry heat, said every liar ever. For real.
+5774 | VT-35998 | [weather_colorful         ] Listen, It’s wet as hell outside—bring a jacket.—got it.
+5775 | VT-69366 | [weather_colorful         ] Fog so dense it feels like stealth mode. Please.
+5776 | VT-64836 | [weather_colorful         ] Note: Wind’s punching sideways; hold your hat. If possible.
+5777 | VT-58609 | [weather_colorful         ] Hey, It’s a dry heat, said every liar ever.—copy.
+5778 | VT-47004 | [weather_colorful         ] Hey, It’s nice. Suspiciously nice. Please.
+5779 | VT-96043 | [weather_colorful         ] Hey, It’s wet as hell outside—bring a jacket.—copy.
+5780 | VT-26526 | [weather_colorful         ] FYI, Wind’s punching sideways; hold your hat.—copy.
+5781 | VT-40427 | [weather_colorful         ] Note: Sun’s cooking the asphalt medium-rare.
+5782 | VT-59921 | [weather_colorful         ] Hey, Wind’s punching sideways; hold your hat.—got it.
+5783 | VT-68122 | [weather_colorful         ] Reminder: It’s nice. Suspiciously nice. Right now.
+5784 | VT-42742 | [weather_colorful         ] Note: Humidity’s like soup—thick and gross. Right now.
+5785 | VT-83480 | [weather_colorful         ] FYI, Sky’s angry; thunder’s got opinions.—copy.
+5786 | VT-52059 | [weather_colorful         ] Heads up: Humidity’s like soup—thick and gross. Thanks.
+5787 | VT-73117 | [weather_colorful         ] FYI, Rain so hard it’s pressure-washing my soul.—got it.
+5788 | VT-40427 | [weather_colorful         ] Note: Sun’s cooking the asphalt medium-rare.
+5789 | VT-40427 | [weather_colorful         ] Note: Sun’s cooking the asphalt medium-rare.
+5790 | VT-91157 | [weather_colorful         ] Sun’s cooking the asphalt medium-rare. For real.
+5791 | VT-31338 | [weather_colorful         ] Listen, Rain so hard it’s pressure-washing my soul.
+5792 | VT-50765 | [weather_colorful         ] Hey, Rain so hard it’s pressure-washing my soul. Right now.
+5793 | VT-67666 | [weather_colorful         ] Listen, It’s nice. Suspiciously nice.
+5794 | VT-58496 | [weather_colorful         ] FYI, Humidity’s like soup—thick and gross. Right now.
+5795 | VT-92234 | [weather_colorful         ] Sun’s cooking the asphalt medium-rare. For real.
+5796 | VT-81697 | [weather_colorful         ] FYI, Sky’s angry; thunder’s got opinions. If possible.
+5797 | VT-68318 | [weather_colorful         ] Note: Fog so dense it feels like stealth mode. If possible.
+5798 | VT-59884 | [weather_colorful         ] Okay, It’s wet as hell outside—bring a jacket. Right now.
+5799 | VT-60918 | [weather_colorful         ] Note: Cold enough to bully your bones. Right now.
+5800 | VT-59884 | [weather_colorful         ] Okay, It’s wet as hell outside—bring a jacket. Right now.

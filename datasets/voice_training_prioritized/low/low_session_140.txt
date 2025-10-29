@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 140 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6951 | VT-465140 | [slang-heavy              ] Note: We vibin’ or what?.
+6952 | VT-403139 | [slang-heavy              ] Reminder: Yo, that was straight fire, no cap!—copy.
+6953 | VT-445301 | [slang-heavy              ] Okay, She ghosted me after I dropped the bag, smh..
+6954 | VT-452266 | [slang-heavy              ] Listen, We vibin’ or what?—got it. — confirm.
+6955 | VT-481493 | [slang-heavy              ] Heads up: Okay, Yo, that was straight fire, no cap! Thanks. if you can.
+6956 | VT-461959 | [slang-heavy              ] Real talk, Heads up: She ghosted me after I dropped the bag, smh. Thanks. right now.
+6957 | VT-423144 | [slang-heavy              ] FYI, Note: We vibin’ or what? For real. — got it. (alt)
+6958 | VT-448446 | [slang-heavy              ] Listen, Heads up: Yo, that was straight fire, no cap!—copy. — got it.
+6959 | VT-402082 | [slang-heavy              ] Listen, She ghosted me after I dropped the bag, smh. For real. — confirm.
+6960 | VT-418811 | [slang-heavy              ] Heads up: Heads up: We vibin’ or what? If possible. right now.
+6961 | VT-466643 | [slang-heavy              ] Reminder: Note: Yo, that was straight fire, no cap!—copy. right now. (alt)
+6962 | VT-467624 | [slang-heavy              ] Quick one: Reminder: She ghosted me after I dropped the bag, smh. Thanks. please.
+6963 | VT-432611 | [slang-heavy              ] Quick one: Listen, We vibin’ or what? For real. — got it.
+6964 | VT-477694 | [slang-heavy              ] Okay, Yo, that was straight fire, no cap! Thanks. please. (alt)
+6965 | VT-485985 | [slang-heavy              ] Listen, Okay, She ghosted me after I dropped the bag, smh. Please..
+6966 | VT-416581 | [slang-heavy              ] FYI, FYI, We vibin’ or what?—copy. right now. (alt)
+6967 | VT-464890 | [slang-heavy              ] Heads up: Listen, Yo, that was straight fire, no cap! — now.
+6968 | VT-487054 | [slang-heavy              ] Real talk, Heads up: She ghosted me after I dropped the bag, smh.—copy. if you can. (alt)
+6969 | VT-436619 | [slang-heavy              ] Note: Okay, We vibin’ or what? Thanks.
+6970 | VT-417796 | [slang-heavy              ] Heads up: Reminder: Yo, that was straight fire, no cap! Thanks.
+6971 | VT-407644 | [slang-heavy              ] FYI, She ghosted me after I dropped the bag, smh. Please. — confirm.
+6972 | VT-485379 | [slang-heavy              ] Heads up: We vibin’ or what? — now.
+6973 | VT-409157 | [slang-heavy              ] Okay, FYI, Yo, that was straight fire, no cap! For real. if you can.
+6974 | VT-482880 | [slang-heavy              ] Note: Note: She ghosted me after I dropped the bag, smh.—got it. — got it.
+6975 | VT-437201 | [slang-heavy              ] Okay, We vibin’ or what? For real..
+6976 | VT-413602 | [slang-heavy              ] Yo, that was straight fire, no cap!—copy. if you can.
+6977 | VT-467610 | [slang-heavy              ] Heads up: Reminder: She ghosted me after I dropped the bag, smh. Thanks. please.
+6978 | VT-450404 | [slang-heavy              ] Note: We vibin’ or what? Thanks. thanks.
+6979 | VT-495878 | [slang-heavy              ] Reminder: FYI, Yo, that was straight fire, no cap! (alt)
+6980 | VT-443220 | [slang-heavy              ] Reminder: Hey, She ghosted me after I dropped the bag, smh.—copy. — confirm.
+6981 | VT-408401 | [slang-heavy              ] Note: Reminder: We vibin’ or what? For real. — got it. (alt)
+6982 | VT-461081 | [slang-heavy              ] FYI, Listen, Yo, that was straight fire, no cap!
+6983 | VT-443706 | [slang-heavy              ] Real talk, FYI, She ghosted me after I dropped the bag, smh.—copy. — now.
+6984 | VT-454844 | [slang-heavy              ] Reminder: We vibin’ or what? Please. — confirm. (alt)
+6985 | VT-400465 | [slang-heavy              ] FYI, Reminder: Yo, that was straight fire, no cap! If possible. if you can. (alt)
+6986 | VT-422483 | [slang-heavy              ] Heads up: She ghosted me after I dropped the bag, smh.—copy. — now.
+6987 | VT-497979 | [slang-heavy              ] Real talk, FYI, We vibin’ or what? Thanks. — confirm.
+6988 | VT-487525 | [slang-heavy              ] Heads up: Reminder: Yo, that was straight fire, no cap! Right now. thanks. (alt)
+6989 | VT-470701 | [slang-heavy              ] Note: Heads up: She ghosted me after I dropped the bag, smh. If possible..
+6990 | VT-436739 | [slang-heavy              ] Heads up: Hey, We vibin’ or what?—got it. right now. (alt)
+6991 | VT-487757 | [slang-heavy              ] FYI, Okay, Yo, that was straight fire, no cap! Please. — got it. (alt)
+6992 | VT-477162 | [slang-heavy              ] FYI, FYI, She ghosted me after I dropped the bag, smh. please.
+6993 | VT-482375 | [slang-heavy              ] Reminder: FYI, We vibin’ or what?—copy. if you can.
+6994 | VT-443187 | [slang-heavy              ] Real talk, Note: Yo, that was straight fire, no cap!—copy. please. (alt)
+6995 | VT-455389 | [slang-heavy              ] Quick one: Okay, She ghosted me after I dropped the bag, smh.—got it. — now.
+6996 | VT-401316 | [slang-heavy              ] Quick one: We vibin’ or what? For real. please. (alt)
+6997 | VT-440153 | [slang-heavy              ] Reminder: Listen, Yo, that was straight fire, no cap! For real. thanks.
+6998 | VT-499619 | [slang-heavy              ] Reminder: Okay, She ghosted me after I dropped the bag, smh. For real..
+6999 | VT-433637 | [sound_effects            ] Boom! Crash! The whole lab went dark. Please. right now.
+7000 | VT-440400 | [sound_effects            ] Note: Heads up: Pshhh, like air escaping a balloon of secrets. If possible. — confirm.

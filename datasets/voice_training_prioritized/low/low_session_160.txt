@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 160 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7951 | VT-558263 | [flirty                   ] Real talk, Reminder: I wasn’t blushing until you started talking. right now. (alt)
+7952 | VT-621090 | [flirty                   ] Heads up: Are you Wi-Fi? Because I’m feeling a connection. if you can.
+7953 | VT-549956 | [flirty                   ] Real talk, You have the kind of voice I’d sync my heartbeat to. Right now..
+7954 | VT-544751 | [flirty                   ] Okay, Heads up: I wasn’t blushing until you started talking.—got it. — now.
+7955 | VT-546952 | [flirty                   ] FYI, Hey, Are you Wi-Fi? Because I’m feeling a connection. Thanks. — now.
+7956 | VT-564883 | [flirty                   ] Okay, Heads up: You have the kind of voice I’d sync my heartbeat to. If possible. — now.
+7957 | VT-565750 | [flirty                   ] Real talk, Reminder: I wasn’t blushing until you started talking. Please.
+7958 | VT-668465 | [flirty                   ] Reminder: Heads up: Are you Wi-Fi? Because I’m feeling a connection.—copy. — confirm.
+7959 | VT-611328 | [flirty                   ] Note: FYI, You have the kind of voice I’d sync my heartbeat to. Thanks. — got it.
+7960 | VT-529125 | [flirty                   ] Okay, I wasn’t blushing until you started talking. Right now. right now.
+7961 | VT-525523 | [flirty                   ] Note: FYI, Are you Wi-Fi? Because I’m feeling a connection. Right now. please.
+7962 | VT-547047 | [flirty                   ] Listen, Hey, You have the kind of voice I’d sync my heartbeat to..
+7963 | VT-536342 | [flirty                   ] FYI, I wasn’t blushing until you started talking. please.
+7964 | VT-571125 | [flirty                   ] Quick one: Hey, Are you Wi-Fi? Because I’m feeling a connection. Please. — got it.
+7965 | VT-509718 | [flirty                   ] Heads up: You have the kind of voice I’d sync my heartbeat to. For real. thanks.
+7966 | VT-523140 | [flirty                   ] Real talk, Listen, I wasn’t blushing until you started talking. Right now. thanks.
+7967 | VT-672114 | [flirty                   ] FYI, Note: Are you Wi-Fi? Because I’m feeling a connection. Thanks. (alt)
+7968 | VT-554346 | [flirty                   ] Real talk, Note: You have the kind of voice I’d sync my heartbeat to. If possible. — now.
+7969 | VT-534508 | [flirty                   ] Heads up: I wasn’t blushing until you started talking.—got it. thanks.
+7970 | VT-628317 | [flirty                   ] Quick one: Heads up: Are you Wi-Fi? Because I’m feeling a connection..
+7971 | VT-579540 | [flirty                   ] Heads up: Heads up: You have the kind of voice I’d sync my heartbeat to. (alt)
+7972 | VT-662896 | [flirty                   ] Quick one: Note: I wasn’t blushing until you started talking. Right now.
+7973 | VT-516465 | [flirty                   ] Quick one: Heads up: Are you Wi-Fi? Because I’m feeling a connection. Thanks.. (alt)
+7974 | VT-546163 | [flirty                   ] Real talk, Reminder: You have the kind of voice I’d sync my heartbeat to. For real. right now.
+7975 | VT-567025 | [flirty                   ] Listen, Hey, I wasn’t blushing until you started talking. Please. please. (alt)
+7976 | VT-519384 | [flirty                   ] Okay, Are you Wi-Fi? Because I’m feeling a connection. right now.
+7977 | VT-548562 | [flirty                   ] Reminder: Listen, You have the kind of voice I’d sync my heartbeat to. if you can.
+7978 | VT-669052 | [flirty                   ] Listen, Hey, I wasn’t blushing until you started talking. Thanks. please.
+7979 | VT-606216 | [flirty                   ] Hey, Are you Wi-Fi? Because I’m feeling a connection.—copy. please.
+7980 | VT-592665 | [flirty                   ] Okay, Note: You have the kind of voice I’d sync my heartbeat to.—got it. — got it.
+7981 | VT-555220 | [flirty                   ] Heads up: I wasn’t blushing until you started talking.—got it. — confirm.
+7982 | VT-698108 | [flirty                   ] Heads up: Are you Wi-Fi? Because I’m feeling a connection. Right now. if you can.
+7983 | VT-683593 | [flirty                   ] FYI, Okay, You have the kind of voice I’d sync my heartbeat to. Thanks.
+7984 | VT-589821 | [flirty                   ] FYI, Okay, I wasn’t blushing until you started talking.—copy. — got it.
+7985 | VT-561534 | [flirty                   ] Real talk, Okay, Are you Wi-Fi? Because I’m feeling a connection. If possible. (alt)
+7986 | VT-542440 | [flirty                   ] FYI, You have the kind of voice I’d sync my heartbeat to. Thanks. if you can.
+7987 | VT-671860 | [flirty                   ] Heads up: I wasn’t blushing until you started talking.—copy. thanks.
+7988 | VT-635914 | [home_assistant_commands  ] Reminder: Note: Lock the front door and arm stay. Please. — now.
+7989 | VT-576954 | [home_assistant_commands  ] Okay, Note: Turn off everything in the bedroom. Please. right now.
+7990 | VT-593088 | [home_assistant_commands  ] Heads up: Note: Lock the front door and arm stay. Thanks. please.
+7991 | VT-507739 | [home_assistant_commands  ] Quick one: Start the 'Movie Night' scene.—copy..
+7992 | VT-513514 | [home_assistant_commands  ] Okay, Mute the living room speakers. Please..
+7993 | VT-618186 | [home_assistant_commands  ] FYI, Note: Set thermostat to sixty-eight degrees. Please..
+7994 | VT-666171 | [home_assistant_commands  ] Note: Lights to twenty percent, warm white. Right now. — confirm.
+7995 | VT-661742 | [home_assistant_commands  ] Heads up: Note: Lock the front door and arm stay. Please.
+7996 | VT-594457 | [home_assistant_commands  ] Quick one: Heads up: Set thermostat to sixty-eight degrees. For real. right now.
+7997 | VT-655765 | [home_assistant_commands  ] Heads up: Start the 'Movie Night' scene. For real. — now.
+7998 | VT-620911 | [home_assistant_commands  ] Listen, FYI, Run the vacuum downstairs.—got it. thanks.
+7999 | VT-599780 | [home_assistant_commands  ] Note: Okay, Mute the living room speakers. Right now.
+8000 | VT-581139 | [home_assistant_commands  ] Note: FYI, Turn off everything in the bedroom. Thanks. thanks.

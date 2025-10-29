@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 81 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+4001 | VT-44320 | [sales_pitch              ] Heads up: Unlock premium features now with just one click! For real.
+4002 | VT-52527 | [sales_pitch              ] Heads up: Why settle for less when you can have excellence?
+4003 | VT-49457 | [sales_pitch              ] FYI, Why settle for less when you can have excellence?—copy.
+4004 | VT-30370 | [sales_pitch              ] Okay, Why settle for less when you can have excellence?—got it.
+4005 | VT-51458 | [sales_pitch              ] Listen, This offer won’t last—act today! Right now.
+4006 | VT-54765 | [sales_pitch              ] This offer won’t last—act today! If possible.
+4007 | VT-46959 | [sales_pitch              ] Okay, Unlock premium features now with just one click!
+4008 | VT-88986 | [sales_pitch              ] Heads up: Why settle for less when you can have excellence? Thanks.
+4009 | VT-24602 | [sales_pitch              ] Heads up: Why settle for less when you can have excellence?—copy.
+4010 | VT-16439 | [sales_pitch              ] Heads up: Unlock premium features now with just one click! Please.
+4011 | VT-93583 | [sales_pitch              ] Hey, Unlock premium features now with just one click!—copy.
+4012 | VT-73275 | [sales_pitch              ] FYI, This offer won’t last—act today!—got it.
+4013 | VT-52125 | [sales_pitch              ] Hey, This offer won’t last—act today! Thanks.
+4014 | VT-33588 | [sales_pitch              ] Note: Why settle for less when you can have excellence? Thanks.
+4015 | VT-30370 | [sales_pitch              ] Okay, Why settle for less when you can have excellence?—got it.
+4016 | VT-49454 | [sales_pitch              ] FYI, This offer won’t last—act today! Thanks.
+4017 | VT-53266 | [sales_pitch              ] FYI, Unlock premium features now with just one click! Thanks.
+4018 | VT-15943 | [sales_pitch              ] Hey, This offer won’t last—act today! For real.
+4019 | VT-67253 | [sales_pitch              ] This offer won’t last—act today! Thanks.
+4020 | VT-73709 | [sales_pitch              ] Unlock premium features now with just one click! Thanks.
+4021 | VT-90091 | [sales_pitch              ] Why settle for less when you can have excellence?
+4022 | VT-33588 | [sales_pitch              ] Note: Why settle for less when you can have excellence? Thanks.
+4023 | VT-73410 | [sales_pitch              ] Note: Why settle for less when you can have excellence? Please.
+4024 | VT-33588 | [sales_pitch              ] Note: Why settle for less when you can have excellence? Thanks.
+4025 | VT-31599 | [sales_pitch              ] Unlock premium features now with just one click! Right now.
+4026 | VT-62135 | [sales_pitch              ] Hey, This offer won’t last—act today!—got it.
+4027 | VT-33588 | [sales_pitch              ] Note: Why settle for less when you can have excellence? Thanks.
+4028 | VT-20795 | [slang-heavy              ] Yo, that was straight fire, no cap!
+4029 | VT-30302 | [slang-heavy              ] She ghosted me after I dropped the bag, smh.
+4030 | VT-40690 | [slang-heavy              ] We vibin’ or what?
+4031 | VT-49873 | [slang-heavy              ] Reminder: Yo, that was straight fire, no cap!—copy.
+4032 | VT-99317 | [slang-heavy              ] Okay, She ghosted me after I dropped the bag, smh.
+4033 | VT-30398 | [slang-heavy              ] Listen, We vibin’ or what?—got it.
+4034 | VT-81324 | [slang-heavy              ] Okay, Yo, that was straight fire, no cap! Thanks.
+4035 | VT-72106 | [slang-heavy              ] Heads up: She ghosted me after I dropped the bag, smh. Thanks.
+4036 | VT-77796 | [slang-heavy              ] Note: We vibin’ or what? For real.
+4037 | VT-74883 | [slang-heavy              ] Heads up: Yo, that was straight fire, no cap!—copy.
+4038 | VT-21664 | [slang-heavy              ] She ghosted me after I dropped the bag, smh. For real.
+4039 | VT-89628 | [slang-heavy              ] Heads up: We vibin’ or what? If possible.
+4040 | VT-60025 | [slang-heavy              ] Note: Yo, that was straight fire, no cap!—copy.
+4041 | VT-33093 | [slang-heavy              ] Reminder: She ghosted me after I dropped the bag, smh. Thanks.
+4042 | VT-28815 | [slang-heavy              ] Listen, We vibin’ or what? For real.
+4043 | VT-30534 | [slang-heavy              ] Yo, that was straight fire, no cap! Thanks.
+4044 | VT-94666 | [slang-heavy              ] Okay, She ghosted me after I dropped the bag, smh. Please.
+4045 | VT-95907 | [slang-heavy              ] FYI, We vibin’ or what?—copy.
+4046 | VT-57470 | [slang-heavy              ] Listen, Yo, that was straight fire, no cap!
+4047 | VT-69141 | [slang-heavy              ] Heads up: She ghosted me after I dropped the bag, smh.—copy.
+4048 | VT-68299 | [slang-heavy              ] Okay, We vibin’ or what? Thanks.
+4049 | VT-26275 | [slang-heavy              ] Reminder: Yo, that was straight fire, no cap! Thanks.
+4050 | VT-85760 | [slang-heavy              ] She ghosted me after I dropped the bag, smh. Please.

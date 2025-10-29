@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 14 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0651 | VT-86253 | [emoji                    ] FYI, Let’s clean up those docs 🧹.—got it.
+0652 | VT-99618 | [emoji                    ] FYI, Ugh, my laptop froze again 😑. Thanks.
+0653 | VT-0494 | [emoji                    ] Running late—be there soon 🚗💨.
+0654 | VT-51648 | [emoji                    ] Listen, Let’s clean up those docs 🧹. For real.
+0655 | VT-68440 | [emoji                    ] Okay, Weather’s perfect for a walk 🌤️.—copy.
+0656 | VT-99231 | [emoji                    ] Note: Let’s clean up those docs 🧹.—copy.
+0657 | VT-24134 | [emoji                    ] Listen, Ugh, my laptop froze again 😑.—copy.
+0658 | VT-40814 | [emoji                    ] Heads up: Coffee first, then code ☕️💻.
+0659 | VT-81050 | [emoji                    ] New high score! 🕹️—copy.
+0660 | VT-77066 | [emoji                    ] Note: Coffee first, then code ☕️💻. Thanks.
+0661 | VT-0493 | [emoji                    ] We shipped it! 🎉
+0662 | VT-87048 | [emoji                    ] Okay, Deep breaths. You got this. 💪 Please.
+0663 | VT-47997 | [emoji                    ] Hey, Deep breaths. You got this. 💪—copy.
+0664 | VT-61670 | [emoji                    ] Hey, New high score! 🕹️—copy.
+0665 | VT-86819 | [emoji                    ] Hey, Ugh, my laptop froze again 😑. For real.
+0666 | VT-12512 | [emoji                    ] Hey, Let’s clean up those docs 🧹.—copy.
+0667 | VT-71504 | [emoji                    ] Listen, Ugh, my laptop froze again 😑.—copy.
+0668 | VT-65116 | [emoji                    ] Heads up: Coffee first, then code ☕️💻.
+0669 | VT-0492 | [emoji                    ] Coffee first, then code ☕️💻.
+0670 | VT-67376 | [emoji                    ] FYI, Ugh, my laptop froze again 😑.—got it.
+0671 | VT-36425 | [emoji                    ] Reminder: Ugh, my laptop froze again 😑. For real.
+0672 | VT-35386 | [emoji                    ] Note: That meeting was 🔥 — concise and effective.—copy.
+0673 | VT-0491 | [emoji                    ] Ugh, my laptop froze again 😑.
+0674 | VT-36425 | [emoji                    ] Reminder: Ugh, my laptop froze again 😑. For real.
+0675 | VT-38536 | [emoji                    ] Listen, That meeting was 🔥 — concise and effective. Please.
+0676 | VT-43355 | [emoji                    ] Heads up: Ugh, my laptop froze again 😑. For real.
+0677 | VT-17558 | [emoji                    ] Note: Coffee first, then code ☕️💻. Thanks.
+0678 | VT-99618 | [emoji                    ] FYI, Ugh, my laptop froze again 😑. Thanks.
+0679 | VT-41563 | [emoji                    ] Reminder: Deep breaths. You got this. 💪 Thanks.
+0680 | VT-91854 | [emoji                    ] We shipped it! 🎉—got it.
+0681 | VT-92568 | [emoji                    ] Note: Deep breaths. You got this. 💪
+0682 | VT-72638 | [emoji                    ] Listen, Let’s clean up those docs 🧹.—got it.
+0683 | VT-99005 | [emoji                    ] Listen, Coffee first, then code ☕️💻.—got it.
+0684 | VT-81050 | [emoji                    ] New high score! 🕹️—copy.
+0685 | VT-68440 | [emoji                    ] Okay, Weather’s perfect for a walk 🌤️.—copy.
+0686 | VT-30656 | [emoji                    ] Heads up: Ugh, my laptop froze again 😑. For real.
+0687 | VT-89268 | [emoji                    ] Okay, Ugh, my laptop froze again 😑. If possible.
+0688 | VT-74169 | [emoji                    ] Note: Ugh, my laptop froze again 😑. For real.
+0689 | VT-57330 | [emoji                    ] Okay, New high score! 🕹️ For real.
+0690 | VT-62759 | [emoji                    ] Note: Mic check, one, two… 🎤 Right now.
+0691 | VT-92568 | [emoji                    ] Note: Deep breaths. You got this. 💪
+0692 | VT-17966 | [emoji                    ] Listen, Deep breaths. You got this. 💪 For real.
+0693 | VT-32374 | [emoji                    ] Hey, Deep breaths. You got this. 💪
+0694 | VT-83929 | [emoji                    ] Reminder: Running late—be there soon 🚗💨. If possible.
+0695 | VT-80107 | [emoji                    ] Hey, New high score! 🕹️ If possible.
+0696 | VT-0494 | [emoji                    ] Running late—be there soon 🚗💨.
+0697 | VT-52501 | [emoji                    ] Okay, We shipped it! 🎉 Please.
+0698 | VT-34621 | [emoji                    ] Reminder: Running late—be there soon 🚗💨. If possible.
+0699 | VT-20719 | [emoji                    ] Reminder: That meeting was 🔥 — concise and effective. If possible.
+0700 | VT-46665 | [emoji                    ] Note: Weather’s perfect for a walk 🌤️. Please.

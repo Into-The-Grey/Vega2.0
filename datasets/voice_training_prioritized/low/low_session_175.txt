@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 175 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+8701 | VT-535428 | [passive_aggressive       ] Note: Reminder: I love how you always do things your way, even when they’re wrong. — got it.
+8702 | VT-500558 | [passive_aggressive       ] Real talk, Note: Oh, you’re here. How… unexpected. please.
+8703 | VT-684299 | [passive_aggressive       ] Listen, Heads up: I love how you always do things your way, even when they’re wrong. For real. if you can.
+8704 | VT-590813 | [passive_aggressive       ] Quick one: Heads up: Oh, you’re here. How… unexpected. — confirm.
+8705 | VT-684600 | [passive_aggressive       ] Heads up: Heads up: Oh, you’re here. How… unexpected.—got it. thanks.
+8706 | VT-696285 | [passive_aggressive       ] FYI, I love how you always do things your way, even when they’re wrong.—got it. right now.
+8707 | VT-687965 | [passive_aggressive       ] Reminder: Okay, No, really, take your time. It’s not like deadlines matter. Right now. — now.
+8708 | VT-634284 | [passive_aggressive       ] Listen, Listen, Oh, you’re here. How… unexpected. Right now. please. (alt)
+8709 | VT-670041 | [passive_aggressive       ] Heads up: I love how you always do things your way, even when they’re wrong. Right now..
+8710 | VT-639170 | [passive_aggressive       ] Listen, Okay, Oh, you’re here. How… unexpected.—got it. please.
+8711 | VT-663064 | [passive_aggressive       ] FYI, Reminder: No, really, take your time. It’s not like deadlines matter.—got it. right now.
+8712 | VT-582943 | [passive_aggressive       ] Heads up: I love how you always do things your way, even when they’re wrong. — confirm.
+8713 | VT-694612 | [passive_aggressive       ] Quick one: Heads up: No, really, take your time. It’s not like deadlines matter. If possible. thanks.
+8714 | VT-672915 | [passive_aggressive       ] Heads up: Hey, I love how you always do things your way, even when they’re wrong. If possible. — now.
+8715 | VT-602399 | [passive_aggressive       ] Note: Hey, Oh, you’re here. How… unexpected. Thanks. right now. (alt)
+8716 | VT-585110 | [passive_aggressive       ] Listen, Note: I love how you always do things your way, even when they’re wrong. Please. (alt)
+8717 | VT-677861 | [passive_aggressive       ] Heads up: Reminder: I love how you always do things your way, even when they’re wrong. For real. please.
+8718 | VT-635997 | [passive_aggressive       ] Heads up: Okay, I love how you always do things your way, even when they’re wrong. Please. — confirm.
+8719 | VT-664932 | [passive_aggressive       ] FYI, Hey, Oh, you’re here. How… unexpected.—copy. please.
+8720 | VT-558395 | [passive_aggressive       ] Heads up: I love how you always do things your way, even when they’re wrong..
+8721 | VT-644488 | [passive_aggressive       ] Okay, I love how you always do things your way, even when they’re wrong. If possible. if you can.
+8722 | VT-622180 | [passive_aggressive       ] Listen, Note: Oh, you’re here. How… unexpected. If possible. — got it.
+8723 | VT-539447 | [passive_aggressive       ] Reminder: Note: No, really, take your time. It’s not like deadlines matter. Please.
+8724 | VT-556851 | [passive_aggressive       ] Quick one: No, really, take your time. It’s not like deadlines matter. Thanks. right now.
+8725 | VT-585105 | [passive_aggressive       ] Reminder: Note: Oh, you’re here. How… unexpected. If possible. if you can.
+8726 | VT-674243 | [passive_aggressive       ] Note: Okay, I love how you always do things your way, even when they’re wrong.—got it. thanks.
+8727 | VT-534516 | [passive_aggressive       ] Heads up: Hey, I love how you always do things your way, even when they’re wrong. Right now. right now.
+8728 | VT-531909 | [passive_aggressive       ] Reminder: Note: Oh, you’re here. How… unexpected. right now.
+8729 | VT-559579 | [passive_aggressive       ] Heads up: Heads up: I love how you always do things your way, even when they’re wrong. For real. please. (alt)
+8730 | VT-580250 | [passive_aggressive       ] Okay, I love how you always do things your way, even when they’re wrong. If possible. — got it.
+8731 | VT-515550 | [passive_aggressive       ] Quick one: Heads up: Oh, you’re here. How… unexpected. — confirm.
+8732 | VT-671177 | [passive_aggressive       ] Real talk, Hey, Oh, you’re here. How… unexpected. if you can.
+8733 | VT-593505 | [passive_aggressive       ] FYI, No, really, take your time. It’s not like deadlines matter.—got it. — confirm.
+8734 | VT-527305 | [passive_aggressive       ] Quick one: Hey, No, really, take your time. It’s not like deadlines matter. If possible. — confirm.
+8735 | VT-513875 | [passive_aggressive       ] Reminder: Okay, Oh, you’re here. How… unexpected.—got it. — got it.
+8736 | VT-692858 | [passive_aggressive       ] Reminder: FYI, I love how you always do things your way, even when they’re wrong.—got it. if you can.
+8737 | VT-556150 | [passive_aggressive       ] Reminder: Listen, Oh, you’re here. How… unexpected. For real. right now. (alt)
+8738 | VT-657160 | [passive_aggressive       ] FYI, Heads up: No, really, take your time. It’s not like deadlines matter. Please. — got it. (alt)
+8739 | VT-583672 | [paths_cli                ] Quick one: Note: Mount the drive at /mnt/data. Right now. — now.
+8740 | VT-568929 | [paths_cli                ] Reminder: Hey, ping the gateway to verify routing. Please. if you can.
+8741 | VT-559894 | [paths_cli                ] Heads up: Listen, Mount the drive at /mnt/data. For real. — now.
+8742 | VT-631120 | [paths_cli                ] Listen, Note: ls -la to show hidden files. Thanks. thanks.
+8743 | VT-650283 | [paths_cli                ] Listen, FYI, sudo systemctl restart vega.service thanks.
+8744 | VT-536700 | [paths_cli                ] Okay, Note: Home tilde slash .ssh slash config needs chmod 600. For real.
+8745 | VT-586509 | [paths_cli                ] Real talk, Heads up: Open /var/log/syslog and tail -f. Please. if you can.
+8746 | VT-512062 | [paths_cli                ] Okay, Note: Mount the drive at /mnt/data. Right now..
+8747 | VT-671788 | [paths_cli                ] Quick one: Note: Home tilde slash .ssh slash config needs chmod 600.—got it. — now.
+8748 | VT-504076 | [paths_cli                ] Heads up: ls -la to show hidden files. Thanks..
+8749 | VT-523348 | [paths_cli                ] Heads up: journalctl -u vega.service --since '10 min ago' please.
+8750 | VT-655763 | [paths_cli                ] Quick one: sudo systemctl restart vega.service If possible.

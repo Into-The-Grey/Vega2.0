@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 192 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+9551 | VT-540456 | [trash_talk               ] Note: Holding W isn’t a strategy; it’s a cry for help. right now.
+9552 | VT-633423 | [trash_talk               ] Listen, You brought a pea shooter to a boss fight. please.
+9553 | VT-686690 | [trash_talk               ] Quick one: Next time, ping before you feed. please. (alt)
+9554 | VT-575204 | [trash_talk               ] FYI, That was textbook throw—appreciate the assist. if you can.
+9555 | VT-547002 | [trash_talk               ] Real talk, Great flank—on your own teammates. right now.
+9556 | VT-516585 | [trash_talk               ] Reminder: Next time, ping before you feed. thanks.
+9557 | VT-511776 | [trash_talk               ] Real talk, Good game; uninstall only if you want peace..
+9558 | VT-631657 | [trash_talk               ] Real talk, If that was your strat, keep it; we farmed it. thanks.
+9559 | VT-578496 | [trash_talk               ] Okay, Good game; uninstall only if you want peace. if you can.
+9560 | VT-533399 | [trash_talk               ] Listen, Next time, ping before you feed. if you can.
+9561 | VT-604813 | [trash_talk               ] Listen, Holding W isn’t a strategy; it’s a cry for help. if you can. (alt)
+9562 | VT-589655 | [trash_talk               ] Listen, Great flank—on your own teammates. please.
+9563 | VT-577859 | [trash_talk               ] Listen, Great flank—on your own teammates. — now. (alt)
+9564 | VT-521867 | [trash_talk               ] Reminder: You peeked wide with no cover—free pick.
+9565 | VT-641800 | [trash_talk               ] Heads up: Great flank—on your own teammates. — now.
+9566 | VT-506940 | [trash_talk               ] Listen, That was textbook throw—appreciate the assist. — got it.
+9567 | VT-582036 | [trash_talk               ] Listen, Great flank—on your own teammates. please.
+9568 | VT-634450 | [trash_talk               ] FYI, Next time, ping before you feed. — confirm.
+9569 | VT-697791 | [uncertainty              ] FYI, Note: It depends on the constraints.—got it. right now.
+9570 | VT-601831 | [uncertainty              ] Heads up: Okay, I don’t have that info.—copy. right now.
+9571 | VT-583216 | [uncertainty              ] Reminder: Note: It depends on the constraints.—copy. please.
+9572 | VT-568974 | [uncertainty              ] FYI, Hey, Possibly, but unlikely. If possible. — confirm.
+9573 | VT-566059 | [uncertainty              ] Real talk, I doubt it. If possible. — now.
+9574 | VT-626525 | [uncertainty              ] Quick one: Note: Hard to say without more data.—copy. if you can.
+9575 | VT-517416 | [uncertainty              ] Heads up: Note: I’m not sure yet. Right now. thanks.
+9576 | VT-530871 | [uncertainty              ] Heads up: Note: It depends on the constraints.—got it. thanks.
+9577 | VT-575509 | [uncertainty              ] Note: Hard to say without more data.—got it. if you can.
+9578 | VT-692919 | [uncertainty              ] Note: Hey, Possibly, but unlikely.—copy. — now.
+9579 | VT-692945 | [uncertainty              ] Listen, Hey, Too early to call.—got it.
+9580 | VT-608180 | [uncertainty              ] Reminder: Heads up: I doubt it. if you can.
+9581 | VT-599724 | [uncertainty              ] Note: Reminder: I don’t have that info. If possible. — now.
+9582 | VT-539492 | [uncertainty              ] Reminder: FYI, Maybe—leaning no.—copy..
+9583 | VT-556378 | [uncertainty              ] Real talk, Listen, Hard to say without more data. Please. if you can.
+9584 | VT-684261 | [uncertainty              ] Quick one: Hey, I’m not sure yet.—copy. — got it.
+9585 | VT-641103 | [uncertainty              ] Listen, Hey, I don’t have that info. Right now. thanks.
+9586 | VT-521461 | [uncertainty              ] Real talk, Hey, It depends on the constraints. please.
+9587 | VT-659830 | [uncertainty              ] Heads up: Hard to say without more data. thanks. (alt)
+9588 | VT-530112 | [uncertainty              ] Listen, Hey, Too early to call.—got it. — got it. (alt)
+9589 | VT-646687 | [uncertainty              ] Quick one: Reminder: Too early to call. If possible. right now.
+9590 | VT-697607 | [uncertainty              ] Listen, Heads up: Too early to call. Thanks. — confirm.
+9591 | VT-677979 | [uncertainty              ] Reminder: Heads up: I don’t have that info. If possible. thanks. (alt)
+9592 | VT-680999 | [uncertainty              ] FYI, Note: I’m not sure yet. Right now. — now. (alt)
+9593 | VT-525735 | [uncertainty              ] Reminder: FYI, I’m not sure yet. For real. right now.
+9594 | VT-567195 | [uncertainty              ] Too early to call. For real. — now.
+9595 | VT-577057 | [uncertainty              ] FYI, Note: Hard to say without more data. Right now. — now. (alt)
+9596 | VT-635689 | [uncertainty              ] FYI, Heads up: We’ll see. — got it.
+9597 | VT-635861 | [uncertainty              ] Reminder: Note: We’ll see.—got it. please. (alt)
+9598 | VT-680109 | [uncertainty              ] Real talk, Hey, We’ll see. — got it.
+9599 | VT-682808 | [uncertainty              ] FYI, I don’t have that info.
+9600 | VT-555786 | [uncertainty              ] FYI, Hey, Possibly, but unlikely. If possible. — now.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 45 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2201 | VT-690486 | [dialect_southern_us      ] Y’all ready or what? Right now. thanks.
+2202 | VT-595826 | [dialect_southern_us      ] Heads up: Couldn’t pour water out of a boot with instructions on the heel.—got it.
+2203 | VT-645595 | [dialect_southern_us      ] Heads up: Listen, Bless your heart, you tried. For real.. (alt)
+2204 | VT-611231 | [dialect_southern_us      ] Listen, Note: Hotter than blue blazes today.—copy. thanks.
+2205 | VT-582971 | [dialect_southern_us      ] FYI, Listen, Hotter than blue blazes today.—got it. — got it.
+2206 | VT-578433 | [dialect_southern_us      ] Note: Listen, Hotter than blue blazes today. Right now.
+2207 | VT-508099 | [dialect_southern_us      ] Reminder: Reminder: Might could get that done by supper. For real. — confirm.
+2208 | VT-529759 | [dialect_southern_us      ] Quick one: Note: I’m busier than a one‑armed paperhanger. Thanks. — got it.
+2209 | VT-682618 | [dialect_southern_us      ] Real talk, Okay, I’m busier than a one‑armed paperhanger. — now.
+2210 | VT-642077 | [dialect_southern_us      ] Okay, Note: Y’all ready or what? For real. — now.
+2211 | VT-503651 | [dialect_southern_us      ] Real talk, Couldn’t pour water out of a boot with instructions on the heel. For real. right now. (alt)
+2212 | VT-657395 | [dialect_southern_us      ] Note: I’m busier than a one‑armed paperhanger. Please. — now.
+2213 | VT-524599 | [dialect_southern_us      ] Quick one: Listen, That dog won’t hunt. Please. right now.
+2214 | VT-526125 | [dialect_southern_us      ] Real talk, Reminder: Y’all ready or what? right now. (alt)
+2215 | VT-548526 | [dialect_southern_us      ] Listen, Note: Y’all ready or what? For real.
+2216 | VT-641674 | [dialect_southern_us      ] Note: Okay, I’m busier than a one‑armed paperhanger.—copy. thanks.
+2217 | VT-642089 | [dialect_southern_us      ] Heads up: Okay, Y’all ready or what? Right now. please.
+2218 | VT-530415 | [dialect_southern_us      ] Okay, Listen, Fixing to head out in a minute. Please. — confirm.
+2219 | VT-564680 | [dialect_southern_us      ] Okay, Okay, That ain’t it, chief..
+2220 | VT-565854 | [dialect_southern_us      ] FYI, Note: Couldn’t pour water out of a boot with instructions on the heel. Thanks. if you can.
+2221 | VT-537319 | [dialect_southern_us      ] Note: Note: Bless your heart, you tried. Please. if you can. (alt)
+2222 | VT-659176 | [dialect_southern_us      ] Note: Hotter than blue blazes today.—copy..
+2223 | VT-627592 | [dialect_southern_us      ] Real talk, FYI, Might could get that done by supper. Please. — got it.
+2224 | VT-599779 | [dialect_southern_us      ] Listen, Okay, That dog won’t hunt. Please. if you can.
+2225 | VT-566058 | [dialect_southern_us      ] Note: Hotter than blue blazes today. thanks.
+2226 | VT-693918 | [dialect_southern_us      ] Quick one: FYI, Might could get that done by supper. Thanks..
+2227 | VT-633159 | [dialect_southern_us      ] Note: Heads up: Fixing to head out in a minute. Thanks. please.
+2228 | VT-672616 | [dialect_southern_us      ] Okay, FYI, Might could get that done by supper. For real. please.
+2229 | VT-603997 | [dialect_southern_us      ] Heads up: Hey, That dog won’t hunt. Right now. — got it. (alt)
+2230 | VT-637934 | [dialect_southern_us      ] Quick one: Listen, Bless your heart, you tried. Right now. please.
+2231 | VT-606247 | [dialect_southern_us      ] Okay, Heads up: Y’all ready or what?—got it. — got it.
+2232 | VT-695707 | [dialect_southern_us      ] Quick one: Hey, Bless your heart, you tried. Please. right now.
+2233 | VT-505822 | [dialect_southern_us      ] Quick one: Couldn’t pour water out of a boot with instructions on the heel. — confirm.
+2234 | VT-652214 | [dialect_southern_us      ] Okay, I’m busier than a one‑armed paperhanger. right now.
+2235 | VT-542577 | [dialect_southern_us      ] Real talk, FYI, I’m busier than a one‑armed paperhanger. Please. please.
+2236 | VT-611161 | [dialect_southern_us      ] Quick one: Listen, Y’all ready or what? For real. — confirm.
+2237 | VT-579963 | [dialect_southern_us      ] Listen, That dog won’t hunt.—got it. please.
+2238 | VT-538103 | [dialect_southern_us      ] Reminder: Might could get that done by supper. If possible. thanks.
+2239 | VT-682865 | [dialect_southern_us      ] Heads up: That dog won’t hunt. right now.
+2240 | VT-566425 | [dialect_southern_us      ] Heads up: Note: Bless your heart, you tried. Please. thanks.
+2241 | VT-575818 | [dialect_southern_us      ] Quick one: Bless your heart, you tried. — confirm.
+2242 | VT-672075 | [dialect_southern_us      ] Quick one: Okay, That dog won’t hunt. If possible. — now.
+2243 | VT-669053 | [dialect_southern_us      ] FYI, Okay, That dog won’t hunt. — confirm. (alt)
+2244 | VT-538932 | [dialect_southern_us      ] Quick one: Note: Hush now; I’m thinking. If possible. — got it.
+2245 | VT-556304 | [dialect_southern_us      ] Quick one: That dog won’t hunt. — now.
+2246 | VT-583969 | [dialect_southern_us      ] Real talk, Okay, That dog won’t hunt. thanks.
+2247 | VT-504824 | [dialect_southern_us      ] Hey, Hush now; I’m thinking.—copy. — now.
+2248 | VT-626559 | [dialect_southern_us      ] Note: That dog won’t hunt.—got it. right now.
+2249 | VT-647185 | [dialect_southern_us      ] Hey, Bless your heart, you tried.—copy.
+2250 | VT-502350 | [dialect_southern_us      ] Reminder: Okay, That dog won’t hunt. Please. — got it.

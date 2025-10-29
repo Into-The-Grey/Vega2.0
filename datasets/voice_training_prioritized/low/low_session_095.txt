@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 95 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+4701 | VT-37675 | [sports_cast              ] Break point; deep breath; serve wide. If possible.
+4702 | VT-19935 | [sports_cast              ] Okay, That split-second rotation changed everything. Please.
+4703 | VT-37899 | [sports_cast              ] That split-second rotation changed everything.
+4704 | VT-66647 | [sports_cast              ] FYI, The underdogs are up by two. Please.
+4705 | VT-72444 | [sports_cast              ] FYI, That split-second rotation changed everything. For real.
+4706 | VT-85120 | [sports_cast              ] Listen, Overtime rules are in effect now. Please.
+4707 | VT-78040 | [sports_cast              ] FYI, She nails the triple, crowd goes wild.—got it.
+4708 | VT-62910 | [sports_cast              ] Reminder: That split-second rotation changed everything. Right now.
+4709 | VT-74011 | [sports_cast              ] Hey, He shoots—top shelf! Please.
+4710 | VT-85120 | [sports_cast              ] Listen, Overtime rules are in effect now. Please.
+4711 | VT-11145 | [sports_cast              ] Note: She nails the triple, crowd goes wild.—got it.
+4712 | VT-11145 | [sports_cast              ] Note: She nails the triple, crowd goes wild.—got it.
+4713 | VT-89748 | [sports_cast              ] Note: She nails the triple, crowd goes wild.—copy.
+4714 | VT-92856 | [sports_cast              ] Note: She nails the triple, crowd goes wild.—copy.
+4715 | VT-90781 | [sports_cast              ] Break point; deep breath; serve wide.
+4716 | VT-17065 | [sports_cast              ] Listen, He shoots—top shelf! Please.
+4717 | VT-79635 | [sports_cast              ] Reminder: The underdogs are up by two. For real.
+4718 | VT-72023 | [sports_cast              ] Okay, Break point; deep breath; serve wide. If possible.
+4719 | VT-54927 | [sports_cast              ] Heads up: Fourth and inches with the clock bleeding.
+4720 | VT-68025 | [sports_cast              ] Listen, Fourth and inches with the clock bleeding.—got it.
+4721 | VT-93465 | [sports_cast              ] Fourth and inches with the clock bleeding. If possible.
+4722 | VT-89748 | [sports_cast              ] Note: She nails the triple, crowd goes wild.—copy.
+4723 | VT-11980 | [sports_cast              ] Hey, The underdogs are up by two.
+4724 | VT-86189 | [sports_cast              ] Heads up: He shoots—top shelf! Please.
+4725 | VT-84894 | [sports_cast              ] Listen, Fourth and inches with the clock bleeding. If possible.
+4726 | VT-10387 | [sports_cast              ] What a clutch parry into the finisher. If possible.
+4727 | VT-68667 | [sports_cast              ] Note: That split-second rotation changed everything. Right now.
+4728 | VT-57268 | [sports_cast              ] Note: Fourth and inches with the clock bleeding.—copy.
+4729 | VT-23565 | [sports_cast              ] Yellow card for a reckless challenge. If possible.
+4730 | VT-54918 | [sports_cast              ] Note: Break point; deep breath; serve wide. If possible.
+4731 | VT-44539 | [sports_cast              ] Hey, He shoots—top shelf! If possible.
+4732 | VT-24712 | [sports_cast              ] Note: Break point; deep breath; serve wide. Thanks.
+4733 | VT-61896 | [sports_cast              ] Hey, He shoots—top shelf!—copy.
+4734 | VT-90781 | [sports_cast              ] Break point; deep breath; serve wide.
+4735 | VT-38435 | [sports_cast              ] Listen, Fourth and inches with the clock bleeding. If possible.
+4736 | VT-29137 | [sports_cast              ] Reminder: She nails the triple, crowd goes wild.—copy.
+4737 | VT-64146 | [sports_cast              ] Okay, What a clutch parry into the finisher. If possible.
+4738 | VT-67606 | [sports_cast              ] Listen, What a clutch parry into the finisher.
+4739 | VT-81574 | [sports_cast              ] Okay, Break point; deep breath; serve wide. Please.
+4740 | VT-91862 | [sports_cast              ] Hey, A new personal best by 0.12 seconds! If possible.
+4741 | VT-79133 | [sports_cast              ] Heads up: Fourth and inches with the clock bleeding. Please.
+4742 | VT-98217 | [sports_cast              ] FYI, Yellow card for a reckless challenge. If possible.
+4743 | VT-53344 | [sports_cast              ] Reminder: That split-second rotation changed everything.
+4744 | VT-78040 | [sports_cast              ] FYI, She nails the triple, crowd goes wild.—got it.
+4745 | VT-57738 | [sports_cast              ] Listen, Overtime rules are in effect now.
+4746 | VT-70589 | [sports_cast              ] Heads up: Fourth and inches with the clock bleeding.—copy.
+4747 | VT-57738 | [sports_cast              ] Listen, Overtime rules are in effect now.
+4748 | VT-16039 | [sports_cast              ] FYI, Fourth and inches with the clock bleeding.
+4749 | VT-86189 | [sports_cast              ] Heads up: He shoots—top shelf! Please.
+4750 | VT-59757 | [sports_cast              ] Okay, She nails the triple, crowd goes wild. If possible.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 165 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+8201 | VT-548422 | [legalese                 ] Quick one: Reminder: Indemnify and hold harmless the disclosing party. If possible. if you can.
+8202 | VT-698419 | [legalese                 ] Reminder: Severability ensures the remainder remains enforceable. right now. (alt)
+8203 | VT-594384 | [legalese                 ] Note: Hey, Breach may result in injunctive relief. Please..
+8204 | VT-571895 | [legalese                 ] Real talk, FYI, Subject to applicable law and equitable principles.—copy. if you can. (alt)
+8205 | VT-596811 | [legalese                 ] FYI, Breach may result in injunctive relief. if you can. (alt)
+8206 | VT-681299 | [legalese                 ] Note: Heads up: Indemnify and hold harmless the disclosing party. For real. — confirm.
+8207 | VT-544482 | [legalese                 ] Quick one: Reminder: This notice constitutes neither an offer nor a solicitation. Thanks. — got it.
+8208 | VT-556534 | [legalese                 ] Note: Okay, Notwithstanding the foregoing, this agreement shall remain in effect.—got it. — confirm. (alt)
+8209 | VT-604640 | [legalese                 ] FYI, Okay, This notice constitutes neither an offer nor a solicitation. Thanks. thanks.
+8210 | VT-536027 | [legalese                 ] FYI, The parties agree to binding arbitration. thanks.
+8211 | VT-587557 | [legalese                 ] Okay, Heads up: Time is of the essence with respect to performance. — now.
+8212 | VT-630645 | [legalese                 ] Quick one: Reminder: Time is of the essence with respect to performance. if you can.
+8213 | VT-579454 | [legalese                 ] Okay, Hey, Notwithstanding the foregoing, this agreement shall remain in effect. Right now. — got it.
+8214 | VT-514901 | [legalese                 ] Heads up: Note: Indemnify and hold harmless the disclosing party. For real. — got it.
+8215 | VT-680083 | [legalese                 ] Okay, Reminder: Breach may result in injunctive relief. Please. — now.
+8216 | VT-699525 | [legalese                 ] Okay, FYI, Indemnify and hold harmless the disclosing party.—got it. right now. (alt)
+8217 | VT-607692 | [legalese                 ] Okay, Okay, This notice constitutes neither an offer nor a solicitation.—copy. right now.
+8218 | VT-539765 | [legalese                 ] Note: This notice constitutes neither an offer nor a solicitation. thanks. (alt)
+8219 | VT-533693 | [legalese                 ] Listen, Okay, Indemnify and hold harmless the disclosing party. Thanks. — confirm. (alt)
+8220 | VT-644524 | [legalese                 ] Reminder: Note: Indemnify and hold harmless the disclosing party. Thanks. (alt)
+8221 | VT-510258 | [legalese                 ] Quick one: Note: This warranty is provided as-is without limitation. For real. — now.
+8222 | VT-546723 | [legalese                 ] Listen, Indemnify and hold harmless the disclosing party. — now.
+8223 | VT-641852 | [legalese                 ] Heads up: Note: Indemnify and hold harmless the disclosing party. Thanks. if you can. (alt)
+8224 | VT-526772 | [legalese                 ] Heads up: This warranty is provided as-is without limitation.
+8225 | VT-613345 | [legalese                 ] Reminder: FYI, Indemnify and hold harmless the disclosing party. Thanks. (alt)
+8226 | VT-690535 | [legalese                 ] Quick one: This notice constitutes neither an offer nor a solicitation. If possible. — got it. (alt)
+8227 | VT-697185 | [legalese                 ] Quick one: Reminder: Indemnify and hold harmless the disclosing party. If possible. — now. (alt)
+8228 | VT-506828 | [legalese                 ] Listen, Hey, Time is of the essence with respect to performance.—copy. please.
+8229 | VT-618057 | [legalese                 ] Okay, Okay, The parties agree to binding arbitration. Please.
+8230 | VT-674033 | [legalese                 ] Okay, Time is of the essence with respect to performance. Thanks. — now.
+8231 | VT-585545 | [legalese                 ] Heads up: Reminder: Breach may result in injunctive relief. right now.
+8232 | VT-654356 | [legalese                 ] Real talk, Note: This notice constitutes neither an offer nor a solicitation. Right now. — confirm.
+8233 | VT-684790 | [legalese                 ] FYI, Okay, Notwithstanding the foregoing, this agreement shall remain in effect.—got it. (alt)
+8234 | VT-631273 | [legalese                 ] Okay, FYI, Subject to applicable law and equitable principles.—copy.
+8235 | VT-623957 | [legalese                 ] Indemnify and hold harmless the disclosing party.—got it. — confirm.
+8236 | VT-632854 | [legalese                 ] Note: Reminder: Indemnify and hold harmless the disclosing party.—got it. thanks.
+8237 | VT-526314 | [math_readouts            ] Reminder: FYI, Matrix A times B is non-commutative. (5945) For real. please.
+8238 | VT-581919 | [math_readouts            ] Okay, Reminder: Normalize the vector to unit length. (3777) If possible. — now.
+8239 | VT-699851 | [math_readouts            ] Note: FYI, Matrix A times B is non-commutative. (7938) Please..
+8240 | VT-557263 | [math_readouts            ] Note: Listen, Standard deviation is 1.3. (4278)—copy. — got it.
+8241 | VT-543480 | [math_readouts            ] Listen, FYI, Sine of ninety is one. (4499) right now.
+8242 | VT-548459 | [math_readouts            ] FYI, Okay, Solve for x: 2x + 5 = 19. (3759)—got it. if you can.
+8243 | VT-570733 | [math_readouts            ] Real talk, Note: The derivative of x squared is two x. (5156) Please. right now.
+8244 | VT-529067 | [math_readouts            ] Reminder: FYI, Matrix A times B is non-commutative. (5943) For real. if you can.
+8245 | VT-588549 | [math_readouts            ] Reminder: Okay, Solve for x: 2x + 6 = 19. (2344) Thanks.
+8246 | VT-671226 | [math_readouts            ] FYI, Standard deviation is 2.3. (1251) Thanks..
+8247 | VT-591146 | [math_readouts            ] Quick one: FYI, Log base two of eight is three. (2647) If possible..
+8248 | VT-612352 | [math_readouts            ] Note: Heads up: Sine of ninety is one. (3982) Please..
+8249 | VT-680854 | [math_readouts            ] Note: Normalize the vector to unit length. (3346) Right now.
+8250 | VT-515318 | [math_readouts            ] Heads up: The mean is greater than the median—right skew. (3085)—got it. — now.

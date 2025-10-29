@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 42 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2051 | VT-99113 | [math_readouts            ] Heads up: Solve for x: 2x + 5 = 19. (7598) If possible.
+2052 | VT-88154 | [math_readouts            ] Log base two of eight is three.
+2053 | VT-38961 | [math_readouts            ] Heads up: Standard deviation is 2.3. (9847)—copy.
+2054 | VT-44676 | [math_readouts            ] Okay, Standard deviation is 2.3. (5093) Please.
+2055 | VT-84938 | [math_readouts            ] Heads up: The derivative of x squared is two x. (4790)—got it.
+2056 | VT-27936 | [math_readouts            ] Note: The mean is greater than the median—right skew. (4317) Right now.
+2057 | VT-80405 | [math_readouts            ] Heads up: Normalize the vector to unit length. (7318) Please.
+2058 | VT-85880 | [math_readouts            ] Heads up: The mean is greater than the median—right skew. (3085)—got it.
+2059 | VT-18755 | [math_readouts            ] Okay, Solve for x: 2x + 5 = 19. (8246)
+2060 | VT-69031 | [math_readouts            ] Solve for x: 2x + 5 = 19.
+2061 | VT-92295 | [math_readouts            ] Listen, The mean is greater than the median—right skew. (7360) For real.
+2062 | VT-10647 | [math_readouts            ] Note: The mean is greater than the median—right skew. (6346) Thanks.
+2063 | VT-79706 | [math_readouts            ] Listen, Area equals pi r squared. (6138) If possible.
+2064 | VT-61934 | [math_readouts            ] The mean is greater than the median—right skew.
+2065 | VT-10647 | [math_readouts            ] Note: The mean is greater than the median—right skew. (6346) Thanks.
+2066 | VT-33803 | [math_readouts            ] FYI, Area equals pi r squared. (3399) Thanks.
+2067 | VT-16955 | [math_readouts            ] Hey, The mean is greater than the median—right skew. (2369) If possible.
+2068 | VT-33463 | [math_readouts            ] Reminder: Solve for x: 2x + 5 = 19. (566)—got it.
+2069 | VT-42051 | [math_readouts            ] Listen, The mean is greater than the median—right skew. (2655) Please.
+2070 | VT-16350 | [math_readouts            ] Hey, Standard deviation is 2.3. (6342) Thanks.
+2071 | VT-63778 | [math_readouts            ] Heads up: Log base two of eight is three. (7830)—got it.
+2072 | VT-51141 | [math_readouts            ] Listen, Standard deviation is 2.3. (4278)—copy.
+2073 | VT-26982 | [math_readouts            ] Listen, Normalize the vector to unit length. (7226) If possible.
+2074 | VT-68174 | [math_readouts            ] Okay, Solve for x: 2x + 5 = 19. (3012)—copy.
+2075 | VT-40149 | [math_readouts            ] Reminder: The derivative of x squared is two x. (1239) Please.
+2076 | VT-16360 | [math_readouts            ] Heads up: Matrix A times B is non-commutative. (1552) For real.
+2077 | VT-74559 | [math_readouts            ] FYI, The mean is greater than the median—right skew. (6031) Please.
+2078 | VT-43084 | [math_readouts            ] Reminder: The mean is greater than the median—right skew. (4269) For real.
+2079 | VT-64197 | [math_readouts            ] Note: The mean is greater than the median—right skew. (1007) Please.
+2080 | VT-16414 | [math_readouts            ] Okay, The derivative of x squared is two x. (330)
+2081 | VT-62365 | [math_readouts            ] Listen, Sine of ninety is one. (4585)—copy.
+2082 | VT-51141 | [math_readouts            ] Listen, Standard deviation is 2.3. (4278)—copy.
+2083 | VT-36001 | [math_readouts            ] Heads up: Standard deviation is 2.3. (8591) Right now.
+2084 | VT-46848 | [math_readouts            ] Okay, Standard deviation is 2.3. (6589) Thanks.
+2085 | VT-20340 | [math_readouts            ] Heads up: The limit approaches infinity. (4473)
+2086 | VT-74435 | [math_readouts            ] Hey, The derivative of x squared is two x. (6670)—got it.
+2087 | VT-49242 | [math_readouts            ] The limit approaches infinity.
+2088 | VT-73279 | [math_readouts            ] FYI, Log base two of eight is three. (2646) If possible.
+2089 | VT-37461 | [math_readouts            ] Heads up: The limit approaches infinity. (3898) If possible.
+2090 | VT-86151 | [math_readouts            ] Reminder: Area equals pi r squared. (4061) Thanks.
+2091 | VT-29915 | [math_readouts            ] Note: Matrix A times B is non-commutative. (4150) Please.
+2092 | VT-42486 | [math_readouts            ] The limit approaches infinity. (9579)—got it.
+2093 | VT-84938 | [math_readouts            ] Heads up: The derivative of x squared is two x. (4790)—got it.
+2094 | VT-86151 | [math_readouts            ] Reminder: Area equals pi r squared. (4061) Thanks.
+2095 | VT-15765 | [math_readouts            ] Listen, Matrix A times B is non-commutative. (4137) Please.
+2096 | VT-15765 | [math_readouts            ] Listen, Matrix A times B is non-commutative. (4137) Please.
+2097 | VT-23851 | [math_readouts            ] Hey, Matrix A times B is non-commutative. (9421)
+2098 | VT-54680 | [math_readouts            ] Note: Matrix A times B is non-commutative. (6025) For real.
+2099 | VT-99795 | [math_readouts            ] Standard deviation is 2.3.
+2100 | VT-16414 | [math_readouts            ] Okay, The derivative of x squared is two x. (330)

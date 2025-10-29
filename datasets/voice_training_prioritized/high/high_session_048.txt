@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 48 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2351 | VT-642454 | [hesitations_fillers      ] Note: Reminder: Hmm, not exactly, but close. Please. — got it.
+2352 | VT-548172 | [hesitations_fillers      ] Heads up: Note: So—yeah—about that plan…—got it. — now.
+2353 | VT-647026 | [hesitations_fillers      ] So—yeah—about that plan… For real. please.
+2354 | VT-505770 | [interjection             ] Real talk, Heads up: Sorta. Right now.
+2355 | VT-604326 | [interjection             ] Quick one: FYI, Got it. If possible. thanks.
+2356 | VT-660394 | [interjection             ] Note: Listen, Uh-huh. — now. (alt)
+2357 | VT-653599 | [interjection             ] Note: Understood. right now. (alt)
+2358 | VT-603778 | [interjection             ] Hey, Kinda. Right now. — now. (alt)
+2359 | VT-608043 | [interjection             ] Listen, Mm-hmm. Right now. please.
+2360 | VT-674302 | [interjection             ] Listen, Heads up: Sorta. Right now. if you can.
+2361 | VT-653669 | [interjection             ] Note: FYI, Exactly.—copy. — now. (alt)
+2362 | VT-571739 | [interjection             ] Real talk, Understood.—got it. if you can.
+2363 | VT-580003 | [interjection             ] Reminder: Copy that. For real. if you can.
+2364 | VT-580725 | [interjection             ] Real talk, FYI, Affirmative. If possible. thanks.
+2365 | VT-641310 | [interjection             ] Heads up: Note: Got it. If possible.
+2366 | VT-618911 | [interjection             ] Quick one: Hey, Roger. For real. please.
+2367 | VT-606743 | [interjection             ] Real talk, Note: Kinda.—got it. — confirm.
+2368 | VT-604266 | [interjection             ] Okay, Listen, Negative. Right now. — confirm.
+2369 | VT-591078 | [interjection             ] Real talk, FYI, Maybe. If possible. please.
+2370 | VT-618814 | [interjection             ] Real talk, Note: Uh-huh. Right now. please.
+2371 | VT-510830 | [interjection             ] Reminder: Copy that. For real.
+2372 | VT-553644 | [interjection             ] Note: Yep. If possible. if you can.
+2373 | VT-514924 | [interjection             ] Reminder: Yep.—copy. if you can.
+2374 | VT-616065 | [interjection             ] Listen, Maybe. Thanks. thanks.
+2375 | VT-683261 | [interjection             ] FYI, Hey, Mm-hmm.—copy. — now. (alt)
+2376 | VT-664671 | [interjection             ] FYI, Reminder: Yep. if you can.
+2377 | VT-632013 | [interjection             ] Note: Exactly. For real. — now.
+2378 | VT-510744 | [interjection             ] Listen, Reminder: Right. For real. — now.
+2379 | VT-508093 | [interjection             ] Reminder: Listen, Right. If possible. — got it. (alt)
+2380 | VT-519733 | [interjection             ] Okay, Okay, Yup.—got it. if you can.
+2381 | VT-668290 | [interjection             ] Okay, Note: Maybe. Right now. — confirm.
+2382 | VT-617090 | [interjection             ] FYI, Understood. please. (alt)
+2383 | VT-533801 | [interjection             ] Quick one: Heads up: Understood. Right now. right now.
+2384 | VT-501325 | [interjection             ] Reminder: Heads up: Negative. Please. please. (alt)
+2385 | VT-549002 | [interjection             ] Quick one: Reminder: Copy that.
+2386 | VT-637175 | [interjection             ] Heads up: Understood. Right now. right now.
+2387 | VT-576978 | [interjection             ] Reminder: Listen, Roger. Please. — got it.
+2388 | VT-674874 | [interjection             ] Listen, Listen, Negative. Right now. if you can.
+2389 | VT-639494 | [interjection             ] FYI, Heads up: Negative. Please. please.
+2390 | VT-650633 | [interjection             ] FYI, Reminder: Understood.—copy. if you can.
+2391 | VT-691025 | [interjection             ] Quick one: Mm-hmm. Right now. — now.
+2392 | VT-572988 | [interjection             ] Real talk, Heads up: Cool. Thanks. thanks.
+2393 | VT-552877 | [interjection             ] Real talk, Kinda.—got it. — now. (alt)
+2394 | VT-611031 | [interjection             ] Note: Reminder: Right. For real. — now.
+2395 | VT-584072 | [interjection             ] Listen, Reminder: Got it. Right now. thanks.
+2396 | VT-672235 | [interjection             ] Real talk, Nah. — got it. (alt)
+2397 | VT-518823 | [interjection             ] Real talk, Note: Maybe.—copy. (alt)
+2398 | VT-625581 | [interjection             ] Real talk, Note: Uh-huh. Right now. thanks.
+2399 | VT-685438 | [interjection             ] Reminder: Maybe. Thanks. if you can.
+2400 | VT-531097 | [interjection             ] Quick one: Reminder: Roger.—got it..

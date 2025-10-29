@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 40 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1951 | VT-458846 | [numbers_large            ] FYI, Note: Memory usage hit 64,768 megabytes. (6188) — now.
+1952 | VT-462995 | [numbers_large            ] Listen, Reminder: Compute with 2,456,789 samples. (2603) For real. — now.
+1953 | VT-449525 | [numbers_large            ] Reminder: FYI, We archived 17.6 terabytes overnight. (7218)—got it. thanks.
+1954 | VT-422706 | [numbers_large            ] Quick one: FYI, Memory usage hit 64,768 megabytes. (7179) Please. — now.
+1955 | VT-440558 | [numbers_large            ] Listen, Okay, Throughput peaked at 119,000 requests per second. (2940) If possible. if you can.
+1956 | VT-497179 | [numbers_large            ] FYI, Heads up: Compute with 2,456,789 samples. (653) Thanks. — now.
+1957 | VT-480703 | [numbers_large            ] Real talk, Reminder: Compute with 2,456,789 samples. (2603) For real. if you can.
+1958 | VT-446978 | [numbers_large            ] Heads up: Heads up: Memory usage hit 64,768 megabytes. (152) Please. — confirm.
+1959 | VT-453389 | [numbers_large            ] Note: Okay, Compute with 2,456,789 samples. (863) For real. — got it.
+1960 | VT-444229 | [numbers_large            ] Real talk, Heads up: Pi to ten decimals: 3.1415926535. (1618) If possible. if you can.
+1961 | VT-482477 | [numbers_large            ] Quick one: FYI, Checksum equals 4294967294. (8074)—got it. if you can.
+1962 | VT-490008 | [numbers_large            ] Note: FYI, We archived 18.6 terabytes overnight. (270) For real..
+1963 | VT-431355 | [numbers_large            ] Quick one: Nine hundred ninety-nine million, give or take. (688) For real. — got it.
+1964 | VT-436206 | [numbers_large            ] FYI, FYI, Budget shortfall is $2.2 million. (7910)—got it. please.
+1965 | VT-472741 | [numbers_large            ] FYI, Retry after 10^6 iterations. (2537) Please..
+1966 | VT-405743 | [numbers_large            ] Listen, Throughput peaked at 120,000 requests per second. (2553) Please. — got it.
+1967 | VT-477142 | [numbers_large            ] Quick one: Budget shortfall is $2.2 million. thanks.
+1968 | VT-401624 | [numbers_large            ] Quick one: Note: Retry after 9^6 iterations. (9501) If possible.
+1969 | VT-402986 | [numeric                  ] Quick one: Reminder: The total comes to $9,693.94. (alt)
+1970 | VT-487223 | [numeric                  ] Heads up: Hey, The invoice date is 2023-06-05. If possible. right now.
+1971 | VT-461265 | [numeric                  ] Heads up: Order #840058 confirmed. Thanks..
+1972 | VT-488198 | [numeric                  ] Heads up: Temperature is -14°F right now. thanks.
+1973 | VT-476389 | [numeric                  ] Real talk, FYI, Call me at (864) 618-2911.—got it.
+1974 | VT-473667 | [numeric                  ] FYI, Listen, The invoice date is 2005-06-26. Please. — now. (alt)
+1975 | VT-426759 | [numeric                  ] Quick one: Ship it to: 123 Maple St., Springfield, IL 62704 — confirm. (alt)
+1976 | VT-434288 | [numeric                  ] FYI, Reminder: The total comes to $9,693.94. — got it.
+1977 | VT-459875 | [numeric                  ] Reminder: Call me at (681) 244-7338. Right now. — confirm.
+1978 | VT-453331 | [numeric                  ] Okay, FYI, The invoice date is 2023-06-21. For real. — confirm.
+1979 | VT-477531 | [numeric                  ] Quick one: Listen, Event date: 2003-01-25 at 7:22 PM. For real.
+1980 | VT-424552 | [numeric                  ] Reminder: Listen, Ship it to: 123 Maple St., Springfield, IL 62704 If possible. please.
+1981 | VT-407128 | [numeric                  ] FYI, Reminder: The server’s IP is 211.148.19.33. For real. — got it. (alt)
+1982 | VT-433543 | [numeric                  ] Note: My backup number is (654) 655-4868. Thanks. — got it.
+1983 | VT-471320 | [numeric                  ] FYI, FYI, My backup number is (654) 655-4868. Please.. (alt)
+1984 | VT-471517 | [numeric                  ] Heads up: Note: The invoice date is 2000-09-23. — got it.
+1985 | VT-487106 | [numeric                  ] Note: Reminder: The server’s IP is 234.236.45.107.—copy. thanks.
+1986 | VT-401355 | [numeric                  ] Reminder: Listen, My backup number is (800) 421-4817. Thanks. — confirm. (alt)
+1987 | VT-485357 | [numeric                  ] Listen, My backup number is (275) 517-8565. thanks.
+1988 | VT-432880 | [numeric                  ] Listen, Event date: 2003-01-25 at 7:22 PM. For real. — confirm. (alt)
+1989 | VT-466130 | [numeric                  ] Real talk, Listen, The invoice date is 2016-09-10. Thanks..
+1990 | VT-493167 | [numeric                  ] FYI, Temperature is 50°F right now.
+1991 | VT-437397 | [numeric                  ] FYI, FYI, My backup number is (865) 485-5089.—copy. — got it.
+1992 | VT-458492 | [numeric                  ] Okay, Ship it to: 123 Maple St., Springfield, IL 62704 thanks.
+1993 | VT-463046 | [numeric                  ] FYI, Ship it to: 605 Sunset Terrace, Nashville, TN 37201 If possible. thanks.
+1994 | VT-444983 | [numeric                  ] FYI, Okay, Call me at (583) 429-1461.—got it. — got it. (alt)
+1995 | VT-428633 | [numeric                  ] Quick one: Call me at (515) 709-1379. please.
+1996 | VT-400970 | [numeric                  ] Okay, Hey, The total comes to $56.96. Right now. please.
+1997 | VT-441656 | [numeric                  ] Note: Listen, Event date: 1994-06-13 at 7:30 AM. For real.
+1998 | VT-436980 | [numeric                  ] Okay, Hey, Call me at (864) 618-2911. Thanks. if you can. (alt)
+1999 | VT-414951 | [numeric                  ] Listen, Note: Call me at (681) 244-7338. Please. — now.
+2000 | VT-476933 | [numeric                  ] Quick one: Temperature is -14°F right now. — now. (alt)

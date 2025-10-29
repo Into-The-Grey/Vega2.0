@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 34 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1651 | VT-445177 | [imperative               ] FYI, Reminder: Call me when you get home.—got it. — confirm.
+1652 | VT-456210 | [imperative               ] Heads up: Note: Please sit up straight and focus. Thanks. thanks.
+1653 | VT-483345 | [imperative               ] FYI, Shut it down immediately. please.
+1654 | VT-402797 | [imperative               ] Heads up: Okay, Please sit up straight and focus.—got it. thanks.
+1655 | VT-494327 | [imperative               ] Listen, Reminder: Please sit up straight and focus. Please.
+1656 | VT-466517 | [imperative               ] Note: Shut it down immediately.—copy. — got it. (alt)
+1657 | VT-456860 | [imperative               ] Real talk, Heads up: Shut it down immediately. If possible. — now.
+1658 | VT-408099 | [imperative               ] Reminder: FYI, Call me when you get home. If possible. — got it.
+1659 | VT-493305 | [imperative               ] Heads up: Okay, Please sit up straight and focus.—got it. (alt)
+1660 | VT-478004 | [imperative               ] Okay, FYI, Please sit up straight and focus. Thanks. — got it. (alt)
+1661 | VT-466973 | [imperative               ] Note: Please sit up straight and focus. For real. right now.
+1662 | VT-429878 | [imperative               ] Real talk, Hey, Shut it down immediately. Right now. — now.
+1663 | VT-401344 | [imperative               ] Note: Note: Call me when you get home. Thanks.. (alt)
+1664 | VT-406461 | [imperative               ] Okay, Okay, Please sit up straight and focus. For real. right now.
+1665 | VT-422730 | [imperative               ] Listen, Okay, Please sit up straight and focus.—copy.
+1666 | VT-479346 | [imperative               ] Heads up: Reminder: Call me when you get home. thanks.
+1667 | VT-446896 | [imperative               ] FYI, Listen, Please sit up straight and focus. Please. thanks.
+1668 | VT-465352 | [imperative               ] Real talk, Note: Call me when you get home.—copy. — confirm.
+1669 | VT-448465 | [imperative               ] FYI, FYI, Please sit up straight and focus. Please. please.
+1670 | VT-465516 | [imperative               ] Reminder: FYI, Please sit up straight and focus. Right now. (alt)
+1671 | VT-473615 | [interjection             ] Reminder: Listen, Cool.
+1672 | VT-454337 | [interjection             ] Mm-hmm. Right now..
+1673 | VT-427281 | [interjection             ] Reminder: Exactly. (alt)
+1674 | VT-480188 | [interjection             ] Quick one: Maybe. Thanks..
+1675 | VT-478641 | [interjection             ] Mm-hmm. Right now..
+1676 | VT-424026 | [interjection             ] Okay, Reminder: Yep.
+1677 | VT-459558 | [interjection             ] Real talk, Understood..
+1678 | VT-451512 | [interjection             ] Note: Uh-huh.—copy..
+1679 | VT-433102 | [interjection             ] Quick one: Yep.
+1680 | VT-415036 | [interjection             ] FYI, Nah. if you can.
+1681 | VT-412542 | [interjection             ] Heads up: Right. if you can.
+1682 | VT-448572 | [interjection             ] Okay, Note: Maybe.—copy..
+1683 | VT-480018 | [question_variants        ] Heads up: Good—yes or no? Thanks. (alt)
+1684 | VT-412850 | [question_variants        ] Hey, What’s the catch? For real. — now.
+1685 | VT-427701 | [question_variants        ] Heads up: Hey, Good—yes or no? For real. — confirm.
+1686 | VT-475989 | [question_variants        ] Okay, Note: Is everything okay with that?—copy. — confirm.
+1687 | VT-446294 | [question_variants        ] Quick one: Heads up: You sure? Right now.
+1688 | VT-454065 | [question_variants        ] Real talk, FYI, We good? If possible. thanks. (alt)
+1689 | VT-463563 | [question_variants        ] Reminder: Hey, Are we good?.
+1690 | VT-447508 | [question_variants        ] Note: Good—yes or no? Thanks..
+1691 | VT-412827 | [question_variants        ] Listen, Listen, We good? Right now..
+1692 | VT-458501 | [question_variants        ] Real talk, Hey, Is everything okay with that?—got it. thanks. (alt)
+1693 | VT-463471 | [question_variants        ] Listen, Listen, Positive? Right now.
+1694 | VT-455646 | [question_variants        ] Quick one: Okay, You sure? Please. right now.
+1695 | VT-433494 | [question_variants        ] Real talk, Reminder: What’s the catch?—copy. thanks. (alt)
+1696 | VT-413490 | [question_variants        ] Quick one: Note: Can you confirm we’re good? Thanks. — got it.
+1697 | VT-425569 | [question_variants        ] Heads up: FYI, We good?—got it. if you can. (alt)
+1698 | VT-416470 | [question_variants        ] Note: FYI, Are we good? For real. if you can.
+1699 | VT-479399 | [question_variants        ] Okay, What’s the catch? If possible. — now.
+1700 | VT-412657 | [question_variants        ] Okay, Heads up: Good—yes or no? For real. (alt)

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 121 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6001 | VT-457666 | [code_readouts            ] Okay, Reminder: Docker build dash t app colon latest dot Thanks. — got it.
+6002 | VT-450281 | [code_readouts            ] Okay, Reminder: Run pip install requests in a clean virtual environment. Thanks. — got it.
+6003 | VT-464162 | [code_readouts            ] Reminder: Okay, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis.—got it. — confirm.
+6004 | VT-493840 | [code_readouts            ] Reminder: Listen, Function signature: def handler(event, context): Right now..
+6005 | VT-497798 | [code_readouts            ] FYI, Run pip install requests in a clean virtual environment. Please. thanks.
+6006 | VT-443350 | [code_readouts            ] Listen, Heads up: Export PATH equals dollar HOME slash bin colon PATH. Please. — got it.
+6007 | VT-432830 | [code_readouts            ] Note: FYI, Kubernetes pod restarted due to OOMKill.—copy. — now.
+6008 | VT-445615 | [code_readouts            ] Note: Heads up: Docker build dash t app colon latest dot—got it. — got it.
+6009 | VT-415921 | [code_readouts            ] Real talk, Okay, Throw a try-catch around the parser. For real..
+6010 | VT-491605 | [code_readouts            ] Heads up: FYI, Return HTTP 200 with JSON payload.—got it..
+6011 | VT-472229 | [code_readouts            ] Listen, Okay, Run pip install requests in a clean virtual environment. For real. please.
+6012 | VT-450475 | [code_readouts            ] Real talk, Reminder: Backtick, backtick, python: print open parenthesis 'hello' close parenthesis. Right now. — confirm.
+6013 | VT-404003 | [code_readouts            ] Okay, Okay, Throw a try-catch around the parser. Thanks. — now.
+6014 | VT-430351 | [code_readouts            ] Okay, Function signature: def handler(event, context): Right now.
+6015 | VT-481441 | [code_readouts            ] Real talk, Run pip install requests in a clean virtual environment.
+6016 | VT-475023 | [code_readouts            ] Heads up: FYI, Kubernetes pod restarted due to OOMKill.—copy. — now.
+6017 | VT-480839 | [code_readouts            ] Okay, Okay, Kubernetes pod restarted due to OOMKill. Please. thanks.
+6018 | VT-477876 | [code_readouts            ] Heads up: Hey, Kubernetes pod restarted due to OOMKill.—copy. thanks.
+6019 | VT-480103 | [code_readouts            ] Heads up: Heads up: Throw a try-catch around the parser. Please. — now.
+6020 | VT-404154 | [code_readouts            ] Reminder: Okay, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis.—got it. please.
+6021 | VT-457297 | [code_readouts            ] Okay, FYI, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis. For real. — confirm.
+6022 | VT-482967 | [code_readouts            ] Reminder: Kubernetes pod restarted due to OOMKill.—got it. — got it.
+6023 | VT-424061 | [code_readouts            ] Heads up: Note: Run pip install requests in a clean virtual environment. Thanks. thanks.
+6024 | VT-459139 | [code_readouts            ] Hey, Use async await to avoid blocking. If possible. — got it.
+6025 | VT-483630 | [code_readouts            ] Quick one: Reminder: Use async await to avoid blocking. If possible.
+6026 | VT-483787 | [code_readouts            ] Okay, Use async await to avoid blocking.—copy. — got it.
+6027 | VT-462575 | [code_readouts            ] Heads up: Note: Throw a try-catch around the parser. Right now.
+6028 | VT-401758 | [code_readouts            ] Real talk, Reminder: Export PATH equals dollar HOME slash bin colon PATH.—copy. thanks.
+6029 | VT-476072 | [code_readouts            ] Quick one: FYI, Export PATH equals dollar HOME slash bin colon PATH. Thanks. — now.
+6030 | VT-468333 | [code_readouts            ] Heads up: Okay, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis. Thanks. — confirm.
+6031 | VT-452948 | [code_readouts            ] Reminder: Kubernetes pod restarted due to OOMKill. Right now. right now.
+6032 | VT-482142 | [code_readouts            ] Quick one: Listen, Export PATH equals dollar HOME slash bin colon PATH. If possible. — got it.
+6033 | VT-424544 | [code_readouts            ] Listen, Note: Return HTTP 201 with JSON payload. Right now. — now.
+6034 | VT-461725 | [code_readouts            ] Listen, Reminder: Backtick, backtick, python: print open parenthesis 'hello' close parenthesis. Right now..
+6035 | VT-470799 | [code_readouts            ] Real talk, Okay, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis. Thanks. — got it.
+6036 | VT-454618 | [code_readouts            ] Note: Heads up: Export PATH equals dollar HOME slash bin colon PATH.—copy. if you can.
+6037 | VT-489347 | [code_readouts            ] Reminder: Okay, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis.—got it. if you can.
+6038 | VT-413892 | [code_readouts            ] Real talk, Heads up: Function signature: def handler(event, context):—got it. right now.
+6039 | VT-429804 | [code_readouts            ] Note: Reminder: Docker build dash t app colon latest dot If possible. — confirm.
+6040 | VT-428682 | [code_readouts            ] FYI, Hey, Kubernetes pod restarted due to OOMKill. — confirm.
+6041 | VT-440854 | [code_readouts            ] Note: Run pip install requests in a clean virtual environment. If possible. — got it.
+6042 | VT-414599 | [code_readouts            ] Okay, Hey, Use async await to avoid blocking. If possible. right now.
+6043 | VT-466284 | [code_readouts            ] Reminder: Heads up: Throw a try-catch around the parser. If possible. please.
+6044 | VT-404605 | [code_readouts            ] Note: Listen, Return HTTP 200 with JSON payload. Please. right now.
+6045 | VT-474572 | [code_readouts            ] Heads up: Use async await to avoid blocking. — got it.
+6046 | VT-464031 | [code_readouts            ] Heads up: Throw a try-catch around the parser. right now.
+6047 | VT-423370 | [dramatic                 ] Okay, Okay, I would burn the world to keep you warm. For real.. (alt)
+6048 | VT-497719 | [dramatic                 ] Quick one: Heads up: And then the silence screamed louder than words. If possible. thanks.
+6049 | VT-404927 | [dramatic                 ] Reminder: Okay, And then the silence screamed louder than words. Right now. — confirm.
+6050 | VT-415725 | [dramatic                 ] Listen, And then the silence screamed louder than words. Right now. — confirm.

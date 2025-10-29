@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 14 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0651 | VT-57181 | [hesitations_fillers      ] Listen, Right… so… moving on. If possible.
+0652 | VT-58700 | [hesitations_fillers      ] FYI, Well, I mean, like, kind of, yeah. Thanks.
+0653 | VT-25201 | [hesitations_fillers      ] Heads up: Uh… hang on… what was I saying? Thanks.
+0654 | VT-59522 | [hesitations_fillers      ] Reminder: Hmm, not exactly, but close. Please.
+0655 | VT-20804 | [hesitations_fillers      ] Note: So—yeah—about that plan…—got it.
+0656 | VT-19361 | [hesitations_fillers      ] So—yeah—about that plan… For real.
+0657 | VT-93484 | [hesitations_fillers      ] So—yeah—about that plan… Right now.
+0658 | VT-62781 | [hesitations_fillers      ] Note: Uh… hang on… what was I saying? Please.
+0659 | VT-46466 | [hesitations_fillers      ] Mmm, nope, that’s not it. Thanks.
+0660 | VT-20966 | [hesitations_fillers      ] Heads up: I… I don’t know if that’ll fly. For real.
+0661 | VT-56992 | [hesitations_fillers      ] Note: I… I don’t know if that’ll fly.
+0662 | VT-88672 | [hesitations_fillers      ] Listen, I… I don’t know if that’ll fly. Right now.
+0663 | VT-82124 | [hesitations_fillers      ] Okay, Okay, okay, okay—listen. Right now.
+0664 | VT-25820 | [hesitations_fillers      ] Note: Uh… hang on… what was I saying?—copy.
+0665 | VT-17290 | [hesitations_fillers      ] Reminder: Wait—uh—did you hear that?
+0666 | VT-41662 | [hesitations_fillers      ] Heads up: Okay, okay, okay—listen. Right now.
+0667 | VT-81188 | [hesitations_fillers      ] Heads up: Er, can we circle back? Thanks.
+0668 | VT-87241 | [hesitations_fillers      ] Hmm, not exactly, but close.—copy.
+0669 | VT-76639 | [hesitations_fillers      ] Reminder: Okay, okay, okay—listen. Right now.
+0670 | VT-19031 | [hesitations_fillers      ] Note: Uh… hang on… what was I saying? Please.
+0671 | VT-81188 | [hesitations_fillers      ] Heads up: Er, can we circle back? Thanks.
+0672 | VT-75033 | [hesitations_fillers      ] Listen, Hmm, not exactly, but close.—copy.
+0673 | VT-75033 | [hesitations_fillers      ] Listen, Hmm, not exactly, but close.—copy.
+0674 | VT-35252 | [hesitations_fillers      ] Reminder: Hmm, not exactly, but close. Thanks.
+0675 | VT-83955 | [hesitations_fillers      ] Reminder: Hmm, not exactly, but close. Please.
+0676 | VT-10186 | [hesitations_fillers      ] I… I don’t know if that’ll fly.
+0677 | VT-62781 | [hesitations_fillers      ] Note: Uh… hang on… what was I saying? Please.
+0678 | VT-88861 | [hesitations_fillers      ] FYI, Wait—uh—did you hear that? Thanks.
+0679 | VT-81273 | [hesitations_fillers      ] Note: I… I don’t know if that’ll fly.—copy.
+0680 | VT-28913 | [hesitations_fillers      ] Heads up: Well, I mean, like, kind of, yeah.
+0681 | VT-49466 | [hesitations_fillers      ] Listen, Well, I mean, like, kind of, yeah. Right now.
+0682 | VT-50856 | [hesitations_fillers      ] Listen, Well, I mean, like, kind of, yeah. For real.
+0683 | VT-35252 | [hesitations_fillers      ] Reminder: Hmm, not exactly, but close. Thanks.
+0684 | VT-75874 | [hesitations_fillers      ] FYI, Wait—uh—did you hear that? Please.
+0685 | VT-15467 | [hesitations_fillers      ] FYI, Uh… hang on… what was I saying?—copy.
+0686 | VT-68801 | [hesitations_fillers      ] Note: Well, I mean, like, kind of, yeah. For real.
+0687 | VT-28231 | [hesitations_fillers      ] Note: Mmm, nope, that’s not it. For real.
+0688 | VT-13737 | [hesitations_fillers      ] Reminder: Okay, okay, okay—listen.—got it.
+0689 | VT-84792 | [hesitations_fillers      ] Reminder: Well, I mean, like, kind of, yeah. If possible.
+0690 | VT-66107 | [hesitations_fillers      ] Listen, So—yeah—about that plan…
+0691 | VT-40606 | [hesitations_fillers      ] Note: I… I don’t know if that’ll fly. If possible.
+0692 | VT-29589 | [hesitations_fillers      ] Reminder: Uh… hang on… what was I saying?
+0693 | VT-25319 | [hesitations_fillers      ] Hey, I… I don’t know if that’ll fly. Right now.
+0694 | VT-70144 | [hesitations_fillers      ] Note: Uh… hang on… what was I saying? Right now.
+0695 | VT-99619 | [hesitations_fillers      ] Uh… hang on… what was I saying?
+0696 | VT-10186 | [hesitations_fillers      ] I… I don’t know if that’ll fly.
+0697 | VT-45438 | [hesitations_fillers      ] Hey, Well, I mean, like, kind of, yeah. For real.
+0698 | VT-37215 | [hesitations_fillers      ] Heads up: Hmm, not exactly, but close. If possible.
+0699 | VT-17134 | [hesitations_fillers      ] Mmm, nope, that’s not it. If possible.
+0700 | VT-94154 | [hesitations_fillers      ] Heads up: Mmm, nope, that’s not it. Right now.

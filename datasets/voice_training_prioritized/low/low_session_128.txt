@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 128 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6351 | VT-484413 | [homophones_minimal_pairs ] Listen, Reminder: Cache rules everything around me—C‑A‑C‑H‑E. Thanks. — got it.
+6352 | VT-400856 | [homophones_minimal_pairs ] Reminder: Listen, They’re there, at their desks. For real. thanks.
+6353 | VT-413395 | [homophones_minimal_pairs ] Note: I can’t bear another bare-metal install. If possible. right now.
+6354 | VT-462830 | [homophones_minimal_pairs ] Okay, Okay, I need a new role for this roll.—got it. right now.
+6355 | VT-424709 | [homophones_minimal_pairs ] FYI, Okay, They’re there, at their desks. Please..
+6356 | VT-452069 | [homophones_minimal_pairs ] Note: Reminder: I’ll read the readme later. Right now. please.
+6357 | VT-447695 | [homophones_minimal_pairs ] Okay, Note: The suite is sweet but pricey. Please. — confirm.
+6358 | VT-488572 | [homophones_minimal_pairs ] Real talk, Heads up: Cache rules everything around me—C‑A‑C‑H‑E. Right now. — got it.
+6359 | VT-442356 | [homophones_minimal_pairs ] Note: Sight the site before the cite. Right now.
+6360 | VT-461554 | [homophones_minimal_pairs ] Note: Listen, We’ll write the right config. For real. if you can.
+6361 | VT-456487 | [homophones_minimal_pairs ] Note: FYI, They’re there, at their desks. Please.
+6362 | VT-410691 | [homophones_minimal_pairs ] Real talk, Heads up: I can’t bear another bare-metal install. Please. — confirm.
+6363 | VT-434025 | [homophones_minimal_pairs ] Heads up: FYI, Sight the site before the cite. Right now. — confirm.
+6364 | VT-470771 | [homophones_minimal_pairs ] Okay, I need a new role for this roll.—copy..
+6365 | VT-443289 | [homophones_minimal_pairs ] Okay, They’re there, at their desks. — now.
+6366 | VT-494279 | [homophones_minimal_pairs ] Okay, Note: The suite is sweet but pricey. Please. — now.
+6367 | VT-496650 | [homophones_minimal_pairs ] Listen, Listen, The suite is sweet but pricey. — got it.
+6368 | VT-419611 | [homophones_minimal_pairs ] Listen, Reminder: The suite is sweet but pricey. If possible. if you can.
+6369 | VT-434059 | [homophones_minimal_pairs ] Note: Reminder: Sight the site before the cite.—got it. right now.
+6370 | VT-478501 | [homophones_minimal_pairs ] Quick one: I can’t bear another bare-metal install. If possible. if you can.
+6371 | VT-497036 | [homophones_minimal_pairs ] Listen, Heads up: I can’t bear another bare-metal install. Thanks. — confirm.
+6372 | VT-491522 | [homophones_minimal_pairs ] Listen, Okay, The suite is sweet but pricey. Thanks. — now.
+6373 | VT-487280 | [homophones_minimal_pairs ] FYI, Heads up: They’re there, at their desks. Please.
+6374 | VT-445826 | [homophones_minimal_pairs ] Reminder: Reminder: Kernel panic in Colonel Mustard’s study.—got it..
+6375 | VT-460444 | [homophones_minimal_pairs ] FYI, Reminder: Kernel panic in Colonel Mustard’s study.—got it. — confirm.
+6376 | VT-425637 | [homophones_minimal_pairs ] Reminder: Heads up: Kernel panic in Colonel Mustard’s study. Please. please.
+6377 | VT-475671 | [homophones_minimal_pairs ] Reminder: Reminder: Sight the site before the cite. Thanks. — got it.
+6378 | VT-479682 | [homophones_minimal_pairs ] Hey, I’ll read the readme later. thanks.
+6379 | VT-490846 | [homophones_minimal_pairs ] Note: I’ll read the readme later. thanks.
+6380 | VT-456821 | [homophones_minimal_pairs ] Okay, I can’t bear another bare-metal install. — now.
+6381 | VT-407188 | [homophones_minimal_pairs ] Quick one: FYI, The suite is sweet but pricey. For real. if you can.
+6382 | VT-454649 | [homophones_minimal_pairs ] Listen, Heads up: I’ll read the readme later. please.
+6383 | VT-431261 | [homophones_minimal_pairs ] Okay, Reminder: We’ll write the right config. Thanks. right now.
+6384 | VT-467449 | [homophones_minimal_pairs ] Real talk, Heads up: I can’t bear another bare-metal install. Please. thanks.
+6385 | VT-466036 | [homophones_minimal_pairs ] Reminder: I can’t bear another bare-metal install. — now.
+6386 | VT-405034 | [homophones_minimal_pairs ] Real talk, FYI, I’ll read the readme later. Thanks. thanks.
+6387 | VT-410487 | [homophones_minimal_pairs ] Reminder: I can’t bear another bare-metal install. If possible. — confirm.
+6388 | VT-458887 | [homophones_minimal_pairs ] FYI, Okay, I need a new role for this roll.—copy. — now.
+6389 | VT-414092 | [homophones_minimal_pairs ] Okay, Reminder: Cache rules everything around me—C‑A‑C‑H‑E. Thanks. — confirm.
+6390 | VT-409607 | [homophones_minimal_pairs ] Real talk, The suite is sweet but pricey. — got it.
+6391 | VT-455616 | [homophones_minimal_pairs ] Real talk, Hey, They’re there, at their desks. if you can.
+6392 | VT-471807 | [homophones_minimal_pairs ] Real talk, Reminder: Kernel panic in Colonel Mustard’s study.—got it. thanks.
+6393 | VT-424030 | [homophones_minimal_pairs ] FYI, Sight the site before the cite.—copy. — now.
+6394 | VT-446626 | [homophones_minimal_pairs ] Note: Heads up: We’ll write the right config.—copy. if you can.
+6395 | VT-462885 | [homophones_minimal_pairs ] Listen, Kernel panic in Colonel Mustard’s study. right now.
+6396 | VT-402316 | [homophones_minimal_pairs ] Heads up: FYI, Sight the site before the cite. Thanks. — confirm.
+6397 | VT-480598 | [legalese                 ] Reminder: FYI, Subject to applicable law and equitable principles. Please. right now. (alt)
+6398 | VT-412980 | [legalese                 ] Heads up: FYI, Breach may result in injunctive relief. For real. if you can.
+6399 | VT-402286 | [legalese                 ] Reminder: Note: Subject to applicable law and equitable principles. Please.
+6400 | VT-489083 | [legalese                 ] Note: Time is of the essence with respect to performance. Thanks. right now.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 42 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2051 | VT-588940 | [comparatives_superlatives] FYI, The smallest feasible footprint. Please. right now.
+2052 | VT-628772 | [comparatives_superlatives] FYI, Reminder: Faster than yesterday, slower than ideal.—copy. right now.
+2053 | VT-658790 | [comparatives_superlatives] Real talk, Note: Less fragile, more resilient. Thanks. if you can. (alt)
+2054 | VT-582713 | [comparatives_superlatives] Real talk, The smallest feasible footprint.
+2055 | VT-627187 | [comparatives_superlatives] Heads up: Reminder: Worse latency but better throughput.—got it. — confirm.
+2056 | VT-609725 | [comparatives_superlatives] Heads up: FYI, Faster than yesterday, slower than ideal. If possible. if you can.
+2057 | VT-607435 | [comparatives_superlatives] Reminder: Faster than yesterday, slower than ideal.—copy. please.
+2058 | VT-598200 | [comparatives_superlatives] Listen, The smallest feasible footprint. Please. — now.
+2059 | VT-604125 | [comparatives_superlatives] Reminder: Faster than yesterday, slower than ideal.—copy. right now. (alt)
+2060 | VT-597923 | [comparatives_superlatives] Listen, Our best result so far. Thanks.. (alt)
+2061 | VT-645496 | [comparatives_superlatives] Okay, Reminder: The toughest challenge yet.—copy. right now.
+2062 | VT-689659 | [comparatives_superlatives] Less fragile, more resilient. Right now. — got it.
+2063 | VT-697316 | [comparatives_superlatives] Reminder: Listen, This is the cheapest viable option. If possible. — got it.
+2064 | VT-616153 | [comparatives_superlatives] Reminder: Heads up: The most elegant solution wins. Thanks. thanks.
+2065 | VT-672119 | [comparatives_superlatives] Listen, Reminder: Better, but not best. If possible. right now.
+2066 | VT-511388 | [comparatives_superlatives] Okay, Okay, Worse latency but better throughput. Right now..
+2067 | VT-612560 | [comparatives_superlatives] Reminder: The most elegant solution wins.. (alt)
+2068 | VT-689506 | [comparatives_superlatives] Note: Better, but not best.—got it. please.
+2069 | VT-687139 | [comparatives_superlatives] FYI, Our best result so far. Please..
+2070 | VT-628092 | [comparatives_superlatives] Listen, Hey, Better, but not best. For real. — confirm. (alt)
+2071 | VT-542648 | [comparatives_superlatives] Real talk, Okay, Worse latency but better throughput. Right now. — got it.
+2072 | VT-618334 | [comparatives_superlatives] Quick one: Heads up: This is the cheapest viable option. If possible. thanks. (alt)
+2073 | VT-593891 | [comparatives_superlatives] Note: Listen, Faster than yesterday, slower than ideal. Right now. — confirm. (alt)
+2074 | VT-664311 | [comparatives_superlatives] Note: This is the cheapest viable option. — got it.
+2075 | VT-618259 | [comparatives_superlatives] Listen, Less fragile, more resilient..
+2076 | VT-671981 | [comparatives_superlatives] The smallest feasible footprint. Please..
+2077 | VT-610240 | [comparatives_superlatives] FYI, Listen, The smallest feasible footprint. If possible. — got it.
+2078 | VT-552922 | [comparatives_superlatives] Note: Hey, Faster than yesterday, slower than ideal. Right now.
+2079 | VT-586698 | [comparatives_superlatives] Okay, Note: Worse latency but better throughput. For real. if you can.
+2080 | VT-583991 | [comparatives_superlatives] Listen, Hey, Better, but not best. Thanks. thanks.
+2081 | VT-659022 | [comparatives_superlatives] Quick one: Okay, Worse latency but better throughput. if you can.
+2082 | VT-535954 | [comparatives_superlatives] Quick one: Listen, This is the cheapest viable option. If possible. thanks.
+2083 | VT-675578 | [comparatives_superlatives] This is the cheapest viable option. — confirm.
+2084 | VT-660405 | [comparatives_superlatives] Listen, Heads up: Worse latency but better throughput. Right now. — got it.
+2085 | VT-577670 | [comparatives_superlatives] Real talk, Listen, Worse latency but better throughput. Right now. please.
+2086 | VT-636271 | [comparatives_superlatives] Note: FYI, Higher accuracy with minimal overhead.—copy. — now.
+2087 | VT-590057 | [comparatives_superlatives] Okay, Worse latency but better throughput. — confirm.
+2088 | VT-560045 | [comparatives_superlatives] Note: Listen, Worse latency but better throughput. Right now.
+2089 | VT-576472 | [comparatives_superlatives] Quick one: Hey, Higher accuracy with minimal overhead. — confirm.
+2090 | VT-649039 | [comparatives_superlatives] Reminder: Note: Worse latency but better throughput. For real. — got it.
+2091 | VT-603747 | [comparatives_superlatives] Real talk, Note: This is the cheapest viable option. Thanks. thanks. (alt)
+2092 | VT-695159 | [comparatives_superlatives] Listen, Okay, Worse latency but better throughput. Right now. right now.
+2093 | VT-520756 | [comparatives_superlatives] Okay, Heads up: The smallest feasible footprint. For real. — got it.
+2094 | VT-520906 | [comparatives_superlatives] Listen, Hey, Less fragile, more resilient. Please. — confirm.
+2095 | VT-501810 | [comparatives_superlatives] Heads up: Hey, The smallest feasible footprint. Please. — confirm.
+2096 | VT-543878 | [comparatives_superlatives] Real talk, Hey, Better, but not best. Thanks..
+2097 | VT-630744 | [comparatives_superlatives] FYI, This is the cheapest viable option. Thanks. — got it.
+2098 | VT-565266 | [comparatives_superlatives] Quick one: Listen, Faster than yesterday, slower than ideal. Right now. — got it.
+2099 | VT-659548 | [comparatives_superlatives] Note: Our best result so far. Please. please.
+2100 | VT-520229 | [comparatives_superlatives] Reminder: Worse latency but better throughput. If possible..

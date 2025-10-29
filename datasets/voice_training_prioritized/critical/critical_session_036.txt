@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 36 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1751 | VT-687007 | [agreements               ] Note: Agreed—let’s lock it. thanks. (alt)
+1752 | VT-526145 | [agreements               ] Reminder: Note: Approved. For real. — confirm.
+1753 | VT-624680 | [agreements               ] Real talk, Approved. — now.
+1754 | VT-577216 | [agreements               ] Note: Okay, Approved. if you can.
+1755 | VT-677657 | [agreements               ] Real talk, Copy that. For real. please.
+1756 | VT-580432 | [agreements               ] Okay, Heads up: Yep, that works for me. Please. — confirm.
+1757 | VT-647189 | [agreements               ] Okay, Hey, Yep, that works for me. If possible. — now.
+1758 | VT-564576 | [agreements               ] Okay, Approved. Thanks. — now.
+1759 | VT-510434 | [agreements               ] Listen, Hey, Agreed—let’s lock it. For real. thanks. (alt)
+1760 | VT-668408 | [agreements               ] Okay, Reminder: Sounds right. If possible. thanks.
+1761 | VT-536414 | [agreements               ] Reminder: Sounds right. Right now. thanks. (alt)
+1762 | VT-579194 | [agreements               ] Heads up: FYI, Sounds right. If possible. if you can.
+1763 | VT-669998 | [agreements               ] Quick one: Hey, Copy that. — got it.
+1764 | VT-626700 | [agreements               ] Heads up: That’s a yes from me. Right now.. (alt)
+1765 | VT-611399 | [agreements               ] Heads up: That’s a yes from me. — got it.
+1766 | VT-529728 | [agreements               ] Listen, FYI, Yep, that works for me. If possible..
+1767 | VT-594308 | [agreements               ] Note: Listen, Approved. For real. if you can.
+1768 | VT-558870 | [agreements               ] Heads up: Reminder: That’s a yes from me. If possible.
+1769 | VT-525556 | [agreements               ] Reminder: FYI, Count me on board. If possible. — now.
+1770 | VT-602718 | [agreements               ] Heads up: Note: Yep, that works for me.—copy..
+1771 | VT-614254 | [agreements               ] Quick one: FYI, Yep, that works for me. If possible. — confirm.
+1772 | VT-554930 | [agreements               ] Hey, That’s a yes from me. Thanks. — got it.
+1773 | VT-636847 | [agreements               ] Heads up: Yep, that works for me. Please.
+1774 | VT-695042 | [agreements               ] I’m in. Please. please.
+1775 | VT-560347 | [agreements               ] FYI, Reminder: Green light. For real. — got it.
+1776 | VT-623106 | [agreements               ] Quick one: Listen, Approved.—got it.
+1777 | VT-622664 | [agreements               ] Note: Listen, Agreed—let’s lock it. Right now..
+1778 | VT-605586 | [agreements               ] Listen, Reminder: Sounds right. If possible. right now.
+1779 | VT-642456 | [agreements               ] Quick one: Listen, Copy that. please.
+1780 | VT-639721 | [agreements               ] Okay, Listen, Count me on board. Right now. if you can.
+1781 | VT-610042 | [agreements               ] Listen, Sounds right. — got it.
+1782 | VT-698929 | [agreements               ] Real talk, Note: Copy that. — got it.
+1783 | VT-569258 | [agreements               ] Reminder: FYI, I’m in. If possible. right now.
+1784 | VT-678256 | [agreements               ] Real talk, Copy that. For real.
+1785 | VT-548890 | [agreements               ] Okay, Count me on board.—copy. — confirm. (alt)
+1786 | VT-600256 | [agreements               ] Reminder: Okay, Agreed—let’s lock it. Thanks. (alt)
+1787 | VT-509176 | [agreements               ] Real talk, FYI, Yep, that works for me. For real. — got it. (alt)
+1788 | VT-584144 | [agreements               ] Heads up: Hey, Agreed—let’s lock it. (alt)
+1789 | VT-653386 | [agreements               ] Listen, Approved. — got it.
+1790 | VT-641054 | [agreements               ] Listen, That’s a yes from me. if you can.
+1791 | VT-574831 | [agreements               ] Listen, Note: That’s a yes from me. If possible. — got it.
+1792 | VT-527569 | [agreements               ] Real talk, Listen, Yep, that works for me.—got it. thanks.
+1793 | VT-676977 | [agreements               ] Heads up: Reminder: Count me on board. Thanks. thanks. (alt)
+1794 | VT-613199 | [agreements               ] Note: Hey, Copy that..
+1795 | VT-630114 | [agreements               ] Heads up: Reminder: Count me on board. Please. — confirm.
+1796 | VT-592940 | [agreements               ] FYI, Listen, Agreed—let’s lock it. Right now. — confirm.
+1797 | VT-543829 | [agreements               ] Note: Agreed—let’s lock it. if you can.
+1798 | VT-516502 | [agreements               ] Okay, Count me on board.—copy..
+1799 | VT-646994 | [agreements               ] FYI, Reminder: Count me on board. Please. — now.
+1800 | VT-513062 | [agreements               ] FYI, Okay, Solid. Do it. Right now. if you can. (alt)

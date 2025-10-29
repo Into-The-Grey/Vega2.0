@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 40 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1951 | VT-564574 | [error_messages           ] Note: Heads up: Unhandled exception: ValueError at line 42. For real. please.
+1952 | VT-686551 | [error_messages           ] Heads up: Note: Timeout waiting for the lock. Right now. — got it.
+1953 | VT-562009 | [error_messages           ] Reminder: Connection reset by peer. Thanks.
+1954 | VT-532137 | [error_messages           ] Reminder: FYI, Segmentation fault—core dumped. Thanks. thanks.
+1955 | VT-517237 | [error_messages           ] Real talk, Note: Fatal: permission denied (publickey). Right now. — confirm.
+1956 | VT-558824 | [error_messages           ] Heads up: Note: Segmentation fault—core dumped. Thanks. — now.
+1957 | VT-532674 | [error_messages           ] Note: Dependency conflict: version mismatch.
+1958 | VT-598697 | [error_messages           ] Listen, Okay, Rate limit exceeded; retry after 60 seconds..
+1959 | VT-597943 | [error_messages           ] Heads up: Hey, Rate limit exceeded; retry after 61 seconds.—copy.
+1960 | VT-532511 | [error_messages           ] Heads up: Heads up: Fatal: permission denied (publickey). Please..
+1961 | VT-678253 | [error_messages           ] Quick one: Hey, Connection reset by peer. Thanks. thanks.
+1962 | VT-511403 | [error_messages           ] FYI, Reminder: Timeout waiting for the lock. For real. thanks.
+1963 | VT-612412 | [error_messages           ] Quick one: Okay, Connection reset by peer.—got it. thanks.
+1964 | VT-578067 | [error_messages           ] Listen, Reminder: Segmentation fault—core dumped.—copy.
+1965 | VT-671320 | [error_messages           ] Quick one: Segmentation fault—core dumped. right now.
+1966 | VT-603186 | [error_messages           ] Okay, Heads up: Connection reset by peer. Right now. thanks.
+1967 | VT-616850 | [error_messages           ] FYI, Note: Connection reset by peer.—got it. — now.
+1968 | VT-684086 | [error_messages           ] Okay, Reminder: Null pointer dereference detected. For real. — confirm.
+1969 | VT-539676 | [error_messages           ] Connection reset by peer. thanks.
+1970 | VT-636889 | [error_messages           ] Real talk, Note: Connection reset by peer.—got it. if you can.
+1971 | VT-600783 | [error_messages           ] Hey, Null pointer dereference detected. If possible. thanks.
+1972 | VT-541990 | [error_messages           ] Listen, Note: Connection reset by peer. Right now. thanks.
+1973 | VT-568862 | [error_messages           ] Okay, Segmentation fault—core dumped. Right now. thanks.
+1974 | VT-503723 | [error_messages           ] Okay, FYI, Connection reset by peer.—copy. — got it.
+1975 | VT-546183 | [error_messages           ] Quick one: Listen, Rate limit exceeded; retry after 60 seconds. For real.
+1976 | VT-532501 | [error_messages           ] Quick one: Hey, Dependency conflict: version mismatch. if you can.
+1977 | VT-592462 | [error_messages           ] Listen, Rate limit exceeded; retry after 60 seconds. Thanks.
+1978 | VT-526479 | [error_messages           ] Heads up: Note: Timeout waiting for the lock. Right now..
+1979 | VT-530110 | [error_messages           ] Okay, Note: Segmentation fault—core dumped. Thanks. — now.
+1980 | VT-696555 | [error_messages           ] Reminder: Note: Fatal: permission denied (publickey). Right now. thanks.
+1981 | VT-593006 | [error_messages           ] Listen, Heads up: Unhandled exception: ValueError at line 43. For real. please.
+1982 | VT-559093 | [error_messages           ] Okay, Listen, Connection reset by peer.—got it. right now.
+1983 | VT-553770 | [error_messages           ] Note: Heads up: Connection reset by peer. If possible. — confirm.
+1984 | VT-609310 | [error_messages           ] FYI, Hey, Connection reset by peer. Thanks..
+1985 | VT-657688 | [everyday                 ] FYI, Note: We can wrap this up by 9:00 AM. Please.
+1986 | VT-671877 | [everyday                 ] FYI, Note: That sounds great to me.—copy. — confirm. (alt)
+1987 | VT-523423 | [everyday                 ] Note: Call out if anything looks off. thanks.
+1988 | VT-500017 | [everyday                 ] Listen, Good evening. — now.
+1989 | VT-536536 | [everyday                 ] Listen, What’s up?—got it. — confirm.
+1990 | VT-566263 | [everyday                 ] Listen, Do you want coffee or tea? right now.
+1991 | VT-586700 | [everyday                 ] Listen, Long time no see. — confirm.
+1992 | VT-615357 | [everyday                 ] FYI, Note: We can wrap this up by 9:00 AM. Please..
+1993 | VT-572507 | [everyday                 ] Reminder: Hold on a second, I'll check. Right now. if you can.
+1994 | VT-691168 | [everyday                 ] Real talk, Drive safe and take your time. please.
+1995 | VT-693950 | [everyday                 ] Heads up: Let's meet on Thursday to go over the plan. — confirm.
+1996 | VT-512482 | [everyday                 ] FYI, FYI, Good evening.—got it. if you can.
+1997 | VT-699287 | [everyday                 ] Are you free later?.
+1998 | VT-556398 | [everyday                 ] Reminder: Note: Did you try a different cable and port? Right now. — confirm.
+1999 | VT-673751 | [everyday                 ] Quick one: FYI, Let's meet on Tuesday to go over the plan.—got it..
+2000 | VT-588199 | [everyday                 ] FYI, Hey, Let's meet on Sunday to go over the plan.—got it. please.

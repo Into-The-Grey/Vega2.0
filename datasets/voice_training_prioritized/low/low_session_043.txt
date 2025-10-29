@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 43 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2101 | VT-40874 | [math_readouts            ] Listen, Log base two of eight is three. (3859)—got it.
+2102 | VT-72520 | [math_readouts            ] Okay, Standard deviation is 2.3. (6837)—copy.
+2103 | VT-41604 | [math_readouts            ] Okay, Solve for x: 2x + 5 = 19. (3759)—got it.
+2104 | VT-68933 | [math_readouts            ] Reminder: Solve for x: 2x + 5 = 19. (9561) Please.
+2105 | VT-33463 | [math_readouts            ] Reminder: Solve for x: 2x + 5 = 19. (566)—got it.
+2106 | VT-23851 | [math_readouts            ] Hey, Matrix A times B is non-commutative. (9421)
+2107 | VT-63778 | [math_readouts            ] Heads up: Log base two of eight is three. (7830)—got it.
+2108 | VT-54990 | [math_readouts            ] Okay, The derivative of x squared is two x. (1435)
+2109 | VT-84961 | [math_readouts            ] Reminder: Solve for x: 2x + 5 = 19. (666) Thanks.
+2110 | VT-75514 | [math_readouts            ] Hey, Sine of ninety is one. (8309) If possible.
+2111 | VT-29242 | [math_readouts            ] FYI, The limit approaches infinity. (8776) Thanks.
+2112 | VT-99113 | [math_readouts            ] Heads up: Solve for x: 2x + 5 = 19. (7598) If possible.
+2113 | VT-85880 | [math_readouts            ] Heads up: The mean is greater than the median—right skew. (3085)—got it.
+2114 | VT-44676 | [math_readouts            ] Okay, Standard deviation is 2.3. (5093) Please.
+2115 | VT-43011 | [math_readouts            ] Okay, The derivative of x squared is two x. (51)—copy.
+2116 | VT-38961 | [math_readouts            ] Heads up: Standard deviation is 2.3. (9847)—copy.
+2117 | VT-38673 | [math_readouts            ] Reminder: The derivative of x squared is two x. (311) If possible.
+2118 | VT-73976 | [math_readouts            ] The derivative of x squared is two x.
+2119 | VT-99795 | [math_readouts            ] Standard deviation is 2.3.
+2120 | VT-97925 | [math_readouts            ] Solve for x: 2x + 5 = 19. (4177)
+2121 | VT-47417 | [math_readouts            ] FYI, Matrix A times B is non-commutative. (5944) For real.
+2122 | VT-98388 | [math_readouts            ] FYI, Sine of ninety is one. (5857) If possible.
+2123 | VT-12909 | [math_readouts            ] FYI, Sine of ninety is one. (2062) Right now.
+2124 | VT-51141 | [math_readouts            ] Listen, Standard deviation is 2.3. (4278)—copy.
+2125 | VT-16643 | [math_readouts            ] FYI, Normalize the vector to unit length. (1926) If possible.
+2126 | VT-78721 | [math_readouts            ] Solve for x: 2x + 5 = 19. (6684)
+2127 | VT-64197 | [math_readouts            ] Note: The mean is greater than the median—right skew. (1007) Please.
+2128 | VT-84207 | [math_readouts            ] Hey, The limit approaches infinity. (5388)—got it.
+2129 | VT-29915 | [math_readouts            ] Note: Matrix A times B is non-commutative. (4150) Please.
+2130 | VT-15118 | [math_readouts            ] Note: Area equals pi r squared. (5070) For real.
+2131 | VT-43883 | [math_readouts            ] FYI, Solve for x: 2x + 5 = 19. (2910)—got it.
+2132 | VT-15118 | [math_readouts            ] Note: Area equals pi r squared. (5070) For real.
+2133 | VT-18755 | [math_readouts            ] Okay, Solve for x: 2x + 5 = 19. (8246)
+2134 | VT-54990 | [math_readouts            ] Okay, The derivative of x squared is two x. (1435)
+2135 | VT-27191 | [math_readouts            ] Okay, Matrix A times B is non-commutative. (8282) For real.
+2136 | VT-64391 | [math_readouts            ] Note: The derivative of x squared is two x. (6489)
+2137 | VT-32180 | [math_readouts            ] Heads up: The limit approaches infinity. (4879)—got it.
+2138 | VT-75795 | [math_readouts            ] FYI, Area equals pi r squared. (4832) Please.
+2139 | VT-61828 | [math_readouts            ] Matrix A times B is non-commutative. (1949)—got it.
+2140 | VT-58207 | [math_readouts            ] FYI, Normalize the vector to unit length. (2360) Right now.
+2141 | VT-74435 | [math_readouts            ] Hey, The derivative of x squared is two x. (6670)—got it.
+2142 | VT-17302 | [math_readouts            ] Note: Area equals pi r squared. (2023) If possible.
+2143 | VT-40874 | [math_readouts            ] Listen, Log base two of eight is three. (3859)—got it.
+2144 | VT-25172 | [math_readouts            ] Hey, Area equals pi r squared. (7207) If possible.
+2145 | VT-21990 | [math_readouts            ] FYI, Normalize the vector to unit length. (7394) Please.
+2146 | VT-36001 | [math_readouts            ] Heads up: Standard deviation is 2.3. (8591) Right now.
+2147 | VT-84961 | [math_readouts            ] Reminder: Solve for x: 2x + 5 = 19. (666) Thanks.
+2148 | VT-23921 | [math_readouts            ] Note: Standard deviation is 2.3. (4981)—copy.
+2149 | VT-92295 | [math_readouts            ] Listen, The mean is greater than the median—right skew. (7360) For real.
+2150 | VT-40874 | [math_readouts            ] Listen, Log base two of eight is three. (3859)—got it.

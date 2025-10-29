@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 18 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0851 | VT-32691 | [gibberish                ] Okay, Blorp snaggledrip zoot zoot rama-ling! Skiddle skidaddle! If possible.
+0852 | VT-86274 | [gibberish                ] Hey, Frizzle my wizzle, zink to the blab. Skiddle skidaddle!—copy.
+0853 | VT-28953 | [gibberish                ] Blorp snaggledrip zoot zoot rama-ling! Gleep glorp!—got it.
+0854 | VT-52630 | [gibberish                ] Hey, Meep morp, zip zap zibberoo! Yabba dabba doo! For real.
+0855 | VT-92057 | [gibberish                ] Heads up: Meep morp, zip zap zibberoo! Skiddle skidaddle! For real.
+0856 | VT-28675 | [gibberish                ] Hey, Frizzle my wizzle, zink to the blab. Skiddle skidaddle! Thanks.
+0857 | VT-26411 | [gibberish                ] Hey, Frizzle my wizzle, zink to the blab. Yabba dabba doo! Thanks.
+0858 | VT-89282 | [gibberish                ] Reminder: Frizzle my wizzle, zink to the blab. Gleep glorp! Please.
+0859 | VT-48647 | [gibberish                ] Meep morp, zip zap zibberoo! Gleep glorp! For real.
+0860 | VT-43275 | [gibberish                ] Reminder: Blorp snaggledrip zoot zoot rama-ling! Gleep glorp! For real.
+0861 | VT-97440 | [gibberish                ] Okay, Meep morp, zip zap zibberoo! Yabba dabba doo!
+0862 | VT-31820 | [gibberish                ] Heads up: Blorp snaggledrip zoot zoot rama-ling! Yabba dabba doo! Thanks.
+0863 | VT-62116 | [gibberish                ] Heads up: Meep morp, zip zap zibberoo! Skiddle skidaddle!
+0864 | VT-52694 | [gibberish                ] FYI, Blorp snaggledrip zoot zoot rama-ling! Skiddle skidaddle! Thanks.
+0865 | VT-88290 | [gibberish                ] Reminder: Meep morp, zip zap zibberoo! Skiddle skidaddle! Please.
+0866 | VT-31820 | [gibberish                ] Heads up: Blorp snaggledrip zoot zoot rama-ling! Yabba dabba doo! Thanks.
+0867 | VT-67909 | [gibberish                ] Hey, Blorp snaggledrip zoot zoot rama-ling! Yabba dabba doo! Right now.
+0868 | VT-67909 | [gibberish                ] Hey, Blorp snaggledrip zoot zoot rama-ling! Yabba dabba doo! Right now.
+0869 | VT-35243 | [gibberish                ] FYI, Meep morp, zip zap zibberoo! Gleep glorp! Please.
+0870 | VT-61151 | [gibberish                ] Meep morp, zip zap zibberoo! Yabba dabba doo! Please.
+0871 | VT-97336 | [gibberish                ] Frizzle my wizzle, zink to the blab. Yabba dabba doo! Thanks.
+0872 | VT-86274 | [gibberish                ] Hey, Frizzle my wizzle, zink to the blab. Skiddle skidaddle!—copy.
+0873 | VT-76935 | [gibberish                ] Note: Blorp snaggledrip zoot zoot rama-ling! Yabba dabba doo! If possible.
+0874 | VT-38430 | [gibberish                ] Heads up: Meep morp, zip zap zibberoo! Yabba dabba doo!—copy.
+0875 | VT-69451 | [gibberish                ] Okay, Meep morp, zip zap zibberoo! Gleep glorp! If possible.
+0876 | VT-61235 | [gibberish                ] Note: Meep morp, zip zap zibberoo! Skiddle skidaddle!
+0877 | VT-10239 | [gibberish                ] Okay, Meep morp, zip zap zibberoo! Yabba dabba doo!—got it.
+0878 | VT-35243 | [gibberish                ] FYI, Meep morp, zip zap zibberoo! Gleep glorp! Please.
+0879 | VT-42937 | [gibberish                ] FYI, Meep morp, zip zap zibberoo! Gleep glorp! Please.
+0880 | VT-80132 | [gibberish                ] Hey, Blorp snaggledrip zoot zoot rama-ling! Skiddle skidaddle!—copy.
+0881 | VT-17157 | [gibberish                ] FYI, Frizzle my wizzle, zink to the blab. Yabba dabba doo! Right now.
+0882 | VT-77088 | [gibberish                ] Listen, Blorp snaggledrip zoot zoot rama-ling! Skiddle skidaddle!
+0883 | VT-91133 | [gibberish                ] Meep morp, zip zap zibberoo! Yabba dabba doo! Please.
+0884 | VT-97630 | [gibberish                ] Note: Blorp snaggledrip zoot zoot rama-ling! Skiddle skidaddle!—got it.
+0885 | VT-81792 | [gibberish                ] FYI, Frizzle my wizzle, zink to the blab. Yabba dabba doo!—copy.
+0886 | VT-73256 | [gibberish                ] Frizzle my wizzle, zink to the blab. Skiddle skidaddle!—copy.
+0887 | VT-53845 | [gibberish                ] FYI, Frizzle my wizzle, zink to the blab. Yabba dabba doo! For real.
+0888 | VT-60311 | [gibberish                ] Reminder: Blorp snaggledrip zoot zoot rama-ling! Gleep glorp!—got it.
+0889 | VT-17312 | [gibberish                ] Okay, Frizzle my wizzle, zink to the blab. Skiddle skidaddle! If possible.
+0890 | VT-64494 | [gibberish                ] Blorp snaggledrip zoot zoot rama-ling!
+0891 | VT-97336 | [gibberish                ] Frizzle my wizzle, zink to the blab. Yabba dabba doo! Thanks.
+0892 | VT-98569 | [gibberish                ] FYI, Blorp snaggledrip zoot zoot rama-ling! Gleep glorp!—copy.
+0893 | VT-48465 | [gibberish                ] Hey, Blorp snaggledrip zoot zoot rama-ling! Skiddle skidaddle!
+0894 | VT-63390 | [gibberish                ] Reminder: Meep morp, zip zap zibberoo! Gleep glorp!—got it.
+0895 | VT-90557 | [gibberish                ] Listen, Frizzle my wizzle, zink to the blab. Gleep glorp! Right now.
+0896 | VT-52630 | [gibberish                ] Hey, Meep morp, zip zap zibberoo! Yabba dabba doo! For real.
+0897 | VT-42559 | [gibberish                ] Meep morp, zip zap zibberoo! Gleep glorp! Thanks.
+0898 | VT-20581 | [gibberish                ] Note: Meep morp, zip zap zibberoo! Skiddle skidaddle! Right now.
+0899 | VT-32691 | [gibberish                ] Okay, Blorp snaggledrip zoot zoot rama-ling! Skiddle skidaddle! If possible.
+0900 | VT-52380 | [gibberish                ] Okay, Frizzle my wizzle, zink to the blab. Gleep glorp! If possible.

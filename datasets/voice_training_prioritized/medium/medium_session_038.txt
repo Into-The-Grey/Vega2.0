@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 38 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1851 | VT-638152 | [emotional                ] Okay, Note: I miss you more than words can say. — got it.
+1852 | VT-569333 | [emotional                ] Okay, Why does everything have to hurt so much? For real. right now. (alt)
+1853 | VT-575242 | [emotional                ] Quick one: FYI, I'm so proud of how far we've come. please.
+1854 | VT-670487 | [emotional                ] Okay, FYI, I miss you more than words can say. If possible. please.
+1855 | VT-544784 | [emotional                ] Real talk, I'm so proud of how far we've come. If possible. thanks.
+1856 | VT-654159 | [emotional                ] Reminder: Okay, I miss you more than words can say. For real..
+1857 | VT-598488 | [emotional                ] Reminder: Hey, Why does everything have to hurt so much? Thanks. if you can.
+1858 | VT-677610 | [emotional                ] Reminder: Why does everything have to hurt so much? Thanks. right now.
+1859 | VT-542737 | [emotional                ] Heads up: Why does everything have to hurt so much? Right now. thanks.
+1860 | VT-597607 | [emotional                ] Quick one: I'm so proud of how far we've come.—copy. thanks. (alt)
+1861 | VT-503466 | [emotional                ] Real talk, Hey, Why does everything have to hurt so much?—copy. — confirm.
+1862 | VT-685267 | [emotional                ] Note: Why does everything have to hurt so much? please.
+1863 | VT-690318 | [emotional                ] Listen, FYI, I miss you more than words can say. If possible. please.
+1864 | VT-501136 | [emotional                ] Note: Note: Why does everything have to hurt so much?—copy. please. (alt)
+1865 | VT-673103 | [emotional                ] Okay, FYI, Why does everything have to hurt so much? — confirm.
+1866 | VT-624685 | [emotional                ] Reminder: I miss you more than words can say. thanks.
+1867 | VT-580678 | [emotional                ] Listen, FYI, I'm so proud of how far we've come.. (alt)
+1868 | VT-578417 | [emotional                ] FYI, FYI, Why does everything have to hurt so much? Right now. — confirm. (alt)
+1869 | VT-657377 | [emotional                ] Quick one: Hey, I miss you more than words can say.—copy. — now.
+1870 | VT-592042 | [emotional                ] Listen, Reminder: I miss you more than words can say. Right now. — now.
+1871 | VT-559356 | [emotional                ] Okay, Reminder: Why does everything have to hurt so much?—got it. — got it.
+1872 | VT-575172 | [emotional                ] FYI, Hey, I miss you more than words can say. If possible. — confirm.
+1873 | VT-616558 | [emotional                ] Real talk, FYI, Why does everything have to hurt so much?—copy..
+1874 | VT-559435 | [emotional                ] Reminder: Heads up: Why does everything have to hurt so much? Please. — now.
+1875 | VT-696202 | [emotional                ] Quick one: Listen, I'm so proud of how far we've come. Please. (alt)
+1876 | VT-651207 | [emotional                ] FYI, Okay, I miss you more than words can say. Please. please.
+1877 | VT-528135 | [emotional                ] Quick one: Listen, I'm so proud of how far we've come. If possible.. (alt)
+1878 | VT-520029 | [emotional                ] Heads up: I'm so proud of how far we've come.—copy. — got it.
+1879 | VT-547583 | [emotional                ] Okay, Reminder: I miss you more than words can say.—got it.
+1880 | VT-533954 | [emotional                ] FYI, FYI, I miss you more than words can say.—copy. — confirm. (alt)
+1881 | VT-579681 | [emotional                ] Listen, Heads up: Why does everything have to hurt so much? Right now. thanks.
+1882 | VT-513722 | [emotional                ] FYI, Listen, I'm so proud of how far we've come. If possible. — got it. (alt)
+1883 | VT-697947 | [emotional                ] Okay, Okay, I'm so proud of how far we've come. For real.
+1884 | VT-636727 | [emotional                ] Reminder: FYI, I'm so proud of how far we've come. — confirm. (alt)
+1885 | VT-694319 | [emotional                ] Note: Heads up: I miss you more than words can say. — got it.
+1886 | VT-512059 | [emotional                ] Heads up: Okay, Why does everything have to hurt so much?—copy. thanks.
+1887 | VT-570982 | [emotional                ] Listen, I'm so proud of how far we've come. Please.
+1888 | VT-642969 | [emotional                ] Okay, Okay, I'm so proud of how far we've come. Please. — now.
+1889 | VT-677701 | [emotional                ] Real talk, Reminder: Why does everything have to hurt so much?—got it. — confirm.
+1890 | VT-697417 | [emotional                ] Reminder: Hey, I'm so proud of how far we've come. Thanks. — got it. (alt)
+1891 | VT-526958 | [emotional                ] Hey, Why does everything have to hurt so much? Please. — got it.
+1892 | VT-533612 | [emotional                ] Heads up: I'm so proud of how far we've come. Right now. thanks.
+1893 | VT-592831 | [emotional                ] Note: FYI, I'm so proud of how far we've come.—got it. please.
+1894 | VT-671761 | [emotional                ] Listen, Hey, Why does everything have to hurt so much?—copy..
+1895 | VT-616810 | [emotional                ] Okay, I miss you more than words can say. thanks.
+1896 | VT-633138 | [emotional                ] Note: Hey, I'm so proud of how far we've come. Thanks. — now.
+1897 | VT-635735 | [emotional                ] FYI, Heads up: Why does everything have to hurt so much? If possible. — confirm.
+1898 | VT-517926 | [emotional                ] Listen, Note: I'm so proud of how far we've come. Thanks. if you can.
+1899 | VT-532883 | [emotional                ] Quick one: I miss you more than words can say. Thanks. — now.
+1900 | VT-620219 | [emotional                ] Quick one: Note: Why does everything have to hurt so much?—copy. please.

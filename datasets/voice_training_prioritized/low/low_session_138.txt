@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 138 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6851 | VT-444164 | [robotic_formal           ] FYI, Heads up: This unit has no emotional processing capabilities. Thank you. If possible. — confirm. (alt)
+6852 | VT-447481 | [robotic_formal           ] Note: Hey, This unit has no emotional processing capabilities. Thank you.—got it. thanks. (alt)
+6853 | VT-431317 | [robotic_formal           ] Okay, Note: Initiating process sequence in accordance with protocol alpha.—copy. — confirm.
+6854 | VT-432604 | [robotic_formal           ] Reminder: Hey, This unit has no emotional processing capabilities. Thank you. If possible. — confirm.
+6855 | VT-437198 | [robotic_formal           ] Reminder: Okay, This unit has no emotional processing capabilities. Thank you.—copy. — confirm.
+6856 | VT-460456 | [robotic_formal           ] Real talk, Listen, System acknowledgment: request received and validated. For real. right now.
+6857 | VT-425051 | [robotic_formal           ] Reminder: Hey, Initiating process sequence in accordance with protocol alpha. If possible. please.
+6858 | VT-487985 | [robotic_formal           ] Note: FYI, This unit has no emotional processing capabilities. Thank you.—got it. — now.
+6859 | VT-456664 | [robotic_formal           ] Reminder: System acknowledgment: request received and validated. Thanks. — now.
+6860 | VT-447890 | [robotic_formal           ] Reminder: Listen, This unit has no emotional processing capabilities. Thank you. Please. thanks. (alt)
+6861 | VT-495520 | [robotic_formal           ] Reminder: System acknowledgment: request received and validated. If possible. please. (alt)
+6862 | VT-482562 | [robotic_formal           ] Quick one: FYI, Initiating process sequence in accordance with protocol alpha. Please..
+6863 | VT-404042 | [robotic_formal           ] Quick one: FYI, Initiating process sequence in accordance with protocol alpha. Thanks. right now.
+6864 | VT-468549 | [robotic_formal           ] Reminder: FYI, Initiating process sequence in accordance with protocol alpha. Thanks.. (alt)
+6865 | VT-428235 | [robotic_formal           ] Quick one: Hey, This unit has no emotional processing capabilities. Thank you.—got it. thanks.
+6866 | VT-494324 | [robotic_formal           ] Listen, Listen, Initiating process sequence in accordance with protocol alpha. Thanks. — now.
+6867 | VT-401630 | [robotic_formal           ] FYI, Initiating process sequence in accordance with protocol alpha. please.
+6868 | VT-469070 | [robotic_formal           ] Reminder: System acknowledgment: request received and validated. Thanks. — got it. (alt)
+6869 | VT-456075 | [robotic_formal           ] Listen, Reminder: Initiating process sequence in accordance with protocol alpha.—got it..
+6870 | VT-426066 | [robotic_formal           ] Listen, Initiating process sequence in accordance with protocol alpha.—copy. — now.
+6871 | VT-404115 | [robotic_formal           ] Listen, Hey, System acknowledgment: request received and validated.—got it. — now.
+6872 | VT-474800 | [robotic_formal           ] Note: Okay, This unit has no emotional processing capabilities. Thank you.—copy. if you can.
+6873 | VT-447259 | [robotic_formal           ] Reminder: Listen, Initiating process sequence in accordance with protocol alpha. If possible. — confirm. (alt)
+6874 | VT-464287 | [robotic_formal           ] Real talk, System acknowledgment: request received and validated. please.
+6875 | VT-496197 | [robotic_formal           ] Real talk, Heads up: System acknowledgment: request received and validated. Thanks. — now.
+6876 | VT-445831 | [robotic_formal           ] FYI, Reminder: Initiating process sequence in accordance with protocol alpha.—copy. if you can.
+6877 | VT-467863 | [robotic_formal           ] Reminder: System acknowledgment: request received and validated. Please. — got it.
+6878 | VT-478192 | [robotic_formal           ] FYI, Hey, Initiating process sequence in accordance with protocol alpha. Please..
+6879 | VT-485062 | [robotic_formal           ] Initiating process sequence in accordance with protocol alpha. Thanks. (alt)
+6880 | VT-434833 | [robotic_formal           ] Hey, This unit has no emotional processing capabilities. Thank you.—got it..
+6881 | VT-448048 | [robotic_formal           ] Okay, Note: System acknowledgment: request received and validated. For real.
+6882 | VT-417893 | [robotic_formal           ] Listen, Note: This unit has no emotional processing capabilities. Thank you.—copy. — confirm.
+6883 | VT-419037 | [robotic_formal           ] Note: Listen, This unit has no emotional processing capabilities. Thank you. Thanks. thanks.
+6884 | VT-434861 | [robotic_formal           ] Reminder: Heads up: System acknowledgment: request received and validated.—got it. if you can. (alt)
+6885 | VT-423565 | [robotic_formal           ] Reminder: System acknowledgment: request received and validated. For real. right now.
+6886 | VT-444715 | [robotic_formal           ] FYI, FYI, Initiating process sequence in accordance with protocol alpha. Thanks. right now. (alt)
+6887 | VT-455168 | [robotic_formal           ] Heads up: Note: This unit has no emotional processing capabilities. Thank you.—copy.
+6888 | VT-439291 | [robotic_formal           ] Quick one: Reminder: This unit has no emotional processing capabilities. Thank you. Right now. — confirm.
+6889 | VT-441088 | [robotic_formal           ] Note: Okay, This unit has no emotional processing capabilities. Thank you.—copy. — now.
+6890 | VT-476307 | [robotic_formal           ] Listen, System acknowledgment: request received and validated.—copy. — confirm.
+6891 | VT-430100 | [robotic_formal           ] FYI, Hey, Initiating process sequence in accordance with protocol alpha. Please..
+6892 | VT-498948 | [robotic_formal           ] Heads up: Heads up: This unit has no emotional processing capabilities. Thank you. Thanks. — now.
+6893 | VT-427075 | [robotic_formal           ] Reminder: This unit has no emotional processing capabilities. Thank you. If possible. — got it. (alt)
+6894 | VT-456539 | [robotic_formal           ] Reminder: Initiating process sequence in accordance with protocol alpha.—copy. thanks.
+6895 | VT-495256 | [robotic_formal           ] Okay, This unit has no emotional processing capabilities. Thank you.—copy.
+6896 | VT-440292 | [robotic_formal           ] Quick one: Reminder: Initiating process sequence in accordance with protocol alpha. If possible. right now. (alt)
+6897 | VT-441954 | [robotic_formal           ] Real talk, Note: This unit has no emotional processing capabilities. Thank you. If possible. right now.
+6898 | VT-479589 | [robotic_formal           ] Okay, Listen, This unit has no emotional processing capabilities. Thank you. Right now..
+6899 | VT-444669 | [sales_pitch              ] FYI, Heads up: Unlock premium features now with just one click! For real. — confirm.
+6900 | VT-470197 | [sales_pitch              ] Quick one: Hey, This offer won’t last—act today! Thanks. (alt)

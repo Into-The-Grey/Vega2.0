@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 159 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7901 | VT-526549 | [finance                  ] Okay, Reconcile the ledger before EOD. (6522)—got it. — got it.
+7902 | VT-575964 | [finance                  ] Heads up: Reconcile the ledger before EOD. (3976)—got it. please.
+7903 | VT-650819 | [finance                  ] Okay, Hey, Reconcile the ledger before EOD. (3366)—got it. (alt)
+7904 | VT-529588 | [flirty                   ] Okay, Are you Wi-Fi? Because I’m feeling a connection. thanks.
+7905 | VT-623189 | [flirty                   ] Note: You have the kind of voice I’d sync my heartbeat to. — confirm. (alt)
+7906 | VT-538436 | [flirty                   ] Okay, I wasn’t blushing until you started talking. thanks. (alt)
+7907 | VT-666180 | [flirty                   ] Quick one: Note: Are you Wi-Fi? Because I’m feeling a connection. For real. — now.
+7908 | VT-503250 | [flirty                   ] Heads up: You have the kind of voice I’d sync my heartbeat to. For real..
+7909 | VT-594925 | [flirty                   ] Quick one: Okay, I wasn’t blushing until you started talking. Right now. thanks.
+7910 | VT-649473 | [flirty                   ] Listen, Heads up: Are you Wi-Fi? Because I’m feeling a connection. Thanks. — got it.
+7911 | VT-629482 | [flirty                   ] Quick one: FYI, You have the kind of voice I’d sync my heartbeat to. Right now. — got it.
+7912 | VT-601947 | [flirty                   ] Listen, Heads up: I wasn’t blushing until you started talking. Please. please. (alt)
+7913 | VT-527356 | [flirty                   ] Listen, Are you Wi-Fi? Because I’m feeling a connection.—got it. thanks.
+7914 | VT-584048 | [flirty                   ] Real talk, Listen, You have the kind of voice I’d sync my heartbeat to.—copy. please.
+7915 | VT-556700 | [flirty                   ] Reminder: Heads up: I wasn’t blushing until you started talking.—copy. thanks.
+7916 | VT-655629 | [flirty                   ] Heads up: Reminder: Are you Wi-Fi? Because I’m feeling a connection. Right now. — now.
+7917 | VT-538576 | [flirty                   ] Heads up: Okay, You have the kind of voice I’d sync my heartbeat to. Thanks. if you can.
+7918 | VT-683728 | [flirty                   ] FYI, Heads up: I wasn’t blushing until you started talking. If possible. thanks.
+7919 | VT-562276 | [flirty                   ] Reminder: Listen, Are you Wi-Fi? Because I’m feeling a connection. If possible. — confirm.
+7920 | VT-621336 | [flirty                   ] Okay, You have the kind of voice I’d sync my heartbeat to.—got it. if you can.
+7921 | VT-578360 | [flirty                   ] Listen, I wasn’t blushing until you started talking. Please. — confirm.
+7922 | VT-627700 | [flirty                   ] Note: Note: Are you Wi-Fi? Because I’m feeling a connection. Please.
+7923 | VT-547814 | [flirty                   ] Real talk, Note: You have the kind of voice I’d sync my heartbeat to. For real. — confirm.
+7924 | VT-682265 | [flirty                   ] Quick one: Hey, I wasn’t blushing until you started talking. — confirm.
+7925 | VT-670797 | [flirty                   ] Reminder: FYI, Are you Wi-Fi? Because I’m feeling a connection. Please. — now.
+7926 | VT-616044 | [flirty                   ] Listen, Listen, You have the kind of voice I’d sync my heartbeat to.—got it..
+7927 | VT-612327 | [flirty                   ] Note: Hey, I wasn’t blushing until you started talking.—got it. — confirm.
+7928 | VT-507884 | [flirty                   ] Note: Are you Wi-Fi? Because I’m feeling a connection.—got it. right now.
+7929 | VT-622182 | [flirty                   ] FYI, Reminder: You have the kind of voice I’d sync my heartbeat to.
+7930 | VT-526019 | [flirty                   ] Listen, Listen, I wasn’t blushing until you started talking. Please.
+7931 | VT-501198 | [flirty                   ] Are you Wi-Fi? Because I’m feeling a connection. For real.. (alt)
+7932 | VT-504008 | [flirty                   ] Heads up: Listen, You have the kind of voice I’d sync my heartbeat to. If possible. please.
+7933 | VT-692682 | [flirty                   ] Note: I wasn’t blushing until you started talking. Thanks..
+7934 | VT-655368 | [flirty                   ] Okay, Heads up: Are you Wi-Fi? Because I’m feeling a connection. For real. — got it.
+7935 | VT-522561 | [flirty                   ] Real talk, You have the kind of voice I’d sync my heartbeat to. — confirm.
+7936 | VT-566877 | [flirty                   ] Real talk, I wasn’t blushing until you started talking.—got it. if you can.
+7937 | VT-507879 | [flirty                   ] Heads up: Are you Wi-Fi? Because I’m feeling a connection. If possible. — now.
+7938 | VT-530741 | [flirty                   ] Real talk, You have the kind of voice I’d sync my heartbeat to. If possible. thanks.
+7939 | VT-525717 | [flirty                   ] Quick one: Heads up: I wasn’t blushing until you started talking. For real. thanks.
+7940 | VT-682630 | [flirty                   ] Real talk, Reminder: Are you Wi-Fi? Because I’m feeling a connection. Thanks.
+7941 | VT-622921 | [flirty                   ] Quick one: You have the kind of voice I’d sync my heartbeat to. If possible. please.
+7942 | VT-673513 | [flirty                   ] Reminder: Hey, I wasn’t blushing until you started talking.—copy. — confirm.
+7943 | VT-551926 | [flirty                   ] Note: FYI, Are you Wi-Fi? Because I’m feeling a connection. Right now.
+7944 | VT-666728 | [flirty                   ] Reminder: Reminder: You have the kind of voice I’d sync my heartbeat to.—copy. — got it.
+7945 | VT-532313 | [flirty                   ] Reminder: I wasn’t blushing until you started talking. — got it.
+7946 | VT-695154 | [flirty                   ] FYI, Note: Are you Wi-Fi? Because I’m feeling a connection. Right now.
+7947 | VT-676272 | [flirty                   ] FYI, Reminder: You have the kind of voice I’d sync my heartbeat to.—got it. — got it.
+7948 | VT-686732 | [flirty                   ] Reminder: Hey, I wasn’t blushing until you started talking.—copy. please.
+7949 | VT-693641 | [flirty                   ] Heads up: Okay, Are you Wi-Fi? Because I’m feeling a connection..
+7950 | VT-620992 | [flirty                   ] Reminder: You have the kind of voice I’d sync my heartbeat to. Thanks. — confirm. (alt)

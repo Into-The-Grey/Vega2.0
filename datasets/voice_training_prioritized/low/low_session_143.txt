@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 143 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7101 | VT-408196 | [sports_cast              ] Listen, She nails the triple, crowd goes wild. Right now. — got it.
+7102 | VT-410478 | [sports_cast              ] Listen, Okay, Break point; deep breath; serve wide. Please. please.
+7103 | VT-488919 | [sports_cast              ] Heads up: FYI, What a clutch parry into the finisher. Right now.
+7104 | VT-487276 | [sports_cast              ] Heads up: Fourth and inches with the clock bleeding. (alt)
+7105 | VT-490889 | [sports_cast              ] Note: Hey, He shoots—top shelf! For real. — got it.
+7106 | VT-412677 | [sports_cast              ] Note: Reminder: She nails the triple, crowd goes wild.—copy. if you can. (alt)
+7107 | VT-490764 | [sports_cast              ] Quick one: Note: Fourth and inches with the clock bleeding. Right now. — now.
+7108 | VT-409433 | [sports_cast              ] Listen, Okay, Break point; deep breath; serve wide.—copy. (alt)
+7109 | VT-434365 | [sports_cast              ] Okay, FYI, The underdogs are up by two. Please. thanks.
+7110 | VT-497876 | [sports_cast              ] FYI, What a clutch parry into the finisher. If possible. — confirm.
+7111 | VT-424286 | [sports_cast              ] A new personal best by 0.12 seconds! Please..
+7112 | VT-455412 | [sports_cast              ] Listen, Yellow card for a reckless challenge. If possible. — now.
+7113 | VT-489540 | [sports_cast              ] Reminder: Okay, Fourth and inches with the clock bleeding.—got it. — got it.
+7114 | VT-439314 | [sports_cast              ] Real talk, Hey, He shoots—top shelf!—copy. if you can.
+7115 | VT-466152 | [sports_cast              ] FYI, Hey, A new personal best by 0.12 seconds! if you can.
+7116 | VT-423577 | [sports_cast              ] Real talk, She nails the triple, crowd goes wild. Please. — confirm.
+7117 | VT-430542 | [sports_cast              ] Okay, Fourth and inches with the clock bleeding. if you can.
+7118 | VT-435216 | [sports_cast              ] Reminder: FYI, The underdogs are up by two. Please. — now.
+7119 | VT-431015 | [sports_cast              ] Okay, Reminder: The underdogs are up by two. Thanks..
+7120 | VT-494328 | [sports_cast              ] Okay, Heads up: The underdogs are up by two.—copy. — got it.
+7121 | VT-442650 | [sports_cast              ] Heads up: Listen, A new personal best by 0.12 seconds! Thanks. thanks.
+7122 | VT-403870 | [sports_cast              ] Heads up: Hey, He shoots—top shelf! For real. thanks.
+7123 | VT-473733 | [sports_cast              ] Okay, Okay, He shoots—top shelf! Right now. — confirm.
+7124 | VT-459514 | [sports_cast              ] Reminder: Note: The underdogs are up by two. If possible. thanks.
+7125 | VT-496497 | [sports_cast              ] Quick one: Fourth and inches with the clock bleeding. Thanks. thanks. (alt)
+7126 | VT-423119 | [sports_cast              ] Real talk, Okay, That split-second rotation changed everything. Please. if you can.
+7127 | VT-403116 | [sports_cast              ] Reminder: Listen, That split-second rotation changed everything. Right now. — confirm.
+7128 | VT-437746 | [sports_cast              ] Listen, Okay, That split-second rotation changed everything. For real. thanks.
+7129 | VT-435572 | [sports_cast              ] Real talk, Listen, A new personal best by 0.12 seconds! Right now..
+7130 | VT-439086 | [sports_cast              ] Listen, Okay, Break point; deep breath; serve wide. Please. please.
+7131 | VT-485782 | [sports_cast              ] Heads up: Note: Break point; deep breath; serve wide. Thanks. if you can. (alt)
+7132 | VT-449330 | [sports_cast              ] Listen, He shoots—top shelf! — now.
+7133 | VT-474241 | [sports_cast              ] Listen, The underdogs are up by two. Please.
+7134 | VT-425088 | [sports_cast              ] Okay, Break point; deep breath; serve wide. Please.
+7135 | VT-423813 | [sports_cast              ] Quick one: Okay, Yellow card for a reckless challenge.—copy. — confirm.
+7136 | VT-421389 | [sports_cast              ] Reminder: Hey, He shoots—top shelf!—copy..
+7137 | VT-419356 | [sports_cast              ] Reminder: Listen, He shoots—top shelf! thanks.
+7138 | VT-453689 | [sports_cast              ] Quick one: Okay, Break point; deep breath; serve wide. If possible..
+7139 | VT-414674 | [sports_cast              ] Real talk, Hey, He shoots—top shelf! For real. — now.
+7140 | VT-441579 | [sports_cast              ] Real talk, She nails the triple, crowd goes wild.—got it. if you can.
+7141 | VT-464663 | [sports_cast              ] Note: Hey, What a clutch parry into the finisher. Thanks.
+7142 | VT-416905 | [sports_cast              ] Quick one: Okay, The underdogs are up by two. Right now. — now.
+7143 | VT-463120 | [sports_cast              ] Note: FYI, Fourth and inches with the clock bleeding. please.
+7144 | VT-448482 | [sports_cast              ] Real talk, Okay, That split-second rotation changed everything. Please. right now.
+7145 | VT-458506 | [sports_cast              ] Real talk, FYI, A new personal best by 0.12 seconds! Please. thanks.
+7146 | VT-403629 | [sports_cast              ] Quick one: Note: Yellow card for a reckless challenge. If possible. thanks.
+7147 | VT-499009 | [sports_cast              ] Quick one: That split-second rotation changed everything. — confirm.
+7148 | VT-443853 | [sports_cast              ] Okay, Hey, A new personal best by 0.12 seconds! If possible. — confirm.
+7149 | VT-432878 | [stream_of_consciousness  ] Note: Reminder: I was thinking about the way the light hits the wall, then the time I fell off the swing set, and maybe none of this even matters because breakfast is just sadness in a bowl, you know? If possible. if you can.
+7150 | VT-447035 | [stream_of_consciousness  ] Heads up: Reminder: I can’t sleep because I’m afraid of forgetting what my voice sounds like when I’m not pretending.—copy. — now.

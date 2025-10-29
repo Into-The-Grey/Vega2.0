@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 185 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+9201 | VT-606568 | [sound_effects            ] Reminder: FYI, Tick tick tick… and then silence. right now.
+9202 | VT-653909 | [sound_effects            ] FYI, Hey, Pshhh, like air escaping a balloon of secrets. Please.
+9203 | VT-582996 | [sound_effects            ] Quick one: Pshhh, like air escaping a balloon of secrets. Right now. — now. (alt)
+9204 | VT-522617 | [sound_effects            ] Okay, Reminder: Tick tick tick… and then silence. Right now. right now.
+9205 | VT-543638 | [sound_effects            ] Reminder: Boom! Crash! The whole lab went dark. Please.
+9206 | VT-508682 | [sound_effects            ] Hey, Pshhh, like air escaping a balloon of secrets. Thanks. — got it.
+9207 | VT-549717 | [sound_effects            ] Heads up: Tick tick tick… and then silence. Thanks..
+9208 | VT-601591 | [sound_effects            ] Real talk, Heads up: Pshhh, like air escaping a balloon of secrets. Thanks. — got it.
+9209 | VT-647031 | [sound_effects            ] FYI, Okay, Boom! Crash! The whole lab went dark. Please. please.
+9210 | VT-682852 | [sound_effects            ] Okay, Reminder: Tick tick tick… and then silence. please. (alt)
+9211 | VT-568123 | [sound_effects            ] Quick one: Okay, Boom! Crash! The whole lab went dark. For real..
+9212 | VT-553557 | [sound_effects            ] FYI, Listen, Tick tick tick… and then silence.—got it. — now. (alt)
+9213 | VT-681907 | [sound_effects            ] Listen, FYI, Pshhh, like air escaping a balloon of secrets. — got it.
+9214 | VT-500845 | [sound_effects            ] Real talk, Note: Tick tick tick… and then silence. For real. — got it.
+9215 | VT-696704 | [sound_effects            ] Listen, Tick tick tick… and then silence. Please. — confirm.
+9216 | VT-622435 | [sound_effects            ] Listen, Note: Tick tick tick… and then silence. Right now. thanks.
+9217 | VT-574884 | [sound_effects            ] Okay, Hey, Pshhh, like air escaping a balloon of secrets. Thanks. if you can.
+9218 | VT-573655 | [sound_effects            ] Heads up: Tick tick tick… and then silence. if you can. (alt)
+9219 | VT-585640 | [sound_effects            ] Reminder: Heads up: Tick tick tick… and then silence. Please. right now.
+9220 | VT-511711 | [sound_effects            ] FYI, FYI, Pshhh, like air escaping a balloon of secrets. For real. if you can.
+9221 | VT-689953 | [sound_effects            ] Reminder: Heads up: Boom! Crash! The whole lab went dark.
+9222 | VT-607577 | [sound_effects            ] Reminder: Boom! Crash! The whole lab went dark.—got it. thanks.
+9223 | VT-541557 | [sound_effects            ] Reminder: FYI, Pshhh, like air escaping a balloon of secrets. For real. thanks. (alt)
+9224 | VT-581759 | [sound_effects            ] Listen, Okay, Tick tick tick… and then silence. Right now. (alt)
+9225 | VT-594459 | [sound_effects            ] Real talk, Reminder: Tick tick tick… and then silence. Please..
+9226 | VT-695613 | [sound_effects            ] Heads up: Note: Pshhh, like air escaping a balloon of secrets. Thanks. — now. (alt)
+9227 | VT-649389 | [sound_effects            ] Okay, FYI, Tick tick tick… and then silence. please.
+9228 | VT-562433 | [sound_effects            ] Reminder: Heads up: Tick tick tick… and then silence. If possible. — confirm.
+9229 | VT-549679 | [sound_effects            ] Listen, Okay, Pshhh, like air escaping a balloon of secrets. Please..
+9230 | VT-542779 | [sound_effects            ] Real talk, Pshhh, like air escaping a balloon of secrets. — confirm. (alt)
+9231 | VT-635212 | [sound_effects            ] Listen, Note: Boom! Crash! The whole lab went dark.—got it. — got it.
+9232 | VT-593080 | [sound_effects            ] Reminder: Note: Boom! Crash! The whole lab went dark. — confirm. (alt)
+9233 | VT-582071 | [sound_effects            ] Quick one: Heads up: Pshhh, like air escaping a balloon of secrets. Thanks. thanks.
+9234 | VT-619246 | [sound_effects            ] Quick one: Reminder: Tick tick tick… and then silence. Right now. right now.
+9235 | VT-636201 | [sound_effects            ] Quick one: FYI, Pshhh, like air escaping a balloon of secrets. — got it.
+9236 | VT-632187 | [sound_effects            ] FYI, Boom! Crash! The whole lab went dark.—got it. — confirm.
+9237 | VT-677001 | [spelling_alphabet        ] Listen, Reminder: My initials are N—A—A, November Alpha Alpha.—got it. please.
+9238 | VT-520329 | [spelling_alphabet        ] Real talk, Note: Lowercase only: monolithicservice. Thanks. — got it.
+9239 | VT-691778 | [spelling_alphabet        ] Real talk, Okay, My initials are N—A—A, November Alpha Alpha. Right now..
+9240 | VT-603193 | [spelling_alphabet        ] Listen, Heads up: Say it letter by letter: R—E—S—O—N—A—N—C—E. Please. right now.
+9241 | VT-699994 | [spelling_alphabet        ] Quick one: Heads up: Username: delta.delta—underscore—root. if you can.
+9242 | VT-622951 | [spelling_alphabet        ] Listen, Okay, License plate reads: Zulu Seven Bravo Nine Four. For real. right now.
+9243 | VT-554367 | [spelling_alphabet        ] Note: Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—copy..
+9244 | VT-585085 | [spelling_alphabet        ] Note: Reminder: My initials are N—A—A, November Alpha Alpha.—got it..
+9245 | VT-598821 | [spelling_alphabet        ] Quick one: Note: License plate reads: Zulu Seven Bravo Nine Four. if you can.
+9246 | VT-663161 | [spelling_alphabet        ] Real talk, Okay, Say it letter by letter: R—E—S—O—N—A—N—C—E. If possible. please.
+9247 | VT-694737 | [spelling_alphabet        ] Acronym pronounced like a word: SNAFU. For real. if you can.
+9248 | VT-588389 | [spelling_alphabet        ] Quick one: Listen, Username: delta.delta—underscore—root.—got it.
+9249 | VT-652057 | [spelling_alphabet        ] Listen, FYI, Lowercase only: monolithicservice. Please. please.
+9250 | VT-695323 | [spelling_alphabet        ] FYI, Note: Serial: Tango–Lima–03–Foxtrot–Echo.—copy. please.

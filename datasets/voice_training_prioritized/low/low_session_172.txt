@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 172 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+8551 | VT-504997 | [monotone_minimal         ] Heads up: Reminder: Fine. If possible..
+8552 | VT-534974 | [monotone_minimal         ] Reminder: Reminder: Fine. if you can.
+8553 | VT-512809 | [monotone_minimal         ] Okay, Hey, Denied. Please. please.
+8554 | VT-512671 | [monotone_minimal         ] Heads up: Fine. — now.
+8555 | VT-536058 | [monotone_minimal         ] Heads up: Reminder: Fine. please.
+8556 | VT-652425 | [monotone_minimal         ] Note: FYI, Denied. Right now. right now. (alt)
+8557 | VT-595461 | [monotone_minimal         ] Listen, Note: Fine. Right now..
+8558 | VT-550025 | [monotone_minimal         ] Reminder: Hey, Sure.—copy..
+8559 | VT-689988 | [monotone_minimal         ] Okay, FYI, Fine. Thanks..
+8560 | VT-552227 | [monotone_minimal         ] Listen, Proceed. For real. — got it.
+8561 | VT-516855 | [monotone_minimal         ] Reminder: Hey, Unknown. Right now. thanks.
+8562 | VT-681835 | [monotone_minimal         ] Real talk, Okay, Proceed.—copy.
+8563 | VT-675647 | [monotone_minimal         ] Okay, Done.. (alt)
+8564 | VT-649300 | [monotone_minimal         ] FYI, Heads up: Sure. Right now. right now.
+8565 | VT-620224 | [monotone_minimal         ] Listen, Heads up: Okay.—copy.
+8566 | VT-685072 | [monotone_minimal         ] Heads up: Hey, No. Please. — now.
+8567 | VT-644159 | [monotone_minimal         ] Heads up: Okay, Fine. Please. if you can.
+8568 | VT-699469 | [monotone_minimal         ] Note: Hey, Fine. If possible. thanks.
+8569 | VT-586825 | [multilingual             ] 감사합니다, 다음에 봐요. right now.
+8570 | VT-675925 | [multilingual             ] Salam, sab thik hai? thanks.
+8571 | VT-650282 | [multilingual             ] Heads up: 你好，今天忙吗？ — got it.
+8572 | VT-598892 | [multilingual             ] Hola, ¿cómo estás? — got it.
+8573 | VT-539135 | [negations                ] Okay, Listen, We can’t ship without tests.—copy. if you can.
+8574 | VT-633280 | [negations                ] Note: FYI, No chance. Please.
+8575 | VT-606839 | [negations                ] Quick one: We can’t ship without tests. Right now. — confirm.
+8576 | VT-578483 | [negations                ] Heads up: Reminder: Never deploy on Friday. Right now. if you can. (alt)
+8577 | VT-600350 | [negations                ] Reminder: I won’t sign off on that.—got it. — confirm.
+8578 | VT-540218 | [negations                ] Quick one: Okay, I’m not doing that again. For real. right now. (alt)
+8579 | VT-560620 | [negations                ] Quick one: Note: Do not open that email. Thanks.
+8580 | VT-573488 | [negations                ] Reminder: Listen, We can’t ship without tests.—copy. if you can.
+8581 | VT-620340 | [negations                ] Quick one: Reminder: I’m not doing that again. If possible. thanks. (alt)
+8582 | VT-512668 | [negations                ] FYI, Never deploy on Friday.—copy. thanks.
+8583 | VT-592666 | [negations                ] Real talk, Okay, That’s not what I asked for. Thanks. if you can.
+8584 | VT-585459 | [negations                ] FYI, Listen, I won’t sign off on that. If possible. right now.
+8585 | VT-506593 | [negations                ] Quick one: Reminder: No chance.—copy. (alt)
+8586 | VT-503649 | [negations                ] Quick one: Hey, No logs, no proof. — confirm.
+8587 | VT-639286 | [negations                ] Listen, Okay, I’m not doing that again. If possible. thanks. (alt)
+8588 | VT-648958 | [negations                ] Hey, Do not open that email. Please. — confirm. (alt)
+8589 | VT-586528 | [negations                ] Reminder: Listen, No chance.—got it. thanks. (alt)
+8590 | VT-502866 | [negations                ] FYI, We can’t ship without tests. Right now. if you can.
+8591 | VT-589332 | [negations                ] FYI, I’m not doing that again. if you can. (alt)
+8592 | VT-604708 | [negations                ] FYI, Okay, That’s not what I asked for. Thanks..
+8593 | VT-526274 | [negations                ] Note: Hey, That’s not what I asked for. For real. — now. (alt)
+8594 | VT-586793 | [negations                ] Heads up: Note: That’s not what I asked for. Thanks. please.
+8595 | VT-699967 | [negations                ] Okay, Reminder: No chance. Please. — now.
+8596 | VT-545303 | [negations                ] Quick one: Note: Do not open that email. Thanks. if you can. (alt)
+8597 | VT-649582 | [negations                ] Note: Hey, Do not open that email.—got it..
+8598 | VT-520568 | [negations                ] Note: Listen, That’s not what I asked for. For real. if you can.
+8599 | VT-628568 | [negations                ] Real talk, Okay, I’m not doing that again. For real.
+8600 | VT-571031 | [negations                ] FYI, Note: Nothing about this is simple. For real. — now.

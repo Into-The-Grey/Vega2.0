@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 12 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0551 | VT-49372 | [dramatic                 ] Hey, And then the silence screamed louder than words. Thanks.
+0552 | VT-36374 | [dramatic                 ] Listen, I would burn the world to keep you warm.
+0553 | VT-51080 | [dramatic                 ] I would burn the world to keep you warm. Right now.
+0554 | VT-58616 | [dramatic                 ] Note: This isn't just a game—it’s everything.—got it.
+0555 | VT-64411 | [dramatic                 ] Heads up: This isn't just a game—it’s everything.—got it.
+0556 | VT-11693 | [dramatic                 ] Hey, I would burn the world to keep you warm.—got it.
+0557 | VT-96139 | [dramatic                 ] Okay, And then the silence screamed louder than words. If possible.
+0558 | VT-27748 | [dramatic                 ] Hey, This isn't just a game—it’s everything.—copy.
+0559 | VT-39647 | [dramatic                 ] Heads up: And then the silence screamed louder than words.—got it.
+0560 | VT-10277 | [dramatic                 ] Listen, This isn't just a game—it’s everything.—copy.
+0561 | VT-21141 | [dramatic                 ] Heads up: This isn't just a game—it’s everything. For real.
+0562 | VT-95666 | [dramatic                 ] Note: This isn't just a game—it’s everything.—got it.
+0563 | VT-11693 | [dramatic                 ] Hey, I would burn the world to keep you warm.—got it.
+0564 | VT-11693 | [dramatic                 ] Hey, I would burn the world to keep you warm.—got it.
+0565 | VT-88840 | [dramatic                 ] Note: And then the silence screamed louder than words. Right now.
+0566 | VT-27543 | [dramatic                 ] Listen, This isn't just a game—it’s everything.—copy.
+0567 | VT-59675 | [dramatic                 ] FYI, And then the silence screamed louder than words. If possible.
+0568 | VT-47398 | [dramatic                 ] And then the silence screamed louder than words. For real.
+0569 | VT-36883 | [dramatic                 ] Listen, And then the silence screamed louder than words.—copy.
+0570 | VT-23069 | [dramatic                 ] Reminder: This isn't just a game—it’s everything. Right now.
+0571 | VT-74496 | [dramatic                 ] FYI, This isn't just a game—it’s everything.—copy.
+0572 | VT-54627 | [dramatic                 ] Hey, And then the silence screamed louder than words. Right now.
+0573 | VT-88426 | [dramatic                 ] Reminder: I would burn the world to keep you warm. Right now.
+0574 | VT-16388 | [dramatic                 ] Okay, And then the silence screamed louder than words.
+0575 | VT-88426 | [dramatic                 ] Reminder: I would burn the world to keep you warm. Right now.
+0576 | VT-83952 | [dramatic                 ] Note: This isn't just a game—it’s everything. Right now.
+0577 | VT-59261 | [dramatic                 ] And then the silence screamed louder than words.
+0578 | VT-10204 | [dramatic                 ] Okay, I would burn the world to keep you warm. For real.
+0579 | VT-73994 | [dramatic                 ] Reminder: This isn't just a game—it’s everything. Right now.
+0580 | VT-51713 | [dramatic                 ] This isn't just a game—it’s everything.—got it.
+0581 | VT-10277 | [dramatic                 ] Listen, This isn't just a game—it’s everything.—copy.
+0582 | VT-52263 | [dramatic                 ] Reminder: And then the silence screamed louder than words. If possible.
+0583 | VT-40339 | [dramatic                 ] Note: And then the silence screamed louder than words.
+0584 | VT-10416 | [dramatic                 ] Listen, I would burn the world to keep you warm.—got it.
+0585 | VT-59463 | [dramatic                 ] FYI, This isn't just a game—it’s everything. For real.
+0586 | VT-36207 | [dramatic                 ] Okay, This isn't just a game—it’s everything. Thanks.
+0587 | VT-86035 | [dramatic                 ] Okay, I would burn the world to keep you warm. Right now.
+0588 | VT-51080 | [dramatic                 ] I would burn the world to keep you warm. Right now.
+0589 | VT-50604 | [dramatic                 ] And then the silence screamed louder than words. Thanks.
+0590 | VT-36923 | [dramatic                 ] Heads up: And then the silence screamed louder than words. If possible.
+0591 | VT-77548 | [dramatic                 ] Heads up: This isn't just a game—it’s everything.
+0592 | VT-10277 | [dramatic                 ] Listen, This isn't just a game—it’s everything.—copy.
+0593 | VT-48842 | [dramatic                 ] Okay, And then the silence screamed louder than words.—got it.
+0594 | VT-72248 | [dramatic                 ] Okay, I would burn the world to keep you warm.—got it.
+0595 | VT-84846 | [dramatic                 ] Heads up: And then the silence screamed louder than words. Right now.
+0596 | VT-29465 | [dramatic                 ] Note: And then the silence screamed louder than words. Right now.
+0597 | VT-56627 | [dramatic                 ] I would burn the world to keep you warm. Right now.
+0598 | VT-78338 | [dramatic                 ] FYI, This isn't just a game—it’s everything.—copy.
+0599 | VT-77548 | [dramatic                 ] Heads up: This isn't just a game—it’s everything.
+0600 | VT-26005 | [dramatic                 ] This isn't just a game—it’s everything. Thanks.

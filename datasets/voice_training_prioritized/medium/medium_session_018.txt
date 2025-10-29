@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 18 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0851 | VT-45213 | [sarcastic                ] Heads up: I'm totally not rolling my eyes right now. Thanks.
+0852 | VT-64678 | [sarcastic                ] Heads up: Oh great, another meeting that could've been an email.
+0853 | VT-50223 | [sarcastic                ] Listen, Oh great, another meeting that could've been an email. Thanks.
+0854 | VT-45213 | [sarcastic                ] Heads up: I'm totally not rolling my eyes right now. Thanks.
+0855 | VT-46820 | [sarcastic                ] Yeah, because that always works out perfectly, doesn’t it? For real.
+0856 | VT-97812 | [sarcastic                ] Okay, Yeah, because that always works out perfectly, doesn’t it?—copy.
+0857 | VT-17199 | [sarcastic                ] Okay, I'm totally not rolling my eyes right now.—got it.
+0858 | VT-90180 | [sarcastic                ] Hey, Yeah, because that always works out perfectly, doesn’t it?—copy.
+0859 | VT-33287 | [sarcastic                ] Note: Yeah, because that always works out perfectly, doesn’t it?
+0860 | VT-88161 | [sarcastic                ] FYI, I'm totally not rolling my eyes right now. Thanks.
+0861 | VT-63906 | [sarcastic                ] Heads up: I'm totally not rolling my eyes right now. Thanks.
+0862 | VT-35194 | [sarcastic                ] FYI, Oh great, another meeting that could've been an email. Right now.
+0863 | VT-64660 | [sarcastic                ] Hey, Oh great, another meeting that could've been an email. For real.
+0864 | VT-14444 | [sarcastic                ] Listen, I'm totally not rolling my eyes right now.
+0865 | VT-83904 | [sarcastic                ] FYI, Yeah, because that always works out perfectly, doesn’t it? Thanks.
+0866 | VT-48579 | [sarcastic                ] Okay, I'm totally not rolling my eyes right now. Thanks.
+0867 | VT-56554 | [sarcastic                ] Note: Oh great, another meeting that could've been an email.—copy.
+0868 | VT-94387 | [sarcastic                ] Okay, Oh great, another meeting that could've been an email. For real.
+0869 | VT-87626 | [sarcastic                ] FYI, Yeah, because that always works out perfectly, doesn’t it?
+0870 | VT-82604 | [sarcastic                ] Okay, Oh great, another meeting that could've been an email. If possible.
+0871 | VT-63906 | [sarcastic                ] Heads up: I'm totally not rolling my eyes right now. Thanks.
+0872 | VT-21113 | [sarcastic                ] I'm totally not rolling my eyes right now. For real.
+0873 | VT-25038 | [sarcastic                ] Hey, Yeah, because that always works out perfectly, doesn’t it?—copy.
+0874 | VT-63642 | [sarcastic                ] Yeah, because that always works out perfectly, doesn’t it?
+0875 | VT-19213 | [sarcastic                ] Heads up: Yeah, because that always works out perfectly, doesn’t it?—copy.
+0876 | VT-99989 | [sarcastic                ] Note: I'm totally not rolling my eyes right now. Please.
+0877 | VT-34435 | [sarcastic                ] Note: Oh great, another meeting that could've been an email. Right now.
+0878 | VT-13294 | [sarcastic                ] Note: I'm totally not rolling my eyes right now. Thanks.
+0879 | VT-14159 | [sarcastic                ] Listen, Oh great, another meeting that could've been an email. Please.
+0880 | VT-34237 | [sarcastic                ] Note: I'm totally not rolling my eyes right now.
+0881 | VT-41443 | [sarcastic                ] Note: Oh great, another meeting that could've been an email. For real.
+0882 | VT-93446 | [sarcastic                ] Reminder: I'm totally not rolling my eyes right now.—copy.
+0883 | VT-14159 | [sarcastic                ] Listen, Oh great, another meeting that could've been an email. Please.
+0884 | VT-50793 | [sarcastic                ] Reminder: Oh great, another meeting that could've been an email. Thanks.
+0885 | VT-50793 | [sarcastic                ] Reminder: Oh great, another meeting that could've been an email. Thanks.
+0886 | VT-30328 | [sarcastic                ] I'm totally not rolling my eyes right now. Right now.
+0887 | VT-87861 | [sarcastic                ] Note: I'm totally not rolling my eyes right now.
+0888 | VT-41010 | [sarcastic                ] Listen, Yeah, because that always works out perfectly, doesn’t it? For real.
+0889 | VT-87626 | [sarcastic                ] FYI, Yeah, because that always works out perfectly, doesn’t it?
+0890 | VT-16523 | [sarcastic                ] FYI, Oh great, another meeting that could've been an email. Please.
+0891 | VT-57740 | [sarcastic                ] Listen, I'm totally not rolling my eyes right now. Please.
+0892 | VT-34471 | [sarcastic                ] Hey, I'm totally not rolling my eyes right now.
+0893 | VT-41388 | [sarcastic                ] Reminder: I'm totally not rolling my eyes right now.—got it.
+0894 | VT-17199 | [sarcastic                ] Okay, I'm totally not rolling my eyes right now.—got it.
+0895 | VT-30328 | [sarcastic                ] I'm totally not rolling my eyes right now. Right now.
+0896 | VT-88161 | [sarcastic                ] FYI, I'm totally not rolling my eyes right now. Thanks.
+0897 | VT-63434 | [sarcastic                ] Okay, Oh great, another meeting that could've been an email. Please.
+0898 | VT-13387 | [sarcastic                ] Listen, Yeah, because that always works out perfectly, doesn’t it?
+0899 | VT-59547 | [sarcastic                ] Heads up: Oh great, another meeting that could've been an email. For real.
+0900 | VT-22231 | [sarcastic                ] Reminder: I'm totally not rolling my eyes right now.—got it.

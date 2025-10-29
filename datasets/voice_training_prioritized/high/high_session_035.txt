@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 35 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1701 | VT-437598 | [dates_times              ] FYI, Hey, Timer: three hours, twenty-one minutes, go. (4607)—copy. right now.
+1702 | VT-487902 | [dates_times              ] Quick one: Timer: three hours, twenty-one minutes, go. (2935) Please. if you can.
+1703 | VT-452745 | [dates_times              ] Reminder: Hey, Sunrise is at 06:58; sunset at 17:12. (2241) right now.
+1704 | VT-457950 | [dates_times              ] Reminder: Reminder: Set a reminder for 7:45 PM on Friday. (980) If possible. if you can.
+1705 | VT-409739 | [dates_times              ] Okay, FYI, Set a reminder for 7:45 PM on Friday. (8394) Thanks. thanks. (alt)
+1706 | VT-450790 | [dates_times              ] Real talk, Reminder: Timer: three hours, twenty-one minutes, go. (6291) Right now. please.
+1707 | VT-464033 | [dates_times              ] Heads up: Reminder: Today is the 27th of October, 2025. (3041)—copy. if you can.
+1708 | VT-491725 | [dates_times              ] Real talk, Hey, What's the date two weeks from yesterday? (653) If possible. — now. (alt)
+1709 | VT-412834 | [dates_times              ] Note: Reminder: What's the date two weeks from yesterday? (1429) If possible. — confirm. (alt)
+1710 | VT-409455 | [dates_times              ] Quick one: Heads up: What's the date two weeks from yesterday? (9367)—got it. if you can. (alt)
+1711 | VT-406080 | [dates_times              ] FYI, Reminder: Sunrise is at 06:58; sunset at 17:12. (9810) Right now. please.
+1712 | VT-405782 | [dates_times              ] Okay, Reminder: The deadline moved from Q3 to Q4. (8292) For real. if you can.
+1713 | VT-418397 | [dates_times              ] FYI, The deadline moved from Q3 to Q4. (7352) Please. thanks.
+1714 | VT-432972 | [dates_times              ] Note: Set a reminder for 7:45 PM on Friday. (6412) right now. (alt)
+1715 | VT-493925 | [dates_times              ] Okay, Timer: three hours, twenty-one minutes, go. (414)—copy. right now.
+1716 | VT-433469 | [dates_times              ] Quick one: Listen, The deadline moved from Q3 to Q4. (2015) Please..
+1717 | VT-406983 | [dates_times              ] Reminder: Convert 14:30 UTC to Central Time. (6776) — now.
+1718 | VT-429277 | [dates_times              ] Quick one: Set a reminder for 7:45 PM on Friday. (6140) If possible. — now.
+1719 | VT-481456 | [dates_times              ] Note: Note: Set a reminder for 7:45 PM on Friday. (6412) please.
+1720 | VT-485873 | [dates_times              ] Real talk, Note: The deadline moved from Q3 to Q4. (4232)—copy. — confirm.
+1721 | VT-470052 | [dates_times              ] Reminder: Set a reminder for 7:45 PM on Friday. (980) If possible. thanks.
+1722 | VT-489801 | [dates_times              ] Reminder: Schedule it biweekly starting next Monday. (3368) Please. if you can.
+1723 | VT-408744 | [dates_times              ] Real talk, Reminder: My birthday is on 02/29—leap year baby. (4725) Thanks. if you can. (alt)
+1724 | VT-462704 | [dates_times              ] FYI, FYI, Timer: three hours, twenty-one minutes, go. (8808) Thanks. (alt)
+1725 | VT-445854 | [dates_times              ] Listen, Note: Today is the 27th of October, 2025. (5842) If possible. if you can.
+1726 | VT-434639 | [dates_times              ] Real talk, Hey, What's the date two weeks from yesterday? (653) If possible. — now. (alt)
+1727 | VT-478696 | [dates_times              ] FYI, Reminder: Sunrise is at 06:58; sunset at 17:12. (9408) If possible. thanks. (alt)
+1728 | VT-432961 | [dates_times              ] Quick one: Note: Convert 14:30 UTC to Central Time. (4609) Please. please.
+1729 | VT-459535 | [dates_times              ] Heads up: What's the date two weeks from yesterday? — got it. (alt)
+1730 | VT-457210 | [dates_times              ] Reminder: Sunrise is at 06:58; sunset at 17:12. (2304)—got it. — now.
+1731 | VT-414363 | [hesitations_fillers      ] Real talk, Heads up: Hmm, not exactly, but close. If possible. right now.
+1732 | VT-464843 | [hesitations_fillers      ] Quick one: Listen, Right… so… moving on. Right now. — got it.
+1733 | VT-455397 | [hesitations_fillers      ] Okay, Reminder: Hmm, not exactly, but close. For real. — got it.
+1734 | VT-457714 | [hesitations_fillers      ] Okay, Heads up: I… I don’t know if that’ll fly. For real. please.
+1735 | VT-405621 | [hesitations_fillers      ] Quick one: Mmm, nope, that’s not it. Please. thanks. (alt)
+1736 | VT-431503 | [hesitations_fillers      ] Note: Heads up: Well, I mean, like, kind of, yeah..
+1737 | VT-408516 | [hesitations_fillers      ] Listen, Note: Uh… hang on… what was I saying? Right now. — confirm.
+1738 | VT-468216 | [hesitations_fillers      ] FYI, Heads up: Hmm, not exactly, but close. If possible. — got it.
+1739 | VT-487023 | [hesitations_fillers      ] Note: Well, I mean, like, kind of, yeah. Please. — now.
+1740 | VT-451513 | [hesitations_fillers      ] Note: Reminder: I… I don’t know if that’ll fly.—copy. — confirm.
+1741 | VT-472261 | [hesitations_fillers      ] Heads up: Reminder: Wait—uh—did you hear that? thanks.
+1742 | VT-406262 | [hesitations_fillers      ] Listen, FYI, Mmm, nope, that’s not it. Thanks.
+1743 | VT-409070 | [hesitations_fillers      ] Reminder: Right… so… moving on.—copy. — got it.
+1744 | VT-460556 | [hesitations_fillers      ] Real talk, Listen, So—yeah—about that plan… — confirm.
+1745 | VT-436515 | [hesitations_fillers      ] Real talk, Listen, Well, I mean, like, kind of, yeah.—got it. please. (alt)
+1746 | VT-401055 | [hesitations_fillers      ] Heads up: Note: Uh… hang on… what was I saying? Right now..
+1747 | VT-410216 | [hesitations_fillers      ] Quick one: Right… so… moving on. Right now.
+1748 | VT-494593 | [hesitations_fillers      ] Listen, Reminder: Hmm, not exactly, but close. Please. thanks. (alt)
+1749 | VT-493916 | [hesitations_fillers      ] Reminder: Well, I mean, like, kind of, yeah. (alt)
+1750 | VT-476491 | [hesitations_fillers      ] FYI, Reminder: Wait—uh—did you hear that? — confirm. (alt)

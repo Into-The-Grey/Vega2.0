@@ -3,26 +3,19 @@ VEGA Prioritized Training Plan Generator
 =========================================
 
 Splits the full 20,040-line dataset into priority-based training sessions:
-- CRITICAL: Essential for basic functionality (2,000 lines)
-- HIGH: Important for natural interaction (4,000 lines)
-- MEDIUM: Enhances expressiveness (6,000 lines)
-- LOW: Adds variety and edge cases (5,000 lines)
-- OPTIONAL: Nice-to-have specialized content (3,040 lines)
+- CRITICAL: Essential for basic functionality (~3,000 lines)
+- HIGH: Important for natural interaction (~5,000 lines)
+- MEDIUM: Enhances expressiveness (~6,000 lines)
+- LOW: Adds variety and edge cases (~4,000 lines)
+- OPTIONAL: Nice-to-have specialized content (~2,040 lines)
 
-Each priority level is further subdivided into manageable 100-200 line sessions.
+Each priority level is split into manageable 50-line sessions.
 """
 
-import sys
-import os
+import csv
 from pathlib import Path
-from typing import Dict, List, Tuple
-
-# Prevent torch from loading (memory issue)
-os.environ['LIBROSA_CACHE_DIR'] = '/tmp/librosa_cache'
-
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-
-from vega.training.voice_line_manager import VoiceLineManager, VoiceLine
+from typing import Dict, List
+from collections import Counter
 
 
 class PrioritizedTrainingPlan:

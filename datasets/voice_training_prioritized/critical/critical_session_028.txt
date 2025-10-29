@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 28 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1351 | VT-79800 | [question_variants        ] Reminder: Is everything okay with that? Please.
+1352 | VT-96388 | [question_variants        ] Listen, We good?—got it.
+1353 | VT-70619 | [question_variants        ] Listen, Is everything okay with that? Please.
+1354 | VT-77057 | [question_variants        ] Heads up: Can you confirm we’re good? Please.
+1355 | VT-93777 | [question_variants        ] Note: Positive? Please.
+1356 | VT-93777 | [question_variants        ] Note: Positive? Please.
+1357 | VT-35519 | [question_variants        ] Heads up: Positive? Thanks.
+1358 | VT-95180 | [question_variants        ] Okay, Can you confirm we’re good?—got it.
+1359 | VT-40549 | [question_variants        ] Hey, Can you confirm we’re good?
+1360 | VT-84394 | [question_variants        ] Listen, What’s the catch?—copy.
+1361 | VT-36436 | [question_variants        ] Hey, Is everything okay with that?—got it.
+1362 | VT-35348 | [question_variants        ] Note: Positive? Right now.
+1363 | VT-74043 | [question_variants        ] Reminder: We good? Thanks.
+1364 | VT-35145 | [question_variants        ] Any reason not to proceed? Right now.
+1365 | VT-41833 | [question_variants        ] Heads up: Are we good? Please.
+1366 | VT-80928 | [question_variants        ] Heads up: You sure?
+1367 | VT-41833 | [question_variants        ] Heads up: Are we good? Please.
+1368 | VT-72937 | [question_variants        ] Reminder: Does that check out? Thanks.
+1369 | VT-71756 | [question_variants        ] Good—yes or no?
+1370 | VT-48721 | [question_variants        ] Good—yes or no? Thanks.
+1371 | VT-87805 | [question_variants        ] Is everything okay with that?
+1372 | VT-97150 | [question_variants        ] Hey, You sure? Right now.
+1373 | VT-96388 | [question_variants        ] Listen, We good?—got it.
+1374 | VT-49116 | [question_variants        ] Heads up: Is everything okay with that? For real.
+1375 | VT-21576 | [question_variants        ] Note: Are we good? Right now.
+1376 | VT-13590 | [question_variants        ] Okay, We good?
+1377 | VT-86193 | [question_variants        ] FYI, We good?—got it.
+1378 | VT-98256 | [question_variants        ] Okay, Any reason not to proceed? Please.
+1379 | VT-75840 | [question_variants        ] Note: Positive? For real.
+1380 | VT-25369 | [question_variants        ] What’s the catch?—got it.
+1381 | VT-32275 | [question_variants        ] Reminder: Does that check out? Right now.
+1382 | VT-95082 | [question_variants        ] Hey, What’s the catch? For real.
+1383 | VT-50295 | [question_variants        ] Listen, Good—yes or no? Right now.
+1384 | VT-96388 | [question_variants        ] Listen, We good?—got it.
+1385 | VT-58988 | [question_variants        ] Heads up: Does that check out? Please.
+1386 | VT-69842 | [question_variants        ] Reminder: We good? Thanks.
+1387 | VT-74677 | [question_variants        ] Okay, We good?—copy.
+1388 | VT-35491 | [question_variants        ] Reminder: Any reason not to proceed? Right now.
+1389 | VT-15189 | [question_variants        ] Hey, What’s the catch? Please.
+1390 | VT-35387 | [question_variants        ] FYI, Are we good? For real.
+1391 | VT-50295 | [question_variants        ] Listen, Good—yes or no? Right now.
+1392 | VT-82478 | [question_variants        ] FYI, Are we good? If possible.
+1393 | VT-50295 | [question_variants        ] Listen, Good—yes or no? Right now.
+1394 | VT-20654 | [question_variants        ] Heads up: Can you confirm we’re good? If possible.
+1395 | VT-22387 | [question_variants        ] Reminder: Are we good? Right now.
+1396 | VT-50295 | [question_variants        ] Listen, Good—yes or no? Right now.
+1397 | VT-366237 | [agreements               ] Okay, I’m in.—got it. — got it. (alt)
+1398 | VT-385181 | [agreements               ] Real talk, Reminder: Copy that.—copy.. (alt)
+1399 | VT-377236 | [agreements               ] Listen, Okay, I’m in.—got it.
+1400 | VT-320926 | [agreements               ] Reminder: That’s a yes from me. Right now. if you can.

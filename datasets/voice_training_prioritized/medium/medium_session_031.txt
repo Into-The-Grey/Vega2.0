@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 31 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1501 | VT-438009 | [emotional                ] Heads up: Heads up: I miss you more than words can say. thanks.
+1502 | VT-497530 | [emotional                ] Reminder: Okay, Why does everything have to hurt so much?—copy. if you can.
+1503 | VT-402307 | [emotional                ] Listen, I'm so proud of how far we've come. Please. right now.
+1504 | VT-458092 | [emotional                ] Okay, I'm so proud of how far we've come. Please..
+1505 | VT-416444 | [emotional                ] Listen, Reminder: Why does everything have to hurt so much?—got it. please. (alt)
+1506 | VT-437541 | [emotional                ] Real talk, Hey, I'm so proud of how far we've come. Thanks. right now.
+1507 | VT-428601 | [emotional                ] Reminder: Hey, Why does everything have to hurt so much? Please. — confirm. (alt)
+1508 | VT-451202 | [emotional                ] Listen, Heads up: I'm so proud of how far we've come. Right now. right now. (alt)
+1509 | VT-435189 | [emotional                ] Note: FYI, I'm so proud of how far we've come.—got it.. (alt)
+1510 | VT-495602 | [narrative                ] Okay, When I was five, I thought the moon followed me everywhere. If possible. (alt)
+1511 | VT-494643 | [narrative                ] Reminder: Back in college, we used to hack vending machines for snacks.—got it. — now. (alt)
+1512 | VT-413335 | [narrative                ] Listen, Hey, Back in college, we used to hack vending machines for snacks. Right now. thanks.
+1513 | VT-468689 | [narrative                ] Listen, Note: Back in college, we used to hack vending machines for snacks. Right now. please.
+1514 | VT-490999 | [narrative                ] FYI, He opened the envelope, not knowing it would change his life forever. Right now. (alt)
+1515 | VT-441847 | [narrative                ] Okay, FYI, Back in college, we used to hack vending machines for snacks. Right now..
+1516 | VT-433700 | [narrative                ] Heads up: Okay, Back in college, we used to hack vending machines for snacks. Please. — now.
+1517 | VT-430892 | [narrative                ] Quick one: Okay, When I was five, I thought the moon followed me everywhere. If possible. right now.
+1518 | VT-431901 | [narrative                ] Quick one: FYI, He opened the envelope, not knowing it would change his life forever. Thanks.. (alt)
+1519 | VT-478299 | [narrative                ] Okay, FYI, Back in college, we used to hack vending machines for snacks. Thanks..
+1520 | VT-454202 | [narrative                ] Real talk, Okay, When I was five, I thought the moon followed me everywhere.—got it. right now.
+1521 | VT-412408 | [narrative                ] Quick one: Back in college, we used to hack vending machines for snacks. For real.
+1522 | VT-438888 | [narrative                ] Heads up: Heads up: When I was five, I thought the moon followed me everywhere. thanks.
+1523 | VT-475685 | [narrative                ] Heads up: Okay, He opened the envelope, not knowing it would change his life forever.—copy. please.
+1524 | VT-402023 | [narrative                ] Heads up: Reminder: He opened the envelope, not knowing it would change his life forever..
+1525 | VT-490966 | [narrative                ] Heads up: FYI, He opened the envelope, not knowing it would change his life forever. Please. please.
+1526 | VT-404092 | [narrative                ] Heads up: Back in college, we used to hack vending machines for snacks. For real. — got it.
+1527 | VT-447959 | [narrative                ] Reminder: Note: He opened the envelope, not knowing it would change his life forever. For real. — got it.
+1528 | VT-428660 | [narrative                ] Real talk, He opened the envelope, not knowing it would change his life forever. please.
+1529 | VT-410208 | [narrative                ] Reminder: Okay, When I was five, I thought the moon followed me everywhere.—got it.
+1530 | VT-466818 | [narrative                ] Reminder: Heads up: He opened the envelope, not knowing it would change his life forever. Thanks.
+1531 | VT-487606 | [narrative                ] Listen, FYI, He opened the envelope, not knowing it would change his life forever.—copy. thanks.
+1532 | VT-443929 | [narrative                ] Quick one: When I was five, I thought the moon followed me everywhere. Thanks. — confirm.
+1533 | VT-492371 | [narrative                ] Heads up: Okay, Back in college, we used to hack vending machines for snacks. Please. — now.
+1534 | VT-468230 | [narrative                ] Note: Heads up: He opened the envelope, not knowing it would change his life forever. Please. — confirm.
+1535 | VT-437291 | [narrative                ] Heads up: Listen, When I was five, I thought the moon followed me everywhere. Right now. please.
+1536 | VT-425600 | [narrative                ] Quick one: Hey, When I was five, I thought the moon followed me everywhere. For real. right now.
+1537 | VT-431722 | [narrative                ] Quick one: Heads up: He opened the envelope, not knowing it would change his life forever. Please. — confirm. (alt)
+1538 | VT-497240 | [narrative                ] Quick one: FYI, When I was five, I thought the moon followed me everywhere. Right now..
+1539 | VT-493066 | [narrative                ] Quick one: Hey, He opened the envelope, not knowing it would change his life forever. Thanks. please. (alt)
+1540 | VT-419344 | [narrative                ] Heads up: FYI, He opened the envelope, not knowing it would change his life forever. For real.
+1541 | VT-428599 | [narrative                ] Note: Back in college, we used to hack vending machines for snacks. Right now.
+1542 | VT-485562 | [narrative                ] When I was five, I thought the moon followed me everywhere. right now.
+1543 | VT-440025 | [narrative                ] Note: Note: Back in college, we used to hack vending machines for snacks.—copy..
+1544 | VT-497599 | [narrative                ] Quick one: Reminder: Back in college, we used to hack vending machines for snacks. If possible. — confirm.
+1545 | VT-423231 | [narrative                ] Reminder: When I was five, I thought the moon followed me everywhere. Right now. — now. (alt)
+1546 | VT-484170 | [narrative                ] Reminder: When I was five, I thought the moon followed me everywhere. right now. (alt)
+1547 | VT-456019 | [narrative                ] Okay, FYI, He opened the envelope, not knowing it would change his life forever. Please..
+1548 | VT-469142 | [narrative                ] Note: Back in college, we used to hack vending machines for snacks.—copy. if you can.
+1549 | VT-487096 | [narrative                ] FYI, Note: Back in college, we used to hack vending machines for snacks. Thanks..
+1550 | VT-422426 | [narrative                ] Real talk, Okay, Back in college, we used to hack vending machines for snacks. Please. — confirm.

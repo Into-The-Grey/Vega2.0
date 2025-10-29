@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 105 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+5201 | VT-295729 | [trash_talk               ] Great flank—on your own teammates.
+5202 | VT-277353 | [trash_talk               ] Good game; uninstall only if you want peace.
+5203 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5204 | VT-230273 | [trash_talk               ] Nice whiff—crosshair on vacation?
+5205 | VT-288650 | [trash_talk               ] Holding W isn’t a strategy; it’s a cry for help.
+5206 | VT-284336 | [trash_talk               ] Next time, ping before you feed.
+5207 | VT-226969 | [trash_talk               ] You’re padding stats; scoreboard says otherwise.
+5208 | VT-284336 | [trash_talk               ] Next time, ping before you feed.
+5209 | VT-295729 | [trash_talk               ] Great flank—on your own teammates.
+5210 | VT-279263 | [trash_talk               ] You brought a pea shooter to a boss fight.
+5211 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5212 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5213 | VT-288650 | [trash_talk               ] Holding W isn’t a strategy; it’s a cry for help.
+5214 | VT-279263 | [trash_talk               ] You brought a pea shooter to a boss fight.
+5215 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5216 | VT-289396 | [trash_talk               ] If that was your strat, keep it; we farmed it.
+5217 | VT-230273 | [trash_talk               ] Nice whiff—crosshair on vacation?
+5218 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5219 | VT-277353 | [trash_talk               ] Good game; uninstall only if you want peace.
+5220 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5221 | VT-284336 | [trash_talk               ] Next time, ping before you feed.
+5222 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5223 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5224 | VT-289396 | [trash_talk               ] If that was your strat, keep it; we farmed it.
+5225 | VT-289396 | [trash_talk               ] If that was your strat, keep it; we farmed it.
+5226 | VT-226969 | [trash_talk               ] You’re padding stats; scoreboard says otherwise.
+5227 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5228 | VT-277353 | [trash_talk               ] Good game; uninstall only if you want peace.
+5229 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5230 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5231 | VT-230273 | [trash_talk               ] Nice whiff—crosshair on vacation?
+5232 | VT-289396 | [trash_talk               ] If that was your strat, keep it; we farmed it.
+5233 | VT-277353 | [trash_talk               ] Good game; uninstall only if you want peace.
+5234 | VT-288650 | [trash_talk               ] Holding W isn’t a strategy; it’s a cry for help.
+5235 | VT-226969 | [trash_talk               ] You’re padding stats; scoreboard says otherwise.
+5236 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5237 | VT-279263 | [trash_talk               ] You brought a pea shooter to a boss fight.
+5238 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5239 | VT-284336 | [trash_talk               ] Next time, ping before you feed.
+5240 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5241 | VT-226969 | [trash_talk               ] You’re padding stats; scoreboard says otherwise.
+5242 | VT-284336 | [trash_talk               ] Next time, ping before you feed.
+5243 | VT-90096 | [uncertainty              ] Note: It depends on the constraints.—got it.
+5244 | VT-79519 | [uncertainty              ] Okay, I don’t have that info.—copy.
+5245 | VT-78469 | [uncertainty              ] Note: It depends on the constraints.—copy.
+5246 | VT-77863 | [uncertainty              ] Hey, Possibly, but unlikely. If possible.
+5247 | VT-89772 | [uncertainty              ] I doubt it. If possible.
+5248 | VT-98422 | [uncertainty              ] Note: Hard to say without more data.—copy.
+5249 | VT-49637 | [uncertainty              ] Note: I’m not sure yet. Right now.
+5250 | VT-90096 | [uncertainty              ] Note: It depends on the constraints.—got it.

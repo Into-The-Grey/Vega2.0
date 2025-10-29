@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 182 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+9051 | VT-626245 | [sales_pitch              ] FYI, Hey, This offer won’t last—act today!—copy..
+9052 | VT-618463 | [sales_pitch              ] Real talk, Why settle for less when you can have excellence? if you can.
+9053 | VT-595382 | [sales_pitch              ] Quick one: Note: Why settle for less when you can have excellence? if you can.
+9054 | VT-637416 | [sales_pitch              ] Real talk, This offer won’t last—act today!—got it.
+9055 | VT-680207 | [sales_pitch              ] FYI, Reminder: Unlock premium features now with just one click! Thanks. — confirm.
+9056 | VT-643819 | [sales_pitch              ] Quick one: Reminder: Unlock premium features now with just one click!.
+9057 | VT-584594 | [sales_pitch              ] Reminder: This offer won’t last—act today!—got it. right now.
+9058 | VT-528434 | [sales_pitch              ] Heads up: Okay, Why settle for less when you can have excellence? — got it.
+9059 | VT-581159 | [sales_pitch              ] Reminder: Reminder: Why settle for less when you can have excellence? if you can.
+9060 | VT-600642 | [sales_pitch              ] Listen, Heads up: This offer won’t last—act today! Please. right now. (alt)
+9061 | VT-608263 | [sales_pitch              ] Reminder: Why settle for less when you can have excellence? For real..
+9062 | VT-550345 | [sales_pitch              ] Listen, Reminder: Why settle for less when you can have excellence? For real. right now. (alt)
+9063 | VT-509673 | [sales_pitch              ] Real talk, Hey, This offer won’t last—act today! Right now. if you can.
+9064 | VT-543546 | [sales_pitch              ] Note: Hey, This offer won’t last—act today! Please. — got it. (alt)
+9065 | VT-677549 | [sales_pitch              ] Real talk, Heads up: Unlock premium features now with just one click!—got it. right now.
+9066 | VT-682390 | [sales_pitch              ] FYI, Note: Unlock premium features now with just one click! If possible. — now.
+9067 | VT-530084 | [sales_pitch              ] FYI, Hey, This offer won’t last—act today!—got it. — got it.
+9068 | VT-688995 | [sales_pitch              ] Quick one: Okay, Why settle for less when you can have excellence?—copy. — now.
+9069 | VT-537914 | [sales_pitch              ] Real talk, Okay, This offer won’t last—act today! For real. right now.
+9070 | VT-642562 | [sales_pitch              ] Reminder: Okay, Unlock premium features now with just one click!—got it. thanks.
+9071 | VT-662540 | [slang-heavy              ] Okay, Yo, that was straight fire, no cap!.
+9072 | VT-668653 | [slang-heavy              ] Quick one: She ghosted me after I dropped the bag, smh. — got it.
+9073 | VT-638754 | [slang-heavy              ] Okay, We vibin’ or what? please.
+9074 | VT-583234 | [slang-heavy              ] Reminder: Reminder: Yo, that was straight fire, no cap!—copy. right now.
+9075 | VT-691285 | [slang-heavy              ] FYI, Okay, She ghosted me after I dropped the bag, smh..
+9076 | VT-690382 | [slang-heavy              ] Reminder: Listen, We vibin’ or what?—got it. please.
+9077 | VT-574090 | [slang-heavy              ] Okay, Okay, Yo, that was straight fire, no cap! Thanks. thanks.
+9078 | VT-685643 | [slang-heavy              ] Reminder: Heads up: She ghosted me after I dropped the bag, smh. Thanks. please.
+9079 | VT-673849 | [slang-heavy              ] Listen, Note: We vibin’ or what? For real. — got it.
+9080 | VT-588802 | [slang-heavy              ] Real talk, Heads up: Yo, that was straight fire, no cap!—copy.
+9081 | VT-541684 | [slang-heavy              ] Reminder: She ghosted me after I dropped the bag, smh. For real.
+9082 | VT-583763 | [slang-heavy              ] Note: Heads up: We vibin’ or what? If possible. right now.
+9083 | VT-519664 | [slang-heavy              ] Listen, Note: Yo, that was straight fire, no cap!—copy. if you can.
+9084 | VT-549800 | [slang-heavy              ] Reminder: She ghosted me after I dropped the bag, smh. Thanks. if you can.
+9085 | VT-500022 | [slang-heavy              ] Heads up: Listen, We vibin’ or what? For real. please. (alt)
+9086 | VT-517551 | [slang-heavy              ] Okay, Yo, that was straight fire, no cap! Thanks. if you can.
+9087 | VT-685578 | [slang-heavy              ] Real talk, Okay, She ghosted me after I dropped the bag, smh. Please. thanks.
+9088 | VT-624653 | [slang-heavy              ] Okay, FYI, We vibin’ or what?—copy.
+9089 | VT-572433 | [slang-heavy              ] FYI, Listen, Yo, that was straight fire, no cap!.
+9090 | VT-549191 | [slang-heavy              ] Heads up: She ghosted me after I dropped the bag, smh.—copy.
+9091 | VT-604477 | [slang-heavy              ] Heads up: Okay, We vibin’ or what? Thanks. — confirm.
+9092 | VT-640560 | [slang-heavy              ] Real talk, Reminder: Yo, that was straight fire, no cap! Thanks. please.
+9093 | VT-526037 | [slang-heavy              ] Listen, She ghosted me after I dropped the bag, smh. Please. — got it. (alt)
+9094 | VT-567213 | [slang-heavy              ] Note: Heads up: We vibin’ or what? — got it.
+9095 | VT-682339 | [slang-heavy              ] Reminder: FYI, Yo, that was straight fire, no cap! For real.
+9096 | VT-657866 | [slang-heavy              ] Reminder: Note: She ghosted me after I dropped the bag, smh.—got it..
+9097 | VT-557475 | [slang-heavy              ] We vibin’ or what? For real. — got it.
+9098 | VT-567566 | [slang-heavy              ] Okay, Yo, that was straight fire, no cap!—copy. if you can. (alt)
+9099 | VT-565446 | [slang-heavy              ] Note: Reminder: She ghosted me after I dropped the bag, smh. Thanks. — now.
+9100 | VT-653417 | [slang-heavy              ] Heads up: Note: We vibin’ or what? Thanks. right now.

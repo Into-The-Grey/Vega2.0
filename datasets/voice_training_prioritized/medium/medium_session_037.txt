@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 37 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1801 | VT-533046 | [creative                 ] Listen, The crisp pattern drifted at the edge of the room. Right now. right now. (alt)
+1802 | VT-653481 | [creative                 ] Heads up: The crisp pattern drifted at the edge of the room. If possible.
+1803 | VT-684459 | [creative                 ] Listen, Hey, The dusty ripple gathered at the edge of the room.—got it. please.
+1804 | VT-622607 | [creative                 ] Listen, Reminder: The dusty ripple gathered at the edge of the room.—got it. — got it.
+1805 | VT-606947 | [creative                 ] Okay, Hey, The crisp pattern drifted at the edge of the room.—copy. right now.
+1806 | VT-591229 | [creative                 ] Quick one: Listen, The dusty ripple gathered at the edge of the room. Please. if you can.
+1807 | VT-600409 | [creative                 ] Real talk, FYI, The dusty ripple gathered at the edge of the room. Thanks. — confirm.
+1808 | VT-684797 | [creative                 ] Real talk, Hey, The crisp pattern drifted at the edge of the room. Thanks. thanks.
+1809 | VT-645686 | [creative                 ] Listen, Heads up: The dusty ripple gathered at the edge of the room. if you can.
+1810 | VT-553629 | [creative                 ] Quick one: Note: The crisp pattern drifted at the edge of the room. Right now. if you can.
+1811 | VT-603632 | [creative                 ] Heads up: Heads up: The dusty ripple gathered at the edge of the room. For real. please.
+1812 | VT-514160 | [creative                 ] Quick one: Listen, The dusty ripple gathered at the edge of the room. If possible..
+1813 | VT-629914 | [creative                 ] Okay, The dusty ripple gathered at the edge of the room. Please. right now. (alt)
+1814 | VT-679430 | [creative                 ] Reminder: The crisp pattern drifted at the edge of the room. — confirm.
+1815 | VT-528936 | [creative                 ] Okay, The dusty ripple gathered at the edge of the room. If possible. — confirm. (alt)
+1816 | VT-667000 | [creative                 ] Reminder: Note: The dusty ripple gathered at the edge of the room. Please. — now.
+1817 | VT-561858 | [creative                 ] Quick one: Okay, The crisp pattern drifted at the edge of the room. Thanks.
+1818 | VT-681222 | [creative                 ] Reminder: Hey, The crisp pattern drifted at the edge of the room.
+1819 | VT-588873 | [creative                 ] Reminder: Reminder: The crisp pattern drifted at the edge of the room. Please. — now. (alt)
+1820 | VT-644534 | [creative                 ] Quick one: FYI, The dusty ripple gathered at the edge of the room. Please. — got it.
+1821 | VT-651609 | [creative                 ] Hey, The dusty ripple gathered at the edge of the room.—got it..
+1822 | VT-620085 | [creative                 ] FYI, Hey, The dusty ripple gathered at the edge of the room.—got it. if you can. (alt)
+1823 | VT-676204 | [creative                 ] Okay, Reminder: The dusty ripple gathered at the edge of the room.—got it. — got it.
+1824 | VT-667800 | [creative                 ] Note: The dusty ripple gathered at the edge of the room. — now.
+1825 | VT-516192 | [creative                 ] FYI, The dusty ripple gathered at the edge of the room. For real. thanks.
+1826 | VT-514057 | [creative                 ] FYI, Note: The dusty ripple gathered at the edge of the room. Thanks..
+1827 | VT-659222 | [creative                 ] Listen, FYI, The dusty ripple gathered at the edge of the room. If possible. if you can.
+1828 | VT-514841 | [creative                 ] Real talk, Heads up: The dusty ripple gathered at the edge of the room.—got it. if you can.
+1829 | VT-544068 | [creative                 ] Heads up: Note: The dusty ripple gathered at the edge of the room. Thanks. right now.
+1830 | VT-583772 | [creative                 ] Okay, Okay, The dusty ripple gathered at the edge of the room.—got it. if you can.
+1831 | VT-531640 | [creative                 ] Quick one: FYI, The dusty ripple gathered at the edge of the room.—copy. — got it.
+1832 | VT-661981 | [creative                 ] Note: Hey, The dusty ripple gathered at the edge of the room. If possible..
+1833 | VT-674005 | [creative                 ] FYI, The dusty ripple gathered at the edge of the room. Thanks. — now.
+1834 | VT-501158 | [creative                 ] Okay, Reminder: The crisp pattern drifted at the edge of the room.—copy. if you can. (alt)
+1835 | VT-612037 | [creative                 ] Note: FYI, The dusty ripple gathered at the edge of the room. Please. please.
+1836 | VT-625758 | [creative                 ] Note: Heads up: The crisp pattern drifted at the edge of the room.—copy.
+1837 | VT-580026 | [creative                 ] FYI, Reminder: The dusty ripple gathered at the edge of the room. If possible. — now.
+1838 | VT-568560 | [creative                 ] Okay, Heads up: The dusty ripple gathered at the edge of the room. If possible. right now.
+1839 | VT-557287 | [creative                 ] Real talk, Reminder: The crisp pattern drifted at the edge of the room.
+1840 | VT-633794 | [creative                 ] FYI, Note: The crisp pattern drifted at the edge of the room. Right now..
+1841 | VT-680254 | [creative                 ] Quick one: Listen, The dusty ripple gathered at the edge of the room.. (alt)
+1842 | VT-624231 | [creative                 ] FYI, Hey, The dusty ripple gathered at the edge of the room.—copy. — got it.
+1843 | VT-566356 | [creative                 ] Real talk, Listen, The dusty ripple gathered at the edge of the room..
+1844 | VT-569224 | [emotional                ] FYI, Note: I miss you more than words can say. if you can.
+1845 | VT-590191 | [emotional                ] Okay, I'm so proud of how far we've come. Right now. if you can.
+1846 | VT-541098 | [emotional                ] Hey, I'm so proud of how far we've come.—got it. thanks. (alt)
+1847 | VT-656917 | [emotional                ] Reminder: Listen, I'm so proud of how far we've come. Please. — confirm.
+1848 | VT-563713 | [emotional                ] Heads up: Okay, Why does everything have to hurt so much? Thanks. — got it.
+1849 | VT-629920 | [emotional                ] Okay, Reminder: I'm so proud of how far we've come. Thanks..
+1850 | VT-609335 | [emotional                ] Listen, FYI, I'm so proud of how far we've come. — got it.

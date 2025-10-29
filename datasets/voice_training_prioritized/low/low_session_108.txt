@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 108 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+5351 | VT-21176 | [uncertainty              ] FYI, Hard to say without more data. For real.
+5352 | VT-45961 | [uncertainty              ] Note: Hard to say without more data. For real.
+5353 | VT-12501 | [uncertainty              ] Reminder: It depends on the constraints. For real.
+5354 | VT-48887 | [uncertainty              ] Hey, Too early to call.
+5355 | VT-56767 | [uncertainty              ] Heads up: I’m not sure yet. Right now.
+5356 | VT-73513 | [uncertainty              ] Listen, Hard to say without more data. Please.
+5357 | VT-41062 | [uncertainty              ] Hey, I doubt it. If possible.
+5358 | VT-31874 | [uncertainty              ] Okay, We’ll see. If possible.
+5359 | VT-15720 | [uncertainty              ] Hard to say without more data. If possible.
+5360 | VT-27003 | [uncertainty              ] FYI, Maybe—leaning no.—copy.
+5361 | VT-25556 | [uncertainty              ] Hey, Possibly, but unlikely.—copy.
+5362 | VT-39094 | [uncertainty              ] Note: I’m not sure yet. For real.
+5363 | VT-42654 | [uncertainty              ] FYI, Possibly, but unlikely. For real.
+5364 | VT-52769 | [uncertainty              ] Hey, I’m not sure yet.—copy.
+5365 | VT-58763 | [uncertainty              ] I’m not sure yet.
+5366 | VT-93743 | [uncertainty              ] Possibly, but unlikely.
+5367 | VT-84357 | [uncertainty              ] Listen, Hard to say without more data. For real.
+5368 | VT-90096 | [uncertainty              ] Note: It depends on the constraints.—got it.
+5369 | VT-98473 | [uncertainty              ] Reminder: I doubt it.
+5370 | VT-78936 | [uncertainty              ] Heads up: I doubt it.—copy.
+5371 | VT-77863 | [uncertainty              ] Hey, Possibly, but unlikely. If possible.
+5372 | VT-39965 | [uncertainty              ] Note: I don’t have that info. For real.
+5373 | VT-53383 | [uncertainty              ] Reminder: Hard to say without more data. Thanks.
+5374 | VT-66942 | [uncertainty              ] Heads up: Maybe—leaning no.—copy.
+5375 | VT-67961 | [uncertainty              ] FYI, We’ll see. For real.
+5376 | VT-24390 | [uncertainty              ] Listen, It depends on the constraints.
+5377 | VT-25431 | [uncertainty              ] Okay, Fifty-fifty at best. For real.
+5378 | VT-58874 | [uncertainty              ] Hey, Hard to say without more data.—copy.
+5379 | VT-25431 | [uncertainty              ] Okay, Fifty-fifty at best. For real.
+5380 | VT-68594 | [uncertainty              ] Listen, Hard to say without more data. Thanks.
+5381 | VT-56767 | [uncertainty              ] Heads up: I’m not sure yet. Right now.
+5382 | VT-78395 | [uncertainty              ] FYI, It depends on the constraints. For real.
+5383 | VT-95746 | [uncertainty              ] Hey, I’m not sure yet. Thanks.
+5384 | VT-42062 | [uncertainty              ] Hey, We’ll see. For real.
+5385 | VT-77868 | [uncertainty              ] Heads up: Fifty-fifty at best. Right now.
+5386 | VT-11904 | [uncertainty              ] Listen, It depends on the constraints.
+5387 | VT-79100 | [uncertainty              ] Okay, I don’t have that info.
+5388 | VT-89218 | [uncertainty              ] FYI, I’m not sure yet. Please.
+5389 | VT-35823 | [uncertainty              ] Fifty-fifty at best. Please.
+5390 | VT-42888 | [uncertainty              ] Too early to call. For real.
+5391 | VT-63358 | [uncertainty              ] Note: Fifty-fifty at best.—copy.
+5392 | VT-10102 | [uncertainty              ] I don’t have that info.
+5393 | VT-70793 | [uncertainty              ] Note: Possibly, but unlikely. Thanks.
+5394 | VT-73513 | [uncertainty              ] Listen, Hard to say without more data. Please.
+5395 | VT-77718 | [uncertainty              ] Listen, Possibly, but unlikely.
+5396 | VT-57705 | [uncertainty              ] Reminder: Maybe—leaning no. For real.
+5397 | VT-42888 | [uncertainty              ] Too early to call. For real.
+5398 | VT-42888 | [uncertainty              ] Too early to call. For real.
+5399 | VT-46906 | [uncertainty              ] Listen, Too early to call. Please.
+5400 | VT-37831 | [uncertainty              ] Heads up: Maybe—leaning no.—copy.

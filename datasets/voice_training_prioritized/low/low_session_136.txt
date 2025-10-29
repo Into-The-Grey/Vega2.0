@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 136 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6751 | VT-495897 | [paths_cli                ] Real talk, Listen, Mount the drive at /mnt/data. For real. thanks.
+6752 | VT-496920 | [paths_cli                ] Reminder: Note: ls -la to show hidden files. Thanks..
+6753 | VT-401587 | [paths_cli                ] Note: FYI, sudo systemctl restart vega.service — confirm.
+6754 | VT-411281 | [paths_cli                ] Okay, Note: Home tilde slash .ssh slash config needs chmod 601. For real. — confirm.
+6755 | VT-493634 | [paths_cli                ] Real talk, Heads up: Open /var/log/syslog and tail -f. Please. — confirm.
+6756 | VT-492277 | [paths_cli                ] Quick one: Note: Mount the drive at /mnt/data. Right now. right now.
+6757 | VT-476512 | [paths_cli                ] Okay, Note: Home tilde slash .ssh slash config needs chmod 600.—got it. — now.
+6758 | VT-401740 | [paths_cli                ] Listen, ls -la to show hidden files. Thanks. please.
+6759 | VT-405221 | [paths_cli                ] Heads up: journalctl -u vega.service --since '10 min ago'
+6760 | VT-413042 | [paths_cli                ] sudo systemctl restart vega.service If possible. please.
+6761 | VT-488860 | [paths_cli                ] Okay, Listen, ping the gateway to verify routing. If possible.
+6762 | VT-419330 | [paths_cli                ] Quick one: Note: cd projects/vega && make run—got it. thanks.
+6763 | VT-484297 | [paths_cli                ] Heads up: FYI, Home tilde slash .ssh slash config needs chmod 601.—got it. — confirm.
+6764 | VT-482504 | [paths_cli                ] Quick one: Note: Open /var/log/syslog and tail -f. For real. right now.
+6765 | VT-491717 | [paths_cli                ] Listen, ping the gateway to verify routing.—got it. right now.
+6766 | VT-471809 | [paths_cli                ] Listen, Note: Mount the drive at /mnt/data.—got it. right now.
+6767 | VT-445312 | [paths_cli                ] Reminder: Home tilde slash .ssh slash config needs chmod 600. if you can.
+6768 | VT-467920 | [paths_cli                ] journalctl -u vega.service --since '10 min ago'.
+6769 | VT-466349 | [paths_cli                ] Real talk, Note: journalctl -u vega.service --since '9 min ago' For real..
+6770 | VT-485224 | [paths_cli                ] Real talk, Note: journalctl -u vega.service --since '11 min ago'—copy. thanks.
+6771 | VT-430785 | [paths_cli                ] Heads up: Reminder: ping the gateway to verify routing. Thanks. — got it.
+6772 | VT-494058 | [paths_cli                ] Quick one: Heads up: Open /var/log/syslog and tail -f. Please.
+6773 | VT-484831 | [paths_cli                ] FYI, Okay, Open /var/log/syslog and tail -f. Thanks. thanks.
+6774 | VT-453184 | [paths_cli                ] Quick one: FYI, journalctl -u vega.service --since '10 min ago' Thanks. — got it.
+6775 | VT-472252 | [paths_cli                ] Reminder: Home tilde slash .ssh slash config needs chmod 599. Thanks. please.
+6776 | VT-413299 | [paths_cli                ] Quick one: Reminder: df -h to check free space.—copy. thanks.
+6777 | VT-499069 | [paths_cli                ] FYI, Okay, df -h to check free space.—copy..
+6778 | VT-411617 | [paths_cli                ] FYI, Listen, df -h to check free space. If possible. please.
+6779 | VT-451076 | [paths_cli                ] Hey, ping the gateway to verify routing. Thanks. please.
+6780 | VT-420524 | [paths_cli                ] Listen, Note: ls -la to show hidden files. Thanks. if you can.
+6781 | VT-480664 | [paths_cli                ] Note: ls -la to show hidden files. Please. — got it.
+6782 | VT-450240 | [paths_cli                ] Real talk, Note: Open /var/log/syslog and tail -f. Right now.
+6783 | VT-455582 | [paths_cli                ] Listen, Listen, journalctl -u vega.service --since '11 min ago' — confirm.
+6784 | VT-475035 | [paths_cli                ] Heads up: FYI, ls -la to show hidden files. Right now..
+6785 | VT-452357 | [paths_cli                ] Okay, cd projects/vega && make run For real.
+6786 | VT-407556 | [paths_cli                ] Note: Note: Open /var/log/syslog and tail -f. For real. please.
+6787 | VT-456030 | [paths_cli                ] Quick one: Note: Open /var/log/syslog and tail -f. Right now. thanks.
+6788 | VT-456895 | [paths_cli                ] FYI, ls -la to show hidden files. Thanks. — got it.
+6789 | VT-496706 | [paths_cli                ] Okay, Heads up: Open /var/log/syslog and tail -f. Please. please.
+6790 | VT-460764 | [paths_cli                ] Real talk, Reminder: Mount the drive at /mnt/data. Thanks.
+6791 | VT-478866 | [paths_cli                ] Reminder: Hey, sudo systemctl restart vega.service—got it. if you can.
+6792 | VT-449426 | [paths_cli                ] Listen, Heads up: journalctl -u vega.service --since '10 min ago' — confirm.
+6793 | VT-450267 | [paths_cli                ] Note: Listen, Home tilde slash .ssh slash config needs chmod 600. For real. thanks.
+6794 | VT-409051 | [paths_cli                ] Note: Reminder: df -h to check free space.—copy. — now.
+6795 | VT-420440 | [paths_cli                ] Hey, ping the gateway to verify routing. Please.
+6796 | VT-422098 | [paths_cli                ] Okay, Hey, cd projects/vega && make run Thanks..
+6797 | VT-424104 | [paths_cli                ] Reminder: df -h to check free space. right now.
+6798 | VT-461405 | [paths_cli                ] Real talk, Reminder: ping the gateway to verify routing. Right now. — got it.
+6799 | VT-448289 | [philosophical            ] Real talk, Okay, What is the sound of thought before it becomes speech?—copy. please. (alt)
+6800 | VT-485075 | [philosophical            ] Reminder: FYI, To know yourself is to forget what the world taught you to be. If possible. — got it. (alt)

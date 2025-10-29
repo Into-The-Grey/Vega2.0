@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 155 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7701 | VT-697157 | [emoji                    ] Listen, Listen, Let’s clean up those docs 🧹. For real..
+7702 | VT-540181 | [emoji                    ] Real talk, Okay, Weather’s perfect for a walk 🌤️.—copy. if you can. (alt)
+7703 | VT-652521 | [emoji                    ] Quick one: Note: Let’s clean up those docs 🧹.—copy. — confirm.
+7704 | VT-645190 | [emoji                    ] Listen, Ugh, my laptop froze again 😑.—copy. please.
+7705 | VT-611941 | [emoji                    ] Real talk, Heads up: Coffee first, then code ☕️💻. — confirm.
+7706 | VT-686512 | [emoji                    ] New high score! 🕹️—copy..
+7707 | VT-517274 | [emoji                    ] Okay, Note: Coffee first, then code ☕️💻. Thanks. if you can.
+7708 | VT-647666 | [emoji                    ] Heads up: We shipped it! 🎉 — confirm.
+7709 | VT-597798 | [emoji                    ] Note: Okay, Deep breaths. You got this. 💪 Please..
+7710 | VT-659371 | [emoji                    ] Reminder: Hey, Deep breaths. You got this. 💪—copy. thanks.
+7711 | VT-544035 | [emoji                    ] Quick one: Hey, New high score! 🕹️—copy. right now.
+7712 | VT-532307 | [emoji                    ] Real talk, Hey, Ugh, my laptop froze again 😑. For real. — confirm. (alt)
+7713 | VT-545819 | [emoji                    ] Note: Hey, Let’s clean up those docs 🧹.—copy. if you can.
+7714 | VT-522216 | [emoji                    ] FYI, Listen, Ugh, my laptop froze again 😑.—copy. thanks.
+7715 | VT-640906 | [emoji                    ] Okay, Heads up: Coffee first, then code ☕️💻. — got it.
+7716 | VT-681743 | [emoji                    ] Reminder: Coffee first, then code ☕️💻. — got it.
+7717 | VT-524504 | [emoji                    ] Note: FYI, Ugh, my laptop froze again 😑.—got it. — confirm.
+7718 | VT-554371 | [emoji                    ] Reminder: Ugh, my laptop froze again 😑. For real. — got it.
+7719 | VT-671832 | [emoji                    ] Listen, Note: That meeting was 🔥 — concise and effective.—copy. — confirm. (alt)
+7720 | VT-640206 | [emoji                    ] Ugh, my laptop froze again 😑. thanks. (alt)
+7721 | VT-536325 | [emoji                    ] Listen, Reminder: Ugh, my laptop froze again 😑. For real. please. (alt)
+7722 | VT-536267 | [emoji                    ] Heads up: Listen, That meeting was 🔥 — concise and effective. Please. — confirm.
+7723 | VT-592100 | [emoji                    ] Listen, Heads up: Ugh, my laptop froze again 😑. For real. if you can.
+7724 | VT-599524 | [emoji                    ] Real talk, Note: Coffee first, then code ☕️💻. Thanks. — now.
+7725 | VT-683412 | [emoji                    ] FYI, Ugh, my laptop froze again 😑. Thanks. please.
+7726 | VT-660725 | [emoji                    ] Real talk, Reminder: Deep breaths. You got this. 💪 Thanks. if you can.
+7727 | VT-500212 | [emoji                    ] Heads up: We shipped it! 🎉—got it. — got it.
+7728 | VT-558724 | [emoji                    ] Okay, Note: Deep breaths. You got this. 💪 — confirm.
+7729 | VT-686547 | [emoji                    ] Reminder: Listen, Let’s clean up those docs 🧹.—got it. — now.
+7730 | VT-627531 | [emoji                    ] FYI, Listen, Coffee first, then code ☕️💻.—got it. — now. (alt)
+7731 | VT-655120 | [emoji                    ] FYI, New high score! 🕹️—copy..
+7732 | VT-625420 | [emoji                    ] FYI, Okay, Weather’s perfect for a walk 🌤️.—copy..
+7733 | VT-622734 | [emoji                    ] Reminder: Heads up: Ugh, my laptop froze again 😑. For real. right now. (alt)
+7734 | VT-642434 | [emoji                    ] Heads up: Okay, Ugh, my laptop froze again 😑. If possible. — confirm.
+7735 | VT-565522 | [emoji                    ] FYI, Note: Ugh, my laptop froze again 😑. For real. please.
+7736 | VT-597193 | [everyday-profanity       ] Listen, This is freaking ridiculous.
+7737 | VT-546329 | [everyday-profanity       ] Okay, What the hell was that noise? — now.
+7738 | VT-626367 | [everyday-profanity       ] Reminder: That was a total mess, no sugar‑coating it. if you can. (alt)
+7739 | VT-682099 | [everyday-profanity       ] Note: Why does this keep breaking? It’s driving me nuts. — got it.
+7740 | VT-634418 | [everyday-profanity       ] Reminder: I can’t believe I forgot, that’s on me.. (alt)
+7741 | VT-514044 | [everyday-profanity       ] Listen, Can we please stop with this crap and fix it?.
+7742 | VT-566498 | [everyday-profanity       ] Heads up: Turn the damn lights off when you leave. please.
+7743 | VT-574445 | [everyday-profanity       ] Okay, I’m so done with this bullshit. if you can.
+7744 | VT-546703 | [everyday-profanity       ] Listen, I dropped my coffee—again. Ugh. — got it.
+7745 | VT-549931 | [everyday-profanity       ] Listen, I can’t find the damn keys. thanks. (alt)
+7746 | VT-547101 | [everyday-profanity       ] Heads up: Hey, This is freaking ridiculous.—copy. thanks.
+7747 | VT-654383 | [everyday-profanity       ] Listen, Reminder: What the hell was that noise? right now.
+7748 | VT-516750 | [everyday-profanity       ] Listen, FYI, That was a total mess, no sugar‑coating it.—copy..
+7749 | VT-644652 | [everyday-profanity       ] Real talk, Okay, Why does this keep breaking? It’s driving me nuts. If possible. (alt)
+7750 | VT-554843 | [everyday-profanity       ] Listen, I can’t believe I forgot, that’s on me.—copy. right now.

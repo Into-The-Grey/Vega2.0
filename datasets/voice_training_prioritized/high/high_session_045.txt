@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 45 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2201 | VT-689292 | [dates_times              ] Listen, Reminder: Today is the 27th of October, 2025. (5535)—got it. — confirm.
+2202 | VT-617545 | [dates_times              ] Heads up: Set a reminder for 7:45 PM on Friday. (6140) If possible. right now.
+2203 | VT-632414 | [dates_times              ] Reminder: Sunrise is at 06:58; sunset at 17:12. (6269) For real. — now.
+2204 | VT-542904 | [dates_times              ] Reminder: Reminder: Schedule it biweekly starting next Monday. (4108)—copy. — now.
+2205 | VT-666080 | [dates_times              ] Okay, Today is the 27th of October, 2025. — confirm.
+2206 | VT-548768 | [dates_times              ] Note: Heads up: Timer: three hours, twenty-one minutes, go. (9836) Right now. — now. (alt)
+2207 | VT-526233 | [dates_times              ] Listen, Hey, Timer: three hours, twenty-one minutes, go. (4607)—copy. — confirm.
+2208 | VT-566724 | [dates_times              ] Quick one: Timer: three hours, twenty-one minutes, go. (2935) Please. — confirm.
+2209 | VT-545470 | [dates_times              ] Heads up: Hey, Sunrise is at 06:58; sunset at 17:12. (2241) — confirm.
+2210 | VT-577640 | [dates_times              ] Listen, Reminder: Set a reminder for 7:45 PM on Friday. (980) If possible. thanks. (alt)
+2211 | VT-585431 | [dates_times              ] Note: FYI, Set a reminder for 7:45 PM on Friday. (8394) Thanks. please.
+2212 | VT-519630 | [dates_times              ] Reminder: Timer: three hours, twenty-one minutes, go. (6291) Right now..
+2213 | VT-564364 | [dates_times              ] Listen, Reminder: Today is the 27th of October, 2025. (3041)—copy. thanks. (alt)
+2214 | VT-690098 | [dates_times              ] Heads up: Hey, What's the date two weeks from yesterday? (653) If possible. — now.
+2215 | VT-643520 | [dates_times              ] Heads up: Reminder: What's the date two weeks from yesterday? (1429) If possible. — now.
+2216 | VT-691212 | [dates_times              ] Listen, Heads up: What's the date two weeks from yesterday? (9367)—got it. right now.
+2217 | VT-524328 | [dates_times              ] Okay, Reminder: Sunrise is at 06:58; sunset at 17:12. (9810) Right now. thanks.
+2218 | VT-659199 | [dates_times              ] Real talk, Reminder: The deadline moved from Q3 to Q4. (8292) For real.
+2219 | VT-524565 | [dates_times              ] Heads up: The deadline moved from Q3 to Q4. (7352) Please. — now.
+2220 | VT-634442 | [dates_times              ] Quick one: Note: Set a reminder for 7:45 PM on Friday. (6412) if you can.
+2221 | VT-574139 | [dates_times              ] Okay, Timer: three hours, twenty-one minutes, go. (414)—copy. thanks. (alt)
+2222 | VT-672877 | [dates_times              ] Quick one: Listen, The deadline moved from Q3 to Q4. (2015) Please. — confirm.
+2223 | VT-644246 | [dates_times              ] Quick one: Reminder: Convert 14:30 UTC to Central Time. (6776) thanks.
+2224 | VT-548408 | [dates_times              ] Listen, Set a reminder for 7:45 PM on Friday. (6140) If possible. — confirm.
+2225 | VT-518812 | [dates_times              ] Okay, Note: Set a reminder for 7:45 PM on Friday. (6412) right now.
+2226 | VT-516500 | [dates_times              ] Note: The deadline moved from Q3 to Q4. (4232)—copy. right now.
+2227 | VT-578997 | [dates_times              ] Listen, Reminder: Set a reminder for 7:45 PM on Friday. (980) If possible. — now.
+2228 | VT-579340 | [dates_times              ] Note: Schedule it biweekly starting next Monday. (3368) Please. if you can.
+2229 | VT-688077 | [dates_times              ] Reminder: My birthday is on 02/29—leap year baby. (4725) Thanks. (alt)
+2230 | VT-598757 | [dates_times              ] FYI, Timer: three hours, twenty-one minutes, go. (8808) Thanks. — now. (alt)
+2231 | VT-529990 | [dates_times              ] Note: Today is the 27th of October, 2025. (5842) If possible.
+2232 | VT-503536 | [dates_times              ] Okay, Hey, What's the date two weeks from yesterday? (653) If possible. — got it.
+2233 | VT-662953 | [dates_times              ] FYI, Reminder: Sunrise is at 06:58; sunset at 17:12. (9408) If possible. right now.
+2234 | VT-548607 | [dates_times              ] Real talk, Note: Convert 14:30 UTC to Central Time. (4609) Please. right now. (alt)
+2235 | VT-597900 | [dates_times              ] Reminder: What's the date two weeks from yesterday?.
+2236 | VT-567225 | [dates_times              ] Okay, Reminder: Sunrise is at 06:58; sunset at 17:12. (2304)—got it.
+2237 | VT-550946 | [dates_times              ] Note: Reminder: Schedule it biweekly starting next Monday. (4108)—copy. if you can.
+2238 | VT-510502 | [dates_times              ] Reminder: Hey, Sunrise is at 06:58; sunset at 17:12. (2241) right now.
+2239 | VT-526938 | [dates_times              ] Real talk, Note: Convert 14:30 UTC to Central Time. (9816) if you can.
+2240 | VT-671110 | [dates_times              ] FYI, Okay, Today is the 27th of October, 2025. (2797) if you can.
+2241 | VT-686331 | [dates_times              ] Quick one: Listen, Set a reminder for 7:45 PM on Friday. (4763) Please. — confirm.
+2242 | VT-682439 | [dates_times              ] Note: Heads up: Today is the 27th of October, 2025. (5098)—got it. — confirm. (alt)
+2243 | VT-525656 | [dates_times              ] Real talk, Timer: three hours, twenty-one minutes, go. — confirm.
+2244 | VT-607971 | [dates_times              ] Real talk, The deadline moved from Q3 to Q4. (7352) Please..
+2245 | VT-693055 | [dates_times              ] FYI, Note: The deadline moved from Q3 to Q4. (7912) Right now.
+2246 | VT-632889 | [dates_times              ] Real talk, Set a reminder for 7:45 PM on Friday. (2961) For real. — confirm.
+2247 | VT-615006 | [dates_times              ] Heads up: FYI, Convert 14:30 UTC to Central Time. (3133)—copy. — confirm. (alt)
+2248 | VT-556302 | [dates_times              ] Reminder: Heads up: Sunrise is at 06:58; sunset at 17:12. (8793) Right now. — now. (alt)
+2249 | VT-622800 | [dates_times              ] Real talk, Convert 14:30 UTC to Central Time. (384) Thanks.
+2250 | VT-574827 | [dates_times              ] Reminder: Note: Today is the 27th of October, 2025. (5842) If possible. — confirm.

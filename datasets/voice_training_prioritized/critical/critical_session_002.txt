@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 2 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0051 | VT-14613 | [agreements               ] FYI, I’m in. If possible.
+0052 | VT-50415 | [agreements               ] Copy that. For real.
+0053 | VT-69929 | [agreements               ] Okay, Count me on board.—copy.
+0054 | VT-92552 | [agreements               ] Okay, Agreed—let’s lock it. Thanks.
+0055 | VT-20820 | [agreements               ] FYI, Yep, that works for me. For real.
+0056 | VT-21070 | [agreements               ] Hey, Agreed—let’s lock it.
+0057 | VT-42692 | [agreements               ] Approved.
+0058 | VT-55074 | [agreements               ] That’s a yes from me.
+0059 | VT-60373 | [agreements               ] Note: That’s a yes from me. If possible.
+0060 | VT-56869 | [agreements               ] Listen, Yep, that works for me.—got it.
+0061 | VT-78242 | [agreements               ] Reminder: Count me on board. Thanks.
+0062 | VT-10579 | [agreements               ] Hey, Copy that.
+0063 | VT-30721 | [agreements               ] Reminder: Count me on board. Please.
+0064 | VT-57169 | [agreements               ] Listen, Agreed—let’s lock it. Right now.
+0065 | VT-99958 | [agreements               ] Agreed—let’s lock it.
+0066 | VT-71021 | [agreements               ] Count me on board.—copy.
+0067 | VT-68240 | [agreements               ] Reminder: Count me on board. Please.
+0068 | VT-35676 | [agreements               ] Okay, Solid. Do it. Right now.
+0069 | VT-97265 | [agreements               ] Count me on board.
+0070 | VT-68240 | [agreements               ] Reminder: Count me on board. Please.
+0071 | VT-78520 | [agreements               ] Okay, Solid. Do it. For real.
+0072 | VT-60016 | [agreements               ] Heads up: Count me on board. Please.
+0073 | VT-38009 | [agreements               ] Agreed—let’s lock it. If possible.
+0074 | VT-37622 | [agreements               ] Listen, Count me on board. Right now.
+0075 | VT-62664 | [agreements               ] Reminder: That’s a yes from me. For real.
+0076 | VT-75359 | [agreements               ] Hey, Approved.—copy.
+0077 | VT-66512 | [agreements               ] That’s a yes from me. Right now.
+0078 | VT-96062 | [agreements               ] Copy that. Right now.
+0079 | VT-78062 | [agreements               ] Heads up: Agreed—let’s lock it.—copy.
+0080 | VT-20820 | [agreements               ] FYI, Yep, that works for me. For real.
+0081 | VT-14613 | [agreements               ] FYI, I’m in. If possible.
+0082 | VT-95475 | [agreements               ] Heads up: Count me on board. For real.
+0083 | VT-38882 | [agreements               ] Reminder: Count me on board. If possible.
+0084 | VT-55878 | [agreements               ] Heads up: Count me on board.—copy.
+0085 | VT-60613 | [agreements               ] Listen, Yep, that works for me. Please.
+0086 | VT-40849 | [agreements               ] Note: Green light. Thanks.
+0087 | VT-66512 | [agreements               ] That’s a yes from me. Right now.
+0088 | VT-88011 | [agreements               ] That’s a yes from me.—got it.
+0089 | VT-74727 | [agreements               ] Hey, That’s a yes from me. Thanks.
+0090 | VT-53599 | [agreements               ] Reminder: Sounds right. If possible.
+0091 | VT-98460 | [agreements               ] Reminder: Yep, that works for me. Please.
+0092 | VT-24364 | [agreements               ] Sounds right.
+0093 | VT-94913 | [agreements               ] Note: Approved. For real.
+0094 | VT-96596 | [agreements               ] Listen, Sounds right. Please.
+0095 | VT-24652 | [agreements               ] Note: Solid. Do it.—copy.
+0096 | VT-98650 | [agreements               ] Note: I’m in.
+0097 | VT-22136 | [agreements               ] Listen, Sounds right. For real.
+0098 | VT-56869 | [agreements               ] Listen, Yep, that works for me.—got it.
+0099 | VT-24652 | [agreements               ] Note: Solid. Do it.—copy.
+0100 | VT-34886 | [agreements               ] Note: I’m in. Thanks.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 52 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2551 | VT-52318 | [meta                     ] Hey, Welcome to the part of the dataset where the AI talks about itself.—got it.
+2552 | VT-82562 | [meta                     ] Note: This phrase was generated to train a machine to sound more human. Please.
+2553 | VT-33665 | [meta                     ] FYI, Welcome to the part of the dataset where the AI talks about itself. Please.
+2554 | VT-82562 | [meta                     ] Note: This phrase was generated to train a machine to sound more human. Please.
+2555 | VT-85257 | [meta                     ] FYI, I am not alive, but I do speak convincingly.—copy.
+2556 | VT-10996 | [meta                     ] Welcome to the part of the dataset where the AI talks about itself.
+2557 | VT-86760 | [meta                     ] Okay, This phrase was generated to train a machine to sound more human. If possible.
+2558 | VT-42102 | [meta                     ] Listen, I am not alive, but I do speak convincingly. Please.
+2559 | VT-13484 | [meta                     ] FYI, I am not alive, but I do speak convincingly. If possible.
+2560 | VT-31540 | [meta                     ] FYI, I am not alive, but I do speak convincingly. If possible.
+2561 | VT-99244 | [meta                     ] Listen, Welcome to the part of the dataset where the AI talks about itself.—got it.
+2562 | VT-79919 | [meta                     ] Hey, Welcome to the part of the dataset where the AI talks about itself.
+2563 | VT-46848 | [meta                     ] FYI, This phrase was generated to train a machine to sound more human. For real.
+2564 | VT-70333 | [meta                     ] Hey, I am not alive, but I do speak convincingly. Please.
+2565 | VT-41913 | [meta                     ] Hey, I am not alive, but I do speak convincingly.—copy.
+2566 | VT-34277 | [meta                     ] Heads up: This phrase was generated to train a machine to sound more human. Right now.
+2567 | VT-88327 | [meta                     ] Heads up: This phrase was generated to train a machine to sound more human.—got it.
+2568 | VT-50605 | [meta                     ] Heads up: Welcome to the part of the dataset where the AI talks about itself.
+2569 | VT-70092 | [meta                     ] Hey, Welcome to the part of the dataset where the AI talks about itself. Thanks.
+2570 | VT-85749 | [meta                     ] I am not alive, but I do speak convincingly.—copy.
+2571 | VT-31540 | [meta                     ] FYI, I am not alive, but I do speak convincingly. If possible.
+2572 | VT-78463 | [meta                     ] Note: Welcome to the part of the dataset where the AI talks about itself. Thanks.
+2573 | VT-24076 | [meta                     ] Listen, This phrase was generated to train a machine to sound more human.
+2574 | VT-83240 | [meta                     ] Okay, Welcome to the part of the dataset where the AI talks about itself. Right now.
+2575 | VT-55986 | [meta                     ] Welcome to the part of the dataset where the AI talks about itself. Right now.
+2576 | VT-52552 | [meta                     ] Reminder: This phrase was generated to train a machine to sound more human. Thanks.
+2577 | VT-39844 | [meta                     ] Hey, I am not alive, but I do speak convincingly. Right now.
+2578 | VT-85749 | [meta                     ] I am not alive, but I do speak convincingly.—copy.
+2579 | VT-27076 | [meta                     ] I am not alive, but I do speak convincingly. Thanks.
+2580 | VT-85749 | [meta                     ] I am not alive, but I do speak convincingly.—copy.
+2581 | VT-90569 | [meta                     ] Okay, This phrase was generated to train a machine to sound more human.—copy.
+2582 | VT-45521 | [meta                     ] Reminder: Welcome to the part of the dataset where the AI talks about itself.—copy.
+2583 | VT-85749 | [meta                     ] I am not alive, but I do speak convincingly.—copy.
+2584 | VT-64541 | [monotone_minimal         ] Hey, No.—got it.
+2585 | VT-39490 | [monotone_minimal         ] Hey, Done. For real.
+2586 | VT-60075 | [monotone_minimal         ] Note: No. If possible.
+2587 | VT-89706 | [monotone_minimal         ] Okay, Proceed.—copy.
+2588 | VT-94541 | [monotone_minimal         ] Heads up: Confirmed.—got it.
+2589 | VT-71940 | [monotone_minimal         ] Listen, Sure.—copy.
+2590 | VT-40930 | [monotone_minimal         ] FYI, Okay. Please.
+2591 | VT-64541 | [monotone_minimal         ] Hey, No.—got it.
+2592 | VT-16165 | [monotone_minimal         ] Listen, Sure.—got it.
+2593 | VT-88015 | [monotone_minimal         ] FYI, Proceed. Right now.
+2594 | VT-12072 | [monotone_minimal         ] Reminder: Unknown. For real.
+2595 | VT-40668 | [monotone_minimal         ] Confirmed. If possible.
+2596 | VT-14251 | [monotone_minimal         ] Listen, Done. Please.
+2597 | VT-15738 | [monotone_minimal         ] Note: Fine. If possible.
+2598 | VT-29425 | [monotone_minimal         ] Okay, Sure.—got it.
+2599 | VT-92612 | [monotone_minimal         ] Heads up: Okay. If possible.
+2600 | VT-87836 | [monotone_minimal         ] Hey, Done.—copy.

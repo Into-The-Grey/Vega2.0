@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 126 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6251 | VT-440386 | [flirty                   ] Real talk, Heads up: You have the kind of voice I’d sync my heartbeat to. For real. please.
+6252 | VT-489456 | [flirty                   ] Heads up: Okay, I wasn’t blushing until you started talking. Right now. if you can. (alt)
+6253 | VT-430741 | [flirty                   ] Heads up: Are you Wi-Fi? Because I’m feeling a connection. Thanks. — confirm.
+6254 | VT-486202 | [flirty                   ] Note: FYI, You have the kind of voice I’d sync my heartbeat to. Right now..
+6255 | VT-497128 | [flirty                   ] Okay, Heads up: I wasn’t blushing until you started talking. Please. right now.
+6256 | VT-443010 | [flirty                   ] Listen, Listen, Are you Wi-Fi? Because I’m feeling a connection.—got it. please.
+6257 | VT-454364 | [flirty                   ] Okay, Listen, You have the kind of voice I’d sync my heartbeat to.—copy. please.
+6258 | VT-444788 | [flirty                   ] Heads up: I wasn’t blushing until you started talking.—copy. — now. (alt)
+6259 | VT-416961 | [flirty                   ] Real talk, Reminder: Are you Wi-Fi? Because I’m feeling a connection. Right now. — got it.
+6260 | VT-410034 | [flirty                   ] Real talk, Okay, You have the kind of voice I’d sync my heartbeat to. Thanks..
+6261 | VT-489250 | [flirty                   ] Listen, Heads up: I wasn’t blushing until you started talking. If possible..
+6262 | VT-450668 | [flirty                   ] Heads up: Listen, Are you Wi-Fi? Because I’m feeling a connection. If possible. thanks.
+6263 | VT-455447 | [flirty                   ] Heads up: Okay, You have the kind of voice I’d sync my heartbeat to.—got it. — got it.
+6264 | VT-461499 | [flirty                   ] I wasn’t blushing until you started talking. Please. thanks.
+6265 | VT-451078 | [flirty                   ] Real talk, Note: Are you Wi-Fi? Because I’m feeling a connection. Please..
+6266 | VT-411580 | [flirty                   ] Reminder: Note: You have the kind of voice I’d sync my heartbeat to. For real. thanks. (alt)
+6267 | VT-400277 | [flirty                   ] Okay, Hey, I wasn’t blushing until you started talking..
+6268 | VT-495525 | [flirty                   ] Listen, FYI, Are you Wi-Fi? Because I’m feeling a connection. Please. — confirm. (alt)
+6269 | VT-465532 | [flirty                   ] Listen, You have the kind of voice I’d sync my heartbeat to.—got it. right now.
+6270 | VT-406382 | [flirty                   ] Heads up: Hey, I wasn’t blushing until you started talking.—got it. — confirm.
+6271 | VT-409954 | [flirty                   ] FYI, Are you Wi-Fi? Because I’m feeling a connection.—got it.
+6272 | VT-440463 | [flirty                   ] Heads up: Reminder: You have the kind of voice I’d sync my heartbeat to..
+6273 | VT-466964 | [flirty                   ] Real talk, Listen, I wasn’t blushing until you started talking. Please. please.
+6274 | VT-494429 | [flirty                   ] Okay, Are you Wi-Fi? Because I’m feeling a connection. For real. if you can.
+6275 | VT-412940 | [flirty                   ] Listen, You have the kind of voice I’d sync my heartbeat to. If possible. — confirm.
+6276 | VT-446930 | [flirty                   ] Listen, I wasn’t blushing until you started talking. Thanks. right now.
+6277 | VT-405373 | [flirty                   ] Heads up: Heads up: Are you Wi-Fi? Because I’m feeling a connection. For real. please. (alt)
+6278 | VT-464517 | [flirty                   ] Quick one: You have the kind of voice I’d sync my heartbeat to. — now.
+6279 | VT-462726 | [flirty                   ] Reminder: I wasn’t blushing until you started talking.—got it. thanks.
+6280 | VT-435518 | [flirty                   ] Note: Heads up: Are you Wi-Fi? Because I’m feeling a connection. If possible. — now.
+6281 | VT-482524 | [flirty                   ] FYI, You have the kind of voice I’d sync my heartbeat to. If possible. please.
+6282 | VT-414887 | [flirty                   ] Heads up: Heads up: I wasn’t blushing until you started talking. For real. (alt)
+6283 | VT-421217 | [flirty                   ] Reminder: Reminder: Are you Wi-Fi? Because I’m feeling a connection. Thanks. right now. (alt)
+6284 | VT-414308 | [flirty                   ] Listen, You have the kind of voice I’d sync my heartbeat to. If possible. if you can. (alt)
+6285 | VT-438829 | [flirty                   ] Quick one: Hey, I wasn’t blushing until you started talking.—copy. thanks. (alt)
+6286 | VT-471228 | [flirty                   ] Reminder: FYI, Are you Wi-Fi? Because I’m feeling a connection. Right now. — now.
+6287 | VT-447330 | [flirty                   ] Heads up: Reminder: You have the kind of voice I’d sync my heartbeat to.—copy. please. (alt)
+6288 | VT-414237 | [flirty                   ] Heads up: I wasn’t blushing until you started talking. — confirm. (alt)
+6289 | VT-447261 | [flirty                   ] Quick one: Note: Are you Wi-Fi? Because I’m feeling a connection. Right now. — confirm.
+6290 | VT-424934 | [flirty                   ] Heads up: Reminder: You have the kind of voice I’d sync my heartbeat to.—got it.
+6291 | VT-445934 | [flirty                   ] Heads up: Hey, I wasn’t blushing until you started talking.—copy. if you can.
+6292 | VT-443651 | [flirty                   ] Real talk, Okay, Are you Wi-Fi? Because I’m feeling a connection. please.
+6293 | VT-492538 | [flirty                   ] Reminder: You have the kind of voice I’d sync my heartbeat to. Thanks. thanks. (alt)
+6294 | VT-424424 | [flirty                   ] Listen, Reminder: I wasn’t blushing until you started talking. right now.
+6295 | VT-431350 | [flirty                   ] Okay, Are you Wi-Fi? Because I’m feeling a connection. — confirm.
+6296 | VT-401009 | [flirty                   ] Listen, You have the kind of voice I’d sync my heartbeat to. Right now. — got it. (alt)
+6297 | VT-451768 | [home_assistant_commands  ] Listen, Note: Lock the front door and arm stay. Please.. (alt)
+6298 | VT-495513 | [home_assistant_commands  ] Note: Turn off everything in the bedroom. Please. — got it.
+6299 | VT-477185 | [home_assistant_commands  ] FYI, Note: Lock the front door and arm stay. Thanks.
+6300 | VT-437720 | [home_assistant_commands  ] Heads up: Start the 'Movie Night' scene.—copy. — confirm.

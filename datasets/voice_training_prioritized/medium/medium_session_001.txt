@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 1 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0001 | VT-56370 | [creative                 ] Hey, The crisp pattern drifted at the edge of the room.—got it.
+0002 | VT-19408 | [creative                 ] The dusty ripple gathered at the edge of the room. Please.
+0003 | VT-43055 | [creative                 ] Heads up: The crisp pattern drifted at the edge of the room.—copy.
+0004 | VT-67956 | [creative                 ] Heads up: The crisp pattern drifted at the edge of the room.—copy.
+0005 | VT-25307 | [creative                 ] Reminder: The crisp pattern drifted at the edge of the room. If possible.
+0006 | VT-82273 | [creative                 ] FYI, The dusty ripple gathered at the edge of the room.—copy.
+0007 | VT-82004 | [creative                 ] Hey, The crisp pattern drifted at the edge of the room.—copy.
+0008 | VT-56370 | [creative                 ] Hey, The crisp pattern drifted at the edge of the room.—got it.
+0009 | VT-62653 | [creative                 ] The dusty ripple gathered at the edge of the room. For real.
+0010 | VT-26149 | [creative                 ] Reminder: The crisp pattern drifted at the edge of the room. Right now.
+0011 | VT-11209 | [creative                 ] Listen, The dusty ripple gathered at the edge of the room. If possible.
+0012 | VT-43103 | [creative                 ] Reminder: The crisp pattern drifted at the edge of the room. For real.
+0013 | VT-71558 | [creative                 ] Okay, The dusty ripple gathered at the edge of the room.—got it.
+0014 | VT-98315 | [creative                 ] Hey, The dusty ripple gathered at the edge of the room.—got it.
+0015 | VT-52218 | [creative                 ] Note: The dusty ripple gathered at the edge of the room.—copy.
+0016 | VT-68750 | [creative                 ] FYI, The crisp pattern drifted at the edge of the room.—got it.
+0017 | VT-63990 | [creative                 ] Note: The dusty ripple gathered at the edge of the room. Right now.
+0018 | VT-32749 | [creative                 ] Note: The crisp pattern drifted at the edge of the room. Right now.
+0019 | VT-0539 | [creative                 ] The dusty ripple gathered at the edge of the room.
+0020 | VT-11209 | [creative                 ] Listen, The dusty ripple gathered at the edge of the room. If possible.
+0021 | VT-84017 | [creative                 ] Listen, The dusty ripple gathered at the edge of the room.—got it.
+0022 | VT-79425 | [creative                 ] Heads up: The dusty ripple gathered at the edge of the room. For real.
+0023 | VT-76441 | [creative                 ] Heads up: The dusty ripple gathered at the edge of the room. For real.
+0024 | VT-82004 | [creative                 ] Hey, The crisp pattern drifted at the edge of the room.—copy.
+0025 | VT-20562 | [creative                 ] Heads up: The crisp pattern drifted at the edge of the room. Please.
+0026 | VT-50743 | [creative                 ] The dusty ripple gathered at the edge of the room. For real.
+0027 | VT-39075 | [creative                 ] The dusty ripple gathered at the edge of the room. Thanks.
+0028 | VT-81760 | [creative                 ] Hey, The crisp pattern drifted at the edge of the room.—copy.
+0029 | VT-15830 | [creative                 ] Heads up: The crisp pattern drifted at the edge of the room.
+0030 | VT-75597 | [creative                 ] Listen, The crisp pattern drifted at the edge of the room. For real.
+0031 | VT-23172 | [creative                 ] Reminder: The dusty ripple gathered at the edge of the room. Right now.
+0032 | VT-67956 | [creative                 ] Heads up: The crisp pattern drifted at the edge of the room.—copy.
+0033 | VT-61938 | [creative                 ] Okay, The crisp pattern drifted at the edge of the room. Thanks.
+0034 | VT-44672 | [creative                 ] Listen, The crisp pattern drifted at the edge of the room.—got it.
+0035 | VT-76985 | [creative                 ] Reminder: The dusty ripple gathered at the edge of the room. Thanks.
+0036 | VT-31334 | [creative                 ] FYI, The crisp pattern drifted at the edge of the room. Please.
+0037 | VT-21300 | [creative                 ] Okay, The dusty ripple gathered at the edge of the room.—copy.
+0038 | VT-68750 | [creative                 ] FYI, The crisp pattern drifted at the edge of the room.—got it.
+0039 | VT-44672 | [creative                 ] Listen, The crisp pattern drifted at the edge of the room.—got it.
+0040 | VT-50869 | [creative                 ] Listen, The crisp pattern drifted at the edge of the room. For real.
+0041 | VT-82004 | [creative                 ] Hey, The crisp pattern drifted at the edge of the room.—copy.
+0042 | VT-81755 | [creative                 ] Listen, The crisp pattern drifted at the edge of the room. Right now.
+0043 | VT-32396 | [creative                 ] The crisp pattern drifted at the edge of the room. If possible.
+0044 | VT-77608 | [creative                 ] Hey, The dusty ripple gathered at the edge of the room.—got it.
+0045 | VT-13423 | [creative                 ] Reminder: The dusty ripple gathered at the edge of the room.—got it.
+0046 | VT-81760 | [creative                 ] Hey, The crisp pattern drifted at the edge of the room.—copy.
+0047 | VT-64684 | [creative                 ] Listen, The dusty ripple gathered at the edge of the room. Please.
+0048 | VT-73909 | [creative                 ] FYI, The dusty ripple gathered at the edge of the room. Thanks.
+0049 | VT-36989 | [creative                 ] Hey, The crisp pattern drifted at the edge of the room. Thanks.
+0050 | VT-93270 | [creative                 ] Heads up: The dusty ripple gathered at the edge of the room.

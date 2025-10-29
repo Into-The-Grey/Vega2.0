@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 26 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1251 | VT-95629 | [laughter_breaths         ] FYI, *deep breath* We’ve got this. For real.
+1252 | VT-69393 | [laughter_breaths         ] Hey, *deep breath* We’ve got this. Right now.
+1253 | VT-24574 | [laughter_breaths         ] *whisper* Don’t wake the server.
+1254 | VT-65246 | [laughter_breaths         ] Heads up: *laughs* That was ridiculous. If possible.
+1255 | VT-95308 | [laughter_breaths         ] FYI, *chuckles* Good one. If possible.
+1256 | VT-17728 | [laughter_breaths         ] Listen, *whisper* Don’t wake the server.
+1257 | VT-92686 | [laughter_breaths         ] Okay, *sighs* Okay, let’s try again. For real.
+1258 | VT-37582 | [laughter_breaths         ] FYI, *sighs* Okay, let’s try again.—got it.
+1259 | VT-78835 | [laughter_breaths         ] Note: *sighs* Okay, let’s try again. Thanks.
+1260 | VT-31043 | [laughter_breaths         ] Listen, *chuckles* Good one. If possible.
+1261 | VT-12588 | [laughter_breaths         ] Heads up: *laughs* That was ridiculous. For real.
+1262 | VT-65220 | [laughter_breaths         ] *sighs* Okay, let’s try again. Right now.
+1263 | VT-34218 | [laughter_breaths         ] Okay, *clears throat* As I was saying… Thanks.
+1264 | VT-31899 | [laughter_breaths         ] Heads up: *gasp* No way.—got it.
+1265 | VT-70612 | [laughter_breaths         ] Listen, *sighs* Okay, let’s try again. If possible.
+1266 | VT-67997 | [laughter_breaths         ] Hey, *snorts* You’re kidding, right?
+1267 | VT-40348 | [laughter_breaths         ] Hey, *whisper* Don’t wake the server. If possible.
+1268 | VT-75323 | [laughter_breaths         ] Reminder: *laughs* That was ridiculous.—copy.
+1269 | VT-45652 | [laughter_breaths         ] Listen, *whisper* Don’t wake the server.—got it.
+1270 | VT-97075 | [laughter_breaths         ] Hey, *laughs* That was ridiculous.—got it.
+1271 | VT-24574 | [laughter_breaths         ] *whisper* Don’t wake the server.
+1272 | VT-11418 | [laughter_breaths         ] Reminder: *sighs* Okay, let’s try again. Thanks.
+1273 | VT-64054 | [laughter_breaths         ] Hey, *deep breath* We’ve got this.—copy.
+1274 | VT-72194 | [laughter_breaths         ] FYI, *clears throat* As I was saying…
+1275 | VT-39399 | [laughter_breaths         ] Reminder: *clears throat* As I was saying… For real.
+1276 | VT-16191 | [laughter_breaths         ] FYI, *whisper* Don’t wake the server. Thanks.
+1277 | VT-59452 | [laughter_breaths         ] Okay, *sighs* Okay, let’s try again.
+1278 | VT-48517 | [laughter_breaths         ] *snorts* You’re kidding, right?—got it.
+1279 | VT-31062 | [laughter_breaths         ] Heads up: *gasp* No way. Please.
+1280 | VT-94164 | [laughter_breaths         ] Okay, *deep breath* We’ve got this. Right now.
+1281 | VT-77556 | [laughter_breaths         ] Okay, *yawns* Coffee. Now.—copy.
+1282 | VT-96976 | [laughter_breaths         ] Listen, *sighs* Okay, let’s try again.
+1283 | VT-77556 | [laughter_breaths         ] Okay, *yawns* Coffee. Now.—copy.
+1284 | VT-28039 | [laughter_breaths         ] Hey, *sighs* Okay, let’s try again. For real.
+1285 | VT-12588 | [laughter_breaths         ] Heads up: *laughs* That was ridiculous. For real.
+1286 | VT-55730 | [laughter_breaths         ] Heads up: *deep breath* We’ve got this. Please.
+1287 | VT-72957 | [laughter_breaths         ] Note: *laughs* That was ridiculous.
+1288 | VT-16741 | [laughter_breaths         ] *deep breath* We’ve got this.—copy.
+1289 | VT-15050 | [laughter_breaths         ] Hey, *coughs* Sorry—allergies.
+1290 | VT-74554 | [laughter_breaths         ] Note: *laughs* That was ridiculous. Thanks.
+1291 | VT-87879 | [laughter_breaths         ] Okay, *yawns* Coffee. Now.—copy.
+1292 | VT-95308 | [laughter_breaths         ] FYI, *chuckles* Good one. If possible.
+1293 | VT-54946 | [laughter_breaths         ] Listen, *yawns* Coffee. Now. Right now.
+1294 | VT-48528 | [laughter_breaths         ] Listen, *coughs* Sorry—allergies.—got it.
+1295 | VT-77523 | [laughter_breaths         ] Heads up: *whisper* Don’t wake the server. If possible.
+1296 | VT-65220 | [laughter_breaths         ] *sighs* Okay, let’s try again. Right now.
+1297 | VT-41660 | [laughter_breaths         ] Hey, *whisper* Don’t wake the server.—got it.
+1298 | VT-60473 | [laughter_breaths         ] Hey, *snorts* You’re kidding, right?—got it.
+1299 | VT-95308 | [laughter_breaths         ] FYI, *chuckles* Good one. If possible.
+1300 | VT-95308 | [laughter_breaths         ] FYI, *chuckles* Good one. If possible.

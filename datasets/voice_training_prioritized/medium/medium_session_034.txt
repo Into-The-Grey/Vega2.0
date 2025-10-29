@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 34 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1651 | VT-485037 | [sarcastic                ] Real talk, Oh great, another meeting that could've been an email. — confirm. (alt)
+1652 | VT-426199 | [sarcastic                ] Real talk, Heads up: Yeah, because that always works out perfectly, doesn’t it? — got it.
+1653 | VT-471721 | [sarcastic                ] Note: Listen, I'm totally not rolling my eyes right now. If possible. — got it.
+1654 | VT-453488 | [sarcastic                ] Quick one: FYI, I'm totally not rolling my eyes right now. Thanks. — now.
+1655 | VT-478115 | [sarcastic                ] Real talk, Yeah, because that always works out perfectly, doesn’t it? please. (alt)
+1656 | VT-465382 | [sarcastic                ] Okay, FYI, I'm totally not rolling my eyes right now. — confirm.
+1657 | VT-435782 | [sarcastic                ] Reminder: Hey, Yeah, because that always works out perfectly, doesn’t it?—copy. please.
+1658 | VT-478760 | [sarcastic                ] Okay, Note: I'm totally not rolling my eyes right now. Please. if you can.
+1659 | VT-470119 | [sarcastic                ] FYI, Heads up: I'm totally not rolling my eyes right now. Please. — got it.
+1660 | VT-436681 | [structured               ] Quick one: Reminder: Grocery list: milk, bread, eggs, spinach, coffee.—copy.. (alt)
+1661 | VT-439194 | [structured               ] Okay, Reminder: Agenda: introductions, updates, blockers, next steps. For real. please. (alt)
+1662 | VT-473596 | [structured               ] FYI, Hey, Grocery list: milk, bread, eggs, spinach, coffee. For real. — confirm.
+1663 | VT-484619 | [structured               ] Listen, Heads up: Agenda: introductions, updates, blockers, next steps.—copy..
+1664 | VT-470327 | [structured               ] Real talk, Listen, Checklist: backups done, patches applied, monitors green. Please..
+1665 | VT-447221 | [structured               ] Real talk, FYI, Checklist: backups done, patches applied, monitors green.—got it. right now.
+1666 | VT-478776 | [structured               ] Quick one: Note: Packing list: passport, charger, adapters, toiletries, meds. — got it.
+1667 | VT-474014 | [structured               ] Listen, Reminder: Grocery list: milk, bread, eggs, spinach, coffee.—copy. right now.
+1668 | VT-459547 | [structured               ] FYI, Checklist: backups done, patches applied, monitors green.—got it. — now.
+1669 | VT-421914 | [structured               ] Quick one: Okay, Agenda: introductions, updates, blockers, next steps. Please.
+1670 | VT-415100 | [structured               ] Note: FYI, Grocery list: milk, bread, eggs, spinach, coffee.—got it. — confirm.
+1671 | VT-461699 | [structured               ] Reminder: Hey, Checklist: backups done, patches applied, monitors green. For real. thanks.
+1672 | VT-493522 | [structured               ] Note: Reminder: Agenda: introductions, updates, blockers, next steps.—copy. — confirm. (alt)
+1673 | VT-478349 | [structured               ] Reminder: To‑do: sweep, mop, laundry, email, stretch.—got it. please. (alt)
+1674 | VT-449461 | [structured               ] Listen, Note: Checklist: backups done, patches applied, monitors green. Right now. — now.
+1675 | VT-499396 | [structured               ] Heads up: Note: Packing list: passport, charger, adapters, toiletries, meds. For real. if you can.
+1676 | VT-478651 | [structured               ] Note: Reminder: Agenda: introductions, updates, blockers, next steps.—copy.
+1677 | VT-417873 | [structured               ] Real talk, Heads up: Grocery list: milk, bread, eggs, spinach, coffee. Please. if you can. (alt)
+1678 | VT-443645 | [structured               ] Reminder: Checklist: backups done, patches applied, monitors green. — now. (alt)
+1679 | VT-425484 | [structured               ] Note: FYI, Grocery list: milk, bread, eggs, spinach, coffee.—got it. thanks. (alt)
+1680 | VT-462008 | [structured               ] Reminder: Reminder: Grocery list: milk, bread, eggs, spinach, coffee.—copy. thanks.
+1681 | VT-402975 | [structured               ] Real talk, Listen, Grocery list: milk, bread, eggs, spinach, coffee. If possible. please.
+1682 | VT-465961 | [structured               ] Real talk, Hey, Agenda: introductions, updates, blockers, next steps. Please. right now.
+1683 | VT-433481 | [structured               ] FYI, Note: Packing list: passport, charger, adapters, toiletries, meds. thanks.
+1684 | VT-438369 | [structured               ] Quick one: Okay, Packing list: passport, charger, adapters, toiletries, meds. Please.
+1685 | VT-406618 | [structured               ] Heads up: Listen, Grocery list: milk, bread, eggs, spinach, coffee. For real. if you can.
+1686 | VT-417041 | [structured               ] Quick one: Heads up: Checklist: backups done, patches applied, monitors green. Please.. (alt)
+1687 | VT-482699 | [structured               ] Okay, Okay, To‑do: sweep, mop, laundry, email, stretch. Thanks. please.
+1688 | VT-462393 | [structured               ] Okay, Okay, To‑do: sweep, mop, laundry, email, stretch. For real. — got it.
+1689 | VT-486311 | [structured               ] Reminder: Hey, To‑do: sweep, mop, laundry, email, stretch. For real. right now.
+1690 | VT-426126 | [structured               ] FYI, FYI, Agenda: introductions, updates, blockers, next steps.—copy. thanks.
+1691 | VT-457575 | [structured               ] Real talk, Heads up: Agenda: introductions, updates, blockers, next steps.—copy. thanks. (alt)
+1692 | VT-481662 | [structured               ] FYI, Agenda: introductions, updates, blockers, next steps. Right now.
+1693 | VT-490920 | [structured               ] FYI, Listen, Packing list: passport, charger, adapters, toiletries, meds. For real. thanks.
+1694 | VT-449710 | [structured               ] FYI, Note: Grocery list: milk, bread, eggs, spinach, coffee.—got it. please. (alt)
+1695 | VT-486822 | [structured               ] Okay, Note: Agenda: introductions, updates, blockers, next steps. Thanks. if you can.
+1696 | VT-434313 | [structured               ] Quick one: To‑do: sweep, mop, laundry, email, stretch. Right now. right now.
+1697 | VT-430808 | [structured               ] Reminder: Note: Packing list: passport, charger, adapters, toiletries, meds. For real. — got it.
+1698 | VT-403312 | [structured               ] FYI, Listen, Packing list: passport, charger, adapters, toiletries, meds. For real. if you can.
+1699 | VT-455108 | [structured               ] Quick one: Listen, Agenda: introductions, updates, blockers, next steps. Thanks.
+1700 | VT-408137 | [structured               ] Reminder: Note: Packing list: passport, charger, adapters, toiletries, meds.. (alt)

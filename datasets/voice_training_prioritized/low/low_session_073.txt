@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 73 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+3601 | VT-93607 | [philosophical            ] Okay, Time is just memory unfolding in a straight line. For real.
+3602 | VT-52940 | [philosophical            ] Okay, Time is just memory unfolding in a straight line. Right now.
+3603 | VT-70851 | [philosophical            ] Reminder: To know yourself is to forget what the world taught you to be. If possible.
+3604 | VT-91801 | [philosophical            ] Note: What is the sound of thought before it becomes speech? For real.
+3605 | VT-27179 | [philosophical            ] Okay, To know yourself is to forget what the world taught you to be. Please.
+3606 | VT-91801 | [philosophical            ] Note: What is the sound of thought before it becomes speech? For real.
+3607 | VT-11349 | [philosophical            ] Note: Time is just memory unfolding in a straight line. Please.
+3608 | VT-90647 | [philosophical            ] To know yourself is to forget what the world taught you to be.
+3609 | VT-16491 | [philosophical            ] Okay, What is the sound of thought before it becomes speech?—copy.
+3610 | VT-59926 | [philosophical            ] FYI, Time is just memory unfolding in a straight line.
+3611 | VT-35319 | [philosophical            ] Heads up: Time is just memory unfolding in a straight line.—copy.
+3612 | VT-75848 | [philosophical            ] Heads up: Time is just memory unfolding in a straight line. Right now.
+3613 | VT-66104 | [philosophical            ] Hey, To know yourself is to forget what the world taught you to be.—got it.
+3614 | VT-35752 | [philosophical            ] Listen, To know yourself is to forget what the world taught you to be.—copy.
+3615 | VT-37655 | [philosophical            ] What is the sound of thought before it becomes speech?—copy.
+3616 | VT-89293 | [philosophical            ] Time is just memory unfolding in a straight line. Please.
+3617 | VT-21579 | [philosophical            ] Note: Time is just memory unfolding in a straight line. If possible.
+3618 | VT-17120 | [philosophical            ] Reminder: What is the sound of thought before it becomes speech? Right now.
+3619 | VT-97221 | [philosophical            ] FYI, What is the sound of thought before it becomes speech?—got it.
+3620 | VT-96239 | [philosophical            ] To know yourself is to forget what the world taught you to be. Thanks.
+3621 | VT-64533 | [philosophical            ] FYI, To know yourself is to forget what the world taught you to be. If possible.
+3622 | VT-78512 | [philosophical            ] Heads up: Time is just memory unfolding in a straight line. Right now.
+3623 | VT-75848 | [philosophical            ] Heads up: Time is just memory unfolding in a straight line. Right now.
+3624 | VT-26658 | [philosophical            ] Listen, To know yourself is to forget what the world taught you to be. Please.
+3625 | VT-34024 | [philosophical            ] What is the sound of thought before it becomes speech? If possible.
+3626 | VT-99120 | [philosophical            ] Note: To know yourself is to forget what the world taught you to be. Thanks.
+3627 | VT-29706 | [philosophical            ] Note: To know yourself is to forget what the world taught you to be. Please.
+3628 | VT-10359 | [philosophical            ] Hey, What is the sound of thought before it becomes speech? If possible.
+3629 | VT-29176 | [philosophical            ] Time is just memory unfolding in a straight line. For real.
+3630 | VT-78512 | [philosophical            ] Heads up: Time is just memory unfolding in a straight line. Right now.
+3631 | VT-35789 | [philosophical            ] Heads up: Time is just memory unfolding in a straight line.—got it.
+3632 | VT-78512 | [philosophical            ] Heads up: Time is just memory unfolding in a straight line. Right now.
+3633 | VT-59451 | [philosophical            ] What is the sound of thought before it becomes speech?—copy.
+3634 | VT-59294 | [philosophical            ] Reminder: To know yourself is to forget what the world taught you to be. If possible.
+3635 | VT-78512 | [philosophical            ] Heads up: Time is just memory unfolding in a straight line. Right now.
+3636 | VT-47869 | [robotic_formal           ] Listen, System acknowledgment: request received and validated. For real.
+3637 | VT-86863 | [robotic_formal           ] Listen, This unit has no emotional processing capabilities. Thank you. If possible.
+3638 | VT-64183 | [robotic_formal           ] Heads up: This unit has no emotional processing capabilities. Thank you. If possible.
+3639 | VT-29940 | [robotic_formal           ] Hey, This unit has no emotional processing capabilities. Thank you.—got it.
+3640 | VT-33215 | [robotic_formal           ] Note: Initiating process sequence in accordance with protocol alpha.—copy.
+3641 | VT-59417 | [robotic_formal           ] Hey, This unit has no emotional processing capabilities. Thank you. If possible.
+3642 | VT-30883 | [robotic_formal           ] Okay, This unit has no emotional processing capabilities. Thank you.—copy.
+3643 | VT-47869 | [robotic_formal           ] Listen, System acknowledgment: request received and validated. For real.
+3644 | VT-76801 | [robotic_formal           ] Hey, Initiating process sequence in accordance with protocol alpha. If possible.
+3645 | VT-74917 | [robotic_formal           ] FYI, This unit has no emotional processing capabilities. Thank you.—got it.
+3646 | VT-34552 | [robotic_formal           ] System acknowledgment: request received and validated. Thanks.
+3647 | VT-92420 | [robotic_formal           ] Listen, This unit has no emotional processing capabilities. Thank you. Please.
+3648 | VT-26222 | [robotic_formal           ] System acknowledgment: request received and validated. If possible.
+3649 | VT-64280 | [robotic_formal           ] FYI, Initiating process sequence in accordance with protocol alpha. Please.
+3650 | VT-30415 | [robotic_formal           ] FYI, Initiating process sequence in accordance with protocol alpha. Thanks.

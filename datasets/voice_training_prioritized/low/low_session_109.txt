@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 109 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+5401 | VT-46466 | [uncertainty              ] Listen, Maybe—leaning no. Thanks.
+5402 | VT-58187 | [uncertainty              ] Okay, I don’t have that info. Please.
+5403 | VT-98414 | [uncertainty              ] Hey, Possibly, but unlikely.—copy.
+5404 | VT-76698 | [uncertainty              ] Listen, Too early to call. Thanks.
+5405 | VT-86747 | [uncertainty              ] Hey, Hard to say without more data.—copy.
+5406 | VT-23072 | [uncertainty              ] Heads up: We’ll see.
+5407 | VT-12741 | [uncertainty              ] Okay, I’m not sure yet. For real.
+5408 | VT-98473 | [uncertainty              ] Reminder: I doubt it.
+5409 | VT-12741 | [uncertainty              ] Okay, I’m not sure yet. For real.
+5410 | VT-95106 | [uncertainty              ] Heads up: Fifty-fifty at best. For real.
+5411 | VT-23908 | [uncertainty              ] It depends on the constraints.
+5412 | VT-90096 | [uncertainty              ] Note: It depends on the constraints.—got it.
+5413 | VT-68486 | [uncertainty              ] Reminder: Possibly, but unlikely. Thanks.
+5414 | VT-78936 | [uncertainty              ] Heads up: I doubt it.—copy.
+5415 | VT-73513 | [uncertainty              ] Listen, Hard to say without more data. Please.
+5416 | VT-88448 | [uncertainty              ] Okay, Possibly, but unlikely.
+5417 | VT-53733 | [uncertainty              ] Reminder: I’m not sure yet.—got it.
+5418 | VT-15720 | [uncertainty              ] Hard to say without more data. If possible.
+5419 | VT-50584 | [uncertainty              ] Listen, Hard to say without more data. Please.
+5420 | VT-99659 | [uncertainty              ] Hey, We’ll see.
+5421 | VT-54649 | [uncertainty              ] Reminder: Too early to call.—copy.
+5422 | VT-79100 | [uncertainty              ] Okay, I don’t have that info.
+5423 | VT-25431 | [uncertainty              ] Okay, Fifty-fifty at best. For real.
+5424 | VT-79519 | [uncertainty              ] Okay, I don’t have that info.—copy.
+5425 | VT-84446 | [uncertainty              ] FYI, It depends on the constraints. Right now.
+5426 | VT-73513 | [uncertainty              ] Listen, Hard to say without more data. Please.
+5427 | VT-85391 | [uncertainty              ] FYI, Fifty-fifty at best. Please.
+5428 | VT-58874 | [uncertainty              ] Hey, Hard to say without more data.—copy.
+5429 | VT-21176 | [uncertainty              ] FYI, Hard to say without more data. For real.
+5430 | VT-81812 | [uncertainty              ] FYI, We’ll see. If possible.
+5431 | VT-30553 | [uncertainty              ] Heads up: I don’t have that info. If possible.
+5432 | VT-52769 | [uncertainty              ] Hey, I’m not sure yet.—copy.
+5433 | VT-84446 | [uncertainty              ] FYI, It depends on the constraints. Right now.
+5434 | VT-39094 | [uncertainty              ] Note: I’m not sure yet. For real.
+5435 | VT-84446 | [uncertainty              ] FYI, It depends on the constraints. Right now.
+5436 | VT-99107 | [uncertainty              ] FYI, Maybe—leaning no. Thanks.
+5437 | VT-79607 | [uncertainty              ] Note: I’m not sure yet. Thanks.
+5438 | VT-84446 | [uncertainty              ] FYI, It depends on the constraints. Right now.
+5439 | VT-74638 | [urls_emails_codes        ] My handle is @zero_cool_1995. Right now.
+5440 | VT-17017 | [urls_emails_codes        ] Note: Join the room ID 834-555-120 with passcode 'orbit'. Right now.
+5441 | VT-85606 | [urls_emails_codes        ] My handle is @zero_cool_1995. If possible.
+5442 | VT-60947 | [urls_emails_codes        ] Hey, The repo lives at github dot com slash acme slash core. If possible.
+5443 | VT-33482 | [urls_emails_codes        ] Note: The meeting link is in the calendar description. Right now.
+5444 | VT-35637 | [urls_emails_codes        ] Heads up: Email support at helpdesk@example.com. For real.
+5445 | VT-50940 | [urls_emails_codes        ] Hey, Visit https://example.org/docs/getting-started. Please.
+5446 | VT-74638 | [urls_emails_codes        ] My handle is @zero_cool_1995. Right now.
+5447 | VT-91497 | [urls_emails_codes        ] Note: Email support at helpdesk@example.com. Right now.
+5448 | VT-71694 | [urls_emails_codes        ] FYI, The repo lives at github dot com slash acme slash core. Thanks.
+5449 | VT-80343 | [urls_emails_codes        ] Listen, Text me the OTP when you get it. For real.
+5450 | VT-90917 | [urls_emails_codes        ] FYI, The meeting link is in the calendar description. Please.

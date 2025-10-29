@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 142 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7051 | VT-434788 | [spelling_alphabet        ] Note: Okay, My initials are N—A—A, November Alpha Alpha. Right now. — now.
+7052 | VT-420332 | [spelling_alphabet        ] Reminder: Heads up: Say it letter by letter: R—E—S—O—N—A—N—C—E. Please. please.
+7053 | VT-476516 | [spelling_alphabet        ] Heads up: Heads up: Username: delta.delta—underscore—root. please.
+7054 | VT-433578 | [spelling_alphabet        ] Okay, License plate reads: Zulu Seven Bravo Nine Four. For real..
+7055 | VT-402799 | [spelling_alphabet        ] FYI, Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—copy. thanks.
+7056 | VT-462112 | [spelling_alphabet        ] Listen, Reminder: My initials are N—A—A, November Alpha Alpha.—got it. if you can.
+7057 | VT-461453 | [spelling_alphabet        ] Listen, Note: License plate reads: Zulu Seven Bravo Nine Four. thanks.
+7058 | VT-422411 | [spelling_alphabet        ] Heads up: Okay, Say it letter by letter: R—E—S—O—N—A—N—C—E. If possible. please.
+7059 | VT-446912 | [spelling_alphabet        ] Listen, Acronym pronounced like a word: SNAFU. For real..
+7060 | VT-496555 | [spelling_alphabet        ] Okay, Listen, Username: delta.delta—underscore—root.—got it. right now.
+7061 | VT-446073 | [spelling_alphabet        ] Heads up: FYI, Lowercase only: monolithicservice. Please. thanks.
+7062 | VT-471074 | [spelling_alphabet        ] Heads up: Note: Serial: Tango–Lima–2–Foxtrot–Echo.—copy..
+7063 | VT-499155 | [spelling_alphabet        ] Quick one: FYI, License plate reads: Zulu Seven Bravo Nine Four. Please. — got it.
+7064 | VT-427564 | [spelling_alphabet        ] Listen, Reminder: Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—got it. thanks.
+7065 | VT-488090 | [spelling_alphabet        ] FYI, Listen, Lowercase only: monolithicservice. For real. — confirm.
+7066 | VT-456183 | [spelling_alphabet        ] Note: Note: My initials are N—A—A, November Alpha Alpha. if you can.
+7067 | VT-498880 | [spelling_alphabet        ] Okay, License plate reads: Zulu Seven Bravo Nine Four. if you can.
+7068 | VT-465640 | [spelling_alphabet        ] FYI, Acronym pronounced like a word: SNAFU. For real..
+7069 | VT-464367 | [spelling_alphabet        ] Quick one: Listen, Acronym pronounced like a word: SNAFU.—copy. — got it.
+7070 | VT-415272 | [spelling_alphabet        ] Quick one: Hey, Acronym pronounced like a word: SNAFU. Please. if you can.
+7071 | VT-454690 | [spelling_alphabet        ] Note: Okay, Lowercase only: monolithicservice.—copy. — now.
+7072 | VT-430534 | [spelling_alphabet        ] Note: Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—copy.
+7073 | VT-497654 | [spelling_alphabet        ] Quick one: Note: Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November. Please. if you can.
+7074 | VT-498613 | [spelling_alphabet        ] Real talk, Heads up: Acronym pronounced like a word: SNAFU. Right now. right now.
+7075 | VT-475718 | [spelling_alphabet        ] FYI, Reminder: License plate reads: Zulu Seven Bravo Nine Four. — confirm.
+7076 | VT-498773 | [spelling_alphabet        ] FYI, Heads up: All caps: API KEY REVOKED. For real.
+7077 | VT-467244 | [spelling_alphabet        ] Heads up: All caps: API KEY REVOKED. Thanks. right now.
+7078 | VT-409122 | [spelling_alphabet        ] Reminder: FYI, All caps: API KEY REVOKED. If possible.
+7079 | VT-497419 | [spelling_alphabet        ] FYI, Heads up: Lowercase only: monolithicservice.—copy. right now.
+7080 | VT-445704 | [spelling_alphabet        ] Quick one: Heads up: Say it letter by letter: R—E—S—O—N—A—N—C—E. Please. — got it.
+7081 | VT-444653 | [spelling_alphabet        ] Reminder: Okay, Say it letter by letter: R—E—S—O—N—A—N—C—E. If possible. if you can.
+7082 | VT-455259 | [spelling_alphabet        ] FYI, Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November. Thanks. right now.
+7083 | VT-488131 | [spelling_alphabet        ] Reminder: Acronym pronounced like a word: SNAFU. Thanks. — got it.
+7084 | VT-484838 | [spelling_alphabet        ] Real talk, Reminder: Say it letter by letter: R—E—S—O—N—A—N—C—E. Please. if you can.
+7085 | VT-400037 | [spelling_alphabet        ] Okay, Reminder: Serial: Tango–Lima–2–Foxtrot–Echo. Thanks. — confirm.
+7086 | VT-440784 | [spelling_alphabet        ] Real talk, Reminder: Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—got it. — now.
+7087 | VT-426336 | [spelling_alphabet        ] Reminder: FYI, Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November. Thanks. right now.
+7088 | VT-462904 | [spelling_alphabet        ] Reminder: Heads up: Say it letter by letter: R—E—S—O—N—A—N—C—E.—copy.
+7089 | VT-497127 | [spelling_alphabet        ] Real talk, Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—copy. — got it.
+7090 | VT-401811 | [spelling_alphabet        ] Reminder: Note: My initials are N—A—A, November Alpha Alpha. If possible. — got it.
+7091 | VT-463479 | [spelling_alphabet        ] FYI, Reminder: Username: delta.delta—underscore—root. Right now. — got it.
+7092 | VT-487729 | [spelling_alphabet        ] Okay, Hey, Acronym pronounced like a word: SNAFU. Right now. — got it.
+7093 | VT-449285 | [spelling_alphabet        ] Quick one: Heads up: License plate reads: Zulu Seven Bravo Nine Four.—got it. please.
+7094 | VT-470170 | [spelling_alphabet        ] Heads up: Heads up: All caps: API KEY REVOKED. For real. thanks.
+7095 | VT-403538 | [spelling_alphabet        ] Listen, FYI, Lowercase only: monolithicservice. if you can.
+7096 | VT-440339 | [spelling_alphabet        ] Note: Serial: Tango–Lima–4–Foxtrot–Echo. For real. if you can.
+7097 | VT-473905 | [spelling_alphabet        ] Real talk, All caps: API KEY REVOKED. — confirm.
+7098 | VT-447220 | [spelling_alphabet        ] FYI, Note: Lowercase only: monolithicservice.—copy. please.
+7099 | VT-499111 | [sports_cast              ] Reminder: She nails the triple, crowd goes wild.—copy. — confirm.
+7100 | VT-415126 | [sports_cast              ] Listen, Note: A new personal best by 0.12 seconds! If possible. — now.

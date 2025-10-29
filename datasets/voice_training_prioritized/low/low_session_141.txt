@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 141 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7001 | VT-405701 | [sound_effects            ] Reminder: Listen, Pshhh, like air escaping a balloon of secrets. If possible. please.
+7002 | VT-490002 | [sound_effects            ] Quick one: Pshhh, like air escaping a balloon of secrets. please.
+7003 | VT-431505 | [sound_effects            ] Reminder: Tick tick tick… and then silence. please.
+7004 | VT-412016 | [sound_effects            ] Heads up: Note: Pshhh, like air escaping a balloon of secrets. — got it.
+7005 | VT-471969 | [sound_effects            ] Quick one: Reminder: Pshhh, like air escaping a balloon of secrets. please.
+7006 | VT-472549 | [sound_effects            ] Listen, Boom! Crash! The whole lab went dark. Please.. (alt)
+7007 | VT-414421 | [sound_effects            ] Reminder: Tick tick tick… and then silence. For real. (alt)
+7008 | VT-425046 | [sound_effects            ] Reminder: Note: Pshhh, like air escaping a balloon of secrets.—copy. please. (alt)
+7009 | VT-474150 | [sound_effects            ] Note: Boom! Crash! The whole lab went dark. Thanks. thanks.
+7010 | VT-452937 | [sound_effects            ] Listen, Reminder: Pshhh, like air escaping a balloon of secrets.—copy. — now.
+7011 | VT-406934 | [sound_effects            ] Note: Hey, Boom! Crash! The whole lab went dark. Please..
+7012 | VT-493581 | [sound_effects            ] Quick one: Note: Tick tick tick… and then silence. Right now.
+7013 | VT-434158 | [sound_effects            ] Okay, Listen, Tick tick tick… and then silence. Please. — now. (alt)
+7014 | VT-453206 | [sound_effects            ] Heads up: Note: Tick tick tick… and then silence. For real. right now.
+7015 | VT-438464 | [sound_effects            ] Listen, FYI, Pshhh, like air escaping a balloon of secrets. Right now. if you can.
+7016 | VT-498942 | [sound_effects            ] Okay, Reminder: Tick tick tick… and then silence. Right now. (alt)
+7017 | VT-427066 | [sound_effects            ] Heads up: Tick tick tick… and then silence. — confirm.
+7018 | VT-440570 | [sound_effects            ] Quick one: Note: Boom! Crash! The whole lab went dark. Thanks.
+7019 | VT-423174 | [sound_effects            ] Listen, Reminder: Tick tick tick… and then silence. Please..
+7020 | VT-431156 | [sound_effects            ] Reminder: Reminder: Tick tick tick… and then silence.—copy. — got it.
+7021 | VT-423194 | [sound_effects            ] Okay, Reminder: Boom! Crash! The whole lab went dark. Please.
+7022 | VT-466648 | [sound_effects            ] Real talk, Reminder: Pshhh, like air escaping a balloon of secrets. if you can.
+7023 | VT-481513 | [sound_effects            ] Note: Okay, Tick tick tick… and then silence. Thanks..
+7024 | VT-487056 | [sound_effects            ] FYI, FYI, Boom! Crash! The whole lab went dark. Please. please. (alt)
+7025 | VT-421286 | [sound_effects            ] Reminder: Reminder: Boom! Crash! The whole lab went dark.—copy. if you can.
+7026 | VT-485460 | [sound_effects            ] Okay, Tick tick tick… and then silence.—got it. thanks.
+7027 | VT-425591 | [sound_effects            ] FYI, Reminder: Boom! Crash! The whole lab went dark.—copy. right now.
+7028 | VT-497177 | [sound_effects            ] Note: Tick tick tick… and then silence. Right now. if you can.
+7029 | VT-483783 | [sound_effects            ] Real talk, Heads up: Tick tick tick… and then silence. If possible. please.
+7030 | VT-474365 | [sound_effects            ] Pshhh, like air escaping a balloon of secrets..
+7031 | VT-450446 | [sound_effects            ] Reminder: Okay, Boom! Crash! The whole lab went dark. For real. if you can.
+7032 | VT-457400 | [sound_effects            ] FYI, Pshhh, like air escaping a balloon of secrets.—copy. — got it.
+7033 | VT-448642 | [sound_effects            ] Reminder: FYI, Pshhh, like air escaping a balloon of secrets. Please. please.
+7034 | VT-489652 | [sound_effects            ] Heads up: Listen, Boom! Crash! The whole lab went dark. if you can.
+7035 | VT-428056 | [sound_effects            ] FYI, FYI, Boom! Crash! The whole lab went dark. — confirm.
+7036 | VT-470733 | [sound_effects            ] Listen, Note: Tick tick tick… and then silence. For real.. (alt)
+7037 | VT-480710 | [sound_effects            ] Okay, Pshhh, like air escaping a balloon of secrets.—copy..
+7038 | VT-455017 | [sound_effects            ] Okay, Listen, Pshhh, like air escaping a balloon of secrets. If possible. please.
+7039 | VT-491210 | [sound_effects            ] Reminder: Reminder: Pshhh, like air escaping a balloon of secrets.
+7040 | VT-477466 | [sound_effects            ] Real talk, FYI, Boom! Crash! The whole lab went dark. If possible. right now.
+7041 | VT-428624 | [sound_effects            ] FYI, Tick tick tick… and then silence. Please. — now.
+7042 | VT-484602 | [sound_effects            ] Note: Note: Pshhh, like air escaping a balloon of secrets. Thanks. (alt)
+7043 | VT-471720 | [sound_effects            ] Okay, Hey, Pshhh, like air escaping a balloon of secrets. Thanks.. (alt)
+7044 | VT-440219 | [sound_effects            ] Reminder: Okay, Tick tick tick… and then silence.—got it. (alt)
+7045 | VT-464395 | [sound_effects            ] Note: Listen, Pshhh, like air escaping a balloon of secrets.—copy. if you can.
+7046 | VT-455465 | [sound_effects            ] Reminder: FYI, Tick tick tick… and then silence. — now.
+7047 | VT-420231 | [sound_effects            ] Quick one: Hey, Pshhh, like air escaping a balloon of secrets. Please. — got it.
+7048 | VT-436063 | [sound_effects            ] Reminder: Pshhh, like air escaping a balloon of secrets. Right now..
+7049 | VT-480603 | [spelling_alphabet        ] Quick one: Reminder: My initials are N—A—A, November Alpha Alpha.—got it. please.
+7050 | VT-415496 | [spelling_alphabet        ] FYI, Note: Lowercase only: monolithicservice. Thanks. thanks.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 38 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1851 | VT-400248 | [interrogative            ] Quick one: Okay, Why does it always rain when I'm unprepared? If possible. please. (alt)
+1852 | VT-473047 | [interrogative            ] Reminder: Is this really what you want? Thanks..
+1853 | VT-490364 | [interrogative            ] Real talk, Note: Is this really what you want? If possible.
+1854 | VT-400747 | [interrogative            ] Quick one: Okay, Why does it always rain when I'm unprepared? Right now. right now.
+1855 | VT-451747 | [interrogative            ] Real talk, Listen, Why does it always rain when I'm unprepared?—copy. right now.
+1856 | VT-404632 | [interrogative            ] FYI, Reminder: Do you even hear yourself right now? Please. thanks. (alt)
+1857 | VT-466965 | [interrogative            ] Quick one: Is this really what you want? Thanks. — confirm.
+1858 | VT-418020 | [interrogative            ] Real talk, Listen, Is this really what you want?—got it. if you can. (alt)
+1859 | VT-420058 | [interrogative            ] Okay, Reminder: Is this really what you want?—copy. if you can. (alt)
+1860 | VT-459828 | [interrogative            ] FYI, Heads up: Why does it always rain when I'm unprepared?—copy. — now.
+1861 | VT-423113 | [interrogative            ] Reminder: Do you even hear yourself right now? Right now.
+1862 | VT-474971 | [interrogative            ] Heads up: FYI, Is this really what you want? For real. thanks.
+1863 | VT-490381 | [interrogative            ] FYI, Note: Is this really what you want?—got it. please. (alt)
+1864 | VT-418092 | [interrogative            ] FYI, Do you even hear yourself right now?.
+1865 | VT-495660 | [interrogative            ] Heads up: Is this really what you want? Thanks. — now. (alt)
+1866 | VT-496995 | [interrogative            ] Okay, Hey, Do you even hear yourself right now? For real. — now.
+1867 | VT-494251 | [interrogative            ] Listen, Is this really what you want? If possible. if you can.
+1868 | VT-463121 | [interrogative            ] FYI, Okay, Is this really what you want? For real. — confirm.
+1869 | VT-460973 | [measurements_units       ] Okay, Torque the bolt to 6 newton-meters. (7982) Thanks..
+1870 | VT-443472 | [measurements_units       ] Heads up: Listen, Fan speed at forty percent. (3178) Right now. please.
+1871 | VT-404542 | [measurements_units       ] Reminder: Reminder: Torque the bolt to 7 newton-meters. (2773) If possible. right now.
+1872 | VT-416534 | [measurements_units       ] Note: Note: Hold temperature at 205 Celsius. (6101)—got it. — now.
+1873 | VT-434975 | [measurements_units       ] Okay, Okay, Mix 3:1 by volume, not weight. (8441)
+1874 | VT-455824 | [measurements_units       ] Okay, Listen, Cut the rod to 144 millimeters. (1894) Right now. please.
+1875 | VT-457684 | [measurements_units       ] Real talk, Print at 0.2 millimeter layer height. (3540) Please..
+1876 | VT-490919 | [measurements_units       ] FYI, Torque the bolt to 5 newton-meters. (7982) Thanks. thanks.
+1877 | VT-497466 | [measurements_units       ] Real talk, Okay, Cut the rod to 145 millimeters. (6965) Right now.
+1878 | VT-438654 | [measurements_units       ] Note: Okay, Hold temperature at 205 Celsius. (6610) If possible. right now.
+1879 | VT-471054 | [measurements_units       ] Okay, Note: Tolerance is plus or minus 1.05 millimeters. (2874) — confirm.
+1880 | VT-490623 | [measurements_units       ] Real talk, FYI, Mix 3:1 by volume, not weight. (1897) If possible.
+1881 | VT-457053 | [measurements_units       ] Okay, Okay, Fan speed at forty percent. (6574) Please.
+1882 | VT-482496 | [measurements_units       ] Heads up: Maintain 24 volts at 3 amps. (3871)—got it..
+1883 | VT-458341 | [measurements_units       ] Quick one: Note: Cut the rod to 145 millimeters. (412) If possible. — confirm.
+1884 | VT-444701 | [measurements_units       ] Okay, Hey, Print at 0.2 millimeter layer height. (5616)—copy. — now.
+1885 | VT-458004 | [measurements_units       ] Note: Hey, Fan speed at forty percent. (9950) Please..
+1886 | VT-468439 | [measurements_units       ] Real talk, Listen, Torque the bolt to 6 newton-meters. (7066) Please. right now.
+1887 | VT-436684 | [measurements_units       ] Listen, Cut the rod to 146 millimeters. thanks.
+1888 | VT-497715 | [measurements_units       ] Real talk, Note: Tolerance is plus or minus 1.05 millimeters. (2874) please.
+1889 | VT-400736 | [measurements_units       ] Note: Reminder: Tolerance is plus or minus 0.05 millimeters. (7404)—got it. please.
+1890 | VT-447392 | [measurements_units       ] Heads up: Hey, Tolerance is plus or minus 0.05 millimeters. (3573) Please. right now.
+1891 | VT-416081 | [measurements_units       ] Heads up: Fan speed at forty percent. (2465) For real. — confirm.
+1892 | VT-422304 | [measurements_units       ] Print at 0.2 millimeter layer height. (3540) Please. — confirm.
+1893 | VT-433416 | [measurements_units       ] Heads up: Print at 0.2 millimeter layer height. (4494) Right now. — now.
+1894 | VT-467335 | [measurements_units       ] Okay, Okay, Tolerance is plus or minus 0.05 millimeters. (6094) Please. — confirm.
+1895 | VT-481957 | [measurements_units       ] Reminder: Okay, Cut the rod to 145 millimeters. (7596) Thanks. — confirm.
+1896 | VT-480951 | [measurements_units       ] Reminder: Listen, Density measured at 1.24 grams per cubic centimeter. (2763)—copy. — confirm.
+1897 | VT-486322 | [measurements_units       ] Heads up: Density measured at 1.24 grams per cubic centimeter. (4345)—copy..
+1898 | VT-452506 | [measurements_units       ] FYI, Heads up: Density measured at 1.24 grams per cubic centimeter. (9554) Please. if you can.
+1899 | VT-464376 | [measurements_units       ] Listen, Heads up: Fan speed at forty percent. (3030) For real. right now.
+1900 | VT-408482 | [measurements_units       ] Real talk, Note: Hold temperature at 206 Celsius. (6101)—got it. if you can.

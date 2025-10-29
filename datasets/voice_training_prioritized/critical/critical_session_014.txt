@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 14 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0651 | VT-0020 | [everyday                 ] Could you send me that file before 5:05 PM?
+0652 | VT-35895 | [everyday                 ] Turn the volume down a bit, please.—copy.
+0653 | VT-0517 | [everyday                 ] Open settings → Privacy → Microphone and toggle access on.
+0654 | VT-0039 | [everyday                 ] I'll grab lunch near the cafe.
+0655 | VT-28042 | [everyday                 ] FYI, Could you double‑check the address? Thanks.
+0656 | VT-91709 | [everyday                 ] FYI, Quick question: did you update the doc? Right now.
+0657 | VT-0519 | [everyday                 ] Who’s bringing snacks for the meeting?
+0658 | VT-66408 | [everyday                 ] Okay, Mark it as tentative until we confirm. For real.
+0659 | VT-0037 | [everyday                 ] We can wrap this up by 7:22 PM.
+0660 | VT-0081 | [everyday                 ] I’ll confirm the details and get back to you.
+0661 | VT-51093 | [everyday                 ] Hey, Text me when you arrive. Thanks.
+0662 | VT-0031 | [everyday                 ] Let's meet on Tuesday to go over the plan.
+0663 | VT-78121 | [everyday                 ] Note: Did you try a different cable and port? Right now.
+0664 | VT-16064 | [everyday                 ] Reminder: I’ll circle back after lunch.
+0665 | VT-0525 | [everyday                 ] Did you try a different cable and port?
+0666 | VT-84458 | [everyday                 ] Reminder: No worries, it happens. If possible.
+0667 | VT-0073 | [everyday                 ] I forgot my keys again.
+0668 | VT-45862 | [everyday                 ] I’m running five minutes late—sorry!
+0669 | VT-0036 | [everyday                 ] I’m running five minutes late—sorry!
+0670 | VT-0073 | [everyday                 ] I forgot my keys again.
+0671 | VT-12952 | [everyday                 ] Reminder: See you on Wednesday!—got it.
+0672 | VT-0058 | [everyday                 ] See you on Wednesday!
+0673 | VT-87757 | [everyday                 ] Hey, I appreciate the quick response. Please.
+0674 | VT-0040 | [everyday                 ] I'll grab lunch near the studio.
+0675 | VT-0049 | [everyday                 ] See you on Saturday!
+0676 | VT-0038 | [everyday                 ] I'll be at the office around noon.
+0677 | VT-0004 | [everyday                 ] Good evening.
+0678 | VT-0046 | [everyday                 ] See you on Sunday!
+0679 | VT-0047 | [everyday                 ] Hey Avery, can you call me back when you get a chance?
+0680 | VT-28042 | [everyday                 ] FYI, Could you double‑check the address? Thanks.
+0681 | VT-0020 | [everyday                 ] Could you send me that file before 5:05 PM?
+0682 | VT-0042 | [everyday                 ] Could you send me that file before 7:30 AM?
+0683 | VT-32759 | [everyday                 ] Note: Could you send me that file before noon? For real.
+0684 | VT-45529 | [everyday                 ] FYI, Okay, but what’s the worst-case scenario?—got it.
+0685 | VT-0033 | [everyday                 ] I'll grab lunch near the library.
+0686 | VT-90100 | [everyday                 ] Hey, Let’s keep it simple this time. Please.
+0687 | VT-0004 | [everyday                 ] Good evening.
+0688 | VT-0524 | [everyday                 ] Please label the boxes by room and by priority.
+0689 | VT-0018 | [everyday                 ] I’ll send a follow-up email tonight.
+0690 | VT-0070 | [everyday                 ] Do you want to split the bill?
+0691 | VT-0034 | [everyday                 ] Hey Quinn, can you call me back when you get a chance?
+0692 | VT-0075 | [everyday                 ] Could you double‑check the address?
+0693 | VT-0056 | [everyday                 ] Let's meet on Thursday to go over the plan.
+0694 | VT-44050 | [everyday                 ] Hey, Could you send me that file before midnight? Thanks.
+0695 | VT-76396 | [everyday                 ] Reminder: See you on Thursday! For real.
+0696 | VT-0521 | [everyday                 ] Press and hold the power button for ten seconds.
+0697 | VT-69647 | [everyday                 ] Hey, Can you scan both sides as a single PDF? For real.
+0698 | VT-0081 | [everyday                 ] I’ll confirm the details and get back to you.
+0699 | VT-76396 | [everyday                 ] Reminder: See you on Thursday! For real.
+0700 | VT-83815 | [everyday                 ] Note: Let’s write it down before we forget. Please.

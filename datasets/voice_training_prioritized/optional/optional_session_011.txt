@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 11 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0501 | VT-13441 | [dystopian                ] Heads up: The drones monitor your heartbeat. Don’t run.—got it.
+0502 | VT-41114 | [dystopian                ] The drones monitor your heartbeat. Don’t run. Right now.
+0503 | VT-59136 | [dystopian                ] We stopped dreaming when the sky turned red. If possible.
+0504 | VT-57189 | [dystopian                ] Listen, Hope is a virus they haven’t managed to eliminate yet.
+0505 | VT-36582 | [dystopian                ] Hey, We stopped dreaming when the sky turned red. If possible.
+0506 | VT-89067 | [dystopian                ] Note: We stopped dreaming when the sky turned red. Right now.
+0507 | VT-35626 | [dystopian                ] Hey, We stopped dreaming when the sky turned red. Thanks.
+0508 | VT-66942 | [dystopian                ] Reminder: The drones monitor your heartbeat. Don’t run. For real.
+0509 | VT-23044 | [dystopian                ] Okay, Hope is a virus they haven’t managed to eliminate yet.
+0510 | VT-28596 | [dystopian                ] Reminder: We stopped dreaming when the sky turned red. For real.
+0511 | VT-96561 | [dystopian                ] Okay, We stopped dreaming when the sky turned red.—copy.
+0512 | VT-82605 | [dystopian                ] Reminder: The drones monitor your heartbeat. Don’t run. Please.
+0513 | VT-96561 | [dystopian                ] Okay, We stopped dreaming when the sky turned red.—copy.
+0514 | VT-23218 | [dystopian                ] Okay, We stopped dreaming when the sky turned red. For real.
+0515 | VT-30464 | [dystopian                ] Note: The drones monitor your heartbeat. Don’t run.—copy.
+0516 | VT-53675 | [dystopian                ] Okay, Hope is a virus they haven’t managed to eliminate yet. Please.
+0517 | VT-55592 | [dystopian                ] Hey, We stopped dreaming when the sky turned red.—got it.
+0518 | VT-42809 | [dystopian                ] Note: Hope is a virus they haven’t managed to eliminate yet.—copy.
+0519 | VT-95895 | [dystopian                ] Listen, We stopped dreaming when the sky turned red.—copy.
+0520 | VT-12077 | [dystopian                ] The drones monitor your heartbeat. Don’t run. For real.
+0521 | VT-87064 | [dystopian                ] The drones monitor your heartbeat. Don’t run. Please.
+0522 | VT-28750 | [dystopian                ] Reminder: Hope is a virus they haven’t managed to eliminate yet.—copy.
+0523 | VT-80275 | [dystopian                ] Listen, Hope is a virus they haven’t managed to eliminate yet. Thanks.
+0524 | VT-34323 | [dystopian                ] Note: The drones monitor your heartbeat. Don’t run.
+0525 | VT-71415 | [dystopian                ] Okay, We stopped dreaming when the sky turned red. If possible.
+0526 | VT-89534 | [dystopian                ] Hey, Hope is a virus they haven’t managed to eliminate yet. Thanks.
+0527 | VT-11911 | [dystopian                ] Heads up: We stopped dreaming when the sky turned red.—got it.
+0528 | VT-37170 | [dystopian                ] FYI, Hope is a virus they haven’t managed to eliminate yet.
+0529 | VT-98732 | [dystopian                ] FYI, Hope is a virus they haven’t managed to eliminate yet. Thanks.
+0530 | VT-25770 | [dystopian                ] Reminder: Hope is a virus they haven’t managed to eliminate yet.—got it.
+0531 | VT-34323 | [dystopian                ] Note: The drones monitor your heartbeat. Don’t run.
+0532 | VT-34323 | [dystopian                ] Note: The drones monitor your heartbeat. Don’t run.
+0533 | VT-90363 | [dystopian                ] Heads up: We stopped dreaming when the sky turned red. For real.
+0534 | VT-36509 | [dystopian                ] Reminder: Hope is a virus they haven’t managed to eliminate yet. If possible.
+0535 | VT-50923 | [dystopian                ] We stopped dreaming when the sky turned red. Right now.
+0536 | VT-35395 | [dystopian                ] Listen, We stopped dreaming when the sky turned red.—copy.
+0537 | VT-39046 | [dystopian                ] Reminder: We stopped dreaming when the sky turned red. For real.
+0538 | VT-88465 | [dystopian                ] Note: Hope is a virus they haven’t managed to eliminate yet.
+0539 | VT-57337 | [dystopian                ] Reminder: Hope is a virus they haven’t managed to eliminate yet.
+0540 | VT-64353 | [dystopian                ] Note: We stopped dreaming when the sky turned red.
+0541 | VT-31458 | [dystopian                ] Listen, The drones monitor your heartbeat. Don’t run. For real.
+0542 | VT-59136 | [dystopian                ] We stopped dreaming when the sky turned red. If possible.
+0543 | VT-31458 | [dystopian                ] Listen, The drones monitor your heartbeat. Don’t run. For real.
+0544 | VT-36982 | [dystopian                ] Note: Hope is a virus they haven’t managed to eliminate yet.
+0545 | VT-51439 | [dystopian                ] We stopped dreaming when the sky turned red.
+0546 | VT-41114 | [dystopian                ] The drones monitor your heartbeat. Don’t run. Right now.
+0547 | VT-66374 | [dystopian                ] Heads up: Hope is a virus they haven’t managed to eliminate yet.—copy.
+0548 | VT-57189 | [dystopian                ] Listen, Hope is a virus they haven’t managed to eliminate yet.
+0549 | VT-37170 | [dystopian                ] FYI, Hope is a virus they haven’t managed to eliminate yet.
+0550 | VT-43714 | [dystopian                ] Reminder: We stopped dreaming when the sky turned red. Thanks.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 164 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+8151 | VT-504024 | [homophones_minimal_pairs ] Note: I need a new role for this roll.—copy..
+8152 | VT-569997 | [homophones_minimal_pairs ] Note: Reminder: We’ll write the right config. Right now. — got it.
+8153 | VT-556367 | [homophones_minimal_pairs ] Real talk, Listen, We’ll write the right config. right now.
+8154 | VT-600248 | [legalese                 ] Okay, FYI, Subject to applicable law and equitable principles. Please. thanks.
+8155 | VT-657442 | [legalese                 ] Okay, FYI, Breach may result in injunctive relief. For real..
+8156 | VT-518620 | [legalese                 ] Real talk, Note: Subject to applicable law and equitable principles. Please. if you can.
+8157 | VT-643712 | [legalese                 ] FYI, Time is of the essence with respect to performance. Thanks. thanks.
+8158 | VT-596300 | [legalese                 ] Note: Force majeure includes acts of God and regulatory action. Right now..
+8159 | VT-623842 | [legalese                 ] Listen, Okay, This notice constitutes neither an offer nor a solicitation. For real. — now.
+8160 | VT-671630 | [legalese                 ] Real talk, FYI, Notwithstanding the foregoing, this agreement shall remain in effect.—got it. please. (alt)
+8161 | VT-669701 | [legalese                 ] Real talk, FYI, Subject to applicable law and equitable principles. Please..
+8162 | VT-646419 | [legalese                 ] Okay, Heads up: This notice constitutes neither an offer nor a solicitation. if you can.
+8163 | VT-600511 | [legalese                 ] Real talk, Heads up: Time is of the essence with respect to performance. For real. if you can. (alt)
+8164 | VT-520070 | [legalese                 ] Reminder: Reminder: The parties agree to binding arbitration. Thanks. right now.
+8165 | VT-682331 | [legalese                 ] Heads up: Hey, Force majeure includes acts of God and regulatory action. If possible. — got it.
+8166 | VT-622890 | [legalese                 ] Okay, Hey, Breach may result in injunctive relief. For real..
+8167 | VT-625029 | [legalese                 ] Listen, FYI, Indemnify and hold harmless the disclosing party.—got it. — got it. (alt)
+8168 | VT-632146 | [legalese                 ] FYI, FYI, This notice constitutes neither an offer nor a solicitation.—got it. — confirm.
+8169 | VT-555523 | [legalese                 ] Real talk, Listen, Notwithstanding the foregoing, this agreement shall remain in effect. Thanks.
+8170 | VT-505295 | [legalese                 ] Listen, Reminder: Breach may result in injunctive relief.—got it. — got it.
+8171 | VT-690920 | [legalese                 ] Heads up: FYI, Subject to applicable law and equitable principles.—copy. if you can. (alt)
+8172 | VT-639046 | [legalese                 ] Note: This notice constitutes neither an offer nor a solicitation. — got it. (alt)
+8173 | VT-572976 | [legalese                 ] Quick one: Reminder: The parties agree to binding arbitration. Thanks.
+8174 | VT-699955 | [legalese                 ] Okay, Reminder: The parties agree to binding arbitration. right now.
+8175 | VT-698792 | [legalese                 ] Real talk, Reminder: The parties agree to binding arbitration.—got it. right now.
+8176 | VT-570273 | [legalese                 ] Okay, FYI, Breach may result in injunctive relief.
+8177 | VT-650616 | [legalese                 ] Reminder: FYI, Notwithstanding the foregoing, this agreement shall remain in effect.—got it. — now.
+8178 | VT-654267 | [legalese                 ] Okay, Heads up: Notwithstanding the foregoing, this agreement shall remain in effect.
+8179 | VT-670102 | [legalese                 ] Heads up: Hey, The parties agree to binding arbitration. — now.
+8180 | VT-640173 | [legalese                 ] Listen, FYI, This notice constitutes neither an offer nor a solicitation.—got it. — got it.
+8181 | VT-676659 | [legalese                 ] Okay, Okay, Severability ensures the remainder remains enforceable. Thanks. — got it.
+8182 | VT-545091 | [legalese                 ] Quick one: Listen, Severability ensures the remainder remains enforceable. If possible. right now.
+8183 | VT-512415 | [legalese                 ] Okay, Note: Severability ensures the remainder remains enforceable. Please.
+8184 | VT-615170 | [legalese                 ] Reminder: Reminder: Breach may result in injunctive relief. Right now. please.
+8185 | VT-562970 | [legalese                 ] Note: Time is of the essence with respect to performance. Thanks. — got it.
+8186 | VT-609586 | [legalese                 ] Heads up: Time is of the essence with respect to performance. — got it.
+8187 | VT-653789 | [legalese                 ] Okay, FYI, Notwithstanding the foregoing, this agreement shall remain in effect.—got it. — confirm.
+8188 | VT-598448 | [legalese                 ] Listen, Okay, The parties agree to binding arbitration. thanks.
+8189 | VT-527261 | [legalese                 ] Listen, Okay, Time is of the essence with respect to performance. Please. please. (alt)
+8190 | VT-640048 | [legalese                 ] Listen, Indemnify and hold harmless the disclosing party. Please.
+8191 | VT-685118 | [legalese                 ] Reminder: Listen, Notwithstanding the foregoing, this agreement shall remain in effect. Thanks.
+8192 | VT-520149 | [legalese                 ] Real talk, FYI, Notwithstanding the foregoing, this agreement shall remain in effect.—got it. — now.
+8193 | VT-523990 | [legalese                 ] Listen, Time is of the essence with respect to performance. please.
+8194 | VT-590202 | [legalese                 ] Note: FYI, Notwithstanding the foregoing, this agreement shall remain in effect.—got it. please.
+8195 | VT-661778 | [legalese                 ] Heads up: Note: Subject to applicable law and equitable principles.—copy. — now.
+8196 | VT-545918 | [legalese                 ] Note: Heads up: Force majeure includes acts of God and regulatory action. Please. if you can.
+8197 | VT-665432 | [legalese                 ] Reminder: FYI, The parties agree to binding arbitration..
+8198 | VT-604436 | [legalese                 ] Quick one: Okay, This notice constitutes neither an offer nor a solicitation.—copy.
+8199 | VT-658679 | [legalese                 ] Real talk, Okay, Severability ensures the remainder remains enforceable. Thanks. please. (alt)
+8200 | VT-583973 | [legalese                 ] Okay, Note: Breach may result in injunctive relief. Please. — confirm.

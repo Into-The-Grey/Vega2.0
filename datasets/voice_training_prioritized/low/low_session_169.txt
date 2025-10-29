@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 169 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+8401 | VT-530316 | [medical                  ] Quick one: Heads up: Vitals stable; maintain IV fluids at 75 mL per hour. — now. (alt)
+8402 | VT-686002 | [medical                  ] Reminder: Listen, Vitals stable; maintain IV fluids at 75 mL per hour. Right now. right now.
+8403 | VT-616639 | [meta                     ] Okay, This phrase was generated to train a machine to sound more human. If possible. thanks. (alt)
+8404 | VT-618212 | [meta                     ] Note: Hey, Welcome to the part of the dataset where the AI talks about itself. Thanks. — confirm. (alt)
+8405 | VT-551181 | [meta                     ] Heads up: Hey, Welcome to the part of the dataset where the AI talks about itself. Thanks.
+8406 | VT-548842 | [meta                     ] Reminder: Heads up: Welcome to the part of the dataset where the AI talks about itself. For real.. (alt)
+8407 | VT-602342 | [meta                     ] Heads up: I am not alive, but I do speak convincingly. thanks.
+8408 | VT-572376 | [meta                     ] Listen, Note: Welcome to the part of the dataset where the AI talks about itself. Please. — confirm.
+8409 | VT-616612 | [meta                     ] Note: Listen, Welcome to the part of the dataset where the AI talks about itself.—got it. right now.
+8410 | VT-611137 | [meta                     ] Reminder: Okay, This phrase was generated to train a machine to sound more human. If possible. — got it.
+8411 | VT-599951 | [meta                     ] FYI, Listen, I am not alive, but I do speak convincingly. If possible. — now.
+8412 | VT-525539 | [meta                     ] Note: Reminder: Welcome to the part of the dataset where the AI talks about itself. Please. if you can.
+8413 | VT-674431 | [meta                     ] Heads up: This phrase was generated to train a machine to sound more human. For real. if you can.
+8414 | VT-609326 | [meta                     ] Heads up: Reminder: Welcome to the part of the dataset where the AI talks about itself. Please. — got it.
+8415 | VT-660920 | [meta                     ] Reminder: This phrase was generated to train a machine to sound more human.—copy. thanks.
+8416 | VT-508441 | [meta                     ] Heads up: Note: I am not alive, but I do speak convincingly.—got it. — confirm.
+8417 | VT-571803 | [meta                     ] Note: Hey, I am not alive, but I do speak convincingly. Please. — got it. (alt)
+8418 | VT-678489 | [meta                     ] Note: Hey, I am not alive, but I do speak convincingly. Right now. thanks.
+8419 | VT-503246 | [meta                     ] Note: Welcome to the part of the dataset where the AI talks about itself. Please.. (alt)
+8420 | VT-662061 | [meta                     ] Hey, I am not alive, but I do speak convincingly. Please. thanks.
+8421 | VT-616896 | [meta                     ] I am not alive, but I do speak convincingly.
+8422 | VT-635274 | [meta                     ] Reminder: This phrase was generated to train a machine to sound more human. For real.
+8423 | VT-536904 | [meta                     ] Listen, Listen, I am not alive, but I do speak convincingly.—copy. please.
+8424 | VT-543764 | [meta                     ] FYI, Reminder: I am not alive, but I do speak convincingly. For real. — now. (alt)
+8425 | VT-692410 | [meta                     ] Listen, Reminder: This phrase was generated to train a machine to sound more human. Thanks. thanks.
+8426 | VT-630170 | [meta                     ] Okay, Listen, Welcome to the part of the dataset where the AI talks about itself.—got it. — confirm.
+8427 | VT-604978 | [meta                     ] Note: Reminder: I am not alive, but I do speak convincingly. Thanks. please.
+8428 | VT-667701 | [meta                     ] Heads up: This phrase was generated to train a machine to sound more human. If possible. — got it. (alt)
+8429 | VT-580978 | [meta                     ] Okay, Hey, This phrase was generated to train a machine to sound more human. For real. — now. (alt)
+8430 | VT-574486 | [meta                     ] FYI, Hey, I am not alive, but I do speak convincingly. If possible. please.
+8431 | VT-531536 | [meta                     ] Heads up: Listen, This phrase was generated to train a machine to sound more human. Thanks. please.
+8432 | VT-647985 | [meta                     ] Heads up: Hey, I am not alive, but I do speak convincingly.—copy. — got it.
+8433 | VT-555448 | [meta                     ] Quick one: Hey, I am not alive, but I do speak convincingly. Please. — got it.
+8434 | VT-649838 | [meta                     ] Heads up: Welcome to the part of the dataset where the AI talks about itself. For real. thanks. (alt)
+8435 | VT-661527 | [meta                     ] Heads up: This phrase was generated to train a machine to sound more human. Thanks. — confirm. (alt)
+8436 | VT-611616 | [meta                     ] FYI, Hey, Welcome to the part of the dataset where the AI talks about itself. — now.
+8437 | VT-647435 | [meta                     ] Heads up: Welcome to the part of the dataset where the AI talks about itself. Thanks. thanks.
+8438 | VT-699653 | [meta                     ] Listen, Okay, This phrase was generated to train a machine to sound more human. For real. please.
+8439 | VT-602555 | [meta                     ] Reminder: This phrase was generated to train a machine to sound more human. For real. please.
+8440 | VT-513383 | [meta                     ] Note: Hey, I am not alive, but I do speak convincingly. Right now. — got it.
+8441 | VT-652876 | [meta                     ] Note: Hey, Welcome to the part of the dataset where the AI talks about itself. please.
+8442 | VT-584101 | [meta                     ] Real talk, FYI, Welcome to the part of the dataset where the AI talks about itself. Please.
+8443 | VT-689104 | [meta                     ] Heads up: Listen, Welcome to the part of the dataset where the AI talks about itself.—got it. — confirm.
+8444 | VT-587900 | [meta                     ] This phrase was generated to train a machine to sound more human. — confirm.
+8445 | VT-600794 | [meta                     ] Heads up: I am not alive, but I do speak convincingly. For real.
+8446 | VT-545223 | [meta                     ] Heads up: Reminder: Welcome to the part of the dataset where the AI talks about itself. For real. thanks.
+8447 | VT-640188 | [meta                     ] Okay, Note: Welcome to the part of the dataset where the AI talks about itself.—copy. — got it.
+8448 | VT-542546 | [meta                     ] Listen, Hey, I am not alive, but I do speak convincingly. If possible.
+8449 | VT-607896 | [meta                     ] Heads up: Heads up: Welcome to the part of the dataset where the AI talks about itself. please.
+8450 | VT-652399 | [meta                     ] Heads up: Note: I am not alive, but I do speak convincingly. For real. right now.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 19 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0901 | VT-46369 | [sarcastic                ] Note: Oh great, another meeting that could've been an email. Thanks.
+0902 | VT-28114 | [sarcastic                ] FYI, Yeah, because that always works out perfectly, doesn’t it?—got it.
+0903 | VT-12860 | [sarcastic                ] Note: Yeah, because that always works out perfectly, doesn’t it? Right now.
+0904 | VT-40776 | [sarcastic                ] Hey, Yeah, because that always works out perfectly, doesn’t it?—got it.
+0905 | VT-27120 | [sarcastic                ] Okay, Oh great, another meeting that could've been an email. Please.
+0906 | VT-54848 | [sarcastic                ] Hey, Yeah, because that always works out perfectly, doesn’t it? If possible.
+0907 | VT-58393 | [sarcastic                ] Oh great, another meeting that could've been an email.
+0908 | VT-41010 | [sarcastic                ] Listen, Yeah, because that always works out perfectly, doesn’t it? For real.
+0909 | VT-62672 | [sarcastic                ] Okay, Oh great, another meeting that could've been an email. For real.
+0910 | VT-39763 | [sarcastic                ] Listen, Oh great, another meeting that could've been an email. If possible.
+0911 | VT-97795 | [sarcastic                ] Listen, I'm totally not rolling my eyes right now. Please.
+0912 | VT-17535 | [sarcastic                ] Yeah, because that always works out perfectly, doesn’t it? Thanks.
+0913 | VT-63906 | [sarcastic                ] Heads up: I'm totally not rolling my eyes right now. Thanks.
+0914 | VT-71464 | [sarcastic                ] Heads up: I'm totally not rolling my eyes right now. Please.
+0915 | VT-20615 | [sarcastic                ] I'm totally not rolling my eyes right now.
+0916 | VT-94387 | [sarcastic                ] Okay, Oh great, another meeting that could've been an email. For real.
+0917 | VT-53909 | [sarcastic                ] Hey, Yeah, because that always works out perfectly, doesn’t it?
+0918 | VT-34237 | [sarcastic                ] Note: I'm totally not rolling my eyes right now.
+0919 | VT-20295 | [sarcastic                ] Listen, I'm totally not rolling my eyes right now. Thanks.
+0920 | VT-35495 | [sarcastic                ] Note: Oh great, another meeting that could've been an email. For real.
+0921 | VT-20295 | [sarcastic                ] Listen, I'm totally not rolling my eyes right now. Thanks.
+0922 | VT-69160 | [sarcastic                ] FYI, I'm totally not rolling my eyes right now. Thanks.
+0923 | VT-63434 | [sarcastic                ] Okay, Oh great, another meeting that could've been an email. Please.
+0924 | VT-75754 | [sarcastic                ] FYI, Yeah, because that always works out perfectly, doesn’t it? Thanks.
+0925 | VT-27801 | [sarcastic                ] Listen, I'm totally not rolling my eyes right now. If possible.
+0926 | VT-57452 | [sarcastic                ] Hey, Yeah, because that always works out perfectly, doesn’t it?—got it.
+0927 | VT-60807 | [sarcastic                ] Heads up: I'm totally not rolling my eyes right now. For real.
+0928 | VT-96574 | [sarcastic                ] Hey, Oh great, another meeting that could've been an email.—copy.
+0929 | VT-80675 | [sarcastic                ] Note: Oh great, another meeting that could've been an email.—copy.
+0930 | VT-19213 | [sarcastic                ] Heads up: Yeah, because that always works out perfectly, doesn’t it?—copy.
+0931 | VT-97055 | [sarcastic                ] Heads up: Yeah, because that always works out perfectly, doesn’t it?—copy.
+0932 | VT-16523 | [sarcastic                ] FYI, Oh great, another meeting that could've been an email. Please.
+0933 | VT-16385 | [sarcastic                ] Okay, I'm totally not rolling my eyes right now.
+0934 | VT-29106 | [sarcastic                ] Hey, Yeah, because that always works out perfectly, doesn’t it? For real.
+0935 | VT-21113 | [sarcastic                ] I'm totally not rolling my eyes right now. For real.
+0936 | VT-13387 | [sarcastic                ] Listen, Yeah, because that always works out perfectly, doesn’t it?
+0937 | VT-19078 | [sarcastic                ] Yeah, because that always works out perfectly, doesn’t it? Right now.
+0938 | VT-51032 | [sarcastic                ] Heads up: Yeah, because that always works out perfectly, doesn’t it? If possible.
+0939 | VT-16523 | [sarcastic                ] FYI, Oh great, another meeting that could've been an email. Please.
+0940 | VT-16523 | [sarcastic                ] FYI, Oh great, another meeting that could've been an email. Please.
+0941 | VT-67785 | [sarcastic                ] Note: I'm totally not rolling my eyes right now.—copy.
+0942 | VT-97812 | [sarcastic                ] Okay, Yeah, because that always works out perfectly, doesn’t it?—copy.
+0943 | VT-37105 | [sarcastic                ] Okay, I'm totally not rolling my eyes right now.
+0944 | VT-98056 | [sarcastic                ] FYI, I'm totally not rolling my eyes right now. Thanks.
+0945 | VT-45922 | [sarcastic                ] Reminder: I'm totally not rolling my eyes right now.
+0946 | VT-41413 | [sarcastic                ] Yeah, because that always works out perfectly, doesn’t it? Right now.
+0947 | VT-94885 | [sarcastic                ] Yeah, because that always works out perfectly, doesn’t it? If possible.
+0948 | VT-13294 | [sarcastic                ] Note: I'm totally not rolling my eyes right now. Thanks.
+0949 | VT-24134 | [sarcastic                ] Reminder: Oh great, another meeting that could've been an email. Please.
+0950 | VT-97795 | [sarcastic                ] Listen, I'm totally not rolling my eyes right now. Please.

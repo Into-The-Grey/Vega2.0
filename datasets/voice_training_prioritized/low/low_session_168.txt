@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 168 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+8351 | VT-560711 | [medical                  ] FYI, FYI, Schedule an MRI with contrast, stat.—copy. please.
+8352 | VT-517429 | [medical                  ] Listen, Listen, Schedule an MRI with contrast, stat. If possible. thanks.
+8353 | VT-551400 | [medical                  ] Quick one: Note: Patient reports acute onset of chest discomfort. Thanks.
+8354 | VT-593063 | [medical                  ] Real talk, Note: Document informed consent prior to procedure. Thanks. if you can.
+8355 | VT-663977 | [medical                  ] Real talk, Reminder: Schedule an MRI with contrast, stat.
+8356 | VT-503442 | [medical                  ] Quick one: Okay, Vitals stable; maintain IV fluids at 75 mL per hour.—copy. — got it. (alt)
+8357 | VT-657366 | [medical                  ] FYI, Patient reports acute onset of chest discomfort.—got it. thanks.
+8358 | VT-505036 | [medical                  ] Real talk, Note: Patient reports acute onset of chest discomfort. Thanks. if you can.
+8359 | VT-581845 | [medical                  ] Listen, Heads up: Schedule an MRI with contrast, stat.—copy. — confirm.
+8360 | VT-635235 | [medical                  ] Okay, Patient reports acute onset of chest discomfort. If possible. right now.
+8361 | VT-545546 | [medical                  ] Hey, Allergic to penicillin; note in the chart.—copy. if you can.
+8362 | VT-601569 | [medical                  ] Okay, Reminder: Prescribe naproxen, take with food. — now.
+8363 | VT-697454 | [medical                  ] Real talk, Listen, Document informed consent prior to procedure. Right now..
+8364 | VT-664625 | [medical                  ] Listen, Note: Administer 0.4 mg sublingual nitroglycerin. For real. — confirm.
+8365 | VT-580151 | [medical                  ] Listen, Order a CBC and comprehensive metabolic panel. Please. if you can.
+8366 | VT-556918 | [medical                  ] Real talk, Listen, Advise RICE protocol for ankle sprain.—got it..
+8367 | VT-527612 | [medical                  ] Real talk, Reminder: Vitals stable; maintain IV fluids at 75 mL per hour. Please. — now.
+8368 | VT-680043 | [medical                  ] Note: Order a CBC and comprehensive metabolic panel.
+8369 | VT-639936 | [medical                  ] FYI, Note: Advise RICE protocol for ankle sprain. Please. if you can.
+8370 | VT-653651 | [medical                  ] Okay, Hey, Allergic to penicillin; note in the chart.—got it. please.
+8371 | VT-623598 | [medical                  ] Okay, Reminder: Advise RICE protocol for ankle sprain. Right now. please.
+8372 | VT-594041 | [medical                  ] Listen, FYI, Vitals stable; maintain IV fluids at 75 mL per hour. Please..
+8373 | VT-537642 | [medical                  ] Heads up: Note: Administer 0.4 mg sublingual nitroglycerin. Thanks. — now.
+8374 | VT-528356 | [medical                  ] Okay, Heads up: Patient reports acute onset of chest discomfort.—got it. — now. (alt)
+8375 | VT-663663 | [medical                  ] Listen, FYI, Administer 0.4 mg sublingual nitroglycerin.—got it. thanks.
+8376 | VT-663927 | [medical                  ] Quick one: Document informed consent prior to procedure. — now.
+8377 | VT-560431 | [medical                  ] Listen, Schedule an MRI with contrast, stat. If possible. if you can. (alt)
+8378 | VT-558022 | [medical                  ] Real talk, Okay, Schedule an MRI with contrast, stat. Right now. — got it.
+8379 | VT-568952 | [medical                  ] Note: FYI, Patient reports acute onset of chest discomfort. — confirm.
+8380 | VT-646124 | [medical                  ] Note: Heads up: Vitals stable; maintain IV fluids at 75 mL per hour. If possible. thanks.
+8381 | VT-663955 | [medical                  ] FYI, Listen, Advise RICE protocol for ankle sprain. Please. — got it.
+8382 | VT-637111 | [medical                  ] Note: Hey, Vitals stable; maintain IV fluids at 75 mL per hour. For real. — got it.
+8383 | VT-657247 | [medical                  ] Okay, Note: Administer 0.4 mg sublingual nitroglycerin. For real. if you can.
+8384 | VT-669656 | [medical                  ] Administer 0.4 mg sublingual nitroglycerin.. (alt)
+8385 | VT-698026 | [medical                  ] Okay, Okay, Vitals stable; maintain IV fluids at 75 mL per hour. Please. right now.
+8386 | VT-562708 | [medical                  ] Listen, Reminder: Vitals stable; maintain IV fluids at 75 mL per hour.—got it. — got it.
+8387 | VT-609405 | [medical                  ] Quick one: Okay, Rule out pulmonary embolism with D‑dimer. Thanks. please. (alt)
+8388 | VT-620360 | [medical                  ] Vitals stable; maintain IV fluids at 75 mL per hour. — got it.
+8389 | VT-661533 | [medical                  ] Reminder: Vitals stable; maintain IV fluids at 75 mL per hour.—got it. if you can.
+8390 | VT-657198 | [medical                  ] Okay, Heads up: Rule out pulmonary embolism with D‑dimer. If possible. — got it.
+8391 | VT-585249 | [medical                  ] Real talk, Heads up: Vitals stable; maintain IV fluids at 75 mL per hour. if you can.
+8392 | VT-543798 | [medical                  ] Reminder: FYI, Administer 0.4 mg sublingual nitroglycerin. Thanks..
+8393 | VT-653330 | [medical                  ] Reminder: Reminder: Vitals stable; maintain IV fluids at 75 mL per hour. Please. right now.
+8394 | VT-601229 | [medical                  ] Reminder: FYI, Schedule an MRI with contrast, stat.—copy. — now.
+8395 | VT-530477 | [medical                  ] FYI, Note: Document informed consent prior to procedure. Thanks. thanks.
+8396 | VT-598338 | [medical                  ] Real talk, FYI, Schedule an MRI with contrast, stat.—copy..
+8397 | VT-620679 | [medical                  ] Real talk, Hey, Advise RICE protocol for ankle sprain. — got it.
+8398 | VT-693405 | [medical                  ] Reminder: Administer 0.4 mg sublingual nitroglycerin.—copy.
+8399 | VT-638708 | [medical                  ] Note: Heads up: Patient reports acute onset of chest discomfort.—got it. right now.
+8400 | VT-694536 | [medical                  ] Note: Hey, Allergic to penicillin; note in the chart.—got it..

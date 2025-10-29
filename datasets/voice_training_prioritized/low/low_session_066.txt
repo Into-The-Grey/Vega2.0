@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 66 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+3251 | VT-67219 | [paths_cli                ] Note: Mount the drive at /mnt/data. Right now.
+3252 | VT-35337 | [paths_cli                ] Note: Home tilde slash .ssh slash config needs chmod 600.—got it.
+3253 | VT-87691 | [paths_cli                ] ls -la to show hidden files. Thanks.
+3254 | VT-85656 | [paths_cli                ] journalctl -u vega.service --since '10 min ago'
+3255 | VT-89257 | [paths_cli                ] sudo systemctl restart vega.service If possible.
+3256 | VT-35617 | [paths_cli                ] Listen, ping the gateway to verify routing. If possible.
+3257 | VT-33629 | [paths_cli                ] Note: cd projects/vega && make run—got it.
+3258 | VT-20336 | [paths_cli                ] FYI, Home tilde slash .ssh slash config needs chmod 600.—got it.
+3259 | VT-15172 | [paths_cli                ] Note: Open /var/log/syslog and tail -f. For real.
+3260 | VT-96343 | [paths_cli                ] Listen, ping the gateway to verify routing.—got it.
+3261 | VT-57682 | [paths_cli                ] Note: Mount the drive at /mnt/data.—got it.
+3262 | VT-29441 | [paths_cli                ] Home tilde slash .ssh slash config needs chmod 600.
+3263 | VT-85656 | [paths_cli                ] journalctl -u vega.service --since '10 min ago'
+3264 | VT-65404 | [paths_cli                ] Note: journalctl -u vega.service --since '10 min ago' For real.
+3265 | VT-89776 | [paths_cli                ] Note: journalctl -u vega.service --since '10 min ago'—copy.
+3266 | VT-75105 | [paths_cli                ] Reminder: ping the gateway to verify routing. Thanks.
+3267 | VT-89116 | [paths_cli                ] Heads up: Open /var/log/syslog and tail -f. Please.
+3268 | VT-41480 | [paths_cli                ] Okay, Open /var/log/syslog and tail -f. Thanks.
+3269 | VT-85291 | [paths_cli                ] FYI, journalctl -u vega.service --since '10 min ago' Thanks.
+3270 | VT-34320 | [paths_cli                ] Reminder: Home tilde slash .ssh slash config needs chmod 600. Thanks.
+3271 | VT-45635 | [paths_cli                ] Reminder: df -h to check free space.—copy.
+3272 | VT-56255 | [paths_cli                ] Okay, df -h to check free space.—copy.
+3273 | VT-46365 | [paths_cli                ] Listen, df -h to check free space. If possible.
+3274 | VT-20601 | [paths_cli                ] Hey, ping the gateway to verify routing. Thanks.
+3275 | VT-44878 | [paths_cli                ] Note: ls -la to show hidden files. Thanks.
+3276 | VT-61014 | [paths_cli                ] ls -la to show hidden files. Please.
+3277 | VT-99433 | [paths_cli                ] Note: Open /var/log/syslog and tail -f. Right now.
+3278 | VT-91241 | [paths_cli                ] Listen, journalctl -u vega.service --since '10 min ago'
+3279 | VT-34565 | [paths_cli                ] FYI, ls -la to show hidden files. Right now.
+3280 | VT-76406 | [paths_cli                ] Okay, cd projects/vega && make run For real.
+3281 | VT-15172 | [paths_cli                ] Note: Open /var/log/syslog and tail -f. For real.
+3282 | VT-99433 | [paths_cli                ] Note: Open /var/log/syslog and tail -f. Right now.
+3283 | VT-13832 | [paths_cli                ] ls -la to show hidden files. Thanks.
+3284 | VT-89116 | [paths_cli                ] Heads up: Open /var/log/syslog and tail -f. Please.
+3285 | VT-18752 | [paths_cli                ] Reminder: Mount the drive at /mnt/data. Thanks.
+3286 | VT-32109 | [paths_cli                ] Hey, sudo systemctl restart vega.service—got it.
+3287 | VT-82941 | [paths_cli                ] Heads up: journalctl -u vega.service --since '10 min ago'
+3288 | VT-14237 | [paths_cli                ] Listen, Home tilde slash .ssh slash config needs chmod 600. For real.
+3289 | VT-45635 | [paths_cli                ] Reminder: df -h to check free space.—copy.
+3290 | VT-33856 | [paths_cli                ] Hey, ping the gateway to verify routing. Please.
+3291 | VT-63964 | [paths_cli                ] Hey, cd projects/vega && make run Thanks.
+3292 | VT-61660 | [paths_cli                ] df -h to check free space.
+3293 | VT-20693 | [paths_cli                ] Reminder: ping the gateway to verify routing. Right now.
+3294 | VT-57682 | [paths_cli                ] Note: Mount the drive at /mnt/data.—got it.
+3295 | VT-75105 | [paths_cli                ] Reminder: ping the gateway to verify routing. Thanks.
+3296 | VT-94321 | [paths_cli                ] Heads up: cd projects/vega && make run Thanks.
+3297 | VT-10499 | [paths_cli                ] Reminder: Home tilde slash .ssh slash config needs chmod 600. Please.
+3298 | VT-64904 | [paths_cli                ] Heads up: Open /var/log/syslog and tail -f. Right now.
+3299 | VT-11989 | [paths_cli                ] Home tilde slash .ssh slash config needs chmod 600. For real.
+3300 | VT-59041 | [paths_cli                ] journalctl -u vega.service --since '10 min ago'

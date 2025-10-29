@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 167 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+8301 | VT-601639 | [math_readouts            ] Quick one: Solve for x: 2x + 5 = 19. thanks.
+8302 | VT-594289 | [math_readouts            ] FYI, Listen, The mean is greater than the median—right skew. (7359) For real..
+8303 | VT-596329 | [math_readouts            ] Reminder: Note: The mean is greater than the median—right skew. (6345) Thanks. thanks.
+8304 | VT-595702 | [math_readouts            ] Listen, Area equals pi r squared. (6137) If possible. right now.
+8305 | VT-607206 | [math_readouts            ] Okay, The mean is greater than the median—right skew. please.
+8306 | VT-597339 | [math_readouts            ] Okay, Note: The mean is greater than the median—right skew. (6346) Thanks. — confirm.
+8307 | VT-528678 | [math_readouts            ] Real talk, FYI, Area equals pi r squared. (3399) Thanks. — now.
+8308 | VT-531484 | [math_readouts            ] Quick one: Hey, The mean is greater than the median—right skew. (2369) If possible. if you can.
+8309 | VT-623403 | [math_readouts            ] Okay, Reminder: Solve for x: 2x + 4 = 19. (566)—got it. right now.
+8310 | VT-670516 | [math_readouts            ] Listen, Listen, The mean is greater than the median—right skew. (2654) Please. please.
+8311 | VT-625169 | [math_readouts            ] Note: Hey, Standard deviation is 3.3. (6342) Thanks. — confirm.
+8312 | VT-643225 | [math_readouts            ] Heads up: Log base two of eight is three. (7830)—got it. — now.
+8313 | VT-576060 | [math_readouts            ] Quick one: Listen, Standard deviation is 1.3. (4278)—copy..
+8314 | VT-565504 | [math_readouts            ] FYI, Listen, Normalize the vector to unit length. (7226) If possible. thanks.
+8315 | VT-504000 | [math_readouts            ] Reminder: Okay, Solve for x: 2x + 6 = 19. (3012)—copy. if you can.
+8316 | VT-595646 | [math_readouts            ] Quick one: Reminder: The derivative of x squared is two x. (1238) Please. right now.
+8317 | VT-646310 | [math_readouts            ] Heads up: Heads up: Matrix A times B is non-commutative. (1551) For real. right now.
+8318 | VT-571413 | [math_readouts            ] FYI, The mean is greater than the median—right skew. (6030) Please.
+8319 | VT-578407 | [math_readouts            ] Reminder: The mean is greater than the median—right skew. (4270) For real. — confirm.
+8320 | VT-616911 | [medical                  ] Real talk, FYI, Allergic to penicillin; note in the chart.—got it. — now.
+8321 | VT-698608 | [medical                  ] Okay, Note: Advise RICE protocol for ankle sprain. If possible..
+8322 | VT-632185 | [medical                  ] Quick one: Allergic to penicillin; note in the chart. Please. (alt)
+8323 | VT-607014 | [medical                  ] Reminder: FYI, Schedule an MRI with contrast, stat.—copy. — now. (alt)
+8324 | VT-603776 | [medical                  ] Note: Prescribe naproxen, take with food. Thanks. please.
+8325 | VT-513872 | [medical                  ] Okay, Note: Administer 0.4 mg sublingual nitroglycerin. Right now. thanks. (alt)
+8326 | VT-587499 | [medical                  ] Listen, Okay, Patient reports acute onset of chest discomfort. If possible. if you can.
+8327 | VT-557334 | [medical                  ] Note: FYI, Allergic to penicillin; note in the chart.—got it..
+8328 | VT-668778 | [medical                  ] FYI, Reminder: Administer 0.4 mg sublingual nitroglycerin. Please. right now.
+8329 | VT-530866 | [medical                  ] Okay, Okay, Schedule an MRI with contrast, stat. Please. — got it.
+8330 | VT-667866 | [medical                  ] Quick one: Heads up: Document informed consent prior to procedure. Right now. — got it.
+8331 | VT-609993 | [medical                  ] Okay, Prescribe naproxen, take with food. Right now. right now.
+8332 | VT-579522 | [medical                  ] Heads up: Advise RICE protocol for ankle sprain.—copy. thanks.
+8333 | VT-504642 | [medical                  ] Note: Hey, Vitals stable; maintain IV fluids at 75 mL per hour. For real. thanks.
+8334 | VT-603911 | [medical                  ] Note: Hey, Administer 0.4 mg sublingual nitroglycerin. Please. if you can.
+8335 | VT-612912 | [medical                  ] FYI, FYI, Patient reports acute onset of chest discomfort.—got it. — confirm. (alt)
+8336 | VT-676909 | [medical                  ] FYI, Note: Advise RICE protocol for ankle sprain.—copy. right now.
+8337 | VT-698893 | [medical                  ] Real talk, Hey, Allergic to penicillin; note in the chart.—got it. — got it.
+8338 | VT-613828 | [medical                  ] Reminder: Administer 0.4 mg sublingual nitroglycerin. please.
+8339 | VT-504185 | [medical                  ] Heads up: Document informed consent prior to procedure. Right now. please.
+8340 | VT-613489 | [medical                  ] FYI, FYI, Document informed consent prior to procedure. If possible. right now.
+8341 | VT-568909 | [medical                  ] Listen, Heads up: Document informed consent prior to procedure. If possible. — got it.
+8342 | VT-517427 | [medical                  ] Real talk, Reminder: Advise RICE protocol for ankle sprain. Right now. right now.
+8343 | VT-592952 | [medical                  ] Quick one: Okay, Patient reports acute onset of chest discomfort. If possible. — now.
+8344 | VT-575752 | [medical                  ] Heads up: Okay, Patient reports acute onset of chest discomfort.—copy..
+8345 | VT-569497 | [medical                  ] Quick one: Note: Document informed consent prior to procedure. Please. if you can. (alt)
+8346 | VT-684576 | [medical                  ] Listen, Administer 0.4 mg sublingual nitroglycerin.
+8347 | VT-500209 | [medical                  ] Note: Listen, Order a CBC and comprehensive metabolic panel. Please..
+8348 | VT-548907 | [medical                  ] Reminder: Order a CBC and comprehensive metabolic panel.—got it. if you can.
+8349 | VT-634989 | [medical                  ] FYI, Hey, Order a CBC and comprehensive metabolic panel. right now.
+8350 | VT-507528 | [medical                  ] Note: FYI, Advise RICE protocol for ankle sprain.—got it. — confirm.

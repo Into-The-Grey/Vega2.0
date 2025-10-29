@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 115 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+5701 | VT-30104 | [weather_colorful         ] Note: Rain so hard it’s pressure-washing my soul. Thanks.
+5702 | VT-18939 | [weather_colorful         ] Note: Wind’s punching sideways; hold your hat.—got it.
+5703 | VT-94843 | [weather_colorful         ] Rain so hard it’s pressure-washing my soul.
+5704 | VT-30104 | [weather_colorful         ] Note: Rain so hard it’s pressure-washing my soul. Thanks.
+5705 | VT-43863 | [weather_colorful         ] Note: Wind’s punching sideways; hold your hat. If possible.
+5706 | VT-31338 | [weather_colorful         ] Listen, Rain so hard it’s pressure-washing my soul.
+5707 | VT-57351 | [weather_colorful         ] Hey, Sky’s angry; thunder’s got opinions.
+5708 | VT-66313 | [weather_colorful         ] Reminder: Rain so hard it’s pressure-washing my soul.—copy.
+5709 | VT-76092 | [weather_colorful         ] Heads up: Humidity’s like soup—thick and gross. Thanks.
+5710 | VT-98326 | [weather_colorful         ] Hey, Sun’s cooking the asphalt medium-rare. For real.
+5711 | VT-88568 | [weather_colorful         ] FYI, Humidity’s like soup—thick and gross. For real.
+5712 | VT-22115 | [weather_colorful         ] Okay, Sky’s angry; thunder’s got opinions.—got it.
+5713 | VT-71175 | [weather_colorful         ] Listen, It’s wet as hell outside—bring a jacket.
+5714 | VT-54692 | [weather_colorful         ] Okay, It’s a dry heat, said every liar ever.
+5715 | VT-49665 | [weather_colorful         ] Listen, Rain so hard it’s pressure-washing my soul. If possible.
+5716 | VT-14205 | [weather_colorful         ] Reminder: Rain so hard it’s pressure-washing my soul. If possible.
+5717 | VT-47576 | [weather_colorful         ] Listen, Rain so hard it’s pressure-washing my soul. Thanks.
+5718 | VT-12449 | [weather_colorful         ] Okay, It’s wet as hell outside—bring a jacket. If possible.
+5719 | VT-33661 | [weather_colorful         ] Okay, Cold enough to bully your bones. Please.
+5720 | VT-88568 | [weather_colorful         ] FYI, Humidity’s like soup—thick and gross. For real.
+5721 | VT-42742 | [weather_colorful         ] Note: Humidity’s like soup—thick and gross. Right now.
+5722 | VT-58520 | [weather_colorful         ] FYI, Humidity’s like soup—thick and gross. If possible.
+5723 | VT-75328 | [weather_colorful         ] Heads up: Fog so dense it feels like stealth mode. For real.
+5724 | VT-96043 | [weather_colorful         ] Hey, It’s wet as hell outside—bring a jacket.—copy.
+5725 | VT-78052 | [weather_colorful         ] Fog so dense it feels like stealth mode.
+5726 | VT-53739 | [weather_colorful         ] Reminder: Sun’s cooking the asphalt medium-rare. Thanks.
+5727 | VT-68318 | [weather_colorful         ] Note: Fog so dense it feels like stealth mode. If possible.
+5728 | VT-41921 | [weather_colorful         ] Okay, Wind’s punching sideways; hold your hat. Right now.
+5729 | VT-25184 | [weather_colorful         ] Okay, It’s a dry heat, said every liar ever.—copy.
+5730 | VT-77239 | [weather_colorful         ] Heads up: Fog so dense it feels like stealth mode.
+5731 | VT-33199 | [weather_colorful         ] Reminder: It’s wet as hell outside—bring a jacket.—copy.
+5732 | VT-41921 | [weather_colorful         ] Okay, Wind’s punching sideways; hold your hat. Right now.
+5733 | VT-19863 | [weather_colorful         ] It’s a dry heat, said every liar ever.
+5734 | VT-19863 | [weather_colorful         ] It’s a dry heat, said every liar ever.
+5735 | VT-21041 | [weather_colorful         ] It’s a dry heat, said every liar ever.—copy.
+5736 | VT-68399 | [weather_colorful         ] Hey, It’s a dry heat, said every liar ever.—copy.
+5737 | VT-55258 | [weather_colorful         ] Humidity’s like soup—thick and gross.
+5738 | VT-12449 | [weather_colorful         ] Okay, It’s wet as hell outside—bring a jacket. If possible.
+5739 | VT-40427 | [weather_colorful         ] Note: Sun’s cooking the asphalt medium-rare.
+5740 | VT-96612 | [weather_colorful         ] FYI, Humidity’s like soup—thick and gross. For real.
+5741 | VT-49700 | [weather_colorful         ] Listen, Sky’s angry; thunder’s got opinions. Please.
+5742 | VT-79033 | [weather_colorful         ] Listen, Sky’s angry; thunder’s got opinions.—copy.
+5743 | VT-57351 | [weather_colorful         ] Hey, Sky’s angry; thunder’s got opinions.
+5744 | VT-21041 | [weather_colorful         ] It’s a dry heat, said every liar ever.—copy.
+5745 | VT-98326 | [weather_colorful         ] Hey, Sun’s cooking the asphalt medium-rare. For real.
+5746 | VT-78820 | [weather_colorful         ] Heads up: It’s wet as hell outside—bring a jacket. If possible.
+5747 | VT-83480 | [weather_colorful         ] FYI, Sky’s angry; thunder’s got opinions.—copy.
+5748 | VT-74445 | [weather_colorful         ] Cold enough to bully your bones.—got it.
+5749 | VT-58290 | [weather_colorful         ] Note: Fog so dense it feels like stealth mode.
+5750 | VT-58837 | [weather_colorful         ] Note: Sky’s angry; thunder’s got opinions. Please.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - MEDIUM Priority
+# Session 33 of 47
+# Lines: 50
+#
+# 📊 MEDIUM: Adds expressiveness and variety
+# Record for well-rounded voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1601 | VT-446134 | [paragraph                ] Listen, Listen, In the quiet of an early morning, the city feels like a machine slowly waking up. Delivery trucks idle at the curb, traffic lights blink through their silent cycles, and the first train rumbles under the streets like a distant storm. A baker props open the door to let out a breath of warm air that smells of cinnamon and yeast. Somewhere above, a window closes with a soft click, and the day begins—one shutter lift, one rolling gate, one cup of coffee at a time. If possible. please. (alt)
+1602 | VT-483347 | [paragraph                ] FYI, Hey, The workshop is a cathedral of ordinary miracles. A lathe hums a steady psalm, sawdust collects like incense in the beams of afternoon light, and an old radio mutters the weather report. Here, ideas change state: sketches become templates, templates become parts, and parts become something you can hold. Everything that works looks inevitable in hindsight, but at the beginning it was only a rumor and a rough cut.—got it..
+1603 | VT-496326 | [paragraph                ] Note: Note: Museum air always smells faintly of dust and possibility. Glass cases hold not just artifacts but instructions for how to look at them: labels, arrows, context distilled into a paragraph. In one gallery, a child counted brushstrokes aloud, unaware that she was inventing a new method of art history as she went. If possible. — now.
+1604 | VT-454810 | [paragraph                ] Listen, Hey, At the shoreline, the wind braided salt into every breath. Gulls traded arguments overhead, their shadows sliding across the water like skipped stones. Farther out, a cargo ship moved with such measured calm that time itself seemed to slow around it. Waves arrived, one after another, unbothered by our plans or worries, erasing footprints and starting over without complaint.—copy..
+1605 | VT-412509 | [paragraph                ] Heads up: Listen, In the late afternoon, the city softens. Windows warm to a low-gold tone, and the pavement sheds the day’s heat in waves. Bicycles angle homeward. The person in front of you at the crosswalk is listening to something funny; you can tell by the way their shoulders shake. The light changes, and a dozen private stories step forward together.—got it. — confirm.
+1606 | VT-468293 | [paragraph                ] Listen, Reminder: Museum air always smells faintly of dust and possibility. Glass cases hold not just artifacts but instructions for how to look at them: labels, arrows, context distilled into a paragraph. In one gallery, a child counted brushstrokes aloud, unaware that she was inventing a new method of art history as she went. Please. please.
+1607 | VT-430893 | [paragraph                ] Heads up: The night sky above the ridge looked stitched together from darker and lighter blues, a patchwork that promised cold by morning. Somewhere down in the valley a dog barked once, and then the sound was swallowed by the trees. The fire popped and shifted its geometry, settling into a glow that favored patience over drama. right now.
+1608 | VT-490268 | [paragraph                ] Okay, In a small notebook, there are lists of lists: books to read, repairs to make, people to call back. Some entries are crossed out with a thick line, others with a delicate slash that barely disturbs the ink. The habit is less about productivity and more about reassurance—the quiet proof that time can be tamed, or at least persuaded, for a while, to travel in straight lines. — now.
+1609 | VT-454853 | [paragraph                ] Note: At the shoreline, the wind braided salt into every breath. Gulls traded arguments overhead, their shadows sliding across the water like skipped stones. Farther out, a cargo ship moved with such measured calm that time itself seemed to slow around it. Waves arrived, one after another, unbothered by our plans or worries, erasing footprints and starting over without complaint. For real. — now.
+1610 | VT-494395 | [sarcastic                ] FYI, Listen, Oh great, another meeting that could've been an email. If possible. — got it. (alt)
+1611 | VT-447729 | [sarcastic                ] Quick one: FYI, I'm totally not rolling my eyes right now. Right now. if you can.
+1612 | VT-466313 | [sarcastic                ] Reminder: Heads up: I'm totally not rolling my eyes right now. Thanks. thanks.
+1613 | VT-408422 | [sarcastic                ] Note: Heads up: I'm totally not rolling my eyes right now. Thanks..
+1614 | VT-445777 | [sarcastic                ] Heads up: Note: Yeah, because that always works out perfectly, doesn’t it? For real. — got it. (alt)
+1615 | VT-433394 | [sarcastic                ] Hey, I'm totally not rolling my eyes right now. — now.
+1616 | VT-487587 | [sarcastic                ] Note: Listen, I'm totally not rolling my eyes right now. — got it.
+1617 | VT-414517 | [sarcastic                ] Heads up: Listen, Oh great, another meeting that could've been an email. If possible. thanks. (alt)
+1618 | VT-410073 | [sarcastic                ] Listen, Okay, Yeah, because that always works out perfectly, doesn’t it? For real. — confirm.
+1619 | VT-411583 | [sarcastic                ] Reminder: I'm totally not rolling my eyes right now. thanks.
+1620 | VT-464086 | [sarcastic                ] Note: Oh great, another meeting that could've been an email. Right now. — now.
+1621 | VT-438662 | [sarcastic                ] Heads up: Okay, I'm totally not rolling my eyes right now. For real..
+1622 | VT-451669 | [sarcastic                ] Reminder: Note: Oh great, another meeting that could've been an email. Thanks. if you can.
+1623 | VT-415927 | [sarcastic                ] Heads up: FYI, Yeah, because that always works out perfectly, doesn’t it?—got it. if you can.
+1624 | VT-414654 | [sarcastic                ] Quick one: Listen, Yeah, because that always works out perfectly, doesn’t it?—copy. — confirm.
+1625 | VT-427493 | [sarcastic                ] Real talk, Hey, Yeah, because that always works out perfectly, doesn’t it? If possible. (alt)
+1626 | VT-439234 | [sarcastic                ] Okay, Reminder: I'm totally not rolling my eyes right now. thanks.
+1627 | VT-482851 | [sarcastic                ] Heads up: FYI, Yeah, because that always works out perfectly, doesn’t it? Thanks. — confirm.
+1628 | VT-406219 | [sarcastic                ] Yeah, because that always works out perfectly, doesn’t it? right now. (alt)
+1629 | VT-468279 | [sarcastic                ] Okay, Note: Oh great, another meeting that could've been an email. Right now. — now. (alt)
+1630 | VT-474226 | [sarcastic                ] Note: Yeah, because that always works out perfectly, doesn’t it? — confirm.
+1631 | VT-468589 | [sarcastic                ] Heads up: Heads up: Yeah, because that always works out perfectly, doesn’t it?—got it. thanks.
+1632 | VT-492727 | [sarcastic                ] Reminder: Listen, Oh great, another meeting that could've been an email.—copy. — now.
+1633 | VT-400064 | [sarcastic                ] Heads up: Listen, I'm totally not rolling my eyes right now. — confirm.
+1634 | VT-437213 | [sarcastic                ] Yeah, because that always works out perfectly, doesn’t it?—copy.
+1635 | VT-430005 | [sarcastic                ] Okay, Oh great, another meeting that could've been an email.—got it. — confirm.
+1636 | VT-495323 | [sarcastic                ] Listen, Reminder: Oh great, another meeting that could've been an email. Please.
+1637 | VT-408418 | [sarcastic                ] Note: Yeah, because that always works out perfectly, doesn’t it? — got it.
+1638 | VT-455060 | [sarcastic                ] FYI, Hey, Oh great, another meeting that could've been an email. Thanks. right now. (alt)
+1639 | VT-464744 | [sarcastic                ] Reminder: Yeah, because that always works out perfectly, doesn’t it? If possible. — now. (alt)
+1640 | VT-485436 | [sarcastic                ] Note: Hey, Yeah, because that always works out perfectly, doesn’t it? For real. if you can.
+1641 | VT-404271 | [sarcastic                ] FYI, Heads up: I'm totally not rolling my eyes right now. Thanks. please.
+1642 | VT-461972 | [sarcastic                ] FYI, Okay, Oh great, another meeting that could've been an email. Please. right now.
+1643 | VT-429008 | [sarcastic                ] Hey, I'm totally not rolling my eyes right now. Right now. — now. (alt)
+1644 | VT-432322 | [sarcastic                ] Okay, Note: I'm totally not rolling my eyes right now.—copy. (alt)
+1645 | VT-414346 | [sarcastic                ] Real talk, Hey, Oh great, another meeting that could've been an email. If possible. please.
+1646 | VT-411901 | [sarcastic                ] Real talk, FYI, Oh great, another meeting that could've been an email.
+1647 | VT-486223 | [sarcastic                ] FYI, Hey, Yeah, because that always works out perfectly, doesn’t it? If possible..
+1648 | VT-473678 | [sarcastic                ] Heads up: Hey, I'm totally not rolling my eyes right now. Right now. — got it. (alt)
+1649 | VT-496044 | [sarcastic                ] FYI, Listen, I'm totally not rolling my eyes right now. Please. if you can. (alt)
+1650 | VT-497509 | [sarcastic                ] Listen, Listen, I'm totally not rolling my eyes right now. right now.

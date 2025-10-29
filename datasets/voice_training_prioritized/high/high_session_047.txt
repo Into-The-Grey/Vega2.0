@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 47 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2301 | VT-503223 | [hesitations_fillers      ] Listen, Reminder: Right… so… moving on. — confirm.
+2302 | VT-552902 | [hesitations_fillers      ] FYI, Heads up: I… I don’t know if that’ll fly. For real. thanks.
+2303 | VT-509733 | [hesitations_fillers      ] Listen, Hey, I… I don’t know if that’ll fly. Right now. please.
+2304 | VT-524187 | [hesitations_fillers      ] FYI, Heads up: Uh… hang on… what was I saying? Please. — now. (alt)
+2305 | VT-529969 | [hesitations_fillers      ] FYI, FYI, Wait—uh—did you hear that? If possible. — confirm.
+2306 | VT-608833 | [hesitations_fillers      ] Real talk, FYI, I… I don’t know if that’ll fly.—got it. — got it. (alt)
+2307 | VT-654692 | [hesitations_fillers      ] FYI, Hey, So—yeah—about that plan… Please. — got it.
+2308 | VT-515808 | [hesitations_fillers      ] FYI, Note: Uh… hang on… what was I saying? Right now.
+2309 | VT-541162 | [hesitations_fillers      ] Reminder: Heads up: Uh… hang on… what was I saying? Please.. (alt)
+2310 | VT-545445 | [hesitations_fillers      ] Listen, Note: I… I don’t know if that’ll fly.—copy. thanks.
+2311 | VT-542111 | [hesitations_fillers      ] Listen, Note: Uh… hang on… what was I saying? Right now. — confirm.
+2312 | VT-573777 | [hesitations_fillers      ] Quick one: Heads up: Hmm, not exactly, but close.—got it. (alt)
+2313 | VT-675258 | [hesitations_fillers      ] FYI, Hey, Mmm, nope, that’s not it. Right now. right now.
+2314 | VT-506873 | [hesitations_fillers      ] Note: Wait—uh—did you hear that? For real. — now.
+2315 | VT-528991 | [hesitations_fillers      ] Okay, Note: Well, I mean, like, kind of, yeah. — got it.
+2316 | VT-594123 | [hesitations_fillers      ] Note: Okay, Okay, okay, okay—listen. Right now. thanks.
+2317 | VT-660967 | [hesitations_fillers      ] FYI, Okay, Right… so… moving on. Thanks.
+2318 | VT-556267 | [hesitations_fillers      ] Real talk, So—yeah—about that plan… Right now. — got it.
+2319 | VT-595399 | [hesitations_fillers      ] Okay, okay, okay—listen. — now.
+2320 | VT-525747 | [hesitations_fillers      ] Reminder: Note: Right… so… moving on. Right now. please.
+2321 | VT-669349 | [hesitations_fillers      ] Reminder: Hmm, not exactly, but close. Please. — got it.
+2322 | VT-550682 | [hesitations_fillers      ] Real talk, FYI, Right… so… moving on. Right now. please. (alt)
+2323 | VT-631358 | [hesitations_fillers      ] Note: Heads up: So—yeah—about that plan… If possible. — got it.
+2324 | VT-639338 | [hesitations_fillers      ] Note: Hey, Well, I mean, like, kind of, yeah.—copy. right now.
+2325 | VT-544232 | [hesitations_fillers      ] Heads up: Heads up: Uh… hang on… what was I saying? Thanks. — got it.
+2326 | VT-551761 | [hesitations_fillers      ] Okay, Reminder: Well, I mean, like, kind of, yeah. If possible.. (alt)
+2327 | VT-510743 | [hesitations_fillers      ] Listen, Wait—uh—did you hear that? — got it.
+2328 | VT-654806 | [hesitations_fillers      ] Reminder: Hey, I… I don’t know if that’ll fly. Right now. — got it.
+2329 | VT-572994 | [hesitations_fillers      ] Reminder: Note: I… I don’t know if that’ll fly. If possible..
+2330 | VT-652109 | [hesitations_fillers      ] Note: Note: Uh… hang on… what was I saying? Please. — got it.
+2331 | VT-546023 | [hesitations_fillers      ] Heads up: FYI, So—yeah—about that plan…—got it. right now. (alt)
+2332 | VT-638766 | [hesitations_fillers      ] Listen, Note: Right… so… moving on.—copy. please.
+2333 | VT-678638 | [hesitations_fillers      ] Okay, Listen, So—yeah—about that plan… please.
+2334 | VT-686978 | [hesitations_fillers      ] Note: Well, I mean, like, kind of, yeah. if you can.
+2335 | VT-643657 | [hesitations_fillers      ] Quick one: Well, I mean, like, kind of, yeah. right now.
+2336 | VT-561425 | [hesitations_fillers      ] Heads up: Heads up: So—yeah—about that plan… For real. — now. (alt)
+2337 | VT-505937 | [hesitations_fillers      ] Listen, Note: So—yeah—about that plan… If possible. — now.
+2338 | VT-652962 | [hesitations_fillers      ] Reminder: Heads up: Er, can we circle back? For real. right now.
+2339 | VT-517162 | [hesitations_fillers      ] Reminder: So—yeah—about that plan…
+2340 | VT-554472 | [hesitations_fillers      ] Note: So—yeah—about that plan… If possible. if you can.
+2341 | VT-669435 | [hesitations_fillers      ] Quick one: FYI, Er, can we circle back? For real. right now.
+2342 | VT-540097 | [hesitations_fillers      ] Quick one: So—yeah—about that plan…—copy. thanks. (alt)
+2343 | VT-689820 | [hesitations_fillers      ] Okay, Listen, Well, I mean, like, kind of, yeah. For real. please.
+2344 | VT-698384 | [hesitations_fillers      ] FYI, So—yeah—about that plan… Right now. if you can.
+2345 | VT-528751 | [hesitations_fillers      ] Reminder: Heads up: I… I don’t know if that’ll fly.
+2346 | VT-609120 | [hesitations_fillers      ] Okay, FYI, Wait—uh—did you hear that? Please.
+2347 | VT-572388 | [hesitations_fillers      ] Reminder: Heads up: I… I don’t know if that’ll fly. For real. — confirm.
+2348 | VT-559962 | [hesitations_fillers      ] FYI, Listen, Right… so… moving on. If possible. — now.
+2349 | VT-603363 | [hesitations_fillers      ] Listen, FYI, Well, I mean, like, kind of, yeah. Thanks. if you can. (alt)
+2350 | VT-519479 | [hesitations_fillers      ] Okay, Heads up: Uh… hang on… what was I saying? Thanks. if you can. (alt)

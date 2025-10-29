@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 21 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1001 | VT-82027 | [finance                  ] Reminder: File the 1099s and W‑2s by January 31. (8855)
+1002 | VT-62511 | [finance                  ] Okay, Our burn rate is unsustainable at current hiring levels. (3499) For real.
+1003 | VT-29927 | [finance                  ] Note: APR is 23.99% after the promo period. (3569) Please.
+1004 | VT-27610 | [finance                  ] Listen, Set a limit order at $42.10 with a 5% trailing stop. (4059) For real.
+1005 | VT-50384 | [finance                  ] Okay, We’re cash-flow positive but margin-thin. (2462) If possible.
+1006 | VT-93155 | [finance                  ] FYI, APR is 23.99% after the promo period. (1694)
+1007 | VT-76631 | [finance                  ] File the 1099s and W‑2s by January 31. (4324) Right now.
+1008 | VT-81928 | [finance                  ] Cap table updated after the seed extension. (3) Please.
+1009 | VT-98009 | [finance                  ] FYI, Our burn rate is unsustainable at current hiring levels. (951) For real.
+1010 | VT-69294 | [finance                  ] Hey, Flag that transaction as potentially fraudulent. (4146) Please.
+1011 | VT-56067 | [finance                  ] Note: Reconcile the ledger before EOD. (4475) Thanks.
+1012 | VT-76334 | [finance                  ] Hey, APR is 23.99% after the promo period. (8772)
+1013 | VT-87477 | [finance                  ] FYI, Set a limit order at $42.10 with a 5% trailing stop. (5859) If possible.
+1014 | VT-29507 | [finance                  ] Listen, Flag that transaction as potentially fraudulent. (2341)
+1015 | VT-10525 | [finance                  ] Okay, We’re cash-flow positive but margin-thin. (513) If possible.
+1016 | VT-25784 | [finance                  ] APR is 23.99% after the promo period.
+1017 | VT-81928 | [finance                  ] Cap table updated after the seed extension. (3) Please.
+1018 | VT-83000 | [finance                  ] Cap table updated after the seed extension. (8133) Thanks.
+1019 | VT-78582 | [finance                  ] Listen, Cap table updated after the seed extension. (7779)—copy.
+1020 | VT-18039 | [finance                  ] Flag that transaction as potentially fraudulent. (1471) Thanks.
+1021 | VT-27610 | [finance                  ] Listen, Set a limit order at $42.10 with a 5% trailing stop. (4059) For real.
+1022 | VT-80536 | [finance                  ] Okay, Set a limit order at $42.10 with a 5% trailing stop. (7032) Please.
+1023 | VT-81865 | [finance                  ] Note: Cap table updated after the seed extension. (1266)
+1024 | VT-45652 | [finance                  ] Okay, APR is 23.99% after the promo period. (1365)—got it.
+1025 | VT-16490 | [finance                  ] Initiate a wire—domestic ABA, not SWIFT. (5767)
+1026 | VT-12258 | [finance                  ] Note: Initiate a wire—domestic ABA, not SWIFT. (1152)
+1027 | VT-10827 | [finance                  ] Hey, Initiate a wire—domestic ABA, not SWIFT. (5795)
+1028 | VT-28032 | [finance                  ] Heads up: Flag that transaction as potentially fraudulent. (4026) Please.
+1029 | VT-82027 | [finance                  ] Reminder: File the 1099s and W‑2s by January 31. (8855)
+1030 | VT-78986 | [finance                  ] Listen, File the 1099s and W‑2s by January 31. (570)
+1031 | VT-72767 | [finance                  ] Heads up: Set a limit order at $42.10 with a 5% trailing stop. (2679) For real.
+1032 | VT-51457 | [finance                  ] Cap table updated after the seed extension. (5072) Please.
+1033 | VT-22169 | [finance                  ] FYI, File the 1099s and W‑2s by January 31. (9865) Please.
+1034 | VT-10917 | [finance                  ] Note: Reconcile the ledger before EOD. (2022)—got it.
+1035 | VT-87477 | [finance                  ] FYI, Set a limit order at $42.10 with a 5% trailing stop. (5859) If possible.
+1036 | VT-72767 | [finance                  ] Heads up: Set a limit order at $42.10 with a 5% trailing stop. (2679) For real.
+1037 | VT-96232 | [finance                  ] Reminder: File the 1099s and W‑2s by January 31. (2195) Thanks.
+1038 | VT-27610 | [finance                  ] Listen, Set a limit order at $42.10 with a 5% trailing stop. (4059) For real.
+1039 | VT-65059 | [finance                  ] Heads up: We’re cash-flow positive but margin-thin. (8377)—copy.
+1040 | VT-60908 | [finance                  ] Reminder: Our burn rate is unsustainable at current hiring levels. (5552)—got it.
+1041 | VT-46651 | [finance                  ] Okay, Cap table updated after the seed extension. (313)
+1042 | VT-89641 | [finance                  ] APR is 23.99% after the promo period. (8778) For real.
+1043 | VT-16490 | [finance                  ] Initiate a wire—domestic ABA, not SWIFT. (5767)
+1044 | VT-13208 | [finance                  ] FYI, Flag that transaction as potentially fraudulent. (2105) For real.
+1045 | VT-32100 | [finance                  ] Heads up: Reconcile the ledger before EOD. (1317) For real.
+1046 | VT-75498 | [finance                  ] Initiate a wire—domestic ABA, not SWIFT.
+1047 | VT-12119 | [finance                  ] Flag that transaction as potentially fraudulent. (9189) Right now.
+1048 | VT-10525 | [finance                  ] Okay, We’re cash-flow positive but margin-thin. (513) If possible.
+1049 | VT-18039 | [finance                  ] Flag that transaction as potentially fraudulent. (1471) Thanks.
+1050 | VT-24457 | [finance                  ] Heads up: Reconcile the ledger before EOD. (3512) For real.

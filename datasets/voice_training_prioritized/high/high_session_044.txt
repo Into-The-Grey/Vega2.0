@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 44 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2151 | VT-534775 | [conditionals             ] Listen, Given enough time, everything breaks. please.
+2152 | VT-616488 | [conditionals             ] Quick one: Note: If it ain’t broke, don’t fix it. Thanks. — now. (alt)
+2153 | VT-670667 | [conditionals             ] FYI, Heads up: Provided the tests are green, merge. Right now. if you can.
+2154 | VT-637924 | [conditionals             ] Okay, If it ain’t broke, don’t fix it.—got it. — confirm. (alt)
+2155 | VT-651608 | [conditionals             ] Heads up: Reminder: Unless it’s critical, defer to next sprint.—got it. if you can.
+2156 | VT-556395 | [conditionals             ] Heads up: Note: Should this pass QA, ship it. Right now. right now.
+2157 | VT-595883 | [conditionals             ] Quick one: Okay, If it fails, roll back immediately. For real..
+2158 | VT-646762 | [conditionals             ] Note: Reminder: Should this pass QA, ship it. For real.
+2159 | VT-571864 | [conditionals             ] FYI, If and only if the hash matches, proceed. if you can.
+2160 | VT-601106 | [conditionals             ] Note: If A then B, otherwise C. Thanks.
+2161 | VT-512863 | [conditionals             ] Real talk, Note: If A then B, otherwise C.—copy. — now. (alt)
+2162 | VT-599483 | [conditionals             ] FYI, If it fails, roll back immediately. Please. if you can. (alt)
+2163 | VT-620252 | [conditionals             ] Okay, Listen, Unless it’s critical, defer to next sprint. If possible. right now.
+2164 | VT-639912 | [conditionals             ] Real talk, Reminder: If it ain’t broke, don’t fix it. For real. thanks.
+2165 | VT-689296 | [conditionals             ] Note: Note: Unless it’s critical, defer to next sprint. — got it. (alt)
+2166 | VT-670668 | [conditionals             ] FYI, FYI, Should this pass QA, ship it. For real. — confirm.
+2167 | VT-687152 | [conditionals             ] Note: Should this pass QA, ship it. please.
+2168 | VT-643838 | [conditionals             ] Okay, Listen, Unless it’s critical, defer to next sprint. — got it. (alt)
+2169 | VT-695230 | [conditionals             ] Okay, FYI, Unless it’s critical, defer to next sprint. Right now. right now. (alt)
+2170 | VT-620930 | [conditionals             ] In case of downtime, switch to read-only.—copy..
+2171 | VT-613705 | [conditionals             ] Heads up: Unless it’s critical, defer to next sprint. if you can.
+2172 | VT-698714 | [conditionals             ] FYI, FYI, Unless it’s critical, defer to next sprint. Right now. thanks.
+2173 | VT-593762 | [conditionals             ] Listen, Reminder: In case of downtime, switch to read-only. — confirm.
+2174 | VT-643260 | [conditionals             ] Reminder: Hey, Unless it’s critical, defer to next sprint.—got it..
+2175 | VT-533753 | [conditionals             ] Note: Should this pass QA, ship it.—copy. right now.
+2176 | VT-615130 | [conditionals             ] FYI, Listen, Unless it’s critical, defer to next sprint.—copy. right now.
+2177 | VT-614040 | [conditionals             ] Okay, Reminder: If A then B, otherwise C. Thanks.. (alt)
+2178 | VT-689919 | [conditionals             ] Quick one: If and only if the hash matches, proceed. Thanks..
+2179 | VT-520644 | [conditionals             ] Quick one: If A then B, otherwise C.—got it. if you can.
+2180 | VT-516680 | [conditionals             ] FYI, Note: If it ain’t broke, don’t fix it. Right now.
+2181 | VT-620562 | [conditionals             ] Okay, Listen, Should this pass QA, ship it. Thanks. thanks.
+2182 | VT-574272 | [conditionals             ] Real talk, Okay, If it fails, roll back immediately. For real. if you can.
+2183 | VT-637371 | [conditionals             ] Heads up: Heads up: Provided the tests are green, merge. Right now. if you can.
+2184 | VT-594797 | [conditionals             ] Quick one: Heads up: Unless it’s critical, defer to next sprint.—got it. — now. (alt)
+2185 | VT-622983 | [conditionals             ] Quick one: Listen, Unless it’s critical, defer to next sprint. If possible. — got it.
+2186 | VT-670935 | [conditionals             ] Quick one: Reminder: Unless it’s critical, defer to next sprint.—copy. please.
+2187 | VT-605867 | [dates_times              ] Okay, Okay, Schedule it biweekly starting next Monday. (7524) right now.
+2188 | VT-537007 | [dates_times              ] Note: Heads up: Sunrise is at 06:58; sunset at 17:12. (1041)—copy. please. (alt)
+2189 | VT-683479 | [dates_times              ] Reminder: Heads up: Schedule it biweekly starting next Monday. (3129) Right now..
+2190 | VT-554272 | [dates_times              ] Reminder: The deadline moved from Q3 to Q4. (8292) For real. thanks.
+2191 | VT-614946 | [dates_times              ] Quick one: FYI, My birthday is on 02/29—leap year baby. (9745) thanks.
+2192 | VT-559302 | [dates_times              ] Note: Note: Today is the 27th of October, 2025. (8654)—copy.. (alt)
+2193 | VT-592330 | [dates_times              ] Reminder: Reminder: Set a reminder for 7:45 PM on Friday. (980) If possible. — now.
+2194 | VT-503253 | [dates_times              ] Listen, Okay, Schedule it biweekly starting next Monday. (7524) right now.
+2195 | VT-699536 | [dates_times              ] Heads up: Okay, Today is the 27th of October, 2025. (4702)—got it. — confirm.
+2196 | VT-699464 | [dates_times              ] Real talk, Listen, The deadline moved from Q3 to Q4. (8265) Please. right now.
+2197 | VT-581081 | [dates_times              ] Heads up: Heads up: Timer: three hours, twenty-one minutes, go. (9836) Right now. if you can.
+2198 | VT-529998 | [dates_times              ] Okay, Note: My birthday is on 02/29—leap year baby. (7109) For real. thanks.
+2199 | VT-562193 | [dates_times              ] Listen, Heads up: Sunrise is at 06:58; sunset at 17:12. (4769) Right now.
+2200 | VT-572271 | [dates_times              ] Listen, Convert 14:30 UTC to Central Time. (384) Thanks. thanks.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 186 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+9251 | VT-663583 | [spelling_alphabet        ] Real talk, FYI, License plate reads: Zulu Seven Bravo Nine Four. Please. thanks.
+9252 | VT-600439 | [spelling_alphabet        ] Note: Reminder: Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—got it. thanks.
+9253 | VT-566252 | [spelling_alphabet        ] Real talk, Listen, Lowercase only: monolithicservice. For real. right now.
+9254 | VT-618345 | [spelling_alphabet        ] Note: Note: My initials are N—A—A, November Alpha Alpha. — now.
+9255 | VT-648697 | [spelling_alphabet        ] Quick one: License plate reads: Zulu Seven Bravo Nine Four. — now.
+9256 | VT-516222 | [spelling_alphabet        ] Okay, Acronym pronounced like a word: SNAFU. For real. — now.
+9257 | VT-682848 | [spelling_alphabet        ] Okay, Listen, Acronym pronounced like a word: SNAFU.—copy. please.
+9258 | VT-642570 | [spelling_alphabet        ] Hey, Acronym pronounced like a word: SNAFU. Please. — got it.
+9259 | VT-577089 | [spelling_alphabet        ] Note: Okay, Lowercase only: monolithicservice.—copy. if you can.
+9260 | VT-543974 | [spelling_alphabet        ] Real talk, Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—copy. thanks.
+9261 | VT-559245 | [spelling_alphabet        ] Note: Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November. Please. thanks.
+9262 | VT-698016 | [spelling_alphabet        ] Note: Heads up: Acronym pronounced like a word: SNAFU. Right now. if you can.
+9263 | VT-538304 | [spelling_alphabet        ] Reminder: Reminder: License plate reads: Zulu Seven Bravo Nine Four. right now.
+9264 | VT-565250 | [spelling_alphabet        ] Reminder: Heads up: All caps: API KEY REVOKED. For real.
+9265 | VT-659414 | [spelling_alphabet        ] Quick one: Heads up: All caps: API KEY REVOKED. Thanks.
+9266 | VT-536364 | [spelling_alphabet        ] Reminder: FYI, All caps: API KEY REVOKED. If possible. thanks.
+9267 | VT-558708 | [spelling_alphabet        ] Listen, Heads up: Lowercase only: monolithicservice.—copy. — now.
+9268 | VT-545540 | [spelling_alphabet        ] Listen, Heads up: Say it letter by letter: R—E—S—O—N—A—N—C—E. Please.
+9269 | VT-521116 | [spelling_alphabet        ] FYI, Okay, Say it letter by letter: R—E—S—O—N—A—N—C—E. If possible. thanks.
+9270 | VT-630611 | [spelling_alphabet        ] Reminder: FYI, Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November. Thanks. — now.
+9271 | VT-629823 | [spelling_alphabet        ] Reminder: Reminder: Acronym pronounced like a word: SNAFU. Thanks. if you can.
+9272 | VT-668067 | [spelling_alphabet        ] Heads up: Reminder: Say it letter by letter: R—E—S—O—N—A—N—C—E. Please. please.
+9273 | VT-636310 | [spelling_alphabet        ] Heads up: Reminder: Serial: Tango–Lima–03–Foxtrot–Echo. Thanks. — got it.
+9274 | VT-693197 | [spelling_alphabet        ] Note: Reminder: Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—got it. — now.
+9275 | VT-644917 | [spelling_alphabet        ] Note: FYI, Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November. Thanks. if you can.
+9276 | VT-539421 | [spelling_alphabet        ] Okay, Heads up: Say it letter by letter: R—E—S—O—N—A—N—C—E.—copy. thanks.
+9277 | VT-577440 | [spelling_alphabet        ] Listen, Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—copy. — got it.
+9278 | VT-690222 | [spelling_alphabet        ] Reminder: Note: My initials are N—A—A, November Alpha Alpha. If possible. if you can.
+9279 | VT-693106 | [spelling_alphabet        ] Note: Reminder: Username: delta.delta—underscore—root. Right now. please.
+9280 | VT-687875 | [spelling_alphabet        ] Quick one: Hey, Acronym pronounced like a word: SNAFU. Right now. — got it.
+9281 | VT-506404 | [spelling_alphabet        ] Quick one: Heads up: License plate reads: Zulu Seven Bravo Nine Four.—got it. — now.
+9282 | VT-570090 | [spelling_alphabet        ] Listen, Heads up: All caps: API KEY REVOKED. For real. if you can.
+9283 | VT-662874 | [spelling_alphabet        ] Quick one: FYI, Lowercase only: monolithicservice. please.
+9284 | VT-685881 | [spelling_alphabet        ] Note: Note: Serial: Tango–Lima–03–Foxtrot–Echo. For real. if you can.
+9285 | VT-573621 | [spelling_alphabet        ] Okay, All caps: API KEY REVOKED. please.
+9286 | VT-577379 | [spelling_alphabet        ] Note: Lowercase only: monolithicservice.—copy. please.
+9287 | VT-675847 | [spelling_alphabet        ] Real talk, Note: My initials are N—A—A, November Alpha Alpha. right now.
+9288 | VT-676560 | [spelling_alphabet        ] Note: Okay, Lowercase only: monolithicservice.—copy. — got it.
+9289 | VT-596516 | [spelling_alphabet        ] Listen, Note: Serial: Tango–Lima–03–Foxtrot–Echo. Thanks.
+9290 | VT-560280 | [spelling_alphabet        ] Heads up: Reminder: License plate reads: Zulu Seven Bravo Nine Four.—copy..
+9291 | VT-511942 | [spelling_alphabet        ] Heads up: Hey, Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—got it. please.
+9292 | VT-529621 | [spelling_alphabet        ] Note: Listen, License plate reads: Zulu Seven Bravo Nine Four. Please. right now.
+9293 | VT-588415 | [spelling_alphabet        ] Reminder: Acronym pronounced like a word: SNAFU. right now.
+9294 | VT-645935 | [spelling_alphabet        ] Okay, Okay, Say it letter by letter: R—E—S—O—N—A—N—C—E. If possible..
+9295 | VT-552016 | [spelling_alphabet        ] Okay, Hey, Say it letter by letter: R—E—S—O—N—A—N—C—E. Right now. — confirm.
+9296 | VT-695915 | [spelling_alphabet        ] Real talk, FYI, Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November. Right now. if you can.
+9297 | VT-683557 | [spelling_alphabet        ] Note: Note: Serial: Tango–Lima–4–Foxtrot–Echo. if you can.
+9298 | VT-516247 | [spelling_alphabet        ] Real talk, Okay, Lowercase only: monolithicservice. thanks.
+9299 | VT-539667 | [spelling_alphabet        ] Note: Serial: Tango–Lima–4–Foxtrot–Echo.—copy. thanks.
+9300 | VT-556242 | [spelling_alphabet        ] Listen, Heads up: License plate reads: Zulu Seven Bravo Nine Four.—got it..

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 65 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+3201 | VT-72950 | [passive_aggressive       ] Okay, I love how you always do things your way, even when they’re wrong. If possible.
+3202 | VT-44573 | [passive_aggressive       ] Heads up: No, really, take your time. It’s not like deadlines matter. For real.
+3203 | VT-44573 | [passive_aggressive       ] Heads up: No, really, take your time. It’s not like deadlines matter. For real.
+3204 | VT-72991 | [passive_aggressive       ] Note: Oh, you’re here. How… unexpected.—copy.
+3205 | VT-34072 | [passive_aggressive       ] Hey, I love how you always do things your way, even when they’re wrong. Right now.
+3206 | VT-80760 | [passive_aggressive       ] Listen, Oh, you’re here. How… unexpected. Right now.
+3207 | VT-95878 | [passive_aggressive       ] Heads up: Oh, you’re here. How… unexpected. Right now.
+3208 | VT-36853 | [passive_aggressive       ] FYI, Oh, you’re here. How… unexpected. For real.
+3209 | VT-26427 | [passive_aggressive       ] Hey, I love how you always do things your way, even when they’re wrong. Thanks.
+3210 | VT-91185 | [passive_aggressive       ] Heads up: I love how you always do things your way, even when they’re wrong. Right now.
+3211 | VT-68647 | [passive_aggressive       ] Okay, Oh, you’re here. How… unexpected.—got it.
+3212 | VT-77743 | [passive_aggressive       ] Okay, No, really, take your time. It’s not like deadlines matter. Right now.
+3213 | VT-64201 | [passive_aggressive       ] Okay, Oh, you’re here. How… unexpected. If possible.
+3214 | VT-77743 | [passive_aggressive       ] Okay, No, really, take your time. It’s not like deadlines matter. Right now.
+3215 | VT-86594 | [passive_aggressive       ] Reminder: I love how you always do things your way, even when they’re wrong. Thanks.
+3216 | VT-51649 | [passive_aggressive       ] Oh, you’re here. How… unexpected.
+3217 | VT-45254 | [passive_aggressive       ] Listen, No, really, take your time. It’s not like deadlines matter.
+3218 | VT-29672 | [passive_aggressive       ] Listen, I love how you always do things your way, even when they’re wrong. Please.
+3219 | VT-53209 | [passive_aggressive       ] Heads up: I love how you always do things your way, even when they’re wrong. Thanks.
+3220 | VT-33974 | [passive_aggressive       ] Reminder: I love how you always do things your way, even when they’re wrong. If possible.
+3221 | VT-58208 | [passive_aggressive       ] Okay, Oh, you’re here. How… unexpected. Thanks.
+3222 | VT-18466 | [passive_aggressive       ] Heads up: Oh, you’re here. How… unexpected. Right now.
+3223 | VT-74629 | [passive_aggressive       ] Reminder: No, really, take your time. It’s not like deadlines matter.—got it.
+3224 | VT-74766 | [passive_aggressive       ] Reminder: I love how you always do things your way, even when they’re wrong.—copy.
+3225 | VT-78332 | [passive_aggressive       ] Hey, I love how you always do things your way, even when they’re wrong.—copy.
+3226 | VT-91311 | [passive_aggressive       ] Listen, No, really, take your time. It’s not like deadlines matter. If possible.
+3227 | VT-37199 | [passive_aggressive       ] Note: No, really, take your time. It’s not like deadlines matter. If possible.
+3228 | VT-74161 | [passive_aggressive       ] Listen, Oh, you’re here. How… unexpected. Please.
+3229 | VT-83723 | [passive_aggressive       ] Oh, you’re here. How… unexpected. Right now.
+3230 | VT-63994 | [passive_aggressive       ] Note: I love how you always do things your way, even when they’re wrong. Right now.
+3231 | VT-33974 | [passive_aggressive       ] Reminder: I love how you always do things your way, even when they’re wrong. If possible.
+3232 | VT-42706 | [passive_aggressive       ] Listen, Oh, you’re here. How… unexpected. For real.
+3233 | VT-81557 | [passive_aggressive       ] Okay, No, really, take your time. It’s not like deadlines matter. If possible.
+3234 | VT-65652 | [passive_aggressive       ] Listen, Oh, you’re here. How… unexpected. Please.
+3235 | VT-91175 | [passive_aggressive       ] Okay, Oh, you’re here. How… unexpected. For real.
+3236 | VT-43041 | [passive_aggressive       ] Okay, No, really, take your time. It’s not like deadlines matter. Right now.
+3237 | VT-35545 | [passive_aggressive       ] Okay, I love how you always do things your way, even when they’re wrong. Please.
+3238 | VT-63994 | [passive_aggressive       ] Note: I love how you always do things your way, even when they’re wrong. Right now.
+3239 | VT-82808 | [passive_aggressive       ] Heads up: I love how you always do things your way, even when they’re wrong. For real.
+3240 | VT-63994 | [passive_aggressive       ] Note: I love how you always do things your way, even when they’re wrong. Right now.
+3241 | VT-65367 | [passive_aggressive       ] No, really, take your time. It’s not like deadlines matter. Thanks.
+3242 | VT-26973 | [passive_aggressive       ] Hey, Oh, you’re here. How… unexpected. Thanks.
+3243 | VT-63994 | [passive_aggressive       ] Note: I love how you always do things your way, even when they’re wrong. Right now.
+3244 | VT-67219 | [paths_cli                ] Note: Mount the drive at /mnt/data. Right now.
+3245 | VT-35501 | [paths_cli                ] Hey, ping the gateway to verify routing. Please.
+3246 | VT-67352 | [paths_cli                ] Listen, Mount the drive at /mnt/data. For real.
+3247 | VT-44878 | [paths_cli                ] Note: ls -la to show hidden files. Thanks.
+3248 | VT-67856 | [paths_cli                ] FYI, sudo systemctl restart vega.service
+3249 | VT-21461 | [paths_cli                ] Note: Home tilde slash .ssh slash config needs chmod 600. For real.
+3250 | VT-89116 | [paths_cli                ] Heads up: Open /var/log/syslog and tail -f. Please.

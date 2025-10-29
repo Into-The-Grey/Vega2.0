@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 89 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+4401 | VT-82970 | [sound_effects            ] Tick tick tick… and then silence. Right now.
+4402 | VT-80833 | [sound_effects            ] Heads up: Boom! Crash! The whole lab went dark. If possible.
+4403 | VT-99542 | [sound_effects            ] Boom! Crash! The whole lab went dark. Please.
+4404 | VT-79335 | [sound_effects            ] Pshhh, like air escaping a balloon of secrets. Please.
+4405 | VT-97671 | [sound_effects            ] Heads up: Pshhh, like air escaping a balloon of secrets. If possible.
+4406 | VT-52409 | [sound_effects            ] Heads up: Tick tick tick… and then silence. Please.
+4407 | VT-31024 | [sound_effects            ] Tick tick tick… and then silence. Thanks.
+4408 | VT-12282 | [sound_effects            ] Okay, Pshhh, like air escaping a balloon of secrets.
+4409 | VT-50539 | [sound_effects            ] Hey, Boom! Crash! The whole lab went dark.—got it.
+4410 | VT-13590 | [sound_effects            ] Note: Pshhh, like air escaping a balloon of secrets. Please.
+4411 | VT-87230 | [sound_effects            ] Heads up: Pshhh, like air escaping a balloon of secrets.—got it.
+4412 | VT-25310 | [sound_effects            ] Reminder: Boom! Crash! The whole lab went dark. Please.
+4413 | VT-71458 | [sound_effects            ] Note: Tick tick tick… and then silence. For real.
+4414 | VT-52409 | [sound_effects            ] Heads up: Tick tick tick… and then silence. Please.
+4415 | VT-77007 | [sound_effects            ] FYI, Tick tick tick… and then silence. Right now.
+4416 | VT-52409 | [sound_effects            ] Heads up: Tick tick tick… and then silence. Please.
+4417 | VT-86599 | [sound_effects            ] Heads up: Boom! Crash! The whole lab went dark. Please.
+4418 | VT-61511 | [sound_effects            ] FYI, Pshhh, like air escaping a balloon of secrets.
+4419 | VT-52409 | [sound_effects            ] Heads up: Tick tick tick… and then silence. Please.
+4420 | VT-26844 | [spelling_alphabet        ] Reminder: My initials are N—A—A, November Alpha Alpha.—got it.
+4421 | VT-28753 | [spelling_alphabet        ] Note: Lowercase only: monolithicservice. Thanks.
+4422 | VT-91915 | [spelling_alphabet        ] Okay, My initials are N—A—A, November Alpha Alpha. Right now.
+4423 | VT-24361 | [spelling_alphabet        ] Heads up: Say it letter by letter: R—E—S—O—N—A—N—C—E. Please.
+4424 | VT-89897 | [spelling_alphabet        ] Heads up: Username: delta.delta—underscore—root.
+4425 | VT-95693 | [spelling_alphabet        ] Okay, License plate reads: Zulu Seven Bravo Nine Four. For real.
+4426 | VT-98359 | [spelling_alphabet        ] Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—copy.
+4427 | VT-26844 | [spelling_alphabet        ] Reminder: My initials are N—A—A, November Alpha Alpha.—got it.
+4428 | VT-31808 | [spelling_alphabet        ] Note: License plate reads: Zulu Seven Bravo Nine Four.
+4429 | VT-90401 | [spelling_alphabet        ] Okay, Say it letter by letter: R—E—S—O—N—A—N—C—E. If possible.
+4430 | VT-99907 | [spelling_alphabet        ] Acronym pronounced like a word: SNAFU. For real.
+4431 | VT-61679 | [spelling_alphabet        ] Listen, Username: delta.delta—underscore—root.—got it.
+4432 | VT-95143 | [spelling_alphabet        ] FYI, Lowercase only: monolithicservice. Please.
+4433 | VT-50185 | [spelling_alphabet        ] Note: Serial: Tango–Lima–03–Foxtrot–Echo.—copy.
+4434 | VT-94123 | [spelling_alphabet        ] FYI, License plate reads: Zulu Seven Bravo Nine Four. Please.
+4435 | VT-75225 | [spelling_alphabet        ] Reminder: Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—got it.
+4436 | VT-29269 | [spelling_alphabet        ] Listen, Lowercase only: monolithicservice. For real.
+4437 | VT-29808 | [spelling_alphabet        ] Note: My initials are N—A—A, November Alpha Alpha.
+4438 | VT-54051 | [spelling_alphabet        ] License plate reads: Zulu Seven Bravo Nine Four.
+4439 | VT-99907 | [spelling_alphabet        ] Acronym pronounced like a word: SNAFU. For real.
+4440 | VT-92131 | [spelling_alphabet        ] Listen, Acronym pronounced like a word: SNAFU.—copy.
+4441 | VT-51143 | [spelling_alphabet        ] Hey, Acronym pronounced like a word: SNAFU. Please.
+4442 | VT-48869 | [spelling_alphabet        ] Okay, Lowercase only: monolithicservice.—copy.
+4443 | VT-98359 | [spelling_alphabet        ] Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—copy.
+4444 | VT-65594 | [spelling_alphabet        ] Note: Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November. Please.
+4445 | VT-55072 | [spelling_alphabet        ] Heads up: Acronym pronounced like a word: SNAFU. Right now.
+4446 | VT-67036 | [spelling_alphabet        ] Reminder: License plate reads: Zulu Seven Bravo Nine Four.
+4447 | VT-49696 | [spelling_alphabet        ] Heads up: All caps: API KEY REVOKED. For real.
+4448 | VT-14726 | [spelling_alphabet        ] Heads up: All caps: API KEY REVOKED. Thanks.
+4449 | VT-56611 | [spelling_alphabet        ] FYI, All caps: API KEY REVOKED. If possible.
+4450 | VT-17777 | [spelling_alphabet        ] Heads up: Lowercase only: monolithicservice.—copy.

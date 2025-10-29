@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 3 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0101 | VT-71487 | [comparatives_superlatives] Listen, Our best result so far. Please.
+0102 | VT-31068 | [comparatives_superlatives] The smallest feasible footprint.
+0103 | VT-81473 | [comparatives_superlatives] Reminder: Faster than yesterday, slower than ideal.—got it.
+0104 | VT-87566 | [comparatives_superlatives] Heads up: Less fragile, more resilient. Please.
+0105 | VT-22507 | [comparatives_superlatives] The smallest feasible footprint. Please.
+0106 | VT-94913 | [comparatives_superlatives] Hey, This is the cheapest viable option. If possible.
+0107 | VT-72220 | [comparatives_superlatives] Heads up: This is the cheapest viable option. For real.
+0108 | VT-24381 | [comparatives_superlatives] Note: This is the cheapest viable option. Thanks.
+0109 | VT-14169 | [comparatives_superlatives] Hey, Less fragile, more resilient. Please.
+0110 | VT-81305 | [comparatives_superlatives] Heads up: Faster than yesterday, slower than ideal. For real.
+0111 | VT-63143 | [comparatives_superlatives] Listen, This is the cheapest viable option. Please.
+0112 | VT-85565 | [comparatives_superlatives] Heads up: The toughest challenge yet.—got it.
+0113 | VT-13263 | [comparatives_superlatives] Heads up: The most elegant solution wins.—got it.
+0114 | VT-70698 | [comparatives_superlatives] This is the cheapest viable option.
+0115 | VT-70800 | [comparatives_superlatives] Okay, Worse latency but better throughput.
+0116 | VT-93887 | [comparatives_superlatives] Listen, The smallest feasible footprint. If possible.
+0117 | VT-41569 | [comparatives_superlatives] Heads up: Faster than yesterday, slower than ideal.—copy.
+0118 | VT-43905 | [comparatives_superlatives] The smallest feasible footprint. Please.
+0119 | VT-41786 | [comparatives_superlatives] FYI, Faster than yesterday, slower than ideal. If possible.
+0120 | VT-58965 | [comparatives_superlatives] Faster than yesterday, slower than ideal.
+0121 | VT-31068 | [comparatives_superlatives] The smallest feasible footprint.
+0122 | VT-56171 | [comparatives_superlatives] Listen, This is the cheapest viable option. Thanks.
+0123 | VT-87740 | [comparatives_superlatives] Hey, Our best result so far. For real.
+0124 | VT-70363 | [comparatives_superlatives] Okay, The toughest challenge yet.—got it.
+0125 | VT-90587 | [comparatives_superlatives] Hey, The smallest feasible footprint. Please.
+0126 | VT-61763 | [comparatives_superlatives] Note: Better, but not best.—got it.
+0127 | VT-84667 | [comparatives_superlatives] Okay, This is the cheapest viable option. If possible.
+0128 | VT-58781 | [comparatives_superlatives] Okay, Worse latency but better throughput.—copy.
+0129 | VT-87675 | [comparatives_superlatives] Heads up: The most elegant solution wins.—copy.
+0130 | VT-19240 | [comparatives_superlatives] FYI, Our best result so far. Thanks.
+0131 | VT-62802 | [comparatives_superlatives] Listen, Higher accuracy with minimal overhead.
+0132 | VT-85333 | [comparatives_superlatives] Listen, This is the cheapest viable option. Please.
+0133 | VT-62802 | [comparatives_superlatives] Listen, Higher accuracy with minimal overhead.
+0134 | VT-96707 | [comparatives_superlatives] Listen, This is the cheapest viable option. If possible.
+0135 | VT-81305 | [comparatives_superlatives] Heads up: Faster than yesterday, slower than ideal. For real.
+0136 | VT-85505 | [comparatives_superlatives] Okay, Our best result so far.—copy.
+0137 | VT-94633 | [comparatives_superlatives] Reminder: Faster than yesterday, slower than ideal. Right now.
+0138 | VT-81842 | [comparatives_superlatives] Listen, The most elegant solution wins.—got it.
+0139 | VT-34953 | [comparatives_superlatives] FYI, Higher accuracy with minimal overhead. Please.
+0140 | VT-84224 | [comparatives_superlatives] Our best result so far. If possible.
+0141 | VT-53006 | [comparatives_superlatives] Okay, Faster than yesterday, slower than ideal. If possible.
+0142 | VT-41967 | [comparatives_superlatives] Higher accuracy with minimal overhead. Please.
+0143 | VT-87566 | [comparatives_superlatives] Heads up: Less fragile, more resilient. Please.
+0144 | VT-60159 | [comparatives_superlatives] Reminder: Higher accuracy with minimal overhead.—copy.
+0145 | VT-43900 | [comparatives_superlatives] Heads up: Better, but not best.
+0146 | VT-36970 | [comparatives_superlatives] FYI, The smallest feasible footprint.
+0147 | VT-63143 | [comparatives_superlatives] Listen, This is the cheapest viable option. Please.
+0148 | VT-28390 | [comparatives_superlatives] FYI, The smallest feasible footprint. For real.
+0149 | VT-69464 | [comparatives_superlatives] Heads up: Worse latency but better throughput. Right now.
+0150 | VT-87566 | [comparatives_superlatives] Heads up: Less fragile, more resilient. Please.

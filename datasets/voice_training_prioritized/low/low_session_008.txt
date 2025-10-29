@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 8 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0351 | VT-81755 | [code_readouts            ] Reminder: Kubernetes pod restarted due to OOMKill. Please.
+0352 | VT-81755 | [code_readouts            ] Reminder: Kubernetes pod restarted due to OOMKill. Please.
+0353 | VT-19505 | [code_readouts            ] Reminder: Kubernetes pod restarted due to OOMKill. Right now.
+0354 | VT-93859 | [code_readouts            ] Reminder: Return HTTP 200 with JSON payload.—copy.
+0355 | VT-51064 | [code_readouts            ] Return HTTP 200 with JSON payload. For real.
+0356 | VT-77737 | [code_readouts            ] Throw a try-catch around the parser.—got it.
+0357 | VT-52083 | [code_readouts            ] Heads up: Export PATH equals dollar HOME slash bin colon PATH. Please.
+0358 | VT-95262 | [code_readouts            ] Okay, Kubernetes pod restarted due to OOMKill.—copy.
+0359 | VT-35494 | [code_readouts            ] Listen, Run pip install requests in a clean virtual environment. If possible.
+0360 | VT-36634 | [code_readouts            ] Hey, Use async await to avoid blocking.—copy.
+0361 | VT-96271 | [code_readouts            ] Listen, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis.
+0362 | VT-37896 | [code_readouts            ] Docker build dash t app colon latest dot If possible.
+0363 | VT-96271 | [code_readouts            ] Listen, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis.
+0364 | VT-16055 | [code_readouts            ] Hey, Git rebase main then force-with-lease. For real.
+0365 | VT-27591 | [code_readouts            ] Function signature: def handler(event, context):
+0366 | VT-55626 | [code_readouts            ] Listen, Function signature: def handler(event, context): Right now.
+0367 | VT-69370 | [code_readouts            ] Export PATH equals dollar HOME slash bin colon PATH.
+0368 | VT-26958 | [code_readouts            ] FYI, Docker build dash t app colon latest dot If possible.
+0369 | VT-84341 | [code_readouts            ] Hey, Run pip install requests in a clean virtual environment. Thanks.
+0370 | VT-53934 | [code_readouts            ] Okay, Export PATH equals dollar HOME slash bin colon PATH. For real.
+0371 | VT-89031 | [code_readouts            ] Okay, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis. Thanks.
+0372 | VT-65729 | [code_readouts            ] Run pip install requests in a clean virtual environment. Thanks.
+0373 | VT-52695 | [code_readouts            ] Okay, Run pip install requests in a clean virtual environment. For real.
+0374 | VT-42367 | [code_readouts            ] Use async await to avoid blocking.—copy.
+0375 | VT-12941 | [code_readouts            ] FYI, Kubernetes pod restarted due to OOMKill. For real.
+0376 | VT-32740 | [code_readouts            ] Heads up: Throw a try-catch around the parser.—copy.
+0377 | VT-20529 | [code_readouts            ] Reminder: Git rebase main then force-with-lease. Thanks.
+0378 | VT-61515 | [code_readouts            ] Hey, Throw a try-catch around the parser. Thanks.
+0379 | VT-58465 | [code_readouts            ] Okay, Function signature: def handler(event, context): Right now.
+0380 | VT-84341 | [code_readouts            ] Hey, Run pip install requests in a clean virtual environment. Thanks.
+0381 | VT-50225 | [code_readouts            ] Hey, Git rebase main then force-with-lease. Please.
+0382 | VT-21336 | [code_readouts            ] Reminder: Run pip install requests in a clean virtual environment. Thanks.
+0383 | VT-52301 | [code_readouts            ] Okay, Run pip install requests in a clean virtual environment. Please.
+0384 | VT-72807 | [code_readouts            ] FYI, Use async await to avoid blocking.
+0385 | VT-64654 | [code_readouts            ] Heads up: Throw a try-catch around the parser. Please.
+0386 | VT-51478 | [code_readouts            ] Reminder: Backtick, backtick, python: print open parenthesis 'hello' close parenthesis. Right now.
+0387 | VT-58465 | [code_readouts            ] Okay, Function signature: def handler(event, context): Right now.
+0388 | VT-34590 | [code_readouts            ] Heads up: Backtick, backtick, python: print open parenthesis 'hello' close parenthesis.—got it.
+0389 | VT-58465 | [code_readouts            ] Okay, Function signature: def handler(event, context): Right now.
+0390 | VT-20063 | [code_readouts            ] Hey, Return HTTP 200 with JSON payload. For real.
+0391 | VT-15065 | [code_readouts            ] Hey, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis. If possible.
+0392 | VT-58465 | [code_readouts            ] Okay, Function signature: def handler(event, context): Right now.
+0393 | VT-11817 | [dialect_southern_us      ] That ain’t it, chief. Thanks.
+0394 | VT-30375 | [dialect_southern_us      ] Bless your heart, you tried.
+0395 | VT-96022 | [dialect_southern_us      ] Okay, That ain’t it, chief.
+0396 | VT-30375 | [dialect_southern_us      ] Bless your heart, you tried.
+0397 | VT-80715 | [dialect_southern_us      ] Okay, That dog won’t hunt.
+0398 | VT-89598 | [dialect_southern_us      ] That dog won’t hunt.
+0399 | VT-80715 | [dialect_southern_us      ] Okay, That dog won’t hunt.
+0400 | VT-15807 | [dialect_southern_us      ] That dog won’t hunt.—got it.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 5 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0201 | VT-95095 | [dialect_southern_us      ] Okay, Bless your heart, you tried. Right now.
+0202 | VT-16125 | [dialect_southern_us      ] Okay, Y’all ready or what? Right now.
+0203 | VT-18508 | [dialect_southern_us      ] FYI, Fixing to head out in a minute. Thanks.
+0204 | VT-20362 | [dialect_southern_us      ] Reminder: Bless your heart, you tried.—got it.
+0205 | VT-69453 | [dialect_southern_us      ] Note: I’m busier than a one‑armed paperhanger. For real.
+0206 | VT-85690 | [dialect_southern_us      ] Couldn’t pour water out of a boot with instructions on the heel.—copy.
+0207 | VT-67673 | [dialect_southern_us      ] Listen, That ain’t it, chief. Thanks.
+0208 | VT-62025 | [dialect_southern_us      ] Hey, Might could get that done by supper. If possible.
+0209 | VT-41454 | [dialect_southern_us      ] Heads up: That dog won’t hunt.
+0210 | VT-59605 | [dialect_southern_us      ] Reminder: Bless your heart, you tried. Thanks.
+0211 | VT-94705 | [dialect_southern_us      ] Reminder: Y’all ready or what?
+0212 | VT-72883 | [dialect_southern_us      ] Might could get that done by supper. Please.
+0213 | VT-70247 | [dialect_southern_us      ] Heads up: Fixing to head out in a minute. Thanks.
+0214 | VT-85690 | [dialect_southern_us      ] Couldn’t pour water out of a boot with instructions on the heel.—copy.
+0215 | VT-93352 | [dialect_southern_us      ] Couldn’t pour water out of a boot with instructions on the heel. Right now.
+0216 | VT-66387 | [dialect_southern_us      ] FYI, Couldn’t pour water out of a boot with instructions on the heel.—got it.
+0217 | VT-31283 | [dialect_southern_us      ] FYI, Might could get that done by supper. For real.
+0218 | VT-16125 | [dialect_southern_us      ] Okay, Y’all ready or what? Right now.
+0219 | VT-21481 | [dialect_southern_us      ] Y’all ready or what? Right now.
+0220 | VT-63559 | [dialect_southern_us      ] Heads up: Couldn’t pour water out of a boot with instructions on the heel.—got it.
+0221 | VT-81714 | [dialect_southern_us      ] Listen, Bless your heart, you tried. For real.
+0222 | VT-18088 | [dialect_southern_us      ] Note: Hotter than blue blazes today.—copy.
+0223 | VT-53385 | [dialect_southern_us      ] Listen, Hotter than blue blazes today.—got it.
+0224 | VT-58889 | [dialect_southern_us      ] Listen, Hotter than blue blazes today. Right now.
+0225 | VT-81040 | [dialect_southern_us      ] Reminder: Might could get that done by supper. For real.
+0226 | VT-95663 | [dialect_southern_us      ] Note: I’m busier than a one‑armed paperhanger. Thanks.
+0227 | VT-82582 | [dialect_southern_us      ] Okay, I’m busier than a one‑armed paperhanger.
+0228 | VT-61386 | [dialect_southern_us      ] Note: Y’all ready or what? For real.
+0229 | VT-71043 | [dialect_southern_us      ] Couldn’t pour water out of a boot with instructions on the heel. For real.
+0230 | VT-49100 | [dialect_southern_us      ] I’m busier than a one‑armed paperhanger. Please.
+0231 | VT-59402 | [dialect_southern_us      ] Listen, That dog won’t hunt. Please.
+0232 | VT-94705 | [dialect_southern_us      ] Reminder: Y’all ready or what?
+0233 | VT-61386 | [dialect_southern_us      ] Note: Y’all ready or what? For real.
+0234 | VT-99262 | [dialect_southern_us      ] Okay, I’m busier than a one‑armed paperhanger.—copy.
+0235 | VT-16125 | [dialect_southern_us      ] Okay, Y’all ready or what? Right now.
+0236 | VT-38899 | [dialect_southern_us      ] Listen, Fixing to head out in a minute. Please.
+0237 | VT-70915 | [dialect_southern_us      ] Note: Couldn’t pour water out of a boot with instructions on the heel. Thanks.
+0238 | VT-58223 | [dialect_southern_us      ] Note: Bless your heart, you tried. Please.
+0239 | VT-18088 | [dialect_southern_us      ] Note: Hotter than blue blazes today.—copy.
+0240 | VT-36538 | [dialect_southern_us      ] FYI, Might could get that done by supper. Please.
+0241 | VT-16161 | [dialect_southern_us      ] Okay, That dog won’t hunt. Please.
+0242 | VT-51549 | [dialect_southern_us      ] Hotter than blue blazes today.
+0243 | VT-29378 | [dialect_southern_us      ] FYI, Might could get that done by supper. Thanks.
+0244 | VT-70247 | [dialect_southern_us      ] Heads up: Fixing to head out in a minute. Thanks.
+0245 | VT-31283 | [dialect_southern_us      ] FYI, Might could get that done by supper. For real.
+0246 | VT-31740 | [dialect_southern_us      ] Hey, That dog won’t hunt. Right now.
+0247 | VT-61289 | [dialect_southern_us      ] Listen, Bless your heart, you tried. Right now.
+0248 | VT-45690 | [dialect_southern_us      ] Heads up: Y’all ready or what?—got it.
+0249 | VT-49733 | [dialect_southern_us      ] Hey, Bless your heart, you tried. Please.
+0250 | VT-52668 | [dialect_southern_us      ] Couldn’t pour water out of a boot with instructions on the heel.

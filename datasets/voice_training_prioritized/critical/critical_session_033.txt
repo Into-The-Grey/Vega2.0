@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 33 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1601 | VT-459541 | [everyday                 ] Quick one: FYI, Let's meet on Friday to go over the plan. Right now. — now.
+1602 | VT-417061 | [everyday                 ] Note: Good evening. — now.
+1603 | VT-440078 | [everyday                 ] Listen, Okay, Mark it as tentative until we confirm. For real. please. (alt)
+1604 | VT-498532 | [everyday                 ] Quick one: How's it going? please. (alt)
+1605 | VT-469596 | [everyday                 ] Quick one: Okay, I'll grab lunch near the store.—copy. — confirm. (alt)
+1606 | VT-449715 | [everyday                 ] Okay, Let’s keep it simple this time. right now.
+1607 | VT-498705 | [everyday                 ] Note: What exactly did we agree to last time?.
+1608 | VT-461072 | [everyday                 ] Okay, Hey, Let's meet on Sunday to go over the plan.—got it. — now. (alt)
+1609 | VT-427166 | [everyday                 ] Reminder: How's it going? — now. (alt)
+1610 | VT-422114 | [everyday                 ] Quick one: Reminder: We can wrap this up by 5:05 PM. For real. (alt)
+1611 | VT-464952 | [everyday                 ] Note: Long time no see..
+1612 | VT-479773 | [everyday                 ] Real talk, Mark it as tentative until we confirm.
+1613 | VT-443293 | [everyday                 ] Okay, Reminder: I’ll send a follow-up email tonight. Please. please.
+1614 | VT-464559 | [everyday                 ] FYI, I’ll handle the return; you keep the receipt. — confirm. (alt)
+1615 | VT-461669 | [everyday                 ] Note: Reminder: I’ll circle back after lunch. right now. (alt)
+1616 | VT-410432 | [everyday                 ] Quick one: Do you want to split the bill?.
+1617 | VT-475031 | [everyday                 ] I appreciate the quick response. — confirm.
+1618 | VT-401065 | [everyday                 ] Quick one: I'll grab lunch near the studio. — now.
+1619 | VT-422364 | [everyday                 ] Heads up: Could you double‑check the address? right now.
+1620 | VT-457264 | [everyday                 ] FYI, It’s not urgent—get to it when you can..
+1621 | VT-419084 | [imperative               ] Okay, Reminder: Shut it down immediately. Please. (alt)
+1622 | VT-453043 | [imperative               ] Heads up: FYI, Please sit up straight and focus. Thanks. — confirm.
+1623 | VT-455469 | [imperative               ] Quick one: Hey, Please sit up straight and focus. For real. thanks.
+1624 | VT-494116 | [imperative               ] Okay, Note: Please sit up straight and focus. Thanks. — confirm.
+1625 | VT-484238 | [imperative               ] Heads up: Reminder: Call me when you get home. Thanks. — confirm.
+1626 | VT-426829 | [imperative               ] Note: Please sit up straight and focus. If possible. — now. (alt)
+1627 | VT-436384 | [imperative               ] Real talk, Please sit up straight and focus. For real..
+1628 | VT-499580 | [imperative               ] Real talk, Reminder: Shut it down immediately. Please. — got it. (alt)
+1629 | VT-418500 | [imperative               ] Listen, FYI, Call me when you get home.—copy. right now.
+1630 | VT-435618 | [imperative               ] Note: Please sit up straight and focus. If possible. right now.
+1631 | VT-409730 | [imperative               ] Reminder: Shut it down immediately. — confirm.
+1632 | VT-486991 | [imperative               ] Listen, Note: Please sit up straight and focus. — confirm. (alt)
+1633 | VT-489391 | [imperative               ] Note: Hey, Shut it down immediately.—copy. right now.
+1634 | VT-480740 | [imperative               ] Note: Listen, Call me when you get home. If possible. — now.
+1635 | VT-483477 | [imperative               ] Heads up: Reminder: Call me when you get home.—copy. — got it.
+1636 | VT-413640 | [imperative               ] Real talk, FYI, Call me when you get home. If possible. — got it.
+1637 | VT-464182 | [imperative               ] Reminder: Reminder: Please sit up straight and focus. Please. — got it. (alt)
+1638 | VT-481624 | [imperative               ] Listen, FYI, Call me when you get home. For real. right now. (alt)
+1639 | VT-413019 | [imperative               ] Okay, Call me when you get home. if you can. (alt)
+1640 | VT-461259 | [imperative               ] Shut it down immediately.. (alt)
+1641 | VT-460514 | [imperative               ] Real talk, Listen, Call me when you get home. Please. — now.
+1642 | VT-408411 | [imperative               ] Quick one: Note: Call me when you get home. For real..
+1643 | VT-438656 | [imperative               ] FYI, Reminder: Shut it down immediately. Please. — confirm.
+1644 | VT-446932 | [imperative               ] Please sit up straight and focus. For real..
+1645 | VT-490383 | [imperative               ] FYI, Okay, Call me when you get home. thanks.
+1646 | VT-413838 | [imperative               ] Reminder: Hey, Shut it down immediately. — got it. (alt)
+1647 | VT-467151 | [imperative               ] FYI, Shut it down immediately.—got it. please. (alt)
+1648 | VT-476499 | [imperative               ] Heads up: Reminder: Call me when you get home. please. (alt)
+1649 | VT-412633 | [imperative               ] FYI, Hey, Shut it down immediately.—got it. please. (alt)
+1650 | VT-438915 | [imperative               ] Listen, Listen, Call me when you get home.—copy. — confirm. (alt)

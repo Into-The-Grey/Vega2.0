@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 30 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1451 | VT-484412 | [agreements               ] Hey, Copy that..
+1452 | VT-410799 | [agreements               ] Heads up: That’s a yes from me. Right now. — got it.
+1453 | VT-473598 | [agreements               ] Real talk, That’s a yes from me. right now. (alt)
+1454 | VT-476687 | [agreements               ] Heads up: FYI, Yep, that works for me. If possible. if you can. (alt)
+1455 | VT-419156 | [agreements               ] FYI, Listen, Approved. For real. right now.
+1456 | VT-453573 | [agreements               ] Note: Reminder: That’s a yes from me. If possible. — now. (alt)
+1457 | VT-434772 | [agreements               ] Reminder: FYI, Count me on board. If possible. — confirm.
+1458 | VT-448938 | [agreements               ] Okay, Note: Yep, that works for me.—copy. — now.
+1459 | VT-461906 | [agreements               ] Listen, FYI, Yep, that works for me. If possible. — got it.
+1460 | VT-488370 | [agreements               ] Listen, Hey, That’s a yes from me. Thanks. — confirm.
+1461 | VT-495871 | [agreements               ] FYI, Heads up: Yep, that works for me. Please. right now.
+1462 | VT-419031 | [agreements               ] Note: I’m in. Please. — now. (alt)
+1463 | VT-400297 | [agreements               ] Reminder: Green light. For real. right now.
+1464 | VT-416207 | [agreements               ] Listen, Listen, Approved.—got it. right now.
+1465 | VT-495776 | [agreements               ] Real talk, Listen, Agreed—let’s lock it. Right now..
+1466 | VT-475007 | [agreements               ] Reminder: Reminder: Sounds right. If possible.. (alt)
+1467 | VT-424255 | [agreements               ] Heads up: Listen, Copy that. right now.
+1468 | VT-469509 | [agreements               ] Listen, Count me on board. Right now. right now. (alt)
+1469 | VT-472869 | [agreements               ] Heads up: Sounds right. thanks.
+1470 | VT-438123 | [agreements               ] Note: Copy that. thanks.
+1471 | VT-493995 | [denials_corrections      ] Heads up: You mixed up the units again. For real. — confirm.
+1472 | VT-407975 | [denials_corrections      ] FYI, Reminder: Amend the record accordingly..
+1473 | VT-417551 | [denials_corrections      ] Okay, Heads up: You mixed up the units again. Thanks. right now.
+1474 | VT-403214 | [denials_corrections      ] Real talk, Listen, That assumption falls apart under pressure. If possible. — got it. (alt)
+1475 | VT-480921 | [denials_corrections      ] Real talk, False—cite your source.
+1476 | VT-410719 | [denials_corrections      ] Heads up: Okay, Close, but not quite. Right now. — confirm. (alt)
+1477 | VT-452496 | [denials_corrections      ] Note: Hey, No, that's not accurate.—copy. if you can. (alt)
+1478 | VT-431171 | [denials_corrections      ] Heads up: Heads up: You mixed up the units again. For real. — now.
+1479 | VT-443960 | [denials_corrections      ] Listen, Close, but not quite.—got it. — got it.
+1480 | VT-457181 | [denials_corrections      ] Reminder: Heads up: That assumption falls apart under pressure. Right now. — got it.
+1481 | VT-480212 | [denials_corrections      ] Listen, Okay, That was my mistake; here’s the fix. Right now.
+1482 | VT-498482 | [denials_corrections      ] Quick one: Note: False—cite your source. Thanks. — now.
+1483 | VT-466286 | [denials_corrections      ] Heads up: Hey, Amend the record accordingly. Right now. if you can.
+1484 | VT-450604 | [denials_corrections      ] Real talk, Listen, Negative—try a different approach. thanks.
+1485 | VT-448227 | [denials_corrections      ] Real talk, FYI, Close, but not quite. For real.
+1486 | VT-406368 | [denials_corrections      ] Okay, No, that's not accurate. — got it.
+1487 | VT-471808 | [denials_corrections      ] FYI, Amend the record accordingly.—copy. — now.
+1488 | VT-466553 | [denials_corrections      ] Heads up: You mixed up the units again.—copy. thanks.
+1489 | VT-409363 | [denials_corrections      ] Note: Close, but not quite. please.
+1490 | VT-419009 | [denials_corrections      ] Listen, Okay, That was my mistake; here’s the fix. Right now. thanks.
+1491 | VT-496369 | [denials_corrections      ] Listen, Reminder: That was my mistake; here’s the fix.—got it. — now.
+1492 | VT-455070 | [denials_corrections      ] Reminder: Reminder: That was my mistake; here’s the fix. Right now. — got it.
+1493 | VT-463830 | [denials_corrections      ] Quick one: Hey, Amend the record accordingly. Please.
+1494 | VT-440934 | [denials_corrections      ] FYI, Hey, No, that's not accurate.—copy.
+1495 | VT-406295 | [denials_corrections      ] Quick one: FYI, No, that's not accurate. If possible. please.
+1496 | VT-489943 | [denials_corrections      ] Reminder: That was my mistake; here’s the fix.—got it. if you can.
+1497 | VT-459077 | [denials_corrections      ] FYI, Heads up: Close, but not quite. If possible. — confirm.
+1498 | VT-415361 | [denials_corrections      ] Heads up: Listen, Retract the last statement.—copy..
+1499 | VT-458991 | [denials_corrections      ] Reminder: Retract the last statement. Right now. if you can.
+1500 | VT-486082 | [denials_corrections      ] Note: Note: Retract the last statement. Right now. right now.

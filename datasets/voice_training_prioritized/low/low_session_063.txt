@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 63 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+3101 | VT-91185 | [passive_aggressive       ] Heads up: I love how you always do things your way, even when they’re wrong. Right now.
+3102 | VT-60795 | [passive_aggressive       ] Okay, Oh, you’re here. How… unexpected.—got it.
+3103 | VT-74629 | [passive_aggressive       ] Reminder: No, really, take your time. It’s not like deadlines matter.—got it.
+3104 | VT-81253 | [passive_aggressive       ] Heads up: I love how you always do things your way, even when they’re wrong.
+3105 | VT-67780 | [passive_aggressive       ] Heads up: No, really, take your time. It’s not like deadlines matter. If possible.
+3106 | VT-68479 | [passive_aggressive       ] Hey, I love how you always do things your way, even when they’re wrong. If possible.
+3107 | VT-26973 | [passive_aggressive       ] Hey, Oh, you’re here. How… unexpected. Thanks.
+3108 | VT-35761 | [passive_aggressive       ] Note: I love how you always do things your way, even when they’re wrong. Please.
+3109 | VT-50159 | [passive_aggressive       ] Reminder: I love how you always do things your way, even when they’re wrong. For real.
+3110 | VT-44049 | [passive_aggressive       ] Okay, I love how you always do things your way, even when they’re wrong. Please.
+3111 | VT-13792 | [passive_aggressive       ] Hey, Oh, you’re here. How… unexpected.—copy.
+3112 | VT-33330 | [passive_aggressive       ] I love how you always do things your way, even when they’re wrong.
+3113 | VT-72950 | [passive_aggressive       ] Okay, I love how you always do things your way, even when they’re wrong. If possible.
+3114 | VT-55950 | [passive_aggressive       ] Note: Oh, you’re here. How… unexpected. If possible.
+3115 | VT-30940 | [passive_aggressive       ] Note: No, really, take your time. It’s not like deadlines matter. Please.
+3116 | VT-41333 | [passive_aggressive       ] No, really, take your time. It’s not like deadlines matter. Thanks.
+3117 | VT-55950 | [passive_aggressive       ] Note: Oh, you’re here. How… unexpected. If possible.
+3118 | VT-72484 | [passive_aggressive       ] Okay, I love how you always do things your way, even when they’re wrong.—got it.
+3119 | VT-34072 | [passive_aggressive       ] Hey, I love how you always do things your way, even when they’re wrong. Right now.
+3120 | VT-64425 | [passive_aggressive       ] Note: Oh, you’re here. How… unexpected.
+3121 | VT-31705 | [passive_aggressive       ] Heads up: I love how you always do things your way, even when they’re wrong. For real.
+3122 | VT-15501 | [passive_aggressive       ] Okay, I love how you always do things your way, even when they’re wrong. If possible.
+3123 | VT-76391 | [passive_aggressive       ] Heads up: Oh, you’re here. How… unexpected.
+3124 | VT-47219 | [passive_aggressive       ] Hey, Oh, you’re here. How… unexpected.
+3125 | VT-62309 | [passive_aggressive       ] FYI, No, really, take your time. It’s not like deadlines matter.—got it.
+3126 | VT-78748 | [passive_aggressive       ] Hey, No, really, take your time. It’s not like deadlines matter. If possible.
+3127 | VT-60795 | [passive_aggressive       ] Okay, Oh, you’re here. How… unexpected.—got it.
+3128 | VT-27233 | [passive_aggressive       ] FYI, I love how you always do things your way, even when they’re wrong.—got it.
+3129 | VT-60640 | [passive_aggressive       ] Listen, Oh, you’re here. How… unexpected. For real.
+3130 | VT-84914 | [passive_aggressive       ] Heads up: No, really, take your time. It’s not like deadlines matter. Please.
+3131 | VT-34833 | [passive_aggressive       ] Hey, No, really, take your time. It’s not like deadlines matter. Thanks.
+3132 | VT-72880 | [passive_aggressive       ] Hey, I love how you always do things your way, even when they’re wrong.—copy.
+3133 | VT-35234 | [passive_aggressive       ] Reminder: No, really, take your time. It’s not like deadlines matter. Please.
+3134 | VT-47219 | [passive_aggressive       ] Hey, Oh, you’re here. How… unexpected.
+3135 | VT-31633 | [passive_aggressive       ] Oh, you’re here. How… unexpected.
+3136 | VT-37903 | [passive_aggressive       ] Hey, I love how you always do things your way, even when they’re wrong. For real.
+3137 | VT-29065 | [passive_aggressive       ] Reminder: I love how you always do things your way, even when they’re wrong.
+3138 | VT-47137 | [passive_aggressive       ] Hey, I love how you always do things your way, even when they’re wrong.
+3139 | VT-98183 | [passive_aggressive       ] Heads up: Oh, you’re here. How… unexpected.
+3140 | VT-44310 | [passive_aggressive       ] Note: No, really, take your time. It’s not like deadlines matter.—copy.
+3141 | VT-68647 | [passive_aggressive       ] Okay, Oh, you’re here. How… unexpected.—got it.
+3142 | VT-17284 | [passive_aggressive       ] Reminder: No, really, take your time. It’s not like deadlines matter. Please.
+3143 | VT-24888 | [passive_aggressive       ] Oh, you’re here. How… unexpected. Please.
+3144 | VT-24258 | [passive_aggressive       ] Hey, No, really, take your time. It’s not like deadlines matter. Please.
+3145 | VT-26973 | [passive_aggressive       ] Hey, Oh, you’re here. How… unexpected. Thanks.
+3146 | VT-17284 | [passive_aggressive       ] Reminder: No, really, take your time. It’s not like deadlines matter. Please.
+3147 | VT-98737 | [passive_aggressive       ] Heads up: No, really, take your time. It’s not like deadlines matter. If possible.
+3148 | VT-98737 | [passive_aggressive       ] Heads up: No, really, take your time. It’s not like deadlines matter. If possible.
+3149 | VT-51780 | [passive_aggressive       ] Oh, you’re here. How… unexpected. Please.
+3150 | VT-39977 | [passive_aggressive       ] Hey, Oh, you’re here. How… unexpected.—got it.

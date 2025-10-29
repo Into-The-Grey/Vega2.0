@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 36 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1751 | VT-25160 | [homophones_minimal_pairs ] Okay, I can’t bear another bare-metal install. Right now.
+1752 | VT-11335 | [homophones_minimal_pairs ] Cache rules everything around me—C‑A‑C‑H‑E. For real.
+1753 | VT-25160 | [homophones_minimal_pairs ] Okay, I can’t bear another bare-metal install. Right now.
+1754 | VT-92698 | [homophones_minimal_pairs ] Okay, Close the close button—wait, what? For real.
+1755 | VT-58501 | [homophones_minimal_pairs ] I need a new role for this roll.
+1756 | VT-58116 | [homophones_minimal_pairs ] Okay, I need a new role for this roll.—got it.
+1757 | VT-99607 | [homophones_minimal_pairs ] Heads up: I’ll read the readme later. Right now.
+1758 | VT-66370 | [homophones_minimal_pairs ] Heads up: Cache rules everything around me—C‑A‑C‑H‑E. If possible.
+1759 | VT-73286 | [homophones_minimal_pairs ] They’re there, at their desks. Thanks.
+1760 | VT-35788 | [homophones_minimal_pairs ] Heads up: I’ll read the readme later.—copy.
+1761 | VT-96973 | [homophones_minimal_pairs ] I can’t bear another bare-metal install.
+1762 | VT-12720 | [homophones_minimal_pairs ] They’re there, at their desks.
+1763 | VT-45101 | [homophones_minimal_pairs ] FYI, They’re there, at their desks. Please.
+1764 | VT-17465 | [homophones_minimal_pairs ] Heads up: Kernel panic in Colonel Mustard’s study. Please.
+1765 | VT-48314 | [homophones_minimal_pairs ] The suite is sweet but pricey. If possible.
+1766 | VT-31047 | [homophones_minimal_pairs ] Reminder: Sight the site before the cite.—copy.
+1767 | VT-19751 | [homophones_minimal_pairs ] Note: Close the close button—wait, what? Thanks.
+1768 | VT-50049 | [homophones_minimal_pairs ] Heads up: Sight the site before the cite.
+1769 | VT-37300 | [homophones_minimal_pairs ] Listen, I need a new role for this roll. If possible.
+1770 | VT-73286 | [homophones_minimal_pairs ] They’re there, at their desks. Thanks.
+1771 | VT-13183 | [homophones_minimal_pairs ] Listen, Close the close button—wait, what?
+1772 | VT-31858 | [homophones_minimal_pairs ] They’re there, at their desks. Right now.
+1773 | VT-43311 | [homophones_minimal_pairs ] They’re there, at their desks. Please.
+1774 | VT-22922 | [homophones_minimal_pairs ] Note: Kernel panic in Colonel Mustard’s study. For real.
+1775 | VT-93578 | [homophones_minimal_pairs ] Reminder: Sight the site before the cite.—got it.
+1776 | VT-14853 | [homophones_minimal_pairs ] Heads up: I can’t bear another bare-metal install. Please.
+1777 | VT-37300 | [homophones_minimal_pairs ] Listen, I need a new role for this roll. If possible.
+1778 | VT-53741 | [homophones_minimal_pairs ] Okay, I can’t bear another bare-metal install. For real.
+1779 | VT-37300 | [homophones_minimal_pairs ] Listen, I need a new role for this roll. If possible.
+1780 | VT-75372 | [homophones_minimal_pairs ] Okay, We’ll write the right config.—copy.
+1781 | VT-73526 | [homophones_minimal_pairs ] Listen, I can’t bear another bare-metal install.
+1782 | VT-37300 | [homophones_minimal_pairs ] Listen, I need a new role for this roll. If possible.
+1783 | VT-60452 | [laughter_breaths         ] Note: *chuckles* Good one.
+1784 | VT-64713 | [laughter_breaths         ] Note: *gasp* No way.
+1785 | VT-47138 | [laughter_breaths         ] *gasp* No way.
+1786 | VT-82392 | [laughter_breaths         ] *coughs* Sorry—allergies.
+1787 | VT-94137 | [laughter_breaths         ] *chuckles* Good one.
+1788 | VT-47138 | [laughter_breaths         ] *gasp* No way.
+1789 | VT-84478 | [laughter_breaths         ] Hey, *gasp* No way.—got it.
+1790 | VT-12922 | [laughter_breaths         ] Hey, *gasp* No way.—got it.
+1791 | VT-96818 | [laughter_breaths         ] *deep breath* We’ve got this.
+1792 | VT-96818 | [laughter_breaths         ] *deep breath* We’ve got this.
+1793 | VT-49540 | [laughter_breaths         ] *laughs* That was ridiculous.
+1794 | VT-82392 | [laughter_breaths         ] *coughs* Sorry—allergies.
+1795 | VT-51048 | [laughter_breaths         ] Okay, *gasp* No way.
+1796 | VT-88608 | [laughter_breaths         ] Hey, *yawns* Coffee. Now.
+1797 | VT-99898 | [laughter_breaths         ] *chuckles* Good one.—copy.
+1798 | VT-84478 | [laughter_breaths         ] Hey, *gasp* No way.—got it.
+1799 | VT-93916 | [laughter_breaths         ] *deep breath* We’ve got this.
+1800 | VT-81888 | [legalese                 ] FYI, Subject to applicable law and equitable principles. Please.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 40 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1951 | VT-467436 | [laughter_breaths         ] Quick one: Okay, *sighs* Okay, let’s try again. For real. thanks.
+1952 | VT-484953 | [laughter_breaths         ] Note: Note: *laughs* That was ridiculous. if you can.
+1953 | VT-428276 | [laughter_breaths         ] Heads up: Hey, *deep breath* We’ve got this.—copy. — confirm.
+1954 | VT-418869 | [laughter_breaths         ] FYI, Hey, *sighs* Okay, let’s try again. — got it.
+1955 | VT-418957 | [laughter_breaths         ] Listen, *whisper* Don’t wake the server.—copy. if you can.
+1956 | VT-430413 | [laughter_breaths         ] Okay, Listen, *chuckles* Good one.—copy. — got it.
+1957 | VT-409390 | [laughter_breaths         ] Note: Note: *clears throat* As I was saying… Right now.
+1958 | VT-400797 | [laughter_breaths         ] Heads up: Reminder: *coughs* Sorry—allergies.—got it.
+1959 | VT-448894 | [laughter_breaths         ] Real talk, Hey, *snorts* You’re kidding, right?.
+1960 | VT-433019 | [laughter_breaths         ] Note: Reminder: *sighs* Okay, let’s try again.—copy. — confirm.
+1961 | VT-497870 | [laughter_breaths         ] Heads up: Hey, *laughs* That was ridiculous.—got it. right now.
+1962 | VT-409125 | [laughter_breaths         ] Okay, Listen, *coughs* Sorry—allergies. For real. — now.
+1963 | VT-432953 | [laughter_breaths         ] Okay, Listen, *deep breath* We’ve got this. Thanks. — now.
+1964 | VT-478580 | [laughter_breaths         ] Note: *sighs* Okay, let’s try again..
+1965 | VT-463357 | [laughter_breaths         ] Reminder: Listen, *chuckles* Good one.—copy. thanks. (alt)
+1966 | VT-483575 | [laughter_breaths         ] FYI, FYI, *chuckles* Good one. For real. thanks.
+1967 | VT-469397 | [laughter_breaths         ] Note: FYI, *chuckles* Good one. If possible. — now. (alt)
+1968 | VT-438332 | [laughter_breaths         ] Real talk, Okay, *coughs* Sorry—allergies.—got it. if you can.
+1969 | VT-456630 | [laughter_breaths         ] Note: Note: *laughs* That was ridiculous. — got it.
+1970 | VT-452183 | [laughter_breaths         ] Heads up: Listen, *laughs* That was ridiculous.—copy. — confirm.
+1971 | VT-466546 | [laughter_breaths         ] Listen, Note: *chuckles* Good one. if you can.
+1972 | VT-444774 | [laughter_breaths         ] Listen, Okay, *sighs* Okay, let’s try again. For real. — now.
+1973 | VT-442694 | [laughter_breaths         ] Okay, Reminder: *gasp* No way. Thanks. please.
+1974 | VT-479990 | [laughter_breaths         ] Heads up: Note: *gasp* No way. — confirm. (alt)
+1975 | VT-415414 | [laughter_breaths         ] Reminder: Heads up: *gasp* No way. Please. please.
+1976 | VT-452401 | [laughter_breaths         ] FYI, Listen, *coughs* Sorry—allergies.—got it. right now.
+1977 | VT-460817 | [laughter_breaths         ] Okay, FYI, *whisper* Don’t wake the server. Thanks..
+1978 | VT-458993 | [laughter_breaths         ] Listen, Listen, *whisper* Don’t wake the server.—got it. right now.
+1979 | VT-424637 | [laughter_breaths         ] Listen, FYI, *laughs* That was ridiculous.—copy. please.
+1980 | VT-411887 | [laughter_breaths         ] Listen, *chuckles* Good one. For real. if you can.
+1981 | VT-419385 | [laughter_breaths         ] Reminder: Listen, *whisper* Don’t wake the server. — got it.
+1982 | VT-455064 | [laughter_breaths         ] Reminder: Hey, *snorts* You’re kidding, right? Thanks..
+1983 | VT-411673 | [laughter_breaths         ] Okay, Hey, *laughs* That was ridiculous.—got it. — confirm.
+1984 | VT-421803 | [laughter_breaths         ] Reminder: FYI, *laughs* That was ridiculous.—copy. — now.
+1985 | VT-430284 | [laughter_breaths         ] Listen, *whisper* Don’t wake the server..
+1986 | VT-485153 | [laughter_breaths         ] Heads up: Note: *laughs* That was ridiculous. (alt)
+1987 | VT-496133 | [laughter_breaths         ] Heads up: *deep breath* We’ve got this. Thanks. if you can.
+1988 | VT-437633 | [laughter_breaths         ] Okay, FYI, *clears throat* As I was saying… Thanks. — now. (alt)
+1989 | VT-469884 | [laughter_breaths         ] Listen, Note: *chuckles* Good one. Please. please.
+1990 | VT-488266 | [laughter_breaths         ] Reminder: Hey, *sighs* Okay, let’s try again. For real. please.
+1991 | VT-408799 | [laughter_breaths         ] Real talk, Reminder: *gasp* No way. Thanks. please.
+1992 | VT-415834 | [laughter_breaths         ] Reminder: *coughs* Sorry—allergies. If possible. — now. (alt)
+1993 | VT-410464 | [laughter_breaths         ] FYI, Note: *snorts* You’re kidding, right? For real.. (alt)
+1994 | VT-450369 | [laughter_breaths         ] Okay, *gasp* No way. if you can.
+1995 | VT-441201 | [laughter_breaths         ] Reminder: *coughs* Sorry—allergies.
+1996 | VT-459838 | [multilingual             ] Reminder: Okay, Grazie mille, davvero. If possible. if you can.
+1997 | VT-464047 | [multilingual             ] Note: Note: 안녕하세요, 오늘 기분 어때요? thanks.
+1998 | VT-474941 | [multilingual             ] Reminder: FYI, ¡Excelente trabajo! Please. if you can.
+1999 | VT-460384 | [multilingual             ] Real talk, धन्यवाद, फिर मिलेंगे।
+2000 | VT-468545 | [multilingual             ] Heads up: Note: شكراً لك على المساعدة. Please. (alt)

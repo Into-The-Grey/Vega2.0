@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 41 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2001 | VT-412390 | [numeric                  ] Listen, Hey, My backup number is (448) 251-9700.—copy. if you can. (alt)
+2002 | VT-456248 | [numeric                  ] Quick one: Reminder: My backup number is (926) 266-9882.—got it. thanks.
+2003 | VT-455141 | [numeric                  ] FYI, Listen, Temperature is 44°F right now. Thanks. — now.
+2004 | VT-408232 | [numeric                  ] Heads up: The total comes to $9,693.94.—got it.
+2005 | VT-433260 | [numeric                  ] FYI, Hey, The invoice date is 2010-05-27. For real. — got it.
+2006 | VT-475868 | [numeric                  ] Reminder: Note: The invoice date is 2000-09-23..
+2007 | VT-439931 | [numeric                  ] FYI, Reminder: My backup number is (926) 266-9882.—got it. thanks. (alt)
+2008 | VT-470074 | [numeric                  ] Listen, Reminder: Call me at (760) 717-4312. Right now. — now.
+2009 | VT-462238 | [numeric                  ] Ship it to: 123 Maple St., Springfield, IL 62704 — got it.
+2010 | VT-473749 | [numeric                  ] FYI, The total comes to $797.31. For real. — now.
+2011 | VT-406703 | [numeric                  ] Okay, FYI, Temperature is 7°F right now.—copy. — now.
+2012 | VT-440476 | [numeric                  ] Real talk, The invoice date is 1995-02-26. right now. (alt)
+2013 | VT-492292 | [numeric                  ] Heads up: Listen, The invoice date is 2023-06-05. If possible. — now. (alt)
+2014 | VT-494318 | [numeric                  ] Hey, The total comes to $56.96. Right now..
+2015 | VT-417999 | [numeric                  ] Heads up: Temperature is 44°F right now. If possible.
+2016 | VT-456312 | [numeric                  ] Note: The invoice date is 2016-09-10.. (alt)
+2017 | VT-404260 | [numeric                  ] Listen, Ship it to: 9 Grove Court, Boston, MA 02108 thanks.
+2018 | VT-433705 | [numeric                  ] Listen, FYI, The server’s IP is 116.129.57.243. Thanks. — got it.
+2019 | VT-558514 | [comparatives_superlatives] Note: Hey, Our best result so far. For real.
+2020 | VT-651211 | [comparatives_superlatives] Okay, Note: Better, but not best. For real. — confirm.
+2021 | VT-584641 | [comparatives_superlatives] Reminder: Heads up: Our best result so far. If possible.
+2022 | VT-626979 | [comparatives_superlatives] Hey, The smallest feasible footprint. Please. please.
+2023 | VT-606229 | [comparatives_superlatives] Note: Hey, The toughest challenge yet.—copy. thanks.
+2024 | VT-554508 | [comparatives_superlatives] Okay, Hey, This is the cheapest viable option. If possible. — got it.
+2025 | VT-603529 | [comparatives_superlatives] Listen, Reminder: Faster than yesterday, slower than ideal.—copy. if you can.
+2026 | VT-676407 | [comparatives_superlatives] Okay, Hey, Our best result so far. For real. if you can.
+2027 | VT-616256 | [comparatives_superlatives] Listen, This is the cheapest viable option. — got it.
+2028 | VT-658759 | [comparatives_superlatives] Note: The smallest feasible footprint. Right now. thanks. (alt)
+2029 | VT-659223 | [comparatives_superlatives] Listen, Less fragile, more resilient. If possible. please.
+2030 | VT-669690 | [comparatives_superlatives] Reminder: Reminder: The toughest challenge yet. Right now. — confirm.
+2031 | VT-627096 | [comparatives_superlatives] Listen, Reminder: Better, but not best. Please. please.
+2032 | VT-502564 | [comparatives_superlatives] Real talk, Okay, Worse latency but better throughput. — confirm.
+2033 | VT-661589 | [comparatives_superlatives] Note: This is the cheapest viable option.—got it. — got it. (alt)
+2034 | VT-636223 | [comparatives_superlatives] Heads up: FYI, Faster than yesterday, slower than ideal. If possible. — confirm.
+2035 | VT-615359 | [comparatives_superlatives] Real talk, Note: Better, but not best. Right now. right now.
+2036 | VT-684222 | [comparatives_superlatives] Our best result so far. Please.
+2037 | VT-601990 | [comparatives_superlatives] Listen, This is the cheapest viable option. please.
+2038 | VT-659253 | [comparatives_superlatives] FYI, Listen, Less fragile, more resilient. If possible. — confirm.
+2039 | VT-565120 | [comparatives_superlatives] Note: Less fragile, more resilient.—copy. please.
+2040 | VT-505725 | [comparatives_superlatives] Heads up: Less fragile, more resilient.—got it. please. (alt)
+2041 | VT-559491 | [comparatives_superlatives] Note: Hey, Better, but not best. For real. right now.
+2042 | VT-555320 | [comparatives_superlatives] Heads up: Reminder: Faster than yesterday, slower than ideal.—copy. — confirm.
+2043 | VT-659356 | [comparatives_superlatives] Heads up: Heads up: Faster than yesterday, slower than ideal. For real. if you can.
+2044 | VT-529711 | [comparatives_superlatives] Note: Heads up: Less fragile, more resilient. If possible..
+2045 | VT-525363 | [comparatives_superlatives] Heads up: This is the cheapest viable option.—got it..
+2046 | VT-578244 | [comparatives_superlatives] Okay, Heads up: The most elegant solution wins. Thanks. if you can.
+2047 | VT-612517 | [comparatives_superlatives] FYI, Listen, The most elegant solution wins. If possible. thanks.
+2048 | VT-674885 | [comparatives_superlatives] Listen, Listen, The most elegant solution wins. Thanks. — confirm. (alt)
+2049 | VT-616362 | [comparatives_superlatives] FYI, Heads up: Better, but not best. thanks.
+2050 | VT-554336 | [comparatives_superlatives] Note: Hey, The smallest feasible footprint. Please. please.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 110 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+5451 | VT-53750 | [urls_emails_codes        ] Listen, Join the room ID 834-555-120 with passcode 'orbit'.
+5452 | VT-77416 | [urls_emails_codes        ] Okay, Paste the invite code: XR7F-29Q4-J1LM.—copy.
+5453 | VT-69449 | [urls_emails_codes        ] Reminder: Email support at helpdesk@example.com. Thanks.
+5454 | VT-36198 | [urls_emails_codes        ] Reminder: Visit https://example.org/docs/getting-started.—got it.
+5455 | VT-79858 | [urls_emails_codes        ] FYI, Join the room ID 834-555-120 with passcode 'orbit'. Right now.
+5456 | VT-58109 | [urls_emails_codes        ] Listen, My handle is @zero_cool_1995.
+5457 | VT-24408 | [urls_emails_codes        ] Email support at helpdesk@example.com.
+5458 | VT-80343 | [urls_emails_codes        ] Listen, Text me the OTP when you get it. For real.
+5459 | VT-54079 | [urls_emails_codes        ] Listen, Text me the OTP when you get it.—copy.
+5460 | VT-59825 | [urls_emails_codes        ] Hey, Text me the OTP when you get it.—copy.
+5461 | VT-52810 | [urls_emails_codes        ] Reminder: Join the room ID 834-555-120 with passcode 'orbit'. If possible.
+5462 | VT-50940 | [urls_emails_codes        ] Hey, Visit https://example.org/docs/getting-started. Please.
+5463 | VT-49432 | [urls_emails_codes        ] Listen, Visit https://example.org/docs/getting-started. Right now.
+5464 | VT-84482 | [urls_emails_codes        ] Reminder: Text me the OTP when you get it.—copy.
+5465 | VT-52965 | [urls_emails_codes        ] Email support at helpdesk@example.com. Please.
+5466 | VT-38905 | [urls_emails_codes        ] Listen, Use coupon code FINAL-BOSS at checkout. For real.
+5467 | VT-59656 | [urls_emails_codes        ] Listen, Use coupon code FINAL-BOSS at checkout. For real.
+5468 | VT-48223 | [urls_emails_codes        ] Listen, Use coupon code FINAL-BOSS at checkout.
+5469 | VT-16355 | [urls_emails_codes        ] Join the room ID 834-555-120 with passcode 'orbit'. Right now.
+5470 | VT-60947 | [urls_emails_codes        ] Hey, The repo lives at github dot com slash acme slash core. If possible.
+5471 | VT-34384 | [urls_emails_codes        ] Hey, The repo lives at github dot com slash acme slash core.—got it.
+5472 | VT-91040 | [urls_emails_codes        ] FYI, Visit https://example.org/docs/getting-started. If possible.
+5473 | VT-52498 | [urls_emails_codes        ] Listen, Text me the OTP when you get it. Right now.
+5474 | VT-21586 | [urls_emails_codes        ] The repo lives at github dot com slash acme slash core.—copy.
+5475 | VT-12141 | [urls_emails_codes        ] Heads up: Paste the invite code: XR7F-29Q4-J1LM. Please.
+5476 | VT-36198 | [urls_emails_codes        ] Reminder: Visit https://example.org/docs/getting-started.—got it.
+5477 | VT-91040 | [urls_emails_codes        ] FYI, Visit https://example.org/docs/getting-started. If possible.
+5478 | VT-35192 | [urls_emails_codes        ] The repo lives at github dot com slash acme slash core.—got it.
+5479 | VT-50940 | [urls_emails_codes        ] Hey, Visit https://example.org/docs/getting-started. Please.
+5480 | VT-53366 | [urls_emails_codes        ] Listen, My handle is @zero_cool_1995. Right now.
+5481 | VT-98022 | [urls_emails_codes        ] Note: The meeting link is in the calendar description. Thanks.
+5482 | VT-15397 | [urls_emails_codes        ] Text me the OTP when you get it.
+5483 | VT-13478 | [urls_emails_codes        ] Okay, Email support at helpdesk@example.com. If possible.
+5484 | VT-38905 | [urls_emails_codes        ] Listen, Use coupon code FINAL-BOSS at checkout. For real.
+5485 | VT-60225 | [urls_emails_codes        ] Reminder: Join the room ID 834-555-120 with passcode 'orbit'. Right now.
+5486 | VT-45578 | [urls_emails_codes        ] Reminder: Paste the invite code: XR7F-29Q4-J1LM.—got it.
+5487 | VT-83562 | [urls_emails_codes        ] Use coupon code FINAL-BOSS at checkout.
+5488 | VT-78926 | [urls_emails_codes        ] Note: Join the room ID 834-555-120 with passcode 'orbit'. Right now.
+5489 | VT-58109 | [urls_emails_codes        ] Listen, My handle is @zero_cool_1995.
+5490 | VT-52810 | [urls_emails_codes        ] Reminder: Join the room ID 834-555-120 with passcode 'orbit'. If possible.
+5491 | VT-41011 | [urls_emails_codes        ] Okay, Paste the invite code: XR7F-29Q4-J1LM. If possible.
+5492 | VT-91008 | [urls_emails_codes        ] Reminder: Email support at helpdesk@example.com.—copy.
+5493 | VT-24903 | [urls_emails_codes        ] Hey, Visit https://example.org/docs/getting-started.—got it.
+5494 | VT-14469 | [urls_emails_codes        ] Heads up: Email support at helpdesk@example.com. If possible.
+5495 | VT-97180 | [urls_emails_codes        ] Text me the OTP when you get it.
+5496 | VT-34384 | [urls_emails_codes        ] Hey, The repo lives at github dot com slash acme slash core.—got it.
+5497 | VT-11904 | [urls_emails_codes        ] The repo lives at github dot com slash acme slash core. Thanks.
+5498 | VT-54933 | [urls_emails_codes        ] Visit https://example.org/docs/getting-started.
+5499 | VT-27730 | [urls_emails_codes        ] Note: Paste the invite code: XR7F-29Q4-J1LM. Right now.
+5500 | VT-31551 | [urls_emails_codes        ] Okay, Join the room ID 834-555-120 with passcode 'orbit'.

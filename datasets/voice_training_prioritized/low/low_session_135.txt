@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 135 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6701 | VT-429893 | [passive_aggressive       ] Quick one: Reminder: Oh, you’re here. How… unexpected.—got it. right now.
+6702 | VT-477202 | [passive_aggressive       ] Real talk, Hey, Oh, you’re here. How… unexpected. thanks. (alt)
+6703 | VT-485722 | [passive_aggressive       ] Real talk, Note: I love how you always do things your way, even when they’re wrong. Right now. please. (alt)
+6704 | VT-405981 | [passive_aggressive       ] Reminder: Hey, Oh, you’re here. How… unexpected.—got it. — got it.
+6705 | VT-497251 | [passive_aggressive       ] Okay, Oh, you’re here. How… unexpected. Right now.. (alt)
+6706 | VT-406147 | [passive_aggressive       ] FYI, Listen, No, really, take your time. It’s not like deadlines matter. if you can. (alt)
+6707 | VT-429877 | [passive_aggressive       ] Heads up: FYI, I love how you always do things your way, even when they’re wrong..
+6708 | VT-410780 | [passive_aggressive       ] FYI, Oh, you’re here. How… unexpected. For real. please.
+6709 | VT-464332 | [passive_aggressive       ] FYI, Note: No, really, take your time. It’s not like deadlines matter.—copy. thanks. (alt)
+6710 | VT-469101 | [passive_aggressive       ] Heads up: Okay, Oh, you’re here. How… unexpected. Please. — now.
+6711 | VT-487406 | [passive_aggressive       ] Quick one: Heads up: No, really, take your time. It’s not like deadlines matter. — now.
+6712 | VT-459530 | [passive_aggressive       ] Note: Okay, I love how you always do things your way, even when they’re wrong. Please. right now. (alt)
+6713 | VT-423961 | [passive_aggressive       ] Okay, Reminder: I love how you always do things your way, even when they’re wrong.—copy. — now. (alt)
+6714 | VT-421896 | [passive_aggressive       ] Reminder: Okay, I love how you always do things your way, even when they’re wrong. Please. — got it.
+6715 | VT-481702 | [passive_aggressive       ] Heads up: FYI, Oh, you’re here. How… unexpected.—got it. — confirm.
+6716 | VT-442382 | [passive_aggressive       ] FYI, I love how you always do things your way, even when they’re wrong.—got it. thanks.
+6717 | VT-459336 | [passive_aggressive       ] Okay, I love how you always do things your way, even when they’re wrong. — got it.
+6718 | VT-440758 | [passive_aggressive       ] Reminder: Note: No, really, take your time. It’s not like deadlines matter.—copy. — got it.
+6719 | VT-452065 | [passive_aggressive       ] I love how you always do things your way, even when they’re wrong. If possible. (alt)
+6720 | VT-484628 | [passive_aggressive       ] Reminder: Listen, I love how you always do things your way, even when they’re wrong.—got it. — got it.
+6721 | VT-495363 | [passive_aggressive       ] Note: Okay, No, really, take your time. It’s not like deadlines matter. Right now. (alt)
+6722 | VT-435600 | [passive_aggressive       ] FYI, Okay, Oh, you’re here. How… unexpected. Right now. — confirm.
+6723 | VT-424711 | [passive_aggressive       ] Listen, Listen, I love how you always do things your way, even when they’re wrong. Thanks. — confirm.
+6724 | VT-451108 | [passive_aggressive       ] Note: No, really, take your time. It’s not like deadlines matter.—got it. right now.
+6725 | VT-434274 | [passive_aggressive       ] Okay, Note: No, really, take your time. It’s not like deadlines matter. Right now. thanks.
+6726 | VT-413131 | [passive_aggressive       ] FYI, Reminder: I love how you always do things your way, even when they’re wrong. right now.
+6727 | VT-407854 | [passive_aggressive       ] Okay, Hey, No, really, take your time. It’s not like deadlines matter. Thanks. please.
+6728 | VT-428205 | [passive_aggressive       ] Real talk, Hey, I love how you always do things your way, even when they’re wrong.—copy. — confirm.
+6729 | VT-452306 | [passive_aggressive       ] Listen, I love how you always do things your way, even when they’re wrong. Right now.
+6730 | VT-462798 | [passive_aggressive       ] Heads up: Hey, Oh, you’re here. How… unexpected..
+6731 | VT-413484 | [passive_aggressive       ] Listen, Heads up: No, really, take your time. It’s not like deadlines matter. If possible. — confirm. (alt)
+6732 | VT-409235 | [passive_aggressive       ] Real talk, Heads up: Oh, you’re here. How… unexpected. Right now. — got it.
+6733 | VT-460889 | [passive_aggressive       ] Reminder: Note: Oh, you’re here. How… unexpected.—copy. — got it.
+6734 | VT-470938 | [passive_aggressive       ] Reminder: No, really, take your time. It’s not like deadlines matter. For real. — got it.
+6735 | VT-455262 | [passive_aggressive       ] Note: No, really, take your time. It’s not like deadlines matter. thanks.
+6736 | VT-488882 | [passive_aggressive       ] Okay, Okay, I love how you always do things your way, even when they’re wrong. Please. please.
+6737 | VT-447805 | [passive_aggressive       ] Heads up: Oh, you’re here. How… unexpected. Right now. — now.
+6738 | VT-445173 | [passive_aggressive       ] Real talk, Okay, Oh, you’re here. How… unexpected. If possible..
+6739 | VT-420775 | [passive_aggressive       ] Listen, Okay, Oh, you’re here. How… unexpected. Right now. if you can.
+6740 | VT-423972 | [passive_aggressive       ] Quick one: No, really, take your time. It’s not like deadlines matter.—copy. right now.
+6741 | VT-446724 | [passive_aggressive       ] FYI, I love how you always do things your way, even when they’re wrong. For real. please. (alt)
+6742 | VT-400306 | [passive_aggressive       ] Quick one: FYI, Oh, you’re here. How… unexpected. — got it.
+6743 | VT-461624 | [passive_aggressive       ] Heads up: Hey, Oh, you’re here. How… unexpected.—copy. if you can.
+6744 | VT-410508 | [passive_aggressive       ] Heads up: Reminder: I love how you always do things your way, even when they’re wrong. please.
+6745 | VT-446524 | [passive_aggressive       ] Listen, Note: Oh, you’re here. How… unexpected. thanks.
+6746 | VT-449829 | [passive_aggressive       ] Heads up: Heads up: I love how you always do things your way, even when they’re wrong. For real. — now.
+6747 | VT-465106 | [passive_aggressive       ] Reminder: Heads up: Oh, you’re here. How… unexpected..
+6748 | VT-425615 | [passive_aggressive       ] Heads up: Oh, you’re here. How… unexpected.—got it. — now.
+6749 | VT-497268 | [paths_cli                ] Listen, Note: Mount the drive at /mnt/data. Right now. thanks.
+6750 | VT-489817 | [paths_cli                ] Heads up: Hey, ping the gateway to verify routing. Please..

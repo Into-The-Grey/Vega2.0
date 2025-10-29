@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 35 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1701 | VT-478054 | [dialect_southern_us      ] Real talk, Okay, Bless your heart, you tried. Right now. (alt)
+1702 | VT-441460 | [dialect_southern_us      ] Quick one: Okay, Y’all ready or what? Right now. thanks.
+1703 | VT-408619 | [dialect_southern_us      ] FYI, Fixing to head out in a minute. Thanks.
+1704 | VT-406765 | [dialect_southern_us      ] Reminder: Reminder: Bless your heart, you tried.—got it. — got it.
+1705 | VT-400502 | [dialect_southern_us      ] Note: Note: I’m busier than a one‑armed paperhanger. For real..
+1706 | VT-478100 | [dialect_southern_us      ] FYI, Couldn’t pour water out of a boot with instructions on the heel.—copy. — confirm.
+1707 | VT-407732 | [dialect_southern_us      ] Quick one: Listen, That ain’t it, chief. Thanks. thanks. (alt)
+1708 | VT-416877 | [dialect_southern_us      ] Note: Hey, Might could get that done by supper. If possible. please.
+1709 | VT-492037 | [dialect_southern_us      ] Okay, Heads up: That dog won’t hunt.
+1710 | VT-427506 | [dialect_southern_us      ] Heads up: Reminder: Bless your heart, you tried. Thanks. right now.
+1711 | VT-411827 | [dialect_southern_us      ] FYI, Reminder: Y’all ready or what? thanks.
+1712 | VT-483243 | [dialect_southern_us      ] Real talk, Might could get that done by supper. Please. if you can.
+1713 | VT-476205 | [dialect_southern_us      ] Note: Heads up: Fixing to head out in a minute. Thanks. — got it.
+1714 | VT-494329 | [dialect_southern_us      ] Listen, Bless your heart, you tried. — got it.
+1715 | VT-428578 | [dialect_southern_us      ] FYI, Couldn’t pour water out of a boot with instructions on the heel.—copy. right now.
+1716 | VT-479728 | [dialect_southern_us      ] FYI, Couldn’t pour water out of a boot with instructions on the heel. Right now. — confirm.
+1717 | VT-467275 | [dialect_southern_us      ] Reminder: FYI, Couldn’t pour water out of a boot with instructions on the heel.—got it. — now.
+1718 | VT-402114 | [dialect_southern_us      ] FYI, FYI, Might could get that done by supper. For real.
+1719 | VT-422208 | [dialect_southern_us      ] Real talk, Okay, Y’all ready or what? Right now. if you can. (alt)
+1720 | VT-464731 | [dialect_southern_us      ] Y’all ready or what? Right now. please.
+1721 | VT-458335 | [dialect_southern_us      ] Heads up: Couldn’t pour water out of a boot with instructions on the heel.—got it. — now.
+1722 | VT-419851 | [dialect_southern_us      ] Listen, Listen, Bless your heart, you tried. For real. if you can.
+1723 | VT-414811 | [dialect_southern_us      ] Note: Hotter than blue blazes today.—copy. thanks.
+1724 | VT-438410 | [dialect_southern_us      ] Listen, Listen, Hotter than blue blazes today.—got it..
+1725 | VT-485530 | [dialect_southern_us      ] Listen, Listen, Hotter than blue blazes today. Right now. (alt)
+1726 | VT-415580 | [dialect_southern_us      ] FYI, Reminder: Might could get that done by supper. For real. — got it.
+1727 | VT-481139 | [dialect_southern_us      ] Okay, Note: I’m busier than a one‑armed paperhanger. Thanks. please.
+1728 | VT-473073 | [dialect_southern_us      ] Quick one: Okay, I’m busier than a one‑armed paperhanger. — now. (alt)
+1729 | VT-437001 | [dialect_southern_us      ] Note: Note: Y’all ready or what? For real. right now.
+1730 | VT-438139 | [dialect_southern_us      ] Note: Couldn’t pour water out of a boot with instructions on the heel. For real. — got it.
+1731 | VT-477635 | [dialect_southern_us      ] Reminder: I’m busier than a one‑armed paperhanger. Please. thanks. (alt)
+1732 | VT-437272 | [dialect_southern_us      ] Real talk, Listen, That dog won’t hunt. Please..
+1733 | VT-447843 | [dialect_southern_us      ] Okay, Reminder: Y’all ready or what? thanks.
+1734 | VT-417430 | [dialect_southern_us      ] Note: Y’all ready or what? For real. — now.
+1735 | VT-498886 | [dialect_southern_us      ] Okay, I’m busier than a one‑armed paperhanger.—copy. — got it.
+1736 | VT-498527 | [dialect_southern_us      ] Reminder: Okay, Y’all ready or what? Right now. — now. (alt)
+1737 | VT-479565 | [dialect_southern_us      ] Reminder: Listen, Fixing to head out in a minute. Please. — got it.
+1738 | VT-451713 | [dialect_southern_us      ] Heads up: Okay, That ain’t it, chief. if you can. (alt)
+1739 | VT-459762 | [dialect_southern_us      ] Listen, Note: Couldn’t pour water out of a boot with instructions on the heel. Thanks..
+1740 | VT-424840 | [dialect_southern_us      ] FYI, Note: Bless your heart, you tried. Please.. (alt)
+1741 | VT-416901 | [dialect_southern_us      ] Reminder: Note: Hotter than blue blazes today.—copy. right now. (alt)
+1742 | VT-400741 | [dialect_southern_us      ] FYI, Might could get that done by supper. Please. — now. (alt)
+1743 | VT-477431 | [dialect_southern_us      ] Real talk, Okay, That dog won’t hunt. Please.. (alt)
+1744 | VT-434703 | [dialect_southern_us      ] Okay, Hotter than blue blazes today..
+1745 | VT-413783 | [dialect_southern_us      ] Heads up: FYI, Might could get that done by supper. Thanks. — got it. (alt)
+1746 | VT-481316 | [dystopian                ] The drones monitor your heartbeat. Don’t run. Right now. — now.
+1747 | VT-486113 | [dystopian                ] Reminder: Okay, We stopped dreaming when the sky turned red. Right now. please.
+1748 | VT-483442 | [dystopian                ] Listen, Okay, We stopped dreaming when the sky turned red. — confirm. (alt)
+1749 | VT-488208 | [dystopian                ] Reminder: Hey, We stopped dreaming when the sky turned red. If possible. — confirm.
+1750 | VT-433430 | [dystopian                ] FYI, FYI, Hope is a virus they haven’t managed to eliminate yet. Please. right now.

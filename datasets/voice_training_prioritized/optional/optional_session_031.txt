@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 31 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1501 | VT-0442 | [tongue_twister           ] Tiny turntables tiptoe ttightly.
+1502 | VT-83466 | [tongue_twister           ] Rowdy robots rumble rrightly. Thanks.
+1503 | VT-0427 | [tongue_twister           ] Rattling robots rumble rrightly.
+1504 | VT-0426 | [tongue_twister           ] Rusty rackets rattle rrightly.
+1505 | VT-61968 | [tongue_twister           ] Listen, Buzzing brooms bicker bbightly. If possible.
+1506 | VT-0434 | [tongue_twister           ] Snappy snails scuttle ssightly.
+1507 | VT-35602 | [tongue_twister           ] Note: Greedy goblets gobble ggightly. Right now.
+1508 | VT-82510 | [tongue_twister           ] Whistling wolves wiggle wwightly. Right now.
+1509 | VT-0398 | [tongue_twister           ] Lively lanterns lilt llightly.
+1510 | VT-0414 | [tongue_twister           ] Peppy pennies patter ppightly.
+1511 | VT-28215 | [tongue_twister           ] Heads up: Giddy guitars glide ggightly. For real.
+1512 | VT-0408 | [tongue_twister           ] Mellow magnets march mmightly.
+1513 | VT-76752 | [tongue_twister           ] A proper copper coffee pot. For real.
+1514 | VT-0461 | [tongue_twister           ] Brave Blake bakes black bread before breakfast.
+1515 | VT-0437 | [tongue_twister           ] Tangled tigers titter ttightly.
+1516 | VT-0423 | [tongue_twister           ] Rattling rabbits rattle rrightly.
+1517 | VT-0461 | [tongue_twister           ] Brave Blake bakes black bread before breakfast.
+1518 | VT-37979 | [tongue_twister           ] Listen, Prickly parrots peck ppightly.—got it.
+1519 | VT-30072 | [tongue_twister           ] Heads up: Dizzy dominoes dodge ddightly. For real.
+1520 | VT-0354 | [tongue_twister           ] Sixth sick sheik’s sixth sheep’s sick.
+1521 | VT-0385 | [tongue_twister           ] Fervent figs flutter ffightly.
+1522 | VT-0435 | [tongue_twister           ] Sandy suitcases scuttle ssightly.
+1523 | VT-0426 | [tongue_twister           ] Rusty rackets rattle rrightly.
+1524 | VT-0353 | [tongue_twister           ] Six sleek swans swam swiftly southwards.
+1525 | VT-57255 | [tongue_twister           ] Greta’s green grapes grew grossly gigantic. Please.
+1526 | VT-87456 | [tongue_twister           ] Hey, How can a clam cram in a clean cream can?—got it.
+1527 | VT-0447 | [tongue_twister           ] Whistling wolves wiggle wwightly.
+1528 | VT-37490 | [tongue_twister           ] FYI, Tidy tools tiptoe ttightly. If possible.
+1529 | VT-0404 | [tongue_twister           ] Lively lanterns lurch llightly.
+1530 | VT-0401 | [tongue_twister           ] Lanky lanterns linger llightly.
+1531 | VT-0465 | [tongue_twister           ] Shy sharks shyly shift shallows at sunrise.
+1532 | VT-0396 | [tongue_twister           ] Greedy goblets gallop ggightly.
+1533 | VT-69663 | [tongue_twister           ] Heads up: Tangled tickets tiptoe ttightly. If possible.
+1534 | VT-77368 | [tongue_twister           ] Hey, Gleaming guitars glide ggightly. Thanks.
+1535 | VT-0432 | [tongue_twister           ] Silly suitcases scuttle ssightly.
+1536 | VT-95949 | [tongue_twister           ] Hey, Crisp cables cram ccightly. Please.
+1537 | VT-77368 | [tongue_twister           ] Hey, Gleaming guitars glide ggightly. Thanks.
+1538 | VT-72643 | [tongue_twister           ] Heads up: Sandy suitcases scuttle ssightly. If possible.
+1539 | VT-72643 | [tongue_twister           ] Heads up: Sandy suitcases scuttle ssightly. If possible.
+1540 | VT-0382 | [tongue_twister           ] Fuzzy flutes flutter ffightly.
+1541 | VT-0447 | [tongue_twister           ] Whistling wolves wiggle wwightly.
+1542 | VT-15919 | [tongue_twister           ] Listen, Bouncy brooms bicker bbightly. Thanks.
+1543 | VT-0440 | [tongue_twister           ] Tangled turntables tumble ttightly.
+1544 | VT-0362 | [tongue_twister           ] Bouncy brooms bicker bbightly.
+1545 | VT-30072 | [tongue_twister           ] Heads up: Dizzy dominoes dodge ddightly. For real.
+1546 | VT-0382 | [tongue_twister           ] Fuzzy flutes flutter ffightly.
+1547 | VT-0385 | [tongue_twister           ] Fervent figs flutter ffightly.
+1548 | VT-51866 | [tongue_twister           ] Note: Fuzzy ferrets fizz ffightly. Thanks.
+1549 | VT-0374 | [tongue_twister           ] Dusty dominoes dangle ddightly.
+1550 | VT-0412 | [tongue_twister           ] Prickly puddles pounce ppightly.

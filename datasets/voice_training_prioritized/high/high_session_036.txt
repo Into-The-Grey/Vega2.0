@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 36 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1751 | VT-468281 | [hesitations_fillers      ] Okay, Okay, Wait—uh—did you hear that? Please. if you can.
+1752 | VT-499054 | [hesitations_fillers      ] Okay, Okay, Wait—uh—did you hear that? If possible. right now.
+1753 | VT-480133 | [hesitations_fillers      ] Note: FYI, Right… so… moving on. Right now. if you can.
+1754 | VT-412441 | [hesitations_fillers      ] Reminder: Note: Uh… hang on… what was I saying? Right now.
+1755 | VT-479931 | [hesitations_fillers      ] Heads up: Reminder: Uh… hang on… what was I saying? Thanks. thanks. (alt)
+1756 | VT-426014 | [hesitations_fillers      ] Note: Listen, Wait—uh—did you hear that? Right now..
+1757 | VT-487401 | [hesitations_fillers      ] FYI, Reminder: Well, I mean, like, kind of, yeah.—copy. thanks.
+1758 | VT-490710 | [hesitations_fillers      ] Listen, Okay, Okay, okay, okay—listen. Right now. please.
+1759 | VT-488015 | [hesitations_fillers      ] FYI, Okay, Okay, okay, okay—listen. For real. right now.
+1760 | VT-400496 | [hesitations_fillers      ] Heads up: FYI, Okay, okay, okay—listen. Thanks. please.
+1761 | VT-489811 | [hesitations_fillers      ] Reminder: Reminder: Right… so… moving on. please. (alt)
+1762 | VT-456453 | [hesitations_fillers      ] Heads up: I… I don’t know if that’ll fly. For real. — confirm.
+1763 | VT-417162 | [hesitations_fillers      ] Listen, Hey, I… I don’t know if that’ll fly. Right now. — confirm. (alt)
+1764 | VT-448207 | [hesitations_fillers      ] Heads up: Heads up: Uh… hang on… what was I saying? Please..
+1765 | VT-466798 | [hesitations_fillers      ] Note: FYI, Wait—uh—did you hear that? If possible..
+1766 | VT-430841 | [hesitations_fillers      ] Quick one: FYI, I… I don’t know if that’ll fly.—got it. — now. (alt)
+1767 | VT-448363 | [hesitations_fillers      ] Heads up: Hey, So—yeah—about that plan… Please. thanks. (alt)
+1768 | VT-405350 | [hesitations_fillers      ] Reminder: Note: Uh… hang on… what was I saying? Right now. thanks.
+1769 | VT-425962 | [hesitations_fillers      ] Reminder: Heads up: Uh… hang on… what was I saying? Please.
+1770 | VT-481760 | [hesitations_fillers      ] Heads up: Note: I… I don’t know if that’ll fly.—copy. if you can.
+1771 | VT-447305 | [hesitations_fillers      ] Note: Uh… hang on… what was I saying? Right now. — now. (alt)
+1772 | VT-417902 | [hesitations_fillers      ] Note: Heads up: Hmm, not exactly, but close.—got it. please.
+1773 | VT-468907 | [hesitations_fillers      ] Real talk, Hey, Mmm, nope, that’s not it. Right now. thanks.
+1774 | VT-409492 | [hesitations_fillers      ] Quick one: Wait—uh—did you hear that? For real. — got it. (alt)
+1775 | VT-428844 | [hesitations_fillers      ] Quick one: Note: Well, I mean, like, kind of, yeah. — got it.
+1776 | VT-422647 | [hesitations_fillers      ] Okay, Okay, okay, okay—listen. Right now. — confirm.
+1777 | VT-480870 | [hesitations_fillers      ] Heads up: Okay, Right… so… moving on. Thanks. please. (alt)
+1778 | VT-438778 | [hesitations_fillers      ] Okay, So—yeah—about that plan… Right now. — now.
+1779 | VT-430412 | [hesitations_fillers      ] Listen, Okay, okay, okay—listen. — got it.
+1780 | VT-407046 | [hesitations_fillers      ] Quick one: Note: Right… so… moving on. Right now. if you can. (alt)
+1781 | VT-476073 | [interjection             ] Real talk, Heads up: Sorta. Right now. thanks.
+1782 | VT-471901 | [interjection             ] Quick one: FYI, Got it. If possible..
+1783 | VT-436003 | [interjection             ] Quick one: Listen, Uh-huh. right now.
+1784 | VT-419434 | [interjection             ] Quick one: Understood. right now.
+1785 | VT-424563 | [interjection             ] Okay, Hey, Kinda. Right now. — got it. (alt)
+1786 | VT-409736 | [interjection             ] Note: Heads up: Sorta. Right now. thanks.
+1787 | VT-464576 | [interjection             ] Reminder: FYI, Exactly.—copy. if you can.
+1788 | VT-486417 | [interjection             ] Okay, Understood.—got it. if you can. (alt)
+1789 | VT-418903 | [interjection             ] Heads up: Copy that. For real. please.
+1790 | VT-434125 | [interjection             ] Okay, FYI, Affirmative. If possible. — now.
+1791 | VT-405954 | [interjection             ] Quick one: Note: Got it. If possible. — now. (alt)
+1792 | VT-469080 | [interjection             ] Heads up: Hey, Roger. For real. — now.
+1793 | VT-433873 | [interjection             ] Heads up: Note: Kinda.—got it. please.
+1794 | VT-406539 | [interjection             ] Heads up: Listen, Negative. Right now. — now.
+1795 | VT-488933 | [interjection             ] FYI, FYI, Maybe. If possible. — now.
+1796 | VT-435809 | [interjection             ] Listen, Note: Uh-huh. Right now. please.
+1797 | VT-469148 | [interjection             ] Listen, Copy that. For real. if you can.
+1798 | VT-415337 | [interjection             ] Quick one: Yep. If possible. — now.
+1799 | VT-483747 | [interjection             ] Quick one: Reminder: Yep.—copy. please. (alt)
+1800 | VT-410681 | [interjection             ] Quick one: Hey, Mm-hmm.—copy. if you can. (alt)

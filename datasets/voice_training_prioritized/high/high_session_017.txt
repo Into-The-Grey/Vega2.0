@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 17 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0801 | VT-54784 | [interrogative            ] Reminder: Why does it always rain when I'm unprepared? Please.
+0802 | VT-79180 | [interrogative            ] Note: Why does it always rain when I'm unprepared?—copy.
+0803 | VT-57435 | [interrogative            ] Do you even hear yourself right now?
+0804 | VT-30606 | [interrogative            ] FYI, Why does it always rain when I'm unprepared? If possible.
+0805 | VT-22829 | [interrogative            ] Heads up: Do you even hear yourself right now?
+0806 | VT-53716 | [interrogative            ] Heads up: Do you even hear yourself right now? For real.
+0807 | VT-82915 | [interrogative            ] Is this really what you want? For real.
+0808 | VT-78212 | [interrogative            ] Okay, Why does it always rain when I'm unprepared? If possible.
+0809 | VT-66982 | [interrogative            ] Is this really what you want? Thanks.
+0810 | VT-59078 | [interrogative            ] Note: Is this really what you want? If possible.
+0811 | VT-57007 | [interrogative            ] Okay, Why does it always rain when I'm unprepared? Right now.
+0812 | VT-36561 | [interrogative            ] Listen, Why does it always rain when I'm unprepared?—copy.
+0813 | VT-69067 | [interrogative            ] Reminder: Do you even hear yourself right now? Please.
+0814 | VT-66982 | [interrogative            ] Is this really what you want? Thanks.
+0815 | VT-57517 | [interrogative            ] Listen, Is this really what you want?—got it.
+0816 | VT-74655 | [interrogative            ] Reminder: Is this really what you want?—copy.
+0817 | VT-58455 | [interrogative            ] Heads up: Why does it always rain when I'm unprepared?—copy.
+0818 | VT-72175 | [interrogative            ] Do you even hear yourself right now? Right now.
+0819 | VT-19901 | [interrogative            ] FYI, Is this really what you want? For real.
+0820 | VT-63316 | [interrogative            ] Note: Is this really what you want?—got it.
+0821 | VT-57435 | [interrogative            ] Do you even hear yourself right now?
+0822 | VT-88510 | [interrogative            ] Heads up: Is this really what you want? Thanks.
+0823 | VT-89741 | [interrogative            ] Hey, Do you even hear yourself right now? For real.
+0824 | VT-13833 | [interrogative            ] Is this really what you want? If possible.
+0825 | VT-54951 | [interrogative            ] Okay, Is this really what you want? For real.
+0826 | VT-70454 | [interrogative            ] FYI, Do you even hear yourself right now?
+0827 | VT-12852 | [interrogative            ] Okay, Why does it always rain when I'm unprepared? If possible.
+0828 | VT-19377 | [interrogative            ] Okay, Is this really what you want?—copy.
+0829 | VT-82978 | [interrogative            ] Listen, Do you even hear yourself right now? Right now.
+0830 | VT-94298 | [interrogative            ] FYI, Is this really what you want?
+0831 | VT-36491 | [interrogative            ] Listen, Why does it always rain when I'm unprepared? For real.
+0832 | VT-46238 | [interrogative            ] Okay, Do you even hear yourself right now? Right now.
+0833 | VT-78212 | [interrogative            ] Okay, Why does it always rain when I'm unprepared? If possible.
+0834 | VT-99703 | [interrogative            ] Listen, Do you even hear yourself right now? Right now.
+0835 | VT-19633 | [interrogative            ] Hey, Is this really what you want? Right now.
+0836 | VT-60141 | [interrogative            ] Note: Do you even hear yourself right now? Thanks.
+0837 | VT-77398 | [interrogative            ] Heads up: Do you even hear yourself right now? If possible.
+0838 | VT-58744 | [interrogative            ] Do you even hear yourself right now? Thanks.
+0839 | VT-63316 | [interrogative            ] Note: Is this really what you want?—got it.
+0840 | VT-49366 | [interrogative            ] Do you even hear yourself right now?
+0841 | VT-43821 | [interrogative            ] Hey, Do you even hear yourself right now?—copy.
+0842 | VT-34655 | [interrogative            ] Okay, Is this really what you want? Please.
+0843 | VT-11436 | [interrogative            ] Listen, Why does it always rain when I'm unprepared?—got it.
+0844 | VT-65355 | [interrogative            ] Okay, Why does it always rain when I'm unprepared? Please.
+0845 | VT-34655 | [interrogative            ] Okay, Is this really what you want? Please.
+0846 | VT-61532 | [interrogative            ] Listen, Do you even hear yourself right now?
+0847 | VT-19264 | [interrogative            ] Reminder: Do you even hear yourself right now? Right now.
+0848 | VT-74124 | [interrogative            ] Reminder: Is this really what you want? Thanks.
+0849 | VT-89741 | [interrogative            ] Hey, Do you even hear yourself right now? For real.
+0850 | VT-19566 | [interrogative            ] Hey, Do you even hear yourself right now? Right now.

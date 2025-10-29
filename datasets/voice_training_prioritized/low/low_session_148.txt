@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 148 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7351 | VT-421002 | [weather_colorful         ] Quick one: Okay, It’s nice. Suspiciously nice.—copy.. (alt)
+7352 | VT-434909 | [weather_colorful         ] Note: Okay, It’s a dry heat, said every liar ever. If possible. — got it.
+7353 | VT-483798 | [weather_colorful         ] Note: FYI, Humidity’s like soup—thick and gross. For real. — now. (alt)
+7354 | VT-439690 | [weather_colorful         ] Note: Reminder: Cold enough to bully your bones. — got it.
+7355 | VT-402411 | [weather_colorful         ] FYI, Listen, Sky’s angry; thunder’s got opinions. Please. please.
+7356 | VT-458996 | [weather_colorful         ] Listen, Okay, It’s wet as hell outside—bring a jacket. For real. — confirm.
+7357 | VT-447159 | [weather_colorful         ] Real talk, Hey, It’s a dry heat, said every liar ever. If possible. right now.
+7358 | VT-473296 | [weather_colorful         ] Quick one: Heads up: Sky’s angry; thunder’s got opinions.—copy. if you can.
+7359 | VT-420100 | [weather_colorful         ] FYI, Humidity’s like soup—thick and gross. Right now. — got it.
+7360 | VT-498227 | [weather_colorful         ] Reminder: Reminder: Sun’s cooking the asphalt medium-rare. Thanks. — confirm.
+7361 | VT-406698 | [weather_colorful         ] Real talk, Okay, Cold enough to bully your bones. please.
+7362 | VT-455192 | [weather_colorful         ] Real talk, Hey, It’s nice. Suspiciously nice.—copy. (alt)
+7363 | VT-459037 | [weather_colorful         ] Reminder: Listen, Rain so hard it’s pressure-washing my soul. — got it.
+7364 | VT-421650 | [weather_colorful         ] Okay, Heads up: Sky’s angry; thunder’s got opinions. If possible..
+7365 | VT-460399 | [weather_colorful         ] Note: Reminder: It’s wet as hell outside—bring a jacket. For real. please.
+7366 | VT-403834 | [weather_colorful         ] Quick one: It’s nice. Suspiciously nice.—copy..
+7367 | VT-464768 | [weather_colorful         ] Heads up: Okay, It’s a dry heat, said every liar ever. — now. (alt)
+7368 | VT-470831 | [weather_colorful         ] Okay, Sky’s angry; thunder’s got opinions. — got it. (alt)
+7369 | VT-446617 | [weather_colorful         ] Real talk, Reminder: Sun’s cooking the asphalt medium-rare. Thanks. if you can. (alt)
+7370 | VT-499789 | [weather_colorful         ] Okay, Listen, Sun’s cooking the asphalt medium-rare. For real. thanks.
+7371 | VT-426020 | [weather_colorful         ] FYI, Sun’s cooking the asphalt medium-rare. Right now.
+7372 | VT-457017 | [weather_colorful         ] FYI, It’s nice. Suspiciously nice. Please..
+7373 | VT-447896 | [weather_colorful         ] Okay, Okay, It’s wet as hell outside—bring a jacket. For real.
+7374 | VT-486051 | [weather_colorful         ] Quick one: Listen, It’s wet as hell outside—bring a jacket. If possible. — confirm. (alt)
+7375 | VT-480982 | [weather_colorful         ] FYI, Note: Sun’s cooking the asphalt medium-rare. For real..
+7376 | VT-473738 | [weather_colorful         ] Heads up: Note: Sky’s angry; thunder’s got opinions. If possible. — got it.
+7377 | VT-454746 | [weather_colorful         ] Note: Heads up: Fog so dense it feels like stealth mode. For real. — got it.
+7378 | VT-417436 | [weather_colorful         ] Reminder: Listen, Fog so dense it feels like stealth mode. For real. right now.
+7379 | VT-440895 | [weather_colorful         ] Note: Okay, Fog so dense it feels like stealth mode.—copy..
+7380 | VT-476713 | [weather_colorful         ] Listen, Reminder: It’s nice. Suspiciously nice. Right now. if you can.
+7381 | VT-437558 | [weather_colorful         ] Quick one: FYI, Humidity’s like soup—thick and gross. For real. right now. (alt)
+7382 | VT-464252 | [weather_colorful         ] Heads up: Humidity’s like soup—thick and gross.—copy.. (alt)
+7383 | VT-434023 | [weather_colorful         ] Listen, It’s wet as hell outside—bring a jacket. — got it.
+7384 | VT-465369 | [weather_colorful         ] Note: Sun’s cooking the asphalt medium-rare. For real. — now.
+7385 | VT-439546 | [weather_colorful         ] Quick one: Heads up: Humidity’s like soup—thick and gross. For real. right now.
+7386 | VT-427805 | [weather_colorful         ] Reminder: Okay, Rain so hard it’s pressure-washing my soul.—got it. right now.
+7387 | VT-420647 | [weather_colorful         ] Heads up: Reminder: It’s wet as hell outside—bring a jacket. For real.. (alt)
+7388 | VT-480604 | [weather_colorful         ] FYI, It’s wet as hell outside—bring a jacket. — now. (alt)
+7389 | VT-477718 | [weather_colorful         ] Okay, FYI, Humidity’s like soup—thick and gross. For real. — confirm.
+7390 | VT-408861 | [weather_colorful         ] FYI, Okay, It’s wet as hell outside—bring a jacket. For real. — got it.
+7391 | VT-444961 | [weather_colorful         ] Real talk, Listen, It’s a dry heat, said every liar ever. Thanks.. (alt)
+7392 | VT-437948 | [weather_colorful         ] Cold enough to bully your bones. Right now..
+7393 | VT-424098 | [weather_colorful         ] Okay, Heads up: Sun’s cooking the asphalt medium-rare. For real. right now.
+7394 | VT-477495 | [weather_colorful         ] Reminder: Listen, Sky’s angry; thunder’s got opinions. if you can.
+7395 | VT-449149 | [weather_colorful         ] Quick one: Heads up: Fog so dense it feels like stealth mode. For real. right now.
+7396 | VT-484299 | [weather_colorful         ] Note: Heads up: It’s nice. Suspiciously nice. Right now.. (alt)
+7397 | VT-423687 | [weather_colorful         ] Reminder: Reminder: Rain so hard it’s pressure-washing my soul.—copy. thanks.
+7398 | VT-410764 | [weather_colorful         ] Quick one: Fog so dense it feels like stealth mode..
+7399 | VT-474326 | [weather_colorful         ] Hey, It’s nice. Suspiciously nice. If possible. if you can.
+7400 | VT-646211 | [addresses_generic        ] FYI, Heads up: Unit B, second floor, back entrance. For real. — confirm.

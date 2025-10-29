@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 154 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7651 | VT-568450 | [dramatic                 ] Real talk, Listen, I would burn the world to keep you warm. If possible. — now.
+7652 | VT-683157 | [emoji                    ] FYI, FYI, Weather’s perfect for a walk 🌤️. thanks.
+7653 | VT-677768 | [emoji                    ] Quick one: FYI, Let’s clean up those docs 🧹. Right now. — got it.
+7654 | VT-541215 | [emoji                    ] Quick one: Reminder: Weather’s perfect for a walk 🌤️. Right now. (alt)
+7655 | VT-511366 | [emoji                    ] FYI, Note: Deep breaths. You got this. 💪 thanks. (alt)
+7656 | VT-565239 | [emoji                    ] Reminder: Mic check, one, two… 🎤 if you can.
+7657 | VT-506599 | [emoji                    ] Okay, FYI, Coffee first, then code ☕️💻. If possible. right now.
+7658 | VT-699325 | [emoji                    ] Quick one: Reminder: New high score! 🕹️ If possible. — got it. (alt)
+7659 | VT-551607 | [emoji                    ] Note: FYI, Weather’s perfect for a walk 🌤️.
+7660 | VT-524438 | [emoji                    ] Note: Coffee first, then code ☕️💻.—got it..
+7661 | VT-684599 | [emoji                    ] Quick one: Hey, Deep breaths. You got this. 💪 Please. — got it.
+7662 | VT-631436 | [emoji                    ] Quick one: Okay, We shipped it! 🎉 Please. — confirm.
+7663 | VT-508500 | [emoji                    ] Reminder: Hey, Mic check, one, two… 🎤—got it. thanks. (alt)
+7664 | VT-580618 | [emoji                    ] Let’s clean up those docs 🧹. Right now. — got it. (alt)
+7665 | VT-612079 | [emoji                    ] Real talk, Listen, Ugh, my laptop froze again 😑.—copy. please.
+7666 | VT-677716 | [emoji                    ] Okay, Listen, Coffee first, then code ☕️💻. right now.
+7667 | VT-529100 | [emoji                    ] Reminder: Okay, New high score! 🕹️ Thanks. — now.
+7668 | VT-543297 | [emoji                    ] Listen, Hey, Let’s clean up those docs 🧹.—got it. — confirm.
+7669 | VT-546629 | [emoji                    ] Note: Okay, Weather’s perfect for a walk 🌤️.—copy. thanks.
+7670 | VT-505084 | [emoji                    ] Coffee first, then code ☕️💻..
+7671 | VT-672167 | [emoji                    ] Okay, Okay, We shipped it! 🎉 Please. — got it.
+7672 | VT-579148 | [emoji                    ] FYI, Okay, We shipped it! 🎉 If possible. please.
+7673 | VT-647301 | [emoji                    ] Okay, Hey, We shipped it! 🎉 Right now. — got it. (alt)
+7674 | VT-526300 | [emoji                    ] FYI, Note: Let’s clean up those docs 🧹.—copy. — now.
+7675 | VT-618833 | [emoji                    ] Reminder: Reminder: New high score! 🕹️ If possible. — got it.
+7676 | VT-654188 | [emoji                    ] Okay, Heads up: New high score! 🕹️—got it. (alt)
+7677 | VT-652145 | [emoji                    ] Listen, Note: We shipped it! 🎉 For real. — got it.
+7678 | VT-670340 | [emoji                    ] Heads up: Reminder: Coffee first, then code ☕️💻. Right now. — now. (alt)
+7679 | VT-601029 | [emoji                    ] Quick one: Reminder: Running late—be there soon 🚗💨. If possible. — got it.
+7680 | VT-501099 | [emoji                    ] Okay, Running late—be there soon 🚗💨.—copy. — confirm.
+7681 | VT-687065 | [emoji                    ] Note: Running late—be there soon 🚗💨. Thanks. if you can.
+7682 | VT-628101 | [emoji                    ] Note: Listen, Let’s clean up those docs 🧹.—got it. — now.
+7683 | VT-569660 | [emoji                    ] Real talk, Note: Deep breaths. You got this. 💪 right now.
+7684 | VT-689677 | [emoji                    ] Listen, Okay, Deep breaths. You got this. 💪 Please. — now.
+7685 | VT-650998 | [emoji                    ] Listen, Listen, New high score! 🕹️ Please. — got it.
+7686 | VT-556152 | [emoji                    ] Heads up: Listen, We shipped it! 🎉 If possible..
+7687 | VT-607499 | [emoji                    ] Okay, Deep breaths. You got this. 💪—copy..
+7688 | VT-675554 | [emoji                    ] Heads up: Hey, Ugh, my laptop froze again 😑.—got it. — got it.
+7689 | VT-622016 | [emoji                    ] Listen, Okay, New high score! 🕹️ Thanks. please. (alt)
+7690 | VT-622213 | [emoji                    ] Real talk, Listen, New high score! 🕹️ Please. — now.
+7691 | VT-549493 | [emoji                    ] Listen, Okay, Deep breaths. You got this. 💪 Please..
+7692 | VT-651026 | [emoji                    ] Heads up: Reminder: New high score! 🕹️ If possible. right now. (alt)
+7693 | VT-623303 | [emoji                    ] FYI, Listen, Weather’s perfect for a walk 🌤️.
+7694 | VT-577593 | [emoji                    ] Real talk, Hey, Mic check, one, two… 🎤 Please. please.
+7695 | VT-568091 | [emoji                    ] Note: Heads up: We shipped it! 🎉 If possible. — now.
+7696 | VT-645573 | [emoji                    ] Reminder: Heads up: Coffee first, then code ☕️💻. right now.
+7697 | VT-605602 | [emoji                    ] Listen, Reminder: Running late—be there soon 🚗💨. If possible. please.
+7698 | VT-526618 | [emoji                    ] FYI, Let’s clean up those docs 🧹.—got it. please.
+7699 | VT-564563 | [emoji                    ] Real talk, FYI, Ugh, my laptop froze again 😑. Thanks. right now. (alt)
+7700 | VT-544673 | [emoji                    ] Heads up: Running late—be there soon 🚗💨. if you can.

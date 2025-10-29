@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 21 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1001 | VT-94349 | [interjection             ] Listen, Uh-huh.
+1002 | VT-0110 | [interjection             ] Understood.
+1003 | VT-71594 | [interjection             ] Listen, Cool.
+1004 | VT-44866 | [interjection             ] Hey, Kinda. Right now.
+1005 | VT-27335 | [interjection             ] Mm-hmm. Right now.
+1006 | VT-49474 | [interjection             ] Heads up: Sorta. Right now.
+1007 | VT-37456 | [interjection             ] FYI, Exactly.—copy.
+1008 | VT-26871 | [interjection             ] Understood.—got it.
+1009 | VT-67107 | [interjection             ] Copy that. For real.
+1010 | VT-19760 | [interjection             ] Note: Got it. If possible.
+1011 | VT-30405 | [interjection             ] Hey, Roger. For real.
+1012 | VT-51400 | [interjection             ] Note: Kinda.—got it.
+1013 | VT-97576 | [interjection             ] Listen, Negative. Right now.
+1014 | VT-73185 | [interjection             ] FYI, Maybe. If possible.
+1015 | VT-45645 | [interjection             ] Note: Uh-huh. Right now.
+1016 | VT-0100 | [interjection             ] Exactly.
+1017 | VT-67107 | [interjection             ] Copy that. For real.
+1018 | VT-98403 | [interjection             ] Yep. If possible.
+1019 | VT-48413 | [interjection             ] Reminder: Yep.—copy.
+1020 | VT-98705 | [interjection             ] Maybe. Thanks.
+1021 | VT-27335 | [interjection             ] Mm-hmm. Right now.
+1022 | VT-76510 | [interjection             ] Hey, Mm-hmm.—copy.
+1023 | VT-43851 | [interjection             ] Reminder: Yep.
+1024 | VT-26762 | [interjection             ] Exactly. For real.
+1025 | VT-43787 | [interjection             ] Reminder: Right. For real.
+1026 | VT-14511 | [interjection             ] Listen, Right. If possible.
+1027 | VT-26265 | [interjection             ] Okay, Yup.—got it.
+1028 | VT-12092 | [interjection             ] Note: Maybe. Right now.
+1029 | VT-0110 | [interjection             ] Understood.
+1030 | VT-72776 | [interjection             ] Heads up: Negative. Please.
+1031 | VT-64892 | [interjection             ] Reminder: Copy that.
+1032 | VT-74172 | [interjection             ] Listen, Roger. Please.
+1033 | VT-97576 | [interjection             ] Listen, Negative. Right now.
+1034 | VT-72776 | [interjection             ] Heads up: Negative. Please.
+1035 | VT-95101 | [interjection             ] Reminder: Understood.—copy.
+1036 | VT-27335 | [interjection             ] Mm-hmm. Right now.
+1037 | VT-36211 | [interjection             ] Uh-huh.—copy.
+1038 | VT-22095 | [interjection             ] Heads up: Cool. Thanks.
+1039 | VT-0104 | [interjection             ] Yep.
+1040 | VT-87965 | [interjection             ] Kinda.—got it.
+1041 | VT-43787 | [interjection             ] Reminder: Right. For real.
+1042 | VT-71758 | [interjection             ] Reminder: Got it. Right now.
+1043 | VT-0103 | [interjection             ] Nah.
+1044 | VT-0099 | [interjection             ] Right.
+1045 | VT-34318 | [interjection             ] Note: Maybe.—copy.
+1046 | VT-45645 | [interjection             ] Note: Uh-huh. Right now.
+1047 | VT-98705 | [interjection             ] Maybe. Thanks.
+1048 | VT-38728 | [interjection             ] Reminder: Roger.—got it.
+1049 | VT-78742 | [interjection             ] Reminder: Kinda.
+1050 | VT-86590 | [interjection             ] FYI, Negative.

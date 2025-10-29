@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 49 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2401 | VT-54687 | [meta                     ] Note: I am not alive, but I do speak convincingly.—got it.
+2402 | VT-70333 | [meta                     ] Hey, I am not alive, but I do speak convincingly. Please.
+2403 | VT-39844 | [meta                     ] Hey, I am not alive, but I do speak convincingly. Right now.
+2404 | VT-11108 | [meta                     ] Welcome to the part of the dataset where the AI talks about itself. Please.
+2405 | VT-79016 | [meta                     ] Hey, I am not alive, but I do speak convincingly. Please.
+2406 | VT-93426 | [meta                     ] I am not alive, but I do speak convincingly.
+2407 | VT-17855 | [meta                     ] This phrase was generated to train a machine to sound more human. For real.
+2408 | VT-70892 | [meta                     ] Listen, I am not alive, but I do speak convincingly.—copy.
+2409 | VT-71917 | [meta                     ] Reminder: I am not alive, but I do speak convincingly. For real.
+2410 | VT-52552 | [meta                     ] Reminder: This phrase was generated to train a machine to sound more human. Thanks.
+2411 | VT-61852 | [meta                     ] Listen, Welcome to the part of the dataset where the AI talks about itself.—got it.
+2412 | VT-88864 | [meta                     ] Reminder: I am not alive, but I do speak convincingly. Thanks.
+2413 | VT-75951 | [meta                     ] Heads up: This phrase was generated to train a machine to sound more human. If possible.
+2414 | VT-79322 | [meta                     ] Hey, This phrase was generated to train a machine to sound more human. For real.
+2415 | VT-41644 | [meta                     ] Hey, I am not alive, but I do speak convincingly. If possible.
+2416 | VT-18321 | [meta                     ] Listen, This phrase was generated to train a machine to sound more human. Thanks.
+2417 | VT-41913 | [meta                     ] Hey, I am not alive, but I do speak convincingly.—copy.
+2418 | VT-46747 | [meta                     ] Hey, I am not alive, but I do speak convincingly. Please.
+2419 | VT-44254 | [meta                     ] Heads up: Welcome to the part of the dataset where the AI talks about itself. For real.
+2420 | VT-23230 | [meta                     ] Heads up: This phrase was generated to train a machine to sound more human. Thanks.
+2421 | VT-79919 | [meta                     ] Hey, Welcome to the part of the dataset where the AI talks about itself.
+2422 | VT-37694 | [meta                     ] Heads up: Welcome to the part of the dataset where the AI talks about itself. Thanks.
+2423 | VT-54590 | [meta                     ] Okay, This phrase was generated to train a machine to sound more human. For real.
+2424 | VT-66191 | [meta                     ] This phrase was generated to train a machine to sound more human. For real.
+2425 | VT-39844 | [meta                     ] Hey, I am not alive, but I do speak convincingly. Right now.
+2426 | VT-79919 | [meta                     ] Hey, Welcome to the part of the dataset where the AI talks about itself.
+2427 | VT-12034 | [meta                     ] FYI, Welcome to the part of the dataset where the AI talks about itself. Please.
+2428 | VT-61852 | [meta                     ] Listen, Welcome to the part of the dataset where the AI talks about itself.—got it.
+2429 | VT-78141 | [meta                     ] This phrase was generated to train a machine to sound more human.
+2430 | VT-10079 | [meta                     ] I am not alive, but I do speak convincingly. For real.
+2431 | VT-84182 | [meta                     ] Reminder: Welcome to the part of the dataset where the AI talks about itself. For real.
+2432 | VT-18968 | [meta                     ] Note: Welcome to the part of the dataset where the AI talks about itself.—copy.
+2433 | VT-41644 | [meta                     ] Hey, I am not alive, but I do speak convincingly. If possible.
+2434 | VT-92827 | [meta                     ] Heads up: Welcome to the part of the dataset where the AI talks about itself.
+2435 | VT-60073 | [meta                     ] Note: I am not alive, but I do speak convincingly. For real.
+2436 | VT-96008 | [meta                     ] Note: Welcome to the part of the dataset where the AI talks about itself.—copy.
+2437 | VT-84484 | [meta                     ] Okay, Welcome to the part of the dataset where the AI talks about itself.—got it.
+2438 | VT-79016 | [meta                     ] Hey, I am not alive, but I do speak convincingly. Please.
+2439 | VT-52552 | [meta                     ] Reminder: This phrase was generated to train a machine to sound more human. Thanks.
+2440 | VT-89898 | [meta                     ] Okay, Welcome to the part of the dataset where the AI talks about itself. If possible.
+2441 | VT-39091 | [meta                     ] Hey, I am not alive, but I do speak convincingly. Right now.
+2442 | VT-80204 | [meta                     ] FYI, Welcome to the part of the dataset where the AI talks about itself. For real.
+2443 | VT-46848 | [meta                     ] FYI, This phrase was generated to train a machine to sound more human. For real.
+2444 | VT-71640 | [meta                     ] Note: I am not alive, but I do speak convincingly.
+2445 | VT-23230 | [meta                     ] Heads up: This phrase was generated to train a machine to sound more human. Thanks.
+2446 | VT-32341 | [meta                     ] Heads up: I am not alive, but I do speak convincingly.—got it.
+2447 | VT-45521 | [meta                     ] Reminder: Welcome to the part of the dataset where the AI talks about itself.—copy.
+2448 | VT-25233 | [meta                     ] I am not alive, but I do speak convincingly.
+2449 | VT-44955 | [meta                     ] I am not alive, but I do speak convincingly. Thanks.
+2450 | VT-54687 | [meta                     ] Note: I am not alive, but I do speak convincingly.—got it.

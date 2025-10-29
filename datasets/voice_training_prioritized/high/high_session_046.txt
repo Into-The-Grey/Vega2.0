@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 46 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2251 | VT-579369 | [dates_times              ] Okay, Today is the 27th of October, 2025.
+2252 | VT-692430 | [dates_times              ] Reminder: Hey, Convert 14:30 UTC to Central Time. (4398) — confirm.
+2253 | VT-545731 | [dates_times              ] Quick one: Note: Convert 14:30 UTC to Central Time. (5601) Thanks.
+2254 | VT-551583 | [dates_times              ] Reminder: Wake me up in 23 minutes. (377)—got it. — now.
+2255 | VT-636092 | [dates_times              ] Quick one: Convert 14:30 UTC to Central Time. if you can.
+2256 | VT-534177 | [dates_times              ] Okay, Note: Convert 14:30 UTC to Central Time. (5601) Thanks. if you can.
+2257 | VT-569548 | [dates_times              ] Reminder: Listen, Wake me up in 23 minutes. (3690) Right now. — confirm.
+2258 | VT-514012 | [dates_times              ] Okay, Note: Convert 14:30 UTC to Central Time. (7232)—got it. please. (alt)
+2259 | VT-604910 | [dates_times              ] FYI, Hey, Today is the 27th of October, 2025. (7147) Right now. thanks.
+2260 | VT-608481 | [dates_times              ] Real talk, Note: Convert 14:30 UTC to Central Time. (4609) Please..
+2261 | VT-619127 | [dates_times              ] Heads up: FYI, The deadline moved from Q3 to Q4. (1858) If possible. (alt)
+2262 | VT-583493 | [dates_times              ] Real talk, Note: Timer: three hours, twenty-one minutes, go. (8015) Please. thanks.
+2263 | VT-521823 | [dates_times              ] Quick one: Reminder: The deadline moved from Q3 to Q4. (8292) For real. — confirm. (alt)
+2264 | VT-640281 | [dates_times              ] Reminder: Reminder: Sunrise is at 06:58; sunset at 17:12. (5006) Please. — now. (alt)
+2265 | VT-547555 | [dates_times              ] Okay, Today is the 27th of October, 2025. (2630)—copy. right now.
+2266 | VT-513450 | [dates_times              ] Real talk, Listen, Set a reminder for 7:45 PM on Friday. (4763) Please. right now.
+2267 | VT-689085 | [dates_times              ] FYI, Reminder: Schedule it biweekly starting next Monday. (4108)—copy. if you can.
+2268 | VT-564032 | [dates_times              ] FYI, FYI, Convert 14:30 UTC to Central Time. (5821)—copy.. (alt)
+2269 | VT-571112 | [dates_times              ] Hey, Convert 14:30 UTC to Central Time. (3135)—got it. — now.
+2270 | VT-560418 | [dates_times              ] FYI, Reminder: Convert 14:30 UTC to Central Time. (9091) Thanks. thanks. (alt)
+2271 | VT-647525 | [hesitations_fillers      ] Okay, Heads up: Hmm, not exactly, but close. If possible. if you can.
+2272 | VT-683010 | [hesitations_fillers      ] Okay, Listen, Right… so… moving on. Right now. right now.
+2273 | VT-622574 | [hesitations_fillers      ] Reminder: Hmm, not exactly, but close. For real. — got it.
+2274 | VT-661944 | [hesitations_fillers      ] Heads up: I… I don’t know if that’ll fly. For real. — got it.
+2275 | VT-677770 | [hesitations_fillers      ] Note: Mmm, nope, that’s not it. Please. — got it.
+2276 | VT-632399 | [hesitations_fillers      ] Quick one: Heads up: Well, I mean, like, kind of, yeah. — now.
+2277 | VT-676709 | [hesitations_fillers      ] Quick one: Note: Uh… hang on… what was I saying? Right now. — confirm.
+2278 | VT-503592 | [hesitations_fillers      ] Quick one: Heads up: Hmm, not exactly, but close. If possible. please.
+2279 | VT-566955 | [hesitations_fillers      ] Note: Well, I mean, like, kind of, yeah. Please. thanks. (alt)
+2280 | VT-625177 | [hesitations_fillers      ] Quick one: Reminder: I… I don’t know if that’ll fly.—copy.
+2281 | VT-597136 | [hesitations_fillers      ] FYI, Reminder: Wait—uh—did you hear that? please.
+2282 | VT-616675 | [hesitations_fillers      ] Heads up: FYI, Mmm, nope, that’s not it. Thanks..
+2283 | VT-626181 | [hesitations_fillers      ] FYI, Reminder: Right… so… moving on.—copy. right now. (alt)
+2284 | VT-561769 | [hesitations_fillers      ] Listen, So—yeah—about that plan… please.
+2285 | VT-570100 | [hesitations_fillers      ] Real talk, Listen, Well, I mean, like, kind of, yeah.—got it. — now.
+2286 | VT-696755 | [hesitations_fillers      ] Real talk, Note: Uh… hang on… what was I saying? Right now. — confirm.
+2287 | VT-536694 | [hesitations_fillers      ] FYI, Right… so… moving on. Right now. thanks.
+2288 | VT-503178 | [hesitations_fillers      ] Real talk, Reminder: Hmm, not exactly, but close. Please.
+2289 | VT-605881 | [hesitations_fillers      ] Listen, Well, I mean, like, kind of, yeah..
+2290 | VT-527173 | [hesitations_fillers      ] Quick one: Reminder: Wait—uh—did you hear that? please.
+2291 | VT-512381 | [hesitations_fillers      ] Heads up: Okay, Wait—uh—did you hear that? Please. right now.
+2292 | VT-571490 | [hesitations_fillers      ] Okay, Okay, Wait—uh—did you hear that? If possible. thanks. (alt)
+2293 | VT-558561 | [hesitations_fillers      ] FYI, Right… so… moving on. Right now. — confirm.
+2294 | VT-671912 | [hesitations_fillers      ] Note: Uh… hang on… what was I saying? Right now. — confirm.
+2295 | VT-520718 | [hesitations_fillers      ] Reminder: Reminder: Uh… hang on… what was I saying? Thanks. — confirm.
+2296 | VT-682055 | [hesitations_fillers      ] Quick one: Listen, Wait—uh—did you hear that? Right now. — now.
+2297 | VT-588554 | [hesitations_fillers      ] Okay, Reminder: Well, I mean, like, kind of, yeah.—copy..
+2298 | VT-663392 | [hesitations_fillers      ] Okay, Okay, okay, okay—listen. Right now. if you can. (alt)
+2299 | VT-591458 | [hesitations_fillers      ] Reminder: Okay, Okay, okay, okay—listen. For real. thanks.
+2300 | VT-535387 | [hesitations_fillers      ] Listen, FYI, Okay, okay, okay—listen. Thanks.

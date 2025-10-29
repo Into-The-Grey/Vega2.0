@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 3 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0101 | VT-34886 | [agreements               ] Note: I’m in. Thanks.
+0102 | VT-13736 | [agreements               ] FYI, I’m in. For real.
+0103 | VT-48403 | [agreements               ] Note: I’m in.
+0104 | VT-43619 | [agreements               ] That’s a yes from me.
+0105 | VT-60613 | [agreements               ] Listen, Yep, that works for me. Please.
+0106 | VT-92858 | [agreements               ] Approved. Right now.
+0107 | VT-96449 | [agreements               ] Hey, That’s a yes from me. Thanks.
+0108 | VT-18297 | [agreements               ] Note: Agreed—let’s lock it. Thanks.
+0109 | VT-67296 | [agreements               ] Okay, Agreed—let’s lock it. Right now.
+0110 | VT-38009 | [agreements               ] Agreed—let’s lock it. If possible.
+0111 | VT-13736 | [agreements               ] FYI, I’m in. For real.
+0112 | VT-75359 | [agreements               ] Hey, Approved.—copy.
+0113 | VT-46844 | [agreements               ] Heads up: Yep, that works for me. Right now.
+0114 | VT-64056 | [agreements               ] Note: Agreed—let’s lock it. For real.
+0115 | VT-55077 | [agreements               ] Okay, Green light. For real.
+0116 | VT-50099 | [agreements               ] Hey, Sounds right. Please.
+0117 | VT-21070 | [agreements               ] Hey, Agreed—let’s lock it.
+0118 | VT-30721 | [agreements               ] Reminder: Count me on board. Please.
+0119 | VT-60373 | [agreements               ] Note: That’s a yes from me. If possible.
+0120 | VT-66153 | [agreements               ] Hey, Yep, that works for me.—copy.
+0121 | VT-55074 | [agreements               ] That’s a yes from me.
+0122 | VT-74384 | [agreements               ] Note: Yep, that works for me.—copy.
+0123 | VT-31198 | [agreements               ] Yep, that works for me.
+0124 | VT-43619 | [agreements               ] That’s a yes from me.
+0125 | VT-88390 | [agreements               ] Listen, Agreed—let’s lock it. For real.
+0126 | VT-72314 | [agreements               ] Okay, I’m in.—got it.
+0127 | VT-41596 | [agreements               ] FYI, Green light.
+0128 | VT-14129 | [agreements               ] FYI, Green light. Thanks.
+0129 | VT-66512 | [agreements               ] That’s a yes from me. Right now.
+0130 | VT-18566 | [agreements               ] Note: Copy that.
+0131 | VT-83757 | [agreements               ] Agreed—let’s lock it.
+0132 | VT-55878 | [agreements               ] Heads up: Count me on board.—copy.
+0133 | VT-80213 | [agreements               ] Reminder: Sounds right. Please.
+0134 | VT-98650 | [agreements               ] Note: I’m in.
+0135 | VT-48689 | [agreements               ] Heads up: Solid. Do it. If possible.
+0136 | VT-39674 | [agreements               ] Listen, Agreed—let’s lock it. Right now.
+0137 | VT-48689 | [agreements               ] Heads up: Solid. Do it. If possible.
+0138 | VT-57169 | [agreements               ] Listen, Agreed—let’s lock it. Right now.
+0139 | VT-46844 | [agreements               ] Heads up: Yep, that works for me. Right now.
+0140 | VT-65090 | [agreements               ] Heads up: I’m in. If possible.
+0141 | VT-76868 | [agreements               ] Yep, that works for me.—copy.
+0142 | VT-47944 | [agreements               ] Reminder: Sounds right.—got it.
+0143 | VT-57190 | [agreements               ] Okay, Solid. Do it. Thanks.
+0144 | VT-92513 | [agreements               ] Reminder: I’m in.—copy.
+0145 | VT-14462 | [agreements               ] Copy that. Please.
+0146 | VT-98460 | [agreements               ] Reminder: Yep, that works for me. Please.
+0147 | VT-84594 | [agreements               ] Listen, Solid. Do it.
+0148 | VT-92858 | [agreements               ] Approved. Right now.
+0149 | VT-42195 | [agreements               ] Hey, Solid. Do it.
+0150 | VT-23910 | [agreements               ] Hey, Copy that.

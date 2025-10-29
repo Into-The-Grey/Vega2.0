@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 20 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0951 | VT-40938 | [interrogative            ] Listen, Do you even hear yourself right now? Thanks.
+0952 | VT-22829 | [interrogative            ] Heads up: Do you even hear yourself right now?
+0953 | VT-50766 | [interrogative            ] Why does it always rain when I'm unprepared? Thanks.
+0954 | VT-24297 | [interrogative            ] Note: Why does it always rain when I'm unprepared? Thanks.
+0955 | VT-37237 | [interrogative            ] Is this really what you want?—got it.
+0956 | VT-42328 | [interrogative            ] Hey, Is this really what you want? Right now.
+0957 | VT-14084 | [interrogative            ] Listen, Do you even hear yourself right now? For real.
+0958 | VT-51357 | [interrogative            ] Note: Do you even hear yourself right now? If possible.
+0959 | VT-92865 | [interrogative            ] Hey, Is this really what you want?
+0960 | VT-17146 | [interrogative            ] Okay, Why does it always rain when I'm unprepared? If possible.
+0961 | VT-47700 | [interrogative            ] Hey, Is this really what you want? Thanks.
+0962 | VT-50695 | [interrogative            ] FYI, Is this really what you want? Please.
+0963 | VT-12852 | [interrogative            ] Okay, Why does it always rain when I'm unprepared? If possible.
+0964 | VT-69067 | [interrogative            ] Reminder: Do you even hear yourself right now? Please.
+0965 | VT-14084 | [interrogative            ] Listen, Do you even hear yourself right now? For real.
+0966 | VT-89442 | [interrogative            ] FYI, Do you even hear yourself right now? Please.
+0967 | VT-14084 | [interrogative            ] Listen, Do you even hear yourself right now? For real.
+0968 | VT-31651 | [interrogative            ] Heads up: Why does it always rain when I'm unprepared? Thanks.
+0969 | VT-19633 | [interrogative            ] Hey, Is this really what you want? Right now.
+0970 | VT-14084 | [interrogative            ] Listen, Do you even hear yourself right now? For real.
+0971 | VT-10483 | [measurements_units       ] Torque the bolt to 6 newton-meters. (7982) Thanks.
+0972 | VT-56095 | [measurements_units       ] Listen, Fan speed at forty percent. (3179) Right now.
+0973 | VT-43688 | [measurements_units       ] Reminder: Torque the bolt to 6 newton-meters. (2773) If possible.
+0974 | VT-49811 | [measurements_units       ] Note: Hold temperature at 205 Celsius. (6101)—got it.
+0975 | VT-77084 | [measurements_units       ] Okay, Mix 2:1 by volume, not weight. (8441)
+0976 | VT-78318 | [measurements_units       ] Listen, Cut the rod to 145 millimeters. (1894) Right now.
+0977 | VT-76532 | [measurements_units       ] Print at 0.2 millimeter layer height. (3540) Please.
+0978 | VT-10483 | [measurements_units       ] Torque the bolt to 6 newton-meters. (7982) Thanks.
+0979 | VT-74498 | [measurements_units       ] Okay, Cut the rod to 145 millimeters. (6965) Right now.
+0980 | VT-61753 | [measurements_units       ] Okay, Hold temperature at 205 Celsius. (6610) If possible.
+0981 | VT-20870 | [measurements_units       ] Note: Tolerance is plus or minus 0.05 millimeters. (2874)
+0982 | VT-15009 | [measurements_units       ] FYI, Mix 2:1 by volume, not weight. (1897) If possible.
+0983 | VT-26646 | [measurements_units       ] Okay, Fan speed at forty percent. (6573) Please.
+0984 | VT-50590 | [measurements_units       ] Maintain 24 volts at 3 amps. (3871)—got it.
+0985 | VT-89877 | [measurements_units       ] Note: Cut the rod to 145 millimeters. (412) If possible.
+0986 | VT-25091 | [measurements_units       ] Hey, Print at 0.2 millimeter layer height. (5616)—copy.
+0987 | VT-53859 | [measurements_units       ] Hey, Fan speed at forty percent. (9951) Please.
+0988 | VT-67580 | [measurements_units       ] Listen, Torque the bolt to 6 newton-meters. (7066) Please.
+0989 | VT-57126 | [measurements_units       ] Cut the rod to 145 millimeters.
+0990 | VT-20870 | [measurements_units       ] Note: Tolerance is plus or minus 0.05 millimeters. (2874)
+0991 | VT-97115 | [measurements_units       ] Reminder: Tolerance is plus or minus 0.05 millimeters. (7404)—got it.
+0992 | VT-50362 | [measurements_units       ] Hey, Tolerance is plus or minus 0.05 millimeters. (3573) Please.
+0993 | VT-81078 | [measurements_units       ] Fan speed at forty percent. (2465) For real.
+0994 | VT-76532 | [measurements_units       ] Print at 0.2 millimeter layer height. (3540) Please.
+0995 | VT-53685 | [measurements_units       ] Heads up: Print at 0.2 millimeter layer height. (4494) Right now.
+0996 | VT-94944 | [measurements_units       ] Okay, Tolerance is plus or minus 0.05 millimeters. (6094) Please.
+0997 | VT-80332 | [measurements_units       ] Okay, Cut the rod to 145 millimeters. (7596) Thanks.
+0998 | VT-86049 | [measurements_units       ] Listen, Density measured at 1.24 grams per cubic centimeter. (2763)—copy.
+0999 | VT-72717 | [measurements_units       ] Density measured at 1.24 grams per cubic centimeter. (4345)—copy.
+1000 | VT-61904 | [measurements_units       ] Heads up: Density measured at 1.24 grams per cubic centimeter. (9554) Please.

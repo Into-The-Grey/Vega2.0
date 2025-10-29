@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 61 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+3001 | VT-44290 | [negations                ] Heads up: No chance.
+3002 | VT-13947 | [negations                ] Okay, Never deploy on Friday. Thanks.
+3003 | VT-60543 | [negations                ] Note: I’m not doing that again.—got it.
+3004 | VT-77517 | [negations                ] Okay, Never deploy on Friday.
+3005 | VT-29435 | [negations                ] Heads up: No logs, no proof.—copy.
+3006 | VT-30317 | [negations                ] FYI, That’s not what I asked for.
+3007 | VT-30317 | [negations                ] FYI, That’s not what I asked for.
+3008 | VT-56642 | [negations                ] That’s not what I asked for. Please.
+3009 | VT-58430 | [negations                ] Okay, No logs, no proof.
+3010 | VT-46292 | [negations                ] Reminder: No logs, no proof. Please.
+3011 | VT-28601 | [negations                ] Listen, No chance.
+3012 | VT-62324 | [negations                ] Never deploy on Friday.—copy.
+3013 | VT-89542 | [negations                ] Listen, That’s not what I asked for.—got it.
+3014 | VT-92792 | [negations                ] FYI, I’m not doing that again.
+3015 | VT-11066 | [negations                ] Note: Nothing about this is simple.—got it.
+3016 | VT-56856 | [negations                ] Listen, Do not open that email.—copy.
+3017 | VT-76239 | [negations                ] Listen, I won’t sign off on that. Please.
+3018 | VT-56856 | [negations                ] Listen, Do not open that email.—copy.
+3019 | VT-77995 | [negations                ] Hey, Not now, not ever. Right now.
+3020 | VT-64150 | [negations                ] We can’t ship without tests.
+3021 | VT-39539 | [negations                ] Listen, We can’t ship without tests.—copy.
+3022 | VT-14241 | [negations                ] Listen, Never deploy on Friday.—copy.
+3023 | VT-21642 | [negations                ] Note: I won’t sign off on that. Please.
+3024 | VT-60543 | [negations                ] Note: I’m not doing that again.—got it.
+3025 | VT-36050 | [negations                ] FYI, Never deploy on Friday. Please.
+3026 | VT-16381 | [negations                ] Note: Do not open that email. Right now.
+3027 | VT-34964 | [negations                ] I’m not doing that again.—copy.
+3028 | VT-21064 | [negations                ] Okay, I’m not doing that again. If possible.
+3029 | VT-66402 | [negations                ] Okay, Nothing about this is simple.—got it.
+3030 | VT-35236 | [negations                ] FYI, That’s not what I asked for.—copy.
+3031 | VT-78850 | [negations                ] Note: No chance. Right now.
+3032 | VT-50248 | [negations                ] Heads up: Not now, not ever. For real.
+3033 | VT-78906 | [negations                ] FYI, No chance. Please.
+3034 | VT-55131 | [negations                ] We can’t ship without tests. For real.
+3035 | VT-60543 | [negations                ] Note: I’m not doing that again.—got it.
+3036 | VT-48263 | [negations                ] Okay, Not now, not ever. Thanks.
+3037 | VT-37214 | [negations                ] Heads up: I’m not doing that again.
+3038 | VT-97961 | [negations                ] Heads up: I’m not doing that again. Thanks.
+3039 | VT-90224 | [negations                ] Reminder: Nothing about this is simple.—copy.
+3040 | VT-87820 | [negations                ] Reminder: No chance. Please.
+3041 | VT-47215 | [negations                ] Hey, Do not open that email. Please.
+3042 | VT-55131 | [negations                ] We can’t ship without tests. For real.
+3043 | VT-36219 | [negations                ] Hey, Do not open that email. If possible.
+3044 | VT-55131 | [negations                ] We can’t ship without tests. For real.
+3045 | VT-39971 | [negations                ] Listen, No logs, no proof.—got it.
+3046 | VT-49392 | [negations                ] FYI, Do not open that email.
+3047 | VT-55131 | [negations                ] We can’t ship without tests. For real.
+3048 | VT-45254 | [passive_aggressive       ] Listen, No, really, take your time. It’s not like deadlines matter.
+3049 | VT-83723 | [passive_aggressive       ] Oh, you’re here. How… unexpected. Right now.
+3050 | VT-19814 | [passive_aggressive       ] Reminder: Oh, you’re here. How… unexpected.—got it.

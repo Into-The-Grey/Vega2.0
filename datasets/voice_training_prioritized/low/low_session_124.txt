@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 124 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6151 | VT-448993 | [everyday-profanity       ] Quick one: I can’t believe I forgot, that’s on me. — now.
+6152 | VT-488480 | [everyday-profanity       ] Listen, Can we please stop with this crap and fix it? — got it. (alt)
+6153 | VT-494785 | [everyday-profanity       ] FYI, Turn the damn lights off when you leave. — now.
+6154 | VT-465356 | [everyday-profanity       ] Okay, I’m so done with this bullshit. if you can.
+6155 | VT-492453 | [everyday-profanity       ] Listen, I dropped my coffee—again. Ugh. please.
+6156 | VT-425573 | [everyday-profanity       ] Quick one: I can’t find the damn keys.
+6157 | VT-415724 | [everyday-profanity       ] Hey, This is freaking ridiculous.—copy.
+6158 | VT-409814 | [everyday-profanity       ] FYI, Reminder: What the hell was that noise?
+6159 | VT-455972 | [everyday-profanity       ] FYI, FYI, That was a total mess, no sugar‑coating it.—copy. right now.
+6160 | VT-459128 | [everyday-profanity       ] Listen, Okay, Why does this keep breaking? It’s driving me nuts. If possible. please.
+6161 | VT-421556 | [everyday-profanity       ] FYI, I can’t believe I forgot, that’s on me.—copy. — confirm. (alt)
+6162 | VT-407897 | [everyday-profanity       ] Real talk, Heads up: Can we please stop with this crap and fix it?—got it. (alt)
+6163 | VT-442277 | [everyday-profanity       ] Reminder: Heads up: Turn the damn lights off when you leave. Right now. thanks. (alt)
+6164 | VT-457866 | [everyday-profanity       ] Okay, FYI, I’m so done with this bullshit.—got it. — confirm.
+6165 | VT-440044 | [everyday-profanity       ] Okay, Heads up: I dropped my coffee—again. Ugh. — got it.
+6166 | VT-465301 | [everyday-profanity       ] Reminder: Heads up: I can’t find the damn keys. — got it.
+6167 | VT-471426 | [everyday-profanity       ] Real talk, Listen, This is freaking ridiculous. If possible. — confirm.
+6168 | VT-421735 | [everyday-profanity       ] FYI, Reminder: What the hell was that noise? If possible. right now.
+6169 | VT-451814 | [everyday-profanity       ] Reminder: That was a total mess, no sugar‑coating it.—copy. please.
+6170 | VT-486421 | [everyday-profanity       ] Heads up: Reminder: Why does this keep breaking? It’s driving me nuts. if you can.
+6171 | VT-437379 | [everyday-profanity       ] Reminder: FYI, I can’t believe I forgot, that’s on me.
+6172 | VT-414379 | [everyday-profanity       ] Quick one: Note: Can we please stop with this crap and fix it?—got it. (alt)
+6173 | VT-418985 | [everyday-profanity       ] Note: FYI, Turn the damn lights off when you leave. Right now. right now.
+6174 | VT-490350 | [everyday-profanity       ] Heads up: I’m so done with this bullshit. If possible.
+6175 | VT-420200 | [everyday-profanity       ] Okay, FYI, I dropped my coffee—again. Ugh. If possible. please.
+6176 | VT-420460 | [everyday-profanity       ] Real talk, FYI, I can’t find the damn keys. Right now. please.
+6177 | VT-466004 | [everyday-profanity       ] Listen, Note: This is freaking ridiculous.—copy. if you can.
+6178 | VT-481015 | [everyday-profanity       ] FYI, Listen, What the hell was that noise? Please. right now. (alt)
+6179 | VT-440581 | [everyday-profanity       ] Heads up: Reminder: That was a total mess, no sugar‑coating it.—got it. — now.
+6180 | VT-463736 | [everyday-profanity       ] Listen, FYI, Why does this keep breaking? It’s driving me nuts. If possible. thanks.
+6181 | VT-406150 | [everyday-profanity       ] Note: Hey, I can’t believe I forgot, that’s on me. Right now. — now.
+6182 | VT-442912 | [everyday-profanity       ] Okay, Note: Can we please stop with this crap and fix it? Right now.
+6183 | VT-472168 | [everyday-profanity       ] Quick one: Turn the damn lights off when you leave. For real. right now. (alt)
+6184 | VT-405546 | [everyday-profanity       ] Note: Reminder: I’m so done with this bullshit. For real. please. (alt)
+6185 | VT-470547 | [everyday-profanity       ] Okay, Hey, I dropped my coffee—again. Ugh. For real. — got it.
+6186 | VT-418482 | [everyday-profanity       ] Heads up: Reminder: I can’t find the damn keys. If possible.
+6187 | VT-430607 | [everyday-profanity       ] Real talk, This is freaking ridiculous. For real. — now. (alt)
+6188 | VT-405452 | [everyday-profanity       ] FYI, Heads up: What the hell was that noise?—copy. — got it. (alt)
+6189 | VT-472652 | [everyday-profanity       ] Okay, Reminder: That was a total mess, no sugar‑coating it. Thanks. — got it.
+6190 | VT-417492 | [everyday-profanity       ] Listen, Why does this keep breaking? It’s driving me nuts.—copy. right now. (alt)
+6191 | VT-484780 | [everyday-profanity       ] Note: I can’t believe I forgot, that’s on me. Please. please.
+6192 | VT-431377 | [everyday-profanity       ] Note: Reminder: Can we please stop with this crap and fix it?—copy. — now.
+6193 | VT-434940 | [everyday-profanity       ] Reminder: Reminder: Turn the damn lights off when you leave.—got it. — now.
+6194 | VT-419822 | [everyday-profanity       ] Quick one: Hey, I’m so done with this bullshit.—copy. — got it. (alt)
+6195 | VT-494922 | [everyday-profanity       ] FYI, Hey, I dropped my coffee—again. Ugh. Right now. — got it.
+6196 | VT-417435 | [everyday-profanity       ] Reminder: Heads up: I can’t find the damn keys. For real. thanks.
+6197 | VT-485729 | [finance                  ] Quick one: Okay, We’re cash-flow positive but margin-thin. (2462) If possible..
+6198 | VT-424402 | [finance                  ] Quick one: Heads up: Flag that transaction as potentially fraudulent. (9415) Right now. if you can.
+6199 | VT-424844 | [finance                  ] Heads up: Hey, We’re cash-flow positive but margin-thin. (3409) Right now. right now.
+6200 | VT-483973 | [finance                  ] Real talk, Reminder: File the 1099s and W‑2s by January 31. (8855) please.

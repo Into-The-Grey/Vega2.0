@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 120 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+5951 | VT-483256 | [addresses_generic        ] Reminder: Heads up: Mail it care of John Doe, PO Box 1029. If possible. please.
+5952 | VT-487572 | [addresses_generic        ] Heads up: Reminder: The ZIP code is 60614, not 60641. Right now..
+5953 | VT-496671 | [addresses_generic        ] Listen, Reminder: Ship it to 123 Example Street, Suite 400, Springfield. For real.
+5954 | VT-477916 | [addresses_generic        ] FYI, Heads up: Unit B, second floor, back entrance. For real. — confirm. (alt)
+5955 | VT-422441 | [addresses_generic        ] Heads up: FYI, The ZIP code is 60614, not 60641. Please. — confirm.
+5956 | VT-426343 | [addresses_generic        ] Real talk, FYI, Deliver to the northeast loading dock.—copy. please.
+5957 | VT-481090 | [addresses_generic        ] Heads up: Corner house with the red door.—copy. please.
+5958 | VT-485579 | [addresses_generic        ] Okay, Mail it care of John Doe, PO Box 1029.—copy.
+5959 | VT-425824 | [addresses_generic        ] FYI, Heads up: Use the service elevator—freight only. For real. thanks. (alt)
+5960 | VT-498187 | [addresses_generic        ] Heads up: Hey, Cross streets are Maple and 8th. If possible.
+5961 | VT-480057 | [addresses_generic        ] Heads up: Reminder: The ZIP code is 60614, not 60641. Right now..
+5962 | VT-429989 | [addresses_generic        ] Real talk, Ship it to 123 Example Street, Suite 400, Springfield. Thanks.
+5963 | VT-472798 | [addresses_generic        ] Listen, FYI, Use the service elevator—freight only.—got it. right now.
+5964 | VT-423697 | [addresses_generic        ] Real talk, Reminder: Unit B, second floor, back entrance. Right now. — got it.
+5965 | VT-486853 | [addresses_generic        ] The ZIP code is 60614, not 60641. — confirm.
+5966 | VT-476514 | [addresses_generic        ] Quick one: Heads up: Corner house with the red door.—copy.
+5967 | VT-463909 | [addresses_generic        ] Real talk, FYI, Corner house with the red door. Thanks. if you can.
+5968 | VT-474576 | [addresses_generic        ] Listen, Hey, Corner house with the red door. Thanks. thanks. (alt)
+5969 | VT-417103 | [addresses_generic        ] Listen, Use the service elevator—freight only.—got it. — now.
+5970 | VT-410279 | [addresses_generic        ] Okay, Reminder: Ship it to 123 Example Street, Suite 400, Springfield. For real. — confirm.
+5971 | VT-433167 | [addresses_generic        ] Note: Ship it to 123 Example Street, Suite 400, Springfield. Please. — got it. (alt)
+5972 | VT-445772 | [addresses_generic        ] Listen, Corner house with the red door. Thanks..
+5973 | VT-420390 | [addresses_generic        ] Listen, The ZIP code is 60614, not 60641. Thanks. — confirm.
+5974 | VT-408966 | [addresses_generic        ] Okay, Hey, Send the parcel to Building 9, Bay 12. Please. if you can.
+5975 | VT-484376 | [addresses_generic        ] Listen, Note: Send the parcel to Building 9, Bay 12. Please. right now. (alt)
+5976 | VT-463447 | [addresses_generic        ] Reminder: Reminder: Send the parcel to Building 9, Bay 12. Thanks..
+5977 | VT-420935 | [addresses_generic        ] Okay, Okay, Use the service elevator—freight only. Please. if you can.
+5978 | VT-425497 | [addresses_generic        ] Reminder: Reminder: Deliver to the northeast loading dock. If possible. — now.
+5979 | VT-481523 | [addresses_generic        ] Heads up: Hey, Deliver to the northeast loading dock. Right now. (alt)
+5980 | VT-478636 | [addresses_generic        ] Okay, FYI, Ship it to 123 Example Street, Suite 400, Springfield. Please..
+5981 | VT-471581 | [addresses_generic        ] Heads up: Listen, Corner house with the red door. Please..
+5982 | VT-429503 | [addresses_generic        ] Listen, Note: Deliver to the northeast loading dock.—got it. — confirm.
+5983 | VT-483433 | [addresses_generic        ] Reminder: Okay, Cross streets are Maple and 8th. Thanks. — now.
+5984 | VT-436127 | [addresses_generic        ] Okay, Ship it to 123 Example Street, Suite 400, Springfield. Thanks..
+5985 | VT-411250 | [addresses_generic        ] Quick one: FYI, Ship it to 123 Example Street, Suite 400, Springfield. Please.
+5986 | VT-436072 | [addresses_generic        ] Quick one: Listen, Deliver to the northeast loading dock. Thanks. — got it.
+5987 | VT-450955 | [addresses_generic        ] Note: Reminder: Ship it to 123 Example Street, Suite 400, Springfield. For real.
+5988 | VT-466096 | [addresses_generic        ] Reminder: Unit B, second floor, back entrance. If possible. right now.
+5989 | VT-414900 | [addresses_generic        ] Okay, Hey, Mail it care of John Doe, PO Box 1029.—got it. thanks. (alt)
+5990 | VT-493976 | [addresses_generic        ] Okay, Corner house with the red door. For real. if you can.
+5991 | VT-436276 | [addresses_generic        ] FYI, FYI, The ZIP code is 60614, not 60641. — now.
+5992 | VT-477458 | [addresses_generic        ] Hey, Send the parcel to Building 9, Bay 12. Please. — got it.
+5993 | VT-402076 | [addresses_generic        ] Note: Okay, Use the service elevator—freight only. — now.
+5994 | VT-410529 | [addresses_generic        ] Quick one: Reminder: Cross streets are Maple and 8th.—copy. — confirm.
+5995 | VT-402733 | [addresses_generic        ] Note: Send the parcel to Building 9, Bay 12. right now. (alt)
+5996 | VT-498542 | [addresses_generic        ] Okay, Reminder: Use the service elevator—freight only.—got it.
+5997 | VT-444605 | [code_readouts            ] Real talk, Listen, Function signature: def handler(event, context): Right now. thanks.
+5998 | VT-470249 | [code_readouts            ] Heads up: Hey, Throw a try-catch around the parser. Thanks.
+5999 | VT-418327 | [code_readouts            ] Quick one: FYI, Function signature: def handler(event, context): Thanks. if you can.
+6000 | VT-422182 | [code_readouts            ] Real talk, Reminder: Export PATH equals dollar HOME slash bin colon PATH.—copy.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 104 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+5151 | VT-284336 | [trash_talk               ] Next time, ping before you feed.
+5152 | VT-277353 | [trash_talk               ] Good game; uninstall only if you want peace.
+5153 | VT-230273 | [trash_talk               ] Nice whiff—crosshair on vacation?
+5154 | VT-284336 | [trash_talk               ] Next time, ping before you feed.
+5155 | VT-226969 | [trash_talk               ] You’re padding stats; scoreboard says otherwise.
+5156 | VT-230273 | [trash_talk               ] Nice whiff—crosshair on vacation?
+5157 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5158 | VT-230273 | [trash_talk               ] Nice whiff—crosshair on vacation?
+5159 | VT-277353 | [trash_talk               ] Good game; uninstall only if you want peace.
+5160 | VT-230273 | [trash_talk               ] Nice whiff—crosshair on vacation?
+5161 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5162 | VT-277353 | [trash_talk               ] Good game; uninstall only if you want peace.
+5163 | VT-288650 | [trash_talk               ] Holding W isn’t a strategy; it’s a cry for help.
+5164 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5165 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5166 | VT-295729 | [trash_talk               ] Great flank—on your own teammates.
+5167 | VT-288650 | [trash_talk               ] Holding W isn’t a strategy; it’s a cry for help.
+5168 | VT-288650 | [trash_talk               ] Holding W isn’t a strategy; it’s a cry for help.
+5169 | VT-230273 | [trash_talk               ] Nice whiff—crosshair on vacation?
+5170 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5171 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5172 | VT-279263 | [trash_talk               ] You brought a pea shooter to a boss fight.
+5173 | VT-279263 | [trash_talk               ] You brought a pea shooter to a boss fight.
+5174 | VT-277353 | [trash_talk               ] Good game; uninstall only if you want peace.
+5175 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5176 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5177 | VT-279263 | [trash_talk               ] You brought a pea shooter to a boss fight.
+5178 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5179 | VT-230273 | [trash_talk               ] Nice whiff—crosshair on vacation?
+5180 | VT-226969 | [trash_talk               ] You’re padding stats; scoreboard says otherwise.
+5181 | VT-289396 | [trash_talk               ] If that was your strat, keep it; we farmed it.
+5182 | VT-288650 | [trash_talk               ] Holding W isn’t a strategy; it’s a cry for help.
+5183 | VT-295729 | [trash_talk               ] Great flank—on your own teammates.
+5184 | VT-277353 | [trash_talk               ] Good game; uninstall only if you want peace.
+5185 | VT-226969 | [trash_talk               ] You’re padding stats; scoreboard says otherwise.
+5186 | VT-279263 | [trash_talk               ] You brought a pea shooter to a boss fight.
+5187 | VT-288650 | [trash_talk               ] Holding W isn’t a strategy; it’s a cry for help.
+5188 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5189 | VT-295729 | [trash_talk               ] Great flank—on your own teammates.
+5190 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5191 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5192 | VT-204528 | [trash_talk               ] You peeked wide with no cover—free pick.
+5193 | VT-295729 | [trash_talk               ] Great flank—on your own teammates.
+5194 | VT-295729 | [trash_talk               ] Great flank—on your own teammates.
+5195 | VT-279263 | [trash_talk               ] You brought a pea shooter to a boss fight.
+5196 | VT-295729 | [trash_talk               ] Great flank—on your own teammates.
+5197 | VT-230273 | [trash_talk               ] Nice whiff—crosshair on vacation?
+5198 | VT-285986 | [trash_talk               ] That was textbook throw—appreciate the assist.
+5199 | VT-226969 | [trash_talk               ] You’re padding stats; scoreboard says otherwise.
+5200 | VT-284336 | [trash_talk               ] Next time, ping before you feed.

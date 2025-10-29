@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 131 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+6501 | VT-408657 | [medical                  ] Prescribe naproxen, take with food. Thanks.
+6502 | VT-471680 | [medical                  ] Note: Administer 0.4 mg sublingual nitroglycerin. Right now. if you can.
+6503 | VT-419142 | [medical                  ] Quick one: Okay, Patient reports acute onset of chest discomfort. If possible. thanks.
+6504 | VT-409287 | [medical                  ] Note: FYI, Allergic to penicillin; note in the chart.—got it. — now. (alt)
+6505 | VT-418607 | [medical                  ] FYI, Reminder: Administer 0.4 mg sublingual nitroglycerin. Please. if you can.
+6506 | VT-460967 | [medical                  ] FYI, Okay, Schedule an MRI with contrast, stat. Please. if you can.
+6507 | VT-454269 | [medical                  ] Heads up: Heads up: Document informed consent prior to procedure. Right now. — now.
+6508 | VT-436946 | [medical                  ] Heads up: Okay, Prescribe naproxen, take with food. Right now. right now. (alt)
+6509 | VT-445414 | [medical                  ] Heads up: Heads up: Advise RICE protocol for ankle sprain.—copy.
+6510 | VT-459564 | [medical                  ] Quick one: Hey, Vitals stable; maintain IV fluids at 75 mL per hour. For real. if you can.
+6511 | VT-426209 | [medical                  ] Heads up: Hey, Administer 0.4 mg sublingual nitroglycerin. Please. — now. (alt)
+6512 | VT-408100 | [medical                  ] FYI, FYI, Patient reports acute onset of chest discomfort.—got it. right now.
+6513 | VT-495615 | [medical                  ] Note: Note: Advise RICE protocol for ankle sprain.—copy.
+6514 | VT-487946 | [medical                  ] Quick one: Hey, Allergic to penicillin; note in the chart.—got it. — now.
+6515 | VT-454944 | [medical                  ] Quick one: Administer 0.4 mg sublingual nitroglycerin. (alt)
+6516 | VT-403133 | [medical                  ] Heads up: Heads up: Document informed consent prior to procedure. Right now. if you can. (alt)
+6517 | VT-494756 | [medical                  ] Listen, FYI, Document informed consent prior to procedure. If possible. — confirm.
+6518 | VT-474194 | [medical                  ] Note: Heads up: Document informed consent prior to procedure. If possible. — got it. (alt)
+6519 | VT-460305 | [medical                  ] Heads up: Reminder: Advise RICE protocol for ankle sprain. Right now. — now.
+6520 | VT-466816 | [medical                  ] Real talk, Okay, Patient reports acute onset of chest discomfort. If possible. — confirm.
+6521 | VT-433986 | [medical                  ] Okay, Okay, Patient reports acute onset of chest discomfort.—copy..
+6522 | VT-475373 | [medical                  ] Okay, Note: Document informed consent prior to procedure. Please. — got it.
+6523 | VT-433435 | [medical                  ] Okay, Administer 0.4 mg sublingual nitroglycerin. thanks.
+6524 | VT-468460 | [medical                  ] Reminder: Listen, Order a CBC and comprehensive metabolic panel. Please.
+6525 | VT-416424 | [medical                  ] Heads up: Order a CBC and comprehensive metabolic panel.—got it. thanks.
+6526 | VT-430171 | [medical                  ] Reminder: Hey, Order a CBC and comprehensive metabolic panel.
+6527 | VT-446991 | [medical                  ] Reminder: FYI, Advise RICE protocol for ankle sprain.—got it. if you can. (alt)
+6528 | VT-492230 | [medical                  ] Listen, FYI, Schedule an MRI with contrast, stat.—copy. please.
+6529 | VT-406854 | [medical                  ] Heads up: Listen, Schedule an MRI with contrast, stat. If possible. right now.
+6530 | VT-441913 | [medical                  ] Reminder: Note: Patient reports acute onset of chest discomfort. Thanks. thanks.
+6531 | VT-449801 | [medical                  ] Heads up: Note: Document informed consent prior to procedure. Thanks. thanks.
+6532 | VT-476763 | [medical                  ] Quick one: Reminder: Schedule an MRI with contrast, stat. — got it.
+6533 | VT-432633 | [medical                  ] Note: Okay, Vitals stable; maintain IV fluids at 75 mL per hour.—copy. thanks.
+6534 | VT-451363 | [medical                  ] Note: FYI, Patient reports acute onset of chest discomfort.—got it. — now.
+6535 | VT-496770 | [medical                  ] Note: Patient reports acute onset of chest discomfort. Thanks. — got it.
+6536 | VT-425763 | [medical                  ] Quick one: Heads up: Schedule an MRI with contrast, stat.—copy.
+6537 | VT-479920 | [medical                  ] Listen, Okay, Patient reports acute onset of chest discomfort. If possible. — got it.
+6538 | VT-476819 | [medical                  ] Hey, Allergic to penicillin; note in the chart.—copy. — got it.
+6539 | VT-436058 | [medical                  ] Quick one: Reminder: Prescribe naproxen, take with food. if you can.
+6540 | VT-433336 | [medical                  ] Heads up: Listen, Document informed consent prior to procedure. Right now.
+6541 | VT-405155 | [medical                  ] Note: Note: Administer 0.4 mg sublingual nitroglycerin. For real. please.
+6542 | VT-475230 | [medical                  ] Okay, Listen, Order a CBC and comprehensive metabolic panel. Please. — confirm.
+6543 | VT-475643 | [medical                  ] Heads up: Listen, Advise RICE protocol for ankle sprain.—got it..
+6544 | VT-472803 | [medical                  ] Note: Reminder: Vitals stable; maintain IV fluids at 75 mL per hour. Please.
+6545 | VT-416908 | [medical                  ] Order a CBC and comprehensive metabolic panel. thanks.
+6546 | VT-403215 | [medical                  ] Note: Note: Advise RICE protocol for ankle sprain. Please. — confirm. (alt)
+6547 | VT-491498 | [meta                     ] Listen, Okay, This phrase was generated to train a machine to sound more human. If possible. thanks.
+6548 | VT-438924 | [meta                     ] FYI, Hey, Welcome to the part of the dataset where the AI talks about itself. Thanks. please. (alt)
+6549 | VT-400318 | [meta                     ] Reminder: Hey, Welcome to the part of the dataset where the AI talks about itself. Thanks. — confirm.
+6550 | VT-453023 | [meta                     ] Listen, Heads up: Welcome to the part of the dataset where the AI talks about itself. For real. if you can. (alt)

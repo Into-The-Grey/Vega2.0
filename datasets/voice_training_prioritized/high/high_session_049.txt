@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 49 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2401 | VT-525994 | [interjection             ] Listen, FYI, Negative. if you can.
+2402 | VT-547876 | [interjection             ] Listen, Heads up: Kinda. Please. — got it. (alt)
+2403 | VT-661475 | [interjection             ] Heads up: Copy that. — confirm.
+2404 | VT-555319 | [interjection             ] Heads up: Understood. Right now. please.
+2405 | VT-675075 | [interjection             ] Real talk, Reminder: Understood. For real. if you can.
+2406 | VT-671600 | [interjection             ] Note: Hey, Mm-hmm. Please. — confirm. (alt)
+2407 | VT-521042 | [interjection             ] Quick one: Hey, Roger.—got it. please. (alt)
+2408 | VT-611889 | [interjection             ] Note: Okay, Maybe.—got it. — confirm.
+2409 | VT-539983 | [interjection             ] Quick one: Hey, Roger. For real. if you can.
+2410 | VT-688997 | [interjection             ] Quick one: Kinda.—got it. — got it. (alt)
+2411 | VT-626394 | [interjection             ] Real talk, Hey, Nah.—got it. — got it.
+2412 | VT-539503 | [interjection             ] Quick one: Heads up: Nah.—got it. — confirm.
+2413 | VT-510952 | [interjection             ] Note: Heads up: Alright. If possible. — confirm.
+2414 | VT-558382 | [interjection             ] Reminder: Heads up: Nah.—got it. please. (alt)
+2415 | VT-517844 | [interjection             ] Quick one: Listen, Alright. For real. please.
+2416 | VT-618569 | [interjection             ] Quick one: FYI, Roger. Thanks. if you can.
+2417 | VT-569084 | [interjection             ] FYI, Okay, Exactly. right now.
+2418 | VT-579851 | [interjection             ] Okay, Listen, Understood. Please. — now.
+2419 | VT-513522 | [interjection             ] Reminder: Note: Copy that. Please. — now.
+2420 | VT-645666 | [interjection             ] Heads up: Got it. Thanks. right now. (alt)
+2421 | VT-507951 | [interjection             ] Okay, Note: Exactly. If possible. — got it.
+2422 | VT-624505 | [interjection             ] Reminder: FYI, Negative. — now. (alt)
+2423 | VT-635355 | [interjection             ] Listen, Note: Uh-huh. Right now. — confirm.
+2424 | VT-596365 | [interjection             ] Heads up: Hey, Roger. Right now. right now.
+2425 | VT-525812 | [interrogative            ] Heads up: FYI, Why does it always rain when I'm unprepared?—copy. — confirm.
+2426 | VT-696874 | [interrogative            ] Real talk, Hey, Is this really what you want? Right now. — now.
+2427 | VT-559589 | [interrogative            ] Okay, FYI, Is this really what you want?—copy. — confirm.
+2428 | VT-658254 | [interrogative            ] FYI, Is this really what you want? For real.. (alt)
+2429 | VT-671437 | [interrogative            ] Heads up: Note: Do you even hear yourself right now?—got it. — confirm.
+2430 | VT-602537 | [interrogative            ] Real talk, Hey, Is this really what you want?.
+2431 | VT-564456 | [interrogative            ] Listen, Reminder: Is this really what you want?—copy. — now.
+2432 | VT-575744 | [interrogative            ] Okay, FYI, Why does it always rain when I'm unprepared?—copy. right now.
+2433 | VT-573257 | [interrogative            ] Real talk, Okay, Do you even hear yourself right now?—got it. right now.
+2434 | VT-683556 | [interrogative            ] FYI, Is this really what you want?—got it. — confirm. (alt)
+2435 | VT-695958 | [interrogative            ] FYI, Heads up: Why does it always rain when I'm unprepared?—got it. — now.
+2436 | VT-699778 | [interrogative            ] Reminder: Heads up: Is this really what you want? If possible. right now. (alt)
+2437 | VT-695700 | [interrogative            ] Okay, Reminder: Why does it always rain when I'm unprepared?—copy. — confirm.
+2438 | VT-557157 | [interrogative            ] Heads up: Do you even hear yourself right now? Thanks. — now.
+2439 | VT-626049 | [interrogative            ] Note: Listen, Do you even hear yourself right now? Thanks. — got it.
+2440 | VT-504407 | [interrogative            ] Okay, Reminder: Do you even hear yourself right now? Please. — now.
+2441 | VT-697226 | [interrogative            ] Quick one: Okay, Is this really what you want?—copy. right now.
+2442 | VT-589453 | [interrogative            ] Quick one: FYI, Do you even hear yourself right now? if you can.
+2443 | VT-651940 | [interrogative            ] Quick one: Do you even hear yourself right now? — got it.
+2444 | VT-596824 | [interrogative            ] FYI, Heads up: Why does it always rain when I'm unprepared?—got it. — got it.
+2445 | VT-698866 | [interrogative            ] Note: Do you even hear yourself right now?—got it. — now. (alt)
+2446 | VT-552857 | [interrogative            ] Quick one: Listen, Do you even hear yourself right now? For real. — confirm.
+2447 | VT-536894 | [interrogative            ] Heads up: Okay, Why does it always rain when I'm unprepared? If possible.
+2448 | VT-694688 | [interrogative            ] Reminder: Reminder: Is this really what you want?—copy.
+2449 | VT-508684 | [interrogative            ] Okay, FYI, Do you even hear yourself right now? For real. please.
+2450 | VT-637851 | [interrogative            ] Okay, Reminder: Why does it always rain when I'm unprepared? Please. — confirm.

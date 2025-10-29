@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 13 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0601 | VT-77548 | [dramatic                 ] Heads up: This isn't just a game—it’s everything.
+0602 | VT-72978 | [dramatic                 ] Note: I would burn the world to keep you warm. Right now.
+0603 | VT-61069 | [dramatic                 ] Listen, And then the silence screamed louder than words.—copy.
+0604 | VT-77548 | [dramatic                 ] Heads up: This isn't just a game—it’s everything.
+0605 | VT-61013 | [emoji                    ] FYI, Weather’s perfect for a walk 🌤️.
+0606 | VT-14657 | [emoji                    ] FYI, Let’s clean up those docs 🧹. Right now.
+0607 | VT-73137 | [emoji                    ] Reminder: Weather’s perfect for a walk 🌤️. Right now.
+0608 | VT-92568 | [emoji                    ] Note: Deep breaths. You got this. 💪
+0609 | VT-68175 | [emoji                    ] Reminder: Mic check, one, two… 🎤
+0610 | VT-57080 | [emoji                    ] FYI, Coffee first, then code ☕️💻. If possible.
+0611 | VT-38572 | [emoji                    ] Reminder: New high score! 🕹️ If possible.
+0612 | VT-61013 | [emoji                    ] FYI, Weather’s perfect for a walk 🌤️.
+0613 | VT-66319 | [emoji                    ] Coffee first, then code ☕️💻.—got it.
+0614 | VT-69370 | [emoji                    ] Hey, Deep breaths. You got this. 💪 Please.
+0615 | VT-52501 | [emoji                    ] Okay, We shipped it! 🎉 Please.
+0616 | VT-21219 | [emoji                    ] Hey, Mic check, one, two… 🎤—got it.
+0617 | VT-76900 | [emoji                    ] Let’s clean up those docs 🧹. Right now.
+0618 | VT-71504 | [emoji                    ] Listen, Ugh, my laptop froze again 😑.—copy.
+0619 | VT-86686 | [emoji                    ] Listen, Coffee first, then code ☕️💻.
+0620 | VT-26431 | [emoji                    ] Okay, New high score! 🕹️ Thanks.
+0621 | VT-75636 | [emoji                    ] Hey, Let’s clean up those docs 🧹.—got it.
+0622 | VT-68440 | [emoji                    ] Okay, Weather’s perfect for a walk 🌤️.—copy.
+0623 | VT-0492 | [emoji                    ] Coffee first, then code ☕️💻.
+0624 | VT-52501 | [emoji                    ] Okay, We shipped it! 🎉 Please.
+0625 | VT-81274 | [emoji                    ] Okay, We shipped it! 🎉 If possible.
+0626 | VT-26810 | [emoji                    ] Hey, We shipped it! 🎉 Right now.
+0627 | VT-99231 | [emoji                    ] Note: Let’s clean up those docs 🧹.—copy.
+0628 | VT-38572 | [emoji                    ] Reminder: New high score! 🕹️ If possible.
+0629 | VT-47749 | [emoji                    ] Heads up: New high score! 🕹️—got it.
+0630 | VT-26498 | [emoji                    ] Note: We shipped it! 🎉 For real.
+0631 | VT-17167 | [emoji                    ] Reminder: Coffee first, then code ☕️💻. Right now.
+0632 | VT-83929 | [emoji                    ] Reminder: Running late—be there soon 🚗💨. If possible.
+0633 | VT-43341 | [emoji                    ] Running late—be there soon 🚗💨.—copy.
+0634 | VT-43918 | [emoji                    ] Running late—be there soon 🚗💨. Thanks.
+0635 | VT-36595 | [emoji                    ] Listen, Let’s clean up those docs 🧹.—got it.
+0636 | VT-92568 | [emoji                    ] Note: Deep breaths. You got this. 💪
+0637 | VT-87048 | [emoji                    ] Okay, Deep breaths. You got this. 💪 Please.
+0638 | VT-14186 | [emoji                    ] Listen, New high score! 🕹️ Please.
+0639 | VT-40060 | [emoji                    ] Listen, We shipped it! 🎉 If possible.
+0640 | VT-35247 | [emoji                    ] Deep breaths. You got this. 💪—copy.
+0641 | VT-87327 | [emoji                    ] Hey, Ugh, my laptop froze again 😑.—got it.
+0642 | VT-26431 | [emoji                    ] Okay, New high score! 🕹️ Thanks.
+0643 | VT-14186 | [emoji                    ] Listen, New high score! 🕹️ Please.
+0644 | VT-12296 | [emoji                    ] Okay, Deep breaths. You got this. 💪 Please.
+0645 | VT-38572 | [emoji                    ] Reminder: New high score! 🕹️ If possible.
+0646 | VT-10463 | [emoji                    ] Listen, Weather’s perfect for a walk 🌤️.
+0647 | VT-54800 | [emoji                    ] Hey, Mic check, one, two… 🎤 Please.
+0648 | VT-43420 | [emoji                    ] Heads up: We shipped it! 🎉 If possible.
+0649 | VT-65116 | [emoji                    ] Heads up: Coffee first, then code ☕️💻.
+0650 | VT-83929 | [emoji                    ] Reminder: Running late—be there soon 🚗💨. If possible.

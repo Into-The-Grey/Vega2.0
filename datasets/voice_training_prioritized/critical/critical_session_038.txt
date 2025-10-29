@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 38 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1851 | VT-615376 | [denials_corrections      ] Reminder: Heads up: That was my mistake; here’s the fix.—got it. — now. (alt)
+1852 | VT-510529 | [denials_corrections      ] Okay, Okay, That assumption falls apart under pressure. For real. if you can.
+1853 | VT-527101 | [denials_corrections      ] Heads up: Negative—try a different approach.—got it. — now.
+1854 | VT-636086 | [denials_corrections      ] Note: No, that's not accurate. (alt)
+1855 | VT-677543 | [denials_corrections      ] Heads up: No, that's not accurate. For real. — now.
+1856 | VT-567276 | [denials_corrections      ] Heads up: Reminder: That assumption falls apart under pressure. Right now. please.
+1857 | VT-524011 | [denials_corrections      ] Quick one: Hey, No, that's not accurate.—copy. — confirm. (alt)
+1858 | VT-509410 | [denials_corrections      ] Real talk, You mixed up the units again.—got it. if you can.
+1859 | VT-567598 | [denials_corrections      ] Listen, False—cite your source. For real. thanks. (alt)
+1860 | VT-633532 | [denials_corrections      ] Real talk, Okay, That was my mistake; here’s the fix. For real. — confirm.
+1861 | VT-529453 | [denials_corrections      ] Okay, Reminder: Close, but not quite. — confirm.
+1862 | VT-646299 | [denials_corrections      ] Quick one: Listen, Retract the last statement.—copy. — confirm.
+1863 | VT-505471 | [denials_corrections      ] Note: Amend the record accordingly. Thanks..
+1864 | VT-501651 | [denials_corrections      ] Hey, Negative—try a different approach. Thanks. — confirm.
+1865 | VT-609465 | [denials_corrections      ] Real talk, Retract the last statement. — confirm.
+1866 | VT-562048 | [denials_corrections      ] Heads up: Heads up: Amend the record accordingly. For real. please.
+1867 | VT-579792 | [denials_corrections      ] Listen, You mixed up the units again.—copy. — now.
+1868 | VT-531398 | [denials_corrections      ] FYI, Hey, Amend the record accordingly. Please. right now.
+1869 | VT-601192 | [denials_corrections      ] Listen, FYI, Negative—try a different approach. Right now. — confirm.
+1870 | VT-667832 | [denials_corrections      ] Listen, Hey, Close, but not quite.—got it. right now. (alt)
+1871 | VT-683137 | [denials_corrections      ] Listen, FYI, No, that's not accurate. For real. right now.
+1872 | VT-654398 | [denials_corrections      ] FYI, Heads up: Close, but not quite. Please. if you can.
+1873 | VT-675386 | [denials_corrections      ] Reminder: That was my mistake; here’s the fix. — confirm.
+1874 | VT-671678 | [denials_corrections      ] Real talk, Hey, That assumption falls apart under pressure. Please. — got it. (alt)
+1875 | VT-606523 | [denials_corrections      ] Listen, FYI, That assumption falls apart under pressure. Right now. right now. (alt)
+1876 | VT-679837 | [denials_corrections      ] Listen, Okay, No, that's not accurate. Right now. — confirm. (alt)
+1877 | VT-608676 | [denials_corrections      ] Heads up: Negative—try a different approach. Thanks. thanks.
+1878 | VT-574714 | [denials_corrections      ] Quick one: Listen, Amend the record accordingly. If possible. right now.
+1879 | VT-615076 | [denials_corrections      ] Quick one: Listen, Negative—try a different approach..
+1880 | VT-661407 | [denials_corrections      ] Note: Reminder: Close, but not quite. please.
+1881 | VT-692783 | [denials_corrections      ] Okay, Close, but not quite. please.
+1882 | VT-668591 | [denials_corrections      ] Quick one: Hey, Negative—try a different approach.—copy. thanks.
+1883 | VT-521439 | [denials_corrections      ] Real talk, Negative—try a different approach. If possible. if you can.
+1884 | VT-635080 | [denials_corrections      ] Real talk, Note: Incorrect; re-run the test. For real. thanks. (alt)
+1885 | VT-574274 | [denials_corrections      ] Heads up: Negative—try a different approach..
+1886 | VT-619332 | [denials_corrections      ] FYI, Negative—try a different approach. If possible. right now. (alt)
+1887 | VT-637260 | [denials_corrections      ] Real talk, Listen, Incorrect; re-run the test..
+1888 | VT-538924 | [denials_corrections      ] FYI, Hey, Negative—try a different approach. Thanks. thanks.
+1889 | VT-547345 | [denials_corrections      ] Heads up: Okay, Close, but not quite. For real.. (alt)
+1890 | VT-690495 | [denials_corrections      ] Hey, Negative—try a different approach. Thanks. thanks.
+1891 | VT-550032 | [denials_corrections      ] Real talk, Reminder: That assumption falls apart under pressure. Right now.
+1892 | VT-638611 | [denials_corrections      ] Reminder: That was my mistake; here’s the fix. For real. — got it. (alt)
+1893 | VT-560036 | [denials_corrections      ] Quick one: Listen, That assumption falls apart under pressure. If possible. — confirm.
+1894 | VT-674496 | [denials_corrections      ] Amend the record accordingly.—copy..
+1895 | VT-602520 | [denials_corrections      ] Quick one: Close, but not quite.—copy. — confirm.
+1896 | VT-546579 | [denials_corrections      ] Listen, FYI, No, that's not accurate. For real. if you can. (alt)
+1897 | VT-658121 | [denials_corrections      ] Real talk, You mixed up the units again.—copy. if you can.
+1898 | VT-641645 | [denials_corrections      ] Reminder: FYI, Negative—try a different approach. please.
+1899 | VT-545784 | [denials_corrections      ] Quick one: Okay, Negative—try a different approach. Right now..
+1900 | VT-528427 | [denials_corrections      ] Listen, Okay, Negative—try a different approach.—copy.

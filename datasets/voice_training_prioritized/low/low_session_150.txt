@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 150 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7451 | VT-637571 | [addresses_generic        ] Reminder: Listen, Use the service elevator—freight only.—got it. — confirm.
+7452 | VT-523966 | [addresses_generic        ] Listen, Hey, Cross streets are Maple and 8th. Thanks. please.
+7453 | VT-596098 | [addresses_generic        ] Real talk, Okay, The ZIP code is 60614, not 60641. Please.
+7454 | VT-534036 | [addresses_generic        ] Real talk, Note: Ship it to 123 Example Street, Suite 400, Springfield.—got it. — confirm.
+7455 | VT-529505 | [addresses_generic        ] Heads up: Note: The ZIP code is 60614, not 60641. For real. thanks.
+7456 | VT-676752 | [addresses_generic        ] Quick one: Corner house with the red door.
+7457 | VT-697634 | [addresses_generic        ] Heads up: Hey, Deliver to the northeast loading dock. Right now. thanks.
+7458 | VT-511960 | [addresses_generic        ] Listen, Deliver to the northeast loading dock. Thanks.
+7459 | VT-579784 | [addresses_generic        ] Listen, Listen, Ship it to 123 Example Street, Suite 400, Springfield.—got it.. (alt)
+7460 | VT-691516 | [addresses_generic        ] Heads up: Hey, Cross streets are Maple and 8th. If possible. — got it.
+7461 | VT-592947 | [addresses_generic        ] Note: Use the service elevator—freight only. If possible. — now. (alt)
+7462 | VT-561497 | [addresses_generic        ] Listen, Hey, Cross streets are Maple and 8th. If possible.
+7463 | VT-624894 | [addresses_generic        ] Quick one: FYI, The ZIP code is 60614, not 60641. — now.
+7464 | VT-660451 | [addresses_generic        ] FYI, The ZIP code is 60614, not 60641..
+7465 | VT-573724 | [addresses_generic        ] Note: Cross streets are Maple and 8th. Please. please.
+7466 | VT-570994 | [addresses_generic        ] Okay, Hey, Cross streets are Maple and 8th.—copy.
+7467 | VT-639034 | [addresses_generic        ] Real talk, Apartment 3C, buzzer code 5147. For real. — now.
+7468 | VT-664503 | [addresses_generic        ] Okay, Cross streets are Maple and 8th. right now. (alt)
+7469 | VT-532206 | [addresses_generic        ] Heads up: Hey, Cross streets are Maple and 8th.—copy. — confirm.
+7470 | VT-501591 | [addresses_generic        ] Heads up: Apartment 3C, buzzer code 5147. Please. thanks. (alt)
+7471 | VT-553540 | [addresses_generic        ] Heads up: FYI, Cross streets are Maple and 8th.—got it. — now.
+7472 | VT-665521 | [addresses_generic        ] Note: The ZIP code is 60614, not 60641.—copy. — now.
+7473 | VT-536499 | [addresses_generic        ] Reminder: Cross streets are Maple and 8th.—copy. — now.
+7474 | VT-627109 | [addresses_generic        ] Note: Hey, Deliver to the northeast loading dock.—copy. please.
+7475 | VT-553365 | [addresses_generic        ] Real talk, Okay, Corner house with the red door. Thanks. — now.
+7476 | VT-516840 | [addresses_generic        ] Heads up: Reminder: Deliver to the northeast loading dock. If possible. right now.
+7477 | VT-532850 | [addresses_generic        ] Heads up: Use the service elevator—freight only. Thanks..
+7478 | VT-543785 | [addresses_generic        ] Heads up: Okay, The ZIP code is 60614, not 60641. For real. — got it. (alt)
+7479 | VT-557465 | [addresses_generic        ] Listen, Note: Ship it to 123 Example Street, Suite 400, Springfield.—got it. — got it.
+7480 | VT-582261 | [addresses_generic        ] Note: Reminder: Unit B, second floor, back entrance. Right now. — confirm.
+7481 | VT-614137 | [addresses_generic        ] FYI, Cross streets are Maple and 8th. — now.
+7482 | VT-531064 | [addresses_generic        ] Okay, Listen, Cross streets are Maple and 8th.
+7483 | VT-579274 | [addresses_generic        ] Note: Listen, Cross streets are Maple and 8th. If possible. — got it.
+7484 | VT-518815 | [code_readouts            ] Okay, Listen, Function signature: def handler(event, context): Right now. — now.
+7485 | VT-591807 | [code_readouts            ] Quick one: Hey, Throw a try-catch around the parser. Thanks..
+7486 | VT-627498 | [code_readouts            ] FYI, FYI, Function signature: def handler(event, context): Thanks.
+7487 | VT-561206 | [code_readouts            ] FYI, Reminder: Export PATH equals dollar HOME slash bin colon PATH.—copy. right now.
+7488 | VT-509413 | [code_readouts            ] Reminder: Reminder: Docker build dash t app colon latest dot Thanks. thanks.
+7489 | VT-674521 | [code_readouts            ] Reminder: Run pip install requests in a clean virtual environment. Thanks. — confirm.
+7490 | VT-640032 | [code_readouts            ] Okay, Backtick, backtick, python: print open parenthesis 'hello' close parenthesis.—got it. — confirm.
+7491 | VT-522431 | [code_readouts            ] Note: Listen, Function signature: def handler(event, context): Right now.
+7492 | VT-551898 | [code_readouts            ] Reminder: Run pip install requests in a clean virtual environment. Please. — confirm.
+7493 | VT-639117 | [code_readouts            ] Quick one: Heads up: Export PATH equals dollar HOME slash bin colon PATH. Please. please.
+7494 | VT-522188 | [code_readouts            ] FYI, Kubernetes pod restarted due to OOMKill.—copy. thanks.
+7495 | VT-554782 | [code_readouts            ] Reminder: Heads up: Docker build dash t app colon latest dot—got it.
+7496 | VT-601642 | [code_readouts            ] Okay, Throw a try-catch around the parser. For real. thanks.
+7497 | VT-662015 | [code_readouts            ] Note: FYI, Return HTTP 200 with JSON payload.—got it. — now.
+7498 | VT-524046 | [code_readouts            ] FYI, Okay, Run pip install requests in a clean virtual environment. For real. thanks.
+7499 | VT-638170 | [code_readouts            ] FYI, Reminder: Backtick, backtick, python: print open parenthesis 'hello' close parenthesis. Right now. right now.
+7500 | VT-559565 | [code_readouts            ] Okay, Okay, Throw a try-catch around the parser. Thanks..

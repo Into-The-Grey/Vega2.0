@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 15 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0701 | VT-55376 | [emoji                    ] Running late—be there soon 🚗💨. Right now.
+0702 | VT-61670 | [emoji                    ] Hey, New high score! 🕹️—copy.
+0703 | VT-20719 | [emoji                    ] Reminder: That meeting was 🔥 — concise and effective. If possible.
+0704 | VT-14841 | [emoji                    ] Okay, Weather’s perfect for a walk 🌤️. Thanks.
+0705 | VT-14841 | [emoji                    ] Okay, Weather’s perfect for a walk 🌤️. Thanks.
+0706 | VT-38287 | [emoji                    ] Note: Weather’s perfect for a walk 🌤️. Please.
+0707 | VT-37200 | [emoji                    ] Listen, Weather’s perfect for a walk 🌤️. If possible.
+0708 | VT-0496 | [emoji                    ] Deep breaths. You got this. 💪
+0709 | VT-57330 | [emoji                    ] Okay, New high score! 🕹️ For real.
+0710 | VT-52548 | [emoji                    ] FYI, We shipped it! 🎉 Please.
+0711 | VT-12296 | [emoji                    ] Okay, Deep breaths. You got this. 💪 Please.
+0712 | VT-57080 | [emoji                    ] FYI, Coffee first, then code ☕️💻. If possible.
+0713 | VT-76348 | [emoji                    ] Listen, Coffee first, then code ☕️💻.
+0714 | VT-17558 | [emoji                    ] Note: Coffee first, then code ☕️💻. Thanks.
+0715 | VT-38287 | [emoji                    ] Note: Weather’s perfect for a walk 🌤️. Please.
+0716 | VT-91854 | [emoji                    ] We shipped it! 🎉—got it.
+0717 | VT-45152 | [emoji                    ] Note: New high score! 🕹️
+0718 | VT-81850 | [emoji                    ] Coffee first, then code ☕️💻. For real.
+0719 | VT-38992 | [emoji                    ] Hey, Mic check, one, two… 🎤—got it.
+0720 | VT-74424 | [emoji                    ] FYI, Running late—be there soon 🚗💨. Please.
+0721 | VT-77066 | [emoji                    ] Note: Coffee first, then code ☕️💻. Thanks.
+0722 | VT-71504 | [emoji                    ] Listen, Ugh, my laptop froze again 😑.—copy.
+0723 | VT-47997 | [emoji                    ] Hey, Deep breaths. You got this. 💪—copy.
+0724 | VT-66549 | [emoji                    ] Heads up: New high score! 🕹️ Thanks.
+0725 | VT-87048 | [emoji                    ] Okay, Deep breaths. You got this. 💪 Please.
+0726 | VT-26431 | [emoji                    ] Okay, New high score! 🕹️ Thanks.
+0727 | VT-0497 | [emoji                    ] New high score! 🕹️
+0728 | VT-0496 | [emoji                    ] Deep breaths. You got this. 💪
+0729 | VT-72471 | [emoji                    ] Hey, Coffee first, then code ☕️💻. Please.
+0730 | VT-61013 | [emoji                    ] FYI, Weather’s perfect for a walk 🌤️.
+0731 | VT-54778 | [emoji                    ] FYI, Mic check, one, two… 🎤 For real.
+0732 | VT-14247 | [emoji                    ] Listen, Mic check, one, two… 🎤 For real.
+0733 | VT-92568 | [emoji                    ] Note: Deep breaths. You got this. 💪
+0734 | VT-51648 | [emoji                    ] Listen, Let’s clean up those docs 🧹. For real.
+0735 | VT-36079 | [emoji                    ] Listen, Coffee first, then code ☕️💻. Thanks.
+0736 | VT-74169 | [emoji                    ] Note: Ugh, my laptop froze again 😑. For real.
+0737 | VT-79492 | [emoji                    ] Running late—be there soon 🚗💨. Please.
+0738 | VT-46665 | [emoji                    ] Note: Weather’s perfect for a walk 🌤️. Please.
+0739 | VT-83549 | [emoji                    ] FYI, That meeting was 🔥 — concise and effective.—copy.
+0740 | VT-69072 | [emoji                    ] Note: Coffee first, then code ☕️💻. Please.
+0741 | VT-83549 | [emoji                    ] FYI, That meeting was 🔥 — concise and effective.—copy.
+0742 | VT-65116 | [emoji                    ] Heads up: Coffee first, then code ☕️💻.
+0743 | VT-45152 | [emoji                    ] Note: New high score! 🕹️
+0744 | VT-92539 | [emoji                    ] Okay, Weather’s perfect for a walk 🌤️.
+0745 | VT-79199 | [emoji                    ] Hey, New high score! 🕹️—copy.
+0746 | VT-17293 | [emoji                    ] FYI, Running late—be there soon 🚗💨.—copy.
+0747 | VT-27788 | [emoji                    ] Listen, That meeting was 🔥 — concise and effective. Please.
+0748 | VT-52631 | [emoji                    ] Okay, Weather’s perfect for a walk 🌤️. Please.
+0749 | VT-98274 | [emoji                    ] Hey, Let’s clean up those docs 🧹.
+0750 | VT-80107 | [emoji                    ] Hey, New high score! 🕹️ If possible.

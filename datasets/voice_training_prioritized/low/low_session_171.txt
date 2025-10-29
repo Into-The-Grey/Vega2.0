@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 171 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+8501 | VT-543044 | [monotone_minimal         ] Heads up: Okay. If possible.
+8502 | VT-679249 | [monotone_minimal         ] Heads up: Hey, Done.—copy. — got it.
+8503 | VT-580646 | [monotone_minimal         ] Quick one: Hey, No. Please. if you can.
+8504 | VT-516252 | [monotone_minimal         ] Reminder: Sure. — confirm.
+8505 | VT-667623 | [monotone_minimal         ] Listen, Reminder: Unknown. For real..
+8506 | VT-653977 | [monotone_minimal         ] Note: Reminder: Unknown.—got it. right now.
+8507 | VT-618563 | [monotone_minimal         ] Quick one: Listen, Unknown. If possible.
+8508 | VT-655097 | [monotone_minimal         ] Heads up: Done. If possible.. (alt)
+8509 | VT-509667 | [monotone_minimal         ] Okay, FYI, Okay. Please. — now.
+8510 | VT-657399 | [monotone_minimal         ] Listen, Note: Okay. If possible. thanks. (alt)
+8511 | VT-573687 | [monotone_minimal         ] FYI, Heads up: Unknown. Please. — confirm.
+8512 | VT-522596 | [monotone_minimal         ] Okay, FYI, Sure. Right now. — got it. (alt)
+8513 | VT-677433 | [monotone_minimal         ] Reminder: Heads up: Retry. Right now. please.
+8514 | VT-661267 | [monotone_minimal         ] Note: Retry. Please. — now.
+8515 | VT-608703 | [monotone_minimal         ] Listen, Note: Retry.—got it. right now.
+8516 | VT-567847 | [monotone_minimal         ] Listen, Heads up: Done.—copy..
+8517 | VT-545368 | [monotone_minimal         ] Okay, Proceed.—copy. — now. (alt)
+8518 | VT-698843 | [monotone_minimal         ] Real talk, Proceed. If possible. please.
+8519 | VT-509426 | [monotone_minimal         ] Real talk, Heads up: Okay. Thanks. right now.
+8520 | VT-632046 | [monotone_minimal         ] Okay, Listen, Unknown. Please. right now. (alt)
+8521 | VT-630014 | [monotone_minimal         ] Quick one: Proceed. If possible. — got it.
+8522 | VT-504497 | [monotone_minimal         ] Note: Heads up: Fine. Thanks.
+8523 | VT-681288 | [monotone_minimal         ] Heads up: Heads up: Okay. If possible. please.
+8524 | VT-689701 | [monotone_minimal         ] FYI, Heads up: Okay. Thanks. thanks.
+8525 | VT-692690 | [monotone_minimal         ] Okay, Heads up: Proceed. If possible. if you can.
+8526 | VT-657721 | [monotone_minimal         ] Listen, FYI, Okay. Please. — got it.
+8527 | VT-579353 | [monotone_minimal         ] FYI, Note: No. Right now. — got it. (alt)
+8528 | VT-671464 | [monotone_minimal         ] Real talk, Confirmed. If possible. thanks.
+8529 | VT-519132 | [monotone_minimal         ] Real talk, Note: Unknown. right now.
+8530 | VT-530238 | [monotone_minimal         ] Reminder: Sure. Please. please.
+8531 | VT-615184 | [monotone_minimal         ] Heads up: Heads up: Retry. Right now. right now.
+8532 | VT-678294 | [monotone_minimal         ] FYI, Reminder: Done. For real. if you can.
+8533 | VT-569096 | [monotone_minimal         ] Quick one: FYI, Fine. Thanks..
+8534 | VT-598926 | [monotone_minimal         ] Listen, Retry.
+8535 | VT-512713 | [monotone_minimal         ] Okay, Done. Right now. — got it.
+8536 | VT-595685 | [monotone_minimal         ] Heads up: Hey, No. Please..
+8537 | VT-570611 | [monotone_minimal         ] Heads up: Heads up: Done. If possible. thanks.
+8538 | VT-506772 | [monotone_minimal         ] Note: Heads up: Fine. — now.
+8539 | VT-687752 | [monotone_minimal         ] Reminder: FYI, Sure. Right now..
+8540 | VT-628267 | [monotone_minimal         ] Reminder: Heads up: Okay.—copy. — now.
+8541 | VT-653313 | [monotone_minimal         ] Reminder: Reminder: Sure.—copy. — got it.
+8542 | VT-548738 | [monotone_minimal         ] FYI, Unknown..
+8543 | VT-597911 | [monotone_minimal         ] Real talk, Proceed. If possible. if you can.
+8544 | VT-622697 | [monotone_minimal         ] Real talk, Hey, Proceed. If possible..
+8545 | VT-609322 | [monotone_minimal         ] Note: Reminder: Okay. If possible.. (alt)
+8546 | VT-684926 | [monotone_minimal         ] Okay, FYI, Fine.
+8547 | VT-543756 | [monotone_minimal         ] Heads up: Done.—copy. right now.
+8548 | VT-629105 | [monotone_minimal         ] Listen, Note: Fine. If possible.
+8549 | VT-608604 | [monotone_minimal         ] Real talk, Sure. Please. if you can.
+8550 | VT-566726 | [monotone_minimal         ] Listen, Sure. — now.

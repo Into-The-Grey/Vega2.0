@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 41 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2001 | VT-489276 | [multilingual             ] Note: Bonjour, je m’appelle Alex. Please. please.
+2002 | VT-411264 | [multilingual             ] Quick one: Reminder: Muito obrigado pela resposta. — now.
+2003 | VT-431401 | [multilingual             ] Quick one: Okay, Grazie mille, davvero. If possible. — got it.
+2004 | VT-454838 | [multilingual             ] Heads up: Okay, 감사합니다, 다음에 봐요. For real. if you can. (alt)
+2005 | VT-461353 | [multilingual             ] Okay, Note: धन्यवाद, फिर मिलेंगे।—copy..
+2006 | VT-420051 | [multilingual             ] Quick one: FYI, Salam, sab thik hai? For real. — got it.
+2007 | VT-492885 | [multilingual             ] Real talk, Merci beaucoup pour votre aide. Thanks..
+2008 | VT-408614 | [multilingual             ] Listen, Heads up: 안녕하세요, 오늘 기분 어때요?—got it. — confirm.
+2009 | VT-416307 | [multilingual             ] Listen, Heads up: 你好，今天忙吗？ Thanks..
+2010 | VT-452753 | [multilingual             ] Note: FYI, Bonjour, je m’appelle Alex. For real. please.
+2011 | VT-489162 | [multilingual             ] Quick one: FYI, 谢谢你的时间。 Right now.. (alt)
+2012 | VT-449704 | [multilingual             ] Note: Listen, Olá, tudo bem?—copy.
+2013 | VT-454165 | [multilingual             ] Heads up: Reminder: ¡Excelente trabajo! Thanks. if you can. (alt)
+2014 | VT-408351 | [multilingual             ] FYI, FYI, Salam, sab thik hai? For real. please.
+2015 | VT-416787 | [multilingual             ] Heads up: Heads up: Ciao, ci vediamo domani. For real. — now.
+2016 | VT-457600 | [multilingual             ] Okay, FYI, Ciao, ci vediamo domani.—copy.
+2017 | VT-423307 | [multilingual             ] Heads up: Olá, tudo bem? Right now. — got it.
+2018 | VT-478457 | [multilingual             ] Quick one: Reminder: Muito obrigado pela resposta..
+2019 | VT-423819 | [multilingual             ] Quick one: Muito obrigado pela resposta. Thanks. — confirm.
+2020 | VT-413757 | [multilingual             ] Heads up: Hey, Ciao, ci vediamo domani.—copy. please. (alt)
+2021 | VT-420419 | [multilingual             ] Reminder: FYI, 감사합니다, 다음에 봐요.—got it. right now.
+2022 | VT-468263 | [multilingual             ] Quick one: Listen, नमस्ते, आप कैसे हैं? Please. right now.
+2023 | VT-456589 | [multilingual             ] Okay, Okay, नमस्ते, आप कैसे हैं?—copy. right now. (alt)
+2024 | VT-444372 | [multilingual             ] Listen, Hey, こんにちは、お元気ですか。 Thanks.
+2025 | VT-484211 | [multilingual             ] Heads up: Hey, Olá, tudo bem?—got it. thanks.
+2026 | VT-402349 | [multilingual             ] FYI, धन्यवाद, फिर मिलेंगे। please. (alt)
+2027 | VT-420578 | [multilingual             ] Real talk, Listen, धन्यवाद, फिर मिलेंगे।—copy. — confirm.
+2028 | VT-470344 | [multilingual             ] Okay, Reminder: 谢谢你的时间。 please.
+2029 | VT-405556 | [multilingual             ] Heads up: Note: Salam, sab thik hai? Please. — now.
+2030 | VT-465905 | [multilingual             ] Hey, धन्यवाद, फिर मिलेंगे। Thanks. please.
+2031 | VT-491245 | [multilingual             ] Quick one: Okay, 你好，今天忙吗？ For real. thanks.
+2032 | VT-407627 | [multilingual             ] Quick one: FYI, 谢谢你的时间。 Right now. right now.
+2033 | VT-464585 | [multilingual             ] Real talk, Reminder: 谢谢你的时间。 — confirm. (alt)
+2034 | VT-483328 | [multilingual             ] FYI, Reminder: धन्यवाद, फिर मिलेंगे। Please. — got it.
+2035 | VT-424027 | [multilingual             ] Heads up: Reminder: Muito obrigado pela resposta. please.
+2036 | VT-407717 | [multilingual             ] Okay, ¡Excelente trabajo! Right now. — now.
+2037 | VT-434517 | [multilingual             ] Okay, Listen, شكراً لك على المساعدة.—got it. — got it.
+2038 | VT-449603 | [multilingual             ] Okay, Ciao, ci vediamo domani..
+2039 | VT-446204 | [multilingual             ] Okay, Bonjour, je m’appelle Alex.—copy. right now.
+2040 | VT-424929 | [multilingual             ] Heads up: Listen, नमस्ते, आप कैसे हैं? Please. please.
+2041 | VT-479905 | [multilingual             ] Note: Note: 안녕하세요, 오늘 기분 어때요? Thanks..
+2042 | VT-438064 | [multilingual             ] FYI, Hola, ¿cómo estás? — confirm.
+2043 | VT-410417 | [multilingual             ] Okay, Listen, Olá, tudo bem? For real. right now.
+2044 | VT-410317 | [tongue_twister           ] Reminder: Toy boat, toy boat, toy boat. if you can. (alt)
+2045 | VT-408238 | [tongue_twister           ] FYI, Okay, Zingy zebras zap zzightly. Thanks. please.
+2046 | VT-411349 | [tongue_twister           ] Note: Silly sapphires slip ssightly.. (alt)
+2047 | VT-496944 | [tongue_twister           ] Quick one: Freshly fried flying fish.
+2048 | VT-491428 | [tongue_twister           ] Heads up: Chilly chimneys chuff chalky charcoal clouds. — got it.
+2049 | VT-488675 | [tongue_twister           ] Note: Tangled turntables tumble ttightly. — confirm. (alt)
+2050 | VT-412005 | [tongue_twister           ] Quick one: Plucky puddles paddle ppightly. thanks.

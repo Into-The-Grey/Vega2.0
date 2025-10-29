@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 173 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+8601 | VT-633218 | [negations                ] FYI, Listen, Nothing about this is simple. Thanks. — now.
+8602 | VT-634512 | [negations                ] Note: Okay, Nothing about this is simple.—got it. — got it.
+8603 | VT-626055 | [negations                ] Reminder: Heads up: No chance..
+8604 | VT-564720 | [negations                ] Listen, Reminder: Never deploy on Friday. Right now. — got it.
+8605 | VT-576696 | [negations                ] Listen, Never deploy on Friday. Please..
+8606 | VT-671497 | [negations                ] Heads up: Note: Do not open that email. Right now. right now.
+8607 | VT-503380 | [negations                ] Okay, That’s not what I asked for. Please. if you can.
+8608 | VT-623007 | [negations                ] FYI, Heads up: Never deploy on Friday. Right now. if you can.
+8609 | VT-528200 | [negations                ] Listen, Heads up: No logs, no proof. — now.
+8610 | VT-666448 | [negations                ] Listen, Hey, Do not open that email. Please. — now.
+8611 | VT-504226 | [negations                ] Note: Do not open that email. Right now. — confirm.
+8612 | VT-696400 | [negations                ] Reminder: Note: Never deploy on Friday. If possible.
+8613 | VT-699614 | [negations                ] Okay, Note: Do not open that email. Thanks..
+8614 | VT-586595 | [negations                ] FYI, We can’t ship without tests.—got it. — now.
+8615 | VT-533972 | [negations                ] FYI, FYI, I won’t sign off on that. right now.
+8616 | VT-692578 | [negations                ] Real talk, Reminder: That’s not what I asked for. Please. thanks. (alt)
+8617 | VT-608880 | [negations                ] Listen, Listen, I’m not doing that again. Please. — now. (alt)
+8618 | VT-612414 | [negations                ] Note: Note: Nothing about this is simple. For real. — confirm.
+8619 | VT-696802 | [negations                ] Note: Hey, No chance. Thanks. thanks. (alt)
+8620 | VT-660610 | [negations                ] Note: Listen, No logs, no proof.—got it. — got it.
+8621 | VT-616111 | [negations                ] Quick one: Nothing about this is simple. if you can.
+8622 | VT-504882 | [negations                ] Note: FYI, No chance.—got it. — now.
+8623 | VT-558575 | [negations                ] We can’t ship without tests. Right now. — confirm.
+8624 | VT-548200 | [negations                ] Okay, Reminder: No chance. Please. please.
+8625 | VT-553901 | [negations                ] Reminder: Reminder: No logs, no proof. Please. thanks. (alt)
+8626 | VT-508227 | [negations                ] Note: FYI, I’m not doing that again. — confirm. (alt)
+8627 | VT-508290 | [negations                ] Real talk, Heads up: Do not open that email. For real. — now.
+8628 | VT-685728 | [negations                ] I’m not doing that again.—copy..
+8629 | VT-627371 | [negations                ] Okay, That’s not what I asked for. — now.
+8630 | VT-605075 | [negations                ] Listen, Never deploy on Friday. Please. if you can.
+8631 | VT-614005 | [negations                ] FYI, Note: Never deploy on Friday.—copy. please.
+8632 | VT-684960 | [negations                ] Heads up: FYI, Do not open that email. — confirm. (alt)
+8633 | VT-579322 | [negations                ] Reminder: Reminder: No logs, no proof.—got it. thanks.
+8634 | VT-696898 | [negations                ] Okay, Hey, No chance. For real. — got it.
+8635 | VT-536863 | [negations                ] Heads up: Hey, No logs, no proof..
+8636 | VT-583913 | [negations                ] Listen, I’m not doing that again. Please. — now.
+8637 | VT-519317 | [negations                ] Listen, I’m not doing that again. — confirm.
+8638 | VT-596868 | [negations                ] Reminder: Heads up: No logs, no proof.—copy. right now. (alt)
+8639 | VT-684809 | [negations                ] Quick one: Okay, No logs, no proof. Thanks. if you can. (alt)
+8640 | VT-683953 | [negations                ] Reminder: Note: Not now, not ever. — confirm. (alt)
+8641 | VT-634772 | [negations                ] No logs, no proof..
+8642 | VT-611678 | [negations                ] Real talk, Okay, No logs, no proof. Thanks..
+8643 | VT-569970 | [negations                ] Real talk, FYI, Not now, not ever. For real..
+8644 | VT-597068 | [negations                ] Reminder: Okay, No logs, no proof..
+8645 | VT-678337 | [negations                ] Okay, FYI, I’m not doing that again.—got it. if you can.
+8646 | VT-522691 | [negations                ] Note: Listen, No logs, no proof.—got it. — confirm.
+8647 | VT-546367 | [negations                ] Heads up: Hey, Never deploy on Friday. please. (alt)
+8648 | VT-548556 | [negations                ] Okay, Note: That’s not what I asked for. If possible. please.
+8649 | VT-624104 | [negations                ] FYI, Reminder: Never deploy on Friday. Right now.
+8650 | VT-512389 | [negations                ] Quick one: Listen, No chance. Right now. — got it.

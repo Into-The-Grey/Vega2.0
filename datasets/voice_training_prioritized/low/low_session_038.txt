@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 38 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1851 | VT-14531 | [legalese                 ] FYI, Breach may result in injunctive relief.
+1852 | VT-78845 | [legalese                 ] Heads up: Indemnify and hold harmless the disclosing party. For real.
+1853 | VT-21425 | [legalese                 ] Reminder: This notice constitutes neither an offer nor a solicitation. Thanks.
+1854 | VT-14240 | [legalese                 ] Okay, Notwithstanding the foregoing, this agreement shall remain in effect.—got it.
+1855 | VT-45439 | [legalese                 ] Okay, This notice constitutes neither an offer nor a solicitation. Thanks.
+1856 | VT-52172 | [legalese                 ] The parties agree to binding arbitration.
+1857 | VT-71449 | [legalese                 ] Heads up: Time is of the essence with respect to performance.
+1858 | VT-38341 | [legalese                 ] Reminder: Time is of the essence with respect to performance.
+1859 | VT-37368 | [legalese                 ] Hey, Notwithstanding the foregoing, this agreement shall remain in effect. Right now.
+1860 | VT-19358 | [legalese                 ] Note: Indemnify and hold harmless the disclosing party. For real.
+1861 | VT-28701 | [legalese                 ] Reminder: Breach may result in injunctive relief. Please.
+1862 | VT-74589 | [legalese                 ] FYI, Indemnify and hold harmless the disclosing party.—got it.
+1863 | VT-91239 | [legalese                 ] Okay, This notice constitutes neither an offer nor a solicitation.—copy.
+1864 | VT-63029 | [legalese                 ] This notice constitutes neither an offer nor a solicitation.
+1865 | VT-28035 | [legalese                 ] Okay, Indemnify and hold harmless the disclosing party. Thanks.
+1866 | VT-75424 | [legalese                 ] Note: Indemnify and hold harmless the disclosing party. Thanks.
+1867 | VT-44386 | [legalese                 ] Note: This warranty is provided as-is without limitation. For real.
+1868 | VT-89271 | [legalese                 ] Indemnify and hold harmless the disclosing party.
+1869 | VT-75424 | [legalese                 ] Note: Indemnify and hold harmless the disclosing party. Thanks.
+1870 | VT-59571 | [legalese                 ] This warranty is provided as-is without limitation.
+1871 | VT-87228 | [legalese                 ] FYI, Indemnify and hold harmless the disclosing party. Thanks.
+1872 | VT-20578 | [legalese                 ] This notice constitutes neither an offer nor a solicitation. If possible.
+1873 | VT-55125 | [legalese                 ] Reminder: Indemnify and hold harmless the disclosing party. If possible.
+1874 | VT-45021 | [legalese                 ] Hey, Time is of the essence with respect to performance.—copy.
+1875 | VT-50797 | [legalese                 ] Okay, The parties agree to binding arbitration. Please.
+1876 | VT-88834 | [legalese                 ] Time is of the essence with respect to performance. Thanks.
+1877 | VT-41196 | [legalese                 ] Reminder: Breach may result in injunctive relief.
+1878 | VT-50472 | [legalese                 ] Note: This notice constitutes neither an offer nor a solicitation. Right now.
+1879 | VT-14240 | [legalese                 ] Okay, Notwithstanding the foregoing, this agreement shall remain in effect.—got it.
+1880 | VT-21259 | [legalese                 ] FYI, Subject to applicable law and equitable principles.—copy.
+1881 | VT-64037 | [legalese                 ] Indemnify and hold harmless the disclosing party.—got it.
+1882 | VT-64353 | [legalese                 ] Reminder: Indemnify and hold harmless the disclosing party.—got it.
+1883 | VT-65591 | [legalese                 ] Listen, Indemnify and hold harmless the disclosing party.
+1884 | VT-29474 | [legalese                 ] Heads up: Notwithstanding the foregoing, this agreement shall remain in effect. If possible.
+1885 | VT-83431 | [legalese                 ] Reminder: Force majeure includes acts of God and regulatory action. Right now.
+1886 | VT-88834 | [legalese                 ] Time is of the essence with respect to performance. Thanks.
+1887 | VT-71587 | [legalese                 ] Reminder: Time is of the essence with respect to performance.—copy.
+1888 | VT-71677 | [legalese                 ] Note: Time is of the essence with respect to performance. For real.
+1889 | VT-64031 | [legalese                 ] Okay, Severability ensures the remainder remains enforceable. Thanks.
+1890 | VT-17043 | [legalese                 ] Hey, Notwithstanding the foregoing, this agreement shall remain in effect.—copy.
+1891 | VT-95970 | [legalese                 ] Severability ensures the remainder remains enforceable.
+1892 | VT-61309 | [legalese                 ] Reminder: The parties agree to binding arbitration. Thanks.
+1893 | VT-26701 | [legalese                 ] FYI, Severability ensures the remainder remains enforceable. Please.
+1894 | VT-56032 | [legalese                 ] Note: This warranty is provided as-is without limitation.
+1895 | VT-67366 | [legalese                 ] FYI, Subject to applicable law and equitable principles. Right now.
+1896 | VT-65941 | [legalese                 ] Note: Severability ensures the remainder remains enforceable. Right now.
+1897 | VT-37368 | [legalese                 ] Hey, Notwithstanding the foregoing, this agreement shall remain in effect. Right now.
+1898 | VT-56032 | [legalese                 ] Note: This warranty is provided as-is without limitation.
+1899 | VT-57491 | [legalese                 ] Subject to applicable law and equitable principles. Thanks.
+1900 | VT-57491 | [legalese                 ] Subject to applicable law and equitable principles. Thanks.

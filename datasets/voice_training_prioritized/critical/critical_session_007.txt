@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 7 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0301 | VT-12497 | [denials_corrections      ] Okay, That was my mistake; here’s the fix. Right now.
+0302 | VT-57043 | [denials_corrections      ] Retract the last statement. Right now.
+0303 | VT-19325 | [denials_corrections      ] FYI, Incorrect; re-run the test. If possible.
+0304 | VT-10035 | [denials_corrections      ] Note: You mixed up the units again.
+0305 | VT-67943 | [denials_corrections      ] Note: Retract the last statement.—copy.
+0306 | VT-20910 | [denials_corrections      ] Okay, No, that's not accurate. Right now.
+0307 | VT-19325 | [denials_corrections      ] FYI, Incorrect; re-run the test. If possible.
+0308 | VT-77741 | [denials_corrections      ] FYI, You mixed up the units again. Right now.
+0309 | VT-77741 | [denials_corrections      ] FYI, You mixed up the units again. Right now.
+0310 | VT-17480 | [denials_corrections      ] Reminder: You mixed up the units again.
+0311 | VT-23410 | [denials_corrections      ] FYI, You mixed up the units again. If possible.
+0312 | VT-34400 | [denials_corrections      ] That assumption falls apart under pressure.
+0313 | VT-68985 | [denials_corrections      ] Note: No, that's not accurate.—got it.
+0314 | VT-87401 | [denials_corrections      ] Reminder: That was my mistake; here’s the fix. For real.
+0315 | VT-39693 | [denials_corrections      ] Reminder: That assumption falls apart under pressure. Right now.
+0316 | VT-65472 | [denials_corrections      ] Okay, Close, but not quite. Right now.
+0317 | VT-49074 | [denials_corrections      ] Note: Close, but not quite. If possible.
+0318 | VT-48704 | [denials_corrections      ] Okay, Close, but not quite. For real.
+0319 | VT-17480 | [denials_corrections      ] Reminder: You mixed up the units again.
+0320 | VT-40721 | [denials_corrections      ] Reminder: That was my mistake; here’s the fix. For real.
+0321 | VT-45525 | [denials_corrections      ] Okay, No, that's not accurate. Please.
+0322 | VT-24976 | [denials_corrections      ] Note: Close, but not quite. For real.
+0323 | VT-43665 | [denials_corrections      ] False—cite your source.—got it.
+0324 | VT-24167 | [denials_corrections      ] Retract the last statement.
+0325 | VT-51459 | [denials_corrections      ] Heads up: Close, but not quite. Please.
+0326 | VT-12076 | [denials_corrections      ] Listen, Negative—try a different approach.
+0327 | VT-89833 | [denials_corrections      ] FYI, That assumption falls apart under pressure. Right now.
+0328 | VT-46753 | [denials_corrections      ] Reminder: No, that's not accurate. For real.
+0329 | VT-13156 | [denials_corrections      ] Hey, That assumption falls apart under pressure. Please.
+0330 | VT-17226 | [denials_corrections      ] No, that's not accurate.
+0331 | VT-77023 | [denials_corrections      ] No, that's not accurate.
+0332 | VT-34400 | [denials_corrections      ] That assumption falls apart under pressure.
+0333 | VT-26770 | [denials_corrections      ] Hey, Close, but not quite. Please.
+0334 | VT-86517 | [denials_corrections      ] Heads up: You mixed up the units again. For real.
+0335 | VT-68651 | [denials_corrections      ] Heads up: False—cite your source. Thanks.
+0336 | VT-82376 | [denials_corrections      ] Reminder: False—cite your source.—got it.
+0337 | VT-89087 | [denials_corrections      ] Listen, That assumption falls apart under pressure. If possible.
+0338 | VT-79825 | [denials_corrections      ] Heads up: Amend the record accordingly. For real.
+0339 | VT-81935 | [denials_corrections      ] Reminder: Close, but not quite.—copy.
+0340 | VT-28121 | [denials_corrections      ] Okay, Negative—try a different approach.—copy.
+0341 | VT-59753 | [denials_corrections      ] FYI, Retract the last statement.—got it.
+0342 | VT-10035 | [denials_corrections      ] Note: You mixed up the units again.
+0343 | VT-72429 | [denials_corrections      ] Reminder: Incorrect; re-run the test.—got it.
+0344 | VT-42685 | [denials_corrections      ] Listen, Close, but not quite. Thanks.
+0345 | VT-72429 | [denials_corrections      ] Reminder: Incorrect; re-run the test.—got it.
+0346 | VT-16188 | [denials_corrections      ] Reminder: Close, but not quite.
+0347 | VT-45525 | [denials_corrections      ] Okay, No, that's not accurate. Please.
+0348 | VT-77583 | [denials_corrections      ] Okay, You mixed up the units again.—copy.
+0349 | VT-66812 | [denials_corrections      ] Hey, No, that's not accurate. Thanks.
+0350 | VT-63682 | [denials_corrections      ] Heads up: Retract the last statement.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 147 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7301 | VT-403381 | [urls_emails_codes        ] Note: Note: Join the room ID 833-555-120 with passcode 'orbit'. Right now. please.
+7302 | VT-484035 | [urls_emails_codes        ] FYI, My handle is @zero_cool_1995. If possible. — got it.
+7303 | VT-493513 | [urls_emails_codes        ] Note: Hey, The repo lives at github dot com slash acme slash core. If possible. — got it.
+7304 | VT-426046 | [urls_emails_codes        ] Heads up: Note: The meeting link is in the calendar description. Right now. please.
+7305 | VT-479709 | [urls_emails_codes        ] FYI, Heads up: Email support at helpdesk@example.com. For real. — now.
+7306 | VT-435840 | [urls_emails_codes        ] Note: Hey, Visit https://example.org/docs/getting-started. Please. right now.
+7307 | VT-465780 | [urls_emails_codes        ] Heads up: My handle is @zero_cool_1995. Right now. — got it.
+7308 | VT-417496 | [urls_emails_codes        ] Quick one: Note: Email support at helpdesk@example.com. Right now. right now.
+7309 | VT-441427 | [urls_emails_codes        ] Reminder: FYI, The repo lives at github dot com slash acme slash core. Thanks..
+7310 | VT-423337 | [urls_emails_codes        ] Quick one: Listen, Text me the OTP when you get it. For real. — got it.
+7311 | VT-450142 | [urls_emails_codes        ] Real talk, FYI, The meeting link is in the calendar description. Please. please.
+7312 | VT-406614 | [urls_emails_codes        ] Listen, Join the room ID 834-555-120 with passcode 'orbit'. — now.
+7313 | VT-440320 | [urls_emails_codes        ] Note: Okay, Paste the invite code: XR7F-29Q4-J1LM.—copy. if you can.
+7314 | VT-400409 | [urls_emails_codes        ] Note: Reminder: Email support at helpdesk@example.com. Thanks. — confirm.
+7315 | VT-437040 | [urls_emails_codes        ] Okay, Reminder: Visit https://example.org/docs/getting-started.—got it. — confirm.
+7316 | VT-475043 | [urls_emails_codes        ] FYI, Join the room ID 834-555-120 with passcode 'orbit'. Right now. — got it.
+7317 | VT-445840 | [urls_emails_codes        ] Reminder: Listen, My handle is @zero_cool_1995. thanks.
+7318 | VT-420992 | [urls_emails_codes        ] Okay, Email support at helpdesk@example.com.
+7319 | VT-499426 | [urls_emails_codes        ] Listen, Text me the OTP when you get it. For real. please.
+7320 | VT-413945 | [urls_emails_codes        ] Reminder: Listen, Text me the OTP when you get it.—copy. right now.
+7321 | VT-434607 | [urls_emails_codes        ] Hey, Text me the OTP when you get it.—copy. please.
+7322 | VT-497632 | [urls_emails_codes        ] FYI, Reminder: Join the room ID 833-555-120 with passcode 'orbit'. If possible.
+7323 | VT-435601 | [urls_emails_codes        ] Quick one: Hey, Visit https://example.org/docs/getting-started. Please..
+7324 | VT-470198 | [urls_emails_codes        ] Okay, Listen, Visit https://example.org/docs/getting-started. Right now. — confirm.
+7325 | VT-482460 | [urls_emails_codes        ] Heads up: Reminder: Text me the OTP when you get it.—copy..
+7326 | VT-454850 | [urls_emails_codes        ] Email support at helpdesk@example.com. Please. please.
+7327 | VT-470296 | [urls_emails_codes        ] Reminder: Listen, Use coupon code FINAL-BOSS at checkout. For real. if you can.
+7328 | VT-416185 | [urls_emails_codes        ] Note: Listen, Use coupon code FINAL-BOSS at checkout. For real..
+7329 | VT-467629 | [urls_emails_codes        ] Reminder: Listen, Use coupon code FINAL-BOSS at checkout. right now.
+7330 | VT-482836 | [urls_emails_codes        ] Okay, Join the room ID 834-555-120 with passcode 'orbit'. Right now. if you can.
+7331 | VT-409336 | [urls_emails_codes        ] Heads up: Hey, The repo lives at github dot com slash acme slash core. If possible. please.
+7332 | VT-458886 | [urls_emails_codes        ] Real talk, Hey, The repo lives at github dot com slash acme slash core.—got it.
+7333 | VT-434562 | [urls_emails_codes        ] Note: FYI, Visit https://example.org/docs/getting-started. If possible. — got it.
+7334 | VT-451452 | [urls_emails_codes        ] Listen, Listen, Text me the OTP when you get it. Right now. — confirm.
+7335 | VT-438053 | [urls_emails_codes        ] Note: The repo lives at github dot com slash acme slash core.—copy. — now.
+7336 | VT-451022 | [urls_emails_codes        ] Quick one: Heads up: Paste the invite code: XR7F-29Q4-J1LM. Please.
+7337 | VT-409176 | [urls_emails_codes        ] Reminder: Visit https://example.org/docs/getting-started.—got it. — now.
+7338 | VT-422864 | [urls_emails_codes        ] Real talk, FYI, Visit https://example.org/docs/getting-started. If possible.
+7339 | VT-453518 | [urls_emails_codes        ] Note: The repo lives at github dot com slash acme slash core.—got it. right now.
+7340 | VT-494445 | [urls_emails_codes        ] Real talk, Hey, Visit https://example.org/docs/getting-started. Please. — now.
+7341 | VT-485361 | [urls_emails_codes        ] Heads up: Listen, My handle is @zero_cool_1995. Right now. if you can.
+7342 | VT-451934 | [urls_emails_codes        ] Listen, Note: The meeting link is in the calendar description. Thanks.
+7343 | VT-432073 | [urls_emails_codes        ] Note: Text me the OTP when you get it..
+7344 | VT-453605 | [urls_emails_codes        ] Listen, Okay, Email support at helpdesk@example.com. If possible..
+7345 | VT-456813 | [urls_emails_codes        ] Reminder: Listen, Use coupon code FINAL-BOSS at checkout. For real.
+7346 | VT-404208 | [urls_emails_codes        ] Quick one: Reminder: Join the room ID 835-555-120 with passcode 'orbit'. Right now. please.
+7347 | VT-461995 | [urls_emails_codes        ] Reminder: Reminder: Paste the invite code: XR7F-29Q4-J1LM.—got it. — got it.
+7348 | VT-494905 | [urls_emails_codes        ] Quick one: Use coupon code FINAL-BOSS at checkout. — now.
+7349 | VT-416003 | [urls_emails_codes        ] Quick one: Note: Join the room ID 834-555-120 with passcode 'orbit'. Right now..
+7350 | VT-477378 | [weather_colorful         ] FYI, Hey, It’s a dry heat, said every liar ever. If possible. please.

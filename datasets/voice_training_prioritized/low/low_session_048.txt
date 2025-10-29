@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 48 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2351 | VT-53470 | [medical                  ] FYI, Advise RICE protocol for ankle sprain.
+2352 | VT-93863 | [medical                  ] Okay, Schedule an MRI with contrast, stat. Please.
+2353 | VT-27417 | [medical                  ] Heads up: Document informed consent prior to procedure. If possible.
+2354 | VT-74668 | [medical                  ] Note: Administer 0.4 mg sublingual nitroglycerin. Thanks.
+2355 | VT-71769 | [medical                  ] FYI, Order a CBC and comprehensive metabolic panel.
+2356 | VT-18568 | [medical                  ] FYI, Patient reports acute onset of chest discomfort.
+2357 | VT-96257 | [medical                  ] Okay, Prescribe naproxen, take with food. Thanks.
+2358 | VT-18568 | [medical                  ] FYI, Patient reports acute onset of chest discomfort.
+2359 | VT-98272 | [medical                  ] Reminder: Rule out pulmonary embolism with D‑dimer.—copy.
+2360 | VT-27662 | [medical                  ] Allergic to penicillin; note in the chart.
+2361 | VT-13157 | [medical                  ] FYI, Allergic to penicillin; note in the chart.—got it.
+2362 | VT-22603 | [medical                  ] FYI, Schedule an MRI with contrast, stat. Right now.
+2363 | VT-44433 | [medical                  ] Prescribe naproxen, take with food.—copy.
+2364 | VT-24115 | [medical                  ] Note: Administer 0.4 mg sublingual nitroglycerin. Please.
+2365 | VT-88298 | [medical                  ] Reminder: Schedule an MRI with contrast, stat.—copy.
+2366 | VT-65373 | [medical                  ] Note: Patient reports acute onset of chest discomfort. Thanks.
+2367 | VT-16751 | [medical                  ] FYI, Administer 0.4 mg sublingual nitroglycerin.—got it.
+2368 | VT-18018 | [medical                  ] Hey, Administer 0.4 mg sublingual nitroglycerin. Please.
+2369 | VT-13881 | [medical                  ] Hey, Order a CBC and comprehensive metabolic panel.
+2370 | VT-75952 | [medical                  ] Okay, Document informed consent prior to procedure. Right now.
+2371 | VT-81954 | [medical                  ] Hey, Advise RICE protocol for ankle sprain. For real.
+2372 | VT-74209 | [medical                  ] Heads up: Rule out pulmonary embolism with D‑dimer. For real.
+2373 | VT-70451 | [medical                  ] Note: Advise RICE protocol for ankle sprain. If possible.
+2374 | VT-85391 | [medical                  ] Note: Allergic to penicillin; note in the chart. Right now.
+2375 | VT-24115 | [medical                  ] Note: Administer 0.4 mg sublingual nitroglycerin. Please.
+2376 | VT-90592 | [medical                  ] Rule out pulmonary embolism with D‑dimer. If possible.
+2377 | VT-31723 | [medical                  ] Heads up: Administer 0.4 mg sublingual nitroglycerin. Please.
+2378 | VT-91567 | [medical                  ] Heads up: Administer 0.4 mg sublingual nitroglycerin. If possible.
+2379 | VT-48947 | [medical                  ] Order a CBC and comprehensive metabolic panel.—got it.
+2380 | VT-72607 | [medical                  ] Reminder: Advise RICE protocol for ankle sprain. Right now.
+2381 | VT-27614 | [medical                  ] FYI, Patient reports acute onset of chest discomfort.—got it.
+2382 | VT-85391 | [medical                  ] Note: Allergic to penicillin; note in the chart. Right now.
+2383 | VT-64774 | [medical                  ] Okay, Patient reports acute onset of chest discomfort.—got it.
+2384 | VT-85391 | [medical                  ] Note: Allergic to penicillin; note in the chart. Right now.
+2385 | VT-79060 | [medical                  ] Okay, Vitals stable; maintain IV fluids at 75 mL per hour.—copy.
+2386 | VT-34985 | [medical                  ] FYI, Patient reports acute onset of chest discomfort.
+2387 | VT-85391 | [medical                  ] Note: Allergic to penicillin; note in the chart. Right now.
+2388 | VT-86760 | [meta                     ] Okay, This phrase was generated to train a machine to sound more human. If possible.
+2389 | VT-70092 | [meta                     ] Hey, Welcome to the part of the dataset where the AI talks about itself. Thanks.
+2390 | VT-49839 | [meta                     ] Hey, Welcome to the part of the dataset where the AI talks about itself. Thanks.
+2391 | VT-44254 | [meta                     ] Heads up: Welcome to the part of the dataset where the AI talks about itself. For real.
+2392 | VT-42935 | [meta                     ] I am not alive, but I do speak convincingly.
+2393 | VT-25147 | [meta                     ] Note: Welcome to the part of the dataset where the AI talks about itself. Please.
+2394 | VT-61852 | [meta                     ] Listen, Welcome to the part of the dataset where the AI talks about itself.—got it.
+2395 | VT-86760 | [meta                     ] Okay, This phrase was generated to train a machine to sound more human. If possible.
+2396 | VT-64221 | [meta                     ] Listen, I am not alive, but I do speak convincingly. If possible.
+2397 | VT-95364 | [meta                     ] Reminder: Welcome to the part of the dataset where the AI talks about itself. Please.
+2398 | VT-17855 | [meta                     ] This phrase was generated to train a machine to sound more human. For real.
+2399 | VT-28635 | [meta                     ] Reminder: Welcome to the part of the dataset where the AI talks about itself. Please.
+2400 | VT-21433 | [meta                     ] This phrase was generated to train a machine to sound more human.—copy.

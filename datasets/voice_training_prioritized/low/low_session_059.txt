@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 59 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2901 | VT-29265 | [negations                ] FYI, No chance.—got it.
+2902 | VT-70078 | [negations                ] We can’t ship without tests. Right now.
+2903 | VT-87820 | [negations                ] Reminder: No chance. Please.
+2904 | VT-46292 | [negations                ] Reminder: No logs, no proof. Please.
+2905 | VT-92792 | [negations                ] FYI, I’m not doing that again.
+2906 | VT-24613 | [negations                ] Heads up: Do not open that email. For real.
+2907 | VT-34964 | [negations                ] I’m not doing that again.—copy.
+2908 | VT-31360 | [negations                ] That’s not what I asked for.
+2909 | VT-53443 | [negations                ] Listen, Never deploy on Friday. Please.
+2910 | VT-25012 | [negations                ] Note: Never deploy on Friday.—copy.
+2911 | VT-49392 | [negations                ] FYI, Do not open that email.
+2912 | VT-85768 | [negations                ] Reminder: No logs, no proof.—got it.
+2913 | VT-84902 | [negations                ] Hey, No chance. For real.
+2914 | VT-68472 | [negations                ] Hey, No logs, no proof.
+2915 | VT-72580 | [negations                ] Listen, I’m not doing that again. Please.
+2916 | VT-73704 | [negations                ] I’m not doing that again.
+2917 | VT-29435 | [negations                ] Heads up: No logs, no proof.—copy.
+2918 | VT-80584 | [negations                ] Okay, No logs, no proof. Thanks.
+2919 | VT-50917 | [negations                ] Note: Not now, not ever.
+2920 | VT-53602 | [negations                ] No logs, no proof.
+2921 | VT-80584 | [negations                ] Okay, No logs, no proof. Thanks.
+2922 | VT-49813 | [negations                ] FYI, Not now, not ever. For real.
+2923 | VT-58430 | [negations                ] Okay, No logs, no proof.
+2924 | VT-89596 | [negations                ] FYI, I’m not doing that again.—got it.
+2925 | VT-49850 | [negations                ] Listen, No logs, no proof.—got it.
+2926 | VT-73206 | [negations                ] Hey, Never deploy on Friday.
+2927 | VT-19231 | [negations                ] Note: That’s not what I asked for. If possible.
+2928 | VT-80459 | [negations                ] Reminder: Never deploy on Friday. Right now.
+2929 | VT-21255 | [negations                ] Listen, No chance. Right now.
+2930 | VT-34896 | [negations                ] I’m not doing that again. For real.
+2931 | VT-24613 | [negations                ] Heads up: Do not open that email. For real.
+2932 | VT-70078 | [negations                ] We can’t ship without tests. Right now.
+2933 | VT-14361 | [negations                ] Hey, No logs, no proof. For real.
+2934 | VT-74707 | [negations                ] FYI, No logs, no proof. For real.
+2935 | VT-39854 | [negations                ] Note: No logs, no proof. Right now.
+2936 | VT-24816 | [negations                ] Okay, Do not open that email.—copy.
+2937 | VT-23816 | [negations                ] FYI, I won’t sign off on that.—got it.
+2938 | VT-80459 | [negations                ] Reminder: Never deploy on Friday. Right now.
+2939 | VT-13947 | [negations                ] Okay, Never deploy on Friday. Thanks.
+2940 | VT-58823 | [negations                ] Hey, Never deploy on Friday. Right now.
+2941 | VT-30278 | [negations                ] Note: Nothing about this is simple. For real.
+2942 | VT-58052 | [negations                ] Heads up: Do not open that email. Right now.
+2943 | VT-11748 | [negations                ] Nothing about this is simple.
+2944 | VT-88638 | [negations                ] Okay, That’s not what I asked for. Thanks.
+2945 | VT-11066 | [negations                ] Note: Nothing about this is simple.—got it.
+2946 | VT-14908 | [negations                ] Reminder: Not now, not ever. For real.
+2947 | VT-10519 | [negations                ] Note: We can’t ship without tests. Please.
+2948 | VT-32243 | [negations                ] Listen, Nothing about this is simple. Thanks.
+2949 | VT-49392 | [negations                ] FYI, Do not open that email.
+2950 | VT-14908 | [negations                ] Reminder: Not now, not ever. For real.

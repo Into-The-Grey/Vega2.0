@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 113 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+5601 | VT-91008 | [urls_emails_codes        ] Reminder: Email support at helpdesk@example.com.—copy.
+5602 | VT-93356 | [urls_emails_codes        ] Note: Use coupon code FINAL-BOSS at checkout.
+5603 | VT-72368 | [urls_emails_codes        ] Listen, Visit https://example.org/docs/getting-started.—got it.
+5604 | VT-38208 | [urls_emails_codes        ] The meeting link is in the calendar description.—got it.
+5605 | VT-72368 | [urls_emails_codes        ] Listen, Visit https://example.org/docs/getting-started.—got it.
+5606 | VT-97902 | [urls_emails_codes        ] FYI, Open the PR titled 'fix/auth-refresh' ASAP. If possible.
+5607 | VT-26943 | [urls_emails_codes        ] My handle is @zero_cool_1995.
+5608 | VT-74638 | [urls_emails_codes        ] My handle is @zero_cool_1995. Right now.
+5609 | VT-80767 | [urls_emails_codes        ] Listen, The repo lives at github dot com slash acme slash core.—copy.
+5610 | VT-21243 | [urls_emails_codes        ] Listen, The meeting link is in the calendar description. Thanks.
+5611 | VT-75135 | [urls_emails_codes        ] Note: Email support at helpdesk@example.com.
+5612 | VT-28090 | [urls_emails_codes        ] Okay, The repo lives at github dot com slash acme slash core. Please.
+5613 | VT-91040 | [urls_emails_codes        ] FYI, Visit https://example.org/docs/getting-started. If possible.
+5614 | VT-14469 | [urls_emails_codes        ] Heads up: Email support at helpdesk@example.com. If possible.
+5615 | VT-69449 | [urls_emails_codes        ] Reminder: Email support at helpdesk@example.com. Thanks.
+5616 | VT-48223 | [urls_emails_codes        ] Listen, Use coupon code FINAL-BOSS at checkout.
+5617 | VT-31210 | [urls_emails_codes        ] Listen, Text me the OTP when you get it.—got it.
+5618 | VT-61638 | [urls_emails_codes        ] Note: Join the room ID 834-555-120 with passcode 'orbit'.—got it.
+5619 | VT-19049 | [urls_emails_codes        ] Okay, Open the PR titled 'fix/auth-refresh' ASAP. For real.
+5620 | VT-17017 | [urls_emails_codes        ] Note: Join the room ID 834-555-120 with passcode 'orbit'. Right now.
+5621 | VT-93153 | [urls_emails_codes        ] Reminder: My handle is @zero_cool_1995. Please.
+5622 | VT-75135 | [urls_emails_codes        ] Note: Email support at helpdesk@example.com.
+5623 | VT-24756 | [urls_emails_codes        ] Hey, Open the PR titled 'fix/auth-refresh' ASAP. Thanks.
+5624 | VT-94735 | [urls_emails_codes        ] Listen, Email support at helpdesk@example.com. Please.
+5625 | VT-44015 | [urls_emails_codes        ] Hey, Email support at helpdesk@example.com. Please.
+5626 | VT-43868 | [urls_emails_codes        ] Use coupon code FINAL-BOSS at checkout. For real.
+5627 | VT-52810 | [urls_emails_codes        ] Reminder: Join the room ID 834-555-120 with passcode 'orbit'. If possible.
+5628 | VT-36198 | [urls_emails_codes        ] Reminder: Visit https://example.org/docs/getting-started.—got it.
+5629 | VT-93153 | [urls_emails_codes        ] Reminder: My handle is @zero_cool_1995. Please.
+5630 | VT-19389 | [urls_emails_codes        ] Note: Visit https://example.org/docs/getting-started.—copy.
+5631 | VT-93153 | [urls_emails_codes        ] Reminder: My handle is @zero_cool_1995. Please.
+5632 | VT-43966 | [urls_emails_codes        ] Reminder: Paste the invite code: XR7F-29Q4-J1LM.—got it.
+5633 | VT-54933 | [urls_emails_codes        ] Visit https://example.org/docs/getting-started.
+5634 | VT-93153 | [urls_emails_codes        ] Reminder: My handle is @zero_cool_1995. Please.
+5635 | VT-98616 | [weather_colorful         ] Hey, It’s a dry heat, said every liar ever. If possible.
+5636 | VT-23845 | [weather_colorful         ] Okay, It’s nice. Suspiciously nice.—copy.
+5637 | VT-48611 | [weather_colorful         ] Okay, It’s a dry heat, said every liar ever. If possible.
+5638 | VT-88568 | [weather_colorful         ] FYI, Humidity’s like soup—thick and gross. For real.
+5639 | VT-72722 | [weather_colorful         ] Reminder: Cold enough to bully your bones.
+5640 | VT-49700 | [weather_colorful         ] Listen, Sky’s angry; thunder’s got opinions. Please.
+5641 | VT-30711 | [weather_colorful         ] Okay, It’s wet as hell outside—bring a jacket. For real.
+5642 | VT-98616 | [weather_colorful         ] Hey, It’s a dry heat, said every liar ever. If possible.
+5643 | VT-96028 | [weather_colorful         ] Heads up: Sky’s angry; thunder’s got opinions.—copy.
+5644 | VT-58496 | [weather_colorful         ] FYI, Humidity’s like soup—thick and gross. Right now.
+5645 | VT-53739 | [weather_colorful         ] Reminder: Sun’s cooking the asphalt medium-rare. Thanks.
+5646 | VT-21598 | [weather_colorful         ] Okay, Cold enough to bully your bones.
+5647 | VT-19989 | [weather_colorful         ] Hey, It’s nice. Suspiciously nice.—copy.
+5648 | VT-93488 | [weather_colorful         ] Listen, Rain so hard it’s pressure-washing my soul.
+5649 | VT-89562 | [weather_colorful         ] Heads up: Sky’s angry; thunder’s got opinions. If possible.
+5650 | VT-58183 | [weather_colorful         ] Reminder: It’s wet as hell outside—bring a jacket. For real.

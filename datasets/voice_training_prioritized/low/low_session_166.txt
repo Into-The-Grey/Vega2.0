@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 166 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+8251 | VT-647203 | [math_readouts            ] Reminder: Note: Solve for x: 2x + 4 = 19. (8914) Please. — got it.
+8252 | VT-631004 | [math_readouts            ] Note: Reminder: The derivative of x squared is two x. (310) If possible. — confirm.
+8253 | VT-613904 | [math_readouts            ] FYI, FYI, Normalize the vector to unit length. (2704) Right now. please.
+8254 | VT-636049 | [math_readouts            ] Okay, Heads up: Matrix A times B is non-commutative. (1552) For real.
+8255 | VT-613542 | [math_readouts            ] Listen, Solve for x: 2x + 5 = 19..
+8256 | VT-626538 | [math_readouts            ] Real talk, FYI, Log base two of eight is three. (2646) If possible. please.
+8257 | VT-682346 | [math_readouts            ] Heads up: Hey, Log base two of eight is three. (5835) Right now. — confirm.
+8258 | VT-544110 | [math_readouts            ] FYI, Okay, Log base two of eight is three. (3826) Please. if you can.
+8259 | VT-684290 | [math_readouts            ] FYI, Hey, Normalize the vector to unit length. (8775) please.
+8260 | VT-588859 | [math_readouts            ] Note: Note: The derivative of x squared is two x. (5155) Please. thanks.
+8261 | VT-681608 | [math_readouts            ] Note: Reminder: The derivative of x squared is two x. (165) please.
+8262 | VT-648216 | [math_readouts            ] Real talk, Hey, Log base two of eight is three. (7809) If possible. please.
+8263 | VT-681341 | [math_readouts            ] Real talk, Okay, Solve for x: 2x + 5 = 19. (3192)—got it. if you can.
+8264 | VT-670708 | [math_readouts            ] Heads up: Heads up: The limit approaches infinity. (4472) right now.
+8265 | VT-589010 | [math_readouts            ] FYI, FYI, The limit approaches infinity. (6782) If possible..
+8266 | VT-646402 | [math_readouts            ] Heads up: Hey, The limit approaches infinity. (5663) Please. please.
+8267 | VT-596055 | [math_readouts            ] Quick one: FYI, Normalize the vector to unit length. (7394) Please..
+8268 | VT-659206 | [math_readouts            ] Note: Listen, Standard deviation is 2.3. (4278)—copy. thanks.
+8269 | VT-510750 | [math_readouts            ] Heads up: Heads up: Standard deviation is 2.3. (9847)—copy. — now.
+8270 | VT-688371 | [math_readouts            ] Reminder: Listen, The derivative of x squared is two x. (8504) Please..
+8271 | VT-628992 | [math_readouts            ] FYI, Heads up: Log base two of eight is three. (9932) — got it.
+8272 | VT-518889 | [math_readouts            ] Listen, Reminder: Standard deviation is 3.3. (1356)—got it..
+8273 | VT-561297 | [math_readouts            ] Reminder: Okay, The mean is greater than the median—right skew. (3172) For real. — confirm.
+8274 | VT-658096 | [math_readouts            ] Listen, Reminder: The derivative of x squared is two x. (311) If possible. if you can.
+8275 | VT-549693 | [math_readouts            ] Note: Listen, The derivative of x squared is two x. (8504) Please. — now.
+8276 | VT-616112 | [math_readouts            ] Real talk, Okay, Standard deviation is 3.3. (6837)—copy. — now.
+8277 | VT-627930 | [math_readouts            ] FYI, Note: The derivative of x squared is two x. (5156) Please. — got it.
+8278 | VT-612359 | [math_readouts            ] Listen, Reminder: Matrix A times B is non-commutative. (2322) thanks.
+8279 | VT-593957 | [math_readouts            ] Listen, Heads up: Sine of ninety is one. (4297) For real. thanks.
+8280 | VT-679415 | [math_readouts            ] Okay, Okay, Log base two of eight is three. (697) Right now. please.
+8281 | VT-652697 | [math_readouts            ] Heads up: Okay, Solve for x: 2x + 5 = 19. (8246) please.
+8282 | VT-592405 | [math_readouts            ] Heads up: The limit approaches infinity. (4473) thanks.
+8283 | VT-659248 | [math_readouts            ] FYI, Normalize the vector to unit length. (7034) Thanks. — got it.
+8284 | VT-603290 | [math_readouts            ] Note: Listen, The mean is greater than the median—right skew. (2656) Please. thanks.
+8285 | VT-590849 | [math_readouts            ] Quick one: The limit approaches infinity..
+8286 | VT-532222 | [math_readouts            ] Heads up: FYI, Normalize the vector to unit length. (1927) If possible. — confirm.
+8287 | VT-577035 | [math_readouts            ] Okay, Heads up: Matrix A times B is non-commutative. (1551) For real. please.
+8288 | VT-612603 | [math_readouts            ] Hey, Normalize the vector to unit length. (8776) if you can.
+8289 | VT-542589 | [math_readouts            ] Listen, Hey, The mean is greater than the median—right skew. (9409) Right now. — now.
+8290 | VT-613616 | [math_readouts            ] Solve for x: 2x + 5 = 19. (5714) Please. right now.
+8291 | VT-694079 | [math_readouts            ] Reminder: Reminder: The derivative of x squared is two x. (1240) Please.
+8292 | VT-608686 | [math_readouts            ] Reminder: Heads up: Solve for x: 2x + 4 = 19. (7598) If possible. — now.
+8293 | VT-649456 | [math_readouts            ] Log base two of eight is three. — confirm.
+8294 | VT-573039 | [math_readouts            ] Reminder: Heads up: Standard deviation is 2.3. (9847)—copy. — confirm.
+8295 | VT-560522 | [math_readouts            ] Okay, Okay, Standard deviation is 2.3. (5093) Please. — got it.
+8296 | VT-512591 | [math_readouts            ] Quick one: Heads up: The derivative of x squared is two x. (4791)—got it. — got it.
+8297 | VT-523168 | [math_readouts            ] Quick one: Note: The mean is greater than the median—right skew. (4317) Right now..
+8298 | VT-578783 | [math_readouts            ] Quick one: Heads up: Normalize the vector to unit length. (7318) Please. right now.
+8299 | VT-595780 | [math_readouts            ] Note: Heads up: The mean is greater than the median—right skew. (3085)—got it. — got it.
+8300 | VT-610946 | [math_readouts            ] Note: Okay, Solve for x: 2x + 6 = 19. (8246)

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 157 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+7801 | VT-610791 | [everyday-profanity       ] Okay, Can we please stop with this crap and fix it? If possible. if you can.
+7802 | VT-520843 | [everyday-profanity       ] Reminder: Turn the damn lights off when you leave. For real..
+7803 | VT-674600 | [everyday-profanity       ] Heads up: Reminder: I’m so done with this bullshit. Thanks. thanks.
+7804 | VT-551833 | [everyday-profanity       ] Listen, Okay, I dropped my coffee—again. Ugh. Right now. if you can.
+7805 | VT-679987 | [everyday-profanity       ] Real talk, Okay, I can’t find the damn keys. If possible. if you can. (alt)
+7806 | VT-613555 | [everyday-profanity       ] Real talk, Note: This is freaking ridiculous. Right now. — now.
+7807 | VT-523655 | [everyday-profanity       ] Note: Reminder: What the hell was that noise?.
+7808 | VT-507260 | [everyday-profanity       ] Okay, Reminder: That was a total mess, no sugar‑coating it. For real. please.
+7809 | VT-534527 | [everyday-profanity       ] Reminder: Reminder: Why does this keep breaking? It’s driving me nuts. Please..
+7810 | VT-660688 | [everyday-profanity       ] Reminder: Okay, I can’t believe I forgot, that’s on me. if you can. (alt)
+7811 | VT-500736 | [everyday-profanity       ] Note: Can we please stop with this crap and fix it?—copy.
+7812 | VT-521603 | [everyday-profanity       ] Listen, Note: Turn the damn lights off when you leave. thanks.
+7813 | VT-671344 | [everyday-profanity       ] Real talk, Reminder: I’m so done with this bullshit. please.
+7814 | VT-524837 | [everyday-profanity       ] Heads up: Listen, I dropped my coffee—again. Ugh. Please..
+7815 | VT-613319 | [everyday-profanity       ] Heads up: Note: I can’t find the damn keys. Right now.
+7816 | VT-620250 | [everyday-profanity       ] Note: Hey, This is freaking ridiculous.—got it. — got it.
+7817 | VT-517250 | [everyday-profanity       ] What the hell was that noise? Thanks. right now.
+7818 | VT-536496 | [everyday-profanity       ] Okay, FYI, That was a total mess, no sugar‑coating it. Right now. — now.
+7819 | VT-615743 | [everyday-profanity       ] Okay, Why does this keep breaking? It’s driving me nuts. For real. right now. (alt)
+7820 | VT-649310 | [finance                  ] Reminder: Okay, We’re cash-flow positive but margin-thin. (2462) If possible..
+7821 | VT-593110 | [finance                  ] FYI, Heads up: Flag that transaction as potentially fraudulent. (9415) Right now. — got it. (alt)
+7822 | VT-519626 | [finance                  ] Heads up: Hey, We’re cash-flow positive but margin-thin. (3409) Right now. — confirm.
+7823 | VT-510300 | [finance                  ] Reminder: File the 1099s and W‑2s by January 31. (8855) please.
+7824 | VT-637159 | [finance                  ] Note: Okay, Our burn rate is unsustainable at current hiring levels. (3499) For real. right now.
+7825 | VT-628582 | [finance                  ] FYI, Note: APR is 23.99% after the promo period. (3569) Please..
+7826 | VT-697403 | [finance                  ] Okay, Listen, Set a limit order at $42.10 with a 5% trailing stop. (4059) For real. right now.
+7827 | VT-502190 | [finance                  ] Okay, Okay, We’re cash-flow positive but margin-thin. (2462) If possible. if you can.
+7828 | VT-644953 | [finance                  ] FYI, FYI, APR is 23.99% after the promo period. (1694).
+7829 | VT-560777 | [finance                  ] Note: File the 1099s and W‑2s by January 31. (4324) Right now. — now.
+7830 | VT-670570 | [finance                  ] Quick one: Cap table updated after the seed extension. (3) Please. — now.
+7831 | VT-574639 | [finance                  ] FYI, Our burn rate is unsustainable at current hiring levels. (951) For real. — got it.
+7832 | VT-679773 | [finance                  ] Heads up: Hey, Flag that transaction as potentially fraudulent. (4146) Please..
+7833 | VT-682183 | [finance                  ] FYI, Note: Reconcile the ledger before EOD. (4475) Thanks. — confirm.
+7834 | VT-657598 | [finance                  ] Hey, APR is 23.99% after the promo period. (8772) please. (alt)
+7835 | VT-596874 | [finance                  ] Real talk, FYI, Set a limit order at $42.10 with a 5% trailing stop. (5859) If possible.
+7836 | VT-668882 | [finance                  ] Listen, Listen, Flag that transaction as potentially fraudulent. (2341) thanks. (alt)
+7837 | VT-561766 | [finance                  ] Listen, Okay, We’re cash-flow positive but margin-thin. (513) If possible. if you can.
+7838 | VT-592593 | [finance                  ] Reminder: APR is 23.99% after the promo period. — got it. (alt)
+7839 | VT-669222 | [finance                  ] Reminder: Cap table updated after the seed extension. (3) Please. — got it.
+7840 | VT-535633 | [finance                  ] Okay, Cap table updated after the seed extension. (8133) Thanks. right now.
+7841 | VT-654340 | [finance                  ] Heads up: Listen, Cap table updated after the seed extension. (7779)—copy.
+7842 | VT-590755 | [finance                  ] Listen, Flag that transaction as potentially fraudulent. (1471) Thanks. please.
+7843 | VT-654589 | [finance                  ] Quick one: Listen, Set a limit order at $42.10 with a 5% trailing stop. (4059) For real. please.
+7844 | VT-578834 | [finance                  ] Heads up: Okay, Set a limit order at $42.10 with a 5% trailing stop. (7032) Please. — now. (alt)
+7845 | VT-691956 | [finance                  ] Real talk, Note: Cap table updated after the seed extension. (1266) — now.
+7846 | VT-541442 | [finance                  ] Quick one: Okay, APR is 23.99% after the promo period. (1365)—got it. please.
+7847 | VT-671448 | [finance                  ] Okay, Initiate a wire—domestic ABA, not SWIFT. (5767) — now.
+7848 | VT-561192 | [finance                  ] Note: Note: Initiate a wire—domestic ABA, not SWIFT. (1152) — got it.
+7849 | VT-597637 | [finance                  ] Reminder: Hey, Initiate a wire—domestic ABA, not SWIFT. (5795)
+7850 | VT-647691 | [finance                  ] Note: Heads up: Flag that transaction as potentially fraudulent. (4026) Please. right now. (alt)

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 41 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2001 | VT-41604 | [math_readouts            ] Okay, Solve for x: 2x + 5 = 19. (3759)—got it.
+2002 | VT-61686 | [math_readouts            ] Note: The derivative of x squared is two x. (5155) Please.
+2003 | VT-47417 | [math_readouts            ] FYI, Matrix A times B is non-commutative. (5944) For real.
+2004 | VT-20002 | [math_readouts            ] Okay, Solve for x: 2x + 5 = 19. (2344) Thanks.
+2005 | VT-41081 | [math_readouts            ] Standard deviation is 2.3. (1251) Thanks.
+2006 | VT-73279 | [math_readouts            ] FYI, Log base two of eight is three. (2646) If possible.
+2007 | VT-57152 | [math_readouts            ] Heads up: Sine of ninety is one. (3983) Please.
+2008 | VT-60574 | [math_readouts            ] Normalize the vector to unit length. (3346) Right now.
+2009 | VT-85880 | [math_readouts            ] Heads up: The mean is greater than the median—right skew. (3085)—got it.
+2010 | VT-70147 | [math_readouts            ] Note: Solve for x: 2x + 5 = 19. (8914) Please.
+2011 | VT-38673 | [math_readouts            ] Reminder: The derivative of x squared is two x. (311) If possible.
+2012 | VT-92321 | [math_readouts            ] FYI, Normalize the vector to unit length. (2703) Right now.
+2013 | VT-16360 | [math_readouts            ] Heads up: Matrix A times B is non-commutative. (1552) For real.
+2014 | VT-69031 | [math_readouts            ] Solve for x: 2x + 5 = 19.
+2015 | VT-73279 | [math_readouts            ] FYI, Log base two of eight is three. (2646) If possible.
+2016 | VT-38252 | [math_readouts            ] Hey, Log base two of eight is three. (5834) Right now.
+2017 | VT-22622 | [math_readouts            ] Okay, Log base two of eight is three. (3825) Please.
+2018 | VT-18426 | [math_readouts            ] Hey, Normalize the vector to unit length. (8775)
+2019 | VT-61686 | [math_readouts            ] Note: The derivative of x squared is two x. (5155) Please.
+2020 | VT-39351 | [math_readouts            ] Reminder: The derivative of x squared is two x. (166)
+2021 | VT-60602 | [math_readouts            ] Hey, Log base two of eight is three. (7809) If possible.
+2022 | VT-96741 | [math_readouts            ] Okay, Solve for x: 2x + 5 = 19. (3192)—got it.
+2023 | VT-20340 | [math_readouts            ] Heads up: The limit approaches infinity. (4473)
+2024 | VT-87737 | [math_readouts            ] FYI, The limit approaches infinity. (6782) If possible.
+2025 | VT-30416 | [math_readouts            ] Hey, The limit approaches infinity. (5662) Please.
+2026 | VT-21990 | [math_readouts            ] FYI, Normalize the vector to unit length. (7394) Please.
+2027 | VT-51141 | [math_readouts            ] Listen, Standard deviation is 2.3. (4278)—copy.
+2028 | VT-38961 | [math_readouts            ] Heads up: Standard deviation is 2.3. (9847)—copy.
+2029 | VT-10809 | [math_readouts            ] Listen, The derivative of x squared is two x. (8503) Please.
+2030 | VT-66839 | [math_readouts            ] Heads up: Log base two of eight is three. (9932)
+2031 | VT-63729 | [math_readouts            ] Reminder: Standard deviation is 2.3. (1356)—got it.
+2032 | VT-35823 | [math_readouts            ] Okay, The mean is greater than the median—right skew. (3172) For real.
+2033 | VT-38673 | [math_readouts            ] Reminder: The derivative of x squared is two x. (311) If possible.
+2034 | VT-10809 | [math_readouts            ] Listen, The derivative of x squared is two x. (8503) Please.
+2035 | VT-72520 | [math_readouts            ] Okay, Standard deviation is 2.3. (6837)—copy.
+2036 | VT-61686 | [math_readouts            ] Note: The derivative of x squared is two x. (5155) Please.
+2037 | VT-92262 | [math_readouts            ] Reminder: Matrix A times B is non-commutative. (2323)
+2038 | VT-24074 | [math_readouts            ] Heads up: Sine of ninety is one. (4296) For real.
+2039 | VT-77920 | [math_readouts            ] Okay, Log base two of eight is three. (698) Right now.
+2040 | VT-18755 | [math_readouts            ] Okay, Solve for x: 2x + 5 = 19. (8246)
+2041 | VT-20340 | [math_readouts            ] Heads up: The limit approaches infinity. (4473)
+2042 | VT-91741 | [math_readouts            ] Normalize the vector to unit length. (7035) Thanks.
+2043 | VT-42051 | [math_readouts            ] Listen, The mean is greater than the median—right skew. (2655) Please.
+2044 | VT-49242 | [math_readouts            ] The limit approaches infinity.
+2045 | VT-16643 | [math_readouts            ] FYI, Normalize the vector to unit length. (1926) If possible.
+2046 | VT-16360 | [math_readouts            ] Heads up: Matrix A times B is non-commutative. (1552) For real.
+2047 | VT-18426 | [math_readouts            ] Hey, Normalize the vector to unit length. (8775)
+2048 | VT-54245 | [math_readouts            ] Hey, The mean is greater than the median—right skew. (9409) Right now.
+2049 | VT-67116 | [math_readouts            ] Solve for x: 2x + 5 = 19. (5714) Please.
+2050 | VT-40149 | [math_readouts            ] Reminder: The derivative of x squared is two x. (1239) Please.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 194 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+9651 | VT-641631 | [uncertainty              ] Real talk, Maybe—leaning no. Right now. — confirm.
+9652 | VT-630284 | [urls_emails_codes        ] Heads up: My handle is @zero_cool_1995. Right now.
+9653 | VT-565543 | [urls_emails_codes        ] FYI, Note: Join the room ID 833-555-120 with passcode 'orbit'. Right now.
+9654 | VT-602729 | [urls_emails_codes        ] Listen, My handle is @zero_cool_1995. If possible. — confirm.
+9655 | VT-546205 | [urls_emails_codes        ] Quick one: Hey, The repo lives at github dot com slash acme slash core. If possible. right now.
+9656 | VT-549446 | [urls_emails_codes        ] Listen, Note: The meeting link is in the calendar description. Right now..
+9657 | VT-653264 | [urls_emails_codes        ] Heads up: Email support at helpdesk@example.com. For real..
+9658 | VT-589342 | [urls_emails_codes        ] FYI, Hey, Visit https://example.org/docs/getting-started. Please. right now.
+9659 | VT-658487 | [urls_emails_codes        ] Note: My handle is @zero_cool_1995. Right now. please.
+9660 | VT-636344 | [urls_emails_codes        ] Note: Note: Email support at helpdesk@example.com. Right now.
+9661 | VT-518910 | [urls_emails_codes        ] Heads up: FYI, The repo lives at github dot com slash acme slash core. Thanks.
+9662 | VT-670109 | [urls_emails_codes        ] Quick one: Listen, Text me the OTP when you get it. For real.
+9663 | VT-630705 | [urls_emails_codes        ] Real talk, FYI, The meeting link is in the calendar description. Please. thanks.
+9664 | VT-562479 | [urls_emails_codes        ] Okay, Listen, Join the room ID 834-555-120 with passcode 'orbit'. — confirm.
+9665 | VT-527871 | [urls_emails_codes        ] Note: Okay, Paste the invite code: XR7F-29Q4-J1LM.—copy.
+9666 | VT-517645 | [urls_emails_codes        ] Reminder: Reminder: Email support at helpdesk@example.com. Thanks. — got it.
+9667 | VT-622655 | [urls_emails_codes        ] Reminder: Visit https://example.org/docs/getting-started.—got it. thanks.
+9668 | VT-649411 | [urls_emails_codes        ] Okay, FYI, Join the room ID 834-555-120 with passcode 'orbit'. Right now. — got it.
+9669 | VT-599946 | [urls_emails_codes        ] Quick one: Listen, My handle is @zero_cool_1995. thanks.
+9670 | VT-633895 | [urls_emails_codes        ] Email support at helpdesk@example.com. please.
+9671 | VT-561862 | [urls_emails_codes        ] Okay, Listen, Text me the OTP when you get it. For real. thanks.
+9672 | VT-650033 | [urls_emails_codes        ] Okay, Listen, Text me the OTP when you get it.—copy. — got it.
+9673 | VT-694603 | [urls_emails_codes        ] Heads up: Hey, Text me the OTP when you get it.—copy.
+9674 | VT-603052 | [urls_emails_codes        ] Listen, Reminder: Join the room ID 834-555-120 with passcode 'orbit'. If possible..
+9675 | VT-551683 | [urls_emails_codes        ] Listen, Hey, Visit https://example.org/docs/getting-started. Please. if you can.
+9676 | VT-539475 | [urls_emails_codes        ] Listen, Listen, Visit https://example.org/docs/getting-started. Right now. right now.
+9677 | VT-633101 | [urls_emails_codes        ] Listen, Reminder: Text me the OTP when you get it.—copy..
+9678 | VT-523646 | [urls_emails_codes        ] FYI, Email support at helpdesk@example.com. Please. — confirm.
+9679 | VT-625691 | [urls_emails_codes        ] Reminder: Listen, Use coupon code FINAL-BOSS at checkout. For real. thanks.
+9680 | VT-641138 | [urls_emails_codes        ] Quick one: Listen, Use coupon code FINAL-BOSS at checkout. For real.
+9681 | VT-674009 | [urls_emails_codes        ] FYI, Listen, Use coupon code FINAL-BOSS at checkout. please.
+9682 | VT-566946 | [urls_emails_codes        ] Heads up: Join the room ID 834-555-120 with passcode 'orbit'. Right now. — now.
+9683 | VT-521652 | [urls_emails_codes        ] Listen, Hey, The repo lives at github dot com slash acme slash core. If possible..
+9684 | VT-633378 | [urls_emails_codes        ] Quick one: Hey, The repo lives at github dot com slash acme slash core.—got it. right now.
+9685 | VT-554991 | [urls_emails_codes        ] Reminder: FYI, Visit https://example.org/docs/getting-started. If possible. thanks.
+9686 | VT-649140 | [urls_emails_codes        ] Reminder: Listen, Text me the OTP when you get it. Right now..
+9687 | VT-625603 | [urls_emails_codes        ] Quick one: The repo lives at github dot com slash acme slash core.—copy. thanks.
+9688 | VT-692308 | [urls_emails_codes        ] Note: Heads up: Paste the invite code: XR7F-29Q4-J1LM. Please..
+9689 | VT-684836 | [urls_emails_codes        ] Listen, Reminder: Visit https://example.org/docs/getting-started.—got it. — confirm.
+9690 | VT-682919 | [urls_emails_codes        ] Reminder: FYI, Visit https://example.org/docs/getting-started. If possible. if you can.
+9691 | VT-629717 | [urls_emails_codes        ] Quick one: The repo lives at github dot com slash acme slash core.—got it..
+9692 | VT-559419 | [urls_emails_codes        ] Okay, Hey, Visit https://example.org/docs/getting-started. Please.
+9693 | VT-547490 | [urls_emails_codes        ] Heads up: Listen, My handle is @zero_cool_1995. Right now. — confirm.
+9694 | VT-502845 | [urls_emails_codes        ] Heads up: Note: The meeting link is in the calendar description. Thanks. — now.
+9695 | VT-629845 | [urls_emails_codes        ] Real talk, Text me the OTP when you get it. — now.
+9696 | VT-618021 | [urls_emails_codes        ] Reminder: Okay, Email support at helpdesk@example.com. If possible..
+9697 | VT-657382 | [urls_emails_codes        ] Heads up: Listen, Use coupon code FINAL-BOSS at checkout. For real. — confirm.
+9698 | VT-593621 | [urls_emails_codes        ] Heads up: Reminder: Join the room ID 833-555-120 with passcode 'orbit'. Right now.
+9699 | VT-613352 | [urls_emails_codes        ] Real talk, Reminder: Paste the invite code: XR7F-29Q4-J1LM.—got it. if you can.
+9700 | VT-680564 | [urls_emails_codes        ] Real talk, Use coupon code FINAL-BOSS at checkout.

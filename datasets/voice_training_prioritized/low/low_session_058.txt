@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 58 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2851 | VT-64107 | [multilingual             ] 你好，今天忙吗？—got it.
+2852 | VT-39539 | [negations                ] Listen, We can’t ship without tests.—copy.
+2853 | VT-78906 | [negations                ] FYI, No chance. Please.
+2854 | VT-43511 | [negations                ] We can’t ship without tests. Right now.
+2855 | VT-80459 | [negations                ] Reminder: Never deploy on Friday. Right now.
+2856 | VT-37300 | [negations                ] I won’t sign off on that.—got it.
+2857 | VT-15028 | [negations                ] Okay, I’m not doing that again. For real.
+2858 | VT-27416 | [negations                ] Note: Do not open that email. Thanks.
+2859 | VT-39539 | [negations                ] Listen, We can’t ship without tests.—copy.
+2860 | VT-87279 | [negations                ] Reminder: I’m not doing that again. If possible.
+2861 | VT-62324 | [negations                ] Never deploy on Friday.—copy.
+2862 | VT-88638 | [negations                ] Okay, That’s not what I asked for. Thanks.
+2863 | VT-20486 | [negations                ] Listen, I won’t sign off on that. If possible.
+2864 | VT-22053 | [negations                ] Reminder: No chance.—copy.
+2865 | VT-68472 | [negations                ] Hey, No logs, no proof.
+2866 | VT-21064 | [negations                ] Okay, I’m not doing that again. If possible.
+2867 | VT-47215 | [negations                ] Hey, Do not open that email. Please.
+2868 | VT-71060 | [negations                ] Listen, No chance.—got it.
+2869 | VT-70078 | [negations                ] We can’t ship without tests. Right now.
+2870 | VT-73704 | [negations                ] I’m not doing that again.
+2871 | VT-88638 | [negations                ] Okay, That’s not what I asked for. Thanks.
+2872 | VT-20165 | [negations                ] Hey, That’s not what I asked for. For real.
+2873 | VT-81334 | [negations                ] Note: That’s not what I asked for. Thanks.
+2874 | VT-87820 | [negations                ] Reminder: No chance. Please.
+2875 | VT-27416 | [negations                ] Note: Do not open that email. Thanks.
+2876 | VT-54424 | [negations                ] Hey, Do not open that email.—got it.
+2877 | VT-33824 | [negations                ] Listen, That’s not what I asked for. For real.
+2878 | VT-65050 | [negations                ] Okay, I’m not doing that again. For real.
+2879 | VT-30278 | [negations                ] Note: Nothing about this is simple. For real.
+2880 | VT-44438 | [negations                ] Listen, Nothing about this is simple. Thanks.
+2881 | VT-66402 | [negations                ] Okay, Nothing about this is simple.—got it.
+2882 | VT-44290 | [negations                ] Heads up: No chance.
+2883 | VT-80459 | [negations                ] Reminder: Never deploy on Friday. Right now.
+2884 | VT-53443 | [negations                ] Listen, Never deploy on Friday. Please.
+2885 | VT-16381 | [negations                ] Note: Do not open that email. Right now.
+2886 | VT-56642 | [negations                ] That’s not what I asked for. Please.
+2887 | VT-46204 | [negations                ] Heads up: Never deploy on Friday. Right now.
+2888 | VT-45577 | [negations                ] Heads up: No logs, no proof.
+2889 | VT-47215 | [negations                ] Hey, Do not open that email. Please.
+2890 | VT-16381 | [negations                ] Note: Do not open that email. Right now.
+2891 | VT-63990 | [negations                ] Note: Never deploy on Friday. If possible.
+2892 | VT-27416 | [negations                ] Note: Do not open that email. Thanks.
+2893 | VT-61633 | [negations                ] FYI, We can’t ship without tests.—got it.
+2894 | VT-30072 | [negations                ] FYI, I won’t sign off on that.
+2895 | VT-95468 | [negations                ] Reminder: That’s not what I asked for. Please.
+2896 | VT-72580 | [negations                ] Listen, I’m not doing that again. Please.
+2897 | VT-30278 | [negations                ] Note: Nothing about this is simple. For real.
+2898 | VT-24954 | [negations                ] Hey, No chance. Thanks.
+2899 | VT-49850 | [negations                ] Listen, No logs, no proof.—got it.
+2900 | VT-11748 | [negations                ] Nothing about this is simple.

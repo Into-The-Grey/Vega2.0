@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 32 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1551 | VT-85869 | [home_assistant_commands  ] Start the 'Movie Night' scene. For real.
+1552 | VT-92456 | [home_assistant_commands  ] Reminder: Run the vacuum downstairs. If possible.
+1553 | VT-39753 | [home_assistant_commands  ] Note: Set thermostat to sixty-eight degrees. For real.
+1554 | VT-74503 | [home_assistant_commands  ] Show camera feed on the kitchen display. Please.
+1555 | VT-37623 | [home_assistant_commands  ] Note: Lights to twenty percent, warm white.—copy.
+1556 | VT-68533 | [home_assistant_commands  ] Heads up: Mute the living room speakers.—got it.
+1557 | VT-37623 | [home_assistant_commands  ] Note: Lights to twenty percent, warm white.—copy.
+1558 | VT-95425 | [home_assistant_commands  ] Announce dinner in five minutes. If possible.
+1559 | VT-68173 | [home_assistant_commands  ] Lock the front door and arm stay.
+1560 | VT-23470 | [home_assistant_commands  ] Note: Lock the front door and arm stay. Please.
+1561 | VT-60291 | [home_assistant_commands  ] Note: Start the 'Movie Night' scene. If possible.
+1562 | VT-10682 | [home_assistant_commands  ] Listen, Mute the living room speakers.—copy.
+1563 | VT-76210 | [home_assistant_commands  ] Set thermostat to sixty-eight degrees. If possible.
+1564 | VT-11135 | [home_assistant_commands  ] Heads up: Start the 'Movie Night' scene. Please.
+1565 | VT-83928 | [home_assistant_commands  ] Note: Lights to twenty percent, warm white.—got it.
+1566 | VT-90126 | [home_assistant_commands  ] Note: Set thermostat to sixty-eight degrees.—got it.
+1567 | VT-99363 | [home_assistant_commands  ] Heads up: Set thermostat to sixty-eight degrees. Please.
+1568 | VT-31318 | [home_assistant_commands  ] FYI, Show camera feed on the kitchen display.
+1569 | VT-47145 | [home_assistant_commands  ] Note: Run the vacuum downstairs. Please.
+1570 | VT-15835 | [home_assistant_commands  ] Okay, Turn off everything in the bedroom. Thanks.
+1571 | VT-57800 | [home_assistant_commands  ] Announce dinner in five minutes.—got it.
+1572 | VT-18187 | [home_assistant_commands  ] Note: Turn off everything in the bedroom. Please.
+1573 | VT-85684 | [home_assistant_commands  ] Lock the front door and arm stay.
+1574 | VT-76210 | [home_assistant_commands  ] Set thermostat to sixty-eight degrees. If possible.
+1575 | VT-52160 | [home_assistant_commands  ] Announce dinner in five minutes.
+1576 | VT-66279 | [home_assistant_commands  ] Okay, Set thermostat to sixty-eight degrees.
+1577 | VT-64610 | [home_assistant_commands  ] Reminder: Set thermostat to sixty-eight degrees.
+1578 | VT-46003 | [home_assistant_commands  ] Note: Show camera feed on the kitchen display.
+1579 | VT-88395 | [home_assistant_commands  ] Turn off everything in the bedroom. Thanks.
+1580 | VT-68354 | [home_assistant_commands  ] Note: Lights to twenty percent, warm white. Right now.
+1581 | VT-85684 | [home_assistant_commands  ] Lock the front door and arm stay.
+1582 | VT-78805 | [home_assistant_commands  ] Lights to twenty percent, warm white.—copy.
+1583 | VT-85684 | [home_assistant_commands  ] Lock the front door and arm stay.
+1584 | VT-50561 | [home_assistant_commands  ] Reminder: Open the garage halfway. Right now.
+1585 | VT-25432 | [home_assistant_commands  ] Lights to twenty percent, warm white.—copy.
+1586 | VT-85684 | [home_assistant_commands  ] Lock the front door and arm stay.
+1587 | VT-58116 | [homophones_minimal_pairs ] Okay, I need a new role for this roll.—got it.
+1588 | VT-50049 | [homophones_minimal_pairs ] Heads up: Sight the site before the cite.
+1589 | VT-44358 | [homophones_minimal_pairs ] Hey, I need a new role for this roll.
+1590 | VT-69447 | [homophones_minimal_pairs ] Hey, I’ll read the readme later.
+1591 | VT-10628 | [homophones_minimal_pairs ] Reminder: Cache rules everything around me—C‑A‑C‑H‑E. Thanks.
+1592 | VT-39758 | [homophones_minimal_pairs ] Listen, They’re there, at their desks. For real.
+1593 | VT-11040 | [homophones_minimal_pairs ] I can’t bear another bare-metal install. If possible.
+1594 | VT-58116 | [homophones_minimal_pairs ] Okay, I need a new role for this roll.—got it.
+1595 | VT-86875 | [homophones_minimal_pairs ] Okay, They’re there, at their desks. Please.
+1596 | VT-74566 | [homophones_minimal_pairs ] Reminder: I’ll read the readme later. Right now.
+1597 | VT-72019 | [homophones_minimal_pairs ] Note: The suite is sweet but pricey. Please.
+1598 | VT-22023 | [homophones_minimal_pairs ] Heads up: Cache rules everything around me—C‑A‑C‑H‑E. Right now.
+1599 | VT-65653 | [homophones_minimal_pairs ] Note: Sight the site before the cite. Right now.
+1600 | VT-64049 | [homophones_minimal_pairs ] Listen, We’ll write the right config. For real.

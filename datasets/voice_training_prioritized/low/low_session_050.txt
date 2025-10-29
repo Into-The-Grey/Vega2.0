@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 50 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2451 | VT-18968 | [meta                     ] Note: Welcome to the part of the dataset where the AI talks about itself.—copy.
+2452 | VT-93426 | [meta                     ] I am not alive, but I do speak convincingly.
+2453 | VT-77380 | [meta                     ] Note: I am not alive, but I do speak convincingly. If possible.
+2454 | VT-58154 | [meta                     ] Hey, Welcome to the part of the dataset where the AI talks about itself.
+2455 | VT-42097 | [meta                     ] Okay, This phrase was generated to train a machine to sound more human.—got it.
+2456 | VT-58869 | [meta                     ] Listen, This phrase was generated to train a machine to sound more human. If possible.
+2457 | VT-58154 | [meta                     ] Hey, Welcome to the part of the dataset where the AI talks about itself.
+2458 | VT-98157 | [meta                     ] FYI, I am not alive, but I do speak convincingly. If possible.
+2459 | VT-19311 | [meta                     ] Note: I am not alive, but I do speak convincingly. Thanks.
+2460 | VT-89521 | [meta                     ] Reminder: Welcome to the part of the dataset where the AI talks about itself.
+2461 | VT-60073 | [meta                     ] Note: I am not alive, but I do speak convincingly. For real.
+2462 | VT-47805 | [meta                     ] Heads up: I am not alive, but I do speak convincingly.
+2463 | VT-75252 | [meta                     ] Heads up: Welcome to the part of the dataset where the AI talks about itself.
+2464 | VT-44254 | [meta                     ] Heads up: Welcome to the part of the dataset where the AI talks about itself. For real.
+2465 | VT-96873 | [meta                     ] Heads up: This phrase was generated to train a machine to sound more human.—copy.
+2466 | VT-38955 | [meta                     ] Reminder: This phrase was generated to train a machine to sound more human.—got it.
+2467 | VT-80204 | [meta                     ] FYI, Welcome to the part of the dataset where the AI talks about itself. For real.
+2468 | VT-79016 | [meta                     ] Hey, I am not alive, but I do speak convincingly. Please.
+2469 | VT-24674 | [meta                     ] Hey, Welcome to the part of the dataset where the AI talks about itself.—copy.
+2470 | VT-32376 | [meta                     ] This phrase was generated to train a machine to sound more human.—copy.
+2471 | VT-31309 | [meta                     ] Note: This phrase was generated to train a machine to sound more human. Please.
+2472 | VT-39394 | [meta                     ] Listen, I am not alive, but I do speak convincingly.—copy.
+2473 | VT-54279 | [meta                     ] Okay, This phrase was generated to train a machine to sound more human. Thanks.
+2474 | VT-44254 | [meta                     ] Heads up: Welcome to the part of the dataset where the AI talks about itself. For real.
+2475 | VT-88296 | [meta                     ] Note: Welcome to the part of the dataset where the AI talks about itself. Right now.
+2476 | VT-90071 | [meta                     ] Heads up: I am not alive, but I do speak convincingly.
+2477 | VT-41644 | [meta                     ] Hey, I am not alive, but I do speak convincingly. If possible.
+2478 | VT-47391 | [meta                     ] Note: I am not alive, but I do speak convincingly.—copy.
+2479 | VT-96008 | [meta                     ] Note: Welcome to the part of the dataset where the AI talks about itself.—copy.
+2480 | VT-17855 | [meta                     ] This phrase was generated to train a machine to sound more human. For real.
+2481 | VT-52318 | [meta                     ] Hey, Welcome to the part of the dataset where the AI talks about itself.—got it.
+2482 | VT-28709 | [meta                     ] Note: This phrase was generated to train a machine to sound more human.—copy.
+2483 | VT-37674 | [meta                     ] Hey, Welcome to the part of the dataset where the AI talks about itself.
+2484 | VT-76709 | [meta                     ] FYI, This phrase was generated to train a machine to sound more human.—got it.
+2485 | VT-45521 | [meta                     ] Reminder: Welcome to the part of the dataset where the AI talks about itself.—copy.
+2486 | VT-28709 | [meta                     ] Note: This phrase was generated to train a machine to sound more human.—copy.
+2487 | VT-42487 | [meta                     ] Note: This phrase was generated to train a machine to sound more human. For real.
+2488 | VT-42487 | [meta                     ] Note: This phrase was generated to train a machine to sound more human. For real.
+2489 | VT-77901 | [meta                     ] Okay, Welcome to the part of the dataset where the AI talks about itself. Right now.
+2490 | VT-59614 | [meta                     ] Hey, Welcome to the part of the dataset where the AI talks about itself. For real.
+2491 | VT-17001 | [meta                     ] Okay, I am not alive, but I do speak convincingly. For real.
+2492 | VT-39394 | [meta                     ] Listen, I am not alive, but I do speak convincingly.—copy.
+2493 | VT-48503 | [meta                     ] Hey, This phrase was generated to train a machine to sound more human. If possible.
+2494 | VT-12034 | [meta                     ] FYI, Welcome to the part of the dataset where the AI talks about itself. Please.
+2495 | VT-25147 | [meta                     ] Note: Welcome to the part of the dataset where the AI talks about itself. Please.
+2496 | VT-83240 | [meta                     ] Okay, Welcome to the part of the dataset where the AI talks about itself. Right now.
+2497 | VT-89521 | [meta                     ] Reminder: Welcome to the part of the dataset where the AI talks about itself.
+2498 | VT-77901 | [meta                     ] Okay, Welcome to the part of the dataset where the AI talks about itself. Right now.
+2499 | VT-75252 | [meta                     ] Heads up: Welcome to the part of the dataset where the AI talks about itself.
+2500 | VT-41834 | [meta                     ] Okay, This phrase was generated to train a machine to sound more human.—got it.

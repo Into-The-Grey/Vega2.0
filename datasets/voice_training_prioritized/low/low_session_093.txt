@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 93 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+4601 | VT-28753 | [spelling_alphabet        ] Note: Lowercase only: monolithicservice. Thanks.
+4602 | VT-32383 | [spelling_alphabet        ] Note: My initials are N—A—A, November Alpha Alpha. Thanks.
+4603 | VT-26250 | [spelling_alphabet        ] Heads up: License plate reads: Zulu Seven Bravo Nine Four. For real.
+4604 | VT-18614 | [spelling_alphabet        ] Heads up: Confirm: Bravo Echo Yankee Echo Romeo. For real.
+4605 | VT-46751 | [spelling_alphabet        ] Listen, License plate reads: Zulu Seven Bravo Nine Four.—got it.
+4606 | VT-91067 | [spelling_alphabet        ] Listen, License plate reads: Zulu Seven Bravo Nine Four.—got it.
+4607 | VT-35478 | [spelling_alphabet        ] FYI, All caps: API KEY REVOKED.—got it.
+4608 | VT-48869 | [spelling_alphabet        ] Okay, Lowercase only: monolithicservice.—copy.
+4609 | VT-75225 | [spelling_alphabet        ] Reminder: Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November.—got it.
+4610 | VT-32383 | [spelling_alphabet        ] Note: My initials are N—A—A, November Alpha Alpha. Thanks.
+4611 | VT-37784 | [spelling_alphabet        ] Reminder: Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November. For real.
+4612 | VT-32383 | [spelling_alphabet        ] Note: My initials are N—A—A, November Alpha Alpha. Thanks.
+4613 | VT-84689 | [spelling_alphabet        ] Note: Serial: Tango–Lima–03–Foxtrot–Echo. For real.
+4614 | VT-95212 | [spelling_alphabet        ] FYI, Spell that: C as in Charlie, A as in Alpha, I as in India, N as in November. Right now.
+4615 | VT-32383 | [spelling_alphabet        ] Note: My initials are N—A—A, November Alpha Alpha. Thanks.
+4616 | VT-29137 | [sports_cast              ] Reminder: She nails the triple, crowd goes wild.—copy.
+4617 | VT-93554 | [sports_cast              ] Note: A new personal best by 0.12 seconds! If possible.
+4618 | VT-67669 | [sports_cast              ] Listen, She nails the triple, crowd goes wild. Right now.
+4619 | VT-81574 | [sports_cast              ] Okay, Break point; deep breath; serve wide. Please.
+4620 | VT-57153 | [sports_cast              ] FYI, What a clutch parry into the finisher. Right now.
+4621 | VT-54927 | [sports_cast              ] Heads up: Fourth and inches with the clock bleeding.
+4622 | VT-12991 | [sports_cast              ] Hey, He shoots—top shelf! For real.
+4623 | VT-29137 | [sports_cast              ] Reminder: She nails the triple, crowd goes wild.—copy.
+4624 | VT-45637 | [sports_cast              ] Note: Fourth and inches with the clock bleeding. Right now.
+4625 | VT-49451 | [sports_cast              ] Okay, Break point; deep breath; serve wide.—copy.
+4626 | VT-66647 | [sports_cast              ] FYI, The underdogs are up by two. Please.
+4627 | VT-53324 | [sports_cast              ] FYI, What a clutch parry into the finisher. If possible.
+4628 | VT-49046 | [sports_cast              ] A new personal best by 0.12 seconds! Please.
+4629 | VT-23565 | [sports_cast              ] Yellow card for a reckless challenge. If possible.
+4630 | VT-15206 | [sports_cast              ] Okay, Fourth and inches with the clock bleeding.—got it.
+4631 | VT-61896 | [sports_cast              ] Hey, He shoots—top shelf!—copy.
+4632 | VT-27978 | [sports_cast              ] Hey, A new personal best by 0.12 seconds!
+4633 | VT-51856 | [sports_cast              ] She nails the triple, crowd goes wild. Please.
+4634 | VT-98932 | [sports_cast              ] Fourth and inches with the clock bleeding.
+4635 | VT-66647 | [sports_cast              ] FYI, The underdogs are up by two. Please.
+4636 | VT-36339 | [sports_cast              ] Reminder: The underdogs are up by two. Thanks.
+4637 | VT-21137 | [sports_cast              ] Heads up: The underdogs are up by two.—copy.
+4638 | VT-87839 | [sports_cast              ] Listen, A new personal best by 0.12 seconds! Thanks.
+4639 | VT-12991 | [sports_cast              ] Hey, He shoots—top shelf! For real.
+4640 | VT-74453 | [sports_cast              ] Okay, He shoots—top shelf! Right now.
+4641 | VT-16175 | [sports_cast              ] Note: The underdogs are up by two. If possible.
+4642 | VT-33005 | [sports_cast              ] Fourth and inches with the clock bleeding. Thanks.
+4643 | VT-19935 | [sports_cast              ] Okay, That split-second rotation changed everything. Please.
+4644 | VT-57509 | [sports_cast              ] Listen, That split-second rotation changed everything. Right now.
+4645 | VT-74788 | [sports_cast              ] Okay, That split-second rotation changed everything. For real.
+4646 | VT-90650 | [sports_cast              ] Listen, A new personal best by 0.12 seconds! Right now.
+4647 | VT-81574 | [sports_cast              ] Okay, Break point; deep breath; serve wide. Please.
+4648 | VT-24712 | [sports_cast              ] Note: Break point; deep breath; serve wide. Thanks.
+4649 | VT-26853 | [sports_cast              ] The underdogs are up by two. Please.
+4650 | VT-41825 | [sports_cast              ] Okay, Break point; deep breath; serve wide. Please.

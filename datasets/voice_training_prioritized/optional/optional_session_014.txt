@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 14 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0651 | VT-47460 | [expletive-heavy          ] Hey, You’ve gotta be shitting me. Right now.
+0652 | VT-51155 | [expletive-heavy          ] Listen, This whole thing is one giant clusterAF.—got it.
+0653 | VT-75277 | [expletive-heavy          ] Reminder: What the actual AF is going on here? Right now.
+0654 | VT-70063 | [expletive-heavy          ] You’ve gotta be shitting me.—got it.
+0655 | VT-18695 | [expletive-heavy          ] Reminder: This whole thing is one giant clusterfuck. If possible.
+0656 | VT-14485 | [expletive-heavy          ] Okay, What the actual AF is going on here? If possible.
+0657 | VT-61637 | [expletive-heavy          ] Reminder: You’ve gotta be shitting me. If possible.
+0658 | VT-73810 | [expletive-heavy          ] This whole thing is one giant clusterfucking. Thanks.
+0659 | VT-77659 | [expletive-heavy          ] FYI, What the actual fuck is going on here? For real.
+0660 | VT-32398 | [expletive-heavy          ] Note: You’ve gotta be shitting me. For real.
+0661 | VT-48355 | [expletive-heavy          ] Heads up: This whole thing is one giant clusterAF. Please.
+0662 | VT-19331 | [expletive-heavy          ] Note: What the actual AF is going on here?
+0663 | VT-90136 | [expletive-heavy          ] Hey, You’ve gotta be shitting me.—got it.
+0664 | VT-26040 | [expletive-heavy          ] Okay, This whole thing is one giant clusterAF. Thanks.
+0665 | VT-97635 | [expletive-heavy          ] Reminder: What the actual fucking is going on here?—copy.
+0666 | VT-29449 | [expletive-heavy          ] Okay, You’ve gotta be shitting me.—got it.
+0667 | VT-57616 | [expletive-heavy          ] Reminder: This whole thing is one giant clusterfucking. For real.
+0668 | VT-10071 | [expletive-heavy          ] Note: What the actual AF is going on here? For real.
+0669 | VT-63267 | [expletive-heavy          ] Heads up: You’ve gotta be shitting me. For real.
+0670 | VT-47089 | [expletive-heavy          ] FYI, This whole thing is one giant clusterfucking. Thanks.
+0671 | VT-52428 | [expletive-heavy          ] Okay, What the actual fucking is going on here?—got it.
+0672 | VT-36253 | [expletive-heavy          ] Hey, You’ve gotta be shitting me. For real.
+0673 | VT-48472 | [expletive-heavy          ] Note: This whole thing is one giant clusterfuck. For real.
+0674 | VT-90387 | [expletive-heavy          ] Note: What the actual fuck is going on here? Please.
+0675 | VT-85569 | [expletive-heavy          ] Reminder: You’ve gotta be shitting me. If possible.
+0676 | VT-15130 | [expletive-heavy          ] Reminder: This whole thing is one giant clusterfuck.—got it.
+0677 | VT-26029 | [expletive-heavy          ] Note: What the actual fucking is going on here? If possible.
+0678 | VT-61445 | [expletive-heavy          ] You’ve gotta be shitting me.—copy.
+0679 | VT-76562 | [expletive-heavy          ] This whole thing is one giant clusterfuck. For real.
+0680 | VT-59023 | [expletive-heavy          ] Heads up: What the actual AF is going on here?
+0681 | VT-87944 | [expletive-heavy          ] Note: You’ve gotta be shitting me.—got it.
+0682 | VT-89571 | [expletive-heavy          ] This whole thing is one giant clusterfucking.—copy.
+0683 | VT-97475 | [expletive-heavy          ] What the actual fucking is going on here? Thanks.
+0684 | VT-66827 | [expletive-heavy          ] Okay, You’ve gotta be shitting me.
+0685 | VT-57563 | [expletive-heavy          ] Listen, This whole thing is one giant clusterfuck. Please.
+0686 | VT-46343 | [expletive-heavy          ] What the actual fucking is going on here? For real.
+0687 | VT-79855 | [expletive-heavy          ] Listen, You’ve gotta be shitting me. Right now.
+0688 | VT-55450 | [expletive-heavy          ] FYI, This whole thing is one giant clusterAF.—copy.
+0689 | VT-25878 | [expletive-heavy          ] Listen, What the actual AF is going on here? If possible.
+0690 | VT-52570 | [expletive-heavy          ] Reminder: You’ve gotta be shitting me. For real.
+0691 | VT-69154 | [expletive-heavy          ] Okay, This whole thing is one giant clusterAF. If possible.
+0692 | VT-95227 | [expletive-heavy          ] Hey, What the actual fuck is going on here? If possible.
+0693 | VT-40205 | [expletive-heavy          ] Note: You’ve gotta be shitting me. Thanks.
+0694 | VT-96340 | [expletive-heavy          ] Listen, This whole thing is one giant clusterfuck.—got it.
+0695 | VT-70925 | [expletive-heavy          ] What the actual fucking is going on here?—copy.
+0696 | VT-59711 | [expletive-heavy          ] Hey, You’ve gotta be shitting me.
+0697 | VT-88541 | [expletive-heavy          ] Reminder: This whole thing is one giant clusterAF.
+0698 | VT-38877 | [expletive-heavy          ] Note: What the actual fucking is going on here? Right now.
+0699 | VT-92675 | [expletive-heavy          ] Hey, You’ve gotta be shitting me. Right now.
+0700 | VT-80963 | [expletive-heavy          ] This whole thing is one giant clusterfucking.—got it.

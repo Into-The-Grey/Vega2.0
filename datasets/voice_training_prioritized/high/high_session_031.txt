@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 31 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1501 | VT-45201 | [numeric                  ] Note: Call me at (681) 244-7338. Please.
+1502 | VT-85435 | [numeric                  ] Heads up: The invoice date is 2016-09-10. Thanks.
+1503 | VT-74109 | [numeric                  ] Heads up: The total comes to $56.96.—copy.
+1504 | VT-74092 | [numeric                  ] Okay, Temperature is 50°F right now. Right now.
+1505 | VT-0127 | [numeric                  ] My backup number is (290) 647-2734.
+1506 | VT-0127 | [numeric                  ] My backup number is (290) 647-2734.
+1507 | VT-85052 | [numeric                  ] Listen, Temperature is 44°F right now. Thanks.
+1508 | VT-0134 | [numeric                  ] My backup number is (580) 767-2680.
+1509 | VT-17918 | [numeric                  ] Listen, The invoice date is 2023-06-05. Please.
+1510 | VT-62861 | [numeric                  ] FYI, The invoice date is 2023-06-21. For real.
+1511 | VT-93171 | [numeric                  ] Note: The server’s IP is 45.34.98.137. Thanks.
+1512 | VT-42251 | [numeric                  ] My backup number is (580) 767-2680.
+1513 | VT-92510 | [numeric                  ] Note: Call me at (530) 926-4694. For real.
+1514 | VT-72212 | [numeric                  ] Reminder: The total comes to $797.31. If possible.
+1515 | VT-0124 | [numeric                  ] The invoice date is 2023-06-21.
+1516 | VT-72212 | [numeric                  ] Reminder: The total comes to $797.31. If possible.
+1517 | VT-93248 | [numeric                  ] Reminder: Ship it to: 808 Elm Street, Denver, CO 80202 Please.
+1518 | VT-0142 | [numeric                  ] My backup number is (926) 266-9882.
+1519 | VT-36934 | [numeric                  ] Reminder: The total comes to $9,693.94.
+1520 | VT-79331 | [numeric                  ] Note: Call me at (864) 618-2911.
+1521 | VT-47108 | [numeric                  ] Note: The total comes to $56.96.—got it.
+1522 | VT-85435 | [numeric                  ] Heads up: The invoice date is 2016-09-10. Thanks.
+1523 | VT-16153 | [numeric                  ] Note: Ship it to: 123 Maple St., Springfield, IL 62704—got it.
+1524 | VT-55818 | [numeric                  ] Reminder: My backup number is (926) 266-9882.—got it.
+1525 | VT-11992 | [numeric                  ] My backup number is (290) 647-2734.
+1526 | VT-74592 | [numeric                  ] FYI, My backup number is (654) 655-4868. Please.
+1527 | VT-17941 | [numeric                  ] Hey, Call me at (864) 618-2911. Thanks.
+1528 | VT-49490 | [numeric                  ] Reminder: Call me at (515) 709-1379. Thanks.
+1529 | VT-77239 | [numeric                  ] The invoice date is 2010-05-27. Please.
+1530 | VT-44692 | [numeric                  ] Okay, Call me at (829) 426-4590.
+1531 | VT-22988 | [numeric                  ] Hey, The invoice date is 2023-06-05. If possible.
+1532 | VT-70624 | [numeric                  ] Note: Ship it to: 605 Sunset Terrace, Nashville, TN 37201 Thanks.
+1533 | VT-85435 | [numeric                  ] Heads up: The invoice date is 2016-09-10. Thanks.
+1534 | VT-56687 | [numeric                  ] Hey, The server’s IP is 116.129.57.243. Right now.
+1535 | VT-60980 | [numeric                  ] Okay, The server’s IP is 211.148.19.33.—got it.
+1536 | VT-0130 | [numeric                  ] Temperature is 44°F right now.
+1537 | VT-50430 | [numeric                  ] FYI, My backup number is (865) 485-5089.—copy.
+1538 | VT-77762 | [numeric                  ] Note: The invoice date is 2000-09-23.
+1539 | VT-70624 | [numeric                  ] Note: Ship it to: 605 Sunset Terrace, Nashville, TN 37201 Thanks.
+1540 | VT-88729 | [numeric                  ] Note: My backup number is (800) 421-4817. For real.
+1541 | VT-70624 | [numeric                  ] Note: Ship it to: 605 Sunset Terrace, Nashville, TN 37201 Thanks.
+1542 | VT-16060 | [numeric                  ] Reminder: Event date: 2003-01-25 at 7:22 PM. Thanks.
+1543 | VT-20468 | [numeric                  ] Note: Call me at (530) 926-4694. Please.
+1544 | VT-70624 | [numeric                  ] Note: Ship it to: 605 Sunset Terrace, Nashville, TN 37201 Thanks.
+1545 | VT-372357 | [comparatives_superlatives] Listen, Hey, Our best result so far. For real. if you can.
+1546 | VT-392349 | [comparatives_superlatives] FYI, Note: Better, but not best. For real.
+1547 | VT-337930 | [comparatives_superlatives] FYI, Heads up: Our best result so far. If possible. right now.
+1548 | VT-349823 | [comparatives_superlatives] Listen, Hey, The smallest feasible footprint. Please. — confirm.
+1549 | VT-347819 | [conditionals             ] Note: Hey, Provided the tests are green, merge. Please. if you can.
+1550 | VT-387841 | [conditionals             ] Listen, Reminder: If it ain’t broke, don’t fix it. Please. please.

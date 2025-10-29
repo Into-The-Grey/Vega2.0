@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 4 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0151 | VT-88011 | [agreements               ] That’s a yes from me.—got it.
+0152 | VT-64056 | [agreements               ] Note: Agreed—let’s lock it. For real.
+0153 | VT-69874 | [agreements               ] Listen, That’s a yes from me.—got it.
+0154 | VT-71021 | [agreements               ] Count me on board.—copy.
+0155 | VT-92858 | [agreements               ] Approved. Right now.
+0156 | VT-92858 | [agreements               ] Approved. Right now.
+0157 | VT-59317 | [agreements               ] Listen, Approved. For real.
+0158 | VT-60016 | [agreements               ] Heads up: Count me on board. Please.
+0159 | VT-69929 | [agreements               ] Okay, Count me on board.—copy.
+0160 | VT-61047 | [agreements               ] FYI, Copy that. Thanks.
+0161 | VT-68682 | [agreements               ] Heads up: That’s a yes from me.—got it.
+0162 | VT-67036 | [agreements               ] Listen, Approved. For real.
+0163 | VT-92552 | [agreements               ] Okay, Agreed—let’s lock it. Thanks.
+0164 | VT-96596 | [agreements               ] Listen, Sounds right. Please.
+0165 | VT-43673 | [agreements               ] Okay, Yep, that works for me. For real.
+0166 | VT-41596 | [agreements               ] FYI, Green light.
+0167 | VT-43673 | [agreements               ] Okay, Yep, that works for me. For real.
+0168 | VT-83506 | [agreements               ] FYI, Solid. Do it.—copy.
+0169 | VT-55096 | [agreements               ] I’m in.
+0170 | VT-72314 | [agreements               ] Okay, I’m in.—got it.
+0171 | VT-99480 | [agreements               ] Note: That’s a yes from me.
+0172 | VT-14129 | [agreements               ] FYI, Green light. Thanks.
+0173 | VT-64056 | [agreements               ] Note: Agreed—let’s lock it. For real.
+0174 | VT-76034 | [agreements               ] Heads up: That’s a yes from me. Thanks.
+0175 | VT-63707 | [agreements               ] FYI, Yep, that works for me. If possible.
+0176 | VT-21070 | [agreements               ] Hey, Agreed—let’s lock it.
+0177 | VT-62054 | [agreements               ] Listen, Agreed—let’s lock it.—got it.
+0178 | VT-27819 | [agreements               ] FYI, Sounds right. If possible.
+0179 | VT-87395 | [agreements               ] Heads up: Approved. For real.
+0180 | VT-14462 | [agreements               ] Copy that. Please.
+0181 | VT-48689 | [agreements               ] Heads up: Solid. Do it. If possible.
+0182 | VT-36182 | [agreements               ] Reminder: Copy that.—copy.
+0183 | VT-75396 | [agreements               ] Reminder: I’m in. Right now.
+0184 | VT-64056 | [agreements               ] Note: Agreed—let’s lock it. For real.
+0185 | VT-44995 | [agreements               ] FYI, Solid. Do it.—got it.
+0186 | VT-39674 | [agreements               ] Listen, Agreed—let’s lock it. Right now.
+0187 | VT-67296 | [agreements               ] Okay, Agreed—let’s lock it. Right now.
+0188 | VT-41140 | [agreements               ] Reminder: Sounds right. Thanks.
+0189 | VT-50415 | [agreements               ] Copy that. For real.
+0190 | VT-74384 | [agreements               ] Note: Yep, that works for me.—copy.
+0191 | VT-75396 | [agreements               ] Reminder: I’m in. Right now.
+0192 | VT-66153 | [agreements               ] Hey, Yep, that works for me.—copy.
+0193 | VT-75396 | [agreements               ] Reminder: I’m in. Right now.
+0194 | VT-14963 | [agreements               ] Hey, Count me on board.—copy.
+0195 | VT-56869 | [agreements               ] Listen, Yep, that works for me.—got it.
+0196 | VT-75396 | [agreements               ] Reminder: I’m in. Right now.
+0197 | VT-37939 | [comparatives_superlatives] Less fragile, more resilient.
+0198 | VT-58652 | [comparatives_superlatives] Our best result so far.
+0199 | VT-58652 | [comparatives_superlatives] Our best result so far.
+0200 | VT-71623 | [comparatives_superlatives] The toughest challenge yet.

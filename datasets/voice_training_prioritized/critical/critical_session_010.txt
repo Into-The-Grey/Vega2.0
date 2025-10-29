@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 10 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0451 | VT-54973 | [error_messages           ] Hey, Timeout waiting for the lock. Please.
+0452 | VT-52923 | [error_messages           ] FYI, Connection reset by peer.—copy.
+0453 | VT-81281 | [error_messages           ] Checksum failed; file corrupted.
+0454 | VT-35656 | [error_messages           ] Listen, Timeout waiting for the lock.—copy.
+0455 | VT-22974 | [error_messages           ] Heads up: Unhandled exception: ValueError at line 42. For real.
+0456 | VT-68024 | [error_messages           ] Note: Timeout waiting for the lock. Right now.
+0457 | VT-39318 | [error_messages           ] Reminder: Connection reset by peer. Thanks.
+0458 | VT-21126 | [error_messages           ] FYI, Segmentation fault—core dumped. Thanks.
+0459 | VT-19600 | [error_messages           ] Note: Fatal: permission denied (publickey). Right now.
+0460 | VT-99630 | [error_messages           ] Note: Segmentation fault—core dumped. Thanks.
+0461 | VT-59301 | [error_messages           ] Dependency conflict: version mismatch.
+0462 | VT-48518 | [error_messages           ] Okay, Rate limit exceeded; retry after 60 seconds.
+0463 | VT-35944 | [error_messages           ] Hey, Rate limit exceeded; retry after 60 seconds.—copy.
+0464 | VT-16952 | [error_messages           ] Heads up: Fatal: permission denied (publickey). Please.
+0465 | VT-91493 | [error_messages           ] Hey, Connection reset by peer. Thanks.
+0466 | VT-98903 | [error_messages           ] Reminder: Timeout waiting for the lock. For real.
+0467 | VT-68560 | [error_messages           ] Okay, Connection reset by peer.—got it.
+0468 | VT-38593 | [error_messages           ] Reminder: Segmentation fault—core dumped.—copy.
+0469 | VT-18715 | [error_messages           ] Segmentation fault—core dumped.
+0470 | VT-65354 | [error_messages           ] Heads up: Connection reset by peer. Right now.
+0471 | VT-23219 | [error_messages           ] Note: Connection reset by peer.—got it.
+0472 | VT-53009 | [error_messages           ] Reminder: Null pointer dereference detected. For real.
+0473 | VT-72577 | [error_messages           ] Connection reset by peer.
+0474 | VT-23219 | [error_messages           ] Note: Connection reset by peer.—got it.
+0475 | VT-68836 | [error_messages           ] Hey, Null pointer dereference detected. If possible.
+0476 | VT-24398 | [error_messages           ] Note: Connection reset by peer. Right now.
+0477 | VT-26040 | [error_messages           ] Segmentation fault—core dumped. Right now.
+0478 | VT-52923 | [error_messages           ] FYI, Connection reset by peer.—copy.
+0479 | VT-78198 | [error_messages           ] Listen, Rate limit exceeded; retry after 60 seconds. For real.
+0480 | VT-18011 | [error_messages           ] Hey, Dependency conflict: version mismatch.
+0481 | VT-97588 | [error_messages           ] Rate limit exceeded; retry after 60 seconds. Thanks.
+0482 | VT-11985 | [error_messages           ] Note: Timeout waiting for the lock. Right now.
+0483 | VT-57673 | [error_messages           ] Note: Segmentation fault—core dumped. Thanks.
+0484 | VT-19600 | [error_messages           ] Note: Fatal: permission denied (publickey). Right now.
+0485 | VT-22974 | [error_messages           ] Heads up: Unhandled exception: ValueError at line 42. For real.
+0486 | VT-69356 | [error_messages           ] Listen, Connection reset by peer.—got it.
+0487 | VT-40595 | [error_messages           ] Heads up: Connection reset by peer. If possible.
+0488 | VT-62453 | [error_messages           ] Hey, Connection reset by peer. Thanks.
+0489 | VT-40621 | [error_messages           ] FYI, Fatal: permission denied (publickey). If possible.
+0490 | VT-81660 | [error_messages           ] Disk quota exceeded; cleanup required. Right now.
+0491 | VT-97588 | [error_messages           ] Rate limit exceeded; retry after 60 seconds. Thanks.
+0492 | VT-16154 | [error_messages           ] Note: Rate limit exceeded; retry after 60 seconds.—copy.
+0493 | VT-12841 | [error_messages           ] Note: Rate limit exceeded; retry after 60 seconds. Right now.
+0494 | VT-21811 | [error_messages           ] Note: Checksum failed; file corrupted. Thanks.
+0495 | VT-34085 | [error_messages           ] Listen, Fatal: permission denied (publickey). Thanks.
+0496 | VT-81281 | [error_messages           ] Checksum failed; file corrupted.
+0497 | VT-67929 | [error_messages           ] FYI, Dependency conflict: version mismatch. Please.
+0498 | VT-59714 | [error_messages           ] Checksum failed; file corrupted. Please.
+0499 | VT-73906 | [error_messages           ] Listen, Null pointer dereference detected. For real.
+0500 | VT-26842 | [error_messages           ] FYI, Unhandled exception: ValueError at line 42.—copy.

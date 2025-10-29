@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 15 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0701 | VT-20966 | [hesitations_fillers      ] Heads up: I… I don’t know if that’ll fly. For real.
+0702 | VT-73115 | [hesitations_fillers      ] Note: Right… so… moving on. Right now.
+0703 | VT-56000 | [hesitations_fillers      ] Heads up: Well, I mean, like, kind of, yeah. Please.
+0704 | VT-93484 | [hesitations_fillers      ] So—yeah—about that plan… Right now.
+0705 | VT-30468 | [hesitations_fillers      ] FYI, Okay, okay, okay—listen. Right now.
+0706 | VT-87241 | [hesitations_fillers      ] Hmm, not exactly, but close.—copy.
+0707 | VT-95431 | [hesitations_fillers      ] Okay, Er, can we circle back? Right now.
+0708 | VT-60677 | [hesitations_fillers      ] Well, I mean, like, kind of, yeah. Please.
+0709 | VT-95431 | [hesitations_fillers      ] Okay, Er, can we circle back? Right now.
+0710 | VT-55892 | [hesitations_fillers      ] Note: Well, I mean, like, kind of, yeah.
+0711 | VT-15467 | [hesitations_fillers      ] FYI, Uh… hang on… what was I saying?—copy.
+0712 | VT-21367 | [hesitations_fillers      ] Hey, Hmm, not exactly, but close.—got it.
+0713 | VT-15235 | [hesitations_fillers      ] FYI, Uh… hang on… what was I saying? Thanks.
+0714 | VT-16412 | [hesitations_fillers      ] FYI, Okay, okay, okay—listen. Please.
+0715 | VT-60482 | [hesitations_fillers      ] Er, can we circle back? Please.
+0716 | VT-49509 | [hesitations_fillers      ] Hmm, not exactly, but close. If possible.
+0717 | VT-88442 | [hesitations_fillers      ] Okay, Right… so… moving on. Thanks.
+0718 | VT-25820 | [hesitations_fillers      ] Note: Uh… hang on… what was I saying?—copy.
+0719 | VT-88861 | [hesitations_fillers      ] FYI, Wait—uh—did you hear that? Thanks.
+0720 | VT-91493 | [hesitations_fillers      ] FYI, Er, can we circle back? Please.
+0721 | VT-94823 | [hesitations_fillers      ] Reminder: Right… so… moving on.
+0722 | VT-56992 | [hesitations_fillers      ] Note: I… I don’t know if that’ll fly.
+0723 | VT-68801 | [hesitations_fillers      ] Note: Well, I mean, like, kind of, yeah. For real.
+0724 | VT-62785 | [hesitations_fillers      ] Okay, I… I don’t know if that’ll fly.—copy.
+0725 | VT-26029 | [hesitations_fillers      ] Heads up: So—yeah—about that plan… For real.
+0726 | VT-88861 | [hesitations_fillers      ] FYI, Wait—uh—did you hear that? Thanks.
+0727 | VT-88861 | [hesitations_fillers      ] FYI, Wait—uh—did you hear that? Thanks.
+0728 | VT-16850 | [hesitations_fillers      ] FYI, Wait—uh—did you hear that? If possible.
+0729 | VT-82938 | [hesitations_fillers      ] So—yeah—about that plan…—copy.
+0730 | VT-10624 | [hesitations_fillers      ] Heads up: So—yeah—about that plan… If possible.
+0731 | VT-21117 | [hesitations_fillers      ] Hey, Right… so… moving on. If possible.
+0732 | VT-91570 | [hesitations_fillers      ] Reminder: I… I don’t know if that’ll fly.—copy.
+0733 | VT-85938 | [hesitations_fillers      ] Reminder: Wait—uh—did you hear that? If possible.
+0734 | VT-10760 | [hesitations_fillers      ] Hey, Well, I mean, like, kind of, yeah.—copy.
+0735 | VT-41662 | [hesitations_fillers      ] Heads up: Okay, okay, okay—listen. Right now.
+0736 | VT-34571 | [hesitations_fillers      ] Listen, Uh… hang on… what was I saying?—copy.
+0737 | VT-17134 | [hesitations_fillers      ] Mmm, nope, that’s not it. If possible.
+0738 | VT-34571 | [hesitations_fillers      ] Listen, Uh… hang on… what was I saying?—copy.
+0739 | VT-46159 | [hesitations_fillers      ] Er, can we circle back? Right now.
+0740 | VT-37215 | [hesitations_fillers      ] Heads up: Hmm, not exactly, but close. If possible.
+0741 | VT-58290 | [hesitations_fillers      ] Listen, I… I don’t know if that’ll fly. Please.
+0742 | VT-94154 | [hesitations_fillers      ] Heads up: Mmm, nope, that’s not it. Right now.
+0743 | VT-68801 | [hesitations_fillers      ] Note: Well, I mean, like, kind of, yeah. For real.
+0744 | VT-34061 | [hesitations_fillers      ] Heads up: I… I don’t know if that’ll fly.—got it.
+0745 | VT-35802 | [hesitations_fillers      ] Heads up: Uh… hang on… what was I saying? Please.
+0746 | VT-84792 | [hesitations_fillers      ] Reminder: Well, I mean, like, kind of, yeah. If possible.
+0747 | VT-92450 | [hesitations_fillers      ] Listen, Well, I mean, like, kind of, yeah.—got it.
+0748 | VT-71758 | [hesitations_fillers      ] FYI, Okay, okay, okay—listen. Thanks.
+0749 | VT-84624 | [hesitations_fillers      ] Reminder: Wait—uh—did you hear that? Please.
+0750 | VT-88442 | [hesitations_fillers      ] Okay, Right… so… moving on. Thanks.

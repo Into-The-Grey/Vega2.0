@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 191 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+9501 | VT-524415 | [trash_talk               ] Quick one: Good game; uninstall only if you want peace. — got it.
+9502 | VT-525666 | [trash_talk               ] Note: If that was your strat, keep it; we farmed it. please.
+9503 | VT-617011 | [trash_talk               ] FYI, Next time, ping before you feed. — confirm.
+9504 | VT-620449 | [trash_talk               ] FYI, You’re padding stats; scoreboard says otherwise. please.
+9505 | VT-609875 | [trash_talk               ] Real talk, If that was your strat, keep it; we farmed it. — got it.
+9506 | VT-568425 | [trash_talk               ] Quick one: Good game; uninstall only if you want peace. thanks.
+9507 | VT-610265 | [trash_talk               ] Note: You peeked wide with no cover—free pick. if you can. (alt)
+9508 | VT-593820 | [trash_talk               ] Heads up: Holding W isn’t a strategy; it’s a cry for help. right now.
+9509 | VT-678547 | [trash_talk               ] You’re padding stats; scoreboard says otherwise.
+9510 | VT-587984 | [trash_talk               ] Reminder: Great flank—on your own teammates. please. (alt)
+9511 | VT-588086 | [trash_talk               ] You peeked wide with no cover—free pick..
+9512 | VT-619776 | [trash_talk               ] Listen, Holding W isn’t a strategy; it’s a cry for help. if you can. (alt)
+9513 | VT-588769 | [trash_talk               ] Note: Nice whiff—crosshair on vacation? right now.
+9514 | VT-513089 | [trash_talk               ] FYI, That was textbook throw—appreciate the assist. if you can.
+9515 | VT-662898 | [trash_talk               ] Real talk, You brought a pea shooter to a boss fight. if you can.
+9516 | VT-651921 | [trash_talk               ] Heads up: Great flank—on your own teammates. please.
+9517 | VT-520698 | [trash_talk               ] Heads up: Nice whiff—crosshair on vacation? — now.
+9518 | VT-693504 | [trash_talk               ] Good game; uninstall only if you want peace. — got it.
+9519 | VT-607798 | [trash_talk               ] Heads up: Nice whiff—crosshair on vacation? — now.
+9520 | VT-551375 | [trash_talk               ] Reminder: That was textbook throw—appreciate the assist.
+9521 | VT-654365 | [trash_talk               ] Real talk, Good game; uninstall only if you want peace.
+9522 | VT-553861 | [trash_talk               ] Reminder: Great flank—on your own teammates. thanks.
+9523 | VT-622581 | [trash_talk               ] Heads up: That was textbook throw—appreciate the assist. — got it.
+9524 | VT-556268 | [trash_talk               ] Listen, If that was your strat, keep it; we farmed it. please.
+9525 | VT-510688 | [trash_talk               ] Note: You brought a pea shooter to a boss fight. if you can. (alt)
+9526 | VT-663122 | [trash_talk               ] Listen, Great flank—on your own teammates..
+9527 | VT-605490 | [trash_talk               ] FYI, If that was your strat, keep it; we farmed it. if you can.
+9528 | VT-589053 | [trash_talk               ] Reminder: Holding W isn’t a strategy; it’s a cry for help. thanks.
+9529 | VT-511151 | [trash_talk               ] Great flank—on your own teammates. — now.
+9530 | VT-642993 | [trash_talk               ] Listen, Holding W isn’t a strategy; it’s a cry for help. if you can.
+9531 | VT-560017 | [trash_talk               ] Reminder: Good game; uninstall only if you want peace. thanks. (alt)
+9532 | VT-635909 | [trash_talk               ] FYI, If that was your strat, keep it; we farmed it. right now. (alt)
+9533 | VT-601424 | [trash_talk               ] Real talk, You brought a pea shooter to a boss fight..
+9534 | VT-673468 | [trash_talk               ] Okay, That was textbook throw—appreciate the assist. — got it. (alt)
+9535 | VT-555234 | [trash_talk               ] Real talk, Next time, ping before you feed. — confirm. (alt)
+9536 | VT-603057 | [trash_talk               ] Note: Nice whiff—crosshair on vacation? — got it. (alt)
+9537 | VT-524767 | [trash_talk               ] Note: You peeked wide with no cover—free pick.
+9538 | VT-515830 | [trash_talk               ] You brought a pea shooter to a boss fight. if you can.
+9539 | VT-509076 | [trash_talk               ] Okay, If that was your strat, keep it; we farmed it..
+9540 | VT-556827 | [trash_talk               ] FYI, Next time, ping before you feed.
+9541 | VT-699082 | [trash_talk               ] Heads up: You brought a pea shooter to a boss fight. please.
+9542 | VT-616093 | [trash_talk               ] Listen, If that was your strat, keep it; we farmed it.
+9543 | VT-531063 | [trash_talk               ] Okay, You’re padding stats; scoreboard says otherwise. if you can.
+9544 | VT-589382 | [trash_talk               ] Note: You’re padding stats; scoreboard says otherwise. right now.
+9545 | VT-564356 | [trash_talk               ] Reminder: Holding W isn’t a strategy; it’s a cry for help. please. (alt)
+9546 | VT-501460 | [trash_talk               ] Heads up: You brought a pea shooter to a boss fight..
+9547 | VT-528799 | [trash_talk               ] Reminder: You’re padding stats; scoreboard says otherwise. — confirm.
+9548 | VT-616714 | [trash_talk               ] Real talk, If that was your strat, keep it; we farmed it. thanks.
+9549 | VT-539721 | [trash_talk               ] Listen, Holding W isn’t a strategy; it’s a cry for help. — got it. (alt)
+9550 | VT-608939 | [trash_talk               ] FYI, If that was your strat, keep it; we farmed it. please. (alt)

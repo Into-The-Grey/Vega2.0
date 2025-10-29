@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 16 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0751 | VT-71705 | [expletive-heavy          ] Listen, This whole thing is one giant clusterfucking. If possible.
+0752 | VT-89102 | [expletive-heavy          ] What the actual fucking is going on here? If possible.
+0753 | VT-13366 | [expletive-heavy          ] You’ve gotta be shitting me. Thanks.
+0754 | VT-26564 | [expletive-heavy          ] Listen, This whole thing is one giant clusterfuck. Right now.
+0755 | VT-56872 | [expletive-heavy          ] What the actual AF is going on here?—got it.
+0756 | VT-99281 | [expletive-heavy          ] Listen, You’ve gotta be shitting me. Thanks.
+0757 | VT-47747 | [expletive-heavy          ] Hey, This whole thing is one giant clusterfuck.—copy.
+0758 | VT-264598 | [expletive-heavy          ] This app crashed again—what a f—ing mess.
+0759 | VT-268256 | [expletive-heavy          ] You’ve got to be f—ing kidding me right now.
+0760 | VT-281835 | [expletive-heavy          ] I did everything you asked and it still broke—unbelievable.
+0761 | VT-267247 | [expletive-heavy          ] This whole build pipeline is a cluster—, fix it.
+0762 | VT-298731 | [expletive-heavy          ] It’s f—ing pouring out there; don’t forget a coat.
+0763 | VT-287561 | [expletive-heavy          ] That take is garbage—try again with facts.
+0764 | VT-229516 | [expletive-heavy          ] We’re burning time and cash; cut the b—t scope creep.
+0765 | VT-269253 | [expletive-heavy          ] I’m not doing this f—ing song and dance again.
+0766 | VT-253943 | [expletive-heavy          ] Update failed—again—because of some f—ing dependency lock.
+0767 | VT-295213 | [expletive-heavy          ] I hit deploy and the server just noped the f— out.
+0768 | VT-48465 | [gibberish                ] Hey, Blorp snaggledrip zoot zoot rama-ling! Skiddle skidaddle!
+0769 | VT-62654 | [gibberish                ] Okay, Meep morp, zip zap zibberoo! Skiddle skidaddle!—got it.
+0770 | VT-68401 | [gibberish                ] Heads up: Meep morp, zip zap zibberoo! Gleep glorp! For real.
+0771 | VT-52630 | [gibberish                ] Hey, Meep morp, zip zap zibberoo! Yabba dabba doo! For real.
+0772 | VT-40759 | [gibberish                ] Note: Frizzle my wizzle, zink to the blab. Yabba dabba doo! For real.
+0773 | VT-69451 | [gibberish                ] Okay, Meep morp, zip zap zibberoo! Gleep glorp! If possible.
+0774 | VT-35341 | [gibberish                ] Hey, Meep morp, zip zap zibberoo! Gleep glorp! Right now.
+0775 | VT-48465 | [gibberish                ] Hey, Blorp snaggledrip zoot zoot rama-ling! Skiddle skidaddle!
+0776 | VT-51667 | [gibberish                ] FYI, Frizzle my wizzle, zink to the blab. Yabba dabba doo! Thanks.
+0777 | VT-66238 | [gibberish                ] Heads up: Meep morp, zip zap zibberoo! Gleep glorp!
+0778 | VT-43275 | [gibberish                ] Reminder: Blorp snaggledrip zoot zoot rama-ling! Gleep glorp! For real.
+0779 | VT-68536 | [gibberish                ] Note: Meep morp, zip zap zibberoo! Gleep glorp!
+0780 | VT-43614 | [gibberish                ] Listen, Blorp snaggledrip zoot zoot rama-ling! Skiddle skidaddle! If possible.
+0781 | VT-81792 | [gibberish                ] FYI, Frizzle my wizzle, zink to the blab. Yabba dabba doo!—copy.
+0782 | VT-16813 | [gibberish                ] FYI, Frizzle my wizzle, zink to the blab. Gleep glorp! For real.
+0783 | VT-17312 | [gibberish                ] Okay, Frizzle my wizzle, zink to the blab. Skiddle skidaddle! If possible.
+0784 | VT-70226 | [gibberish                ] Heads up: Meep morp, zip zap zibberoo! Yabba dabba doo!
+0785 | VT-58140 | [gibberish                ] Hey, Frizzle my wizzle, zink to the blab. Skiddle skidaddle!—copy.
+0786 | VT-24037 | [gibberish                ] Frizzle my wizzle, zink to the blab.
+0787 | VT-43275 | [gibberish                ] Reminder: Blorp snaggledrip zoot zoot rama-ling! Gleep glorp! For real.
+0788 | VT-36042 | [gibberish                ] Okay, Frizzle my wizzle, zink to the blab. Gleep glorp! Thanks.
+0789 | VT-13458 | [gibberish                ] Note: Frizzle my wizzle, zink to the blab. Yabba dabba doo! Right now.
+0790 | VT-16303 | [gibberish                ] FYI, Blorp snaggledrip zoot zoot rama-ling! Yabba dabba doo! Please.
+0791 | VT-35341 | [gibberish                ] Hey, Meep morp, zip zap zibberoo! Gleep glorp! Right now.
+0792 | VT-77658 | [gibberish                ] Reminder: Frizzle my wizzle, zink to the blab. Yabba dabba doo! Please.
+0793 | VT-52011 | [gibberish                ] Hey, Blorp snaggledrip zoot zoot rama-ling! Skiddle skidaddle! For real.
+0794 | VT-16995 | [gibberish                ] Note: Blorp snaggledrip zoot zoot rama-ling! Skiddle skidaddle! If possible.
+0795 | VT-26411 | [gibberish                ] Hey, Frizzle my wizzle, zink to the blab. Yabba dabba doo! Thanks.
+0796 | VT-69395 | [gibberish                ] Blorp snaggledrip zoot zoot rama-ling! Yabba dabba doo! Right now.
+0797 | VT-97495 | [gibberish                ] Frizzle my wizzle, zink to the blab. Gleep glorp! Please.
+0798 | VT-74898 | [gibberish                ] Okay, Frizzle my wizzle, zink to the blab. Gleep glorp! For real.
+0799 | VT-52630 | [gibberish                ] Hey, Meep morp, zip zap zibberoo! Yabba dabba doo! For real.
+0800 | VT-60311 | [gibberish                ] Reminder: Blorp snaggledrip zoot zoot rama-ling! Gleep glorp!—got it.

@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 37 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1801 | VT-463398 | [interjection             ] FYI, Exactly. For real. right now. (alt)
+1802 | VT-473346 | [interjection             ] Reminder: Right. For real. thanks.
+1803 | VT-447458 | [interjection             ] Heads up: Listen, Right. If possible. please.
+1804 | VT-440745 | [interjection             ] Note: Okay, Yup.—got it. if you can.
+1805 | VT-440483 | [interjection             ] Quick one: Note: Maybe. Right now. right now. (alt)
+1806 | VT-474579 | [interjection             ] Heads up: Heads up: Understood. Right now. if you can.
+1807 | VT-411616 | [interjection             ] Note: Heads up: Negative. Please.
+1808 | VT-467686 | [interjection             ] Reminder: Reminder: Copy that. — confirm.
+1809 | VT-405717 | [interjection             ] Quick one: Heads up: Understood. Right now. right now.
+1810 | VT-459454 | [interjection             ] Real talk, Listen, Roger. Please. — got it.
+1811 | VT-475515 | [interjection             ] Listen, Listen, Negative. Right now. — confirm.
+1812 | VT-407582 | [interjection             ] Listen, Heads up: Negative. Please. please.
+1813 | VT-482079 | [interjection             ] Quick one: Reminder: Understood.—copy..
+1814 | VT-481264 | [interjection             ] Note: Mm-hmm. Right now. right now. (alt)
+1815 | VT-426968 | [interjection             ] Real talk, Heads up: Cool. Thanks. right now. (alt)
+1816 | VT-487935 | [interjection             ] Listen, Kinda.—got it. if you can.
+1817 | VT-408468 | [interjection             ] Real talk, Reminder: Right. For real.
+1818 | VT-455035 | [interjection             ] Reminder: Reminder: Got it. Right now. — confirm.
+1819 | VT-401440 | [interrogative            ] Reminder: FYI, Why does it always rain when I'm unprepared?—copy. right now.
+1820 | VT-470801 | [interrogative            ] Reminder: Hey, Is this really what you want? Right now. thanks. (alt)
+1821 | VT-455482 | [interrogative            ] Quick one: FYI, Is this really what you want?—copy. if you can. (alt)
+1822 | VT-436394 | [interrogative            ] Is this really what you want? For real. please.
+1823 | VT-434776 | [interrogative            ] Note: Note: Do you even hear yourself right now?—got it..
+1824 | VT-415542 | [interrogative            ] Reminder: Hey, Is this really what you want? please.
+1825 | VT-407457 | [interrogative            ] Note: Reminder: Is this really what you want?—copy. — got it. (alt)
+1826 | VT-456699 | [interrogative            ] Heads up: FYI, Why does it always rain when I'm unprepared?—copy. — now.
+1827 | VT-457626 | [interrogative            ] Quick one: Okay, Do you even hear yourself right now?—got it. — got it. (alt)
+1828 | VT-461355 | [interrogative            ] Quick one: FYI, Is this really what you want?—got it. — got it.
+1829 | VT-491890 | [interrogative            ] Real talk, Heads up: Why does it always rain when I'm unprepared?—got it.
+1830 | VT-426954 | [interrogative            ] Heads up: Is this really what you want? If possible. — got it.
+1831 | VT-436323 | [interrogative            ] Quick one: Reminder: Why does it always rain when I'm unprepared?—copy. if you can.
+1832 | VT-482494 | [interrogative            ] Reminder: Do you even hear yourself right now? Thanks..
+1833 | VT-486272 | [interrogative            ] Heads up: Listen, Do you even hear yourself right now? Thanks. thanks.
+1834 | VT-465912 | [interrogative            ] Heads up: Reminder: Do you even hear yourself right now? Please. — confirm.
+1835 | VT-499888 | [interrogative            ] Listen, Okay, Is this really what you want?—copy. — now.
+1836 | VT-469404 | [interrogative            ] Quick one: FYI, Do you even hear yourself right now? please.
+1837 | VT-449226 | [interrogative            ] Real talk, Do you even hear yourself right now? — now. (alt)
+1838 | VT-498550 | [interrogative            ] Okay, Heads up: Why does it always rain when I'm unprepared?—got it. — now. (alt)
+1839 | VT-461424 | [interrogative            ] Quick one: Do you even hear yourself right now?—got it. right now.
+1840 | VT-448697 | [interrogative            ] Heads up: Listen, Do you even hear yourself right now? For real. — got it.
+1841 | VT-443961 | [interrogative            ] Real talk, Okay, Why does it always rain when I'm unprepared? If possible..
+1842 | VT-411953 | [interrogative            ] Real talk, Reminder: Is this really what you want?—copy.
+1843 | VT-448325 | [interrogative            ] Okay, FYI, Do you even hear yourself right now? For real. thanks.
+1844 | VT-488077 | [interrogative            ] Heads up: Reminder: Why does it always rain when I'm unprepared? Please. please.
+1845 | VT-441479 | [interrogative            ] Note: Note: Why does it always rain when I'm unprepared?—copy. right now.
+1846 | VT-422879 | [interrogative            ] Listen, Do you even hear yourself right now? thanks.
+1847 | VT-406073 | [interrogative            ] Note: FYI, Why does it always rain when I'm unprepared? If possible. — confirm.
+1848 | VT-405775 | [interrogative            ] Reminder: Heads up: Do you even hear yourself right now? right now.
+1849 | VT-448205 | [interrogative            ] Listen, Heads up: Do you even hear yourself right now? For real. thanks.
+1850 | VT-449975 | [interrogative            ] FYI, Is this really what you want? For real. — got it.

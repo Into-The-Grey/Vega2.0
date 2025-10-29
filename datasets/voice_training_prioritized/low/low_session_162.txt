@@ -1,0 +1,60 @@
+# VEGA Voice Training - LOW Priority
+# Session 162 of 197
+# Lines: 50
+#
+# 📝 LOW: Nice-to-have for completeness
+# Record when you have extra time
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+8051 | VT-518023 | [home_assistant_commands  ] Listen, Okay, Set thermostat to sixty-eight degrees.—got it. — now.
+8052 | VT-693638 | [home_assistant_commands  ] FYI, Set thermostat to sixty-eight degrees. thanks.
+8053 | VT-685758 | [home_assistant_commands  ] Okay, Heads up: Open the garage halfway. Right now. right now.
+8054 | VT-514634 | [home_assistant_commands  ] Listen, Okay, Open the garage halfway. Thanks. — now.
+8055 | VT-693063 | [home_assistant_commands  ] FYI, Hey, Announce dinner in five minutes. Right now. — now.
+8056 | VT-513432 | [home_assistant_commands  ] Note: Open the garage halfway. right now.
+8057 | VT-661459 | [home_assistant_commands  ] Quick one: Okay, Open the garage halfway. Thanks.
+8058 | VT-568914 | [home_assistant_commands  ] FYI, Heads up: Announce dinner in five minutes. For real. — confirm.
+8059 | VT-632982 | [home_assistant_commands  ] Heads up: Note: Open the garage halfway.—got it. right now.
+8060 | VT-523305 | [home_assistant_commands  ] Quick one: Hey, Set thermostat to sixty-eight degrees. If possible. if you can. (alt)
+8061 | VT-666875 | [home_assistant_commands  ] Heads up: Listen, Open the garage halfway. Right now. — got it.
+8062 | VT-569218 | [home_assistant_commands  ] Quick one: Listen, Start the 'Movie Night' scene. Please. thanks.
+8063 | VT-510607 | [home_assistant_commands  ] Real talk, Heads up: Run the vacuum downstairs.—copy. — now. (alt)
+8064 | VT-624592 | [home_assistant_commands  ] FYI, Start the 'Movie Night' scene.—copy. — got it.
+8065 | VT-609034 | [home_assistant_commands  ] Reminder: Turn off everything in the bedroom.—copy. please. (alt)
+8066 | VT-517595 | [home_assistant_commands  ] Quick one: Note: Set thermostat to sixty-eight degrees. For real. — now. (alt)
+8067 | VT-608739 | [home_assistant_commands  ] Reminder: FYI, Lights to twenty percent, warm white. For real. — got it.
+8068 | VT-507059 | [home_assistant_commands  ] Okay, Hey, Lock the front door and arm stay.—got it. — now.
+8069 | VT-603307 | [home_assistant_commands  ] FYI, Okay, Open the garage halfway. Thanks. — confirm.
+8070 | VT-580984 | [home_assistant_commands  ] Okay, Open the garage halfway. Please. — got it. (alt)
+8071 | VT-696042 | [homophones_minimal_pairs ] Okay, Okay, I need a new role for this roll.—got it. right now.
+8072 | VT-557262 | [homophones_minimal_pairs ] FYI, Heads up: Sight the site before the cite. right now.
+8073 | VT-539115 | [homophones_minimal_pairs ] Hey, I need a new role for this roll. right now.
+8074 | VT-536193 | [homophones_minimal_pairs ] Quick one: Hey, I’ll read the readme later. please.
+8075 | VT-669886 | [homophones_minimal_pairs ] Quick one: Reminder: Cache rules everything around me—C‑A‑C‑H‑E. Thanks. — now.
+8076 | VT-651800 | [homophones_minimal_pairs ] Okay, Listen, They’re there, at their desks. For real. — got it.
+8077 | VT-571146 | [homophones_minimal_pairs ] Reminder: I can’t bear another bare-metal install. If possible. right now.
+8078 | VT-512173 | [homophones_minimal_pairs ] Okay, Okay, I need a new role for this roll.—got it. — now.
+8079 | VT-630573 | [homophones_minimal_pairs ] Okay, Okay, They’re there, at their desks. Please. thanks.
+8080 | VT-558099 | [homophones_minimal_pairs ] Note: Reminder: I’ll read the readme later. Right now. — now.
+8081 | VT-600403 | [homophones_minimal_pairs ] Quick one: Note: The suite is sweet but pricey. Please. — got it.
+8082 | VT-596180 | [homophones_minimal_pairs ] Listen, Heads up: Cache rules everything around me—C‑A‑C‑H‑E. Right now.
+8083 | VT-599061 | [homophones_minimal_pairs ] Okay, Note: Sight the site before the cite. Right now..
+8084 | VT-689799 | [homophones_minimal_pairs ] Listen, We’ll write the right config. For real. — confirm.
+8085 | VT-627413 | [homophones_minimal_pairs ] Note: FYI, They’re there, at their desks. Please.
+8086 | VT-504227 | [homophones_minimal_pairs ] Real talk, Heads up: I can’t bear another bare-metal install. Please. — now.
+8087 | VT-658307 | [homophones_minimal_pairs ] Real talk, FYI, Sight the site before the cite. Right now. please.
+8088 | VT-569637 | [homophones_minimal_pairs ] Listen, I need a new role for this roll.—copy. right now.
+8089 | VT-655756 | [homophones_minimal_pairs ] Okay, They’re there, at their desks. — got it.
+8090 | VT-567194 | [homophones_minimal_pairs ] Listen, Note: The suite is sweet but pricey. Please. — got it.
+8091 | VT-660709 | [homophones_minimal_pairs ] Listen, Listen, The suite is sweet but pricey.
+8092 | VT-503243 | [homophones_minimal_pairs ] FYI, Reminder: The suite is sweet but pricey. If possible.
+8093 | VT-585206 | [homophones_minimal_pairs ] Note: Reminder: Sight the site before the cite.—got it. right now.
+8094 | VT-504455 | [homophones_minimal_pairs ] Quick one: I can’t bear another bare-metal install. If possible..
+8095 | VT-581275 | [homophones_minimal_pairs ] Reminder: Heads up: I can’t bear another bare-metal install. Thanks. thanks.
+8096 | VT-622931 | [homophones_minimal_pairs ] Heads up: Okay, The suite is sweet but pricey. Thanks. thanks.
+8097 | VT-519546 | [homophones_minimal_pairs ] Quick one: Heads up: They’re there, at their desks. Please. please.
+8098 | VT-687392 | [homophones_minimal_pairs ] FYI, Reminder: Kernel panic in Colonel Mustard’s study.—got it..
+8099 | VT-622193 | [homophones_minimal_pairs ] FYI, Reminder: Kernel panic in Colonel Mustard’s study.—got it. please.
+8100 | VT-586998 | [homophones_minimal_pairs ] Real talk, Heads up: Kernel panic in Colonel Mustard’s study. Please. right now.

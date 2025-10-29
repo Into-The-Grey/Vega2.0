@@ -1,0 +1,60 @@
+# VEGA Voice Training - HIGH Priority
+# Session 55 of 56
+# Lines: 50
+#
+# 🔥 HIGH: Important for natural conversation
+# Record after CRITICAL for good voice quality
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+2701 | VT-656039 | [numeric                  ] Quick one: Hey, The total comes to $56.96. Right now. thanks.
+2702 | VT-550927 | [numeric                  ] Reminder: Listen, Event date: 1994-06-13 at 7:30 AM. For real. — now.
+2703 | VT-517953 | [numeric                  ] Reminder: Hey, Call me at (864) 618-2911. Thanks. right now.
+2704 | VT-524628 | [numeric                  ] Okay, Note: Call me at (681) 244-7338. Please.
+2705 | VT-585824 | [numeric                  ] Reminder: Temperature is -14°F right now. right now.
+2706 | VT-596913 | [numeric                  ] Real talk, Hey, My backup number is (448) 251-9700.—copy. right now.
+2707 | VT-644521 | [numeric                  ] Reminder: Reminder: My backup number is (926) 266-9882.—got it. right now. (alt)
+2708 | VT-530773 | [numeric                  ] Listen, Listen, Temperature is 44°F right now. Thanks.. (alt)
+2709 | VT-678738 | [numeric                  ] Note: Heads up: The total comes to $9,693.94.—got it. if you can.
+2710 | VT-604628 | [numeric                  ] Heads up: Hey, The invoice date is 2010-05-27. For real. — now.
+2711 | VT-538142 | [numeric                  ] Note: Note: The invoice date is 2000-09-23..
+2712 | VT-646896 | [numeric                  ] Real talk, Reminder: My backup number is (926) 266-9882.—got it. — got it.
+2713 | VT-592172 | [numeric                  ] Note: Reminder: Call me at (760) 717-4312. Right now. thanks.
+2714 | VT-600876 | [numeric                  ] Listen, Ship it to: 123 Maple St., Springfield, IL 62704 right now.
+2715 | VT-557479 | [numeric                  ] Reminder: The total comes to $797.31. For real. — now.
+2716 | VT-594511 | [numeric                  ] FYI, FYI, Temperature is 7°F right now.—copy. — now.
+2717 | VT-679596 | [numeric                  ] Real talk, The invoice date is 1995-02-26. right now.
+2718 | VT-608892 | [numeric                  ] Listen, The invoice date is 2023-06-05. If possible. — got it.
+2719 | VT-627031 | [numeric                  ] Heads up: Hey, The total comes to $56.96. Right now. — confirm. (alt)
+2720 | VT-643685 | [numeric                  ] Okay, Temperature is 44°F right now. If possible. right now.
+2721 | VT-608878 | [numeric                  ] Okay, The invoice date is 2016-09-10. if you can.
+2722 | VT-572664 | [numeric                  ] Okay, Ship it to: 9 Grove Court, Boston, MA 02108 thanks.
+2723 | VT-500355 | [numeric                  ] Quick one: FYI, The server’s IP is 116.129.57.243. Thanks. please.
+2724 | VT-640543 | [numeric                  ] Listen, Listen, My backup number is (800) 421-4817. Thanks. right now.
+2725 | VT-685496 | [numeric                  ] Quick one: FYI, My backup number is (865) 485-5089.—copy. — now.
+2726 | VT-515865 | [numeric                  ] FYI, Listen, The invoice date is 2023-06-05. Please. — now.
+2727 | VT-585912 | [numeric                  ] Heads up: My backup number is (580) 767-2680. — got it.
+2728 | VT-515452 | [numeric                  ] Listen, Listen, Temperature is -14°F right now.—got it. — now.
+2729 | VT-503336 | [numeric                  ] Real talk, My backup number is (290) 647-2734.. (alt)
+2730 | VT-676310 | [numeric                  ] My backup number is (654) 655-4868. please.
+2731 | VT-563249 | [numeric                  ] Note: Hey, My backup number is (448) 251-9700.—copy. please. (alt)
+2732 | VT-662063 | [numeric                  ] FYI, The invoice date is 2000-09-23. — got it.
+2733 | VT-512800 | [numeric                  ] FYI, Note: Call me at (530) 926-4694. Please. — got it.
+2734 | VT-688993 | [numeric                  ] Note: Heads up: Ship it to: 808 Elm Street, Denver, CO 80202 Please. thanks.
+2735 | VT-640729 | [numeric                  ] Okay, My backup number is (275) 517-8565. please.
+2736 | VT-611697 | [numeric                  ] Heads up: Note: My backup number is (654) 655-4868. Thanks. right now. (alt)
+2737 | VT-672663 | [numeric                  ] Listen, The invoice date is 2023-06-05. If possible. — confirm.
+2738 | VT-555296 | [numeric                  ] My backup number is (275) 517-8565.
+2739 | VT-597672 | [numeric                  ] Okay, Okay, Temperature is 50°F right now. Right now. — now.
+2740 | VT-531051 | [numeric                  ] Note: FYI, The server’s IP is 234.236.45.107. For real. — confirm. (alt)
+2741 | VT-622122 | [numeric                  ] FYI, Reminder: Call me at (583) 429-1461.—got it. (alt)
+2742 | VT-671900 | [numeric                  ] Reminder: The server’s IP is 211.148.19.33.
+2743 | VT-523784 | [numeric                  ] Note: FYI, The server’s IP is 234.236.45.107. For real. — now.
+2744 | VT-664659 | [numeric                  ] Okay, Reminder: My backup number is (275) 517-8565. If possible. please. (alt)
+2745 | VT-630152 | [numeric                  ] Okay, My backup number is (580) 767-2680. — confirm.
+2746 | VT-658621 | [numeric                  ] FYI, Hey, The invoice date is 1995-02-26. Thanks. right now.
+2747 | VT-541585 | [numeric                  ] FYI, The invoice date is 2016-09-10. thanks. (alt)
+2748 | VT-687464 | [numeric                  ] Real talk, Listen, Tracking ID: KNWI5FLUL1 Right now. if you can.
+2749 | VT-696847 | [numeric                  ] Real talk, Temperature is -14°F right now. right now.
+2750 | VT-664514 | [numeric                  ] Quick one: Event date: 2003-01-25 at 7:22 PM. please.

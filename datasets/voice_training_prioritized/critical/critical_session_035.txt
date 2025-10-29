@@ -1,0 +1,60 @@
+# VEGA Voice Training - CRITICAL Priority
+# Session 35 of 45
+# Lines: 50
+#
+# ⚠️  CRITICAL: Essential for basic VEGA functionality
+# Record these FIRST for minimum viable voice model
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+1701 | VT-453119 | [question_variants        ] Reminder: We good? thanks. (alt)
+1702 | VT-432654 | [question_variants        ] FYI, Listen, Positive? Right now. — now. (alt)
+1703 | VT-404998 | [question_variants        ] Quick one: Heads up: Positive? Please. thanks. (alt)
+1704 | VT-413807 | [question_variants        ] Quick one: Okay, Positive? For real. (alt)
+1705 | VT-418913 | [question_variants        ] Quick one: Hey, What’s the catch? Please..
+1706 | VT-472637 | [question_variants        ] Heads up: Hey, Are we good? — now. (alt)
+1707 | VT-459274 | [question_variants        ] Note: FYI, Are we good?—copy..
+1708 | VT-465766 | [question_variants        ] Okay, Note: Positive? Please. — confirm.
+1709 | VT-440626 | [question_variants        ] Reminder: Note: We good? If possible. — got it.
+1710 | VT-436833 | [question_variants        ] Okay, Heads up: Any reason not to proceed? Right now.
+1711 | VT-480514 | [question_variants        ] FYI, Any reason not to proceed?.
+1712 | VT-416084 | [question_variants        ] Listen, Okay, Any reason not to proceed? Please. please.
+1713 | VT-428356 | [question_variants        ] Real talk, Okay, What’s the catch?—got it. — now. (alt)
+1714 | VT-476663 | [question_variants        ] Okay, Note: Is everything okay with that?—copy. — confirm.
+1715 | VT-428991 | [question_variants        ] Quick one: FYI, Is everything okay with that? Right now. — confirm.
+1716 | VT-474284 | [question_variants        ] Real talk, Note: Are we good? Right now. — now.
+1717 | VT-421171 | [question_variants        ] FYI, Heads up: Positive? Thanks. — confirm.
+1718 | VT-407637 | [question_variants        ] Heads up: Okay, Is everything okay with that?—copy. right now.
+1719 | VT-496996 | [question_variants        ] Real talk, FYI, Can you confirm we’re good?
+1720 | VT-492808 | [question_variants        ] Listen, FYI, Are we good? For real.
+1721 | VT-458322 | [question_variants        ] Okay, Note: Are we good? Right now. thanks.
+1722 | VT-427677 | [question_variants        ] Is everything okay with that?—copy.
+1723 | VT-411986 | [question_variants        ] Hey, Are we good? — got it. (alt)
+1724 | VT-408834 | [question_variants        ] Reminder: Good—yes or no? For real. right now.
+1725 | VT-494648 | [question_variants        ] Reminder: Okay, You sure? Please. if you can. (alt)
+1726 | VT-478264 | [question_variants        ] Okay, Positive? Thanks. thanks. (alt)
+1727 | VT-474678 | [question_variants        ] FYI, We good? Please. if you can.
+1728 | VT-423375 | [question_variants        ] Heads up: Heads up: Any reason not to proceed? Right now. if you can.
+1729 | VT-499358 | [question_variants        ] FYI, Hey, What’s the catch?—got it. thanks. (alt)
+1730 | VT-416055 | [question_variants        ] FYI, Reminder: Can you confirm we’re good? Please. please.
+1731 | VT-499691 | [question_variants        ] Note: Any reason not to proceed?. (alt)
+1732 | VT-478938 | [question_variants        ] Heads up: What’s the catch? Please. please.
+1733 | VT-632760 | [agreements               ] Reminder: Okay, I’m in.—got it. — confirm.
+1734 | VT-666150 | [agreements               ] FYI, Reminder: Copy that.—copy..
+1735 | VT-584252 | [agreements               ] Quick one: Okay, I’m in.—got it. — now.
+1736 | VT-591657 | [agreements               ] Note: That’s a yes from me. Right now. please.
+1737 | VT-652919 | [agreements               ] Heads up: Listen, Green light.—copy. please.
+1738 | VT-668839 | [agreements               ] Note: Agreed—let’s lock it. Thanks. thanks. (alt)
+1739 | VT-691188 | [agreements               ] Listen, Heads up: Yep, that works for me. Please. thanks.
+1740 | VT-501197 | [agreements               ] Quick one: Okay, I’m in.—got it. — got it.
+1741 | VT-518625 | [agreements               ] Okay, Note: Agreed—let’s lock it. Thanks.
+1742 | VT-534896 | [agreements               ] Real talk, Heads up: That’s a yes from me.—got it. — got it.
+1743 | VT-673141 | [agreements               ] Heads up: Note: Approved. For real. — got it.
+1744 | VT-662143 | [agreements               ] FYI, Hey, Green light.—got it. please.
+1745 | VT-685836 | [agreements               ] Note: Okay, Copy that. Please.
+1746 | VT-581211 | [agreements               ] FYI, Reminder: Count me on board. Please. — now.
+1747 | VT-556166 | [agreements               ] Heads up: Listen, Agreed—let’s lock it.—got it. — now.
+1748 | VT-613657 | [agreements               ] Note: Note: Yep, that works for me.—copy..
+1749 | VT-574140 | [agreements               ] Okay, Heads up: Copy that. If possible. — now. (alt)
+1750 | VT-667278 | [agreements               ] FYI, I’m in. If possible.. (alt)

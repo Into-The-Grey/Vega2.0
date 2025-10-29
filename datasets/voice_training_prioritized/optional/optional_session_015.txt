@@ -1,0 +1,60 @@
+# VEGA Voice Training - OPTIONAL Priority
+# Session 15 of 57
+# Lines: 50
+#
+# ⭐ OPTIONAL: Specialized/advanced content
+# Record for maximum coverage and flexibility
+#
+# Estimated recording time: 10-15 minutes
+#======================================================================
+
+0701 | VT-56217 | [expletive-heavy          ] What the actual fucking is going on here? Please.
+0702 | VT-77852 | [expletive-heavy          ] FYI, You’ve gotta be shitting me. For real.
+0703 | VT-11556 | [expletive-heavy          ] Note: This whole thing is one giant clusterfucking. If possible.
+0704 | VT-39043 | [expletive-heavy          ] Hey, What the actual fucking is going on here?
+0705 | VT-26682 | [expletive-heavy          ] Note: You’ve gotta be shitting me.—copy.
+0706 | VT-43920 | [expletive-heavy          ] Note: This whole thing is one giant clusterAF. Please.
+0707 | VT-11589 | [expletive-heavy          ] Reminder: What the actual AF is going on here?—got it.
+0708 | VT-76067 | [expletive-heavy          ] Reminder: You’ve gotta be shitting me. Thanks.
+0709 | VT-31921 | [expletive-heavy          ] Note: This whole thing is one giant clusterfucking. Right now.
+0710 | VT-83372 | [expletive-heavy          ] What the actual AF is going on here? Thanks.
+0711 | VT-34658 | [expletive-heavy          ] Okay, You’ve gotta be shitting me. Please.
+0712 | VT-68699 | [expletive-heavy          ] Okay, This whole thing is one giant clusterfuck.—got it.
+0713 | VT-50681 | [expletive-heavy          ] Okay, What the actual fuck is going on here?—copy.
+0714 | VT-41709 | [expletive-heavy          ] Listen, You’ve gotta be shitting me. Thanks.
+0715 | VT-36138 | [expletive-heavy          ] Okay, This whole thing is one giant clusterfuck.—got it.
+0716 | VT-75958 | [expletive-heavy          ] Okay, What the actual AF is going on here?—got it.
+0717 | VT-52572 | [expletive-heavy          ] FYI, You’ve gotta be shitting me. Please.
+0718 | VT-61656 | [expletive-heavy          ] FYI, This whole thing is one giant clusterAF.—got it.
+0719 | VT-22412 | [expletive-heavy          ] FYI, What the actual fucking is going on here? Right now.
+0720 | VT-45821 | [expletive-heavy          ] Hey, You’ve gotta be shitting me. For real.
+0721 | VT-88144 | [expletive-heavy          ] Hey, This whole thing is one giant clusterAF.
+0722 | VT-54134 | [expletive-heavy          ] Listen, What the actual fuck is going on here?—copy.
+0723 | VT-89399 | [expletive-heavy          ] Heads up: You’ve gotta be shitting me. Thanks.
+0724 | VT-70226 | [expletive-heavy          ] This whole thing is one giant clusterfuck. Right now.
+0725 | VT-45412 | [expletive-heavy          ] Reminder: What the actual fucking is going on here? For real.
+0726 | VT-45704 | [expletive-heavy          ] Heads up: You’ve gotta be shitting me. Right now.
+0727 | VT-60578 | [expletive-heavy          ] This whole thing is one giant clusterAF. For real.
+0728 | VT-28345 | [expletive-heavy          ] Listen, What the actual fucking is going on here? Right now.
+0729 | VT-59987 | [expletive-heavy          ] Listen, You’ve gotta be shitting me. Right now.
+0730 | VT-19982 | [expletive-heavy          ] Heads up: This whole thing is one giant clusterAF. Please.
+0731 | VT-47247 | [expletive-heavy          ] Hey, What the actual fuck is going on here?—copy.
+0732 | VT-27167 | [expletive-heavy          ] Reminder: You’ve gotta be shitting me. If possible.
+0733 | VT-14702 | [expletive-heavy          ] Note: This whole thing is one giant clusterfuck. Right now.
+0734 | VT-28613 | [expletive-heavy          ] Hey, What the actual AF is going on here?
+0735 | VT-73243 | [expletive-heavy          ] Heads up: You’ve gotta be shitting me.
+0736 | VT-47747 | [expletive-heavy          ] Hey, This whole thing is one giant clusterfuck. Please.
+0737 | VT-48230 | [expletive-heavy          ] Reminder: What the actual AF is going on here? If possible.
+0738 | VT-29830 | [expletive-heavy          ] FYI, You’ve gotta be shitting me. Right now.
+0739 | VT-34049 | [expletive-heavy          ] Okay, This whole thing is one giant clusterfucking.—got it.
+0740 | VT-47965 | [expletive-heavy          ] Listen, What the actual fucking is going on here?—got it.
+0741 | VT-89056 | [expletive-heavy          ] Note: You’ve gotta be shitting me. For real.
+0742 | VT-72655 | [expletive-heavy          ] Listen, This whole thing is one giant clusterfuck. Right now.
+0743 | VT-24007 | [expletive-heavy          ] Reminder: What the actual fuck is going on here?—copy.
+0744 | VT-39975 | [expletive-heavy          ] Hey, You’ve gotta be shitting me.—got it.
+0745 | VT-57440 | [expletive-heavy          ] Reminder: This whole thing is one giant clusterfucking. For real.
+0746 | VT-18721 | [expletive-heavy          ] Heads up: What the actual AF is going on here? Please.
+0747 | VT-96144 | [expletive-heavy          ] Hey, You’ve gotta be shitting me. Thanks.
+0748 | VT-14542 | [expletive-heavy          ] Heads up: This whole thing is one giant clusterfuck. If possible.
+0749 | VT-37658 | [expletive-heavy          ] Okay, What the actual AF is going on here? Please.
+0750 | VT-53420 | [expletive-heavy          ] Note: You’ve gotta be shitting me. If possible.
