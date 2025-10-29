@@ -1,0 +1,124 @@
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                  🤖 VEGA JARVIS MODE - Quick Reference                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+📦 INSTALLATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  cd /home/ncacord/Vega2.0
+  sudo ./setup_jarvis_mode.sh
+
+🌐 ACCESS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Local:    http://localhost:8080
+  Network:  http://192.168.1.147:8080
+  API:      http://localhost:8000
+
+⚙️  SERVICE CONTROL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  sudo systemctl start vega-server      # Start Vega
+  sudo systemctl stop vega-server       # Stop Vega
+  sudo systemctl restart vega-server    # Restart Vega
+  sudo systemctl status vega-server     # Check status
+  sudo systemctl enable vega-server     # Auto-start on boot
+  sudo systemctl disable vega-server    # Disable auto-start
+
+📊 MONITORING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # Real-time logs
+  sudo journalctl -u vega-server -f
+  
+  # Last 100 lines
+  sudo journalctl -u vega-server -n 100
+  
+  # Last hour
+  sudo journalctl -u vega-server --since "1 hour ago"
+  
+  # Memory stats
+  curl http://localhost:8000/metrics | jq '.memory_manager'
+  
+  # Database size
+  du -h /home/ncacord/Vega2.0/vega.db*
+
+🧠 MEMORY MANAGEMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Thresholds:
+    80%  = Warning  (gentle cleanup - compress old conversations)
+    90%  = Critical (aggressive cleanup - compress + archive + vacuum)
+  
+  Context Lifecycle:
+    Recent 50      → Full context (fast access)
+    Older 50-100   → Compressed (prompts + summaries)
+    Ancient 100+   → Archived as memory facts
+
+💾 DATABASE OPERATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # Backup
+  cp /home/ncacord/Vega2.0/vega.db ~/vega-backup-$(date +%Y%m%d).db
+  
+  # View conversations
+  sqlite3 /home/ncacord/Vega2.0/vega.db "SELECT COUNT(*) FROM conversations;"
+  
+  # View by session
+  sqlite3 /home/ncacord/Vega2.0/vega.db \
+    "SELECT session_id, COUNT(*) FROM conversations GROUP BY session_id;"
+  
+  # Manual vacuum
+  sqlite3 /home/ncacord/Vega2.0/vega.db "VACUUM;"
+
+🔧 TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Service won't start:
+    sudo journalctl -u vega-server -n 50
+    sudo netstat -tlnp | grep 8000  # Check if port in use
+  
+  Out of memory:
+    free -h  # Check available RAM
+    # Stop Vega, clean DB, restart
+    sudo systemctl stop vega-server
+    sqlite3 /home/ncacord/Vega2.0/vega.db \
+      "DELETE FROM conversations WHERE id < (SELECT MAX(id) - 50 FROM conversations);"
+    sqlite3 /home/ncacord/Vega2.0/vega.db "VACUUM;"
+    sudo systemctl start vega-server
+  
+  Web UI offline:
+    curl http://localhost:8000/healthz  # Check if Vega responding
+    sudo systemctl restart vega-server vega-dashboard
+
+🎯 FEATURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ✅ Always running (100% uptime)
+  ✅ Never forgets (persistent session)
+  ✅ Never crashes (auto-restart)
+  ✅ Never OOM (proactive memory management)
+  ✅ Voice input/output (Web Speech API)
+  ✅ Real-time memory stats
+  ✅ Conversation history
+  ✅ Mobile-responsive UI
+
+📖 DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Complete Guide:     JARVIS_MODE_GUIDE.md
+  Implementation:     JARVIS_MODE_SUMMARY.md
+  Setup Script:       setup_jarvis_mode.sh
+  Service File:       systemd/vega-server.service
+  Memory Manager:     src/vega/core/memory_manager.py
+
+🚀 QUICK START
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1. sudo ./setup_jarvis_mode.sh        # Install & start
+  2. Open http://localhost:8080          # Access web UI
+  3. Start chatting!                     # No "new chat" needed
+
+💡 PRO TIPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  • Watch memory stats in header (blue = good, orange = warning, red = critical)
+  • Click mic button (🎤) for voice input
+  • Toggle speaker (🔊) for voice output
+  • Conversation history sidebar shows recent chats
+  • Vega remembers EVERYTHING automatically
+  • Service auto-restarts if it crashes
+  • Memory manager prevents OOM before it happens
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🌌 VEGA SYSTEM - JARVIS MODE ACTIVE 🌌
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

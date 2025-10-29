@@ -229,7 +229,18 @@ async def startup_event():
         logger.warning(f"Database profiler init failed: {e}")
         print(f"⚠️  Database profiler init failed: {e}")
 
-    # 5. Background process management
+    # 5. Start persistent mode memory manager
+    try:
+        from .memory_manager import start_memory_manager
+
+        await start_memory_manager()
+        logger.info("Memory manager started (persistent mode)")
+        print("✅ Memory manager started (persistent mode - continuous operation)")
+    except Exception as e:
+        logger.warning(f"Memory manager init failed: {e}")
+        print(f"⚠️  Memory manager init failed: {e}")
+
+    # 6. Background process management
     if PROCESS_MANAGEMENT_AVAILABLE:
         try:
             # Start background processes (optional, can be managed separately)
@@ -238,40 +249,60 @@ async def startup_event():
         except Exception as e:
             print(f"⚠️  Could not start background processes: {e}")
 
-    # 6. Optional retention purge on startup
-    try:
-        from .config import get_config as _get_cfg  # type: ignore
-        from .db import purge_old, vacuum_db  # type: ignore
+    # 7. Optional retention purge on startup (disabled for persistent mode)
+    # In persistent mode, memory manager handles cleanup automatically
+    # Uncomment this if you want aggressive cleanup on startup
+    # try:
+    #     from .config import get_config as _get_cfg  # type: ignore
+    #     from .db import purge_old, vacuum_db  # type: ignore
+    #
+    #     _cfg = _get_cfg()
+    #     days = int(getattr(_cfg, "retention_days", 0) or 0)
+    #     if days > 0:
+    #         deleted = purge_old(days)
+    #         if deleted > 0:
+    #             try:
+    #                 vacuum_db()
+    #             except Exception:
+    #                 pass
+    #         logger.info(
+    #             "Retention purge completed", extra={"days": days, "deleted": deleted}
+    #         )
+    # except Exception:
+    #     pass
 
-        _cfg = _get_cfg()
-        days = int(getattr(_cfg, "retention_days", 0) or 0)
-        if days > 0:
-            deleted = purge_old(days)
-            # Vacuum only if we actually deleted rows to reclaim space
-            if deleted > 0:
-                try:
-                    vacuum_db()
-                except Exception:
-                    pass
-            logger.info(
-                "Retention purge completed", extra={"days": days, "deleted": deleted}
-            )
-    except Exception:
-        # Config/DB may not be available in some environments (e.g., tests)
-        pass
+    print("\n🌌 VEGA SYSTEM ONLINE - PERSISTENT MODE ACTIVE")
+    print("=" * 80 + "\n")
 
 
 @app.on_event("shutdown")
 async def shutdown_event():
     """Gracefully shutdown all resources and background processes"""
+    print("\n" + "=" * 80)
+    print("🛑 Vega2.0 Shutdown Sequence")
+    print("=" * 80 + "\n")
+
+    # Shutdown memory manager first
+    try:
+        from .memory_manager import stop_memory_manager
+
+        await stop_memory_manager()
+        logger.info("Memory manager stopped")
+        print("✅ Memory manager stopped")
+    except Exception as e:
+        logger.warning(f"Memory manager shutdown failed: {e}")
+        print(f"⚠️  Memory manager shutdown failed: {e}")
+
     # Shutdown LLM resources
     try:
         from .llm import llm_shutdown  # type: ignore
 
         await llm_shutdown()
         logger.info("LLM resources closed")
+        print("✅ LLM resources closed")
     except Exception as e:
         logger.warning(f"LLM shutdown failed: {e}")
+        print(f"⚠️  LLM shutdown failed: {e}")
 
     # Shutdown resource manager
     try:
@@ -478,6 +509,15 @@ def metrics_endpoint():
         payload["memory_facts_global_total"] = len(facts)
     except Exception:
         payload["memory_facts_global_total"] = 0
+
+    # Persistent mode: Include memory manager stats
+    try:
+        from .memory_manager import get_memory_manager
+
+        manager = get_memory_manager()
+        payload["memory_manager"] = manager.get_stats()
+    except Exception:
+        payload["memory_manager"] = {}
 
     return payload
 

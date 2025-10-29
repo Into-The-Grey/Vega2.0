@@ -1,0 +1,43 @@
+[Unit]
+Description=Vega AI Dashboard - Web Interface
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ncacord
+Group=ncacord
+WorkingDirectory=/home/ncacord/Vega2.0
+Environment="PATH=/home/ncacord/Vega2.0/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="PYTHONPATH=/home/ncacord/Vega2.0"
+
+# Run the dashboard - uses RAM only, no VRAM
+# Bind to 0.0.0.0 to allow access from any device on local network
+ExecStart=/home/ncacord/Vega2.0/.venv/bin/python tools/vega/vega_web_ui.py --host 0.0.0.0 --port 8080
+
+# Resource limits - prioritize RAM usage over VRAM
+# Allow up to 2GB RAM for the dashboard
+MemoryMax=2G
+MemoryHigh=1.5G
+
+# No GPU access needed - conserves VRAM for Vega model
+# The web interface runs entirely on CPU/RAM
+
+# Restart policy
+Restart=always
+RestartSec=10
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/ncacord/Vega2.0
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=vega-dashboard
+
+[Install]
+WantedBy=multi-user.target

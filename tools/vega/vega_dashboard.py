@@ -319,9 +319,12 @@ async def get_status():
 async def execute_command(action: str):
     """Execute system commands"""
     try:
+        # Use the lightweight launcher instead of vega_loop.py directly
+        launcher_path = Path(__file__).parent / "vega_loop_launcher.py"
+
         if action == "start":
             result = subprocess.run(
-                [sys.executable, "vega_loop.py", "--start"],
+                [sys.executable, str(launcher_path), "start"],
                 capture_output=True,
                 text=True,
                 timeout=30,
@@ -332,28 +335,40 @@ async def execute_command(action: str):
             else:
                 return {
                     "success": False,
-                    "message": f"Failed to start: {result.stderr}",
+                    "message": f"Failed to start: {result.stderr or result.stdout}",
                 }
 
         elif action == "stop":
             result = subprocess.run(
-                [sys.executable, "vega_loop.py", "--stop"],
+                [sys.executable, str(launcher_path), "stop"],
                 capture_output=True,
                 text=True,
                 timeout=10,
             )
 
-            return {"success": True, "message": "Vega system stopped"}
+            if result.returncode == 0:
+                return {"success": True, "message": "Vega system stopped"}
+            else:
+                return {
+                    "success": False,
+                    "message": f"Failed to stop: {result.stderr or result.stdout}",
+                }
 
         elif action == "force_interaction":
             result = subprocess.run(
-                [sys.executable, "vega_loop.py", "--force-prompt"],
+                [sys.executable, str(launcher_path), "force-prompt"],
                 capture_output=True,
                 text=True,
                 timeout=10,
             )
 
-            return {"success": True, "message": "Interaction triggered"}
+            if result.returncode == 0:
+                return {"success": True, "message": "Interaction triggered"}
+            else:
+                return {
+                    "success": False,
+                    "message": f"Failed: {result.stderr or result.stdout}",
+                }
 
         elif action == "refresh":
             dashboard_status.refresh()

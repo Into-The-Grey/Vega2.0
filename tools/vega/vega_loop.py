@@ -41,7 +41,32 @@ from enum import Enum
 
 import psutil
 import schedule
-from ..config import get_config
+
+# Add project root to path for imports
+project_root = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(project_root))
+
+try:
+    from src.vega.core.config import get_config
+except ImportError:
+    # Fallback if running from different location
+    try:
+        from config import get_config
+    except ImportError:
+        print("Warning: Could not import config module. Using defaults.")
+
+        def get_config():
+            """Fallback config function"""
+            return type(
+                "Config",
+                (),
+                {
+                    "API_KEY": os.getenv("API_KEY", "default-key"),
+                    "MODEL_NAME": os.getenv("MODEL_NAME", "mistral:latest"),
+                    "LLM_BACKEND": os.getenv("LLM_BACKEND", "ollama"),
+                },
+            )()
+
 
 # Vega core imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "autonomous_debug"))

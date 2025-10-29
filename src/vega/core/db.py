@@ -701,3 +701,136 @@ def get_memory_facts(session_id: Optional[str]) -> Dict[str, str]:
             for r in sess.execute(stmt).scalars().all():
                 facts[r.key] = r.value
     return facts
+
+
+def compress_old_context(cutoff: datetime, keep_recent: int = 50) -> int:
+    """
+    Compress old conversation context by removing response text for old entries.
+    Keeps prompts intact so we can still reference what was asked.
+
+    Args:
+        cutoff: Compress conversations older than this timestamp
+        keep_recent: Always keep this many most recent conversations uncompressed
+
+    Returns:
+        Number of conversations compressed
+    """
+    with Session(engine) as sess:
+        # Find conversations to compress (older than cutoff, excluding recent N)
+        recent_ids_stmt = (
+            select(Conversation.id).order_by(Conversation.id.desc()).limit(keep_recent)
+        )
+        recent_ids = [r[0] for r in sess.execute(recent_ids_stmt).all()]
+
+        compress_stmt = (
+            select(Conversation)
+            .where(Conversation.ts < cutoff)
+            .where(Conversation.id.notin_(recent_ids))
+        )
+        to_compress = sess.execute(compress_stmt).scalars().all()
+
+        compressed_count = 0
+        for conv in to_compress:
+            # Keep prompt, compress response to summary
+            if len(conv.response) > 100:
+                conv.response = conv.response[:100] + "... [compressed]"
+                compressed_count += 1
+
+        sess.commit()
+        return compressed_count
+
+
+def summarize_and_archive_old(cutoff: datetime, keep_recent: int = 20) -> int:
+    """
+    Summarize very old conversations and remove their full text.
+    Creates a summary entry and removes detailed conversations.
+
+    Args:
+        cutoff: Archive conversations older than this timestamp
+        keep_recent: Always keep this many most recent conversations
+
+    Returns:
+        Number of conversations archived
+    """
+    with Session(engine) as sess:
+        # Find conversations to archive (older than cutoff, excluding recent N)
+        recent_ids_stmt = (
+            select(Conversation.id).order_by(Conversation.id.desc()).limit(keep_recent)
+        )
+        recent_ids = [r[0] for r in sess.execute(recent_ids_stmt).all()]
+
+        archive_stmt = (
+            select(Conversation)
+            .where(Conversation.ts < cutoff)
+            .where(Conversation.id.notin_(recent_ids))
+        )
+        to_archive = sess.execute(archive_stmt).scalars().all()
+
+        if not to_archive:
+            return 0
+
+        # Create a summary of archived conversations
+        summary_lines = [
+            f"[Archived {len(to_archive)} conversations from before {cutoff.isoformat()}]",
+            "Topics discussed:",
+        ]
+
+        # Group by session and summarize
+        session_groups = {}
+        for conv in to_archive:
+            sid = conv.session_id or "main"
+            if sid not in session_groups:
+                session_groups[sid] = []
+            session_groups[sid].append(conv.prompt[:50])
+
+        for sid, prompts in list(session_groups.items())[:10]:  # Max 10 sessions
+            summary_lines.append(f"  {sid}: {len(prompts)} exchanges")
+
+        summary_text = "\n".join(summary_lines)
+
+        # Store summary as a memory fact
+        oldest_session = to_archive[0].session_id if to_archive else None
+        if oldest_session:
+            set_memory_fact(
+                oldest_session,
+                f"archive_{cutoff.strftime('%Y%m%d_%H%M%S')}",
+                summary_text,
+            )
+
+        # Delete the archived conversations
+        archived_count = len(to_archive)
+        for conv in to_archive:
+            sess.delete(conv)
+
+        sess.commit()
+        return archived_count
+
+
+def vacuum_database():
+    """
+    Vacuum the SQLite database to reclaim space after deletions.
+    """
+    try:
+        with Session(engine) as sess:
+            sess.execute(sqltext("VACUUM"))
+            sess.commit()
+    except Exception as e:
+        logger.error(f"Error vacuuming database: {e}")
+
+
+def get_db_size() -> int:
+    """
+    Get the size of the database file in bytes.
+
+    Returns:
+        Size in bytes, or 0 if error
+    """
+    try:
+        import os
+
+        db_path = "vega.db"  # Adjust if your DB path is different
+        if os.path.exists(db_path):
+            return os.path.getsize(db_path)
+        return 0
+    except Exception:
+        return 0

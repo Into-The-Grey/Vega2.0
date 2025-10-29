@@ -1,0 +1,48 @@
+[Unit]
+Description=Vega AI Server - Persistent Mode Service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=ncacord
+WorkingDirectory=/home/ncacord/Vega2.0
+Environment="PATH=/home/ncacord/Vega2.0/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="PYTHONUNBUFFERED=1"
+
+# Main Vega server command
+ExecStart=/home/ncacord/Vega2.0/.venv/bin/python main.py server --host 127.0.0.1 --port 8000
+
+# Restart policy for resilience
+Restart=always
+RestartSec=10
+StartLimitBurst=5
+
+# Resource limits to prevent runaway memory usage
+MemoryMax=100G
+MemoryHigh=80G
+
+# Standard output/error logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=vega-server
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/ncacord/Vega2.0
+ReadWritePaths=/home/ncacord/Vega2.0/vega.db
+ReadWritePaths=/home/ncacord/Vega2.0/vega.db-shm
+ReadWritePaths=/home/ncacord/Vega2.0/vega.db-wal
+ReadWritePaths=/home/ncacord/Vega2.0/logs
+ReadWritePaths=/home/ncacord/Vega2.0/uploads
+
+# Graceful shutdown
+TimeoutStopSec=30
+KillMode=mixed
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target

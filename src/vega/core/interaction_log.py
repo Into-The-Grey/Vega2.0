@@ -14,8 +14,8 @@ Key Features:
 - User preference learning and adaptation
 - Context-aware conversation memory
 
-Like JARVIS, this system learns what the user likes, how they communicate,
-and adapts its approach accordingly.
+This system learns what the user likes, how they communicate,
+and adapts its approach accordingly over time.
 """
 
 import os
