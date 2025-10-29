@@ -1,0 +1,25 @@
+0001 | VT-11111 | [emotional] FYI, I'm so proud of how far we've come.
+0002 | VT-39318 | [question_variants] Positive?
+0003 | VT-45652 | [laughter_breaths] Listen, *whisper* Don’t wake the server.—got it.
+0004 | VT-97641 | [imperative] Okay, Please sit up straight and focus.—got it.
+0005 | VT-505021 | [sports_cast] Okay, The underdogs are up by two. Please..
+0006 | VT-288650 | [trash_talk] Holding W isn’t a strategy; it’s a cry for help.
+0007 | VT-87174 | [slang-heavy] Reminder: We vibin’ or what? Thanks.
+0008 | VT-33476 | [question_variants] Listen, Positive? Right now.
+0009 | VT-79825 | [denials_corrections] Heads up: Amend the record accordingly. For real.
+0010 | VT-279263 | [trash_talk] You brought a pea shooter to a boss fight.
+0011 | VT-598001 | [tongue_twister] Mellow magnets march mmightly. thanks.
+0012 | VT-0081 | [everyday] I’ll confirm the details and get back to you.
+0013 | VT-0038 | [everyday] I'll be at the office around noon.
+0014 | VT-59356 | [dialect_southern_us] Okay, That dog won’t hunt. If possible.
+0015 | VT-57043 | [denials_corrections] Retract the last statement. Right now.
+0016 | VT-61206 | [imperative] Note: Please sit up straight and focus. Please.
+0017 | VT-510744 | [interjection] Listen, Reminder: Right. For real. — now.
+0018 | VT-34787 | [dates_times] Hey, Sunrise is at 06:58; sunset at 17:12. (2241)
+0019 | VT-471808 | [denials_corrections] FYI, Amend the record accordingly.—copy. — now.
+0020 | VT-33444 | [sales_pitch] Heads up: This offer won’t last—act today!
+0021 | VT-94913 | [agreements] Note: Approved. For real.
+0022 | VT-392349 | [comparatives_superlatives] FYI, Note: Better, but not best. For real.
+0023 | VT-0473 | [multilingual] Ciao, ci vediamo domani.
+0024 | VT-35802 | [hesitations_fillers] Heads up: Uh… hang on… what was I saying? Please.
+0025 | VT-73762 | [monotone_minimal] Reminder: Unknown. Thanks.

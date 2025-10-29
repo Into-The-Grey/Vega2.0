@@ -92,6 +92,15 @@ Module-specific documentation and developer notes
 - Federated learning
 - In-source DEV_NOTES references
 
+### [Models](models/)
+
+LLM model specifications and configuration
+
+- Mistral 7B specifications
+- Model configuration guide
+- Performance benchmarks
+- Troubleshooting
+
 ---
 
 ## 📋 Planning & Roadmap

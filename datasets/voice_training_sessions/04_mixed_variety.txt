@@ -1,0 +1,25 @@
+0001 | VT-641852 | [legalese] Heads up: Note: Indemnify and hold harmless the disclosing party. Thanks. if you can. (alt)
+0002 | VT-48887 | [uncertainty] Hey, Too early to call.
+0003 | VT-14251 | [monotone_minimal] Listen, Done. Please.
+0004 | VT-0361 | [tongue_twister] Buzzing beavers barter bbightly.
+0005 | VT-422520 | [dialect_southern_us] Okay, FYI, Might could get that done by supper. Please..
+0006 | VT-538468 | [weather_colorful] Quick one: Reminder: Rain so hard it’s pressure-washing my soul.—copy. right now.
+0007 | VT-96968 | [sarcastic] Listen, Oh great, another meeting that could've been an email.—copy.
+0008 | VT-42328 | [interrogative] Hey, Is this really what you want? Right now.
+0009 | VT-587900 | [meta] This phrase was generated to train a machine to sound more human. — confirm.
+0010 | VT-429989 | [addresses_generic] Real talk, Ship it to 123 Example Street, Suite 400, Springfield. Thanks.
+0011 | VT-493794 | [dark_humor] Real talk, Hey, At least when I'm dead, I won't owe anyone money. Please..
+0012 | VT-75840 | [question_variants] Note: Positive? For real.
+0013 | VT-56111 | [creative] Reminder: The crisp pattern drifted at the edge of the room.
+0014 | VT-277353 | [trash_talk] Good game; uninstall only if you want peace.
+0015 | VT-63515 | [everyday-profanity] Reminder: Turn the damn lights off when you leave.—got it.
+0016 | VT-686945 | [glitchy_ai] Listen, I… I… I can’t… complete… th-th-this… sentence. if you can.
+0017 | VT-27398 | [emotional] FYI, Why does everything have to hurt so much?—copy.
+0018 | VT-77658 | [gibberish] Reminder: Frizzle my wizzle, zink to the blab. Yabba dabba doo! Please.
+0019 | VT-82605 | [dystopian] Reminder: The drones monitor your heartbeat. Don’t run. Please.
+0020 | VT-646419 | [legalese] Okay, Heads up: This notice constitutes neither an offer nor a solicitation. if you can.
+0021 | VT-56032 | [legalese] Note: This warranty is provided as-is without limitation.
+0022 | VT-87230 | [sound_effects] Heads up: Pshhh, like air escaping a balloon of secrets.—got it.
+0023 | VT-505439 | [sports_cast] Note: Listen, That split-second rotation changed everything. Right now. thanks.
+0024 | VT-461374 | [math_readouts] Real talk, Hey, The limit approaches infinity. (5661) Please. — got it.
+0025 | VT-423231 | [narrative] Reminder: When I was five, I thought the moon followed me everywhere. Right now. — now. (alt)
