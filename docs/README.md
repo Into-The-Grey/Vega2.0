@@ -92,10 +92,6 @@ Module-specific documentation and developer notes
 - Federated learning
 - In-source DEV_NOTES references
 
-### [Dev Notes](devnotes/)
-
-Development notes and legacy documentation
-
 ---
 
 ## 📋 Planning & Roadmap
