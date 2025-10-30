@@ -56,3 +56,14 @@
 {"task": "cli_chat", "metric": "wall_time_sec", "value": 2.969982011942193, "timestamp": 1761819675.648933, "context": {"message_len": 9}}
 {"task": "cli_chat", "metric": "wall_time_sec", "value": 2.592018842929974, "timestamp": 1761819679.1073182, "context": {"message_len": 9}}
 {"task": "cli_chat", "metric": "wall_time_sec", "value": 4.702265403000638, "timestamp": 1761819684.6994874, "context": {"message_len": 9}}
+{"task": "cli_chat", "metric": "wall_time_sec", "value": 2.9903819469036534, "timestamp": 1761819698.56636, "context": {"message_len": 9}}
+{"task": "cli_chat", "metric": "wall_time_sec", "value": 2.302075627958402, "timestamp": 1761819701.707314, "context": {"message_len": 9}}
+{"task": "cli_chat", "metric": "wall_time_sec", "value": 5.749604218988679, "timestamp": 1761819708.2938552, "context": {"message_len": 9}}
+{"task": "cli_chat", "metric": "wall_time_sec", "value": 6.466509832069278, "timestamp": 1761819715.598826, "context": {"message_len": 9}}
+{"task": "cli_chat", "metric": "wall_time_sec", "value": 2.2474590450292453, "timestamp": 1761819718.6882231, "context": {"message_len": 9}}
+{"task": "cli_chat", "metric": "wall_time_sec", "value": 8.91629777289927, "timestamp": 1761819728.444722, "context": {"message_len": 9}}
+{"task": "cli_chat", "metric": "wall_time_sec", "value": 7.918809792026877, "timestamp": 1761819737.2134755, "context": {"message_len": 10}}
+{"task": "cli_chat", "metric": "wall_time_sec", "value": 2.750492783030495, "timestamp": 1761819740.819533, "context": {"message_len": 10}}
+{"task": "cli_chat", "metric": "wall_time_sec", "value": 3.076357960002497, "timestamp": 1761819744.7562842, "context": {"message_len": 10}}
+{"task": "cli_chat", "metric": "wall_time_sec", "value": 5.750391513109207, "timestamp": 1761819751.3519454, "context": {"message_len": 10}}
+{"task": "cli_chat", "metric": "wall_time_sec", "value": 3.4795303730061278, "timestamp": 1761819755.6731515, "context": {"message_len": 10}}
