@@ -38,7 +38,7 @@ echo ""
 echo -e "${YELLOW}Creating directories...${NC}"
 mkdir -p "$ACTUAL_HOME/.vega"
 mkdir -p "$ACTUAL_HOME/.vega/temp"
-chown -R "$ACTUAL_USER:$ACTUAL_USER" "$ACTUAL_HOME/.vega"
+chown -R "$ACTUAL_USER":"$ACTUAL_USER" "$ACTUAL_HOME/.vega"
 
 # Install Python dependencies
 echo -e "${YELLOW}Installing Python dependencies...${NC}"

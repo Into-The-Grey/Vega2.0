@@ -389,6 +389,14 @@ paths:
                     example: "accepted"
                   session_id:
                     type: string
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          description: Session not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
 
   # Feedback
   /feedback:
@@ -416,6 +424,207 @@ paths:
                     example: "received"
                   feedback_id:
                     type: string
+        '400':
+          description: Invalid feedback data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  # Admin & Configuration
+  /admin/config:
+    get:
+      tags: [Admin & Configuration]
+      summary: Get System Configuration
+      description: Retrieve current system configuration
+      operationId: get_config
+      responses:
+        '200':
+          description: System configuration
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  # Security & Crypto
+  /security/keys:
+    get:
+      tags: [Security & Crypto]
+      summary: List API Keys
+      description: List all active API keys (masked)
+      operationId: list_api_keys
+      responses:
+        '200':
+          description: List of API keys
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    key_id:
+                      type: string
+                    key_prefix:
+                      type: string
+                    created_at:
+                      type: string
+                      format: date-time
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  # Backup & Recovery
+  /backup/create:
+    post:
+      tags: [Backup & Recovery]
+      summary: Create Backup
+      description: Create a system backup
+      operationId: create_backup
+      responses:
+        '200':
+          description: Backup created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  backup_id:
+                    type: string
+                  timestamp:
+                    type: string
+                    format: date-time
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  # Federated Learning
+  /federated/coordinator/start:
+    post:
+      tags: [Federated Learning]
+      summary: Start Federated Coordinator
+      description: Initialize and start the federated learning coordinator
+      operationId: start_coordinator
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                algorithm:
+                  type: string
+                  enum: [fedavg, fedprox, scaffold]
+                rounds:
+                  type: integer
+                min_participants:
+                  type: integer
+              required: [algorithm, rounds]
+      responses:
+        '200':
+          description: Coordinator started
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  coordinator_id:
+                    type: string
+                  status:
+                    type: string
+        '400':
+          description: Invalid configuration
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  # Analytics
+  /analytics/dashboard:
+    get:
+      tags: [Analytics]
+      summary: Get Analytics Dashboard
+      description: Retrieve platform analytics dashboard data
+      operationId: get_analytics
+      parameters:
+        - name: time_range
+          in: query
+          schema:
+            type: string
+            enum: [1h, 24h, 7d, 30d]
+            default: 24h
+      responses:
+        '200':
+          description: Analytics data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  requests_total:
+                    type: integer
+                  active_sessions:
+                    type: integer
+                  avg_response_time:
+                    type: number
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  # Multi-modal Processing
+  /multimodal/process:
+    post:
+      tags: [Multi-modal]
+      summary: Process Multi-modal Content
+      description: Process image, video, or document content
+      operationId: process_multimodal
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                type:
+                  type: string
+                  enum: [image, video, audio, document]
+              required: [file, type]
+      responses:
+        '200':
+          description: Processing result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: string
+                  metadata:
+                    type: object
+                    additionalProperties: true
+        '400':
+          description: Invalid file or type
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '413':
+          description: File too large
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
 
 components:
   securitySchemes:

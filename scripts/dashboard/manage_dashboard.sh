@@ -3,7 +3,7 @@
 # Vega Dashboard Manager
 # Quick management script for the web dashboard
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)" || exit 1
 cd "$SCRIPT_DIR" || exit 1
 
 function show_help() {
