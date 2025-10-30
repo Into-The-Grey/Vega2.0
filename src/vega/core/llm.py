@@ -611,17 +611,22 @@ class LLMManager:
 
         logger.info(f"Initialized LLM providers: {list(self.providers.keys())}")
 
-    def get_available_providers(self) -> List[str]:
+    async def get_available_providers(self) -> List[str]:
         """Get list of available providers"""
-        return [
-            name for name, provider in self.providers.items() if provider.is_available()
-        ]
+        available = []
+        for name, provider in self.providers.items():
+            try:
+                if await provider.is_available():
+                    available.append(name)
+            except Exception as e:
+                logger.debug(f"Provider {name} not available: {e}")
+        return available
 
-    def get_preferred_provider(
+    async def get_preferred_provider(
         self, preferred: Optional[str] = None
     ) -> BaseLLMProvider:
         """Get the preferred provider with fallbacks"""
-        available = self.get_available_providers()
+        available = await self.get_available_providers()
 
         if not available:
             raise LLMBackendError("No LLM providers available")
@@ -682,7 +687,7 @@ class LLMManager:
                 )
 
             # Build candidate provider list
-            available = self.get_available_providers()
+            available = await self.get_available_providers()
             preference_order = ["ollama", "openai", "anthropic"]
             candidates: List[str] = []
 
@@ -761,7 +766,7 @@ class LLMManager:
             return
 
         try:
-            llm_provider = self.get_preferred_provider(provider)
+            llm_provider = await self.get_preferred_provider(provider)
             logger.info(f"Streaming from provider: {llm_provider.name}")
 
             async for token in llm_provider.stream_generate(prompt, **kwargs):
@@ -775,10 +780,10 @@ class LLMManager:
             logger.error(f"LLM streaming failed: {e}")
             yield f"[Error: {str(e)}]"
 
-    def get_stats(self) -> Dict[str, Any]:
+    async def get_stats(self) -> Dict[str, Any]:
         """Get usage statistics and status"""
         return {
-            "available_providers": self.get_available_providers(),
+            "available_providers": await self.get_available_providers(),
             "circuit_breaker": self.circuit_breaker.status(),
             "cache": self.cache.stats(),
             "usage": self.usage_tracker,

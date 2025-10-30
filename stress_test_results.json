@@ -1,0 +1,62 @@
+[
+  {
+    "test": "Basic Response",
+    "status": "PASS",
+    "details": "3.61s",
+    "timestamp": 1761819432.9187384
+  },
+  {
+    "test": "Response Speed (Simple)",
+    "status": "PASS",
+    "details": "1.28s (excellent)",
+    "timestamp": 1761819434.6975825
+  },
+  {
+    "test": "Long Response",
+    "status": "PASS",
+    "details": "20.49s, 601 words",
+    "timestamp": 1761819455.6890998
+  },
+  {
+    "test": "Complex Reasoning",
+    "status": "PASS",
+    "details": "2.07s",
+    "timestamp": 1761819458.2562957
+  },
+  {
+    "test": "Rapid Fire (5x)",
+    "status": "PASS",
+    "details": "Avg: 1.50s, All succeeded",
+    "timestamp": 1761819466.269572
+  },
+  {
+    "test": "Special Characters",
+    "status": "PASS",
+    "details": "2.36s",
+    "timestamp": 1761819469.1291327
+  },
+  {
+    "test": "Empty Prompt",
+    "status": "PASS",
+    "details": "Failed fast: 0.92s",
+    "timestamp": 1761819470.5483685
+  },
+  {
+    "test": "Very Long Prompt",
+    "status": "PASS",
+    "details": "11.72s",
+    "timestamp": 1761819482.7645576
+  },
+  {
+    "test": "Memory/Context",
+    "status": "PASS",
+    "details": "Remembered previous context",
+    "timestamp": 1761819488.7738655
+  },
+  {
+    "test": "Concurrent Load (3x)",
+    "status": "PASS",
+    "details": "13.36s total, all succeeded",
+    "timestamp": 1761819502.6318293
+  }
+]
