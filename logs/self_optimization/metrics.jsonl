@@ -69,3 +69,7 @@
 {"task": "cli_chat", "metric": "wall_time_sec", "value": 3.4795303730061278, "timestamp": 1761819755.6731515, "context": {"message_len": 10}}
 {"task": "cli_chat", "metric": "wall_time_sec", "value": 4.939771263976581, "timestamp": 1761819761.442763, "context": {"message_len": 10}}
 {"task": "cli_chat", "metric": "wall_time_sec", "value": 3.1405185769544914, "timestamp": 1761819765.4559247, "context": {"message_len": 10}}
+{"task": "cli_chat", "metric": "wall_time_sec", "value": 6.558658188092522, "timestamp": 1761819772.857315, "context": {"message_len": 10}}
+{"task": "cli_chat", "metric": "wall_time_sec", "value": 2.5051792099839076, "timestamp": 1761819776.2028103, "context": {"message_len": 10}}
+{"task": "cli_chat", "metric": "wall_time_sec", "value": 3.8305700829951093, "timestamp": 1761819780.8719373, "context": {"message_len": 10}}
+{"task": "cli_chat", "metric": "wall_time_sec", "value": 5.910274641006254, "timestamp": 1761819787.622851, "context": {"message_len": 10}}
