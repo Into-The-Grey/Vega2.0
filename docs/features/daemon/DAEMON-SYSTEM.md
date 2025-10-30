@@ -111,7 +111,7 @@ Continuous monitoring service with scheduled tasks:
 
 ### Data Flow
 
-```
+```text
 Daemon Loop (60s) → Scheduled Tasks → System Manager → Sudo Commands → System Actions
                                                      ↓
                                       Logging (vega_system.log + VEGA_COMMENTS.txt)
@@ -193,7 +193,7 @@ All daemon activities are logged with detailed information:
 
 **Log Format:**
 
-```
+```text
 2025-01-17 14:30:00 - VegaSystemManager - INFO - [ACTION] Server Management: Started Vega server - SUCCESS
   Details: {"status": "active", "pid": 12345}
 ```
@@ -214,7 +214,7 @@ Separate from logs, the daemon generates AI-powered suggestions and reports:
 
 **Comment Format:**
 
-```
+```text
 ================================================================================
 [2025-01-17 14:30:00] HEALTH_MONITORING
 System health check completed. All metrics within normal range.

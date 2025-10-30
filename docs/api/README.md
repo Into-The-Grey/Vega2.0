@@ -168,7 +168,7 @@ API requests are subject to rate limiting:
 
 Rate limit headers are included in responses:
 
-```
+```text
 X-RateLimit-Limit: 1000
 X-RateLimit-Remaining: 999
 X-RateLimit-Reset: 1632150000
@@ -383,7 +383,7 @@ dashboard = client.analytics.create_dashboard(
 
 Version selection via header:
 
-```
+```text
 API-Version: v1
 ```
 

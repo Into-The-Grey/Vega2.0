@@ -230,7 +230,7 @@ docker-compose exec grafana grafana-cli admin export-dash > dashboards-backup.js
 
 ### Common Issues
 
-**Grafana Dashboard Not Loading**
+#### Grafana Dashboard Not Loading
 
 ```bash
 # Check data source connectivity
@@ -238,7 +238,7 @@ docker-compose logs grafana
 curl http://localhost:9090/api/v1/query?query=up
 ```
 
-**Missing Metrics**
+#### Missing Metrics
 
 ```bash
 # Verify Prometheus targets
@@ -247,7 +247,7 @@ curl http://localhost:9090/api/v1/targets
 curl http://localhost:8000/metrics
 ```
 
-**Log Collection Issues**
+#### Log Collection Issues
 
 ```bash
 # Check Promtail logs

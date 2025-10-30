@@ -21,7 +21,6 @@ fi
 
 # Get the actual user (not root)
 ACTUAL_USER="${SUDO_USER:-$USER}"
-ACTUAL_HOME=$(eval echo "~$ACTUAL_USER")
 
 echo "✓ Running as: $ACTUAL_USER"
 echo "✓ Project dir: $SCRIPT_DIR"
