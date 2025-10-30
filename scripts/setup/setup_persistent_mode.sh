@@ -10,7 +10,7 @@ echo ""
 
 # Get script directory
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$SCRIPT_DIR"
+cd "$SCRIPT_DIR" || exit 1
 
 # Check if running as root
 if [ "$EUID" -ne 0 ]; then 
@@ -21,7 +21,7 @@ fi
 
 # Get the actual user (not root)
 ACTUAL_USER="${SUDO_USER:-$USER}"
-ACTUAL_HOME=$(eval echo ~$ACTUAL_USER)
+ACTUAL_HOME=$(eval echo "~$ACTUAL_USER")
 
 echo "✓ Running as: $ACTUAL_USER"
 echo "✓ Project dir: $SCRIPT_DIR"

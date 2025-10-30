@@ -22,7 +22,7 @@ fi
 
 # Get actual user (not root)
 ACTUAL_USER=${SUDO_USER:-$(whoami)}
-ACTUAL_HOME=$(eval echo ~$ACTUAL_USER)
+ACTUAL_HOME=$(eval echo "~$ACTUAL_USER")
 
 # Get Vega directory
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -38,12 +38,12 @@ echo ""
 echo -e "${YELLOW}Creating directories...${NC}"
 mkdir -p "$ACTUAL_HOME/.vega"
 mkdir -p "$ACTUAL_HOME/.vega/temp"
-chown -R $ACTUAL_USER:$ACTUAL_USER "$ACTUAL_HOME/.vega"
+chown -R "$ACTUAL_USER:$ACTUAL_USER" "$ACTUAL_HOME/.vega"
 
 # Install Python dependencies
 echo -e "${YELLOW}Installing Python dependencies...${NC}"
 if [ -d "$VEGA_DIR/.venv" ]; then
-    sudo -u $ACTUAL_USER "$VEGA_DIR/.venv/bin/pip" install schedule psutil
+    sudo -u "$ACTUAL_USER" "$VEGA_DIR/.venv/bin/pip" install schedule psutil
 else
     echo -e "${RED}Virtual environment not found. Please run: python3.12 -m venv .venv${NC}"
     exit 1

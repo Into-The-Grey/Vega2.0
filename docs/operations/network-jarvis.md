@@ -28,7 +28,7 @@ Replace `192.168.1.100` with your actual server IP:
 
 **From Any Device on Network:**
 
-```
+```text
 http://192.168.1.100:8080
 ```
 
@@ -110,7 +110,7 @@ JARVIS Mode transforms Vega into a persistent, always-available AI assistant:
 
 ### Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │  Web UI (Port 8080)                                         │
 │  ├─ Chat Interface                                          │

@@ -29,7 +29,7 @@ This reorganization was performed to clean up the project structure, eliminate d
 
 Created organized script directories:
 
-```
+```text
 scripts/
 ├── dashboard/
 │   ├── setup_dashboard.sh
@@ -132,7 +132,7 @@ scripts/
 
 ### Root Directory (Clean)
 
-```
+```text
 Vega2.0/
 ├── .env                       # Environment configuration
 ├── .env.example              # Environment template
@@ -146,7 +146,7 @@ Vega2.0/
 
 ### Organized Directories
 
-```
+```text
 ├── config/                  # Centralized configuration (was configs/)
 ├── data/                   # Runtime data and state
 ├── docs/                   # Comprehensive documentation
