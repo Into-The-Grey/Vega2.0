@@ -686,6 +686,32 @@ def _extract_memory_facts(text: str) -> dict[str, str]:
     return facts
 
 
+def _sanitize_input(text: str) -> str:
+    """Sanitize user input to prevent crashes and security issues"""
+    if not text:
+        return ""
+
+    # Remove null bytes that crash parsers
+    text = text.replace("\x00", "")
+
+    # Remove control characters except newlines/tabs
+    text = "".join(char for char in text if ord(char) >= 32 or char in "\n\t")
+
+    # Limit length
+    max_length = 10000  # Default, will use config if available
+    try:
+        from .config import get_config
+
+        max_length = get_config().max_prompt_chars
+    except:
+        pass
+
+    if len(text) > max_length:
+        text = text[:max_length]
+
+    return text.strip()
+
+
 # Chat endpoint with persistent conversation memory
 @app.post("/chat")
 async def chat(
@@ -694,6 +720,11 @@ async def chat(
 ):
     app.state.metrics["requests_total"] += 1
     require_api_key(x_api_key)
+
+    # Sanitize input immediately
+    request.prompt = _sanitize_input(request.prompt)
+    if not request.prompt:
+        raise HTTPException(status_code=400, detail="Empty or invalid prompt")
 
     try:
         from .llm import LLMBackendError  # type: ignore

@@ -60,7 +60,13 @@ class MemoryFact(Base):
 # Create the engine with SQLite pragmas suitable for local logging
 engine = create_engine(
     DATABASE_URL,
-    connect_args={"check_same_thread": False},  # allow access from different threads
+    connect_args={
+        "check_same_thread": False,  # allow access from different threads
+        "timeout": 20,  # Wait up to 20s for lock
+    },
+    pool_size=10,  # Connection pool for concurrent requests
+    max_overflow=20,  # Allow 20 extra connections under load
+    pool_pre_ping=True,  # Verify connections before using
     future=True,
 )
 

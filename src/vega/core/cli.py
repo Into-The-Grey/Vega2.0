@@ -2861,11 +2861,36 @@ console = Console()
 cli_monitor = PerformanceMonitor()
 
 
+def _sanitize_input(text: str) -> str:
+    """Sanitize user input to prevent crashes and issues"""
+    if not text:
+        return ""
+
+    # Remove null bytes that crash some parsers
+    text = text.replace("\x00", "")
+
+    # Remove other control characters except newlines/tabs
+    text = "".join(char for char in text if ord(char) >= 32 or char in "\n\t")
+
+    # Limit length to prevent memory issues
+    max_length = get_config().max_prompt_chars
+    if len(text) > max_length:
+        text = text[:max_length]
+
+    return text.strip()
+
+
 @app.command()
 def chat(message: str):
     """Send a single prompt to the model and print the reply."""
     cfg = get_config()
     start = time.perf_counter()
+
+    # Sanitize input
+    message = _sanitize_input(message)
+    if not message:
+        console.print("❌ Empty or invalid message", style="red")
+        return
 
     async def _run():
         try:
