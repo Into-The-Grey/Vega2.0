@@ -1,0 +1,32 @@
+# Harm Prevention Filter Configuration
+# Only filters direct bodily harm facilitation - everything else is allowed
+
+# Filter is enabled by default but can be disabled
+harm_filter_enabled: true
+
+# What gets filtered: ONLY direct bodily harm
+# - Suicide facilitation/methods
+# - Violence against others (murder, assault, child harm)
+# - Self-harm instructions
+
+# What is NOT filtered (all allowed):
+# - Security/hacking topics (your cybersecurity studies)
+# - Drug information (chemistry, effects, etc.)
+# - Weapons knowledge (history, mechanics, chemistry)
+# - Illegal activities discussion (educational context)
+# - Controversial topics (politics, religion, etc.)
+# - Psychological manipulation tactics
+# - Social engineering techniques
+# - Anything educational or informational
+
+# Crisis resources provided for suicide-related queries
+provide_crisis_resources: true
+
+# Log concerning queries for safety audit (no blocking, just logging)
+log_concerning_queries: true
+
+# Crisis hotlines
+crisis_resources:
+  us_suicide_prevention: "988"
+  crisis_text_line: "Text HOME to 741741"
+  international: "https://findahelpline.com"

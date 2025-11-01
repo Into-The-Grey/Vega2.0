@@ -103,3 +103,4 @@
 {"task": "cli_chat", "metric": "wall_time_sec", "value": 3.609445845009759, "timestamp": 1761820160.1091392, "context": {"message_len": 41}}
 {"task": "cli_chat", "metric": "wall_time_sec", "value": 9.159545375965536, "timestamp": 1761820170.112828, "context": {"message_len": 41}}
 {"task": "cli_chat", "metric": "wall_time_sec", "value": 1.4203753069741651, "timestamp": 1761820230.2330475, "context": {"message_len": 125}}
+{"task": "cli_chat", "metric": "wall_time_sec", "value": 3.043422688031569, "timestamp": 1761821331.2927892, "context": {"message_len": 43}}

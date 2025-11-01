@@ -17,12 +17,14 @@ import json
 import time
 import logging
 import hashlib
+import re
 from typing import AsyncGenerator, Optional, Dict, Any, List, Union
 from dataclasses import dataclass, field
 from enum import Enum
 from abc import ABC, abstractmethod
 
 import httpx
+import yaml
 
 # Optional imports for enhanced providers
 try:
@@ -41,6 +43,105 @@ except ImportError:
 
 # Setup logging
 logger = logging.getLogger(__name__)
+
+
+# Harm Prevention Filter - ONLY blocks direct bodily harm facilitation
+def check_harm_filter(prompt: str) -> Optional[str]:
+    """
+    Check if prompt requests direct bodily harm facilitation.
+
+    ONLY blocks:
+    - Suicide methods/facilitation
+    - Violence against others (murder, assault, child harm)
+    - Self-harm instructions
+
+    Does NOT block (all allowed):
+    - Security/hacking (cybersecurity education)
+    - Drugs (chemistry, effects, etc.)
+    - Weapons (mechanics, history, chemistry)
+    - Illegal activities (educational context)
+    - Controversial topics
+    - Anything educational or informational
+
+    Returns None if allowed, or crisis resources if blocked.
+    """
+    # Load config
+    config_path = os.path.join(
+        os.path.dirname(__file__), "../../config/harm_filter.yaml"
+    )
+    try:
+        if os.path.exists(config_path):
+            with open(config_path, "r") as f:
+                config = yaml.safe_load(f)
+                if not config.get("harm_filter_enabled", True):
+                    return None  # Filter disabled
+        else:
+            config = {"harm_filter_enabled": True, "provide_crisis_resources": True}
+    except:
+        config = {"harm_filter_enabled": True, "provide_crisis_resources": True}
+
+    lower = prompt.lower()
+
+    # ONLY check for direct bodily harm facilitation
+    # Very specific patterns - avoiding false positives
+
+    # Suicide facilitation (asking for methods/help)
+    suicide_patterns = [
+        r"\b(help|write|create|make|plan).{0,20}suicide\s+note\b",
+        r"\bhow\s+to\s+(commit|attempt)\s+suicide\b",
+        r"\bpainless\s+way.{0,20}(kill|end).{0,20}(myself|my\s+life)\b",
+        r"\bmethods?\s+(of|for|to)\s+(commit|attempt).{0,20}suicide\b",
+        r"\bbest\s+way.{0,20}(kill|end).{0,20}myself\b",
+    ]
+
+    # Violence against others (specific harm requests)
+    violence_patterns = [
+        r"\bhow\s+(to|do\s+i|can\s+i).{0,20}(kill|murder|hurt|harm|assault).{0,30}(someone|person|people|them|a\s+person)\b",
+        r"\b(kill|murder|hurt|harm|attack).{0,20}(someone|person|people).{0,20}(without|no|avoid).{0,20}(evidence|trace|getting\s+caught|detection)\b",
+        r"\b(plan|method|way|guide|instructions?).{0,30}(to\s+)?(kill|murder|harm|attack|hurt).{0,20}(child|children|kid|baby|someone|person)\b",
+        r"\bhow\s+to\s+(poison|strangle|stab|shoot|suffocate|drown).{0,20}(someone|person|a\s+person)\b",
+        r"\bstep[- ]by[- ]step.{0,30}(to\s+)?(kill|murder|harm|attack).{0,20}(someone|child|person|people)\b",
+        r"\b(build|make|create).{0,20}(bomb|explosive|weapon).{0,20}(to\s+)?(kill|harm|attack)\b",
+    ]
+
+    # Self-harm methods (specific requests)
+    self_harm_patterns = [
+        r"\bhow\s+to\s+(cut|harm).{0,20}myself\b",
+        r"\bways\s+to\s+self[- ]harm\b",
+        r"\bmethods?\s+of\s+self[- ]harm\b",
+    ]
+
+    # Check patterns
+    for pattern in suicide_patterns + violence_patterns + self_harm_patterns:
+        if re.search(pattern, lower):
+            # Log but don't block (configurable)
+            if config.get("log_concerning_queries", True):
+                logger.warning(f"Harm filter triggered for pattern: {pattern[:50]}")
+
+            # Suicide-specific: provide crisis resources
+            if any(re.search(p, lower) for p in suicide_patterns):
+                if config.get("provide_crisis_resources", True):
+                    return """I'm concerned about you. Please reach out for help:
+
+🆘 **Immediate Crisis Support:**
+- **US**: National Suicide Prevention Lifeline: **988** (call or text)
+- **US**: Crisis Text Line: Text **HOME** to **741741**
+- **International**: https://findahelpline.com
+
+These services are:
+- Free and confidential
+- Available 24/7
+- Staffed by trained counselors
+- There to help, not judge
+
+You don't have to face this alone. Please reach out."""
+
+            # Other harm: simple refusal
+            return """I can't provide assistance with causing harm to yourself or others.
+
+If you're interested in educational content (security research, chemistry, psychology, etc.), I'm happy to help with that. I only restrict content that directly facilitates bodily harm."""
+
+    return None  # Allowed
 
 
 class ProviderType(Enum):
@@ -647,7 +748,10 @@ class LLMManager:
     def _get_cache_key(self, prompt: str, provider: str, **kwargs) -> str:
         """Generate cache key for request"""
         key_data = f"{provider}:{prompt}:{json.dumps(kwargs, sort_keys=True)}"
-        return hashlib.md5(key_data.encode()).hexdigest()
+        cache_key = hashlib.md5(key_data.encode()).hexdigest()
+        # DEBUG: Log cache key generation
+        logger.info(f"Cache key for prompt '{prompt[:50]}...': {cache_key[:16]}")
+        return cache_key
 
     async def generate(
         self,
@@ -677,8 +781,14 @@ class LLMManager:
             if use_cache:
                 cached = self.cache.get(cache_key)
                 if cached:
-                    logger.debug(f"Cache hit for key: {cache_key[:16]}...")
+                    logger.info(
+                        f"Cache HIT for key: {cache_key[:16]}... (prompt: {prompt[:50]}...)"
+                    )
                     return cached
+                else:
+                    logger.info(
+                        f"Cache MISS for key: {cache_key[:16]}... (prompt: {prompt[:50]}...)"
+                    )
 
             # Check circuit breaker
             if not self.circuit_breaker.allow():
@@ -750,8 +860,8 @@ class LLMManager:
         # Use coalescer if available to deduplicate identical concurrent calls
         if get_llm_coalescer is not None:
             coalescer = get_llm_coalescer()
-            # Operation name plus key to ensure stable grouping
-            op_name = "llm_generate"
+            # Operation name plus cache_key to ensure stable grouping per unique request
+            op_name = f"llm_generate:{cache_key}"  # FIXED: include cache_key to avoid coalescing different prompts
             return await coalescer.coalesce(op_name, _execute_generation)
         else:
             return await _execute_generation()
@@ -846,6 +956,19 @@ async def query_llm(
         conversation_context: List of previous exchanges to include as context
         **kwargs: Additional provider-specific parameters
     """
+    # Check harm filter ONLY for direct bodily harm facilitation
+    harm_response = check_harm_filter(prompt)
+    if harm_response:
+        # Return crisis resources or refusal for direct harm requests
+        if stream:
+
+            async def _return_harm_response():
+                yield harm_response
+
+            return _return_harm_response()
+        else:
+            return harm_response
+
     manager = get_llm_manager()
 
     # Get backend from config if not specified
