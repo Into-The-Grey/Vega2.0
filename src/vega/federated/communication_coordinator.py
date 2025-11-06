@@ -121,7 +121,7 @@ class CompressionOptimizer:
                 "adaptive": True,
             },
             NetworkCondition.CRITICAL: {
-                "method": SparsificationMethod.LAYER_WISE_TOP_K,
+                "method": SparsificationMethod.LAYERWISE_TOP_K,
                 "sparsity_ratio": 0.8,  # Maximum compression
                 "adaptive": True,
             },
@@ -229,11 +229,47 @@ class CommunicationCoordinator:
 
     def _initialize_algorithms(self):
         """Initialize default compression algorithms."""
+        # Create default compression config
+        from .compression_advanced import CompressionConfig, CompressionType
+
+        default_config = CompressionConfig(
+            compression_type=CompressionType.SPARSIFICATION,
+            compression_ratio=0.1,
+            enable_error_feedback=True,
+        )
+
         self.compression_algorithms = {
-            "sparsification": GradientSparsification(),
-            "quantization": Quantization(),
-            "sketching": Sketching(),
+            "sparsification": GradientSparsification(default_config),
+            "quantization": Quantization(default_config),
+            "sketching": Sketching(default_config),
         }
+
+    def _create_compression_config(self, **kwargs) -> "CompressionConfig":
+        """Helper to create compression config from keyword arguments."""
+        from .compression_advanced import CompressionConfig, CompressionType
+
+        # Map old API parameters to new config
+        config_params = {}
+
+        if "bits" in kwargs:
+            config_params["quantization_bits"] = kwargs["bits"]
+        if "sketch_size" in kwargs:
+            config_params["sketch_size"] = kwargs["sketch_size"]
+        if "sparsity_ratio" in kwargs:
+            config_params["compression_ratio"] = kwargs["sparsity_ratio"]
+
+        # Determine compression type based on what's being created
+        if "method" in kwargs:
+            if hasattr(kwargs["method"], "name"):
+                method_name = kwargs["method"].name
+                if "QUANT" in method_name or "SIGNSGD" in method_name:
+                    config_params["compression_type"] = CompressionType.QUANTIZATION
+                elif "SKETCH" in method_name:
+                    config_params["compression_type"] = CompressionType.SKETCHING
+                else:
+                    config_params["compression_type"] = CompressionType.SPARSIFICATION
+
+        return CompressionConfig(**config_params)
 
     async def register_participant(
         self, participant_id: str, capabilities: Dict[str, Any]
@@ -332,9 +368,10 @@ class CommunicationCoordinator:
         if condition == NetworkCondition.EXCELLENT:
             # Light compression, focus on accuracy
             config = self.optimizer.optimize_quantization(condition, "high")
-            strategies.append(
-                Quantization(method=config["method"], bits=config["bits"])
+            comp_config = self._create_compression_config(
+                method=config["method"], bits=config["bits"]
             )
+            strategies.append(Quantization(comp_config, method=config["method"]))
 
         elif condition == NetworkCondition.GOOD:
             # Balanced compression
@@ -343,15 +380,20 @@ class CommunicationCoordinator:
             )
             quant_config = self.optimizer.optimize_quantization(condition, "medium")
 
+            sparse_comp_config = self._create_compression_config(
+                method=sparsity_config["method"],
+                sparsity_ratio=sparsity_config["sparsity_ratio"],
+            )
+            quant_comp_config = self._create_compression_config(
+                method=quant_config["method"], bits=quant_config["bits"]
+            )
+
             strategies.extend(
                 [
                     GradientSparsification(
-                        method=sparsity_config["method"],
-                        sparsity_ratio=sparsity_config["sparsity_ratio"],
+                        sparse_comp_config, method=sparsity_config["method"]
                     ),
-                    Quantization(
-                        method=quant_config["method"], bits=quant_config["bits"]
-                    ),
+                    Quantization(quant_comp_config, method=quant_config["method"]),
                 ]
             )
 
@@ -362,15 +404,20 @@ class CommunicationCoordinator:
             )
             quant_config = self.optimizer.optimize_quantization(condition, "low")
 
+            sparse_comp_config = self._create_compression_config(
+                method=sparsity_config["method"],
+                sparsity_ratio=sparsity_config["sparsity_ratio"],
+            )
+            quant_comp_config = self._create_compression_config(
+                method=quant_config["method"], bits=quant_config["bits"]
+            )
+
             strategies.extend(
                 [
                     GradientSparsification(
-                        method=sparsity_config["method"],
-                        sparsity_ratio=sparsity_config["sparsity_ratio"],
+                        sparse_comp_config, method=sparsity_config["method"]
                     ),
-                    Quantization(
-                        method=quant_config["method"], bits=quant_config["bits"]
-                    ),
+                    Quantization(quant_comp_config, method=quant_config["method"]),
                 ]
             )
 
@@ -379,15 +426,17 @@ class CommunicationCoordinator:
             sketch_config = self.optimizer.optimize_sketching(condition, model_size)
             quant_config = self.optimizer.optimize_quantization(condition, "low")
 
+            sketch_comp_config = self._create_compression_config(
+                method=sketch_config["method"], sketch_size=sketch_config["sketch_size"]
+            )
+            quant_comp_config = self._create_compression_config(
+                method=quant_config["method"], bits=quant_config["bits"]
+            )
+
             strategies.extend(
                 [
-                    Sketching(
-                        method=sketch_config["method"],
-                        sketch_size=sketch_config["sketch_size"],
-                    ),
-                    Quantization(
-                        method=quant_config["method"], bits=quant_config["bits"]
-                    ),
+                    Sketching(sketch_comp_config, method=sketch_config["method"]),
+                    Quantization(quant_comp_config, method=quant_config["method"]),
                 ]
             )
 
@@ -401,16 +450,24 @@ class CommunicationCoordinator:
         sparsity_config = self.optimizer.optimize_sparsification(condition, model_size)
         sketch_config = self.optimizer.optimize_sketching(condition, model_size)
 
+        sparse_comp_config = self._create_compression_config(
+            method=sparsity_config["method"],
+            sparsity_ratio=min(sparsity_config["sparsity_ratio"] + 0.2, 0.9),
+        )
+        sketch_comp_config = self._create_compression_config(
+            method=sketch_config["method"],
+            sketch_size=max(sketch_config["sketch_size"] // 2, 50),
+        )
+        quant_comp_config = self._create_compression_config(
+            method=QuantizationMethod.SIGNSGD, bits=1
+        )
+
         return [
             GradientSparsification(
-                method=sparsity_config["method"],
-                sparsity_ratio=min(sparsity_config["sparsity_ratio"] + 0.2, 0.9),
+                sparse_comp_config, method=sparsity_config["method"]
             ),
-            Sketching(
-                method=sketch_config["method"],
-                sketch_size=max(sketch_config["sketch_size"] // 2, 50),
-            ),
-            Quantization(method=QuantizationMethod.SIGNSGD, bits=1),
+            Sketching(sketch_comp_config, method=sketch_config["method"]),
+            Quantization(quant_comp_config, method=QuantizationMethod.SIGNSGD),
         ]
 
     def _conservative_strategy_selection(
@@ -418,8 +475,13 @@ class CommunicationCoordinator:
     ) -> List[CompressionAlgorithm]:
         """Conservative compression preserving accuracy."""
 
+        comp_config = self._create_compression_config(
+            method=QuantizationMethod.UNIFORM, bits=16
+        )
         return [
-            Quantization(method=QuantizationMethod.UNIFORM, bits=16)  # High precision
+            Quantization(
+                comp_config, method=QuantizationMethod.UNIFORM
+            )  # High precision
         ]
 
     def _balanced_strategy_selection(
@@ -430,12 +492,19 @@ class CommunicationCoordinator:
         sparsity_config = self.optimizer.optimize_sparsification(condition, model_size)
         quant_config = self.optimizer.optimize_quantization(condition, "medium")
 
+        sparse_comp_config = self._create_compression_config(
+            method=sparsity_config["method"],
+            sparsity_ratio=sparsity_config["sparsity_ratio"],
+        )
+        quant_comp_config = self._create_compression_config(
+            method=quant_config["method"], bits=quant_config["bits"]
+        )
+
         return [
             GradientSparsification(
-                method=sparsity_config["method"],
-                sparsity_ratio=sparsity_config["sparsity_ratio"],
+                sparse_comp_config, method=sparsity_config["method"]
             ),
-            Quantization(method=quant_config["method"], bits=quant_config["bits"]),
+            Quantization(quant_comp_config, method=quant_config["method"]),
         ]
 
     async def compress_and_transmit(
@@ -468,7 +537,9 @@ class CommunicationCoordinator:
             bandwidth_mbps = participant.network_metrics.bandwidth_mbps
 
             if bandwidth_mbps > 0:
-                data_size_mb = final_result.compressed_size_kb / 1024
+                data_size_mb = final_result.compressed_size / (
+                    1024 * 1024
+                )  # Convert bytes to MB
                 transmission_time = data_size_mb / bandwidth_mbps
             else:
                 transmission_time = 10.0  # Default assumption

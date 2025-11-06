@@ -23,8 +23,11 @@ configuration management, database operations, LLM backends, security,
 error handling, and process management.
 """
 
-# Core components - always available
-from . import core
+import os
+
+# Core components - only import if not in test mode to avoid heavy dependencies
+if os.environ.get("VEGA_TEST_MODE") != "1":
+    from . import core
 
 # Data and ML components
 try:

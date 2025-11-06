@@ -21,27 +21,34 @@ __author__ = "Vega Development Team"
 __email__ = "dev@vega-ai.com"
 __license__ = "MIT"
 
-# Import main components
-try:
-    from .vega import core
-    from .vega import integrations
-    from .vega import datasets
-    from .vega import training
+# Lazy import main components to avoid loading heavy dependencies during test collection
+import os
 
-    CORE_MODULES_AVAILABLE = True
-except ImportError:
-    CORE_MODULES_AVAILABLE = False
+CORE_MODULES_AVAILABLE = False
+OPTIONAL_MODULES_AVAILABLE = False
 
-# Optional components
-try:
-    from .vega import voice
-    from .vega import intelligence
-    from .vega import personality
-    from .vega import user
+# Only import modules if not in test mode
+if os.environ.get("VEGA_TEST_MODE") != "1":
+    try:
+        from .vega import core
+        from .vega import integrations
+        from .vega import datasets
+        from .vega import training
 
-    OPTIONAL_MODULES_AVAILABLE = True
-except ImportError:
-    OPTIONAL_MODULES_AVAILABLE = False
+        CORE_MODULES_AVAILABLE = True
+    except ImportError:
+        pass
+
+    # Optional components
+    try:
+        from .vega import voice
+        from .vega import intelligence
+        from .vega import personality
+        from .vega import user
+
+        OPTIONAL_MODULES_AVAILABLE = True
+    except ImportError:
+        pass
 
 __all__ = [
     "__version__",

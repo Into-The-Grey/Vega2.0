@@ -33,21 +33,29 @@ from .base import (
     ValidationError,
 )
 
-# Optional dependencies with graceful fallback
-HAS_TRANSFORMERS = handle_import_error("transformers", optional=True)
-HAS_SPACY = handle_import_error("spacy", optional=True)
+# Skip heavy imports in test mode
+import os
 
-try:
-    if HAS_TRANSFORMERS:
-        from transformers import (
-            pipeline,
-            AutoTokenizer,
-            AutoModelForSequenceClassification,
-        )
-    if HAS_SPACY:
-        import spacy
-except ImportError:
+if os.environ.get("VEGA_TEST_MODE") == "1":
+    HAS_TRANSFORMERS = False
+    HAS_SPACY = False
     pipeline = AutoTokenizer = AutoModelForSequenceClassification = spacy = None
+else:
+    # Optional dependencies with graceful fallback
+    HAS_TRANSFORMERS = handle_import_error("transformers", optional=True)
+    HAS_SPACY = handle_import_error("spacy", optional=True)
+
+    try:
+        if HAS_TRANSFORMERS:
+            from transformers import (
+                pipeline,
+                AutoTokenizer,
+                AutoModelForSequenceClassification,
+            )
+        if HAS_SPACY:
+            import spacy
+    except ImportError:
+        pipeline = AutoTokenizer = AutoModelForSequenceClassification = spacy = None
 
 logger = logging.getLogger(__name__)
 
@@ -728,29 +736,6 @@ class LegalDocumentAI:
             },
         }
 
-
-import logging
-from dataclasses import dataclass, field
-from enum import Enum
-from typing import Any, Dict, List, Optional, Tuple
-import re
-import datetime
-
-try:
-    import spacy
-
-    HAS_SPACY = True
-except ImportError:
-    spacy = None
-    HAS_SPACY = False
-
-try:
-    from transformers import pipeline
-
-    HAS_TRANSFORMERS = True
-except ImportError:
-    pipeline = None
-    HAS_TRANSFORMERS = False
 
 logger = logging.getLogger(__name__)
 

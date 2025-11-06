@@ -32,26 +32,35 @@ from .base import (
     ValidationError,
 )
 
-# Optional dependencies with graceful fallback
-HAS_TRANSFORMERS = handle_import_error("transformers", optional=True)
-HAS_TREE_SITTER = handle_import_error("tree_sitter", optional=True)
+# Skip heavy imports in test mode
+import os
 
-try:
-    if HAS_TRANSFORMERS:
-        from transformers import (
-            pipeline,
-            AutoTokenizer,
-            AutoModelForSequenceClassification,
-        )
-        import torch
-except ImportError:
+if os.environ.get("VEGA_TEST_MODE") == "1":
+    HAS_TRANSFORMERS = False
+    HAS_TREE_SITTER = False
     pipeline = AutoTokenizer = AutoModelForSequenceClassification = torch = None
-
-try:
-    if HAS_TREE_SITTER:
-        from tree_sitter import Language, Parser
-except ImportError:
     Language = Parser = None
+else:
+    # Optional dependencies with graceful fallback
+    HAS_TRANSFORMERS = handle_import_error("transformers", optional=True)
+    HAS_TREE_SITTER = handle_import_error("tree_sitter", optional=True)
+
+    try:
+        if HAS_TRANSFORMERS:
+            from transformers import (
+                pipeline,
+                AutoTokenizer,
+                AutoModelForSequenceClassification,
+            )
+            import torch
+    except ImportError:
+        pipeline = AutoTokenizer = AutoModelForSequenceClassification = torch = None
+
+    try:
+        if HAS_TREE_SITTER:
+            from tree_sitter import Language, Parser
+    except ImportError:
+        Language = Parser = None
 
 logger = logging.getLogger(__name__)
 

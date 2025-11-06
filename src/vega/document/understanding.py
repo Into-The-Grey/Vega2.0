@@ -29,45 +29,58 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from pathlib import Path
 
 import numpy as np
+import os
 
-try:
-    from PIL import Image, ImageDraw, ImageFont
-    import cv2
-
-    HAS_VISION_LIBS = True
-except ImportError:
-    Image = ImageDraw = ImageFont = cv2 = None
+# Skip heavy imports in test mode
+if os.environ.get("VEGA_TEST_MODE") == "1":
     HAS_VISION_LIBS = False
-
-try:
-    import pytesseract
-
-    HAS_OCR = True
-except ImportError:
-    pytesseract = None
     HAS_OCR = False
-
-try:
-    from transformers import (
-        LayoutLMv3Processor,
-        LayoutLMv3ForTokenClassification,
-        AutoTokenizer,
-        AutoModel,
-    )
-    import torch
-
-    HAS_TRANSFORMERS = True
-except ImportError:
+    HAS_TRANSFORMERS = False
+    HAS_PANDAS = False
+    Image = ImageDraw = ImageFont = cv2 = None
+    pytesseract = None
     LayoutLMv3Processor = LayoutLMv3ForTokenClassification = None
     AutoTokenizer = AutoModel = torch = None
-    HAS_TRANSFORMERS = False
-
-try:
-    import pandas as pd
-
-    HAS_PANDAS = True
-except ImportError:
     pd = None
+else:
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+        import cv2
+
+        HAS_VISION_LIBS = True
+    except ImportError:
+        Image = ImageDraw = ImageFont = cv2 = None
+        HAS_VISION_LIBS = False
+
+    try:
+        import pytesseract
+
+        HAS_OCR = True
+    except ImportError:
+        pytesseract = None
+        HAS_OCR = False
+
+    try:
+        from transformers import (
+            LayoutLMv3Processor,
+            LayoutLMv3ForTokenClassification,
+            AutoTokenizer,
+            AutoModel,
+        )
+        import torch
+
+        HAS_TRANSFORMERS = True
+    except ImportError:
+        LayoutLMv3Processor = LayoutLMv3ForTokenClassification = None
+        AutoTokenizer = AutoModel = torch = None
+        HAS_TRANSFORMERS = False
+
+    try:
+        import pandas as pd
+
+        HAS_PANDAS = True
+    except ImportError:
+        pd = None
     HAS_PANDAS = False
 
 logger = logging.getLogger(__name__)
