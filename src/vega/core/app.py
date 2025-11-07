@@ -2430,6 +2430,226 @@ async def finance_price(
         raise HTTPException(status_code=500, detail=str(e)) from e
 
 
+# ============================================================================
+# Memory Tagging API Endpoints
+# ============================================================================
+
+
+class TagTaskRequest(BaseModel):
+    """Request model for tagging knowledge for a task"""
+
+    task_type: str
+    task_context: str
+    knowledge_item_ids: List[int]
+    relevance_score: Optional[float] = 1.0
+    success: Optional[bool] = True
+
+
+class TaskKnowledgeResponse(BaseModel):
+    """Response model for task knowledge retrieval"""
+
+    task_type: str
+    knowledge_items: List[Dict[str, Any]]
+    count: int
+
+
+@app.post("/api/memory/tag-task")
+async def tag_task_knowledge(
+    request: TagTaskRequest, x_api_key: str = Header(None, alias="X-API-Key")
+):
+    """
+    Tag knowledge items as relevant for a specific task type.
+
+    Enables Vega to remember which information was useful for particular tasks,
+    allowing faster retrieval without retraining.
+    """
+    if not require_api_key(x_api_key):
+        raise HTTPException(status_code=401, detail="Invalid API key")
+
+    try:
+        from .memory_tagging import tag_knowledge_for_task
+
+        created_count = tag_knowledge_for_task(
+            task_type=request.task_type,
+            task_context=request.task_context,
+            knowledge_item_ids=request.knowledge_item_ids,
+            relevance_score=request.relevance_score,
+            success=request.success,
+        )
+
+        return {
+            "status": "success",
+            "task_type": request.task_type,
+            "tagged_items": len(request.knowledge_item_ids),
+            "new_tags": created_count,
+            "updated_tags": len(request.knowledge_item_ids) - created_count,
+        }
+    except Exception as e:
+        logger.error(f"Error tagging task knowledge: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/memory/task-knowledge/{task_type}")
+async def get_task_knowledge_endpoint(
+    task_type: str,
+    limit: int = Query(10, ge=1, le=100),
+    min_relevance: float = Query(0.5, ge=0.0, le=1.0),
+    x_api_key: str = Header(None, alias="X-API-Key"),
+):
+    """
+    Get most relevant knowledge items for a specific task type.
+
+    Returns knowledge that was previously useful for similar tasks,
+    enabling efficient information reuse without searching from scratch.
+    """
+    if not require_api_key(x_api_key):
+        raise HTTPException(status_code=401, detail="Invalid API key")
+
+    try:
+        from .memory_tagging import get_task_knowledge
+
+        results = get_task_knowledge(
+            task_type=task_type, limit=limit, min_relevance=min_relevance
+        )
+
+        # Convert to response format
+        knowledge_items = []
+        for item, relevance in results:
+            knowledge_items.append(
+                {
+                    "id": item.id,
+                    "key": item.key,
+                    "topic": item.topic,
+                    "content": (
+                        item.content[:500] + "..."
+                        if len(item.content) > 500
+                        else item.content
+                    ),
+                    "relevance_score": round(relevance, 3),
+                    "usage_count": item.usage_count,
+                    "last_used_at": (
+                        item.last_used_at.isoformat() if item.last_used_at else None
+                    ),
+                }
+            )
+
+        return {
+            "task_type": task_type,
+            "knowledge_items": knowledge_items,
+            "count": len(knowledge_items),
+        }
+    except Exception as e:
+        logger.error(f"Error retrieving task knowledge: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/memory/search-by-tags")
+async def search_by_tags_endpoint(
+    tags: str = Query(..., description="Comma-separated list of tags"),
+    task_type: Optional[str] = Query(None),
+    limit: int = Query(20, ge=1, le=100),
+    x_api_key: str = Header(None, alias="X-API-Key"),
+):
+    """
+    Search knowledge items by tags, optionally filtered by task type.
+
+    Enables tag-based retrieval of previously useful information.
+    """
+    if not require_api_key(x_api_key):
+        raise HTTPException(status_code=401, detail="Invalid API key")
+
+    try:
+        from .memory_tagging import search_by_tags
+
+        # Parse comma-separated tags
+        tag_list = [tag.strip() for tag in tags.split(",") if tag.strip()]
+
+        results = search_by_tags(tags=tag_list, task_type=task_type, limit=limit)
+
+        # Convert to response format
+        knowledge_items = []
+        for item in results:
+            knowledge_items.append(
+                {
+                    "id": item.id,
+                    "key": item.key,
+                    "topic": item.topic,
+                    "content": (
+                        item.content[:500] + "..."
+                        if len(item.content) > 500
+                        else item.content
+                    ),
+                    "usage_count": item.usage_count,
+                    "last_used_at": (
+                        item.last_used_at.isoformat() if item.last_used_at else None
+                    ),
+                }
+            )
+
+        return {
+            "tags": tag_list,
+            "task_type": task_type,
+            "knowledge_items": knowledge_items,
+            "count": len(knowledge_items),
+        }
+    except Exception as e:
+        logger.error(f"Error searching by tags: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/memory/task-stats")
+async def get_task_stats(
+    task_type: Optional[str] = Query(None),
+    x_api_key: str = Header(None, alias="X-API-Key"),
+):
+    """
+    Get statistics about task memory usage.
+
+    Shows how memory indexing is being used across different task types.
+    """
+    if not require_api_key(x_api_key):
+        raise HTTPException(status_code=401, detail="Invalid API key")
+
+    try:
+        from .memory_tagging import get_task_statistics
+
+        stats = get_task_statistics(task_type=task_type)
+        return stats
+    except Exception as e:
+        logger.error(f"Error retrieving task statistics: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/memory/detect-task")
+async def detect_task_type_endpoint(
+    prompt: str,
+    method: str = Query("heuristic", regex="^(heuristic|llm|hybrid)$"),
+    x_api_key: str = Header(None, alias="X-API-Key"),
+):
+    """
+    Detect the task type from a prompt.
+
+    Helps classify what kind of task the user is asking about,
+    enabling automatic retrieval of relevant knowledge.
+    """
+    if not require_api_key(x_api_key):
+        raise HTTPException(status_code=401, detail="Invalid API key")
+
+    try:
+        from .memory_tagging import detect_task_type
+
+        task_type = detect_task_type(prompt, method=method)
+
+        return {
+            "prompt": prompt[:100] + "..." if len(prompt) > 100 else prompt,
+            "detected_task_type": task_type,
+            "detection_method": method,
+        }
+    except Exception as e:
+        logger.error(f"Error detecting task type: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 # Root endpoint
 @app.get("/")
 async def index():
@@ -2442,6 +2662,7 @@ async def index():
         <p><a href="/static/index.html">Advanced Control Panel</a></p>
         <p><a href="/healthz">Health Check</a></p>
         <p><a href="/metrics">Metrics</a></p>
+        <p><a href="/api/memory/task-stats">Memory Statistics</a></p>
       </body>
     </html>
     """
