@@ -95,14 +95,15 @@ class TaskType:
 TASK_PATTERNS = {
     TaskType.CODE_REVIEW: [
         r"\breview\s+(?:this|the|my)\s+code\b",
-        r"\bcheck\s+(?:this|the|my)\s+code\b",
+        r"\bcheck\s+(?:this|the|my)\s+(?:code|implementation)\b",
         r"\blook\s+at\s+(?:this|the|my)\s+code\b",
         r"\bcode\s+review\b",
         r"\bis\s+this\s+code\s+(?:good|correct|right)\b",
     ],
     TaskType.DEBUGGING: [
         r"\b(?:debug|fix|solve|resolve)\b",
-        r"\berror\b.*\b(?:how|why|what)\b",
+        r"\berror\b.*\b(?:how|why|what|in)\b",
+        r"\bgetting\s+an?\s+error\b",
         r"\b(?:issue|problem|bug)\b",
         r"\bnot\s+working\b",
         r"\bfailing\b",
@@ -120,11 +121,12 @@ TASK_PATTERNS = {
     ],
     TaskType.REFACTORING: [
         r"\brefactor\b",
-        r"\bimprove\s+(?:this|the)\s+code\b",
+        r"\bimprove\s+(?:this|the)?\s*(?:code|implementation)\b",
         r"\bclean\s+up\b",
         r"\breorganize\b",
         r"\brestructure\b",
         r"\boptimize\s+structure\b",
+        r"\bhow\s+(?:can|do)\s+I\s+improve\b",
     ],
     TaskType.FEATURE_IMPLEMENTATION: [
         r"\b(?:implement|add|create)\s+(?:a|an|the)?\s*(?:new\s+)?feature\b",

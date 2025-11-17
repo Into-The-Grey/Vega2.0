@@ -3,7 +3,7 @@
 FastAPI application for Vega2.0 - Clean Implementation
 """
 
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 import uuid
 from datetime import datetime
 import asyncio
@@ -2455,7 +2455,7 @@ class TaskKnowledgeResponse(BaseModel):
 
 @app.post("/api/memory/tag-task")
 async def tag_task_knowledge(
-    request: TagTaskRequest, x_api_key: str = Header(None, alias="X-API-Key")
+    request: TagTaskRequest, x_api_key: str | None = Header(None, alias="X-API-Key")
 ):
     """
     Tag knowledge items as relevant for a specific task type.
@@ -2463,8 +2463,7 @@ async def tag_task_knowledge(
     Enables Vega to remember which information was useful for particular tasks,
     allowing faster retrieval without retraining.
     """
-    if not require_api_key(x_api_key):
-        raise HTTPException(status_code=401, detail="Invalid API key")
+    require_api_key(x_api_key)
 
     try:
         from .memory_tagging import tag_knowledge_for_task
@@ -2494,7 +2493,7 @@ async def get_task_knowledge_endpoint(
     task_type: str,
     limit: int = Query(10, ge=1, le=100),
     min_relevance: float = Query(0.5, ge=0.0, le=1.0),
-    x_api_key: str = Header(None, alias="X-API-Key"),
+    x_api_key: str | None = Header(None, alias="X-API-Key"),
 ):
     """
     Get most relevant knowledge items for a specific task type.
@@ -2502,8 +2501,7 @@ async def get_task_knowledge_endpoint(
     Returns knowledge that was previously useful for similar tasks,
     enabling efficient information reuse without searching from scratch.
     """
-    if not require_api_key(x_api_key):
-        raise HTTPException(status_code=401, detail="Invalid API key")
+    require_api_key(x_api_key)
 
     try:
         from .memory_tagging import get_task_knowledge
@@ -2548,15 +2546,14 @@ async def search_by_tags_endpoint(
     tags: str = Query(..., description="Comma-separated list of tags"),
     task_type: Optional[str] = Query(None),
     limit: int = Query(20, ge=1, le=100),
-    x_api_key: str = Header(None, alias="X-API-Key"),
+    x_api_key: str | None = Header(None, alias="X-API-Key"),
 ):
     """
     Search knowledge items by tags, optionally filtered by task type.
 
     Enables tag-based retrieval of previously useful information.
     """
-    if not require_api_key(x_api_key):
-        raise HTTPException(status_code=401, detail="Invalid API key")
+    require_api_key(x_api_key)
 
     try:
         from .memory_tagging import search_by_tags
@@ -2600,15 +2597,14 @@ async def search_by_tags_endpoint(
 @app.get("/api/memory/task-stats")
 async def get_task_stats(
     task_type: Optional[str] = Query(None),
-    x_api_key: str = Header(None, alias="X-API-Key"),
+    x_api_key: str | None = Header(None, alias="X-API-Key"),
 ):
     """
     Get statistics about task memory usage.
 
     Shows how memory indexing is being used across different task types.
     """
-    if not require_api_key(x_api_key):
-        raise HTTPException(status_code=401, detail="Invalid API key")
+    require_api_key(x_api_key)
 
     try:
         from .memory_tagging import get_task_statistics
@@ -2624,7 +2620,7 @@ async def get_task_stats(
 async def detect_task_type_endpoint(
     prompt: str,
     method: str = Query("heuristic", regex="^(heuristic|llm|hybrid)$"),
-    x_api_key: str = Header(None, alias="X-API-Key"),
+    x_api_key: str | None = Header(None, alias="X-API-Key"),
 ):
     """
     Detect the task type from a prompt.
@@ -2632,8 +2628,7 @@ async def detect_task_type_endpoint(
     Helps classify what kind of task the user is asking about,
     enabling automatic retrieval of relevant knowledge.
     """
-    if not require_api_key(x_api_key):
-        raise HTTPException(status_code=401, detail="Invalid API key")
+    require_api_key(x_api_key)
 
     try:
         from .memory_tagging import detect_task_type
