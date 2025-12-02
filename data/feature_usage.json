@@ -1,0 +1,12 @@
+{
+  "counts": {
+    "tracked_feature": 18,
+    "low_usage": 6,
+    "high_usage": 36
+  },
+  "last_used": {
+    "tracked_feature": "2025-12-02T03:23:37.140548",
+    "low_usage": "2025-12-02T03:23:37.147609",
+    "high_usage": "2025-12-02T03:23:37.147649"
+  }
+}

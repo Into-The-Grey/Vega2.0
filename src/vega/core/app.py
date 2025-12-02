@@ -24,7 +24,7 @@ try:
 
     tools_path = Path(__file__).parent.parent.parent.parent / "tools"
     sys.path.insert(0, str(tools_path))
-    from utils.commands_generator import (
+    from utils.commands_generator import (  # type: ignore[import]
         generate_commands_markdown,
         generate_commands_html,
     )
@@ -167,18 +167,93 @@ _metrics = {
 }
 
 
+# Global resilient startup manager instance
+_startup_manager = None
+
+
+def get_startup_manager():
+    """Get the global startup manager instance"""
+    global _startup_manager
+    return _startup_manager
+
+
 # Startup and shutdown events
 @app.on_event("startup")
 async def startup_event():
-    """Initialize resources and start background processes on app startup"""
+    """Initialize resources and start background processes on app startup using resilient startup system"""
+    global _startup_manager
 
     print("=" * 80)
-    print("🚀 Vega2.0 Startup Sequence")
+    print("🚀 Vega2.0 Resilient Startup Sequence")
     print("=" * 80)
+
+    # Initialize the resilient startup manager
+    try:
+        from .resilient_startup import SimplifiedStartupManager  # type: ignore[import]
+        from .startup_features import register_all_features  # type: ignore[import]
+
+        _startup_manager = SimplifiedStartupManager()
+
+        # Register all features with the startup manager
+        register_all_features(_startup_manager)
+
+        print("\n🛡️  Resilient startup system initialized")
+        print("   - Self-healing enabled for non-critical features")
+        print("   - Background repair queue active\n")
+
+        # Run the startup sequence (critical features must succeed, others can fail gracefully)
+        startup_success = await _startup_manager.startup_sequence()
+
+        if startup_success:
+            print("\n✅ Core system startup completed successfully")
+        else:
+            print("\n⚠️  Core startup completed with some features pending repair")
+
+        # Print startup summary
+        summary = _startup_manager.get_status_summary()
+
+        healthy_count = len(summary.get("healthy_features", []))
+        degraded_count = len(summary.get("degraded_features", []))
+        failed_count = len(summary.get("failed_features", []))
+
+        print(f"\n📊 Startup Status:")
+        print(f"   ✅ Healthy features: {healthy_count}")
+        if degraded_count > 0:
+            print(f"   ⚠️  Degraded features: {degraded_count} (repair in progress)")
+        if failed_count > 0:
+            print(f"   ❌ Failed features: {failed_count} (will retry)")
+
+    except ImportError as e:
+        # Fallback to legacy startup if resilient startup not available
+        logger.warning(f"Resilient startup not available, using legacy startup: {e}")
+        print("⚠️  Resilient startup not available, using legacy startup\n")
+        await _legacy_startup()
+        return
+    except Exception as e:
+        logger.error(f"Resilient startup manager failed: {e}")
+        print(f"❌ Resilient startup failed: {e}")
+        print("   Falling back to legacy startup...\n")
+        await _legacy_startup()
+        return
+
+    # Legacy process management (if not handled by resilient startup)
+    if PROCESS_MANAGEMENT_AVAILABLE:
+        try:
+            print("✅ Background process management available")
+        except Exception as e:
+            print(f"⚠️  Could not initialize background processes: {e}")
+
+    print("\n🌌 VEGA SYSTEM ONLINE - RESILIENT MODE ACTIVE")
+    print("   Self-healing background repairs enabled")
+    print("=" * 80 + "\n")
+
+
+async def _legacy_startup():
+    """Legacy startup sequence as fallback"""
 
     # 1. Validate configuration first (fail fast)
     try:
-        from .config_validator import validate_startup_config
+        from .config_validator import validate_startup_config  # type: ignore[import]
 
         print("\n📋 Validating configuration...")
         is_valid = validate_startup_config()
@@ -187,7 +262,6 @@ async def startup_event():
             print("\n❌ CRITICAL: Configuration validation failed!")
             print("   Please fix configuration errors before starting the server.")
             print("   See error messages above for details.\n")
-            # Allow server to start but log warnings
         else:
             print("✅ Configuration validation passed\n")
     except Exception as e:
@@ -197,7 +271,7 @@ async def startup_event():
     # 2. Configure correlation ID logging for distributed tracing
     if CORRELATION_AVAILABLE:
         try:
-            from .correlation import configure_correlation_logging
+            from .correlation import configure_correlation_logging  # type: ignore[import]
 
             configure_correlation_logging()
             logger.info("✓ Correlation ID tracing enabled")
@@ -218,7 +292,7 @@ async def startup_event():
 
     # 4. Initialize database profiler
     try:
-        from .db_profiler import get_profiler
+        from .db_profiler import get_profiler  # type: ignore[import]
 
         profiler = get_profiler()
         profiler.enabled = True
@@ -231,7 +305,7 @@ async def startup_event():
 
     # 5. Start persistent mode memory manager
     try:
-        from .memory_manager import start_memory_manager
+        from .memory_manager import start_memory_manager  # type: ignore[import]
 
         await start_memory_manager()
         logger.info("Memory manager started (persistent mode)")
@@ -243,48 +317,36 @@ async def startup_event():
     # 6. Background process management
     if PROCESS_MANAGEMENT_AVAILABLE:
         try:
-            # Start background processes (optional, can be managed separately)
-            # await start_background_processes()
             print("✅ Background process management available")
         except Exception as e:
             print(f"⚠️  Could not start background processes: {e}")
 
-    # 7. Optional retention purge on startup (disabled for persistent mode)
-    # In persistent mode, memory manager handles cleanup automatically
-    # Uncomment this if you want aggressive cleanup on startup
-    # try:
-    #     from .config import get_config as _get_cfg  # type: ignore
-    #     from .db import purge_old, vacuum_db  # type: ignore
-    #
-    #     _cfg = _get_cfg()
-    #     days = int(getattr(_cfg, "retention_days", 0) or 0)
-    #     if days > 0:
-    #         deleted = purge_old(days)
-    #         if deleted > 0:
-    #             try:
-    #                 vacuum_db()
-    #             except Exception:
-    #                 pass
-    #         logger.info(
-    #             "Retention purge completed", extra={"days": days, "deleted": deleted}
-    #         )
-    # except Exception:
-    #     pass
-
-    print("\n🌌 VEGA SYSTEM ONLINE - PERSISTENT MODE ACTIVE")
+    print("\n🌌 VEGA SYSTEM ONLINE - LEGACY MODE")
     print("=" * 80 + "\n")
 
 
 @app.on_event("shutdown")
 async def shutdown_event():
     """Gracefully shutdown all resources and background processes"""
+    global _startup_manager
+
     print("\n" + "=" * 80)
     print("🛑 Vega2.0 Shutdown Sequence")
     print("=" * 80 + "\n")
 
-    # Shutdown memory manager first
+    # Shutdown resilient startup manager first (stops background repairs)
+    if _startup_manager is not None:
+        try:
+            await _startup_manager.shutdown()
+            logger.info("Resilient startup manager stopped")
+            print("✅ Resilient startup manager stopped (background repairs halted)")
+        except Exception as e:
+            logger.warning(f"Resilient startup manager shutdown failed: {e}")
+            print(f"⚠️  Resilient startup manager shutdown failed: {e}")
+
+    # Shutdown memory manager
     try:
-        from .memory_manager import stop_memory_manager
+        from .memory_manager import stop_memory_manager  # type: ignore[import]
 
         await stop_memory_manager()
         logger.info("Memory manager stopped")
@@ -354,9 +416,162 @@ async def readyz():
         # If get_history raises, consider the service unhealthy
         _ = get_history()
         return {"ready": True}
-    except Exception:
+    except Exception as exc:
         # Return an HTTP 503 to indicate readiness failure
-        raise HTTPException(status_code=503, detail="Service not ready")
+        raise HTTPException(status_code=503, detail="Service not ready") from exc
+
+
+# ============================================================================
+# Resilient Startup Management Endpoints
+# ============================================================================
+
+
+@app.get("/system/startup/status")
+async def get_startup_status():
+    """Get the current status of all startup features and the self-healing system."""
+    manager = get_startup_manager()
+    if manager is None:
+        return {
+            "mode": "legacy",
+            "message": "Resilient startup manager not available",
+            "timestamp": datetime.utcnow().isoformat(),
+        }
+
+    summary = manager.get_status_summary()
+    return {"mode": "resilient", "timestamp": datetime.utcnow().isoformat(), **summary}
+
+
+@app.get("/system/startup/features")
+async def get_startup_features():
+    """Get detailed information about all registered startup features."""
+    manager = get_startup_manager()
+    if manager is None:
+        return {"error": "Resilient startup manager not available"}
+
+    features = []
+    for name, feature in manager.features.items():
+        status = manager.feature_status.get(name, {})
+        features.append(
+            {
+                "name": name,
+                "category": feature.category.value,
+                "status": status.get("status", "unknown"),
+                "healthy": status.get("healthy", False),
+                "error": status.get("error"),
+                "last_health_check": status.get("last_health_check"),
+                "repair_attempts": status.get("repair_attempts", 0),
+                "usage_count": manager.feature_usage.get(name, 0),
+                "is_critical": feature.category.value == "critical",
+            }
+        )
+
+    return {"features": features, "timestamp": datetime.utcnow().isoformat()}
+
+
+@app.get("/system/startup/repairs")
+async def get_repair_status():
+    """Get information about the background repair system."""
+    manager = get_startup_manager()
+    if manager is None:
+        return {"error": "Resilient startup manager not available"}
+
+    return {
+        "is_running": manager.is_running,
+        "repair_queue_size": (
+            manager.repair_queue.qsize() if manager.repair_queue else 0
+        ),
+        "pending_repairs": list(manager.pending_repairs),
+        "knowledge_base_size": len(manager.repair_knowledge_base),
+        "timestamp": datetime.utcnow().isoformat(),
+    }
+
+
+@app.post("/system/startup/repair/{feature_name}")
+async def trigger_feature_repair(feature_name: str):
+    """Manually trigger a repair attempt for a specific feature."""
+    manager = get_startup_manager()
+    if manager is None:
+        raise HTTPException(
+            status_code=503, detail="Resilient startup manager not available"
+        )
+
+    if feature_name not in manager.features:
+        raise HTTPException(
+            status_code=404, detail=f"Feature '{feature_name}' not found"
+        )
+
+    # Queue the feature for repair
+    await manager.queue_repair(feature_name)
+
+    return {
+        "message": f"Repair queued for feature '{feature_name}'",
+        "timestamp": datetime.utcnow().isoformat(),
+    }
+
+
+@app.post("/system/startup/reinitialize/{feature_name}")
+async def reinitialize_feature(feature_name: str):
+    """Attempt to reinitialize a specific feature immediately."""
+    manager = get_startup_manager()
+    if manager is None:
+        raise HTTPException(
+            status_code=503, detail="Resilient startup manager not available"
+        )
+
+    if feature_name not in manager.features:
+        raise HTTPException(
+            status_code=404, detail=f"Feature '{feature_name}' not found"
+        )
+
+    feature = manager.features[feature_name]
+    success = await manager._init_feature(feature)
+
+    return {
+        "feature": feature_name,
+        "success": success,
+        "status": manager.feature_status.get(feature_name, {}),
+        "timestamp": datetime.utcnow().isoformat(),
+    }
+
+
+@app.get("/system/startup/knowledge-base")
+async def get_repair_knowledge_base():
+    """Get the repair knowledge base (successful repair strategies)."""
+    manager = get_startup_manager()
+    if manager is None:
+        return {"error": "Resilient startup manager not available"}
+
+    return {
+        "knowledge_base": manager.repair_knowledge_base,
+        "total_entries": len(manager.repair_knowledge_base),
+        "timestamp": datetime.utcnow().isoformat(),
+    }
+
+
+@app.post("/system/startup/health-check")
+async def run_health_checks():
+    """Run health checks on all features and return results."""
+    manager = get_startup_manager()
+    if manager is None:
+        raise HTTPException(
+            status_code=503, detail="Resilient startup manager not available"
+        )
+
+    results = {}
+    for name, feature in manager.features.items():
+        if feature.health_check_func:
+            try:
+                is_healthy = await feature.health_check_func()
+                results[name] = {"healthy": is_healthy}
+            except Exception as e:
+                results[name] = {"healthy": False, "error": str(e)}
+        else:
+            results[name] = {"healthy": None, "note": "No health check defined"}
+
+    return {"health_check_results": results, "timestamp": datetime.utcnow().isoformat()}
+
+
+# ============================================================================
 
 
 # --- Minimal config/auth and db/llm shims (for tests to patch) ---
@@ -423,9 +638,7 @@ except Exception:
 try:
     from .db import log_conversation as _real_log_conversation  # type: ignore
 
-    def log_conversation(prompt: str, response: str, session_id: str | None = None):
-        return _real_log_conversation(prompt, response, session_id)  # type: ignore
-
+    log_conversation = _real_log_conversation  # type: ignore
 except Exception:
     pass
 
@@ -446,10 +659,10 @@ def set_feedback(
 
 from fastapi import Response
 from fastapi.responses import StreamingResponse
-from .logging_setup import VegaLogger  # exposed for patching in tests
+from .logging_setup import VegaLogger  # type: ignore[import]  # exposed for patching in tests
 
 # VegaLogger already defined above, no need to re-assign
-from .config_manager import config_manager  # exposed for patching in tests
+from .config_manager import config_manager  # type: ignore[import]  # exposed for patching in tests
 
 
 @app.get("/docs/commands.md")
@@ -512,7 +725,7 @@ def metrics_endpoint():
 
     # Persistent mode: Include memory manager stats
     try:
-        from .memory_manager import get_memory_manager
+        from .memory_manager import get_memory_manager  # type: ignore[import]
 
         manager = get_memory_manager()
         payload["memory_manager"] = manager.get_stats()
@@ -700,10 +913,10 @@ def _sanitize_input(text: str) -> str:
     # Limit length
     max_length = 10000  # Default, will use config if available
     try:
-        from .config import get_config
+        from .config import get_config  # type: ignore[import]
 
         max_length = get_config().max_prompt_chars
-    except:
+    except Exception:
         pass
 
     if len(text) > max_length:
@@ -727,15 +940,15 @@ async def chat(
         raise HTTPException(status_code=400, detail="Empty or invalid prompt")
 
     try:
-        from .llm import LLMBackendError  # type: ignore
-        from .db import (
+        from .llm import LLMBackendError  # type: ignore[import]
+        from .db import (  # type: ignore[import]
             get_persistent_session_id,
             get_recent_context,
             get_conversation_summary,
             set_memory_fact,
             get_memory_facts,
-        )  # type: ignore
-        from .config import get_config as get_cfg  # type: ignore
+        )
+        from .config import get_config as get_cfg  # type: ignore[import]
     except Exception:
 
         class LLMBackendError(Exception):
@@ -930,8 +1143,8 @@ async def hass_webhook(
     require_api_key(x_api_key)
 
     try:
-        from .config import get_config as get_cfg
-        from ..integrations.homeassistant import (
+        from .config import get_config as get_cfg  # type: ignore[import]
+        from ..integrations.homeassistant import (  # type: ignore[import]
             HomeAssistantClient,
             VegaHomeAssistantBridge,
             parse_ha_webhook_payload,
@@ -958,7 +1171,7 @@ async def hass_webhook(
 
     try:
         # Import HAVoiceDevice enum for type conversion
-        from ..integrations.homeassistant import HAVoiceDevice
+        from ..integrations.homeassistant import HAVoiceDevice  # type: ignore[import]
 
         # Convert device_type string to enum
         try:
@@ -983,8 +1196,8 @@ async def hass_webhook(
         # Create async chat callback
         async def vega_chat_callback(prompt: str, session_id: Optional[str] = None):
             """Call Vega's chat endpoint internally"""
-            from .llm import query_llm as llm_query
-            from .db import get_persistent_session_id, get_recent_context
+            from .llm import query_llm as llm_query  # type: ignore[import]
+            from .db import get_persistent_session_id, get_recent_context  # type: ignore[import]
 
             if not session_id:
                 session_id = get_persistent_session_id()
@@ -1052,8 +1265,8 @@ async def hass_status(
     require_api_key(x_api_key)
 
     try:
-        from .config import get_config as get_cfg
-        from ..integrations.homeassistant import test_ha_connection
+        from .config import get_config as get_cfg  # type: ignore[import]
+        from ..integrations.homeassistant import test_ha_connection  # type: ignore[import]
     except ImportError:
         return {
             "enabled": False,
@@ -1135,7 +1348,7 @@ async def proactive_propose(
         import sys
 
         sys.path.append("/home/ncacord/Vega2.0")
-        from vega_state.proactive_conversation import propose_initiation
+        from vega_state.proactive_conversation import propose_initiation  # type: ignore[import]
 
         prop = propose_initiation(max_per_day=req.max_per_day)
         if not prop:
@@ -1163,7 +1376,7 @@ async def proactive_pending(
         import sys
 
         sys.path.append("/home/ncacord/Vega2.0")
-        from vega_state.proactive_conversation import list_pending
+        from vega_state.proactive_conversation import list_pending  # type: ignore[import]
 
         return {"pending": list_pending()}
     except Exception as e:
@@ -1181,7 +1394,7 @@ async def proactive_accept(
         import sys
 
         sys.path.append("/home/ncacord/Vega2.0")
-        from vega_state.proactive_conversation import accept_initiation
+        from vega_state.proactive_conversation import accept_initiation  # type: ignore[import]
 
         sid = accept_initiation(proposed_id)
         if not sid:
@@ -1204,7 +1417,7 @@ async def proactive_decline(
         import sys
 
         sys.path.append("/home/ncacord/Vega2.0")
-        from vega_state.proactive_conversation import decline_initiation
+        from vega_state.proactive_conversation import decline_initiation  # type: ignore[import]
 
         ok = decline_initiation(proposed_id)
         return {"ok": bool(ok)}
@@ -1223,7 +1436,7 @@ async def proactive_send(
         import sys
 
         sys.path.append("/home/ncacord/Vega2.0")
-        from vega_state.proactive_conversation import send_in_session
+        from vega_state.proactive_conversation import send_in_session  # type: ignore[import]
 
         # Support both async and sync implementations for tests
         result = send_in_session(body.session_id, body.text)
@@ -1248,7 +1461,7 @@ async def proactive_get_session(
         import sys
 
         sys.path.append("/home/ncacord/Vega2.0")
-        from vega_state.proactive_conversation import get_session
+        from vega_state.proactive_conversation import get_session  # type: ignore[import]
 
         s = get_session(session_id)
         if not s:
@@ -1308,7 +1521,7 @@ async def proactive_end(
         import sys
 
         sys.path.append("/home/ncacord/Vega2.0")
-        from vega_state.proactive_conversation import end_session
+        from vega_state.proactive_conversation import end_session  # type: ignore[import]
 
         ok = end_session(session_id)
         return {"ok": bool(ok)}
@@ -1322,7 +1535,7 @@ async def admin_logs_list(
     x_api_key: str | None = Header(default=None, alias="X-API-Key")
 ):
     require_api_key(x_api_key)
-    from .logging_setup import VegaLogger
+    from .logging_setup import VegaLogger  # type: ignore[import]
 
     return {
         "modules": (
@@ -1338,7 +1551,7 @@ async def admin_logs_tail(
     x_api_key: str | None = Header(default=None, alias="X-API-Key"),
 ):
     require_api_key(x_api_key)
-    from .logging_setup import VegaLogger
+    from .logging_setup import VegaLogger  # type: ignore[import]
 
     lines_list = VegaLogger.tail_log(module, lines)
     return {"module": module, "lines": lines_list, "total_lines": len(lines_list)}
@@ -1349,7 +1562,7 @@ async def admin_config_list(
     x_api_key: str | None = Header(default=None, alias="X-API-Key")
 ):
     require_api_key(x_api_key)
-    from .config_manager import config_manager as config_manager
+    from .config_manager import config_manager  # type: ignore[import]
 
     return {
         "modules": (
@@ -1378,7 +1591,7 @@ async def admin_resources_health(
     require_api_key(x_api_key)
 
     try:
-        from .resource_manager import get_resource_manager
+        from .resource_manager import get_resource_manager  # type: ignore[import]
 
         manager = await get_resource_manager()
         health = await manager.health_check()
@@ -1408,7 +1621,7 @@ async def admin_resources_stats(
 
     # Get resource manager stats
     try:
-        from .resource_manager import get_resource_manager
+        from .resource_manager import get_resource_manager  # type: ignore[import]
 
         manager = await get_resource_manager()
         resource_stats = manager.get_stats()
@@ -1450,7 +1663,7 @@ async def admin_resources_stats(
 
     # Get config cache stats
     try:
-        from .config_cache import get_cache_stats
+        from .config_cache import get_cache_stats  # type: ignore[import]
 
         cache_stats = get_cache_stats()
 
@@ -1477,7 +1690,7 @@ async def admin_resources_invalidate_cache(
     require_api_key(x_api_key)
 
     try:
-        from .config_cache import invalidate_config_cache
+        from .config_cache import invalidate_config_cache  # type: ignore[import]
 
         invalidate_config_cache()
 
@@ -1488,7 +1701,9 @@ async def admin_resources_invalidate_cache(
         }
     except Exception as e:
         logger.error(f"Failed to invalidate config cache: {e}")
-        raise HTTPException(status_code=500, detail=f"Cache invalidation failed: {e}")
+        raise HTTPException(
+            status_code=500, detail=f"Cache invalidation failed: {e}"
+        ) from e
 
 
 @app.get("/admin/resources/pools")
@@ -1504,7 +1719,7 @@ async def admin_resources_pools(
     require_api_key(x_api_key)
 
     try:
-        from .resource_manager import get_resource_manager
+        from .resource_manager import get_resource_manager  # type: ignore[import]
 
         manager = await get_resource_manager()
         pool_metrics = manager.get_pool_metrics()
@@ -1515,7 +1730,9 @@ async def admin_resources_pools(
         return pool_metrics
     except Exception as e:
         logger.error(f"Failed to get connection pool metrics: {e}")
-        raise HTTPException(status_code=500, detail=f"Pool metrics unavailable: {e}")
+        raise HTTPException(
+            status_code=500, detail=f"Pool metrics unavailable: {e}"
+        ) from e
 
 
 @app.get("/admin/llm/behavior")
@@ -1622,7 +1839,7 @@ async def admin_database_stats(
     require_api_key(x_api_key)
 
     try:
-        from .db_profiler import (
+        from .db_profiler import (  # type: ignore[import]
             get_profiler,
             get_connection_pool_stats,
             get_database_stats,
@@ -1640,7 +1857,9 @@ async def admin_database_stats(
         }
     except Exception as e:
         logger.error(f"Failed to get database stats: {e}")
-        raise HTTPException(status_code=500, detail=f"Database stats unavailable: {e}")
+        raise HTTPException(
+            status_code=500, detail=f"Database stats unavailable: {e}"
+        ) from e
 
 
 @app.post("/admin/database/reset-stats")
@@ -1651,7 +1870,7 @@ async def admin_database_reset_stats(
     require_api_key(x_api_key)
 
     try:
-        from .db_profiler import get_profiler
+        from .db_profiler import get_profiler  # type: ignore[import]
 
         profiler = get_profiler()
         profiler.reset_stats()
@@ -1663,7 +1882,7 @@ async def admin_database_reset_stats(
         }
     except Exception as e:
         logger.error(f"Failed to reset database stats: {e}")
-        raise HTTPException(status_code=500, detail=f"Reset failed: {e}")
+        raise HTTPException(status_code=500, detail=f"Reset failed: {e}") from e
 
 
 @app.get("/admin/integrations/health")
@@ -1689,13 +1908,13 @@ async def admin_integrations_health(
     require_api_key(x_api_key)
 
     try:
-        from .integration_health import check_all_integrations
+        from .integration_health import check_all_integrations  # type: ignore[import]
 
         results = await check_all_integrations(timeout=timeout)
         return results
     except Exception as e:
         logger.error(f"Failed to check integration health: {e}")
-        raise HTTPException(status_code=500, detail=f"Health check failed: {e}")
+        raise HTTPException(status_code=500, detail=f"Health check failed: {e}") from e
 
 
 @app.get("/admin/diagnostics/system")
@@ -1718,13 +1937,15 @@ async def admin_diagnostics_system(
     require_api_key(x_api_key)
 
     try:
-        from .system_diagnostics import get_full_diagnostics
+        from .system_diagnostics import get_full_diagnostics  # type: ignore[import]
 
         diagnostics = await get_full_diagnostics()
         return diagnostics
     except Exception as e:
         logger.error(f"Failed to get system diagnostics: {e}")
-        raise HTTPException(status_code=500, detail=f"Diagnostics unavailable: {e}")
+        raise HTTPException(
+            status_code=500, detail=f"Diagnostics unavailable: {e}"
+        ) from e
 
 
 @app.get("/admin/diagnostics/health-summary")
@@ -1735,7 +1956,7 @@ async def admin_diagnostics_health_summary(
     require_api_key(x_api_key)
 
     try:
-        from .system_diagnostics import get_health_summary
+        from .system_diagnostics import get_health_summary  # type: ignore[import]
 
         health_status = get_health_summary()
 
@@ -1745,7 +1966,9 @@ async def admin_diagnostics_health_summary(
         }
     except Exception as e:
         logger.error(f"Failed to get health summary: {e}")
-        raise HTTPException(status_code=500, detail=f"Health summary unavailable: {e}")
+        raise HTTPException(
+            status_code=500, detail=f"Health summary unavailable: {e}"
+        ) from e
 
 
 @app.get("/admin/metrics/comprehensive")
@@ -1771,7 +1994,7 @@ async def admin_metrics_comprehensive(
     require_api_key(x_api_key)
 
     try:
-        from .metrics_aggregator import get_metrics_aggregator
+        from .metrics_aggregator import get_metrics_aggregator  # type: ignore[import]
 
         aggregator = await get_metrics_aggregator()
         snapshot = await aggregator.collect_metrics()
@@ -1801,7 +2024,9 @@ async def admin_metrics_comprehensive(
         }
     except Exception as e:
         logger.error(f"Failed to collect comprehensive metrics: {e}")
-        raise HTTPException(status_code=500, detail=f"Metrics collection failed: {e}")
+        raise HTTPException(
+            status_code=500, detail=f"Metrics collection failed: {e}"
+        ) from e
 
 
 @app.get("/admin/metrics/summary")
@@ -1812,7 +2037,7 @@ async def admin_metrics_summary(
     require_api_key(x_api_key)
 
     try:
-        from .metrics_aggregator import get_metrics_aggregator
+        from .metrics_aggregator import get_metrics_aggregator  # type: ignore[import]
 
         aggregator = await get_metrics_aggregator()
         summary = aggregator.get_metrics_summary()
@@ -1820,7 +2045,9 @@ async def admin_metrics_summary(
         return summary
     except Exception as e:
         logger.error(f"Failed to get metrics summary: {e}")
-        raise HTTPException(status_code=500, detail=f"Metrics summary unavailable: {e}")
+        raise HTTPException(
+            status_code=500, detail=f"Metrics summary unavailable: {e}"
+        ) from e
 
 
 @app.get("/admin/metrics/trends/{metric_path}")
@@ -1840,7 +2067,7 @@ async def admin_metrics_trends(
     require_api_key(x_api_key)
 
     try:
-        from .metrics_aggregator import get_metrics_aggregator
+        from .metrics_aggregator import get_metrics_aggregator  # type: ignore[import]
 
         aggregator = await get_metrics_aggregator()
         trends = aggregator.get_trends(metric_path, samples)
@@ -1853,7 +2080,9 @@ async def admin_metrics_trends(
         }
     except Exception as e:
         logger.error(f"Failed to get metric trends: {e}")
-        raise HTTPException(status_code=500, detail=f"Trend data unavailable: {e}")
+        raise HTTPException(
+            status_code=500, detail=f"Trend data unavailable: {e}"
+        ) from e
 
 
 @app.get("/admin/config/validate")
@@ -1872,8 +2101,8 @@ async def admin_config_validate(
     require_api_key(x_api_key)
 
     try:
-        from .config_validator import ConfigValidator
-        from .config import get_config
+        from .config_validator import ConfigValidator  # type: ignore[import]
+        from .config import get_config  # type: ignore[import]
 
         config = get_config()
         validator = ConfigValidator()
@@ -1882,7 +2111,7 @@ async def admin_config_validate(
         return summary
     except Exception as e:
         logger.error(f"Failed to validate config: {e}")
-        raise HTTPException(status_code=500, detail=f"Validation failed: {e}")
+        raise HTTPException(status_code=500, detail=f"Validation failed: {e}") from e
 
 
 @app.post("/admin/processes/start")
@@ -1966,7 +2195,7 @@ async def admin_recovery_stats(
         return {"error": "Error handling not available"}
 
     try:
-        from .recovery_manager import get_recovery_manager
+        from .recovery_manager import get_recovery_manager  # type: ignore[import]
 
         recovery_manager = get_recovery_manager()
         stats = recovery_manager.get_recovery_stats()
@@ -1986,7 +2215,7 @@ async def admin_recovery_clear_history(
         return {"error": "Error handling not available"}
 
     try:
-        from .recovery_manager import get_recovery_manager
+        from .recovery_manager import get_recovery_manager  # type: ignore[import]
 
         recovery_manager = get_recovery_manager()
         recovery_manager.clear_history()
@@ -2144,7 +2373,7 @@ async def admin_ecc_verify_signature(
         if not data or not signature_data:
             return {"error": "data and signature are required"}
 
-        from .ecc_crypto import ECCSignature
+        from .ecc_crypto import ECCSignature  # type: ignore[import]
         from datetime import datetime
 
         signature = ECCSignature(
@@ -2229,7 +2458,7 @@ async def backup_create(
         import sys
 
         sys.path.append("/home/ncacord/Vega2.0")
-        from vega_state.backup_manager import create_backup
+        from vega_state.backup_manager import create_backup  # type: ignore[import]
 
         backup_path = create_backup(tag)
         return {"success": True, "backup_path": backup_path}
@@ -2245,7 +2474,7 @@ async def backup_list(x_api_key: str | None = Header(default=None, alias="X-API-
         import sys
 
         sys.path.append("/home/ncacord/Vega2.0")
-        from vega_state.backup_manager import list_backups
+        from vega_state.backup_manager import list_backups  # type: ignore[import]
 
         backups = list_backups()
         return {"backups": backups}
@@ -2265,7 +2494,7 @@ async def backup_restore(
         import sys
 
         sys.path.append("/home/ncacord/Vega2.0")
-        from vega_state.backup_manager import restore_backup
+        from vega_state.backup_manager import restore_backup  # type: ignore[import]
 
         restore_backup(backup_file, restore_dir)
         return {"success": True, "message": f"Restored from {backup_file}"}
@@ -2466,14 +2695,14 @@ async def tag_task_knowledge(
     require_api_key(x_api_key)
 
     try:
-        from .memory_tagging import tag_knowledge_for_task
+        from .memory_tagging import tag_knowledge_for_task  # type: ignore[import]
 
         created_count = tag_knowledge_for_task(
             task_type=request.task_type,
             task_context=request.task_context,
             knowledge_item_ids=request.knowledge_item_ids,
-            relevance_score=request.relevance_score,
-            success=request.success,
+            relevance_score=request.relevance_score or 1.0,
+            success=request.success if request.success is not None else True,
         )
 
         return {
@@ -2485,7 +2714,7 @@ async def tag_task_knowledge(
         }
     except Exception as e:
         logger.error(f"Error tagging task knowledge: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=500, detail=str(e)) from e
 
 
 @app.get("/api/memory/task-knowledge/{task_type}")
@@ -2513,21 +2742,21 @@ async def get_task_knowledge_endpoint(
         # Convert to response format
         knowledge_items = []
         for item, relevance in results:
+            content_str = str(item.content) if item.content else ""
+            last_used = item.last_used_at
             knowledge_items.append(
                 {
                     "id": item.id,
                     "key": item.key,
                     "topic": item.topic,
                     "content": (
-                        item.content[:500] + "..."
-                        if len(item.content) > 500
-                        else item.content
+                        content_str[:500] + "..."
+                        if len(content_str) > 500
+                        else content_str
                     ),
                     "relevance_score": round(relevance, 3),
                     "usage_count": item.usage_count,
-                    "last_used_at": (
-                        item.last_used_at.isoformat() if item.last_used_at else None
-                    ),
+                    "last_used_at": (last_used.isoformat() if last_used else None),
                 }
             )
 
@@ -2538,7 +2767,7 @@ async def get_task_knowledge_endpoint(
         }
     except Exception as e:
         logger.error(f"Error retrieving task knowledge: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=500, detail=str(e)) from e
 
 
 @app.get("/api/memory/search-by-tags")
@@ -2566,20 +2795,20 @@ async def search_by_tags_endpoint(
         # Convert to response format
         knowledge_items = []
         for item in results:
+            content_str = str(item.content) if item.content else ""
+            last_used = item.last_used_at
             knowledge_items.append(
                 {
                     "id": item.id,
                     "key": item.key,
                     "topic": item.topic,
                     "content": (
-                        item.content[:500] + "..."
-                        if len(item.content) > 500
-                        else item.content
+                        content_str[:500] + "..."
+                        if len(content_str) > 500
+                        else content_str
                     ),
                     "usage_count": item.usage_count,
-                    "last_used_at": (
-                        item.last_used_at.isoformat() if item.last_used_at else None
-                    ),
+                    "last_used_at": (last_used.isoformat() if last_used else None),
                 }
             )
 
@@ -2591,7 +2820,7 @@ async def search_by_tags_endpoint(
         }
     except Exception as e:
         logger.error(f"Error searching by tags: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=500, detail=str(e)) from e
 
 
 @app.get("/api/memory/task-stats")
@@ -2613,7 +2842,7 @@ async def get_task_stats(
         return stats
     except Exception as e:
         logger.error(f"Error retrieving task statistics: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=500, detail=str(e)) from e
 
 
 @app.post("/api/memory/detect-task")
@@ -2642,7 +2871,7 @@ async def detect_task_type_endpoint(
         }
     except Exception as e:
         logger.error(f"Error detecting task type: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=500, detail=str(e)) from e
 
 
 # Root endpoint

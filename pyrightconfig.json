@@ -1,0 +1,32 @@
+{
+    "include": [
+        "src",
+        "tests",
+        "datasets",
+        "vega_state"
+    ],
+    "exclude": [
+        "**/__pycache__",
+        "**/node_modules",
+        ".venv",
+        "**/.pytest_cache",
+        "**/build",
+        "**/dist"
+    ],
+    "pythonVersion": "3.12",
+    "pythonPlatform": "Linux",
+    "typeCheckingMode": "basic",
+    "reportMissingImports": "warning",
+    "reportMissingTypeStubs": "none",
+    "reportUnusedImport": "warning",
+    "reportUnusedVariable": "warning",
+    "reportGeneralTypeIssues": "warning",
+    "reportOptionalMemberAccess": "warning",
+    "reportOptionalSubscript": "warning",
+    "reportPrivateUsage": "warning",
+    "extraPaths": [
+        "."
+    ],
+    "venvPath": ".",
+    "venv": ".venv"
+}

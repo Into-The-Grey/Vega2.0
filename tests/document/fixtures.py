@@ -50,9 +50,7 @@ class MockDocumentProcessor(BaseDocumentProcessor):
         """Mock initialization"""
         await asyncio.sleep(0.01)  # Simulate initialization time
 
-    async def _process_internal(
-        self, input_data: Any, context: ProcessingContext
-    ) -> Dict[str, Any]:
+    async def _process_internal(self, input_data: Any, context: ProcessingContext) -> Dict[str, Any]:
         """Mock processing that can be configured to fail"""
         self.processed_inputs.append(input_data)
 
@@ -478,11 +476,17 @@ def create_test_context(
     context_id: str = "test_context",
 ):
     """Module-level helper compatible with tests that pass session_id as kwarg."""
+    # Merge content into metadata so process_document can find it
+    merged_metadata = metadata.copy() if metadata else {}
+    merged_metadata["content"] = content
+    merged_metadata["document_type"] = document_type
+    merged_metadata["processing_mode"] = processing_mode
+
     return TestFixtures.create_processing_context(
         context_id=context_id,
         user_id=user_id or "test_user",
         session_id=session_id or "test_session",
-        metadata=metadata or {},
+        metadata=merged_metadata,
     )
 
 
@@ -507,9 +511,7 @@ def performance_monitor():
             self.metrics = []
 
         def record_global_metrics(self, accuracy, loss, round_num):
-            self.metrics.append(
-                {"accuracy": accuracy, "loss": loss, "round": round_num}
-            )
+            self.metrics.append({"accuracy": accuracy, "loss": loss, "round": round_num})
 
         def record_participant_performance(self, perf):
             # store participant perf objects
@@ -666,11 +668,7 @@ class AsyncTestUtils:
         start_time = time.time()
 
         while time.time() - start_time < timeout:
-            if (
-                await condition_func()
-                if asyncio.iscoroutinefunction(condition_func)
-                else condition_func()
-            ):
+            if await condition_func() if asyncio.iscoroutinefunction(condition_func) else condition_func():
                 return True
             await asyncio.sleep(poll_interval)
 

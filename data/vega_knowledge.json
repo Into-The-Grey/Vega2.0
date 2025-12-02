@@ -1,0 +1,24 @@
+{
+  "error_resolutions": {
+    "32e5c9c47344": {
+      "strategies": {
+        "fallback": {
+          "attempts": 7,
+          "successes": 7
+        }
+      },
+      "total_attempts": 7,
+      "last_successful_strategy": "fallback",
+      "last_success_time": "2025-12-02T03:23:28.924135"
+    }
+  },
+  "performance_baselines": {},
+  "error_frequency": {
+    "0c16322ea4b4": 7,
+    "32e5c9c47344": 14,
+    "6b5391a0ccff": 7,
+    "dc6fdd21c74f": 7,
+    "f79792d0bf80": 70
+  },
+  "last_updated": "2025-12-02T03:23:34.107900"
+}

@@ -156,7 +156,7 @@ class TestTagSearch:
 
     def test_search_empty_tags(self):
         results = search_by_tags(tags=[], limit=10)
-        assert results == []
+        assert not results  # Empty list is falsey
 
 
 class TestIntegration:

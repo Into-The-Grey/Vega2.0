@@ -1,0 +1,61 @@
+[MAIN]
+# Python version
+py-version=3.12
+
+# Add project paths
+init-hook='import sys; sys.path.insert(0, ".")'
+
+# Files to ignore
+ignore=__pycache__,.venv,build,dist,.pytest_cache
+
+# Disable specific warnings
+disable=
+    C0114,  # missing-module-docstring
+    C0115,  # missing-class-docstring  
+    C0116,  # missing-function-docstring
+    W0602,  # global-variable-not-assigned
+    W0603,  # global-statement
+    W0611,  # unused-import (handled by pyright)
+    W0612,  # unused-variable (handled by pyright)
+    W1309,  # f-string-without-interpolation
+    E0401,  # import-error (many false positives)
+    R0801,  # duplicate-code
+    R0902,  # too-many-instance-attributes
+    R0903,  # too-few-public-methods
+    R0913,  # too-many-arguments
+    R0914,  # too-many-locals
+    R0915,  # too-many-statements
+    W0718,  # broad-exception-caught
+
+[FORMAT]
+max-line-length=120
+
+[DESIGN]
+max-args=10
+max-attributes=15
+max-public-methods=25
+
+[MESSAGES CONTROL]
+# Enable specific warnings
+enable=
+    W0611,  # unused-import
+
+[IMPORTS]
+# Known first party modules
+known-first-party=src,vega,datasets,vega_state
+
+[TYPECHECK]
+# Ignore import errors for known packages
+ignored-modules=
+    torch,
+    tensorflow,
+    transformers,
+    accelerate,
+    peft,
+    cv2,
+    librosa,
+    faiss,
+    whisper,
+    httpx,
+    fastapi,
+    uvicorn

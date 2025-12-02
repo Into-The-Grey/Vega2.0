@@ -54,7 +54,7 @@ class CacheEntry:
     access_count: int
     ttl_seconds: Optional[int]
     size_bytes: int
-    metadata: Dict[str, Any] = None
+    metadata: Optional[Dict[str, Any]] = None
 
     def __post_init__(self):
         if self.metadata is None:
@@ -82,7 +82,7 @@ class CacheStats:
     evictions: int = 0
     size_bytes: int = 0
     entry_count: int = 0
-    last_updated: datetime = None
+    last_updated: Optional[datetime] = None
 
     def __post_init__(self):
         if self.last_updated is None:
@@ -238,8 +238,9 @@ class RedisCache:
             value = pickle.loads(data)
             self.stats.hits += 1
 
-            # Update access time
-            await self.redis_client.hset(
+            # Update access time (hset returns int, not coroutine in sync mode)
+            # Use type ignore for redis.asyncio compatibility
+            await self.redis_client.hset(  # type: ignore[misc]
                 f"{full_key}:meta", "last_accessed", datetime.now().isoformat()
             )
 
@@ -271,7 +272,7 @@ class RedisCache:
                 "ttl_seconds": ttl_seconds,
             }
 
-            await self.redis_client.hset(f"{full_key}:meta", mapping=metadata)
+            await self.redis_client.hset(f"{full_key}:meta", mapping=metadata)  # type: ignore[misc]
             await self.redis_client.expire(f"{full_key}:meta", ttl_seconds)
 
             return True
@@ -506,7 +507,7 @@ class MultiLevelCache:
     Multi-level cache system with intelligent cache management
     """
 
-    def __init__(self, config: Dict[str, Any] = None):
+    def __init__(self, config: Optional[Dict[str, Any]] = None):
         if config is None:
             config = {}
 
@@ -587,7 +588,8 @@ class MultiLevelCache:
             self.global_stats.hits += 1
 
             # Promote to higher levels (cache warming)
-            await self._promote_cache_entry(key, value, found_level, levels)
+            if found_level is not None:
+                await self._promote_cache_entry(key, value, found_level, levels)
         else:
             self.global_stats.misses += 1
 
@@ -795,7 +797,7 @@ async def demo_advanced_caching():
         print(f"Set {key}: {'✓' if success else '✗'}")
 
     print("\nGetting cache entries...")
-    for key in test_data.keys():
+    for key in test_data:
         value = await cache.get(key)
         print(f"Get {key}: {'✓' if value is not None else '✗'}")
 
@@ -805,7 +807,7 @@ async def demo_advanced_caching():
 
     # Get statistics
     stats = await cache.get_stats()
-    print(f"\nCache Statistics:")
+    print("\nCache Statistics:")
     print(f"- Global hits: {stats['global']['hits']}")
     print(f"- Global misses: {stats['global']['misses']}")
     print(f"- Hit ratio: {stats['global']['hit_ratio']:.2%}")
