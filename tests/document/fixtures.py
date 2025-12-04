@@ -465,7 +465,7 @@ def create_test_context():
 
 
 # Also expose a module-level helper function for older tests that import and call it
-def create_test_context(
+def create_test_context_helper(
     content: str,
     document_type: str = "test",
     processing_mode: str = "analysis",

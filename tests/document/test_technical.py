@@ -69,8 +69,8 @@ class TestTechnicalDocumentationAI:
 
         # Should be initialized now
         assert ai.is_initialized
-        assert ai.code_doc_generator is not None
-        assert ai.api_doc_analyzer is not None
+        assert ai.code_generator is not None
+        assert ai.api_analyzer is not None
         assert ai.writing_assistant is not None
         assert ai.quality_analyzer is not None
 

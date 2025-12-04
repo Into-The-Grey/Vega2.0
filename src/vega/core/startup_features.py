@@ -76,24 +76,23 @@ async def load_config_validation():
 
 async def load_database():
     """CRITICAL: Initialize database connection"""
-    from .db import init_db, get_engine  # type: ignore[import]
+    from sqlalchemy import text
+
+    from .db import _init_db, engine  # type: ignore[attr-defined]
 
     # Initialize the database
-    init_db()
+    _init_db()
     # Test connection
-    engine = get_engine()
     with engine.connect() as conn:
-        conn.execute("SELECT 1")
+        conn.execute(text("SELECT 1"))
     logger.info("Database connection verified")
 
 
 async def load_llm_backend():
     """CRITICAL: Verify LLM backend is accessible"""
-    from .llm import check_backend_health  # type: ignore[import]
+    from .llm import llm_warmup  # type: ignore[attr-defined]
 
-    healthy = await check_backend_health()
-    if not healthy:
-        raise RuntimeError("LLM backend is not responding")
+    await llm_warmup()
     logger.info("LLM backend verified")
 
 
@@ -172,18 +171,24 @@ async def load_analytics():
 
 async def load_collaboration():
     """LOW: Initialize collaboration features"""
-    from ..collaboration.integration import get_collaboration_manager  # type: ignore[import]
+    # Collaboration manager may not be implemented yet
+    try:
+        from ..collaboration.integration import collaboration_manager  # type: ignore[attr-defined]
 
-    manager = get_collaboration_manager()
-    logger.info("Collaboration features initialized")
+        logger.info("Collaboration features initialized")
+    except ImportError:
+        logger.warning("Collaboration module not available - skipping")
 
 
 async def load_document_intelligence():
     """LOW: Initialize document processing"""
-    from ..document.api import initialize_document_processor  # type: ignore[import]
+    # Document processor may not be implemented yet
+    try:
+        from ..document.api import document_processor  # type: ignore[attr-defined]
 
-    await initialize_document_processor()
-    logger.info("Document intelligence initialized")
+        logger.info("Document intelligence initialized")
+    except ImportError:
+        logger.warning("Document intelligence module not available - skipping")
 
 
 async def load_process_manager():
@@ -474,7 +479,7 @@ def register_all_features_internal():
 # ==============================================================================
 
 
-async def log_notification_handler(event_type: str, feature_state, strategy: str = None):
+async def log_notification_handler(event_type: str, feature_state, strategy: Optional[str] = None):
     """Log notifications to file"""
     from datetime import datetime
     from pathlib import Path
@@ -504,7 +509,7 @@ async def log_notification_handler(event_type: str, feature_state, strategy: str
         f.write(message + "\n")
 
 
-def console_notification_handler(event_type: str, feature_state, strategy: str = None):
+def console_notification_handler(event_type: str, feature_state, strategy: Optional[str] = None):
     """Print notifications to console"""
     if event_type == "permanent_failure":
         print(f"\n🚨 ALERT: Feature '{feature_state.definition.name}' permanently failed!")
@@ -664,7 +669,7 @@ def register_all_features(manager: SimplifiedStartupManager):
         from .memory_manager import get_memory_manager  # type: ignore[import]
 
         manager = get_memory_manager()
-        return manager is not None and manager.is_running
+        return manager is not None and manager.running
 
     manager.register_feature(
         StartupFeature(

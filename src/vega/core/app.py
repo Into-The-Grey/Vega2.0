@@ -119,9 +119,7 @@ try:
     from ..analytics.visualization import create_visualization_router
 
     # Add analytics router
-    analytics_router = create_visualization_router(
-        analytics_collector, analytics_engine
-    )
+    analytics_router = create_visualization_router(analytics_collector, analytics_engine)
     app.include_router(analytics_router)
     print("✅ Analytics system integrated")
 except ImportError as e:
@@ -477,9 +475,7 @@ async def get_repair_status():
 
     return {
         "is_running": manager.is_running,
-        "repair_queue_size": (
-            manager.repair_queue.qsize() if manager.repair_queue else 0
-        ),
+        "repair_queue_size": (manager.repair_queue.qsize() if manager.repair_queue else 0),
         "pending_repairs": list(manager.pending_repairs),
         "knowledge_base_size": len(manager.repair_knowledge_base),
         "timestamp": datetime.utcnow().isoformat(),
@@ -491,14 +487,10 @@ async def trigger_feature_repair(feature_name: str):
     """Manually trigger a repair attempt for a specific feature."""
     manager = get_startup_manager()
     if manager is None:
-        raise HTTPException(
-            status_code=503, detail="Resilient startup manager not available"
-        )
+        raise HTTPException(status_code=503, detail="Resilient startup manager not available")
 
     if feature_name not in manager.features:
-        raise HTTPException(
-            status_code=404, detail=f"Feature '{feature_name}' not found"
-        )
+        raise HTTPException(status_code=404, detail=f"Feature '{feature_name}' not found")
 
     # Queue the feature for repair
     await manager.queue_repair(feature_name)
@@ -514,14 +506,10 @@ async def reinitialize_feature(feature_name: str):
     """Attempt to reinitialize a specific feature immediately."""
     manager = get_startup_manager()
     if manager is None:
-        raise HTTPException(
-            status_code=503, detail="Resilient startup manager not available"
-        )
+        raise HTTPException(status_code=503, detail="Resilient startup manager not available")
 
     if feature_name not in manager.features:
-        raise HTTPException(
-            status_code=404, detail=f"Feature '{feature_name}' not found"
-        )
+        raise HTTPException(status_code=404, detail=f"Feature '{feature_name}' not found")
 
     feature = manager.features[feature_name]
     success = await manager._init_feature(feature)
@@ -553,9 +541,7 @@ async def run_health_checks():
     """Run health checks on all features and return results."""
     manager = get_startup_manager()
     if manager is None:
-        raise HTTPException(
-            status_code=503, detail="Resilient startup manager not available"
-        )
+        raise HTTPException(status_code=503, detail="Resilient startup manager not available")
 
     results = {}
     for name, feature in manager.features.items():
@@ -620,9 +606,7 @@ def query_llm(prompt: str, stream: bool = False, **kwargs):  # patched in tests
     return f"Echo: {prompt}"
 
 
-def log_conversation(
-    prompt: str, response: str, session_id: str | None = None
-):  # patched
+def log_conversation(prompt: str, response: str, session_id: str | None = None):  # patched
     # Default no-op; will be rebound to real DB logger at import time if available
     return None
 
@@ -651,9 +635,7 @@ def get_session_history(session_id: str, limit: int = 50):  # patched
     return []
 
 
-def set_feedback(
-    conversation_id: int, rating: int, comment: str | None = None
-):  # patched
+def set_feedback(conversation_id: int, rating: int, comment: str | None = None):  # patched
     return None
 
 
@@ -751,16 +733,10 @@ def metrics_prometheus():
     lines.append("# HELP vega_errors_total Total number of errors")
     lines.append(f"vega_errors_total {int(m.get('errors_total', 0))}")
     # Duration summary (sum and count)
-    lines.append(
-        "# HELP vega_request_duration_ms_sum Cumulative request duration in ms"
-    )
-    lines.append(
-        f"vega_request_duration_ms_sum {float(m.get('request_duration_ms_sum', 0.0))}"
-    )
+    lines.append("# HELP vega_request_duration_ms_sum Cumulative request duration in ms")
+    lines.append(f"vega_request_duration_ms_sum {float(m.get('request_duration_ms_sum', 0.0))}")
     lines.append("# HELP vega_request_duration_ms_count Number of measured requests")
-    lines.append(
-        f"vega_request_duration_ms_count {int(m.get('request_duration_count', 0))}"
-    )
+    lines.append(f"vega_request_duration_ms_count {int(m.get('request_duration_count', 0))}")
     # Status code distribution
     codes = m.get("status_codes", {}) if isinstance(m, dict) else {}
     if isinstance(codes, dict):
@@ -770,16 +746,10 @@ def metrics_prometheus():
                 lines.append(f'vega_http_responses_total{{code="{code}"}} {int(count)}')
             except Exception:
                 continue
-    lines.append(
-        "# HELP vega_memory_extraction_calls Total number of extraction attempts"
-    )
+    lines.append("# HELP vega_memory_extraction_calls Total number of extraction attempts")
     lines.append(f"vega_memory_extraction_calls {_metrics.get('extraction_calls', 0)}")
-    lines.append(
-        "# HELP vega_memory_extraction_facts_total Total number of extracted facts"
-    )
-    lines.append(
-        f"vega_memory_extraction_facts_total {_metrics.get('extraction_facts_total', 0)}"
-    )
+    lines.append("# HELP vega_memory_extraction_facts_total Total number of extracted facts")
+    lines.append(f"vega_memory_extraction_facts_total {_metrics.get('extraction_facts_total', 0)}")
     try:
         from src.vega.core.db import get_memory_facts
 
@@ -787,9 +757,7 @@ def metrics_prometheus():
         total_stored = len(facts)
     except Exception:
         total_stored = 0
-    lines.append(
-        "# HELP vega_memory_facts_stored_total Total stored memory facts (global)"
-    )
+    lines.append("# HELP vega_memory_facts_stored_total Total stored memory facts (global)")
     lines.append(f"vega_memory_facts_stored_total {total_stored}")
     return PlainTextResponse("\n".join(lines), media_type="text/plain; version=0.0.4")
 
@@ -962,9 +930,7 @@ async def chat(
         def get_recent_context(session_id=None, limit=10, max_chars=4000):
             return []
 
-        def get_conversation_summary(
-            session_id=None, older_than_id=None, max_entries=100
-        ):
+        def get_conversation_summary(session_id=None, older_than_id=None, max_entries=100):
             return ""
 
         def set_memory_fact(session_id, key, value):
@@ -993,9 +959,7 @@ async def chat(
         context_window = getattr(cfg, "context_window_size", 10)
         context_max = getattr(cfg, "context_max_chars", 4000)
 
-        conversation_context = get_recent_context(
-            session_id=session_id, limit=context_window, max_chars=context_max
-        )
+        conversation_context = get_recent_context(session_id=session_id, limit=context_window, max_chars=context_max)
 
         # Extract and persist memory facts from the current prompt
         try:
@@ -1012,16 +976,12 @@ async def chat(
             facts = {}
 
         try:
-            older_than_id = (
-                conversation_context[0]["id"] if conversation_context else None
-            )
+            older_than_id = conversation_context[0]["id"] if conversation_context else None
         except Exception:
             older_than_id = None
 
         try:
-            summary = get_conversation_summary(
-                session_id=session_id, older_than_id=older_than_id, max_entries=50
-            )
+            summary = get_conversation_summary(session_id=session_id, older_than_id=older_than_id, max_entries=50)
         except Exception:
             summary = ""
 
@@ -1106,9 +1066,7 @@ class HAWebhookPayload(BaseModel):
     text: str  # Transcribed speech text
     conversation_id: Optional[str] = None
     device_id: Optional[str] = None
-    device_type: Optional[str] = (
-        "unknown"  # ios, macos, windows, browser, smart_speaker
-    )
+    device_type: Optional[str] = "unknown"  # ios, macos, windows, browser, smart_speaker
     user_id: Optional[str] = None
     language: str = "en"
 
@@ -1175,11 +1133,7 @@ async def hass_webhook(
 
         # Convert device_type string to enum
         try:
-            device_type_enum = (
-                HAVoiceDevice(payload.device_type)
-                if payload.device_type
-                else HAVoiceDevice.UNKNOWN
-            )
+            device_type_enum = HAVoiceDevice(payload.device_type) if payload.device_type else HAVoiceDevice.UNKNOWN
         except ValueError:
             device_type_enum = HAVoiceDevice.UNKNOWN
 
@@ -1210,9 +1164,7 @@ async def hass_webhook(
             )
 
             # Query LLM
-            response_text = await llm_query(
-                prompt, stream=False, conversation_context=conversation_context
-            )
+            response_text = await llm_query(prompt, stream=False, conversation_context=conversation_context)
 
             # Log conversation
             log_conversation(prompt, response_text, session_id)
@@ -1252,9 +1204,7 @@ async def hass_webhook(
 
     except Exception as e:
         logger.error(f"Error processing HA webhook: {e}")
-        return HAVoiceResponse(
-            success=False, response=f"Error: {str(e)}", tts_sent=False
-        )
+        return HAVoiceResponse(success=False, response=f"Error: {str(e)}", tts_sent=False)
 
 
 @app.get("/hass/status")
@@ -1302,11 +1252,7 @@ async def hass_status(
             "connected": connected,
             "url": hass_url,
             "webhook_endpoint": "/hass/webhook",
-            "message": (
-                "Home Assistant integration operational"
-                if connected
-                else "Cannot connect to Home Assistant"
-            ),
+            "message": ("Home Assistant integration operational" if connected else "Cannot connect to Home Assistant"),
         }
     except Exception as e:
         return {
@@ -1352,9 +1298,7 @@ async def proactive_propose(
 
         prop = propose_initiation(max_per_day=req.max_per_day)
         if not prop:
-            return ProposeResponse(
-                id=None, session_id=None, topic=None, reason=None, message=None
-            )
+            return ProposeResponse(id=None, session_id=None, topic=None, reason=None, message=None)
         return ProposeResponse(
             id=prop.id,
             session_id=prop.session_id,
@@ -1367,9 +1311,7 @@ async def proactive_propose(
 
 
 @app.get("/proactive/pending")
-async def proactive_pending(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def proactive_pending(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     if not x_api_key or x_api_key != "vega-default-key":
         raise HTTPException(status_code=401, detail="Invalid API key") from None
     try:
@@ -1452,9 +1394,7 @@ async def proactive_send(
 
 
 @app.get("/proactive/session/{session_id}")
-async def proactive_get_session(
-    session_id: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def proactive_get_session(session_id: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     if not x_api_key or x_api_key != "vega-default-key":
         raise HTTPException(status_code=401, detail="Invalid API key") from None
     try:
@@ -1512,9 +1452,7 @@ async def submit_feedback(
 
 
 @app.post("/proactive/end")
-async def proactive_end(
-    session_id: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def proactive_end(session_id: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     if not x_api_key or x_api_key != "vega-default-key":
         raise HTTPException(status_code=401, detail="Invalid API key") from None
     try:
@@ -1531,17 +1469,11 @@ async def proactive_end(
 
 # Admin endpoints
 @app.get("/admin/logs")
-async def admin_logs_list(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_logs_list(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     require_api_key(x_api_key)
     from .logging_setup import VegaLogger  # type: ignore[import]
 
-    return {
-        "modules": (
-            VegaLogger.list_modules() if hasattr(VegaLogger, "list_modules") else []
-        )
-    }
+    return {"modules": (VegaLogger.list_modules() if hasattr(VegaLogger, "list_modules") else [])}
 
 
 @app.get("/admin/logs/{module}")
@@ -1558,25 +1490,15 @@ async def admin_logs_tail(
 
 
 @app.get("/admin/config")
-async def admin_config_list(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_config_list(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     require_api_key(x_api_key)
     from .config_manager import config_manager  # type: ignore[import]
 
-    return {
-        "modules": (
-            config_manager.list_modules()
-            if hasattr(config_manager, "list_modules")
-            else []
-        )
-    }
+    return {"modules": (config_manager.list_modules() if hasattr(config_manager, "list_modules") else [])}
 
 
 @app.get("/admin/config/{module}")
-async def admin_config_get(
-    module: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_config_get(module: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     require_api_key(x_api_key)
     # Use function to allow tests to patch
     cfg_dict = config_manager.get_config(module)
@@ -1584,9 +1506,7 @@ async def admin_config_get(
 
 
 @app.get("/admin/resources/health")
-async def admin_resources_health(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_resources_health(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """Get resource manager health status"""
     require_api_key(x_api_key)
 
@@ -1611,9 +1531,7 @@ async def admin_resources_health(
 
 
 @app.get("/admin/resources/stats")
-async def admin_resources_stats(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_resources_stats(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """Get resource manager statistics and metrics"""
     require_api_key(x_api_key)
 
@@ -1627,35 +1545,24 @@ async def admin_resources_stats(
         resource_stats = manager.get_stats()
 
         stats["resource_manager"] = {
-            "http_clients_created": resource_stats.http_clients_created,
-            "http_requests_made": resource_stats.http_requests_made,
-            "config_cache_hits": resource_stats.config_cache_hits,
-            "config_cache_misses": resource_stats.config_cache_misses,
+            "http_clients_created": resource_stats["http_clients_created"],
+            "http_requests_made": resource_stats["http_requests_made"],
+            "config_cache_hits": resource_stats["config_cache_hits"],
+            "config_cache_misses": resource_stats["config_cache_misses"],
             "config_cache_hit_rate": (
                 round(
-                    resource_stats.config_cache_hits
-                    / (
-                        resource_stats.config_cache_hits
-                        + resource_stats.config_cache_misses
-                    )
+                    resource_stats["config_cache_hits"]
+                    / (resource_stats["config_cache_hits"] + resource_stats["config_cache_misses"])
                     * 100,
                     2,
                 )
-                if (
-                    resource_stats.config_cache_hits
-                    + resource_stats.config_cache_misses
-                )
-                > 0
+                if (resource_stats["config_cache_hits"] + resource_stats["config_cache_misses"]) > 0
                 else 0
             ),
-            "cleanup_tasks_registered": resource_stats.cleanup_tasks_registered,
-            "startup_time": resource_stats.startup_time,
-            "shutdown_time": resource_stats.shutdown_time,
-            "uptime_seconds": (
-                (datetime.utcnow().timestamp() - resource_stats.startup_time)
-                if resource_stats.startup_time
-                else None
-            ),
+            "cleanup_tasks_registered": resource_stats.get("cleanup_tasks_registered", 0),
+            "startup_time": resource_stats.get("startup_time_ms"),
+            "shutdown_time": resource_stats.get("shutdown_time_ms"),
+            "uptime_seconds": None,  # Calculated from startup_time_ms if available
         }
     except Exception as e:
         logger.error(f"Failed to get resource manager stats: {e}")
@@ -1683,9 +1590,7 @@ async def admin_resources_stats(
 
 
 @app.post("/admin/resources/cache/invalidate")
-async def admin_resources_invalidate_cache(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_resources_invalidate_cache(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """Invalidate configuration cache to force reload"""
     require_api_key(x_api_key)
 
@@ -1701,15 +1606,11 @@ async def admin_resources_invalidate_cache(
         }
     except Exception as e:
         logger.error(f"Failed to invalidate config cache: {e}")
-        raise HTTPException(
-            status_code=500, detail=f"Cache invalidation failed: {e}"
-        ) from e
+        raise HTTPException(status_code=500, detail=f"Cache invalidation failed: {e}") from e
 
 
 @app.get("/admin/resources/pools")
-async def admin_resources_pools(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_resources_pools(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """
     Get detailed HTTP connection pool metrics.
 
@@ -1730,15 +1631,11 @@ async def admin_resources_pools(
         return pool_metrics
     except Exception as e:
         logger.error(f"Failed to get connection pool metrics: {e}")
-        raise HTTPException(
-            status_code=500, detail=f"Pool metrics unavailable: {e}"
-        ) from e
+        raise HTTPException(status_code=500, detail=f"Pool metrics unavailable: {e}") from e
 
 
 @app.get("/admin/llm/behavior")
-async def admin_llm_behavior_get(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_llm_behavior_get(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     require_api_key(x_api_key)
     behavior = config_manager.get_llm_behavior()
     return {"behavior": behavior}
@@ -1767,9 +1664,7 @@ async def admin_llm_behavior_update(
 
 
 @app.get("/admin/processes/status")
-async def admin_processes_status(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_processes_status(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """Get status of all background processes"""
     require_api_key(x_api_key)
 
@@ -1805,9 +1700,7 @@ async def admin_processes_status(
                 "cpu_usage": process.cpu_usage,
                 "memory_usage": process.memory_usage,
                 "restart_count": process.restart_count,
-                "start_time": (
-                    process.start_time.isoformat() if process.start_time else None
-                ),
+                "start_time": (process.start_time.isoformat() if process.start_time else None),
                 "uptime": process.metrics.get("uptime", 0),
             }
             process_list.append(process_info)
@@ -1824,9 +1717,7 @@ async def admin_processes_status(
 
 
 @app.get("/admin/database/stats")
-async def admin_database_stats(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_database_stats(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """
     Get comprehensive database performance statistics.
 
@@ -1857,15 +1748,11 @@ async def admin_database_stats(
         }
     except Exception as e:
         logger.error(f"Failed to get database stats: {e}")
-        raise HTTPException(
-            status_code=500, detail=f"Database stats unavailable: {e}"
-        ) from e
+        raise HTTPException(status_code=500, detail=f"Database stats unavailable: {e}") from e
 
 
 @app.post("/admin/database/reset-stats")
-async def admin_database_reset_stats(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_database_reset_stats(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """Reset database performance statistics"""
     require_api_key(x_api_key)
 
@@ -1918,9 +1805,7 @@ async def admin_integrations_health(
 
 
 @app.get("/admin/diagnostics/system")
-async def admin_diagnostics_system(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_diagnostics_system(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """
     Get comprehensive system resource diagnostics.
 
@@ -1943,15 +1828,11 @@ async def admin_diagnostics_system(
         return diagnostics
     except Exception as e:
         logger.error(f"Failed to get system diagnostics: {e}")
-        raise HTTPException(
-            status_code=500, detail=f"Diagnostics unavailable: {e}"
-        ) from e
+        raise HTTPException(status_code=500, detail=f"Diagnostics unavailable: {e}") from e
 
 
 @app.get("/admin/diagnostics/health-summary")
-async def admin_diagnostics_health_summary(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_diagnostics_health_summary(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """Get overall system health status summary"""
     require_api_key(x_api_key)
 
@@ -1966,15 +1847,11 @@ async def admin_diagnostics_health_summary(
         }
     except Exception as e:
         logger.error(f"Failed to get health summary: {e}")
-        raise HTTPException(
-            status_code=500, detail=f"Health summary unavailable: {e}"
-        ) from e
+        raise HTTPException(status_code=500, detail=f"Health summary unavailable: {e}") from e
 
 
 @app.get("/admin/metrics/comprehensive")
-async def admin_metrics_comprehensive(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_metrics_comprehensive(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """
     Get comprehensive system metrics from all components.
 
@@ -2024,15 +1901,11 @@ async def admin_metrics_comprehensive(
         }
     except Exception as e:
         logger.error(f"Failed to collect comprehensive metrics: {e}")
-        raise HTTPException(
-            status_code=500, detail=f"Metrics collection failed: {e}"
-        ) from e
+        raise HTTPException(status_code=500, detail=f"Metrics collection failed: {e}") from e
 
 
 @app.get("/admin/metrics/summary")
-async def admin_metrics_summary(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_metrics_summary(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """Get high-level metrics summary for quick dashboard views"""
     require_api_key(x_api_key)
 
@@ -2045,9 +1918,7 @@ async def admin_metrics_summary(
         return summary
     except Exception as e:
         logger.error(f"Failed to get metrics summary: {e}")
-        raise HTTPException(
-            status_code=500, detail=f"Metrics summary unavailable: {e}"
-        ) from e
+        raise HTTPException(status_code=500, detail=f"Metrics summary unavailable: {e}") from e
 
 
 @app.get("/admin/metrics/trends/{metric_path}")
@@ -2080,15 +1951,11 @@ async def admin_metrics_trends(
         }
     except Exception as e:
         logger.error(f"Failed to get metric trends: {e}")
-        raise HTTPException(
-            status_code=500, detail=f"Trend data unavailable: {e}"
-        ) from e
+        raise HTTPException(status_code=500, detail=f"Trend data unavailable: {e}") from e
 
 
 @app.get("/admin/config/validate")
-async def admin_config_validate(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_config_validate(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """
     Validate current configuration settings.
 
@@ -2115,9 +1982,7 @@ async def admin_config_validate(
 
 
 @app.post("/admin/processes/start")
-async def admin_processes_start(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_processes_start(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """Start all background processes"""
     require_api_key(x_api_key)
 
@@ -2132,9 +1997,7 @@ async def admin_processes_start(
 
 
 @app.post("/admin/processes/stop")
-async def admin_processes_stop(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_processes_stop(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """Stop all background processes"""
     require_api_key(x_api_key)
 
@@ -2149,9 +2012,7 @@ async def admin_processes_stop(
 
 
 @app.post("/admin/processes/{process_id}/restart")
-async def admin_process_restart(
-    process_id: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_process_restart(process_id: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """Restart a specific background process"""
     require_api_key(x_api_key)
 
@@ -2167,9 +2028,7 @@ async def admin_process_restart(
 
 
 @app.get("/admin/errors/stats")
-async def admin_error_stats(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_error_stats(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """Get error statistics"""
     require_api_key(x_api_key)
 
@@ -2185,9 +2044,7 @@ async def admin_error_stats(
 
 
 @app.get("/admin/recovery/stats")
-async def admin_recovery_stats(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_recovery_stats(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """Get recovery statistics"""
     require_api_key(x_api_key)
 
@@ -2205,9 +2062,7 @@ async def admin_recovery_stats(
 
 
 @app.post("/admin/recovery/clear-history")
-async def admin_recovery_clear_history(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_recovery_clear_history(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """Clear recovery history"""
     require_api_key(x_api_key)
 
@@ -2247,18 +2102,14 @@ async def admin_ecc_generate_key(
             "curve": key_pair.curve,
             "public_key": key_pair.public_key_pem,
             "created_at": key_pair.created_at.isoformat(),
-            "expires_at": (
-                key_pair.expires_at.isoformat() if key_pair.expires_at else None
-            ),
+            "expires_at": (key_pair.expires_at.isoformat() if key_pair.expires_at else None),
         }
     except Exception as e:
         return {"error": f"Failed to generate key: {str(e)}"}
 
 
 @app.get("/admin/ecc/keys")
-async def admin_ecc_list_keys(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_ecc_list_keys(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """List all ECC keys"""
     require_api_key(x_api_key)
 
@@ -2280,9 +2131,7 @@ async def admin_ecc_list_keys(
 
 
 @app.get("/admin/ecc/keys/{key_id}")
-async def admin_ecc_get_key(
-    key_id: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_ecc_get_key(key_id: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """Get ECC key information"""
     require_api_key(x_api_key)
 
@@ -2307,9 +2156,7 @@ async def admin_ecc_get_key(
 
 
 @app.delete("/admin/ecc/keys/{key_id}")
-async def admin_ecc_delete_key(
-    key_id: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_ecc_delete_key(key_id: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """Delete ECC key"""
     require_api_key(x_api_key)
 
@@ -2404,34 +2251,27 @@ async def admin_security_generate_api_key(
 
     try:
         permissions = payload.get("permissions", ["read"])
-        expires_in_days = payload.get("expires_in_days")
-        rate_limit = payload.get("rate_limit")
+        expires_in_days = payload.get("expires_in_days", 30)
 
         security_manager = get_security_manager()
         secure_key = security_manager.generate_secure_api_key(
             permissions=permissions,
             expires_in_days=expires_in_days,
-            rate_limit=rate_limit,
         )
 
         return {
             "status": "success",
-            "api_key": secure_key.api_key,
-            "key_id": secure_key.key_id,
-            "ecc_key_id": secure_key.ecc_key_id,
-            "permissions": secure_key.permissions,
-            "expires_at": (
-                secure_key.expires_at.isoformat() if secure_key.expires_at else None
-            ),
+            "api_key": secure_key["api_key"],
+            "key_id": secure_key["key_id"],
+            "permissions": secure_key["permissions"],
+            "expires_at": secure_key.get("expires_at"),
         }
     except Exception as e:
         return {"error": f"Failed to generate API key: {str(e)}"}
 
 
 @app.get("/admin/security/api-keys")
-async def admin_security_list_api_keys(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def admin_security_list_api_keys(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     """List all secure API keys"""
     require_api_key(x_api_key)
 
@@ -2449,9 +2289,7 @@ async def admin_security_list_api_keys(
 
 # Backup API endpoints
 @app.post("/backup/create")
-async def backup_create(
-    tag: str = "api", x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def backup_create(tag: str = "api", x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     require_api_key(x_api_key)
 
     try:
@@ -2504,9 +2342,7 @@ async def backup_restore(
 
 # Voice Profile API endpoints
 @app.post("/voice/samples")
-async def voice_add_sample(
-    file_path: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def voice_add_sample(file_path: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     require_api_key(x_api_key)
 
     try:
@@ -2522,9 +2358,7 @@ async def voice_add_sample(
 
 
 @app.post("/voice/profile/update")
-async def voice_update_profile(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def voice_update_profile(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     require_api_key(x_api_key)
 
     try:
@@ -2540,9 +2374,7 @@ async def voice_update_profile(
 
 
 @app.get("/voice/profile")
-async def voice_get_profile(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def voice_get_profile(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     require_api_key(x_api_key)
 
     try:
@@ -2622,9 +2454,7 @@ async def finance_invest(
 
 
 @app.get("/finance/portfolio")
-async def finance_portfolio(
-    x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def finance_portfolio(x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     if not x_api_key or x_api_key != "vega-default-key":
         raise HTTPException(status_code=401, detail="Invalid API key")
 
@@ -2641,9 +2471,7 @@ async def finance_portfolio(
 
 
 @app.get("/finance/price/{symbol}")
-async def finance_price(
-    symbol: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")
-):
+async def finance_price(symbol: str, x_api_key: str | None = Header(default=None, alias="X-API-Key")):
     if not x_api_key or x_api_key != "vega-default-key":
         raise HTTPException(status_code=401, detail="Invalid API key")
 
@@ -2683,9 +2511,7 @@ class TaskKnowledgeResponse(BaseModel):
 
 
 @app.post("/api/memory/tag-task")
-async def tag_task_knowledge(
-    request: TagTaskRequest, x_api_key: str | None = Header(None, alias="X-API-Key")
-):
+async def tag_task_knowledge(request: TagTaskRequest, x_api_key: str | None = Header(None, alias="X-API-Key")):
     """
     Tag knowledge items as relevant for a specific task type.
 
@@ -2735,9 +2561,7 @@ async def get_task_knowledge_endpoint(
     try:
         from .memory_tagging import get_task_knowledge
 
-        results = get_task_knowledge(
-            task_type=task_type, limit=limit, min_relevance=min_relevance
-        )
+        results = get_task_knowledge(task_type=task_type, limit=limit, min_relevance=min_relevance)
 
         # Convert to response format
         knowledge_items = []
@@ -2749,11 +2573,7 @@ async def get_task_knowledge_endpoint(
                     "id": item.id,
                     "key": item.key,
                     "topic": item.topic,
-                    "content": (
-                        content_str[:500] + "..."
-                        if len(content_str) > 500
-                        else content_str
-                    ),
+                    "content": (content_str[:500] + "..." if len(content_str) > 500 else content_str),
                     "relevance_score": round(relevance, 3),
                     "usage_count": item.usage_count,
                     "last_used_at": (last_used.isoformat() if last_used else None),
@@ -2802,11 +2622,7 @@ async def search_by_tags_endpoint(
                     "id": item.id,
                     "key": item.key,
                     "topic": item.topic,
-                    "content": (
-                        content_str[:500] + "..."
-                        if len(content_str) > 500
-                        else content_str
-                    ),
+                    "content": (content_str[:500] + "..." if len(content_str) > 500 else content_str),
                     "usage_count": item.usage_count,
                     "last_used_at": (last_used.isoformat() if last_used else None),
                 }

@@ -76,9 +76,7 @@ class TestOperationResult:
 
     def test_fail_result(self):
         """Test creating a failed result"""
-        result = OperationResult.fail(
-            "Something went wrong", "TestError", suggestions=["Try again later"]
-        )
+        result = OperationResult.fail("Something went wrong", "TestError", suggestions=["Try again later"])
 
         assert result.success is False
         assert result.value is None
@@ -88,9 +86,7 @@ class TestOperationResult:
 
     def test_partial_result(self):
         """Test creating a partial/degraded result"""
-        result = OperationResult.partial(
-            "fallback_value", "Original operation failed, using fallback"
-        )
+        result = OperationResult.partial("fallback_value", "Original operation failed, using fallback")
 
         assert result.success is True
         assert result.value == "fallback_value"
@@ -197,7 +193,7 @@ class TestHardenedDecorator:
 
         assert result.success is False
         assert result.error_type == "RuntimeError"
-        assert "Permanent failure" in result.error
+        assert result.error is not None and "Permanent failure" in result.error
 
     @pytest.mark.asyncio
     async def test_cancellation_handling(self):
@@ -366,7 +362,7 @@ class TestInputValidation:
         result = validate_input(None, str, "test_input", allow_none=False)
 
         assert result.success is False
-        assert "cannot be None" in result.error
+        assert result.error is not None and "cannot be None" in result.error
 
     def test_validate_max_length(self):
         """Test string max length enforcement"""
@@ -382,7 +378,7 @@ class TestInputValidation:
 
         result = validate_input(0, int, "test_input", min_value=1, max_value=10)
         assert result.success is False
-        assert "must be >=" in result.error
+        assert result.error is not None and "must be >=" in result.error
 
     def test_sanitize_string(self):
         """Test string sanitization"""
@@ -451,9 +447,7 @@ class TestKnowledgeBase:
             kb.record_resolution(signature, "retry", {}, success=True)
 
             assert kb.error_resolutions[signature]["total_attempts"] == 1
-            assert (
-                kb.error_resolutions[signature]["strategies"]["retry"]["successes"] == 1
-            )
+            assert kb.error_resolutions[signature]["strategies"]["retry"]["successes"] == 1
 
     def test_get_best_resolution(self):
         """Test getting the best resolution strategy"""
@@ -488,10 +482,7 @@ class TestKnowledgeBase:
             kb2 = KnowledgeBase(path)
 
             assert signature in kb2.error_resolutions
-            assert (
-                kb2.error_resolutions[signature]["strategies"]["restart"]["successes"]
-                == 1
-            )
+            assert kb2.error_resolutions[signature]["strategies"]["restart"]["successes"] == 1
 
 
 # =============================================================================
