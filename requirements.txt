@@ -7,7 +7,7 @@ uvicorn[standard]==0.30.6
 
 # Configuration & HTTP
 python-dotenv==1.0.1
-requests==2.32.5
+requests==2.33.0
 httpx==0.27.2
 PyYAML==6.0.2
 aiofiles==24.1.0
@@ -16,18 +16,18 @@ aiofiles==24.1.0
 structlog==24.1.0
 
 # Cryptography
-cryptography>=41.0.0,<43.0.0
+cryptography>=41.0.0,<47.0.0
 
 # Database & ORM
 SQLAlchemy==2.0.35
 
 # ML & datasets
 datasets==3.0.1
-transformers==4.56.0
+transformers==5.0.0rc3
 accelerate==0.34.2
 
 # Image processing
-Pillow==10.3.0
+Pillow==12.2.0
 piexif==1.1.3
 
 # CLI & UX
@@ -62,5 +62,5 @@ lxml==5.3.0
 # sentence-transformers==3.0.1  # For embeddings
 
 # Development & Testing
-pytest==8.3.3
+pytest==9.0.3
 pytest-asyncio==0.23.7  # 0.24+ requires pytest_asyncio.fixture for async fixtures used in tests
